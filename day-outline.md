@@ -25,8 +25,14 @@
 - note that it would probably be a good idea to package reeborg into a nw.js app that can run natively on Windows/Mac/Linux (https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps)
 
 ## Python (or other language of your choice)
-- Day 29: Large scale overview of Python -- hit key points, and live code a functional demo. Redo a demo that was already done in Scratch (number guessing game the students made using pair programming)
+- Day 29: Large scale overview of Python -- hit key points, and live code a functional demo. Redo a demo that was already done in Scratch (number guessing game the students made using pair programming?)
 - Day 30: Data types. 
+
+Notes to self:
+- don't forget to check old edition for exercises: http://openbookproject.net/thinkcs/python/english3e/index.html
+- consider adding a short section on GUIs at the end (perhaps using appJar - http://appjar.info)
+- 
+
 
 
 ## Additional Modules (to be interspersed throughout the semester)
