@@ -1,0 +1,188 @@
+{% extends "basic/layout.html" %}
+
+{% set script_files = ['_static/runestonebase.js'] + script_files + [
+    '_static'+'/jquery-ui-1.10.3.custom.min.js',
+    '_static'+'/jquery-fix.js',
+    '_static'+'/bootstrap-3.0.0/js/bootstrap.min.js',
+    '_static'+'/bootstrap-sphinx.js',
+    '_static'+'/waypoints.min.js',
+    '_static'+'/rangy-core.js',
+    '_static'+'/rangy-textrange.js',
+    '_static'+'/rangy-cssclassapplier.js',
+    '_static'+'/user-highlights.js',
+    '_static'+'/jquery.idle-timer.js',
+    '_static'+'/processing-1.4.1.min.js',
+    '_static'+'/jquery.hotkey.js',
+    '_static'+'/jquery-migrate-1.2.1.min.js'
+  ]
+%}
+
+{% set css_files = ['_static/bootstrap-3.0.0/css/bootstrap.min.css'] + css_files %}
+{% if theme_bootswatch_theme %}
+  {% set css_files = css_files +
+    ['http://netdna.bootstrapcdn.com/bootswatch/2.3.1/' + theme_bootswatch_theme + '/bootstrap.min.css']
+  %}
+{% endif %}
+
+{% set css_files = css_files + [
+    '_static'+'/jquery-ui-1.10.3.custom.min.css',
+    '_static'+'/bootstrap-sphinx.css',
+    '_static'+'/user-highlights.css',
+    '_static/runestone-custom-sphinx-bootstrap.css',
+  ]
+%}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{# Sidebar: Rework into our Boostrap nav section. #}
+{% macro navBar() %}
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;' href="/{{appname}}/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            {% if 'overview' in course_id %}
+                <li><a href='/{{appname}}/static/{{course_id}}/overview.html'>Table of Contents</a></li>
+            {% else: %}
+                <li><a href='{{ pathto(master_doc) }}'>Table of Contents</a></li>
+            {% endif %}
+            <li><a href='/{{appname}}/static/{{course_id}}/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="{{ pathto('search') }}" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--{% block sidebartoc %}
+          {% include "localtoc.html" %}
+          <li class="divider-vertical"></li>
+        {% endblock %}
+        {% block sidebarrel %}
+          {% include "relations.html" %}
+        {% endblock %}-->
+        {% if theme_source_link_position == "nav" %}
+          <li>{% include "sourcelink.html" %}</li>
+        {% endif %}
+      </ul>
+
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{%- block extrahead %}
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/{{appname}}/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = '{{course_url}}' ? '{{course_url}}' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/{{appname}}';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = '{{course_id}}';
+  eBookConfig.logLevel = {{loglevel}};
+  eBookConfig.loginRequired = {{login_required}};
+  eBookConfig.build_info = "{{build_info}}";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = {{ use_services }};
+  eBookConfig.python3 = {{ python3 }};
+  eBookConfig.basecourse = '{{ basecourse }}';
+  eBookConfig.runestone_version = '{{ runestone_version }}';
+</script>
+
+
+{% endblock %}
+
+{# Silence the sidebar's, relbar's #}
+{% block header %}{% endblock %}
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarsourcelink %}{% endblock %}
+
+{%- block content %}
+{{ navBar() }}
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  {% block body %}{% endblock %}
+  {% block nextprevious %}
+      {% include "subchapter.html" %}
+  {% endblock %}
+</div>
+{%- endblock %}
+
+{%- block footer %}
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      {% if use_services == 'true' %}
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      {% endif %}
+      | <a href="#">Back to top</a>
+      {% if theme_source_link_position == "footer" %}
+        <br />
+        {% include "sourcelink.html" %}
+      {% endif %}
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+{% endblock %}

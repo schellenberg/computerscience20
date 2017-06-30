@@ -1,0 +1,90 @@
+.. Here is were you specify the content and order of your new book.
+
+.. Each section heading (e.g. "SECTION 1: A Random Section") will be
+   a heading in the table of contents. Source files that should be
+   generated and included in that section should be placed on individual
+   lines, with one line separating the first source filename and the
+   :maxdepth: line.
+
+.. Sources can also be included from subfolders of this directory.
+   (e.g. "DataStructures/queues.rst").
+
+.. raw:: html
+
+   <div style="text-align:center" class="center-block">
+   <h1>Computer Science 20 - Saskatchewan</h1>
+   <style>
+   button.reveal_button {
+       margin-left: auto;
+       margin-right: auto;
+   }
+   </style>
+   </div>
+
+.. reveal:: about
+   :showtitle: About this Project
+   :modal:
+   :modalTitle: About this Project
+
+   About this Project
+   ------------------
+
+   * This book was created by Dan Schellenberg, who was relieved of teaching duties for one period in the fall semester of 2017 to create something useful for the impending release of the Saskatchewan Computer Science 20 curriculum.
+   * The Computer Science Implementation Support Team (Stefan Scott, Leslie Ruo, and others) contributed many helpful resources for the book.
+   * This interactive book uses the `Runestone Interactive tools <http://runestoneinteractive.org>`_, which you can find on GitHub.
+
+
+Scratch
+::::
+
+.. toctree::
+   :maxdepth: 1
+
+   VisualProgrammingEnv/FirstProgram.rst
+
+
+Reeborg
+::::
+
+.. toctree::
+   :maxdepth: 1
+   
+   ConstrainedLanguage/TransitioningToText.rst
+
+
+Python
+::::
+
+.. toctree::
+   :maxdepth: 1
+
+   Python/FirstProgram.rst
+
+Computing and Society
+::::
+
+.. toctree::
+   :caption: Computing and Society
+   :maxdepth: 1
+
+   ComputingAndSociety/UnderlyingTechnology.rst
+   ComputingAndSociety/DigitalSecurityAndPrivacy.rst
+
+Career Exploration
+::::
+
+.. toctree::
+   :caption: Career Exploration
+   :maxdepth: 1
+
+   CareerExploration/ResearchIdeas.rst
+
+Student-Directed Research
+::::
+
+.. toctree::
+   :caption: Student-Directed Research
+   :maxdepth: 1
+
+   StudentResearch/ProjectOverview.rst
+
