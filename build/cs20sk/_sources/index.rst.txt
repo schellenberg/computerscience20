@@ -35,7 +35,7 @@
 
 
 Scratch
-::::
+:::::::
 
 .. toctree::
    :maxdepth: 1
@@ -44,7 +44,7 @@ Scratch
 
 
 Reeborg
-::::
+:::::::
 
 .. toctree::
    :maxdepth: 1
@@ -53,7 +53,7 @@ Reeborg
 
 
 Python
-::::
+::::::
 
 .. toctree::
    :maxdepth: 1
@@ -61,7 +61,7 @@ Python
    Python/FirstProgram.rst
 
 Computing and Society
-::::
+:::::::::::::::::::::
 
 .. toctree::
    :caption: Computing and Society
@@ -71,7 +71,7 @@ Computing and Society
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
 Career Exploration
-::::
+::::::::::::::::::
 
 .. toctree::
    :caption: Career Exploration
@@ -80,7 +80,7 @@ Career Exploration
    CareerExploration/ResearchIdeas.rst
 
 Student-Directed Research
-::::
+:::::::::::::::::::::::::
 
 .. toctree::
    :caption: Student-Directed Research
