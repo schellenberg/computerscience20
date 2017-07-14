@@ -21,7 +21,7 @@ options(
     build = Bunch(
         builddir="./build/cs20sk",
         sourcedir="_sources",
-        outdir="./build/cs20sk",
+        outdir="./docs",
         confdir=".",
         project_name = "cs20sk",
         template_args={'course_id': 'cs20sk',
