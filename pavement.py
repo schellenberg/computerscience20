@@ -12,14 +12,14 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./build/cs20sk"
+serving_dir = "./docs"
 dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/cs20sk",
+        builddir="./docs",
         sourcedir="_sources",
         outdir="./docs",
         confdir=".",

@@ -26,5 +26,5 @@ In the project view, the screen is divided into a number of panes, including the
 
 .. image:: images/scratch_areas.png
 
-For our first program, let's create a simple conversation between two sprites. 
+For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. 
 

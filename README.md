@@ -11,4 +11,4 @@ If you spot any errors in the book, or would like to contribute changes that you
 If you want to create your own version of the book, you are welcome to do so! The book is released under the Creative Commons Attribution Share-Alike 4.0 International License, so you are welcome to change it as you see fit and create your own version of it. To do this, simply fork/clone this repository, then follow the build-instructions.md file (in the notes-to-self folder) to get going. In short, it will involve a few simple commands (you'll need Python installed on your system):
 
 1.  ``pip install -r requirements.txt``  -- should install everything you need for you, though I'd recommend creating a virtualenv first (detailed in the build-instructions.md file)
-2.  ``runestone build`` -- will build the html and put it in ``./build/`` directory
+2.  ``runestone build`` -- will build the html and put it in ``./docs/`` directory (if you have cloned this project on GitHub, that should automatically update your GitHub Pages output with your changes)
