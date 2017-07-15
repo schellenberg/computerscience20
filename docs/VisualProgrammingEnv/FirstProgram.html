@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Visual Programming Environment &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Your First Computer Program &#8212; Computer Science 20 Saskatchewan</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -198,9 +198,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Visual Programming Environment</a><ul>
+<li><a class="reference internal" href="#">Your First Computer Program</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#your-first-computer-program">Your First Computer Program!</a></li>
+<li><a class="reference internal" href="#id1">Your First Computer Program!</a></li>
 </ul>
 </li>
 </ul>
@@ -247,8 +247,8 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="visual-programming-environment">
-<h1>Visual Programming Environment<a class="headerlink" href="#visual-programming-environment" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="your-first-computer-program">
+<h1>Your First Computer Program<a class="headerlink" href="#your-first-computer-program" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Welcome here! The goal of this course is to teach you how to problem solve, and we will be using the concepts of Computer Science to achieve that goal. By the end of the semester, you will be able to confidently solve problems by writing computer programs. In other words, you will be able to control what the computer does by writing algorithms (a series of steps).</p>
@@ -256,17 +256,29 @@
 <ul class="simple">
 <li>use a visual programming environment (this will allow you to understand the basic control structures of computer science, and will prevent you from making any syntax errors that would cause your program to report an error when you run it)</li>
 <li>use a constrained language to solve algorithmic puzzles (here you will type in text to control what the computer is doing, which means you will run into syntax errors, but the puzzles you are solving will give you instant visual feedback)</li>
-<li>use a &#8220;regular&#8221; computer science language (once you are feeling confident with many of the basic ideas of computer science, we will apply them using a traditional computer language)</li>
+<li>use a &#8220;traditional&#8221; computer science language (once you are feeling confident with many of the basic ideas of computer science, we will apply them using a traditional computer language)</li>
 </ul>
 </div>
-<div class="section" id="your-first-computer-program">
-<h2>Your First Computer Program!<a class="headerlink" href="#your-first-computer-program" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Your First Computer Program!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>There are many different visual programming environments, but the one we will use is called <a class="reference external" href="https://scratch.mit.edu/">Scratch</a>. Your first task is to create an account on the Scratch website, so that the programs you write can be saved and accessed later.</p>
 <p>Now that you have an account, let&#8217;s make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project.</p>
 <img alt="../_images/scratch_create.png" src="../_images/scratch_create.png" />
-<p>In the project view, the screen is divided into a number of panes, including the stage (where you will see your project run), sprite list (shows which sprites are part of your project, and allows you to select them), block palette (where all the blocks you can drag-and-drop onto your scripts), and the scripts area (where you will combine blocks of code to create programs for your sprites to run). One of the most important things for you to keep in mind is that <em>you can&#8217;t break the environment</em>, so feel free to explore as much as you want!</p>
+<p>In the project view, the screen is divided into a number of panes, including the <em>stage</em> (where you will see your project run), <em>sprite list</em> (shows which sprites are part of your project, and allows you to select them), <em>block palette</em> (where all the blocks you can drag-and-drop onto your scripts), and the <em>scripts area</em> (where you will combine blocks of code to create programs for your sprites to run). One of the most important things for you to keep in mind is that <strong>you can&#8217;t break the environment</strong>, so feel free to explore as much as you want!</p>
 <img alt="../_images/scratch_areas.png" src="../_images/scratch_areas.png" />
-<p>For our first program, let&#8217;s create a simple conversation between two sprites. To do this, you&#8217;ll need to add a second sprite to the project.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Teacher Note</p>
+<p class="last">Your teacher may want to spend some time exploring the environment with you before you actually create your first program.</p>
+</div>
+<p>For our first program, let&#8217;s create a simple conversation between two sprites. To do this, you&#8217;ll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the &#8220;Choose Sprite from Library&#8221; icon to add an additional sprite to the stage.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once you have more than one sprite in the sprite list pane, you will be able to see that the scripts area pane shows the script for the currently selected sprite. To be sure you understand this, drag a block from the block palette onto the scripts area. Now select a different sprite in the sprite list by clicking on it. Notice how the blocks in the scripts area change when you select a different sprite.</p>
+</div>
+<p>Now that you have two sprites in the sprite list pane, let&#8217;s get them to have a simple conversation. Select the <em>Looks</em> tab in the blocks palette, then drag a <em>Say &#8220;Hello&#8221; for 2 secs</em> block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!</p>
+<img alt="../_images/scratch_say_block.png" src="../_images/scratch_say_block.png" />
+<p>Of course, we don&#8217;t want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the <em>Events</em> tab in the blocks palette, then drag a <em>When Flag Clicked</em> block into the scripts area. Now, drag the <em>Say &#8220;Hello&#8221; for 2 secs</em> block until it snaps onto the <em>When Flag Clicked</em> block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.</p>
+<img alt="../_images/scratch_blocks_connected.png" src="../_images/scratch_blocks_connected.png" />
 </div>
 </div>
 
