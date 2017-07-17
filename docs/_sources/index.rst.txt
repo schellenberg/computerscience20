@@ -50,12 +50,43 @@ Reeborg
    :maxdepth: 1
    
    ConstrainedLanguage/TransitioningToText.rst
+   ConstrainedLanguage/move.rst
+   ConstrainedLanguage/home.rst
+   ConstrainedLanguage/bugs.rst
+   ConstrainedLanguage/tokens1.rst
+   ConstrainedLanguage/rule2.rst
+   ConstrainedLanguage/summary1.rst
+   ConstrainedLanguage/challenges1.rst
+   ConstrainedLanguage/newspaper1.rst
+   ConstrainedLanguage/rule3.rst
+   ConstrainedLanguage/turn_around.rst
+   ConstrainedLanguage/library.rst
+   ConstrainedLanguage/reading.rst
+   ConstrainedLanguage/newspaper2.rst
+   ConstrainedLanguage/repeat.rst
+   ConstrainedLanguage/summary2.rst
+   ConstrainedLanguage/if.rst
+   ConstrainedLanguage/at_goal.rst
+   ConstrainedLanguage/else.rst
+   ConstrainedLanguage/hurdles3.rst
+   ConstrainedLanguage/not.rst
+   ConstrainedLanguage/summary3.rst
+   ConstrainedLanguage/while.rst
+   ConstrainedLanguage/refine1.rst
+   ConstrainedLanguage/refine2.rst
+   ConstrainedLanguage/refine3.rst
+   ConstrainedLanguage/refine4.rst
+   ConstrainedLanguage/rule4.rst
+   ConstrainedLanguage/surprises.rst
+   ConstrainedLanguage/challenges2.rst
+   ConstrainedLanguage/summary4.rst
 
 
 Python
 ::::::
 
 .. toctree::
+   :numbered:
    :maxdepth: 1
 
    Python/FirstProgram.rst
