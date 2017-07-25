@@ -41,6 +41,16 @@ Scratch
    :maxdepth: 1
 
    VisualProgrammingEnv/FirstProgram.rst
+   VisualProgrammingEnv/CharacterControl.rst
+   VisualProgrammingEnv/ExperimentWithRepeat.rst
+   VisualProgrammingEnv/VariablesAndNestedRepeat.rst
+   VisualProgrammingEnv/RepeatUntil.rst
+   VisualProgrammingEnv/StartScreenAndBroadcastIssuses.rst
+   VisualProgrammingEnv/Conditionals.rst
+   VisualProgrammingEnv/NumberGuessingGame.rst
+   VisualProgrammingEnv/SecondsElapsedGame.rst
+   VisualProgrammingEnv/MakingOwnBlocks.rst
+   VisualProgrammingEnv/PossibleExtensions.rst
 
 
 Reeborg
