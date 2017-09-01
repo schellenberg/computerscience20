@@ -22,7 +22,7 @@
 ## Reeborg (or other Karel the Robot clone)
 - Days 18-28: GvR Steps, but translated into Reeborg -- steps could easily just be pages of the text, and perhaps mirrored to a separate site if desired...
     - will want to have a note at the start of each of these pages, saying that each step might take less/more than a single class period, but to simply work on them at your own pace, knowing that you need to have them completed within a whatever period of time your teacher has set for you (approximately 10 days of class)
-- note that it would probably be a good idea to package reeborg into a nw.js app that can run natively on Windows/Mac/Linux (https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps)
+- note that it would probably be a good idea to package reeborg into a nw.js app that can run natively on Windows/Mac/Linux (https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps) OR use Electron (https://electron.atom.io/)
 
 ## Python (or other language of your choice)
 - Day 29: Large scale overview of Python -- hit key points, and live code a functional demo. Redo a demo that was already done in Scratch (number guessing game the students made using pair programming?)
