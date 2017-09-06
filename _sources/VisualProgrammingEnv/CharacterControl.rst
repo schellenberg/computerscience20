@@ -8,6 +8,7 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :width: 560
     :align: left
 
+.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
 Adapting Project From Yesterday
 -------------------------------
@@ -26,10 +27,11 @@ Control a Character Using WASD - Version 2
 WASD smoothly (FOREVER block, using if statements)
 
 
-
+Possible Extensions
+-------------------
 
 Use FOREVER block with changing a characters costume. Work time on first assignment [short story], for any remaining time.
 
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
+
 
