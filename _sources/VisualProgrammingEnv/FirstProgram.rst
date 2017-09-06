@@ -18,7 +18,7 @@ Your First Computer Program!
 
 There are many different visual programming environments, but the one we will use is called `Scratch <https://scratch.mit.edu/>`_. Your first task is to create an account on the Scratch website, so that the programs you write can be saved and accessed later. Go do that now!
 
-If you'd prefer to watch a video describing how to create your first Scratch program, `the following video<https://www.youtube.com/watch?v=pJYCRtSDJSk>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=pJYCRtSDJSk>`_ demonstrates the same ideas as what I've described in text below.
 
 .. youtube:: pJYCRtSDJSk
     :height: 315
