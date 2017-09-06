@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Basic Tutorial &#8212; Computer Science 20 Saskatchewan</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -121,13 +115,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -233,125 +227,125 @@
 <h1>Basic Tutorial<a class="headerlink" href="#basic-tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="move.html">2. First program</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="move.html#dealing-with-errors">2.1. Dealing with eRRoRs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="move.html#rule-1">2.2. Rule #1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="move.html#a-special-tool-to-help-you">2.3. A special tool to help you</a></li>
+<li class="toctree-l1"><a class="reference internal" href="move.html">First program</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="move.html#dealing-with-errors">Dealing with eRRoRs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move.html#rule-1">Rule #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move.html#a-special-tool-to-help-you">A special tool to help you</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="home.html">3. Task driven learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="home.html#making-a-left-turn">3.1. Making a left turn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="home.html#a-different-view">3.2. A different view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="home.html">Task driven learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="home.html#making-a-left-turn">Making a left turn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="home.html#a-different-view">A different view</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bugs.html">4. Darn bugs!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bugs.html#what-is-a-bug">4.1. What is a bug?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bugs.html#dealing-with-bugs">4.2. Dealing with bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugs.html">Darn bugs!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bugs.html#what-is-a-bug">What is a bug?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugs.html#dealing-with-bugs">Dealing with bugs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tokens1.html">5. A token of appreciation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rule2.html">6. Rule number 2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rule2.html#comments">6.1. Comments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tokens1.html">A token of appreciation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rule2.html">Rule number 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rule2.html#comments">Comments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="summary1.html">7. Summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="challenges1.html">8. Introduction to the challenges</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#important-information-about-saving-your-work">8.1. Important information about saving your work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#finding-the-center">8.2. Finding the center</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#around-the-world">8.3. Around the world</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#lost-in-a-maze">8.4. Lost in a maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#jumping-over-hurdles">8.5. Jumping over hurdles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#harvest-time">8.6. Harvest time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#rainy-weather">8.7. Rainy weather</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges1.html#summary">8.8. Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary1.html">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenges1.html">Introduction to the challenges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#important-information-about-saving-your-work">Important information about saving your work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#finding-the-center">Finding the center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#around-the-world">Around the world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#lost-in-a-maze">Lost in a maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#jumping-over-hurdles">Jumping over hurdles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#harvest-time">Harvest time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#rainy-weather">Rainy weather</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges1.html#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="newspaper1.html">9. Newspaper delivery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rule3.html">10. Rule number 3</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rule3.html#three-lefts-can-make-a-right">10.1. Three lefts can make a right</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rule3.html#defining-functions">10.2. Defining functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rule3.html#how-to-think-about-def">10.3. How to think about <code class="docutils literal"><span class="pre">def</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="newspaper1.html">Newspaper delivery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rule3.html">Rule number 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rule3.html#three-lefts-can-make-a-right">Three lefts can make a right</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rule3.html#defining-functions">Defining functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rule3.html#how-to-think-about-def">How to think about <code class="docutils literal"><span class="pre">def</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="turn_around.html">11. Turn around</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="turn_around.html#back-to-turn-right">11.1. Back to <code class="docutils literal"><span class="pre">turn_right()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="turn_around.html">Turn around</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="turn_around.html#back-to-turn-right">Back to <code class="docutils literal"><span class="pre">turn_right()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">12. Using the Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="library.html#reeborg-can-understand-french">12.1. Reeborg can understand French</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Using the Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library.html#reeborg-can-understand-french">Reeborg can understand French</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="reading.html">13. Reading exercise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="newspaper2.html">14. Newspaper delivery revisited</a></li>
-<li class="toctree-l1"><a class="reference internal" href="repeat.html">15. Repeat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="summary2.html">16. Summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">17. If only ...</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="if.html#python-keyword-if">17.1. Python keyword: <code class="docutils literal"><span class="pre">if</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="if.html#if-statement">17.2. <code class="docutils literal"><span class="pre">if</span></code> statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="if.html#how-to-think-of-if-statements">17.3. How to think of <code class="docutils literal"><span class="pre">if</span></code> statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="if.html#more-useful-that-you-might-think">17.4. More useful that you might think...</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reading.html">Reading exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newspaper2.html">Newspaper delivery revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeat.html">Repeat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary2.html">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">If only …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="if.html#python-keyword-if">Python keyword: <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="if.html#if-statement"><code class="docutils literal"><span class="pre">if</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="if.html#how-to-think-of-if-statements">How to think of <code class="docutils literal"><span class="pre">if</span></code> statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="if.html#more-useful-that-you-might-think">More useful that you might think…</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="at_goal.html">18. Finding the right spot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="at_goal.html#another-condition">18.1. Another condition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="at_goal.html#and-now-something-different">18.2. And now, something different</a></li>
-<li class="toctree-l2"><a class="reference internal" href="at_goal.html#hurdles-again">18.3. Hurdles again!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="at_goal.html">Finding the right spot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="at_goal.html#another-condition">Another condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="at_goal.html#and-now-something-different">And now, something different</a></li>
+<li class="toctree-l2"><a class="reference internal" href="at_goal.html#hurdles-again">Hurdles again!</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="else.html">19. Listen to me ... or else ....</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="else.html#two-choices">19.1. Two choices...</a></li>
-<li class="toctree-l2"><a class="reference internal" href="else.html#how-to-think-about-if-else">19.2. How to think about <code class="docutils literal"><span class="pre">if/else</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="else.html">Listen to me … or else ….</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="else.html#two-choices">Two choices…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="else.html#how-to-think-about-if-else">How to think about <code class="docutils literal"><span class="pre">if/else</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hurdles3.html">20. Hurdles yet again!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hurdles3.html#how-to-think-of-if-elif-else-statements">20.1. How to think of <code class="docutils literal"><span class="pre">if/elif/</span> <span class="pre">...</span> <span class="pre">/else</span></code> statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hurdles3.html#back-to-hurdles">20.2. Back to hurdles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hurdles3.html">Hurdles yet again!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hurdles3.html#how-to-think-of-if-elif-else-statements">How to think of <code class="docutils literal"><span class="pre">if/elif/</span> <span class="pre">...</span> <span class="pre">/else</span></code> statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hurdles3.html#back-to-hurdles">Back to hurdles</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="not.html">21. Not ... true!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="not.html#time-to-be-negative">21.1. Time to be negative.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="not.html#please-make-reeborg-happy">21.2. Please, make Reeborg happy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="not.html#another-option">21.3. Another option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="not.html">Not … true!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="not.html#time-to-be-negative">Time to be negative.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not.html#please-make-reeborg-happy">Please, make Reeborg happy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not.html#another-option">Another option</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="summary3.html">22. Summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="while.html">23. For a <code class="docutils literal"><span class="pre">while</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="while.html#how-to-think-about-while">23.1. How to think about <code class="docutils literal"><span class="pre">while</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="while.html#back-to-hurdles">23.2. Back to hurdles!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary3.html">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">For a <code class="docutils literal"><span class="pre">while</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="while.html#how-to-think-about-while">How to think about <code class="docutils literal"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="while.html#back-to-hurdles">Back to hurdles!</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="refine1.html">24. Refinements: part 1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="refine1.html#a-simple-problem">24.1. A simple problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refine1.html">Refinements: part 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="refine1.html#a-simple-problem">A simple problem</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="refine2.html">25. Refinements: part 2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="refine2.html#not-so-simple-world">25.1. Not so simple world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refine2.html">Refinements: part 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="refine2.html#not-so-simple-world">Not so simple world</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="refine3.html">26. Refinements: part 3</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="refine3.html#more-complicated-world">26.1. More complicated world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refine3.html">Refinements: part 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="refine3.html#more-complicated-world">More complicated world</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="refine4.html">27. Refinements: part 4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="refine4.html#refinements-part-5">28. Refinements: part 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rule4.html">29. Rule number 4</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rule4.html#conclusion">29.1. Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refine4.html">Refinements: part 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refine4.html#refinements-part-5">Refinements: part 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rule4.html">Rule number 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rule4.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="surprises.html">30. Surprises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="challenges2.html">31. Revisiting some challenges</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#before-harvesting">31.1. Before harvesting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#ready-to-harvest">31.2. Ready to harvest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#stormy-weather">31.3. Stormy weather</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#reeborg-s-friend-s-turn">31.4. Reeborg&#8217;s friend&#8217;s turn.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#after-the-storm">31.5. After the storm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#more-yard-work">31.6. More yard work!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="challenges2.html#finding-the-center">31.7. Finding the center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surprises.html">Surprises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenges2.html">Revisiting some challenges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#before-harvesting">Before harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#ready-to-harvest">Ready to harvest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#stormy-weather">Stormy weather</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#reeborg-s-friend-s-turn">Reeborg’s friend’s turn.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#after-the-storm">After the storm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#more-yard-work">More yard work!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenges2.html#finding-the-center">Finding the center</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="summary4.html">32. Summary</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="summary4.html#python-keywords">32.1. Python keywords</a></li>
-<li class="toctree-l2"><a class="reference internal" href="summary4.html#functions-specific-to-reeborg-s-world">32.2. Functions specific to Reeborg&#8217;s World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary4.html">Summary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="summary4.html#python-keywords">Python keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary4.html#functions-specific-to-reeborg-s-world">Functions specific to Reeborg’s World</a></li>
 </ul>
 </li>
 </ul>

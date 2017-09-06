@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>27. Refinements: part 4 &#8212; Computer Science 20 Saskatchewan</title>
-    
+    <title>Refinements: part 4 &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -103,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="29. Rule number 4" href="rule4.html" />
-    <link rel="prev" title="26. Refinements: part 3" href="refine3.html" />
+    <link rel="next" title="Rule number 4" href="rule4.html" />
+    <link rel="prev" title="Refinements: part 3" href="refine3.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -198,8 +192,8 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">27. Refinements: part 4</a></li>
-<li><a class="reference internal" href="#refinements-part-5">28. Refinements: part 5</a></li>
+<li><a class="reference internal" href="#">Refinements: part 4</a></li>
+<li><a class="reference internal" href="#refinements-part-5">Refinements: part 5</a></li>
 </ul>
 </ul>
 </li>
@@ -207,13 +201,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 26. Refinements: part 3" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - Refinements: part 3" data-toggle="tooltip">
     <a href="refine3.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 29. Rule number 4' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - Rule number 4' data-toggle="tooltip" >
     <a href="rule4.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -245,10 +239,10 @@
 <div class="container" id="main-content">
   
   <div class="section" id="refinements-part-4">
-<h1>27. Refinements: part 4<a class="headerlink" href="#refinements-part-4" title="Permalink to this headline">¶</a></h1>
+<h1>Refinements: part 4<a class="headerlink" href="#refinements-part-4" title="Permalink to this headline">¶</a></h1>
 <p>As you most likely found out, we were too hasty in asking Reeborg to
 move forward after putting down a token. We need to check if there is a
-wall preventing him from moving first. Here&#8217;s a solution to the problem:</p>
+wall preventing him from moving first. Here’s a solution to the problem:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">()</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
     <span class="n">turn_left</span><span class="p">()</span>
@@ -270,13 +264,13 @@ might not work?</p>
 </div>
 </div>
 <div class="section" id="refinements-part-5">
-<h1>28. Refinements: part 5<a class="headerlink" href="#refinements-part-5" title="Permalink to this headline">¶</a></h1>
+<h1>Refinements: part 5<a class="headerlink" href="#refinements-part-5" title="Permalink to this headline">¶</a></h1>
 <p>Consider world <strong>Around&nbsp;4</strong></p>
 <div class="topic">
 <p class="topic-title first">Try it!</p>
 <p>Does the program written previously work with it?</p>
 </div>
-<p>As you probably guessed, if you didn&#8217;t try it (you should, really!), it
+<p>As you probably guessed, if you didn’t try it (you should, really!), it
 does not. To make it work, we need to replace the <code class="docutils literal"><span class="pre">if</span></code> we just added
 by a <code class="docutils literal"><span class="pre">while</span></code>. Try it!</p>
 </div>
@@ -284,19 +278,19 @@ by a <code class="docutils literal"><span class="pre">while</span></code>. Try i
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 26. Refinements: part 3' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Refinements: part 3' data-toggle="tooltip">
     <a href="refine3.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="refine3.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 29. Rule number 4' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - Rule number 4' data-toggle="tooltip" >
     <a href="rule4.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="rule4.html" >Next Section - 29. Rule number 4</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="rule4.html" >Next Section - Rule number 4</a>
 
 <script type="text/javascript">
 

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>31. Revisiting some challenges &#8212; Computer Science 20 Saskatchewan</title>
-    
+    <title>Revisiting some challenges &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -103,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="32. Summary" href="summary4.html" />
-    <link rel="prev" title="30. Surprises" href="surprises.html" />
+    <link rel="next" title="Summary" href="summary4.html" />
+    <link rel="prev" title="Surprises" href="surprises.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -198,14 +192,14 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">31. Revisiting some challenges</a><ul>
-<li><a class="reference internal" href="#before-harvesting">31.1. Before harvesting</a></li>
-<li><a class="reference internal" href="#ready-to-harvest">31.2. Ready to harvest</a></li>
-<li><a class="reference internal" href="#stormy-weather">31.3. Stormy weather</a></li>
-<li><a class="reference internal" href="#reeborg-s-friend-s-turn">31.4. Reeborg&#8217;s friend&#8217;s turn.</a></li>
-<li><a class="reference internal" href="#after-the-storm">31.5. After the storm</a></li>
-<li><a class="reference internal" href="#more-yard-work">31.6. More yard work!</a></li>
-<li><a class="reference internal" href="#finding-the-center">31.7. Finding the center</a></li>
+<li><a class="reference internal" href="#">Revisiting some challenges</a><ul>
+<li><a class="reference internal" href="#before-harvesting">Before harvesting</a></li>
+<li><a class="reference internal" href="#ready-to-harvest">Ready to harvest</a></li>
+<li><a class="reference internal" href="#stormy-weather">Stormy weather</a></li>
+<li><a class="reference internal" href="#reeborg-s-friend-s-turn">Reeborg’s friend’s turn.</a></li>
+<li><a class="reference internal" href="#after-the-storm">After the storm</a></li>
+<li><a class="reference internal" href="#more-yard-work">More yard work!</a></li>
+<li><a class="reference internal" href="#finding-the-center">Finding the center</a></li>
 </ul>
 </li>
 </ul>
@@ -215,13 +209,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 30. Surprises" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - Surprises" data-toggle="tooltip">
     <a href="surprises.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 32. Summary' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - Summary' data-toggle="tooltip" >
     <a href="summary4.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -253,7 +247,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="revisiting-some-challenges">
-<h1>31. Revisiting some challenges<a class="headerlink" href="#revisiting-some-challenges" title="Permalink to this headline">¶</a></h1>
+<h1>Revisiting some challenges<a class="headerlink" href="#revisiting-some-challenges" title="Permalink to this headline">¶</a></h1>
 <p>It is time to solve some of the challenges introduced early on.</p>
 <p>Using <code class="docutils literal"><span class="pre">while</span></code>, <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">else</span></code>, etc., you will write programs that
 will be able to accomplish various tasks. In writing these programs, you
@@ -266,7 +260,7 @@ problems first and generalize your solution so that it can be applied
 to more than one problem</li>
 <li>Remember rule #3: avoid repeating code as much as possible.</li>
 </ol>
-<p>Now, remember rule #1 ... and make sure that, this time, you solve
+<p>Now, remember rule #1 … and make sure that, this time, you solve
 <strong>all</strong> the challenges mentioned below.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
@@ -274,7 +268,7 @@ to more than one problem</li>
 to them later.</p>
 </div>
 <div class="section" id="before-harvesting">
-<h2>31.1. Before harvesting<a class="headerlink" href="#before-harvesting" title="Permalink to this headline">¶</a></h2>
+<h2>Before harvesting<a class="headerlink" href="#before-harvesting" title="Permalink to this headline">¶</a></h2>
 <p>Select world <strong>Harvest&nbsp;3</strong> which occurred shortly after the garden was
 seeded. Some carrot seeds sprouted well, others yielded two or three
 plants while some did not sprout at all. Help Reeborg weed out the
@@ -286,14 +280,14 @@ missing.</p>
 </div>
 </div>
 <div class="section" id="ready-to-harvest">
-<h2>31.2. Ready to harvest<a class="headerlink" href="#ready-to-harvest" title="Permalink to this headline">¶</a></h2>
+<h2>Ready to harvest<a class="headerlink" href="#ready-to-harvest" title="Permalink to this headline">¶</a></h2>
 <p>The weeding went well (I hope!), the growing season is over and it is
 time to harvest. Select world <strong>Harvest&nbsp;1</strong> and/or <strong>Harvest&nbsp;2</strong> and have Reeborg
 collect all the carrots.  You should write a single program that would
 work for both worlds.</p>
 </div>
 <div class="section" id="stormy-weather">
-<h2>31.3. Stormy weather<a class="headerlink" href="#stormy-weather" title="Permalink to this headline">¶</a></h2>
+<h2>Stormy weather<a class="headerlink" href="#stormy-weather" title="Permalink to this headline">¶</a></h2>
 <p>It was a beautifully sunny day. Reeborg was playing outside with his
 friend. Suddenly, it started to rain and Reeborg remembered that the
 windows in his house were all open. So Reeborg went back to his house
@@ -309,19 +303,19 @@ back and play outside. The world is <strong>Rain&nbsp;1</strong>.</p>
 </div>
 </div>
 <div class="section" id="reeborg-s-friend-s-turn">
-<h2>31.4. Reeborg&#8217;s friend&#8217;s turn.<a class="headerlink" href="#reeborg-s-friend-s-turn" title="Permalink to this headline">¶</a></h2>
-<p>Erdna, Reeborg&#8217;s friend, lives in a bigger house as shown on <strong>Rain&nbsp;2</strong>.
+<h2>Reeborg’s friend’s turn.<a class="headerlink" href="#reeborg-s-friend-s-turn" title="Permalink to this headline">¶</a></h2>
+<p>Erdna, Reeborg’s friend, lives in a bigger house as shown on <strong>Rain&nbsp;2</strong>.
 Erdna was playing outside with Reeborg when it started raining. Help
 Erdna close the windows in her house.</p>
 <div class="topic">
 <p class="topic-title first">Try it!</p>
 <p>Your challenge is to write a single program that will work for both
 Reeborg and Erdna, again without using <code class="docutils literal"><span class="pre">right_is_clear()</span></code>
-nor <code class="docutils literal"><span class="pre">front_is_clear()</span></code>... however, it might be a bit tricky.</p>
+nor <code class="docutils literal"><span class="pre">front_is_clear()</span></code>… however, it might be a bit tricky.</p>
 </div>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">To determine if there&#8217;s a window at a given location, a robot may
+<p class="last">To determine if there’s a window at a given location, a robot may
 have to take an extra step and, depending on the result, may have to
 turn around, go back and close that window.</p>
 </div>
@@ -336,9 +330,9 @@ about their world directly.</p>
 </div>
 </div>
 <div class="section" id="after-the-storm">
-<h2>31.5. After the storm<a class="headerlink" href="#after-the-storm" title="Permalink to this headline">¶</a></h2>
+<h2>After the storm<a class="headerlink" href="#after-the-storm" title="Permalink to this headline">¶</a></h2>
 <p id="index-1">The wind blew really hard last night. There are fallen leaves everywhere outside
-Reeborg&#8217;s house. His parents asked him to go and clean up the path
+Reeborg’s house. His parents asked him to go and clean up the path
 leading to the curb, <strong>Storm&nbsp;1</strong>, as well as the driveway: <strong>Storm&nbsp;2</strong>.</p>
 <div class="topic">
 <p class="topic-title first">Your turn!</p>
@@ -350,8 +344,8 @@ statement or a <code class="docutils literal"><span class="pre">while</span></co
 </div>
 </div>
 <div class="section" id="more-yard-work">
-<h2>31.6. More yard work!<a class="headerlink" href="#more-yard-work" title="Permalink to this headline">¶</a></h2>
-<p>Reeborg&#8217;s parents are so proud of his work, that they ask him to pick up
+<h2>More yard work!<a class="headerlink" href="#more-yard-work" title="Permalink to this headline">¶</a></h2>
+<p>Reeborg’s parents are so proud of his work, that they ask him to pick up
 all the leaves that got blown away in their backyard during the
 windstorm, as illustrated on <strong>Storm&nbsp;3</strong>. Have Reeborg pick up all the
 leaves and put it in the compost bin.</p>
@@ -361,7 +355,7 @@ leaves and put it in the compost bin.</p>
 </div>
 </div>
 <div class="section" id="finding-the-center">
-<h2>31.7. Finding the center<a class="headerlink" href="#finding-the-center" title="Permalink to this headline">¶</a></h2>
+<h2>Finding the center<a class="headerlink" href="#finding-the-center" title="Permalink to this headline">¶</a></h2>
 <p>Have a look at the worlds <strong>Center&nbsp;1</strong> to <strong>Center&nbsp;3</strong>.</p>
 <div class="topic">
 <p class="topic-title first">Do this!</p>
@@ -388,19 +382,19 @@ location along the other location (a vertical line).</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 30. Surprises' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Surprises' data-toggle="tooltip">
     <a href="surprises.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="surprises.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 32. Summary' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - Summary' data-toggle="tooltip" >
     <a href="summary4.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="summary4.html" >Next Section - 32. Summary</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="summary4.html" >Next Section - Summary</a>
 
 <script type="text/javascript">
 

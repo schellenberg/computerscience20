@@ -24,6 +24,7 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :height: 315
     :width: 560
     :align: left
+    :http: https
 
 
 Now that you have an account, let's make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project. 

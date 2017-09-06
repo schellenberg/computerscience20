@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Your First Computer Program &#8212; Computer Science 20 Saskatchewan</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -256,29 +250,29 @@
 <ul class="simple">
 <li>use a visual programming environment (this will allow you to understand the basic control structures of computer science, and will prevent you from making any syntax errors that would cause your program to report an error when you run it)</li>
 <li>use a constrained language to solve algorithmic puzzles (here you will type in text to control what the computer is doing, which means you will run into syntax errors, but the puzzles you are solving will give you instant visual feedback)</li>
-<li>use a &#8220;traditional&#8221; computer science language (once you are feeling confident with many of the basic ideas of computer science, we will apply them using a traditional computer language)</li>
+<li>use a “traditional” computer science language (once you are feeling confident with many of the basic ideas of computer science, we will apply them using a traditional computer language)</li>
 </ul>
 </div>
 <div class="section" id="id1">
 <h2>Your First Computer Program!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>There are many different visual programming environments, but the one we will use is called <a class="reference external" href="https://scratch.mit.edu/">Scratch</a>. Your first task is to create an account on the Scratch website, so that the programs you write can be saved and accessed later. Go do that now!</p>
-<p>If you&#8217;d prefer to watch a video describing how to create your first Scratch program, <a class="reference external" href="https://www.youtube.com/watch?v=pJYCRtSDJSk">the following video</a> demonstrates the same ideas as what I&#8217;ve described in text below.</p>
-<iframe src="http://www.youtube.com/embed/pJYCRtSDJSk"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><p>Now that you have an account, let&#8217;s make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project.</p>
+<p>If you’d prefer to watch a video describing how to create your first Scratch program, <a class="reference external" href="https://www.youtube.com/watch?v=pJYCRtSDJSk">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
+<p>Now that you have an account, let’s make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project.</p>
 <img alt="../_images/scratch_create.png" src="../_images/scratch_create.png" />
-<p>In the project view, the screen is divided into a number of panes, including the <em>stage</em> (where you will see your project run), <em>sprite list</em> (shows which sprites are part of your project, and allows you to select them), <em>block palette</em> (where all the blocks you can drag-and-drop onto your scripts), and the <em>scripts area</em> (where you will combine blocks of code to create programs for your sprites to run). One of the most important things for you to keep in mind is that <strong>you can&#8217;t break the environment</strong>, so feel free to explore as much as you want!</p>
+<p>In the project view, the screen is divided into a number of panes, including the <em>stage</em> (where you will see your project run), <em>sprite list</em> (shows which sprites are part of your project, and allows you to select them), <em>block palette</em> (where all the blocks you can drag-and-drop onto your scripts), and the <em>scripts area</em> (where you will combine blocks of code to create programs for your sprites to run). One of the most important things for you to keep in mind is that <strong>you can’t break the environment</strong>, so feel free to explore as much as you want!</p>
 <img alt="../_images/scratch_areas.png" src="../_images/scratch_areas.png" />
 <div class="sidebar">
 <p class="first sidebar-title">Teacher Note</p>
 <p class="last">You may want to spend some time exploring the environment with the students before you actually create the first program.</p>
 </div>
-<p>For our first program, let&#8217;s create a simple conversation between two sprites. To do this, you&#8217;ll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the &#8220;Choose Sprite from Library&#8221; icon to add an additional sprite to the stage.</p>
+<p>For our first program, let’s create a simple conversation between two sprites. To do this, you’ll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the “Choose Sprite from Library” icon to add an additional sprite to the stage.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Once you have more than one sprite in the sprite list pane, you will be able to see that the scripts area pane shows the script for the currently selected sprite. To be sure you understand this, drag a block from the block palette onto the scripts area. Now select a different sprite in the sprite list by clicking on it. Notice how the blocks in the scripts area change when you select a different sprite.</p>
 </div>
-<p>Now that you have two sprites in the sprite list pane, let&#8217;s get them to have a simple conversation. Select the <em>Looks</em> tab in the blocks palette, then drag a <em>Say &#8220;Hello&#8221; for 2 secs</em> block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!</p>
+<p>Now that you have two sprites in the sprite list pane, let’s get them to have a simple conversation. Select the <em>Looks</em> tab in the blocks palette, then drag a <em>Say “Hello” for 2 secs</em> block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!</p>
 <img alt="../_images/scratch_say_block.png" src="../_images/scratch_say_block.png" />
-<p>Of course, we don&#8217;t want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the <em>Events</em> tab in the blocks palette, then drag a <em>When Flag Clicked</em> block into the scripts area. Now, drag the <em>Say &#8220;Hello&#8221; for 2 secs</em> block until it snaps onto the <em>When Flag Clicked</em> block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.</p>
+<p>Of course, we don’t want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the <em>Events</em> tab in the blocks palette, then drag a <em>When Flag Clicked</em> block into the scripts area. Now, drag the <em>Say “Hello” for 2 secs</em> block until it snaps onto the <em>When Flag Clicked</em> block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.</p>
 <img alt="../_images/scratch_blocks_connected.png" src="../_images/scratch_blocks_connected.png" />
 </div>
 </div>

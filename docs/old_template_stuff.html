@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>SECTION 1: Introduction &#8212; Computer Science 20 Saskatchewan</title>
-    
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="_static/timeddnd.js"></script>
     <script type="text/javascript" src="_static/fitb.js"></script>
     <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/lib/prettify.js"></script>
     <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="_static/reveal.js"></script>
     <script type="text/javascript" src="_static/shortanswer.js"></script>
     <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -121,13 +115,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -248,7 +242,7 @@
 </div>
 <div class="section" id="section-2-links">
 <h1>Section 2: Links<a class="headerlink" href="#section-2-links" title="Permalink to this headline">¶</a></h1>
-<p>Runestone uses the <code class="docutils literal"><span class="pre">restructuredText</span></code> (rst) markup language.  We chose this over markdown largely because rst is extensible.  Nearly all of the basic markup tasks are already handled by restructuredText.  You should check out the docs for the basics of restructuredText (link below). Our extensions are all for the interactive elements.  One key hint about restructuredText:  Its like <strong>Python</strong> &#8211; <em>indentation matters!</em></p>
+<p>Runestone uses the <code class="docutils literal"><span class="pre">restructuredText</span></code> (rst) markup language.  We chose this over markdown largely because rst is extensible.  Nearly all of the basic markup tasks are already handled by restructuredText.  You should check out the docs for the basics of restructuredText (link below). Our extensions are all for the interactive elements.  One key hint about restructuredText:  Its like <strong>Python</strong> – <em>indentation matters!</em></p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructuredText Docs</a></li>
 <li><a class="reference external" href="http://runestoneinteractive.org/build/html/index.html">Runestone Docs</a></li>
@@ -261,7 +255,7 @@
 <div class="section" id="activecode">
 <h2>ActiveCode<a class="headerlink" href="#activecode" title="Permalink to this headline">¶</a></h2>
 
-<div data-childcomponent="codeexample1" class="explainer ac_section alert alert-warning">
+<div data-childcomponent="codeexample1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=codeexample1 data-lang="python"    data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''     data-caption='This is a caption'>
 print("My first program adds a list of numbers")
@@ -276,18 +270,20 @@ print(total)
 <div class="section" id="multiple-choice">
 <h2>Multiple Choice<a class="headerlink" href="#multiple-choice" title="Permalink to this headline">¶</a></h2>
 
+            <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="true"  id="question1_2">
-            Q-1: Which colors might be found in a rainbow? (choose all that are correct)
-            <li data-component="answer" data-correct id="question1_2_opt_a">(A) red</li><li data-component="feedback" id="question1_2_opt_a">Red is a definitely on of the colors.</li>
+            Q-2: Which colors might be found in a rainbow? (choose all that are correct)
+            <li data-component="answer" data-correct id="question1_2_opt_a">red</li><li data-component="feedback" id="question1_2_opt_a">Red is a definitely on of the colors.</li>
             
-            <li data-component="answer" data-correct id="question1_2_opt_b">(B) yellow</li><li data-component="feedback" id="question1_2_opt_b">Yes, yellow is correct.</li>
+            <li data-component="answer" data-correct id="question1_2_opt_b">yellow</li><li data-component="feedback" id="question1_2_opt_b">Yes, yellow is correct.</li>
             
-            <li data-component="answer"  id="question1_2_opt_c">(C) black</li><li data-component="feedback" id="question1_2_opt_c">Remember the acronym...ROY G BIV.  B stands for blue.</li>
+            <li data-component="answer"  id="question1_2_opt_c">black</li><li data-component="feedback" id="question1_2_opt_c">Remember the acronym...ROY G BIV.  B stands for blue.</li>
             
-            <li data-component="answer" data-correct id="question1_2_opt_d">(D) green</li><li data-component="feedback" id="question1_2_opt_d">Yes, green is one of the colors.</li>
+            <li data-component="answer" data-correct id="question1_2_opt_d">green</li><li data-component="feedback" id="question1_2_opt_d">Yes, green is one of the colors.</li>
             
 
             </ul>
+            </div>
             <p>These are just two of the many interactive components for writing online course materials.  You can see examples of all of them <a class="reference external" href="http://interactivepython.org/runestone/static/overview/overview.html">On our Example Page</a></p>
 <p>Now feel free to modify this file to start creating your own interactive page.</p>
 </div>

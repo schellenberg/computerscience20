@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>4. Darn bugs! &#8212; Computer Science 20 Saskatchewan</title>
-    
+    <title>Darn bugs! &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -103,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. A token of appreciation" href="tokens1.html" />
-    <link rel="prev" title="3. Task driven learning" href="home.html" />
+    <link rel="next" title="A token of appreciation" href="tokens1.html" />
+    <link rel="prev" title="Task driven learning" href="home.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -198,9 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">4. Darn bugs!</a><ul>
-<li><a class="reference internal" href="#what-is-a-bug">4.1. What is a bug?</a></li>
-<li><a class="reference internal" href="#dealing-with-bugs">4.2. Dealing with bugs</a></li>
+<li><a class="reference internal" href="#">Darn bugs!</a><ul>
+<li><a class="reference internal" href="#what-is-a-bug">What is a bug?</a></li>
+<li><a class="reference internal" href="#dealing-with-bugs">Dealing with bugs</a></li>
 </ul>
 </li>
 </ul>
@@ -210,13 +204,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 3. Task driven learning" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - Task driven learning" data-toggle="tooltip">
     <a href="home.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 5. A token of appreciation' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - A token of appreciation' data-toggle="tooltip" >
     <a href="tokens1.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -248,23 +242,23 @@
 <div class="container" id="main-content">
   
   <div class="section" id="darn-bugs">
-<h1>4. Darn bugs!<a class="headerlink" href="#darn-bugs" title="Permalink to this headline">¶</a></h1>
+<h1>Darn bugs!<a class="headerlink" href="#darn-bugs" title="Permalink to this headline">¶</a></h1>
 <p>Nobody likes to talk about computer bugs. But, unfortunately, you must
 learn about them and, especially, how to get rid of them.</p>
 <p>This lesson is a little longer than the previous ones, but I encourage you to read it completely at least once.</p>
 <div class="section" id="what-is-a-bug">
-<h2>4.1. What is a bug?<a class="headerlink" href="#what-is-a-bug" title="Permalink to this headline">¶</a></h2>
+<h2>What is a bug?<a class="headerlink" href="#what-is-a-bug" title="Permalink to this headline">¶</a></h2>
 <p>The origin of the word <strong>bug</strong> in computer jargon is often attributed to
-an actual incident where a moth was found inside Harvard University&#8217;s
+an actual incident where a moth was found inside Harvard University’s
 Mark II computer; apparently this moth had caused the computer to stop
 working. It was found by the team headed by renowned computer scientist,
 mathematician, and young naval officer Grace Murray Hopper, who went on
 to invent the concept of compiler languages in computer programming. Dr.
 Grace Hopper eventually rose in the U.S. naval hierarchy to the rank of
 Rear Admiral.</p>
-<p>The moth was preserved, taped into Hopper&#8217;s log book, as shown below.
-Interestingly, the log book included a note saying, &#8220;First actual case
-of bug being found.&#8221; as you can see.</p>
+<p>The moth was preserved, taped into Hopper’s log book, as shown below.
+Interestingly, the log book included a note saying, “First actual case
+of bug being found.” as you can see.</p>
 <p><img alt="image0" src="../_images/first_bug.jpg" /></p>
 <p>Picture adapted from the public archive of the <a class="reference external" href="http://www.history.navy.mil/photos/pers-us/uspers-h/g-hoppr.htm">U.S. Naval Historical Center</a></p>
 <p>Actually, the word bug in a technological context is attributed by the
@@ -273,23 +267,23 @@ Dictionary, the following text can apparently be found in the March 11,
 1889 edition of the Pall Mall Gazette:</p>
 <blockquote>
 <div>Mr. Edison, I was informed, had been up the two previous nights
-discovering &#8216;a bug&#8217; in his phonograph - an expression for solving a
+discovering ‘a bug’ in his phonograph - an expression for solving a
 difficulty, and implying that some imaginary insect has secreted
 itself inside and is causing all the trouble.</div></blockquote>
-<p>It thus appears that the original &#8216;bug&#8217;, though it was indeed an insect,
+<p>It thus appears that the original ‘bug’, though it was indeed an insect,
 was in fact imaginary.</p>
 <p>Unfortunately, computer bugs, while they are not insects, are also not
 imaginary.</p>
 </div>
 <div class="section" id="dealing-with-bugs">
-<h2>4.2. Dealing with bugs<a class="headerlink" href="#dealing-with-bugs" title="Permalink to this headline">¶</a></h2>
+<h2>Dealing with bugs<a class="headerlink" href="#dealing-with-bugs" title="Permalink to this headline">¶</a></h2>
 <p>In computer jargon, a bug is an error that causes a program to behave in
 an unexpected way. If you are writing computer programs, you are going
 to have bugs in them sooner or later - everybody does. Good programmers
-seek to &#8220;remove&#8221; bugs or &#8220;fix&#8221; them as soon as they find that their
+seek to “remove” bugs or “fix” them as soon as they find that their
 program behaves unexpectedly.</p>
-<p>Not so good programmers state that &#8220;bugs&#8221; are not really bugs but that
-they are &#8220;features&#8221; of their programs. <strong>You</strong> are going to be a good
+<p>Not so good programmers state that “bugs” are not really bugs but that
+they are “features” of their programs. <strong>You</strong> are going to be a good
 programmer, unlike the maker of Reeborg, whose program is littered with
 bugs.</p>
 <div class="figure align-right" id="id1" style="width: 40%">
@@ -301,13 +295,13 @@ bugs.</p>
 <ol class="arabic simple">
 <li>Reeborg has an oil leak. Oil leaks are damaging for the environment
 and inconvenient for Reeborg who must replenish its supplies when
-it&#8217;s not busy accomplishing tasks. The maker of Reeborg claims that
-it is a feature, as it enables you to follow Reeborg&#8217;s path, just
-like any programmer can learn to &#8220;trace&#8221; a program. You will learn
-how to fix Reeborg&#8217;s leak later. More advanced techniques to trace bugs,
+it’s not busy accomplishing tasks. The maker of Reeborg claims that
+it is a feature, as it enables you to follow Reeborg’s path, just
+like any programmer can learn to “trace” a program. You will learn
+how to fix Reeborg’s leak later. More advanced techniques to trace bugs,
 like using what is known as a <em>debugger</em>,
 are beyond the scope of these lessons.</li>
-<li>Reeborg&#8217;s steering mechanism is not handled properly by Reeborg&#8217;s
+<li>Reeborg’s steering mechanism is not handled properly by Reeborg’s
 program: it can only turn left. The maker of Reeborg, once again,
 claims that this is a feature as it present you with an opportunity
 to learn about <strong>functions</strong>. Reeborg disagrees. You will soon learn how
@@ -318,14 +312,14 @@ turn left.</li>
 <li>Reeborg has a compass, enabling him to determine which direction he
 is facing. Unfortunately, yet again, the program that enables Reeborg
 to get the information from the compass has a bug: it only tells
-Reeborg if he is facing North ... or not. Once again, you will first
+Reeborg if he is facing North … or not. Once again, you will first
 learn how to implement a workaround solution and later how to fix
-permanently Reeborg and get rid of what its maker calls a &#8220;feature&#8221;.</li>
+permanently Reeborg and get rid of what its maker calls a “feature”.</li>
 <li>Reeborg can see if a wall is in front of him, and can also turn its
 head to the right to see if there is a wall there. However, a
-software &#8220;glitch&#8221; (which is another weasel term that software
+software “glitch” (which is another weasel term that software
 manufacturers use to avoid having to say that their product has a
-bug) prevents Reeborg&#8217;s program from properly registering a wall when
+bug) prevents Reeborg’s program from properly registering a wall when
 it turns its head left.</li>
 </ol>
 <p>Sometimes to find the cause of bugs, it can help to break the normal
@@ -349,7 +343,7 @@ I will explain how you can do this later.</li>
 a program; again, I will explain how you can do this later.</li>
 <li>Finally, you can stop a program at any point by pressing the <strong>stop</strong>
 button; this unfortunately may not work if you create
-what is known as an infinite loop, outside of Reeborg&#8217;s control. If
+what is known as an infinite loop, outside of Reeborg’s control. If
 worse comes to worst, you can always just reload the web page.</li>
 </ol>
 </div>
@@ -358,19 +352,19 @@ worse comes to worst, you can always just reload the web page.</li>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 3. Task driven learning' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Task driven learning' data-toggle="tooltip">
     <a href="home.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="home.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 5. A token of appreciation' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - A token of appreciation' data-toggle="tooltip" >
     <a href="tokens1.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="tokens1.html" >Next Section - 5. A token of appreciation</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="tokens1.html" >Next Section - A token of appreciation</a>
 
 <script type="text/javascript">
 

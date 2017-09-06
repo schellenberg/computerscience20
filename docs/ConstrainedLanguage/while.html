@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>23. For a while &#8212; Computer Science 20 Saskatchewan</title>
-    
+    <title>For a while &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -103,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="24. Refinements: part 1" href="refine1.html" />
-    <link rel="prev" title="22. Summary" href="summary3.html" />
+    <link rel="next" title="Refinements: part 1" href="refine1.html" />
+    <link rel="prev" title="Summary" href="summary3.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -198,9 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">23. For a <code class="docutils literal"><span class="pre">while</span></code></a><ul>
-<li><a class="reference internal" href="#how-to-think-about-while">23.1. How to think about <code class="docutils literal"><span class="pre">while</span></code></a></li>
-<li><a class="reference internal" href="#back-to-hurdles">23.2. Back to hurdles!</a></li>
+<li><a class="reference internal" href="#">For a <code class="docutils literal"><span class="pre">while</span></code></a><ul>
+<li><a class="reference internal" href="#how-to-think-about-while">How to think about <code class="docutils literal"><span class="pre">while</span></code></a></li>
+<li><a class="reference internal" href="#back-to-hurdles">Back to hurdles!</a></li>
 </ul>
 </li>
 </ul>
@@ -210,13 +204,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 22. Summary" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - Summary" data-toggle="tooltip">
     <a href="summary3.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 24. Refinements: part 1' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - Refinements: part 1' data-toggle="tooltip" >
     <a href="refine1.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -248,7 +242,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="for-a-while">
-<h1>23. For a <code class="docutils literal"><span class="pre">while</span></code><a class="headerlink" href="#for-a-while" title="Permalink to this headline">¶</a></h1>
+<h1>For a <code class="docutils literal"><span class="pre">while</span></code><a class="headerlink" href="#for-a-while" title="Permalink to this headline">¶</a></h1>
 <p id="index-0">When we want to repeat some instructions until a certain condition is
 satisfied, Python gives us a simpler way to write this using a new
 keyword: <code class="docutils literal"><span class="pre">while</span></code>. For example, suppose we want to have Reeborg keep
@@ -268,14 +262,14 @@ reach a wall. Using <code class="docutils literal"><span class="pre">while</span
     <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>That&#8217;s it! No more guessing and asking something to be performed a large
+<p>That’s it! No more guessing and asking something to be performed a large
 number of time just to ensure that it will be enough.</p>
-<p>Here&#8217;s a flowchart for this simple program:</p>
+<p>Here’s a flowchart for this simple program:</p>
 <div class="figure align-center">
 <img alt="../_images/while.jpg" src="../_images/while.jpg" />
 </div>
 <div class="section" id="how-to-think-about-while">
-<h2>23.1. How to think about <code class="docutils literal"><span class="pre">while</span></code><a class="headerlink" href="#how-to-think-about-while" title="Permalink to this headline">¶</a></h2>
+<h2>How to think about <code class="docutils literal"><span class="pre">while</span></code><a class="headerlink" href="#how-to-think-about-while" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we have the following:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">():</span>
     <span class="n">do_1</span><span class="p">()</span>
@@ -320,7 +314,7 @@ repeating and end up with an <strong>infinite loop</strong>.</p>
 <code class="docutils literal"><span class="pre">False</span></code> at some point.</p>
 </div>
 <div class="section" id="back-to-hurdles">
-<h2>23.2. Back to hurdles!<a class="headerlink" href="#back-to-hurdles" title="Permalink to this headline">¶</a></h2>
+<h2>Back to hurdles!<a class="headerlink" href="#back-to-hurdles" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
 <p class="topic-title first">Your turn!</p>
 <p>Go back to <strong>Hurdles&nbsp;1</strong>, <strong>Hurdles&nbsp;2</strong> and <strong>Hurdles&nbsp;3</strong>, and write a single
@@ -340,7 +334,7 @@ program for all three world, using <code class="docutils literal"><span class="p
 </pre></div>
 </div>
 </div>
-<p>That&#8217;s it! No more arbitrary repetitions! From now on, you should only
+<p>That’s it! No more arbitrary repetitions! From now on, you should only
 use <code class="docutils literal"><span class="pre">repeat</span></code> when you know <strong>exactly</strong> how many times a given
 function must be repeated.</p>
 </div>
@@ -349,19 +343,19 @@ function must be repeated.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 22. Summary' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Summary' data-toggle="tooltip">
     <a href="summary3.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="summary3.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 24. Refinements: part 1' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - Refinements: part 1' data-toggle="tooltip" >
     <a href="refine1.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="refine1.html" >Next Section - 24. Refinements: part 1</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="refine1.html" >Next Section - Refinements: part 1</a>
 
 <script type="text/javascript">
 

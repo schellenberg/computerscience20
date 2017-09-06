@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>3. Task driven learning &#8212; Computer Science 20 Saskatchewan</title>
-    
+    <title>Task driven learning &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -18,11 +15,10 @@
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
@@ -30,7 +26,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -76,8 +71,6 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/livecode.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
@@ -86,8 +79,9 @@
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
     <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -103,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Darn bugs!" href="bugs.html" />
-    <link rel="prev" title="2. First program" href="move.html" />
+    <link rel="next" title="Darn bugs!" href="bugs.html" />
+    <link rel="prev" title="First program" href="move.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -123,13 +117,13 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = false;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '2.7.15';
+  eBookConfig.runestone_version = '3.0.5';
 </script>
 
 
 
   </head>
-  <body role="document">
+  <body>
 
 
 <!-- Begin navbar -->
@@ -198,9 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">3. Task driven learning</a><ul>
-<li><a class="reference internal" href="#making-a-left-turn">3.1. Making a left turn</a></li>
-<li><a class="reference internal" href="#a-different-view">3.2. A different view</a></li>
+<li><a class="reference internal" href="#">Task driven learning</a><ul>
+<li><a class="reference internal" href="#making-a-left-turn">Making a left turn</a></li>
+<li><a class="reference internal" href="#a-different-view">A different view</a></li>
 </ul>
 </li>
 </ul>
@@ -210,13 +204,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 2. First program" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - First program" data-toggle="tooltip">
     <a href="move.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 4. Darn bugs!' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - Darn bugs!' data-toggle="tooltip" >
     <a href="bugs.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -248,7 +242,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="task-driven-learning">
-<h1>3. Task driven learning<a class="headerlink" href="#task-driven-learning" title="Permalink to this headline">¶</a></h1>
+<h1>Task driven learning<a class="headerlink" href="#task-driven-learning" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-left">
 <img alt="../_images/select_home.png" src="../_images/select_home.png" />
 </div>
@@ -256,7 +250,7 @@
 have to program Reeborg to accomplish specific tasks and Reeborg itself
 will tell you if you got it right or wrong.</p>
 <p>Select the world <strong>Home&nbsp;1</strong>. Notice the house on the bottom left square:
-this is Reeborg&#8217;s home. Reeborg&#8217;s world is a simple grid.
+this is Reeborg’s home. Reeborg’s world is a simple grid.
 In <strong>Home&nbsp;1</strong>, Reeborg starts at the third square on the bottom row. It
 labels this square as <code class="docutils literal"><span class="pre">x=3</span></code> and <code class="docutils literal"><span class="pre">y=1</span></code>, using what is known as
 Cartesian coordinates.</p>
@@ -274,7 +268,7 @@ facing you. Try running the exact same program and see what happens.</p>
 <p>Next, select <strong>Home&nbsp;3</strong> and run your program.</p>
 </div>
 <div class="section" id="making-a-left-turn">
-<span id="index-0"></span><h2>3.1. Making a left turn<a class="headerlink" href="#making-a-left-turn" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Making a left turn<a class="headerlink" href="#making-a-left-turn" title="Permalink to this headline">¶</a></h2>
 <p>Last example ended with a program that did not work, as Reeborg
 did not end up at his home.  To solve this problem, we need to
 add two instructions:</p>
@@ -293,12 +287,12 @@ keep the additional <code class="docutils literal"><span class="pre">move()</spa
 </div>
 </div>
 <div class="section" id="a-different-view">
-<h2>3.2. A different view<a class="headerlink" href="#a-different-view" title="Permalink to this headline">¶</a></h2>
+<h2>A different view<a class="headerlink" href="#a-different-view" title="Permalink to this headline">¶</a></h2>
 <p>You may have noticed that Reeborg (the robot itself) is seen from its
-side, such as <img alt="image0" src="../_images/robot_e.png" /> whereas his world is seen from above ... which
+side, such as <img alt="image0" src="../_images/robot_e.png" /> whereas his world is seen from above … which
 you might perhaps find confusing especially when you instruct Reeborg to
 turn left. You can change the way Reeborg is seen by either using the
-clicking on the appropriate image above Reeborg&#8217;s world.
+clicking on the appropriate image above Reeborg’s world.
 For example, when facing East, such as the side view above, using a different
 image, Reeborg can appear as follows when viewed from above: <img alt="image1" src="../_images/rover_e.png" /></p>
 </div>
@@ -307,19 +301,19 @@ image, Reeborg can appear as follows when viewed from above: <img alt="image1" s
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 2. First program' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - First program' data-toggle="tooltip">
     <a href="move.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="move.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 4. Darn bugs!' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - Darn bugs!' data-toggle="tooltip" >
     <a href="bugs.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="bugs.html" >Next Section - 4. Darn bugs!</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="bugs.html" >Next Section - Darn bugs!</a>
 
 <script type="text/javascript">
 
