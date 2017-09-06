@@ -7,6 +7,7 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :height: 315
     :width: 560
     :align: left
+    :http: https
 
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
