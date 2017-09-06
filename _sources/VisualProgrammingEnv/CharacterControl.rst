@@ -1,7 +1,35 @@
-Controlling a Character with WASD
-=================================
+Controlling a Character with WASD (Repetition and Conditionals)
+===============================================================
 
-Control character with WASD. Use FOREVER block with changing a characters costume. Play some sounds. [Perhaps do the "if on edge, bounce" block, and have one character follow via the "Point towards" block] Work time on short story, for any remaining time.
+If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=cvGC6Sr6rvU>`_ demonstrates the same ideas as what I've described in text below.
+
+.. youtube:: cvGC6Sr6rvU
+    :height: 315
+    :width: 560
+    :align: left
+
+
+Adapting Project From Yesterday
+-------------------------------
+
+Adapt previous project to have the characters shrink before they disappear. 
+
+
+Control a Character Using WASD - Version 1
+------------------------------------------
+
+Then control character with WASD. Do this in multiple versions -- first with jittery motion (When Key is Pressed), then...
+
+
+Control a Character Using WASD - Version 2
+------------------------------------------
+WASD smoothly (FOREVER block, using if statements)
+
+
+
+
+Use FOREVER block with changing a characters costume. Work time on first assignment [short story], for any remaining time.
 
 
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
+
