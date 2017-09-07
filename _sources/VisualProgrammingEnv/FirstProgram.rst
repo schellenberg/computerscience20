@@ -1,5 +1,5 @@
-Your First Computer Program
-==============================
+Introduction to Scratch and Using Broadcasts
+============================================
 
 Introduction
 ----------------------------
@@ -51,4 +51,22 @@ Of course, we don't want to have to double click the block to make the conversat
 
 .. image:: images/scratch_blocks_connected.png
 
+To get our conversation going, drag one sprite to the left side of the stage, and the other to the right side of the stage. Now, let's set their starting locations. Hook up the character on the left side of the stage to a block, as follows:
+
+.. image:: images/scratch_goTo_1.png
+
+The character on the right side of the stage should have the a script similar to this:
+
+.. image:: images/scratch_goTo_2.png
+
+.. note:: Notice that Scratch uses the Cartesian plane (the xy grid system you learned in math class), and that the origin is directly in the centre of the stage.
+
+Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the *Go to* block in the blocks palette updates with the x and y locations of the sprite when you release the mouse. Now hook a *Glide ? secs to* block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a *Say* block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a *broadcast* block from the Events tab and hook it onto the bottom of the script. It should now look something like this:
+
+.. image:: images/scratch_goTo_andGlide.png
+
+Broadcasts
+----------
+
+What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something **once an action performed by another sprite was completed**. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we'd like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.
 
