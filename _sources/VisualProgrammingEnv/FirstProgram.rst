@@ -1,6 +1,10 @@
 Introduction to Scratch and Using Broadcasts
 ============================================
 
+.. sidebar:: Teacher Note - Overview of Day
+
+    Introduction to the course, and to the Scratch environment. Explain the coordinate plane used in Scratch, and basic movement blocks. Introduce the idea of using the **broadcast** block to send messages, which is used to control program flow.
+
 Introduction
 ----------------------------
 
@@ -26,7 +30,6 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :align: left
     :http: https
 
-
 Now that you have an account, let's make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project. 
 
 .. image:: images/scratch_create.png
@@ -43,11 +46,11 @@ For our first program, let's create a simple conversation between two sprites. T
 
 .. note:: Once you have more than one sprite in the sprite list pane, you will be able to see that the scripts area pane shows the script for the currently selected sprite. To be sure you understand this, drag a block from the block palette onto the scripts area. Now select a different sprite in the sprite list by clicking on it. Notice how the blocks in the scripts area change when you select a different sprite.
 
-Now that you have two sprites in the sprite list pane, let's get them to have a simple conversation. Select the *Looks* tab in the blocks palette, then drag a *Say "Hello" for 2 secs* block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!
+Now that you have two sprites in the sprite list pane, let's get them to have a simple conversation. Select the **Looks** tab in the blocks palette, then drag a **say "Hello" for 2 secs** block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!
 
 .. image:: images/scratch_say_block.png
 
-Of course, we don't want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the *Events* tab in the blocks palette, then drag a *When Flag Clicked* block into the scripts area. Now, drag the *Say "Hello" for 2 secs* block until it snaps onto the *When Flag Clicked* block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.
+Of course, we don't want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the **Events** tab in the blocks palette, then drag a **when flag clicked** block into the scripts area. Now, drag the **say "Hello" for 2 secs** block until it snaps onto the **when flag clicked** block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.
 
 .. image:: images/scratch_blocks_connected.png
 
@@ -61,7 +64,7 @@ The character on the right side of the stage should have the a script similar to
 
 .. note:: Notice that Scratch uses the Cartesian plane (the xy grid system you learned in math class), and that the origin is directly in the centre of the stage.
 
-Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the *Go to* block in the blocks palette updates with the x and y locations of the sprite when you release the mouse. Now hook a *Glide ? secs to* block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a *Say* block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a *broadcast* block from the Events tab and hook it onto the bottom of the script. It should now look something like this:
+Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the *Go to* block in the blocks palette updates with the x and y locations of the sprite when you release the mouse. Now hook a **glide 1 secs to x: y:** block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a **say Hello! for 2 secs** block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a **broadcast** block from the Events tab and hook it onto the bottom of the script. It should now look something like this:
 
 .. image:: images/scratch_goTo_andGlide.png
 

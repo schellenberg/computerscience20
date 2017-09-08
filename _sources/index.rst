@@ -1,4 +1,4 @@
-.. Here is were you specify the content and order of your new book.
+.. Here is where you specify the content and order of your new book.
 
 .. Each section heading (e.g. "SECTION 1: A Random Section") will be
    a heading in the table of contents. Source files that should be
