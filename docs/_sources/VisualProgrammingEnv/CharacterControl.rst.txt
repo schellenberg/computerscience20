@@ -1,6 +1,9 @@
 Controlling a Character with WASD (Repetition and Conditionals)
 ===============================================================
 
+.. sidebar:: Teacher Note - Overview of Day
+
+
 If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=cvGC6Sr6rvU>`_ demonstrates the same ideas as what I've described in text below.
 
 .. youtube:: cvGC6Sr6rvU

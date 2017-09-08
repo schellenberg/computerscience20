@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Your First Computer Program &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Introduction to Scratch and Using Broadcasts &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,9 +192,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Your First Computer Program</a><ul>
+<li><a class="reference internal" href="#">Introduction to Scratch and Using Broadcasts</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#id1">Your First Computer Program!</a></li>
+<li><a class="reference internal" href="#your-first-computer-program">Your First Computer Program!</a></li>
+<li><a class="reference internal" href="#broadcasts">Broadcasts</a></li>
 </ul>
 </li>
 </ul>
@@ -241,8 +242,12 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="your-first-computer-program">
-<h1>Your First Computer Program<a class="headerlink" href="#your-first-computer-program" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="introduction-to-scratch-and-using-broadcasts">
+<h1>Introduction to Scratch and Using Broadcasts<a class="headerlink" href="#introduction-to-scratch-and-using-broadcasts" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Teacher Note - Overview of Day</p>
+<p class="last">Introduction to the course, and to the Scratch environment. Explain the coordinate plane used in Scratch, and basic movement blocks. Introduce the idea of using the <strong>broadcast</strong> block to send messages, which is used to control program flow.</p>
+</div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Welcome here! The goal of this course is to teach you how to problem solve, and we will be using the concepts of Computer Science to achieve that goal. By the end of the semester, you will be able to confidently solve problems by writing computer programs. In other words, you will be able to control what the computer does by writing algorithms (a series of steps).</p>
@@ -253,8 +258,8 @@
 <li>use a “traditional” computer science language (once you are feeling confident with many of the basic ideas of computer science, we will apply them using a traditional computer language)</li>
 </ul>
 </div>
-<div class="section" id="id1">
-<h2>Your First Computer Program!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="your-first-computer-program">
+<h2>Your First Computer Program!<a class="headerlink" href="#your-first-computer-program" title="Permalink to this headline">¶</a></h2>
 <p>There are many different visual programming environments, but the one we will use is called <a class="reference external" href="https://scratch.mit.edu/">Scratch</a>. Your first task is to create an account on the Scratch website, so that the programs you write can be saved and accessed later. Go do that now!</p>
 <p>If you’d prefer to watch a video describing how to create your first Scratch program, <a class="reference external" href="https://www.youtube.com/watch?v=pJYCRtSDJSk">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
 <iframe src="https://www.youtube.com/embed/pJYCRtSDJSk"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><p>Now that you have an account, let’s make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project.</p>
@@ -270,10 +275,24 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Once you have more than one sprite in the sprite list pane, you will be able to see that the scripts area pane shows the script for the currently selected sprite. To be sure you understand this, drag a block from the block palette onto the scripts area. Now select a different sprite in the sprite list by clicking on it. Notice how the blocks in the scripts area change when you select a different sprite.</p>
 </div>
-<p>Now that you have two sprites in the sprite list pane, let’s get them to have a simple conversation. Select the <em>Looks</em> tab in the blocks palette, then drag a <em>Say “Hello” for 2 secs</em> block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!</p>
+<p>Now that you have two sprites in the sprite list pane, let’s get them to have a simple conversation. Select the <strong>Looks</strong> tab in the blocks palette, then drag a <strong>say “Hello” for 2 secs</strong> block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!</p>
 <img alt="../_images/scratch_say_block.png" src="../_images/scratch_say_block.png" />
-<p>Of course, we don’t want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the <em>Events</em> tab in the blocks palette, then drag a <em>When Flag Clicked</em> block into the scripts area. Now, drag the <em>Say “Hello” for 2 secs</em> block until it snaps onto the <em>When Flag Clicked</em> block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.</p>
+<p>Of course, we don’t want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the <strong>Events</strong> tab in the blocks palette, then drag a <strong>when flag clicked</strong> block into the scripts area. Now, drag the <strong>say “Hello” for 2 secs</strong> block until it snaps onto the <strong>when flag clicked</strong> block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.</p>
 <img alt="../_images/scratch_blocks_connected.png" src="../_images/scratch_blocks_connected.png" />
+<p>To get our conversation going, drag one sprite to the left side of the stage, and the other to the right side of the stage. Now, let’s set their starting locations. Hook up the character on the left side of the stage to a block, as follows:</p>
+<img alt="../_images/scratch_goTo_1.png" src="../_images/scratch_goTo_1.png" />
+<p>The character on the right side of the stage should have the a script similar to this:</p>
+<img alt="../_images/scratch_goTo_2.png" src="../_images/scratch_goTo_2.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that Scratch uses the Cartesian plane (the xy grid system you learned in math class), and that the origin is directly in the centre of the stage.</p>
+</div>
+<p>Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the <em>Go to</em> block in the blocks palette updates with the x and y locations of the sprite when you release the mouse. Now hook a <strong>glide 1 secs to x: y:</strong> block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a <strong>say Hello! for 2 secs</strong> block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a <strong>broadcast</strong> block from the Events tab and hook it onto the bottom of the script. It should now look something like this:</p>
+<img alt="../_images/scratch_goTo_andGlide.png" src="../_images/scratch_goTo_andGlide.png" />
+</div>
+<div class="section" id="broadcasts">
+<h2>Broadcasts<a class="headerlink" href="#broadcasts" title="Permalink to this headline">¶</a></h2>
+<p>What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something <strong>once an action performed by another sprite was completed</strong>. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we’d like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.</p>
 </div>
 </div>
 
