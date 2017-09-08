@@ -33,12 +33,14 @@ We learned in the previous lesson that anytime you want to ask the computer a qu
 
 .. image:: images/scratch_if_else.png
 
-Notice that when the cat touches the mouse cursor, 
-
-Use a **forever** block combined with an **if/else** block to make a character follow the mouse, then make a sound when it reaches the mouse cursor.
+Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn't the behaviour you want, you can use the **play sound** block instead of the **play sound until done** block.
 
 Drawing Regular Polygons
 ------------------------
+
+Every sprite in Scratch has the ability to draw with a virtual pen that they are holding at all times. This allows each sprite to leave a trail that shows where they have walked. In order to do this, you need to put the **pen down**, then have your sprite move. Try the following:
+
+
 
 Introduce the pen in Scratch, and use it to draw regular polygons with the **repeat** block.
 
