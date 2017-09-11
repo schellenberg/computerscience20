@@ -9,6 +9,8 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
     :align: left
     :http: https
 
+.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
+
 Variables
 ---------
 
@@ -18,8 +20,11 @@ Variables (to improve code from yesterday).
 Nested Repeat blocks
 --------------------
 
-Nested Repeat blocks -- polygons, with rotation. Perhaps also a pinwheel (as seen here: http://bjc.edc.org/bjc-r/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment). Work time on short story.
+Nested Repeat blocks -- polygons, with rotation. 
 
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
+Work time on short story.
+
+
+
 
