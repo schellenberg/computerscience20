@@ -1,6 +1,10 @@
 Repeat Until
 ============
 
+.. topic:: Quick Overview of Day
+
+    Introduce the **repeat until** block by tracing code with simple variables and conditionals. Use the repeat until block to simulate the motion of a cannon ball (motion repeats until the cannon ball hits the ground).
+
 If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=_jTHwZCY2CI>`_ demonstrates the same ideas as what I've described in text below.
 
 .. youtube:: _jTHwZCY2CI
