@@ -45,7 +45,7 @@ Scratch
    VisualProgrammingEnv/ExperimentWithRepeat.rst
    VisualProgrammingEnv/VariablesAndNestedRepeat.rst
    VisualProgrammingEnv/RepeatUntil.rst
-   VisualProgrammingEnv/StartScreenAndBroadcastIssuses.rst
+   VisualProgrammingEnv/StartScreen.rst
    VisualProgrammingEnv/Conditionals.rst
    VisualProgrammingEnv/NumberGuessingGame.rst
    VisualProgrammingEnv/SecondsElapsedGame.rst

@@ -1,7 +1,7 @@
 Introduction to Scratch and Using Broadcasts
 ============================================
 
-.. sidebar:: Teacher Note - Overview of Day
+.. topic:: Quick Overview of Day
 
     Introduction to the course, and to the Scratch environment. Explain the coordinate plane used in Scratch, and basic movement blocks. Introduce the idea of using the **broadcast** block to send messages, which is used to control program flow.
 
