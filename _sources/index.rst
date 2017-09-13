@@ -39,6 +39,7 @@ Scratch
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    VisualProgrammingEnv/FirstProgram.rst
    VisualProgrammingEnv/CharacterControl.rst
@@ -58,6 +59,7 @@ Reeborg
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
    
    ConstrainedLanguage/TransitioningToText.rst
    ConstrainedLanguage/move.rst
