@@ -32,11 +32,12 @@ Control a Character Using WASD - Version 2
 WASD smoothly (FOREVER block, using if statements)
 
 
-Possible Extensions
--------------------
-
-Use FOREVER block with changing a characters costume. Work time on first assignment [short story], for any remaining time.
+Work time on first assignment [short story], for any remaining time.
 
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
 
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
 

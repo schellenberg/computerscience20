@@ -1,5 +1,5 @@
-Making a Start Screen
-=====================
+Making a Start Screen (Repeat, If/Else, Broadcast)
+==================================================
 
 .. topic:: Quick Overview of Day
 
@@ -16,3 +16,10 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
 Making a start screen. Not really new concepts, just combining some of the previously learned blocks to make something useful. Blocks used: **broadcast**, **forever** and **if/else**.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.

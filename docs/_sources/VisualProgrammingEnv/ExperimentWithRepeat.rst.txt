@@ -1,5 +1,5 @@
-Repeat and If/Else
-==================
+Chase the Mouse and Drawing Polygons (Repeat and If/Else)
+===========================================================
 
 .. topic:: Quick Overview of Day
 
@@ -87,5 +87,13 @@ Although you may have used a guess and check method to determine the angles used
 +------------+---------+-------------+
 
 .. note:: This lesson draws on ideas from the `Beauty and Joy of Computing Curriculum <http://bjc.edc.org/>`_ .
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
 
 

@@ -1,5 +1,5 @@
-Repeat Until
-============
+Tracing Code and Cannonball Motion (Repeat Until)
+=================================================
 
 .. topic:: Quick Overview of Day
 
@@ -20,4 +20,12 @@ Class Activity: Repeat Until. Print out Practice with Repeat Until Sheets.
 Demo simple "shooting a cannon ball" example -- use an xSpeed and ySpeed variable, and a repeat until block (until the cannon ball hits the ground, by having a y-value less than something).  
 
 Work time on RPS, for any remaining time.  **Short story is due.**
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
 

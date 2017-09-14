@@ -24,3 +24,11 @@ Create a dodging game, in which the object to avoid (bouncing randomly around th
 
 
 Work time on RPS/Coolest Scratch Assn.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
