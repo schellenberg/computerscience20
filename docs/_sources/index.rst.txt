@@ -48,9 +48,9 @@ Scratch
    VisualProgrammingEnv/RepeatUntil.rst
    VisualProgrammingEnv/StartScreen.rst
    VisualProgrammingEnv/ProjectWorkTime.rst
-   VisualProgrammingEnv/BroadcastIssues.rst
-   VisualProgrammingEnv/NumberGuessingGame.rst
+   VisualProgrammingEnv/TimingIssuesAndDodgingGame.rst
    VisualProgrammingEnv/SecondsElapsedGame.rst
+   VisualProgrammingEnv/NumberGuessingGame.rst
    VisualProgrammingEnv/MakingOwnBlocks.rst
    VisualProgrammingEnv/PossibleExtensions.rst
 
