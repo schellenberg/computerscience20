@@ -1,4 +1,4 @@
-Broadcast Issues and Dodging Game
+Timing Issues and Dodging Game
 =================================
 
 If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=1vPKlqxNloc>`_ demonstrates the same ideas as what I've described in text below.
