@@ -1,5 +1,9 @@
-Timing Issues and Dodging Game
-=================================
+Timing Issues and Dodging Game (Broadcasts and Variables)
+=========================================================
+
+.. topic:: Quick Overview of Day
+
+    Explore issues that arise when more than one script is triggered by the same event, and solve them by setting up ordered broadcasts. Create an object dodging game, using variables to allow both the object and character to increase in speed as the game progresses.
 
 If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=1vPKlqxNloc>`_ demonstrates the same ideas as what I've described in text below.
 
