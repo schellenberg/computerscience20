@@ -23,12 +23,16 @@ Experiment with playing sounds at differing speeds using the tempo variable.
 Answer
 -------------
 
-Experiment with asking the user questions, and responding to the input received.
+Ask the user a question, use the join command to concatenate the answer with other strings. 
+
 
 Timer
--------------
+-----
 
-Create a guessing number of seconds elapsed game.
+Use the built-in timer variable to create a guessing number of seconds elapsed game.
+
+
+Work time on RPS/Coolest Scratch Assn.
 
 
 .. reveal:: curriculum_addressed

@@ -50,6 +50,7 @@ Scratch
    VisualProgrammingEnv/ProjectWorkTime.rst
    VisualProgrammingEnv/TimingIssuesAndDodgingGame.rst
    VisualProgrammingEnv/BuiltInVariables.rst
+   VisualProgrammingEnv/NumberGuessingGame.rst
    VisualProgrammingEnv/MakingOwnBlocks.rst
    VisualProgrammingEnv/NumberGuessingGame.rst
    VisualProgrammingEnv/StudentDirectedProject.rst
