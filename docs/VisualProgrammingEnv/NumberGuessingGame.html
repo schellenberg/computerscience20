@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Creating Your Own Blocks" href="MakingOwnBlocks.html" />
-    <link rel="prev" title="9. Simple Game Demo (Guessing the Number of Seconds Elapsed)" href="SecondsElapsedGame.html" />
+    <link rel="next" title="11. Making Your Own Blocks (Functions)" href="MakingOwnBlocks.html" />
+    <link rel="prev" title="9. Built-In Variables (Tempo, Answer and Timer)" href="BuiltInVariables.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,7 +192,11 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">10. Number Guessing Game (Pair Programming)</a></li>
+<li><a class="reference internal" href="#">10. Number Guessing Game (Pair Programming)</a><ul>
+<li><a class="reference internal" href="#basic-game">10.1. Basic Game</a></li>
+<li><a class="reference internal" href="#extensions">10.2. Extensions</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -200,13 +204,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 9. Simple Game Demo (Guessing the Number of Seconds Elapsed)" data-toggle="tooltip">
-    <a href="SecondsElapsedGame.html" >
+  <li id="relations-prev" title="Previous Chapter - 9. Built-In Variables (Tempo, Answer and Timer)" data-toggle="tooltip">
+    <a href="BuiltInVariables.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 11. Creating Your Own Blocks' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 11. Making Your Own Blocks (Functions)' data-toggle="tooltip" >
     <a href="MakingOwnBlocks.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -239,38 +243,69 @@
   
   <div class="section" id="number-guessing-game-pair-programming">
 <h1>10. Number Guessing Game (Pair Programming)<a class="headerlink" href="#number-guessing-game-pair-programming" title="Permalink to this headline">¶</a></h1>
-<p>This will be your first foray into pair programming. One of you should be at the keyboard and mouse, while the other partner is helping discuss the ideas. Switch roles every 10 minutes.</p>
-<p>For this assignment, you will create a game that does the following:</p>
-<ul class="simple">
-<li>generates a random number from 1 to 100</li>
-<li>repeats the following until the user guesses the number</li>
-<li>gets the user to guess the number</li>
-<li>tells the user if the number is too high or too low</li>
-<li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
-</ul>
-<p>When you complete the basic functionality, put up your hand and I’ll tell you how you can make it even better! [Note to self: WAY too…, STILL too…, very close, but it’s too…, CPU/human reverse roles…, specific number of attempts…]</p>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>In this pair programming activity, you will create a number guessing game that uses many of the concepts we’ve learned.</p>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This is just a stub, to give a sense of what should go here. It will be written up properly soon…</p>
 </div>
+<p>This will be your first foray into pair programming. One of you should be at the keyboard and mouse, while the other partner is helping discuss the ideas. Switch roles every 10 minutes.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Teacher Note</p>
+<p class="last">Before having the students attempt to create the game, you may want to model the game. The teacher can act as the computer (picking a random number between 1-100, providing too high/low feedback, and ending with “You got it in 8 tries!”), and one of the students can be the user who is attempting to guess the number.</p>
+</div>
+<div class="section" id="basic-game">
+<h2>10.1. Basic Game<a class="headerlink" href="#basic-game" title="Permalink to this headline">¶</a></h2>
+<p>For this assignment, you will create a game that does the following:</p>
+<ul class="simple">
+<li>generates a random number from 1 to 100 and stores it in a variable</li>
+<li>repeats the following until the user guesses the number</li>
+<li>gets the user to guess the number (using the <strong>ask</strong> block)</li>
+<li>tells the user if the number is too high or too low</li>
+<li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
+</ul>
+<p>When you complete the basic functionality, put up your hand and I’ll tell you how you can make it even better!</p>
+</div>
+<div class="section" id="extensions">
+<h2>10.2. Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>Extras that can be added to the basic game:</p>
+<ul class="simple">
+<li>WAY too high/low, if the guess is dramatically far away from the actual number</li>
+<li>very close, but it’s too high/low, if the guess is really close the actual number</li>
+<li>STILL too high/low, if the guess is above/below the actual number multiple times in a row</li>
+<li>only allow specific number of attempts before ending the game</li>
+<li>CPU/human reverse roles</li>
+</ul>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+</ul>
+
+    </div>
+    </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 9. Simple Game Demo (Guessing the Number of Seconds Elapsed)' data-toggle="tooltip">
-    <a href="SecondsElapsedGame.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 9. Built-In Variables (Tempo, Answer and Timer)' data-toggle="tooltip">
+    <a href="BuiltInVariables.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="SecondsElapsedGame.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="BuiltInVariables.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 11. Creating Your Own Blocks' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 11. Making Your Own Blocks (Functions)' data-toggle="tooltip" >
     <a href="MakingOwnBlocks.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="MakingOwnBlocks.html" >Next Section - 11. Creating Your Own Blocks</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="MakingOwnBlocks.html" >Next Section - 11. Making Your Own Blocks (Functions)</a>
 
 <script type="text/javascript">
 
