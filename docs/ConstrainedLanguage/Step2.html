@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>12. Student Directed Project &#8212; Computer Science 20 Saskatchewan</title>
+    <title>3. Step 2: Taking and Putting Down Objects &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. Possible Extensions" href="PossibleExtensions.html" />
-    <link rel="prev" title="11. Making Your Own Blocks (Functions)" href="MakingOwnBlocks.html" />
+    <link rel="next" title="4. Step 3: Turning Left and Stepping Through Code" href="Step3.html" />
+    <link rel="prev" title="2. Step 1: Move Reeborg Home" href="Step1.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,7 +192,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">12. Student Directed Project</a></li>
+<li><a class="reference internal" href="#">3. Step 2: Taking and Putting Down Objects</a></li>
 </ul>
 </ul>
 </li>
@@ -200,14 +200,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 11. Making Your Own Blocks (Functions)" data-toggle="tooltip">
-    <a href="MakingOwnBlocks.html" >
+  <li id="relations-prev" title="Previous Chapter - 2. Step 1: Move Reeborg Home" data-toggle="tooltip">
+    <a href="Step1.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 13. Possible Extensions' data-toggle="tooltip" >
-    <a href="PossibleExtensions.html" >
+  <li id="relations-next" title='Next Chapter - 4. Step 3: Turning Left and Stepping Through Code' data-toggle="tooltip" >
+    <a href="Step3.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -237,52 +237,35 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="student-directed-project">
-<h1>12. Student Directed Project<a class="headerlink" href="#student-directed-project" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
-<p>Work periods to put the concepts learned so far into practice. You can choose to create anything you’d like, so long as the project you choose demonstrates that you understand the ideas we’ve studied.</p>
+  <div class="section" id="step-2-taking-and-putting-down-objects">
+<h1>3. Step 2: Taking and Putting Down Objects<a class="headerlink" href="#step-2-taking-and-putting-down-objects" title="Permalink to this headline">¶</a></h1>
+<p>Open Step 2 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
+<p>Sometimes Reeborg may need to take an object that is on the ground, or put down an object that he is carrying. You can use the <code class="docutils literal"><span class="pre">take()</span></code> function to tell Reeborg to pick up an object that is on the ground. To put an object that Reeborg is carrying back down on the ground, use the <code class="docutils literal"><span class="pre">put()</span></code> function.</p>
+<p>In the Step 2 world, there are three dandelions on the ground between Reeborg and his house. Your job is to pick them up, then put them in the garbage can, which is directly in front of the house at (5, 1).</p>
+<img alt="../_images/step2.png" src="../_images/step2.png" />
+<p>When there is an object on the ground, it is represented using a colorful image, and the red number on the left-hand side of the image tells you how many of those objects there are. For example, in location (2, 1), there is one dandelion.</p>
+<img alt="../_images/object_on_ground.png" src="../_images/object_on_ground.png" />
+<p>If there is a specific place that objects should be put down (also known as a goal), it is represented using a grayscale image, and the blue number on the right-hand side of the image tells you how many objects are expected to be put down in that location. For example, in location (5,1), Reeborg needs to put down 3 dandelions.</p>
+<img alt="../_images/objects_required_here.png" src="../_images/objects_required_here.png" />
+<p>Give Reeborg the appropriate instructions to make him pick up the dandelions, put them in the garbage, and return home!</p>
 </div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This is just a stub, to give a sense of what should go here. It will be written up properly soon…</p>
-</div>
-<p>We won’t be demonstrating anything new during these periods. Instead, you will be given time to try to build a project that puts to use many of the ideas that we’ve seen so far.</p>
-<p>Be sure that the project you choose allows you to demonstrate your understanding of:</p>
-<ul class="simple">
-<li>broadcast (to control program flow)</li>
-<li>loops (repeat, repeat until, forever blocks)</li>
-<li>conditionals (if, if/else blocks)</li>
-<li>variables</li>
-</ul>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-SD1</strong> Develop a coding project or conduct research in an area of computer science of the student’s choice.</li>
-</ul>
-
-    </div>
-    </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 11. Making Your Own Blocks (Functions)' data-toggle="tooltip">
-    <a href="MakingOwnBlocks.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. Step 1: Move Reeborg Home' data-toggle="tooltip">
+    <a href="Step1.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="MakingOwnBlocks.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Step1.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 13. Possible Extensions' data-toggle="tooltip" >
-    <a href="PossibleExtensions.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 4. Step 3: Turning Left and Stepping Through Code' data-toggle="tooltip" >
+    <a href="Step3.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="PossibleExtensions.html" >Next Section - 13. Possible Extensions</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step3.html" >Next Section - 4. Step 3: Turning Left and Stepping Through Code</a>
 
 <script type="text/javascript">
 

@@ -26,6 +26,15 @@ For this assignment, you will create a game that does the following:
 
 When you complete the basic functionality, put up your hand and I'll tell you how you can make it even better! 
 
+If the description above doesn't make sense to you, here's a `short video <https://www.youtube.com/watch?v=BoSNTdrd24I>`_  of what the basic number guessing game might look like:
+
+.. youtube:: BoSNTdrd24I
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
 Extensions
 -----------
 
