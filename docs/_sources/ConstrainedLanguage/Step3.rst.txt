@@ -1,20 +1,11 @@
 Step 3: Turning Left and Stepping Through Code
 ==============================================
 
-Open Step 3 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
-
-One major problem with Reeborg is that he can only turn in one direction: left. To tell Reeborg to turn, you can use the ``turn_left()`` function.
-
-.. image:: images/step3.png
-
-Use the ``move()`` function and the ``turn_left()`` function to make Reeborg walk around the lake.
-
-.. topic:: Try this!
-
-    To see what happens, let's do some things intentionally wrong. For example, make Reeborg walk into the lake. You might also want to try not walking all the way around the lake to see what the error message will be.
+Tutorial
+--------
 
 Reeborg's Bugs
------------------
+~~~~~~~~~~~~~~
 
 In computer jargon, a bug is an error that causes a program to behave in
 an unexpected way. If you are writing computer programs, you are going
@@ -53,7 +44,7 @@ bugs. Some of the problems with Reeborg are:
 
 
 Stepping Through Code
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes to find the cause of bugs, it can help to break the normal
 flow of the program. To this end you may do one or more of the
@@ -89,3 +80,19 @@ following:
 .. |stepButton| image:: images/step_button.png
 
 .. |stopButton| image:: images/stop_button.png
+
+
+Your Turn
+---------
+
+Open Step 3 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+
+As mentioned above, Reeborg can only turn in one direction: left. To tell Reeborg to turn, you can use the ``turn_left()`` function.
+
+.. image:: images/step3.png
+
+Use the ``move()`` function and the ``turn_left()`` function to make Reeborg walk around the lake.
+
+.. topic:: Try this!
+
+    To see what happens, let's do some things intentionally wrong. For example, make Reeborg walk into the lake. You might also want to try not walking all the way around the lake to see what the error message will be.

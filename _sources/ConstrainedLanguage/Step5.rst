@@ -1,111 +1,113 @@
-Step 5: Defining New Functions (turn_right)
-===========================================
-
-.. important::
-
-     Write your computer programs to make them easy for **people** to
-     read and understand.
-
-When writing programs, you should write them so that other people, just
-like you, would find them easy to read, and be able to figure out what
-they do. Yes, computer languages are designed to allow you to
-communicate with computers, just as human languages have evolved to
-allow humans to communicate with each other. But computer languages,
-which are much simpler than human languages, are often used by
-programmers to share their work with other programmers.
+Step 5: Defining New Functions
+==============================
 
 
-Comments
---------
+Tutorial
+---------
 
-The first tool you can use to write computer programs
-that are easier for people to understand: *comments*.
+After completing the last step, you have realized that having Reeborg make
+three left turns in a row gives the same final result as if he were to
+make a single right turn. It was probably becoming quite
+tedious to have to write three ``turn_left()`` instructions each time
+you want to have Reeborg turn right. Wouldn't it be nicer if you could
+simply write ``turn_right()``?
 
-Comments are notes made by a programmer which are ignored by the
-computer; they are meant to be read and understood only by humans.
-
-When using Python, one can write comments in one of two ways:
-
--  By putting a ``#`` before a comment on any given line.
--  By enclosing any amount of text (even if it takes up more than one line) between triple-quotes like ``""" ... """`` or ``''' ... '''``.
-
-
-I will first write a simple program without any comments followed by a
-second version with comments added and a third version ... slightly less
-readable; however, I will make the same error in all three programs. Can
-you spot it more easily in the first program or the second?
+Just as we can call built-in functions like ``turn_left()`` and ``move()``, we can create our own functions as well. We can define a new Python function as follows:
 
 .. code-block:: python
 
-    move()
-    move()
-    turn_left()
-    put()
-    move()
-    move()
-    turn_left()
-    put()
-    move()
-    turn_left()
-    put()
-    move()
-    move()
-    turn_left()
-    put()
+    def some_well_chosen_name ():
+        # some lines of code
+        # indented at the same level
 
-Contrast the above program with the same one, from Reeborg's point of
-view, but with comments added for humans; you will be able to recognize
-comments as they appear in a different colour and font style.
+
+``def`` is the first Python **keyword** we have encountered. Keywords are words that
+have a special meaning in a given programming language.
+Notice how a colon ``:`` precedes what
+is known as a *block of code*, and the indented portion that follows is the  *body* of the
+function. It is **required** in Python to *indent* such blocks of code
+with the same number of spaces at the beginning of each line which, as a side-effect, makes it easy to identify the function body for a human reader.
+
+Let's write our first Python function::
+
+    def turn_right():
+        turn_left()
+        turn_left()
+        turn_left()
+
+That's it! You will now be able to avoid having to write three
+``turn_left()`` functions in a row to simulate a right turn!
+
+
+How to think about ``def``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+   Please note that this simplified explanation does not take into account what is known
+   as *variable scope* which is something that we will cover later.
+
+You have just seen how to define a function in Python. Chances are,
+you understood right away how to think about them but, just in case,
+here's a more detailed explanation which will help you to not only
+understand how functions work, but also other Python construct that
+involve blocks of code.
+
+Suppose we have the following:
 
 .. code-block:: python
+   :emphasize-lines: 7
 
-    '''  This is an example of
-    a simple program where Reeborg draws a square,
-    leaving an object behind at each corner. '''
+    def turn_right():  # begin of code block follows
+        turn_left()
+        turn_left()
+        turn_left()   # end of code block
 
-    move()  # Python commands are on separate lines
     move()
-    turn_left() # Reeborg only knows to turn left
-    put()  # we assume that Reeborg carries enough objects
+    turn_right()
+    move()
 
-    # we repeat the above three more times to complete the square
+This is equivalent to the following:
+
+.. code-block:: python
+   :emphasize-lines: 9, 10, 11
+
+    # define a function
+    def turn_right():
+        turn_left()
+        turn_left()
+        turn_left()
+
     move()
-    move()
+    # begin of code block inside turn_right()
     turn_left()
-    put()
-
-    move()
     turn_left()
-    put()
-
-    move()
-    move()
     turn_left()
-    put()
+    # end of code block
+    move()
 
-The above are not particularly good comments, but at least one of them
-should have helped you find what was wrong with the program. You might
-think this is cheating; however, how can you guess the intent behind
-some lines of code in a program on their own? The addition of comments
-explaining what a given program should do can be very helpful in finding
-mistakes.
-
-Note that in addition to comments, I have used blank lines (often called whitespace) to separate some "logical" blocks of code, to help see the pattern better. Together, the use of comments and insertion of blank lines can make a program much easier to read.
+In other words, ``def`` defines a name that we can use as a synonym
+for all the code that appears inside the code block, and whenever we see
+the synonym being **called** [that is, the name appears followed by
+``()``], we can think of it as being equivalent to inserting the code
+block *as is* at that location.
 
 
-Project
---------
+Your Turn - Part 1
+-------------------
 
-Open Step 4 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 5a on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
 
-.. image:: images/step4.png
+.. image:: images/step5a.png
 
-Use the functions we've learned about so far to make Reeborg walk down the gravel path, picking up dandelions as he finds them, and depositing them in the convenient garbage cans (represented by greyscale dandelion images). Use the ``pause`` function to have Reeborg wait at each location he finds a dandelion to pick. Be sure to use comments and whitespace to increase the readability of your solution!
+Define a ``turn_right()`` function, and use it to have Reeborg walk down the gravel path to the flag. Once again, be sure to use comments and whitespace to increase the readability of your solution!
 
-Recall that the functions discussed so far include:
--  ``move()``
--  ``turn_left()``
--  ``take()``
--  ``put()``
--  ``pause()``
 
+Your Turn - Part 2
+-------------------
+
+Open Step 5b on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+
+.. image:: images/step5b.png
+
+Reeborg wants to pick some strawberries in his garden. His garden has a very strange shape, as you've seen above. Define a ``pick_two_berries()`` function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!

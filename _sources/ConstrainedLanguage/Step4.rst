@@ -6,6 +6,10 @@ Step 4: Small Project and Comments
      Write your computer programs to make them easy for **people** to
      read and understand.
 
+
+Tutorial
+--------
+
 When writing programs, you should write them so that other people, just
 like you, would find them easy to read, and be able to figure out what
 they do. Yes, computer languages are designed to allow you to
@@ -14,15 +18,8 @@ allow humans to communicate with each other. But computer languages,
 which are much simpler than human languages, are often used by
 programmers to share their work with other programmers.
 
-
-Comments
---------
-
-The first tool you can use to write computer programs
-that are easier for people to understand: *comments*.
-
 Comments are notes made by a programmer which are ignored by the
-computer; they are meant to be read and understood only by humans.
+computer; they are meant to be read and understood only by humans. They allow programmers to write programs that are easier to understand for other people.
 
 When using Python, one can write comments in one of two ways:
 
@@ -100,7 +97,7 @@ Open Step 4 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
 
 .. image:: images/step4.png
 
-Use the functions we've learned about so far to make Reeborg walk down the gravel path, picking up dandelions as he finds them, and depositing them in the convenient garbage cans (represented by greyscale dandelion images). Use the ``pause`` function to have Reeborg wait at each location he finds a dandelion to pick. Be sure to use comments and whitespace to increase the readability of your solution!
+Use the functions we've learned about so far to make Reeborg walk down the gravel path, picking up dandelions as he finds them, and depositing them in the conveniently placed garbage cans (represented by greyscale dandelion images). Use the ``pause`` function to have Reeborg wait at each location he finds a dandelion to pick. Be sure to use comments and whitespace to increase the readability of your solution!
 
 Recall that the functions discussed so far include:
 -  ``move()``

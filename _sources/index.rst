@@ -62,7 +62,6 @@ Reeborg
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
    
    ConstrainedLanguage/TransitioningToText.rst
    ConstrainedLanguage/Step1.rst
@@ -70,7 +69,9 @@ Reeborg
    ConstrainedLanguage/Step3.rst
    ConstrainedLanguage/Step4.rst
    ConstrainedLanguage/Step5.rst
-
+   ConstrainedLanguage/Step6.rst
+   ConstrainedLanguage/Step7.rst
+   ConstrainedLanguage/Step8.rst
 
 Python
 ::::::
