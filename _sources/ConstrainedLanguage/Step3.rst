@@ -62,14 +62,30 @@ following:
 #. You can *pause* a program as it is running by pressing the **pause**
    button. This is similar to what people refer to as
    setting a *breakpoint* in a computer program
+
+   |pauseButton|
+
 #. Instead of actually pressing the pause button, you can type in the
    instruction ``pause()`` at any point inside a program and Reeborg
    will pause, awaiting your permission to continue.
+
 #. You can *step through* a program, one instruction at a time, by
    pressing the *execute one instruction and pause*, or **step** button.
    By default, the line about to be executed is highlighted; you can turn off
    the highlighting by clicking on a button above the code editor.
+
+   |stepButton|
+
 #. You can stop a program at any point by pressing the **stop**
    button; this unfortunately may not work if you create
    what is known as an infinite loop, outside of Reeborg's control. If
    worse comes to worst, you can always just reload the web page.
+
+   |stopButton|
+
+
+.. |pauseButton| image:: images/pause_button.png
+
+.. |stepButton| image:: images/step_button.png
+
+.. |stopButton| image:: images/stop_button.png

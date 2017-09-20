@@ -1,5 +1,5 @@
-Step 4: Small Project and Comments
-==================================
+Step 5: Defining New Functions (turn_right)
+===========================================
 
 .. important::
 
