@@ -89,7 +89,7 @@ Open Step 3 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
 
 As mentioned above, Reeborg can only turn in one direction: left. To tell Reeborg to turn, you can use the ``turn_left()`` function.
 
-.. image:: images/step3.png
+.. image:: images/step3.gif
 
 Use the ``move()`` function and the ``turn_left()`` function to make Reeborg walk around the lake.
 

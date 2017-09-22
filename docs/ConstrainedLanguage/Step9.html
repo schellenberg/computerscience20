@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Step 3: Turning Left and Stepping Through Code &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Step 9: Repeating Instructions &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,6 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Step 4: Comments" href="Step4.html" />
-    <link rel="prev" title="Step 2: Taking and Putting Down Objects" href="Step2.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,12 +190,8 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Step 3: Turning Left and Stepping Through Code</a><ul>
-<li><a class="reference internal" href="#tutorial">Tutorial</a><ul>
-<li><a class="reference internal" href="#reeborg-s-bugs">Reeborg’s Bugs</a></li>
-<li><a class="reference internal" href="#stepping-through-code">Stepping Through Code</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Step 9: Repeating Instructions</a><ul>
+<li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
 </ul>
 </li>
@@ -208,18 +202,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Step 2: Taking and Putting Down Objects" data-toggle="tooltip">
-    <a href="Step2.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-  <li id="relations-next" title='Next Chapter - Step 4: Comments' data-toggle="tooltip" >
-    <a href="Step4.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -245,105 +227,73 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="step-3-turning-left-and-stepping-through-code">
-<h1>Step 3: Turning Left and Stepping Through Code<a class="headerlink" href="#step-3-turning-left-and-stepping-through-code" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="step-9-repeating-instructions">
+<h1>Step 9: Repeating Instructions<a class="headerlink" href="#step-9-repeating-instructions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="tutorial">
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="reeborg-s-bugs">
-<h3>Reeborg’s Bugs<a class="headerlink" href="#reeborg-s-bugs" title="Permalink to this headline">¶</a></h3>
-<p>In computer jargon, a bug is an error that causes a program to behave in
-an unexpected way. If you are writing computer programs, you are going
-to have bugs in them sooner or later - everybody does. Good programmers
-seek to “remove” bugs or “fix” them as soon as they find that their
-program behaves unexpectedly.</p>
-<p>Not so good programmers state that “bugs” are not really bugs but that
-they are “features” of their programs. <strong>You</strong> are going to be a good
-programmer, unlike the maker of Reeborg, whose program is littered with
-bugs. Some of the problems with Reeborg are:</p>
-<ol class="arabic simple">
-<li>Reeborg has an oil leak. Oil leaks are damaging for the environment
-and inconvenient for Reeborg who must replenish its supplies when
-it’s not busy accomplishing tasks. The maker of Reeborg claims that
-it is a feature, as it enables you to follow Reeborg’s path, just
-like any programmer can learn to “trace” a program.</li>
-<li>Reeborg’s steering mechanism is not handled properly by Reeborg’s
-program: it can only turn left. The maker of Reeborg, once again,
-claims that this is a feature as it present you with an opportunity
-to learn about <strong>functions</strong>. You will soon learn how
-to program a <em>workaround solution</em>, enabling Reeborg to turn right,
-although in a wasteful fashion.</li>
-<li>Reeborg has a compass, enabling him to determine which direction he
-is facing. Unfortunately, yet again, the program that enables Reeborg
-to get the information from the compass has a bug: it only tells
-Reeborg if he is facing North … or not. Once again, you will
-learn how to implement a workaround solution soon.</li>
-<li>Reeborg can see if a wall is in front of him, and can also turn its
-head to the right to see if there is a wall there. However, a
-software “glitch” (which is another weasel term that software
-manufacturers use to avoid having to say that their product has a
-bug) prevents Reeborg’s program from properly registering a wall when
-it turns its head left.</li>
-</ol>
+<p>Often, we will find that we want to repeat a series of instructions a
+fixed number of times. For example, in Step 8, you had to tell Reeborg to do the same thing over and over again. There is a way in Python to do this … but it
+has too many new concepts to explain right now. I will just show you
+the code, and immediately introduce <code class="docutils literal"><span class="pre">repeat</span></code>, a simpler replacement
+for it, unique to Reeborg’s World.  The standard way
+is known as a <strong>for loop</strong> (which we will use later in the course) and is written as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># some</span>
+    <span class="c1"># instructions</span>
+    <span class="c1"># here</span>
+</pre></div>
 </div>
-<div class="section" id="stepping-through-code">
-<h3>Stepping Through Code<a class="headerlink" href="#stepping-through-code" title="Permalink to this headline">¶</a></h3>
-<p>Sometimes to find the cause of bugs, it can help to break the normal
-flow of the program. To this end you may do one or more of the
-following:</p>
-<ol class="arabic">
-<li><p class="first">You can <em>pause</em> a program as it is running by pressing the <strong>pause</strong>
-button. This is similar to what people refer to as
-setting a <em>breakpoint</em> in a computer program</p>
-<p><img alt="pauseButton" src="../_images/pause_button.png" /></p>
-</li>
-<li><p class="first">Instead of actually pressing the pause button, you can type in the
-instruction <code class="docutils literal"><span class="pre">pause()</span></code> at any point inside a program and Reeborg
-will pause, awaiting your permission to continue.</p>
-</li>
-<li><p class="first">You can <em>step through</em> a program, one instruction at a time, by
-pressing the <em>execute one instruction and pause</em>, or <strong>step</strong> button.
-By default, the line about to be executed is highlighted; you can turn off
-the highlighting by clicking on a button above the code editor.</p>
-<p><img alt="stepButton" src="../_images/step_button.png" /></p>
-</li>
-<li><p class="first">You can stop a program at any point by pressing the <strong>stop</strong>
-button; this unfortunately may not work if you create
-what is known as an infinite loop, outside of Reeborg’s control. If
-worse comes to worst, you can always just reload the web page.</p>
-<p><img alt="stopButton" src="../_images/stop_button.png" /></p>
-</li>
-</ol>
+<p>In Reeborg’s World, we can write a <code class="docutils literal"><span class="pre">repeat</span></code> <em>loop</em> as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="n">n</span><span class="p">:</span>    <span class="c1"># where n is a natural number, like 3 or 7</span>
+    <span class="c1"># some</span>
+    <span class="c1"># instructions</span>
+    <span class="c1"># here</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Using <code class="docutils literal"><span class="pre">repeat</span></code> will not work in Python programs meant to be
+run outside of Reeborg’s World. A <strong>loop</strong> is a block of
+instructions that is repeated. Each time the loop is repeated is called an iteration, so the code below would have 4 iterations.</p>
+</div>
+<p>For example, the following code will make Reeborg trace a square:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>By using <code class="docutils literal"><span class="pre">repeat</span></code>, we can rewrite some function definitions without
+having to repeat instructions:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You might want to adjust the code that you have saved in the library tab to use the repeat block.</p>
+<div class="admonition-for-educators admonition">
+<p class="first admonition-title">For educators</p>
+<p>The rationale for having <code class="docutils literal"><span class="pre">repeat</span></code> as an addition to Python’s
+standard notation is to avoid having to introduce 4 concepts
+at the same time (loops, variables as in <code class="docutils literal"><span class="pre">_</span></code> in <code class="docutils literal"><span class="pre">for</span> <span class="pre">_</span> <span class="pre">in</span> <span class="pre">range(n)</span></code>,
+builtin functions like <code class="docutils literal"><span class="pre">range</span></code> as well as the concept of
+function arguments).</p>
+<p class="last">By design the <code class="docutils literal"><span class="pre">n</span></code> in <code class="docutils literal"><span class="pre">repeat</span> <span class="pre">n</span></code> <strong>must</strong> be an integer literal;
+it cannot be a variable.  When students learn about variables, they
+should learn the proper Python syntax to do loops and forget about
+the non-standard <code class="docutils literal"><span class="pre">repeat</span></code>.</p>
 </div>
 </div>
 <div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>Open Step 3 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
-<p>As mentioned above, Reeborg can only turn in one direction: left. To tell Reeborg to turn, you can use the <code class="docutils literal"><span class="pre">turn_left()</span></code> function.</p>
-<img alt="../_images/step3.gif" src="../_images/step3.gif" />
-<p>Use the <code class="docutils literal"><span class="pre">move()</span></code> function and the <code class="docutils literal"><span class="pre">turn_left()</span></code> function to make Reeborg walk around the lake.</p>
-<div class="topic">
-<p class="topic-title first">Try this!</p>
-<p>To see what happens, let’s do some things intentionally wrong. For example, make Reeborg walk into the lake. You might also want to try not walking all the way around the lake to see what the error message will be.</p>
-</div>
+<p>Open Step 9 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
+<img alt="../_images/step9.png" src="../_images/step9.png" />
+<p>Adjust the solution you created for Step 8, this time making use of two repeat loops. The world doesn’t change from Step 8, but your solution should be much nicer. Remember to use comments and whitespace to increase the readability of your solution!</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Step 2: Taking and Putting Down Objects' data-toggle="tooltip">
-    <a href="Step2.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="Step2.html" ></a>
-  
-  <li id="relations-next" class="navLink" title='Next Section - Step 4: Comments' data-toggle="tooltip" >
-    <a href="Step4.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step4.html" >Next Section - Step 4: Comments</a>
 
 <script type="text/javascript">
 

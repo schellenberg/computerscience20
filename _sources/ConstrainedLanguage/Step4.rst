@@ -1,4 +1,4 @@
-Step 4: Small Project and Comments
+Step 4: Comments
 ==================================
 
 .. important::
@@ -90,8 +90,8 @@ mistakes.
 Note that in addition to comments, I have used blank lines (often called whitespace) to separate some "logical" blocks of code, to help see the pattern better. Together, the use of comments and insertion of blank lines can make a program much easier to read.
 
 
-Project
---------
+Your Turn
+----------
 
 Open Step 4 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
 

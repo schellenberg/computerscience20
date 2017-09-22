@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Step 7: Birthday Message &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Step 7: Thinking and Birthday Message &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,8 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Step 7: Birthday Message</a><ul>
-<li><a class="reference internal" href="#project">Project</a></li>
+<li><a class="reference internal" href="#">Step 7: Thinking and Birthday Message</a><ul>
+<li><a class="reference internal" href="#tutorial">Tutorial</a></li>
+<li><a class="reference internal" href="#your-turn">Your Turn</a></li>
 </ul>
 </li>
 </ul>
@@ -240,10 +241,29 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="step-7-birthday-message">
-<h1>Step 7: Birthday Message<a class="headerlink" href="#step-7-birthday-message" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="project">
-<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="step-7-thinking-and-birthday-message">
+<h1>Step 7: Thinking and Birthday Message<a class="headerlink" href="#step-7-thinking-and-birthday-message" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p>You may have noticed that Reeborg takes a bit of time
+between each command; that is because it must “think”
+about what you are asking it to do.  However, one can
+change the amount of time Reeborg takes to think by using
+the <code class="docutils literal"><span class="pre">think()</span></code> function with an argument, like
+this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">think</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The number <code class="docutils literal"><span class="pre">500</span></code> which appears between the parentheses
+is what we call an <em>argument</em> of a function. The smaller
+the number, the less time Reeborg will take before
+considering each action.  A value of 1000 means that
+Reeborg takes about 1 second to think.  Sometimes, Reeborg has something to think about that you are not aware of, so it may sometimes seem to think
+for longer than you’d expect it to. Calling <code class="docutils literal"><span class="pre">think(0)</span></code> tells Reeborg to move as quickly as it can.</p>
+<img alt="ConstrainedLanguage/images/think.gif" src="ConstrainedLanguage/images/think.gif" />
+</div>
+<div class="section" id="your-turn">
+<h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Open Step 7 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
 <img alt="../_images/step7.png" src="../_images/step7.png" />
 <p>Reeborg has just turned 18 and wants to let everyone in the universe to know it. He thinks it would be a funny joke to plant daisies on the front yard to celebrate. Reeborg is a robot and only knows binary, and 18 in decimal is represented as 10010 in binary.</p>

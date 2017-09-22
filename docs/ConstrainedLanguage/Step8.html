@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Your First Python Program!" href="../Python/FirstProgram.html" />
-    <link rel="prev" title="Step 7: Birthday Message" href="Step7.html" />
+    <link rel="prev" title="Step 7: Thinking and Birthday Message" href="Step7.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -193,12 +193,9 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Step 8: Asking Questions</a><ul>
-<li><a class="reference internal" href="#tutorial">Tutorial</a><ul>
-<li><a class="reference internal" href="#how-to-think-of-if-statements">How to think of <code class="docutils literal"><span class="pre">if</span></code> statements</a></li>
-<li><a class="reference internal" href="#more-useful-that-you-might-think">More useful that you might think…</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
+<li><a class="reference internal" href="#if-you-re-having-trouble-a-more-detailed-explanation">If You’re Having Trouble (a more detailed explanation)</a></li>
 </ul>
 </li>
 </ul>
@@ -208,7 +205,7 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Step 7: Birthday Message" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - Step 7: Thinking and Birthday Message" data-toggle="tooltip">
     <a href="Step7.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -257,8 +254,7 @@
     <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>In the code above, <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">True</span></code>, and <code class="docutils literal"><span class="pre">False</span></code> are all Python keywords. It is a good idea to try out the code above in Reeborg’s World. You might also want
-to interchange the True and False, then run the program again to see what happens.</p>
+<p>In the code above, <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">True</span></code>, and <code class="docutils literal"><span class="pre">False</span></code> are all Python keywords. It is a good idea to try out the code above in Reeborg’s World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.</p>
 <p>The so-called <code class="docutils literal"><span class="pre">if</span></code> <strong>statement</strong> follows a pattern somewhat similar to
 that of <code class="docutils literal"><span class="pre">function</span></code>s :</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_name</span><span class="p">():</span>
@@ -268,8 +264,64 @@ that of <code class="docutils literal"><span class="pre">function</span></code>s
     <span class="c1"># block of code</span>
 </pre></div>
 </div>
-<div class="section" id="how-to-think-of-if-statements">
-<h3>How to think of <code class="docutils literal"><span class="pre">if</span></code> statements<a class="headerlink" href="#how-to-think-of-if-statements" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The general term used to describe a function that gives a result
+equivalent to <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> in an <code class="docutils literal"><span class="pre">if</span></code> statement is <strong>condition</strong>:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>Having to specify <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> does not help Reeborg decide on
+its own. However, there are special functions that Reeborg recognizes
+that allow Reeborg to make decisions. The first of these is
+<code class="docutils literal"><span class="pre">object_here()</span></code> which tells Reeborg if there is at least one object at
+the grid position where it is located. For example, if we want to ask
+Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="n">take</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The complete list of functions (questions) that Reeborg can answer is as follows:</p>
+<p>Question/Function   Explanation
+at_goal()  Returns True if Reeborg is on a goal tile (flag, home, or green tile), False otherwise.
+front_is_clear()   Returns True if there is no obstacle (wall, etc) in front of Reeborg, False otherwise.
+right_is_clear()   Returns True if there is no obstacle (wall, etc) to the right of Reeborg, False otherwise.
+wall_in_front()   Returns True if there is a wall in front of Reeborg, False otherwise.
+wall_on_right()   Returns True if there is a wall on the right side of Reeborg, False otherwise.
+object_here()   Returns True if there is an object (star, dandelion, etc) on the same tile as Reeborg is standing on, False otherwise.
+carries_object()   Returns True if Reeborg is currently carrying at least one object (star, dandelion, etc). Returns False if Reeborg is carrying nothing.
+is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.</p>
+<div class="admonition-for-educators admonition">
+<p class="first admonition-title">For educators</p>
+<p>The function <code class="docutils literal"><span class="pre">object_here()</span></code> returns a list of object types (as strings)
+found at a given location.  For example, if there are stars and dandelions
+at the same location, <code class="docutils literal"><span class="pre">object_here()</span></code> could return <code class="docutils literal"><span class="pre">[&quot;star&quot;,</span> <span class="pre">&quot;dandelion&quot;]</span></code>
+or <code class="docutils literal"><span class="pre">[&quot;dandelion&quot;,</span> <span class="pre">&quot;star&quot;]</span></code>. If no object is present, an empty list is
+returned.  As you likely already know, Python treats an empty list as
+being equivalent to <code class="docutils literal"><span class="pre">False</span></code> in an <code class="docutils literal"><span class="pre">if</span></code> statement, and a non-empty
+list as equivalent to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+<p>If many objects could potentially be found in a given world, and we
+are interested in only one object type, we can specify it as a function
+argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">(</span><span class="s2">&quot;dandelion&quot;</span><span class="p">):</span>
+    <span class="n">take</span><span class="p">(</span><span class="s2">&quot;dandelion&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last"><code class="docutils literal"><span class="pre">object_here(&quot;dandelion&quot;)</span></code> will either return an empty list or the list
+<code class="docutils literal"><span class="pre">[&quot;dandelion&quot;]</span></code>.</p>
+</div>
+</div>
+<div class="section" id="your-turn">
+<h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
+<p>Open Step 8 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
+<img alt="../_images/step8.png" src="../_images/step8.png" />
+<p>Reeborg’s friend Bree loves to pick dandelions and blow the seeds as far as she can. Because of this, Reeborg often finds dandelions growing in the front yard. The dandelions aren’t always in the same spot, though. To see this, press the play button on the Step 8 world, and notice that dandelions appear in different places each time. You can tell that this is going to happen because of the black question mark underneath the image of the dandelion.</p>
+<p>Create a program to have Reeborg walk across the front yard, picking up a dandelion whenever it finds one. There might be a dandelion in any of the locations that have a dandelion image with a question mark underneath (you can see this again if you press the reload button). You will need to ask Reeborg questions as it moves across the front yard. Once every possible dandelion is picked up, have Reeborg put down all the dandelions it has picked up at (2,3), then return to the flag (1,3). Remember to use comments and whitespace to increase the readability of your solution!</p>
+</div>
+<div class="section" id="if-you-re-having-trouble-a-more-detailed-explanation">
+<h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
 <p>When we introduced functions, we explained how we could think of a
 function <strong>call</strong> as being somewhat equivalent to inserting the code block for
 the function definition at that point in the program. Thus:</p>
@@ -327,93 +379,12 @@ code inside the code block.</p>
 <img alt="../_images/if.jpg" src="../_images/if.jpg" />
 </div>
 </div>
-<div class="section" id="more-useful-that-you-might-think">
-<h3>More useful that you might think…<a class="headerlink" href="#more-useful-that-you-might-think" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>The general term used to describe a function that gives a result
-equivalent to <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> in an <code class="docutils literal"><span class="pre">if</span></code> statement is <strong>condition</strong>:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="o">...</span>
-</pre></div>
-</div>
-</div>
-<p>Having to specify <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> does not help Reeborg decide on
-its own. However, there are special functions that Reeborg recognizes
-that allow to decide things for himself. The first of these is
-<code class="docutils literal"><span class="pre">object_here()</span></code> which tells Reeborg that there is at least one object at
-the grid position where he is located. For example, if we want to ask
-Reeborg to collect tokens, one part of the code could be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
-    <span class="n">take</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>where I have introduced a new command that Reeborg understands:
-<code class="docutils literal"><span class="pre">done()</span></code>. Actually, you should think of this command as Reeborg saying
-it himself and declaring that he has finished.</p>
-<p>Let’s write the outline of a program that will work in both worlds
-<strong>Tokens&nbsp;1</strong> and <strong>Tokens&nbsp;2</strong>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">move_until_done</span><span class="p">():</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
-        <span class="c1"># something</span>
-        <span class="c1"># something else</span>
-        <span class="c1"># something else again</span>
-        <span class="c1"># yet one more</span>
-        <span class="n">done</span><span class="p">()</span>
-
-<span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>
-    <span class="n">move_until_done</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Why 42? … well, I just want to be sure that Reeborg will take enough
-steps no matter what world he is in. So far, all the worlds are small
-enough that this should be fine. I agree, it does not seem very smart
-… We’ll see how to fix that later.</p>
-<div class="topic">
-<p class="topic-title first">Try it!</p>
-<p>Copy the above in the Code editor, filling in the missing
-commands, and test your program on both worlds <strong>Tokens&nbsp;1</strong> and <strong>Tokens&nbsp;2</strong>.</p>
-</div>
-<div class="admonition-for-educators admonition">
-<p class="first admonition-title">For educators</p>
-<p>The function <code class="docutils literal"><span class="pre">object_here()</span></code> returns a list of object types (as strings)
-found at a given location.  For example, if there are stars and tokens
-at the same location, <code class="docutils literal"><span class="pre">object_here()</span></code> could return <code class="docutils literal"><span class="pre">[&quot;star&quot;,</span> <span class="pre">&quot;token&quot;]</span></code>
-or <code class="docutils literal"><span class="pre">[&quot;token&quot;,</span> <span class="pre">&quot;star&quot;]</span></code>. If no object is present, an empty list is
-returned.  As you likely already know, Python treats an empty list as
-being equivalent to <code class="docutils literal"><span class="pre">False</span></code> in an <code class="docutils literal"><span class="pre">if</span></code> statement, and a non-empty
-list as equivalent to <code class="docutils literal"><span class="pre">True</span></code>.</p>
-<p>If many objects could potentially be found in a given world, and we
-are interested in only one object type, we can specify it as a function
-argument:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">):</span>
-    <span class="n">take</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p class="last"><code class="docutils literal"><span class="pre">object_here(&quot;token&quot;)</span></code> will either return an empty list or the list
-<code class="docutils literal"><span class="pre">[&quot;token&quot;]</span></code>.</p>
-</div>
-</div>
-</div>
-<div class="section" id="your-turn">
-<h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>Open Step 8 on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
-<img alt="ConstrainedLanguage/images/step8.png" src="ConstrainedLanguage/images/step8.png" />
-<p>Reeborg has just turned 18 and wants to let everyone in the universe to know it. He thinks it would be a funny joke to plant daisies on the front yard to celebrate. Reeborg is a robot and only knows binary, and 18 in decimal is represented as 10010 in binary.</p>
-<p>Define these new functions:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">draw_one()</span></code> to draw a numeral 1 in beepers</li>
-<li><code class="docutils literal"><span class="pre">draw_zero()</span></code> to draw a numeral 0 in beepers</li>
-</ul>
-<p>Use the functions you have created to plant his birthday message. Each instruction should properly position and orient Guido for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!</p>
-</div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Step 7: Birthday Message' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Step 7: Thinking and Birthday Message' data-toggle="tooltip">
     <a href="Step7.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>

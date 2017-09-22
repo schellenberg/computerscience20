@@ -8,7 +8,7 @@ Transitioning To Text
 Introduction
 ------------
 
-Although there is a lot you can learn using an environment like Scratch, we'd like to reinforce that what you have learned works using a traditional programming language as well. In this course, the traditional programming language we will use is called `Python <https://www.python.org/>`_. Instead of jumping straight into working with Python, however, we are going to continue our journey in exploring programming by using an environment called Reeborg. Using Reeborg, we will begin to type in commands, rather than simply dragging them into place as we did with Scratch. This lets you start to make syntax errors (in other words, if you type something the computer doesn't understand, it will not work), but allows you to do things in a more flexible/powerful way than you could in a visual environment like Scratch.
+Although there is a lot you can learn using an environment like Scratch, we'd like to reinforce that what you have learned works using a more traditional programming language as well. In this course, the traditional programming language we will use is called `Python <https://www.python.org/>`_. Instead of jumping straight into working with Python, however, we are going to continue our journey in exploring programming by using an environment called Reeborg. Using Reeborg, we will begin to type in Python commands, rather than simply dragging them into place as we did with Scratch. This lets you start to make syntax errors (in other words, if you type something the computer doesn't understand, it will not work), but still gives you visual feedback about your programs.
 
 Reeborg's First Step
 --------------------
@@ -18,7 +18,7 @@ Open the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ . If the Step 0 worl
 .. figure:: images/step0.png
    :align: center
 
-You should now see the robot, Reeborg, alone in an empty world. Unfortunately, Reeborg is a used robot, and so he is only capable of doing a few basic commands. One thing Reeborg can do is move forward, as follows:
+You should now see the robot, Reeborg, alone in an empty world. Unfortunately, Reeborg is a used robot, and so it is only capable of doing a few basic commands. One thing Reeborg can do is move forward, as follows:
 
 .. figure:: images/move.png
    :align: center
@@ -62,7 +62,7 @@ and ending at "Stop".
 Dealing with eRRoRs
 -------------------
 
-When writing computer programs, you will likely make many errors. To see how Reeborg react to some errors, I will ask you to intentionally introduce one error in the program.
+When writing computer programs, you will likely make many errors. To see how Reeborg reacts to some errors, I will ask you to intentionally introduce one error in the program.
 
 
 .. topic:: Try this!
@@ -91,7 +91,7 @@ spelled out correctly and that required parentheses are not forgotten.
 Next steps
 -----------
 
-The following pages will provide you will challenges for you to complete. Although you could complete them in any order, the order they are presented will reveal the various capabilities of Reeborg in a logical order. When you finish a step, it is a good idea to show your solution to your teacher to confirm you have created an appropriate solution to the problem. Although the worlds have been created to give you instant feedback, it can be really helpful to have an experienced human give you tips as well!
+The following pages will provide you with challenges for you to complete. Although you could complete them in any order, the order they are presented will reveal the capabilities of Reeborg in a logical order. When you finish a step, it is a good idea to show your solution to your teacher to confirm you have created an appropriate solution to the problem. Although the worlds have been created to give you instant feedback, it can be really helpful to have an experienced human give you tips as well!
 
 
 Acknowledgments

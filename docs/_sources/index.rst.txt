@@ -72,6 +72,11 @@ Reeborg
    ConstrainedLanguage/Step6.rst
    ConstrainedLanguage/Step7.rst
    ConstrainedLanguage/Step8.rst
+   ConstrainedLanguage/Step9.rst
+   ConstrainedLanguage/Step10.rst
+   ConstrainedLanguage/Step11.rst
+   ConstrainedLanguage/Step12.rst
+   ConstrainedLanguage/Step13.rst
 
 Python
 ::::::

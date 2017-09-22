@@ -14,8 +14,7 @@ Sometimes, we don't know ahead of time exactly what the world that Reeborg is go
     if False:
         turn_left()
 
-In the code above, ``if``, ``True``, and ``False`` are all Python keywords. It is a good idea to try out the code above in Reeborg's World. You might also want
-to interchange the True and False, then run the program again to see what happens.
+In the code above, ``if``, ``True``, and ``False`` are all Python keywords. It is a good idea to try out the code above in Reeborg's World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.
 
 
 The so-called ``if`` **statement** follows a pattern somewhat similar to
@@ -29,8 +28,74 @@ that of ``function``\ s :
     if some_condition:
         # block of code
 
-How to think of ``if`` statements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+    The general term used to describe a function that gives a result
+    equivalent to ``True`` or ``False`` in an ``if`` statement is **condition**::
+
+       if condition:
+           ...
+
+
+Having to specify ``True`` or ``False`` does not help Reeborg decide on
+its own. However, there are special functions that Reeborg recognizes
+that allow Reeborg to make decisions. The first of these is
+``object_here()`` which tells Reeborg if there is at least one object at
+the grid position where it is located. For example, if we want to ask
+Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be::
+
+    if object_here():
+        take()
+
+The complete list of functions (questions) that Reeborg can answer is as follows:
+
+Question/Function   Explanation  
+at_goal()  Returns True if Reeborg is on a goal tile (flag, home, or green tile), False otherwise.
+front_is_clear()   Returns True if there is no obstacle (wall, etc) in front of Reeborg, False otherwise.
+right_is_clear()   Returns True if there is no obstacle (wall, etc) to the right of Reeborg, False otherwise.
+wall_in_front()   Returns True if there is a wall in front of Reeborg, False otherwise.
+wall_on_right()   Returns True if there is a wall on the right side of Reeborg, False otherwise.
+object_here()   Returns True if there is an object (star, dandelion, etc) on the same tile as Reeborg is standing on, False otherwise.
+carries_object()   Returns True if Reeborg is currently carrying at least one object (star, dandelion, etc). Returns False if Reeborg is carrying nothing.
+is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.
+
+
+.. admonition:: For educators
+
+    The function ``object_here()`` returns a list of object types (as strings)
+    found at a given location.  For example, if there are stars and dandelions
+    at the same location, ``object_here()`` could return ``["star", "dandelion"]``
+    or ``["dandelion", "star"]``. If no object is present, an empty list is
+    returned.  As you likely already know, Python treats an empty list as
+    being equivalent to ``False`` in an ``if`` statement, and a non-empty
+    list as equivalent to ``True``.
+
+    If many objects could potentially be found in a given world, and we
+    are interested in only one object type, we can specify it as a function
+    argument::
+
+        if object_here("dandelion"):
+            take("dandelion")
+
+    ``object_here("dandelion")`` will either return an empty list or the list
+    ``["dandelion"]``.
+
+
+Your Turn
+---------
+
+Open Step 8 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+
+.. image:: images/step8.png
+
+Reeborg's friend Bree loves to pick dandelions and blow the seeds as far as she can. Because of this, Reeborg often finds dandelions growing in the front yard. The dandelions aren't always in the same spot, though. To see this, press the play button on the Step 8 world, and notice that dandelions appear in different places each time. You can tell that this is going to happen because of the black question mark underneath the image of the dandelion.
+
+Create a program to have Reeborg walk across the front yard, picking up a dandelion whenever it finds one. There might be a dandelion in any of the locations that have a dandelion image with a question mark underneath (you can see this again if you press the reload button). You will need to ask Reeborg questions as it moves across the front yard. Once every possible dandelion is picked up, have Reeborg put down all the dandelions it has picked up at (2,3), then return to the flag (1,3). Remember to use comments and whitespace to increase the readability of your solution!
+
+
+If You're Having Trouble (a more detailed explanation)
+------------------------------------------------------
 
 When we introduced functions, we explained how we could think of a
 function **call** as being somewhat equivalent to inserting the code block for
@@ -89,94 +154,3 @@ We can represent the above using a flowchart:
 
 .. figure:: images/flowcharts/if.jpg
    :align: center
-
-More useful that you might think...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-
-    The general term used to describe a function that gives a result
-    equivalent to ``True`` or ``False`` in an ``if`` statement is **condition**::
-
-       if condition:
-           ...
-
-
-Having to specify ``True`` or ``False`` does not help Reeborg decide on
-its own. However, there are special functions that Reeborg recognizes
-that allow to decide things for himself. The first of these is
-``object_here()`` which tells Reeborg that there is at least one object at
-the grid position where he is located. For example, if we want to ask
-Reeborg to collect tokens, one part of the code could be::
-
-    if object_here():
-        take()
-
-
-where I have introduced a new command that Reeborg understands:
-``done()``. Actually, you should think of this command as Reeborg saying
-it himself and declaring that he has finished.
-
-Let's write the outline of a program that will work in both worlds
-**Tokens 1** and **Tokens 2**::
-
-    def move_until_done():
-        move()
-        if object_here():
-            # something
-            # something else
-            # something else again
-            # yet one more
-            done()
-
-    repeat 42:
-        move_until_done()
-
-
-Why 42? ... well, I just want to be sure that Reeborg will take enough
-steps no matter what world he is in. So far, all the worlds are small
-enough that this should be fine. I agree, it does not seem very smart
-... We'll see how to fix that later.
-
-.. topic:: Try it!
-
-    Copy the above in the Code editor, filling in the missing
-    commands, and test your program on both worlds **Tokens 1** and **Tokens 2**.
-
-.. admonition:: For educators
-
-    The function ``object_here()`` returns a list of object types (as strings)
-    found at a given location.  For example, if there are stars and tokens
-    at the same location, ``object_here()`` could return ``["star", "token"]``
-    or ``["token", "star"]``. If no object is present, an empty list is
-    returned.  As you likely already know, Python treats an empty list as
-    being equivalent to ``False`` in an ``if`` statement, and a non-empty
-    list as equivalent to ``True``.
-
-    If many objects could potentially be found in a given world, and we
-    are interested in only one object type, we can specify it as a function
-    argument::
-
-        if object_here("token"):
-            take("token")
-
-    ``object_here("token")`` will either return an empty list or the list
-    ``["token"]``.
-
-
-Your Turn
----------
-
-Open Step 8 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
-
-.. image:: images/step8.png
-
-Reeborg has just turned 18 and wants to let everyone in the universe to know it. He thinks it would be a funny joke to plant daisies on the front yard to celebrate. Reeborg is a robot and only knows binary, and 18 in decimal is represented as 10010 in binary.
-
-Define these new functions:
-
-- ``draw_one()`` to draw a numeral 1 in beepers
-- ``draw_zero()`` to draw a numeral 0 in beepers
-
-Use the functions you have created to plant his birthday message. Each instruction should properly position and orient Guido for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!
-
