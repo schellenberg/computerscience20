@@ -1,7 +1,83 @@
-Step 13: Walk Around the Lake
+Step 13: The ``Not`` Keyword
 ===============================================
 
-Project
+Tutorial
+--------
+
+In Python, we can indicate that something is not true by writing ``not True``
+which is the same as  ``False``. Likewise, ``not False`` is equivalent to ``True``.
+
+When you solved Step 10, you created a program to have Reeborg jump hurdles.
+
+.. image:: images/hurdles2.png
+
+As part of your solution for the above world, you may have created a function similar to the following:
+
+.. code-block:: python
+
+   def run_jump_or_finish ():
+        if at_goal():
+            # something
+        elif front_is_clear():
+            # something
+        else:
+            # something
+
+This program fragment can be rewritten, by choosing different combinations of the negation keyword ``not`` **and** different combinations of ``if/elif/else``.
+
+Consider the three code samples below, paying close attention to where the ``not`` keyword occur **and** to what is actually included in each code block.
+
+.. code-block:: python
+
+   # first choice:
+
+   def run_jump_or_finish ():
+        if at_goal():
+            # something
+        elif not front_is_clear():
+            # something
+        else:
+            # something
+
+   # second choice ... trickier
+
+   def run_jump_or_finish ():
+        if not at_goal():
+            if front_is_clear():
+                # something
+            else:
+                # something
+        else:
+            # something
+
+   # third choice:
+
+   def run_jump_or_finish ():
+        if not at_goal():
+            if not front_is_clear():
+                # something
+            else:
+                # something
+        else:
+            # something
+
+
+You have just seen how it is possible to change the order
+in which the conditions appear in an ``if/elif/else`` code block while
+still accomplishing the same goal.  Two different programmers will often
+use different strategies to get the same final result.  There are other
+ways in which different programmers will write different but equivalent
+programs: by using different functions.
+
+The function ``front_is_clear()`` will tell Reeborg whether or not a
+wall is blocking its way.  It will do the same for **water**, **brick walls**,
+**fences**, etc., which we have not seen yet but likely will in future worlds.
+There is a function that is more specific to wall called
+``wall_in_front()``; I leave it up to you to guess what it does.
+
+
+
+Your Turn
 ---------
 
 Open Step 13a on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
