@@ -113,31 +113,6 @@ Reeborg to collect tokens, one part of the code could be::
         take()
 
 
-where I have introduced a new command that Reeborg understands:
-``done()``. Actually, you should think of this command as Reeborg saying
-it himself and declaring that he has finished.
-
-Let's write the outline of a program that will work in both worlds
-**Tokens 1** and **Tokens 2**::
-
-    def move_until_done():
-        move()
-        if object_here():
-            # something
-            # something else
-            # something else again
-            # yet one more
-            done()
-
-    repeat 42:
-        move_until_done()
-
-
-Why 42? ... well, I just want to be sure that Reeborg will take enough
-steps no matter what world he is in. So far, all the worlds are small
-enough that this should be fine. I agree, it does not seem very smart
-... We'll see how to fix that later.
-
 .. topic:: Try it!
 
     Copy the above in the Code editor, filling in the missing
