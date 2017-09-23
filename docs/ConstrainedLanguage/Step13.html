@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Step 13: Walk Around the Lake &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Step 13: The Not Keyword &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,8 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Step 13: Walk Around the Lake</a><ul>
-<li><a class="reference internal" href="#project">Project</a></li>
+<li><a class="reference internal" href="#">Step 13: The <code class="docutils literal"><span class="pre">Not</span></code> Keyword</a><ul>
+<li><a class="reference internal" href="#tutorial">Tutorial</a></li>
+<li><a class="reference internal" href="#your-turn">Your Turn</a></li>
 <li><a class="reference internal" href="#extra-for-experts">Extra for Experts</a></li>
 </ul>
 </li>
@@ -241,11 +242,74 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="step-13-walk-around-the-lake">
-<h1>Step 13: Walk Around the Lake<a class="headerlink" href="#step-13-walk-around-the-lake" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="project">
-<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
-<p>Open Step 13a on the <a class="reference external" href="http://wmcicompsci.ca/reeborg">Reeborg website</a> .</p>
+  <div class="section" id="step-13-the-not-keyword">
+<h1>Step 13: The <code class="docutils literal"><span class="pre">Not</span></code> Keyword<a class="headerlink" href="#step-13-the-not-keyword" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p>In Python, we can indicate that something is not true by writing <code class="docutils literal"><span class="pre">not</span> <span class="pre">True</span></code>
+which is the same as  <code class="docutils literal"><span class="pre">False</span></code>. Likewise, <code class="docutils literal"><span class="pre">not</span> <span class="pre">False</span></code> is equivalent to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+<p>When you solved Step 10, you created a program to have Reeborg jump hurdles.</p>
+<img alt="../_images/hurdles2.png" src="../_images/hurdles2.png" />
+<p>As part of your solution for the above world, you may have created a function similar to the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
+         <span class="c1"># something</span>
+     <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+         <span class="c1"># something</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1"># something</span>
+</pre></div>
+</div>
+<p>This program fragment can be rewritten, by choosing different combinations of the negation keyword <code class="docutils literal"><span class="pre">not</span></code> <strong>and</strong> different combinations of <code class="docutils literal"><span class="pre">if/elif/else</span></code>.</p>
+<p>Consider the three code samples below, paying close attention to where the <code class="docutils literal"><span class="pre">not</span></code> keyword occur <strong>and</strong> to what is actually included in each code block.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># first choice:</span>
+
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
+         <span class="c1"># something</span>
+     <span class="k">elif</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
+         <span class="c1"># something</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1"># something</span>
+
+<span class="c1"># second choice ... trickier</span>
+
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+     <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
+         <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+             <span class="c1"># something</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="c1"># something</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1"># something</span>
+
+<span class="c1"># third choice:</span>
+
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+     <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
+             <span class="c1"># something</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="c1"># something</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1"># something</span>
+</pre></div>
+</div>
+<p>You have just seen how it is possible to change the order
+in which the conditions appear in an <code class="docutils literal"><span class="pre">if/elif/else</span></code> code block while
+still accomplishing the same goal.  Two different programmers will often
+use different strategies to get the same final result.  There are other
+ways in which different programmers will write different but equivalent
+programs: by using different functions.</p>
+<p>The function <code class="docutils literal"><span class="pre">front_is_clear()</span></code> will tell Reeborg whether or not a
+wall is blocking its way.  It will do the same for <strong>water</strong>, <strong>brick walls</strong>,
+<strong>fences</strong>, etc., which we have not seen yet but likely will in future worlds.
+There is a function that is more specific to wall called
+<code class="docutils literal"><span class="pre">wall_in_front()</span></code>; I leave it up to you to guess what it does.</p>
+</div>
+<div class="section" id="your-turn">
+<h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
+<p>Open Step 13a on the <a class="reference external" href="https://sk-opentexts.github.io/reeborg">Reeborg website</a> .</p>
 <img alt="../_images/step13a.gif" src="../_images/step13a.gif" />
 <p>Reeborg loves going for walks, especially when it is around a lake. The lakes in Reeborg’s neighborhood are all different sizes of rectangles, so Reeborg does not know how many steps it will take to get back to the start of walk. Thankfully, Reeborg happens to be carrying a banana, which you can tell Reeborg to <code class="docutils literal"><span class="pre">put()</span></code> down at the start of it’s walk. Reeborg knows it’s done walking when it reaches the banana again.</p>
 <p>Use a <code class="docutils literal"><span class="pre">while</span></code> statement (looking for the banana object) and an <code class="docutils literal"><span class="pre">if/else</span></code> to have Reeborg complete his walking adventure.</p>

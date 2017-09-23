@@ -37,7 +37,7 @@ Here's a flowchart for this simple program:
 Your Turn
 ---------
 
-Open Step 12 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 12 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step12.png
 

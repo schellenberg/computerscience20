@@ -85,7 +85,7 @@ following:
 Your Turn
 ---------
 
-Open Step 3 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 3 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 As mentioned above, Reeborg can only turn in one direction: left. To tell Reeborg to turn, you can use the ``turn_left()`` function.
 

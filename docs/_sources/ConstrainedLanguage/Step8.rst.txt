@@ -85,7 +85,7 @@ is_facing_north()   Returns True if Reeborg is currently facing north, False oth
 Your Turn
 ---------
 
-Open Step 8 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 8 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step8.png
 
