@@ -1,4 +1,4 @@
-Step 13: The ``Not`` Keyword
+Step 13: The ``not`` Keyword
 ===============================================
 
 Tutorial
