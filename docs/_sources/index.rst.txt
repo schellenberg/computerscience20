@@ -63,7 +63,7 @@ Reeborg
 .. toctree::
    :maxdepth: 1
    
-   ConstrainedLanguage/TransitioningToText.rst
+   ConstrainedLanguage/Step0.rst
    ConstrainedLanguage/Step1.rst
    ConstrainedLanguage/Step2.rst
    ConstrainedLanguage/Step3.rst
