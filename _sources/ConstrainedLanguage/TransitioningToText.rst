@@ -3,7 +3,7 @@ Transitioning To Text
 
 .. topic:: Quick Overview of Day
 
-    Explore the `Reeborg <http://wmcicompsci.ca/reeborg>`_ environment, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.
+    Explore the `Reeborg <https://sk-opentexts.github.io/reeborg>`_ environment, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Although there is a lot you can learn using an environment like Scratch, we'd li
 Reeborg's First Step
 --------------------
 
-Open the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ . If the Step 0 world does not open by default, select it in the world menu:
+Open the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ . If the Step 0 world does not open by default, select it in the world menu:
 
 .. figure:: images/step0.png
    :align: center

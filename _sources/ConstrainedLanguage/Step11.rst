@@ -45,7 +45,7 @@ if there's a wall right in front him, using the function ``front_is_clear()``. T
 Your Turn
 ---------
 
-Open Step 11 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 11 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step11.png
 

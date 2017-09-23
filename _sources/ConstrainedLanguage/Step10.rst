@@ -4,7 +4,7 @@ Step 10: Jumping Hurdles (repeat and functions)
 Project
 ---------
 
-Open Step 10 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 10 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step10.png
 

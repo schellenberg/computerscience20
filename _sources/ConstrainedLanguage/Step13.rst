@@ -80,7 +80,7 @@ There is a function that is more specific to wall called
 Your Turn
 ---------
 
-Open Step 13a on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 13a on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step13a.gif
 

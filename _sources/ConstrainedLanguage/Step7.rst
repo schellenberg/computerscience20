@@ -27,7 +27,7 @@ for longer than you'd expect it to. Calling ``think(0)`` tells Reeborg to move a
 Your Turn
 ---------
 
-Open Step 7 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 7 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step7.png
 

@@ -44,7 +44,7 @@ by commas) on its own line in the Python Code editor.
 Your Turn
 ----------
 
-Open Step 6 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 6 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step5a.png
 

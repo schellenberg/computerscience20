@@ -93,7 +93,7 @@ Note that in addition to comments, I have used blank lines (often called whitesp
 Your Turn
 ----------
 
-Open Step 4 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 4 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step4.png
 

@@ -96,7 +96,7 @@ block *as is* at that location.
 Your Turn - Part 1
 -------------------
 
-Open Step 5a on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 5a on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step5a.png
 
@@ -106,7 +106,7 @@ Define a ``turn_right()`` function, and use it to have Reeborg walk down the gra
 Your Turn - Part 2
 -------------------
 
-Open Step 5b on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 5b on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step5b.png
 

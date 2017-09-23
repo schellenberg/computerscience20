@@ -63,7 +63,7 @@ You might want to adjust the code that you have saved in the library tab to use 
 Your Turn
 ---------
 
-Open Step 9 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 9 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step9.png
 

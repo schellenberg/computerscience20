@@ -22,6 +22,6 @@ If there is a specific place that objects should be put down (also known as a go
 Your Turn
 ---------
 
-Open Step 2 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 2 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 Give Reeborg the appropriate instructions to make him pick up the dandelions, put them in the garbage, and return home!

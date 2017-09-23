@@ -14,6 +14,6 @@ Reeborg's world is a simple grid, and we can refer to any part of the grid using
 Your Turn
 ---------
 
-Open Step 1 on the `Reeborg website <http://wmcicompsci.ca/reeborg>`_ .
+Open Step 1 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 Give Reeborg the appropriate instructions to make him return home!
