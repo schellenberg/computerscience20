@@ -1,5 +1,5 @@
-Transitioning To Text
-=====================
+Step 0: Transitioning To Text
+==============================
 
 .. topic:: Quick Overview of Day
 
