@@ -46,7 +46,7 @@ Your Turn
 
 Open Step 6 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
-.. image:: images/step5a.png
+.. image:: images/step6.png
 
 Reeborg needs to go pick up the newspaper (The **Star** Phoenix) that is sitting outside his house. If you haven't done it yet, define both the ``turn_right()`` and ``turn_around()`` functions in the library tab. Now use the functions defined in the library to have Reeborg pick up the newspaper, walk back into the house, put the newspaper down, and turn off. Once again, be sure to use comments and whitespace to increase the readability of your solution!
 
