@@ -5,6 +5,15 @@ Number Guessing Game (Pair Programming)
 
     In this pair programming activity, you will create a number guessing game that uses many of the concepts we've learned.
 
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
+
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
 This will be your first foray into pair programming. One of you should be at the keyboard and mouse, while the other partner is helping discuss the ideas. Switch roles every 10 minutes. 
@@ -48,9 +57,3 @@ Extras that can be added to the basic game:
 
 
 
-.. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
-
-    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
-    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
-    - **CS20-FP2** Investigate how control structures affect program flow.
