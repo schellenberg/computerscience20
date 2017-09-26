@@ -284,6 +284,43 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 </pre></div>
 </div>
 <p>The complete list of functions (questions) that Reeborg can answer is as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Question/Function</th>
+<th class="head">Explanation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>at_goal()</td>
+<td>Returns True if Reeborg is on a goal tile (flag, home, or green tile), False otherwise.</td>
+</tr>
+<tr class="row-odd"><td>front_is_clear()</td>
+<td>Returns True if there is no obstacle (wall, etc) in front of Reeborg, False otherwise.</td>
+</tr>
+<tr class="row-even"><td>right_is_clear()</td>
+<td>Returns True if there is no obstacle (wall, etc) to the right of Reeborg, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td>wall_in_front()</td>
+<td>Returns True if there is a wall in front of Reeborg, False otherwise.</td>
+</tr>
+<tr class="row-even"><td>wall_on_right()</td>
+<td>Returns True if there is a wall on the right side of Reeborg, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td>object_here()</td>
+<td>Returns True if there is an object (star, dandelion, etc) on the same tile as Reeborg is standing on, False otherwise.</td>
+</tr>
+<tr class="row-even"><td>carries_object()</td>
+<td>Returns True if Reeborg is currently carrying at least one object (star, dandelion, etc). Returns False if Reeborg is carrying nothing.</td>
+</tr>
+<tr class="row-odd"><td>is_facing_north()</td>
+<td>Returns True if Reeborg is currently facing north, False otherwise.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition-for-educators admonition">
 <p class="first admonition-title">For educators</p>
 <p>The function <code class="docutils literal"><span class="pre">object_here()</span></code> returns a list of object types (as strings)
