@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Low-Level Event Processing &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Low-Level Event Processing</a></li>
+<li><a class="reference internal" href="#focus">Focus</a></li>
+<li><a class="reference internal" href="#event-binding">Event Binding</a></li>
+<li><a class="reference internal" href="#event-descriptors">Event Descriptors</a></li>
+<li><a class="reference internal" href="#event-objects">Event Objects</a></li>
+<li><a class="reference internal" href="#event-processing">Event Processing</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="low-level-event-processing">
+<h1>Low-Level Event Processing<a class="headerlink" href="#low-level-event-processing" title="Permalink to this headline">¶</a></h1>
+<p>In the previous lessons you learned how to associate simple user actions with
+the most common user events, such as clicking on a button. For
+simple GUI programs this is typically sufficient. But for more complex programs
+you might need to process “lower level” events, such as recognizing when
+the user’s cursor is over a widget, or when a widget becomes the focus
+of user input. To handle these types of events you need to implement
+<strong>event binding</strong>. This lesson provides an overview of how to process any
+event that happens on a computer. We will not use these techniques in
+most of the simple GUI programs we discuss, but you should be aware of
+what is possible.</p>
+</div>
+<div class="section" id="focus">
+<h1>Focus<a class="headerlink" href="#focus" title="Permalink to this headline">¶</a></h1>
+<p>Remember from our previous discussion that the operating system is in control
+of your computer’s screen, keyboard, mouse, and other input devices. When
+the user interacts with these input devices the operating system generates
+<code class="docutils literal"><span class="pre">event</span> <span class="pre">objects</span></code> that capture specific event information. Your computer is running
+multiple processes at any given time, so how does
+the computer know which process to send an event to? All GUI operating systems
+have the concept of an “active window.” Only the “active window” receives events.
+We say that the “active window” has the <strong>focus</strong> of the user. Typically the
+application whose window is in front of all other windows on the computer
+screen has the operating system’s <strong>focus</strong>. Only the process with the <strong>focus</strong>
+receives user events; the other running applications do <strong>not</strong> receive
+user events.</p>
+<p>The concept of <strong>focus</strong> goes further than the applications running on a
+computer. Inside an application, only one widget at a time can have the
+<strong>focus</strong> of the user. The widget with the <strong>focus</strong> is the widget that
+receives keyboard events. For example, suppose you had a GUI interface
+that contained two different <code class="docutils literal"><span class="pre">Entry</span></code> widgets. If the user hits an “a”
+key, which widget has an “a” added to their existing text? It is the widget
+that currently has the <strong>focus</strong>.</p>
+</div>
+<div class="section" id="event-binding">
+<h1>Event Binding<a class="headerlink" href="#event-binding" title="Permalink to this headline">¶</a></h1>
+<p>When your program has the <strong>focus</strong> it can potentially receive many more
+events than it desires to process. For example, you may not care that the
+pointing device just moved one pixel to the right. All “low level” user
+events are ignored by your program unless you specifically request that
+a particular type of event be sent to a specific function in your program.
+The task of associating a specific <code class="docutils literal"><span class="pre">event</span> <span class="pre">handler</span></code> function with a specific
+“low level” event is called <strong>binding</strong>.</p>
+<p>An event is always <strong>bound</strong> to a specific widget. For example, if you wanted
+to know when the cursor of a pointing device has moved over a widget, you would
+bind an  <code class="docutils literal"><span class="pre">&quot;&lt;Enter&gt;&quot;</span></code> event to the widget and specify a function to call when the
+event happens. This is done with the <code class="docutils literal"><span class="pre">.bind(event_description,</span> <span class="pre">event_handler)</span></code>
+method of a widget. Once this bind operation is complete and the
+application’s main event loop has started, every time a pointing device is
+moved over the widget, the event handler will be called.</p>
+<p>Here is an example of binding an <code class="docutils literal"><span class="pre">&quot;&lt;Enter&gt;&quot;</span></code> event to a Button.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_event</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The process_event function was called.&quot;</span><span class="p">)</span>
+
+<span class="n">my_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">application_window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Example&quot;</span><span class="p">)</span>
+<span class="n">my_button</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Enter&gt;&quot;</span><span class="p">,</span> <span class="n">process_event</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is best practice to “stub out” event handlers and verify that events are
+being processed correctly before you start developing an application’s
+actual processing code. Here is an example of a “stubbed” out <code class="docutils literal"><span class="pre">event</span> <span class="pre">handler</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;my_function was called.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="event-descriptors">
+<h1>Event Descriptors<a class="headerlink" href="#event-descriptors" title="Permalink to this headline">¶</a></h1>
+<p>An event represents an action that needs to be processed. Events are
+caused by a user when they click in a window or type on the keyboard.
+Events can also be generated by software, such as a request to redraw the
+application’s window after changes have been made. In a GUI program,
+<strong>all</strong> processing is done by responding to events.</p>
+<p>In Tkinter, events are defined as strings using a pre-defined syntax. The general format
+of an event description is <code class="docutils literal"><span class="pre">&lt;modifier-type-detail&gt;</span></code>, where the <code class="docutils literal"><span class="pre">modifier</span></code>
+and <code class="docutils literal"><span class="pre">detail</span></code> portions are optional. For example, a <code class="docutils literal"><span class="pre">&lt;Button&gt;</span></code> event is
+generated by any change of state of any mouse button, while a <code class="docutils literal"><span class="pre">&lt;Shift-Button&gt;</span></code>
+event will only be generated if the mouse state changes while the SHIFT key
+on the keyboard is down. And a <code class="docutils literal"><span class="pre">&lt;Shift-Button-1&gt;</span></code> event will only be generated
+if the left mouse button (associated with the number 1) changes state.
+Below is a list of the most widely used events along with a brief description
+of each one. You can add or remove <code class="docutils literal"><span class="pre">modifier</span></code> and <code class="docutils literal"><span class="pre">detail</span></code> values to make
+events more or less specific.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Pointer Related Events</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;ButtonPress-1&gt;&quot;</span></code></td>
+<td>The left mouse button was pressed.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;ButtonPress-2&gt;&quot;</span></code></td>
+<td>The middle mouse button was pressed.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;ButtonPress-3&gt;&quot;</span></code></td>
+<td>The right mouse button was pressed.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;B1-Motion&gt;&quot;</span></code></td>
+<td>With the left mouse button held down, the mouse changed location.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;B2-Motion&gt;&quot;</span></code></td>
+<td>With the middle mouse button held down, the mouse changed location.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;B3-Motion&gt;&quot;</span></code></td>
+<td>With the right mouse button held down, the mouse changed location.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;ButtonRelease-1&gt;&quot;</span></code></td>
+<td>The left mouse button was released.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Double-Button-1&gt;&quot;</span></code></td>
+<td>The left mouse button was double-clicked.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Enter&gt;&quot;</span></code></td>
+<td>The mouse pointer just moved over a particular widget.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Leave&gt;&quot;</span></code></td>
+<td>The mouse pointer is no longer over a particular widget.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;FocusIn&gt;&quot;</span></code></td>
+<td>A widget just received the keyboard focus.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;FocusOut&gt;&quot;</span></code></td>
+<td>A widget just lost the keyboard focus.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Configure&gt;&quot;</span></code></td>
+<td>A widget just changed its size or position.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Keyboard Related Events</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Key&gt;&quot;</span></code></td>
+<td>The user pressed any key on the keyboard.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Return&gt;&quot;</span></code></td>
+<td>The user pressed the Enter key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Backspace&gt;&quot;</span></code></td>
+<td>The user pressed the Backspace key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Tab&gt;&quot;</span></code></td>
+<td>The user pressed the Tab key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Escape&gt;&quot;</span></code></td>
+<td>The user pressed the Escape key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Prior&gt;&quot;</span></code></td>
+<td>The user pressed the Page-up key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Next&gt;&quot;</span></code></td>
+<td>The user pressed the Page-down key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Up&gt;&quot;</span></code></td>
+<td>The user pressed the up arrow key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Down&gt;&quot;</span></code></td>
+<td>The user pressed the down arrow key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Left&gt;&quot;</span></code></td>
+<td>The user pressed the left arrow key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Right&gt;&quot;</span></code></td>
+<td>The user pressed the right arrow key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;F1&gt;&quot;</span></code></td>
+<td>The user pressed the F1 key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;F2&gt;&quot;</span></code></td>
+<td>The user pressed the F2 key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;a&gt;&quot;</span></code></td>
+<td>The user pressed the “a” key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;b&gt;&quot;</span></code></td>
+<td>The user pressed the “b” key.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;c&gt;&quot;</span></code></td>
+<td>The user pressed the “c” key.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Shift-Up&gt;&quot;</span></code></td>
+<td>The user pressed the up arrow key while the shift key was down.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&quot;&lt;Alt-Up&gt;&quot;</span></code></td>
+<td>The user pressed the up arrow key while the alt key was down.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&quot;&lt;Control-Up&gt;&quot;</span></code></td>
+<td>The user pressed the up arrow key while the control key was down</td>
+</tr>
+<tr class="row-odd"><td>etc…</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="event-objects">
+<h1>Event Objects<a class="headerlink" href="#event-objects" title="Permalink to this headline">¶</a></h1>
+<p>When a user generates an event, or the software generates an event, an <code class="docutils literal"><span class="pre">event</span>
+<span class="pre">object</span></code> is created. This object is automatically passed to the function that
+is registered to handle the event. Every event handler function that is <strong>bound</strong>
+to an event using the <code class="docutils literal"><span class="pre">.bind(event_description,</span> <span class="pre">function_handler)</span></code> function
+must be defined to receive one parameter, an <code class="docutils literal"><span class="pre">event</span> <span class="pre">object</span></code>.</p>
+<p>An <code class="docutils literal"><span class="pre">event</span> <span class="pre">object</span></code> contains the following attributes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Event Object Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">.widget</span></code></td>
+<td>The widget this event was <strong>bound</strong> to. This is a reference to a
+<code class="docutils literal"><span class="pre">Tkinter</span></code> widget instance; it is not a string name.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">.x</span></code>, <code class="docutils literal"><span class="pre">.y</span></code></td>
+<td>The current mouse position, relative to the application’s window, in pixels.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">.x_root</span></code>, <code class="docutils literal"><span class="pre">.y_root</span></code></td>
+<td>The current mouse position relative to the upper left corner of the
+screen, in pixels.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">.char</span></code></td>
+<td>For keyboard events only, this is the character code of the key
+pressed or released as a string.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">.keysym</span></code></td>
+<td>For keyboard events only, the key symbol.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">.keycode</span></code></td>
+<td>For keyboard events only, the key code (i.e., the key’s Unicode
+decimal value).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">.num</span></code></td>
+<td>For mouse button events only, the button number.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">.width</span></code>, <code class="docutils literal"><span class="pre">.height</span></code></td>
+<td>For configure events only, the new size of the widget, in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>A typical event handler will use the values in the <code class="docutils literal"><span class="pre">event</span> <span class="pre">object</span></code> it receives
+to perform an appropriate action related to the event. For example,</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_event</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="c1"># do something</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="event-processing">
+<h1>Event Processing<a class="headerlink" href="#event-processing" title="Permalink to this headline">¶</a></h1>
+<p>The operating system generates events in the order the user or the program
+creates them. An application’s GUI event loop receives the events in this
+same order and then calls the appropriate event handler. Therefore,
+events are processed in the same order they are created.</p>
+<p>Events can’t be processed unless the application’s GUI event-loop
+is running. If an individual event handler takes a long time to process an
+event, other events will get “queued up” waiting for a chance to be processed.
+It is considered bad GUI programming for any event handler to take
+up too much processing time. An event handler should do as little processing
+as possible to accomplish its intended task and then quit. This returns
+control of the application back to the event loop.</p>
+<p>Events are always associated with a widget. If you want to know every event
+that happens inside an application’s window, then bind events to the widget
+that is your application’s window. If you only want to know about button
+click events on a particular button, then bind an event handler to that
+specific button. In general, events should be associated with the most
+specific widget possible.</p>
+<p>Some widgets, such as a Notebook that implements a tabbed set of frames, have
+predefined events that are used to manipulate them. These are called “bind_class”
+event bindings and they bind certain events to all instances of a particular
+widget type. In general you should not modify or change these types of
+event bindings because a user expects a certain behaviour from a particular
+type of widget and changing that behaviour can make the entire user interface
+confusing to a user.</p>
+<span class="target" id="index-0"></span></div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

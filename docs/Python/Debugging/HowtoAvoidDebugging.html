@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3.2. How to Avoid Debugging &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">3.2. How to Avoid Debugging</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="how-to-avoid-debugging">
+<h1>3.2. How to Avoid Debugging<a class="headerlink" href="#how-to-avoid-debugging" title="Permalink to this headline">¶</a></h1>
+<p>Perhaps the most important lesson in debugging is that it is <strong>largely avoidable</strong> – if you work carefully.</p>
+<ol class="arabic simple">
+<li><strong>Identify a correct solution</strong>  You must have a firm grasp on what constitutes a correct solution – what the program should do in specific circumstances – what output should be produced for some given input. You need to understand <strong>what</strong> you are trying to accomplish but not necessarily <strong>how</strong> to do it. You can then identify whether there remains work to do or bugs to correct. This is probably the single biggest piece of advice for programmers at every level.</li>
+<li><strong>Start Small</strong>  It is tempting to sit down and crank out an entire program at once.  But, when the program – inevitably – does not work, you have a myriad of options for things that might be wrong.  Where to start?  Where to look first?  How to figure out what went wrong?  I’ll get to that in the next section.  So, start with something really small.  Maybe just two lines and then make sure that runs ok.  Hitting the run button is quick and easy, and gives you immediate feedback about whether what you have just done is ok or not.  Another immediate benefit of having something small working is that you have something to turn in.  Turning in a small, incomplete program, is almost always better than nothing.</li>
+<li><strong>Keep improving it</strong>  Once you have a small part of your program working the next step is to figure out something small to add to it – how can you move closer to a correct solution.  If you keep adding small pieces of the program one at a time, it is much easier to figure out what went wrong, as it is most likely that the problem is going to be in the new code you have just added.  Less new code means its easier to figure out where the problem is.</li>
+</ol>
+<p>This notion of <strong>Get something working and keep improving it</strong> is a mantra that you can repeat throughout your career as a programmer.  It’s a great way to avoid the frustrations mentioned above.  Think of it this way.  Every time you have a little success, your brain releases a tiny bit of chemical that makes you happy.  So, you can keep yourself happy and make programming more enjoyable by creating lots of small victories for yourself.</p>
+<p>Ok, let’s look at an example.  Let’s solve the problem posed in question 3 at the end of the Simple Python Data chapter.  Ask the user for the time now (in hours 0 - 23), and ask for the number of hours to wait. Your program should output what the time will be on the clock when the alarm goes off. For example, if <code class="docutils literal"><span class="pre">current_time</span></code> is 8 and <code class="docutils literal"><span class="pre">wait_time</span></code> is 5, <code class="docutils literal"><span class="pre">final_time</span></code> should be 13 (1 pm).</p>
+<p>So, where to start?  The problem requires two pieces of input from the user, so let’s start there and make sure we can get the data we need.</p>
+
+<div data-childcomponent="db_ex3_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=db_ex3_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+current_time = input("what is the current time (in hours)?")
+wait_time = input("How many hours do you want to wait")
+
+print(current_time)
+print(wait_time)
+</textarea>
+</div>
+<p>So far so good.  Now let’s take the next step.  We need to figure out what the time will be after waiting <code class="docutils literal"><span class="pre">wait_time</span></code> number of hours.  A reasonable solution is to simply add <code class="docutils literal"><span class="pre">wait_time</span></code> to <code class="docutils literal"><span class="pre">current_time</span></code> and print out the result.  So lets try that.</p>
+
+<div data-childcomponent="db_ex3_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=db_ex3_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+current_time = input("What is the current time (in hours 0 - 23)?")
+wait_time = input("How many hours do you want to wait")
+
+print(current_time)
+print(wait_time)
+
+final_time = current_time + wait_time
+print(final_time)
+</textarea>
+</div>
+<p>Hmm, when you run this example you see that something unexpected has happened. You would not realize this was an error unless you first knew what the program was supposed to do.</p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="db_q_ex3_1">
+            debug-2-1: Which of the following best describes what is wrong with the  previous example?
+            <li data-component="answer"  id="db_q_ex3_1_opt_a">Python is stupid and does not know how to add properly.</li><li data-component="feedback" id="db_q_ex3_1_opt_a">No, Python is probabaly not broken.</li>
+            
+            <li data-component="answer"  id="db_q_ex3_1_opt_b">There is nothing wrong here.</li><li data-component="feedback" id="db_q_ex3_1_opt_b">No, try adding the two numbers together yourself, you will definitely get a different result.</li>
+            
+            <li data-component="answer" data-correct id="db_q_ex3_1_opt_c">Python is doing string concatenation, not integer addition.</li><li data-component="feedback" id="db_q_ex3_1_opt_c">Yes!  Remember that input returns a string.  Now we will need to convert the string to an integer</li>
+            
+
+            </ul>
+            </div>
+            <p>This error was probably pretty simple to spot, because we printed out the value of <code class="docutils literal"><span class="pre">final_time</span></code> and it is easy to see that the numbers were just concatenated together rather than added.</p>
+<p>So what do we do about the problem?  We will need to convert both <code class="docutils literal"><span class="pre">current_time</span></code> and <code class="docutils literal"><span class="pre">wait_time</span></code> to <code class="docutils literal"><span class="pre">int</span></code>.  At this stage of your programming development, it can be a good idea to include the type of the variable in the variable name itself.  So let’s look at another iteration of the program that does that, and the conversion to integer.</p>
+
+<div data-childcomponent="db_ex3_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=db_ex3_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+current_time_str = input("What is the current time (in hours 0-23)?")
+wait_time_str = input("How many hours do you want to wait")
+
+current_time_int = int(current_time_str)
+wait_time_int = int(wait_time_str)
+
+final_time_int = current_time_int + wait_time_int
+print(final_time_int)
+</textarea>
+</div>
+<p id="index-0">Now, that’s a lot better, and in fact depending on the hours you chose, it may be exactly right.  If you entered 8 for <code class="docutils literal"><span class="pre">current_time</span></code> and 5 for <code class="docutils literal"><span class="pre">wait_time</span></code> then 13 is correct.  But if you entered 17 (5 pm) for <code class="docutils literal"><span class="pre">current_time</span></code> and 9 for <code class="docutils literal"><span class="pre">wait_time</span></code> then the result of 26 is not correct.</p>
+<p>This illustrates an important aspect of <strong>testing</strong>: it is important to test your code on a range of inputs.  It is especially important to test your code on <strong>boundary conditions</strong>.  For this particular problem, you should test your program with <code class="docutils literal"><span class="pre">current_time</span></code> of 0, 23, and some values in between.  You should test your <code class="docutils literal"><span class="pre">wait_time</span></code> for 0, and some larger values.  What about negative numbers?  Negative numbers don’t make sense, and since we don’t really have the tools to deal with telling the user when something is wrong we will not worry about that just yet.</p>
+<p>So to account for those numbers that are bigger than 23, we need one final step: using the modulus operator.</p>
+
+<div data-childcomponent="db_ex3_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=db_ex3_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+current_time_str = input("What is the current time (in hours 0-23)?")
+wait_time_str = input("How many hours do you want to wait")
+
+current_time_int = int(current_time_str)
+wait_time_int = int(wait_time_str)
+
+final_time_int = current_time_int + wait_time_int
+
+final_answer = final_time_int % 24
+
+print("The time after waiting is: ", final_answer)
+</textarea>
+</div>
+<p>Of course even in this simple progression, there are other ways you could have gone astray.  We’ll look at some of those and how you track them down in the next section.</p>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

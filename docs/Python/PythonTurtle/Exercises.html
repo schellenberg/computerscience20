@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4.11. Exercises &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">4.11. Exercises</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="exercises">
+<h1>4.11. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+
+    <div data-component="question" class="full-width container question" id="turtle_ex_1" >
+    <ol start=1 class=arabic><li class="alert alert-warning">
+
+    <div id='q1' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_1" class="runestone explainer ac_section alert alert-warning">
+Write a program that prints <code class="docutils literal"><span class="pre">We</span> <span class="pre">like</span> <span class="pre">Python's</span> <span class="pre">turtles!</span></code> 100 times.
+<textarea data-component="activecode" id=ex_3_1 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q1_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q1_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for i in range(100):
+    print("We like Python's turtles!")
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function f858d02024e54ae1b6b50ed8c65a01e6_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'f858d02024e54ae1b6b50ed8c65a01e6_' + eBookConfig.course;
+                    this.page.url = 'http://f858d02024e54ae1b6b50ed8c65a01e6_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'f858d02024e54ae1b6b50ed8c65a01e6_' + eBookConfig.course;
+            disqus_url = 'http://f858d02024e54ae1b6b50ed8c65a01e6_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="f858d02024e54ae1b6b50ed8c65a01e6" onclick="f858d02024e54ae1b6b50ed8c65a01e6_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='f858d02024e54ae1b6b50ed8c65a01e6']").attr('data-disqus-identifier', 'f858d02024e54ae1b6b50ed8c65a01e6_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_2" >
+    <ol start=2 class=arabic><li class="alert alert-warning">
+
+    
+<div class="runestone"
+<p data-component="shortanswer" id=turtle_reflect >turtle-8-3: Turtle objects have methods and attributes. For example, a turtle has a position and when you move the turtle forward, the position changes.  Think about the other methods shown in the summary above.  Which attibutes, if any, does each method relate to?  Does the method change the attribute?</p>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_3" >
+    <ol start=3 class=arabic><li class="alert alert-warning">
+
+    <div id='q3' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_3" class="runestone explainer ac_section alert alert-warning">
+<dl class="docutils">
+<dt>Write a program that uses a for loop to print</dt>
+<dd><div class="first last line-block">
+<div class="line"><code class="docutils literal"><span class="pre">One</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">months</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">year</span> <span class="pre">is</span> <span class="pre">January</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">One</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">months</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">year</span> <span class="pre">is</span> <span class="pre">February</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">One</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">months</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">year</span> <span class="pre">is</span> <span class="pre">March</span></code></div>
+<div class="line">etc …</div>
+</div>
+</dd>
+</dl>
+
+<textarea data-component="activecode" id=ex_3_3 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q3_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q3_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']:
+    print("One of the months of the year is", amonth)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function b271442ee0864973a023c19f27aeb401_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'b271442ee0864973a023c19f27aeb401_' + eBookConfig.course;
+                    this.page.url = 'http://b271442ee0864973a023c19f27aeb401_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'b271442ee0864973a023c19f27aeb401_' + eBookConfig.course;
+            disqus_url = 'http://b271442ee0864973a023c19f27aeb401_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="b271442ee0864973a023c19f27aeb401" onclick="b271442ee0864973a023c19f27aeb401_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='b271442ee0864973a023c19f27aeb401']").attr('data-disqus-identifier', 'b271442ee0864973a023c19f27aeb401_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_4" >
+    <ol start=4 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_3_4" class="runestone explainer ac_section alert alert-warning">
+<p>Assume you have a list of numbers <code class="docutils literal"><span class="pre">12,</span> <span class="pre">10,</span> <span class="pre">32,</span> <span class="pre">3,</span> <span class="pre">66,</span> <span class="pre">17,</span> <span class="pre">42,</span> <span class="pre">99,</span> <span class="pre">20</span></code></p>
+<ol class="loweralpha simple">
+<li>Write a loop that prints each of the numbers on a new line.</li>
+<li>Write a loop that prints each number and its square on a new line.</li>
+</ol>
+
+<textarea data-component="activecode" id=ex_3_4 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_5" >
+    <ol start=5 class=arabic><li class="alert alert-warning">
+
+    <div id='q5' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_5" class="runestone explainer ac_section alert alert-warning">
+<p>Use <code class="docutils literal"><span class="pre">for</span></code> loops to make a turtle draw these regular polygons
+(regular means all sides the same lengths, all angles the same):</p>
+<ul class="simple">
+<li>An equilateral triangle</li>
+<li>A square</li>
+<li>A hexagon (six sides)</li>
+<li>An octagon (eight sides)</li>
+</ul>
+
+<textarea data-component="activecode" id=ex_3_5 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># draw an equilateral triangle</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">norvig</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">norvig</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+    <span class="c1"># the angle of each vertice of a regular polygon</span>
+    <span class="c1"># is 360 divided by the number of sides</span>
+    <span class="n">norvig</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># draw a square</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">kurzweil</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">kurzweil</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">kurzweil</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># draw a hexagon</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">dijkstra</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">dijkstra</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">dijkstra</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># draw an octogon</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">knuth</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="n">knuth</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+    <span class="n">knuth</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function f36e8bc742b89424e82f111ba2d1dd33f_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'f36e8bc742b89424e82f111ba2d1dd33f_' + eBookConfig.course;
+                    this.page.url = 'http://f36e8bc742b89424e82f111ba2d1dd33f_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'f36e8bc742b89424e82f111ba2d1dd33f_' + eBookConfig.course;
+            disqus_url = 'http://f36e8bc742b89424e82f111ba2d1dd33f_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="f36e8bc742b89424e82f111ba2d1dd33f" onclick="f36e8bc742b89424e82f111ba2d1dd33f_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='f36e8bc742b89424e82f111ba2d1dd33f']").attr('data-disqus-identifier', 'f36e8bc742b89424e82f111ba2d1dd33f_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_6" >
+    <ol start=6 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_3_6" class="runestone explainer ac_section alert alert-warning">
+Write a program that asks the user for the number of sides, the length of the side, the color, and the fill color of a
+regular polygon.  The program should draw the polygon and then fill it in.
+<textarea data-component="activecode" id=ex_3_6 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_7" >
+    <ol start=7 class=arabic><li class="alert alert-warning">
+
+    <div id='q7' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_7" class="runestone explainer ac_section alert alert-warning">
+A drunk pirate makes a random turn and then takes 100 steps forward, makes another random turn, takes another 100 steps, turns another random amount, etc.  A social science student records the angle of each turn before the next 100 steps are taken.  Her experimental data is <code class="docutils literal"><span class="pre">160,</span> <span class="pre">-43,</span> <span class="pre">270,</span> <span class="pre">-97,</span> <span class="pre">-43,</span> <span class="pre">200,</span> <span class="pre">-940,</span> <span class="pre">17,</span> <span class="pre">-86</span></code>. (Positive angles are counter-clockwise.)  Use a turtle to draw the path taken by our drunk friend.  After the pirate is done walking, print the current heading.
+<textarea data-component="activecode" id=ex_3_7 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q7_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q7_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+wn = turtle.Screen()
+lovelace = turtle.Turtle()
+
+# move the turtle forward a little so that the whole path fits on the screen
+lovelace.penup()
+lovelace.forward(60)
+
+# now draw the drunk pirate's path
+lovelace.pendown()
+for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
+
+    # we use .left() so that positive angles are counter-clockwise
+    # and negative angles are clockwise
+    lovelace.left(angle)
+    lovelace.forward(100)
+
+# the .heading() method gives us the turtle's current heading in degrees
+print("The pirate's final heading was", lovelace.heading())
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function a7e34946f59f348f2bfeb3f918eb57b7a_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'a7e34946f59f348f2bfeb3f918eb57b7a_' + eBookConfig.course;
+                    this.page.url = 'http://a7e34946f59f348f2bfeb3f918eb57b7a_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'a7e34946f59f348f2bfeb3f918eb57b7a_' + eBookConfig.course;
+            disqus_url = 'http://a7e34946f59f348f2bfeb3f918eb57b7a_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="a7e34946f59f348f2bfeb3f918eb57b7a" onclick="a7e34946f59f348f2bfeb3f918eb57b7a_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='a7e34946f59f348f2bfeb3f918eb57b7a']").attr('data-disqus-identifier', 'a7e34946f59f348f2bfeb3f918eb57b7a_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_8" >
+    <ol start=8 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_3_8" class="runestone explainer ac_section alert alert-warning">
+On a piece of scratch paper, trace the following program and show the drawing.  When you are done, press <code class="docutils literal"><span class="pre">run</span></code>
+and check your answer.
+<textarea data-component="activecode" id=ex_3_8 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+tess.right(90)
+tess.left(3600)
+tess.right(-90)
+tess.left(3600)
+tess.left(3645)
+tess.forward(-100)
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_9" >
+    <ol start=9 class=arabic><li class="alert alert-warning">
+
+    <div id='q9' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_9" class="runestone explainer ac_section alert alert-warning">
+<p>Write a program to draw a shape like this:</p>
+<img alt="../../_images/star1.png" src="../../_images/star1.png" />
+
+<textarea data-component="activecode" id=ex_3_9 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q9_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q9_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+turing = turtle.Turtle()
+
+for i in range(5):
+    turing.forward(110)
+    turing.left(216)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function c611217310057488aab6a34d4b591e753_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'c611217310057488aab6a34d4b591e753_' + eBookConfig.course;
+                    this.page.url = 'http://c611217310057488aab6a34d4b591e753_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'c611217310057488aab6a34d4b591e753_' + eBookConfig.course;
+            disqus_url = 'http://c611217310057488aab6a34d4b591e753_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="c611217310057488aab6a34d4b591e753" onclick="c611217310057488aab6a34d4b591e753_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='c611217310057488aab6a34d4b591e753']").attr('data-disqus-identifier', 'c611217310057488aab6a34d4b591e753_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_10" >
+    <ol start=10 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_3_10" class="runestone explainer ac_section alert alert-warning">
+<p>Write a program to draw a face of a clock that looks something like this:</p>
+<img alt="../../_images/tess_clock1.png" src="../../_images/tess_clock1.png" />
+
+<textarea data-component="activecode" id=ex_3_10 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_11" >
+    <ol start=11 class=arabic><li class="alert alert-warning">
+
+    <div id='q11' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_11" class="runestone explainer ac_section alert alert-warning">
+Write a program to draw some kind of picture.  Be creative and experiment
+with the turtle methods provided in <a class="reference internal" href="SummaryofTurtleMethods.html#turtle-methods"><span class="std std-ref">Summary of Turtle Methods</span></a>.
+<textarea data-component="activecode" id=ex_3_11 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q11_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q11_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+tanenbaum = turtle.Turtle()
+
+tanenbaum.hideturtle()
+tanenbaum.speed(20)
+
+for i in range(350):
+    tanenbaum.forward(i)
+    tanenbaum.right(98)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function e928a562a4f5c41f9892c9bfc4a1d5883_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'e928a562a4f5c41f9892c9bfc4a1d5883_' + eBookConfig.course;
+                    this.page.url = 'http://e928a562a4f5c41f9892c9bfc4a1d5883_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'e928a562a4f5c41f9892c9bfc4a1d5883_' + eBookConfig.course;
+            disqus_url = 'http://e928a562a4f5c41f9892c9bfc4a1d5883_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="e928a562a4f5c41f9892c9bfc4a1d5883" onclick="e928a562a4f5c41f9892c9bfc4a1d5883_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='e928a562a4f5c41f9892c9bfc4a1d5883']").attr('data-disqus-identifier', 'e928a562a4f5c41f9892c9bfc4a1d5883_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_12" >
+    <ol start=12 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_3_12" class="runestone explainer ac_section alert alert-warning">
+Create a turtle and assign it to a variable.  When you print its type, what do you get?
+<textarea data-component="activecode" id=ex_3_12 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="turtle_ex_13" >
+    <ol start=13 class=arabic><li class="alert alert-warning">
+
+    <div id='q13' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_3_13" class="runestone explainer ac_section alert alert-warning">
+<p>A sprite is a simple spider shaped thing with n legs coming out from a center
+point. The angle between each leg is 360 / n degrees.</p>
+<p>Write a program to draw a sprite where the number of legs is provided by the user.</p>
+
+<textarea data-component="activecode" id=ex_3_13 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q13_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q13_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+wn = turtle.Screen()
+
+babbage = turtle.Turtle()
+babbage.shape("triangle")
+
+n = int(input("How many legs should this sprite have? "))
+angle = 360 / n
+
+for i in range(n):
+    # draw the leg
+    babbage.right(angle)
+    babbage.forward(65)
+    babbage.stamp()
+
+    # go back to the middle and turn back around
+    babbage.right(180)
+    babbage.forward(65)
+    babbage.right(180)
+
+babbage.shape("circle")
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function b65d7e616d2b548f592205dba699cc132_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'b65d7e616d2b548f592205dba699cc132_' + eBookConfig.course;
+                    this.page.url = 'http://b65d7e616d2b548f592205dba699cc132_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'b65d7e616d2b548f592205dba699cc132_' + eBookConfig.course;
+            disqus_url = 'http://b65d7e616d2b548f592205dba699cc132_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="b65d7e616d2b548f592205dba699cc132" onclick="b65d7e616d2b548f592205dba699cc132_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='b65d7e616d2b548f592205dba699cc132']").attr('data-disqus-identifier', 'b65d7e616d2b548f592205dba699cc132_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    </div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

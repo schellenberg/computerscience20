@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>8.8. Other uses of while &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">8.8. Other uses of <code class="docutils literal"><span class="pre">while</span></code></a><ul>
+<li><a class="reference internal" href="#sentinel-values">8.8.1. Sentinel Values</a></li>
+<li><a class="reference internal" href="#validating-input">8.8.2. Validating Input</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="other-uses-of-while">
+<span id="index-0"></span><h1>8.8. Other uses of <code class="docutils literal"><span class="pre">while</span></code><a class="headerlink" href="#other-uses-of-while" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sentinel-values">
+<h2>8.8.1. Sentinel Values<a class="headerlink" href="#sentinel-values" title="Permalink to this headline">¶</a></h2>
+<p>Indefinite loops are much more common in the real world than definite loops.</p>
+<ul class="simple">
+<li>If you are selling tickets to an event, you don’t know in advance how
+many tickets you will sell. You keep selling tickets as long as people come
+to the door and there’s room in the hall.</li>
+<li>When the baggage crew unloads a plane, they don’t know in advance how many
+suitcases there are. They just keep unloading while there are bags left in the
+cargo hold. (Why <em>your</em> suitcase is always the last one is an entirely different problem.)</li>
+<li>When you go through the checkout line at the grocery, the clerks don’t
+know in advance how many items there are. They just keep ringing up items as
+long as there are more on the conveyor belt.</li>
+</ul>
+<p>Let’s implement the last of these in Python, by asking the user for prices and
+keeping a running total and count of items. When the last item is entered,
+the program gives the grand total, number of items, and average price.
+We’ll need these variables:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">total</span></code> - this will start at zero</li>
+<li><code class="docutils literal"><span class="pre">count</span></code> - the number of items, which also starts at zero</li>
+<li><code class="docutils literal"><span class="pre">moreItems</span></code> - a boolean that tells us whether more items are waiting; this starts as True</li>
+</ul>
+<p>The pseudocode (code written half in English, half in Python) for the body of the loop
+looks something like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">moreItems</span>
+    <span class="n">ask</span> <span class="k">for</span> <span class="n">price</span>
+    <span class="n">add</span> <span class="n">price</span> <span class="n">to</span> <span class="n">total</span>
+    <span class="n">add</span> <span class="n">one</span> <span class="n">to</span> <span class="n">count</span>
+</pre></div>
+</div>
+<p>This pseudocode has no option to set <code class="docutils literal"><span class="pre">moreItems</span></code> to <code class="docutils literal"><span class="pre">False</span></code>, so it would run forever.
+In a grocery store, there’s a little
+plastic bar that you put after your last item to separate your groceries from
+those of the person behind you; that’s how the clerk knows you have no more items.
+We don’t have a “little plastic bar” data type in Python, so we’ll do the next best thing: we
+will use a <code class="docutils literal"><span class="pre">price</span></code> of zero to mean “this is my last item.” In this program,
+zero is a <strong>sentinel value</strong>, a value used to signal the end of the loop. Here’s the code:</p>
+
+<div data-childcomponent="ch07_sentinel" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch07_sentinel data-lang="python"    data-timelimit=60  data-codelens="true" data-audio=''     >
+def checkout():
+    total = 0
+    count = 0
+    moreItems = True
+    while moreItems:
+        price = float(input('Enter price of item (0 when done): '))
+        if price != 0:
+            count = count + 1
+            total = total + price
+            print('Subtotal: $', total)
+        else:
+            moreItems = False
+    average = total / count
+    print('Total items:', count)
+    print('Total $', total)
+    print('Average price per item: $', average)
+
+checkout()
+</textarea>
+</div>
+<p>There are still a few problems with this program.</p>
+<ul class="simple">
+<li>If you enter a negative number, it will be added to the total and count. Modify the code
+so that negative numbers give an error message instead (but don’t end the loop) Hint: <code class="docutils literal"><span class="pre">elif</span></code> is
+your friend.</li>
+<li>If you enter zero the first time you are asked for a price, the loop will end, and the program
+will try to divide by zero. Use an <code class="docutils literal"><span class="pre">if</span></code>/<code class="docutils literal"><span class="pre">else</span></code> statement outside the loop to avoid the
+division by zero and tell the user that you can’t compute an average without data.</li>
+<li>This program doesn’t display the amounts to two decimal places. In the next chapter you will
+see the <a class="reference internal" href="../Strings/StringMethods.html#format-strings"><span class="std std-ref">String Format Method</span></a> that will do the trick.</li>
+</ul>
+</div>
+<div class="section" id="validating-input">
+<span id="index-1"></span><h2>8.8.2. Validating Input<a class="headerlink" href="#validating-input" title="Permalink to this headline">¶</a></h2>
+<p>You can also use a <code class="docutils literal"><span class="pre">while</span></code> loop when you want to <strong>validate</strong> input;  when you want to make
+sure the user has entered valid input for a prompt. Let’s say you want a function
+that asks a yes-or-no question. In this case, you want to make sure that the person using
+your program enters either a Y for yes or N for no (in either upper or lower case).
+Here is a program that uses a <code class="docutils literal"><span class="pre">while</span></code> loop to keep asking until it receives a valid answer.
+As a preview of coming attractions, it uses
+the <code class="docutils literal"><span class="pre">upper()</span></code> method which is described in <a class="reference internal" href="../Strings/StringMethods.html#stringmethods"><span class="std std-ref">String Methods</span></a> to convert a string to upper case.
+When you run the following code, try typing something other than Y or N to see how the code reacts:</p>
+
+<div data-childcomponent="ch07_validation" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch07_validation data-lang="python"    data-timelimit=60  data-codelens="true" data-audio=''     >
+def get_yes_or_no(message):
+    valid_input = False
+    while not valid_input:
+        answer = input(message)
+        answer = answer.upper() # convert to upper case
+        if answer == 'Y' or answer == 'N':
+            valid_input = True
+        else:
+            print('Please enter Y for yes or N for no.')
+    return answer
+
+response = get_yes_or_no('Do you like lima beans? Y)es or N)o: ')
+if response == 'Y':
+    print('Great! They are very healthy.')
+else:
+    print('Too bad. If cooked right, they are quite tasty.')
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

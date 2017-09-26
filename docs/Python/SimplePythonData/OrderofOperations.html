@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.9. Order of Operations &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">2.9. Order of Operations</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="order-of-operations">
+<h1>2.9. Order of Operations<a class="headerlink" href="#order-of-operations" title="Permalink to this headline">¶</a></h1>
+<div id="precedencevid" class="video_popup runestone" >
+<video controls preload="none"  poster="../_static/precedencethumb.png">
+    <source src="http://media.interactivepython.org/thinkcsVideos/precedence.mov" type="video/mp4"></source>
+    <source src="http://media.interactivepython.org/thinkcsVideos/precedence.webm" type="video/webm"></source>
+    No supported video types
+</video>
+</div>
+<script>
+   jQuery(function($) {
+      var rb = new RunestoneBase();
+      $('#precedencevid_thumb').click(function(e) {
+         $('#precedencevid').show();
+         $('#precedencevid_thumb').hide();
+         rb.logBookEvent({'event':'video','act':'play','div_id': 'precedencevid'});
+         // Log the run event
+      });
+      $('#precedencevid video').one("click", function(){
+        this.play();
+      });
+      $('#precedencevid video').one("play", function(){
+        rb.logBookEvent({'event':'video','act':'play','div_id': 'precedencevid'});
+      });
+   });
+</script>
+<div id="associativityvid" class="video_popup runestone" >
+<video controls preload="none"  poster="../_static/associativitythumb.png">
+    <source src="http://media.interactivepython.org/thinkcsVideos/associativity.mov" type="video/mp4"></source>
+    <source src="http://media.interactivepython.org/thinkcsVideos/associativity.webm" type="video/webm"></source>
+    No supported video types
+</video>
+</div>
+<script>
+   jQuery(function($) {
+      var rb = new RunestoneBase();
+      $('#associativityvid_thumb').click(function(e) {
+         $('#associativityvid').show();
+         $('#associativityvid_thumb').hide();
+         rb.logBookEvent({'event':'video','act':'play','div_id': 'associativityvid'});
+         // Log the run event
+      });
+      $('#associativityvid video').one("click", function(){
+        this.play();
+      });
+      $('#associativityvid video').one("play", function(){
+        rb.logBookEvent({'event':'video','act':'play','div_id': 'associativityvid'});
+      });
+   });
+</script>
+<p>When more than one operator appears in an expression, the order of evaluation
+depends on the <strong>rules of precedence</strong>. Python follows the same precedence
+rules for its mathematical operators that mathematics does.</p>
+<ol class="arabic simple">
+<li>Parentheses have the highest precedence and can be used to force an
+expression to evaluate in the order you want. Since expressions in
+parentheses are evaluated first, <code class="docutils literal"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">(3-1)</span></code> is 4, and <code class="docutils literal"><span class="pre">(1+1)**(5-2)</span></code> is
+8. You can also use parentheses to make an expression easier to read, as in
+<code class="docutils literal"><span class="pre">(minute</span> <span class="pre">*</span> <span class="pre">100)</span> <span class="pre">/</span> <span class="pre">60</span></code>, even though it doesn’t change the result.</li>
+<li>Exponentiation has the next highest precedence, so <code class="docutils literal"><span class="pre">2**1+1</span></code> is 3 and
+not 4, and <code class="docutils literal"><span class="pre">3*1**3</span></code> is 3 and not 27.  Can you explain why?</li>
+<li>Multiplication and both division operators have the same
+precedence, which is higher than addition and subtraction, which
+also have the same precedence. So <code class="docutils literal"><span class="pre">2*3-1</span></code> yields 5 rather than 4, and
+<code class="docutils literal"><span class="pre">5-2*2</span></code> is 1, not 6.</li>
+<li>Operators with the <em>same</em> precedence (except for <code class="docutils literal"><span class="pre">**</span></code>) are
+evaluated from left-to-right. In algebra we say they are <em>left-associative</em>.
+So in the expression <code class="docutils literal"><span class="pre">6-3+2</span></code>, the subtraction happens first, yielding 3.
+We then add 2 to get the result 5. If the operations had been evaluated from
+right to left, the result would have been <code class="docutils literal"><span class="pre">6-(3+2)</span></code>, which is 1.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>An exception to the left-to-right
+left-associative rule is the exponentiation operator <cite>**</cite>. A useful hint
+is to always use parentheses to force exactly the order you want when
+exponentiation is involved:</p>
+
+<div data-childcomponent="ch02_23" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_23 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(2 ** 3 ** 2)     # the right-most ** operator gets done first!
+print((2 ** 3) ** 2)   # use parentheses to force the order you want!
+</textarea>
+</div>
+</div>
+<p>See <span class="xref std std-ref">operator-summary</span> for <em>all</em> the operators introduced in this book.
+You will also see many upcoming non-mathematical Python operators.</p>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question2_8_1">
+            <p>data-9-1: What is the value of the following expression:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="mi">16</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="test_question2_8_1_opt_a">14</li><li data-component="feedback" id="test_question2_8_1_opt_a">Using parentheses, the expression is evaluated as (2*5) first, then (10 // 3), then (16-3), and then (13+1).</li>
+            
+            <li data-component="answer"  id="test_question2_8_1_opt_b">24</li><li data-component="feedback" id="test_question2_8_1_opt_b">Remember that * has precedence over -.</li>
+            
+            <li data-component="answer"  id="test_question2_8_1_opt_c">3</li><li data-component="feedback" id="test_question2_8_1_opt_c">Remember that // has precedence over -.</li>
+            
+            <li data-component="answer"  id="test_question2_8_1_opt_d">13.667</li><li data-component="feedback" id="test_question2_8_1_opt_d">Remember that // does integer division.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question2_8_2">
+            <p>data-9-2: What is the value of the following expression:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="test_question2_8_2_opt_a">768</li><li data-component="feedback" id="test_question2_8_2_opt_a">Exponentiation has precedence over multiplication, but its precedence goes from right to left!  So 2 ** 3 is 8, 2 ** 8 is 256 and 256 * 3 is 768.</li>
+            
+            <li data-component="answer"  id="test_question2_8_2_opt_b">128</li><li data-component="feedback" id="test_question2_8_2_opt_b">Exponentiation (**) is processed right to left, so take 2 ** 3 first.</li>
+            
+            <li data-component="answer"  id="test_question2_8_2_opt_c">12</li><li data-component="feedback" id="test_question2_8_2_opt_c">There are two exponentiations.</li>
+            
+            <li data-component="answer"  id="test_question2_8_2_opt_d">256</li><li data-component="feedback" id="test_question2_8_2_opt_d">Remember to multiply by 3.</li>
+            
+
+            </ul>
+            </div>
+            <p>Here are animations for the above expressions:</p>
+<div data-childcomponent="showeval" class="runestone explainer alert alert-warning">
+    <button class="btn btn-success" id="se_tq281_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_tq281_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">16 - 2 * 5 // 3 + 1<br />
+</div>
+    <div class="evalCont" id="se_tq281"></div>
+</div>
+<script>
+    $(document).ready(function() {
+      steps = ['16 - {{2 * 5}}{{10}} // 3 + 1', '16 - {{10 // 3}}{{3}} + 1', '{{16 - 3}}{{13}} + 1', '{{13 + 1}}{{14}}'];
+      se_tq281_object = new SHOWEVAL.ShowEval($('#se_tq281'), steps, true);
+      se_tq281_object.setNextButton('#se_tq281_nextStep');
+      se_tq281_object.setResetButton('#se_tq281_reset');
+    });
+</script>
+<div data-childcomponent="showeval" class="runestone explainer alert alert-warning">
+    <button class="btn btn-success" id="se_tq282_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_tq282_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">2 ** 2 ** 3 * 3<br />
+</div>
+    <div class="evalCont" id="se_tq282"></div>
+</div>
+<script>
+    $(document).ready(function() {
+      steps = ['2 ** {{2 ** 3}}{{8}} * 3', '{{2 ** 8}}{{256}} * 3', '{{256 * 3}}{{768}}'];
+      se_tq282_object = new SHOWEVAL.ShowEval($('#se_tq282'), steps, true);
+      se_tq282_object.setNextButton('#se_tq282_nextStep');
+      se_tq282_object.setResetButton('#se_tq282_reset');
+    });
+</script>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
