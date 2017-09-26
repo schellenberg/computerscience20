@@ -50,9 +50,9 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 
 The complete list of functions (questions) that Reeborg can answer is as follows:
 
-=================   ===========
-Question/Function   Explanation  
-=================   ===========
+=================   ============
+Question/Function   Explanation 
+=================   ============
 at_goal()           Returns True if Reeborg is on a goal tile (flag, home, or green tile), False otherwise.
 front_is_clear()    Returns True if there is no obstacle (wall, etc) in front of Reeborg, False otherwise.
 right_is_clear()    Returns True if there is no obstacle (wall, etc) to the right of Reeborg, False otherwise.
@@ -61,7 +61,7 @@ wall_on_right()     Returns True if there is a wall on the right side of Reeborg
 object_here()       Returns True if there is an object (star, dandelion, etc) on the same tile as Reeborg is standing on, False otherwise.
 carries_object()    Returns True if Reeborg is currently carrying at least one object (star, dandelion, etc). Returns False if Reeborg is carrying nothing.
 is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.
-=================   ===========
+=================   ============
 
 .. admonition:: For educators
 
