@@ -6,6 +6,13 @@ Introduction to Scratch (Broadcasts)
     Introduction to the course, and to the Scratch environment. Explain the coordinate plane used in Scratch, and basic movement blocks. Introduce the idea of using the **broadcast** block to send messages, which is used to control program flow.
 
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
+
 Introduction
 ----------------------------
 
@@ -75,8 +82,3 @@ Broadcasts
 What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something **once an action performed by another sprite was completed**. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we'd like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.
 
 
-.. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
-
-    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
-    - **CS20-FP2** Investigate how control structures affect program flow.

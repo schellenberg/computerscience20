@@ -6,6 +6,13 @@ Chase the Mouse and Drawing Polygons (Repeat and If/Else)
     Use a **forever** block combined with an **if/else** block to make a character follow the mouse, then make a sound when it reaches the mouse cursor. Introduce the pen in Scratch, and use it to draw regular polygons with the **repeat** block.
 
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
+
 If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=AJ1elMM7CwY>`_ demonstrates the same ideas as what I've described in text below.
 
 .. youtube:: AJ1elMM7CwY
@@ -88,12 +95,6 @@ Although you may have used a guess and check method to determine the angles used
 
 .. note:: This lesson draws on ideas from the `Beauty and Joy of Computing Curriculum <http://bjc.edc.org/>`_ .
 
-
-.. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
-
-    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
-    - **CS20-FP2** Investigate how control structures affect program flow.
 
 
 

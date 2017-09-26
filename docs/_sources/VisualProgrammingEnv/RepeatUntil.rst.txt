@@ -5,6 +5,15 @@ Tracing Code and Cannonball Motion (Repeat Until)
 
     Introduce the **repeat until** block by tracing code with simple variables and conditionals. Use the repeat until block to simulate the motion of a cannon ball (motion repeats until the cannon ball hits the ground).
 
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
+
 If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=_jTHwZCY2CI>`_ demonstrates the same ideas as what I've described in text below.
 
 .. youtube:: _jTHwZCY2CI
@@ -22,10 +31,4 @@ Demo simple "shooting a cannon ball" example -- use an xSpeed and ySpeed variabl
 Work time on RPS, for any remaining time.  **Short story is due.**
 
 
-.. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
-
-    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
-    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
-    - **CS20-FP2** Investigate how control structures affect program flow.
 
