@@ -14,10 +14,11 @@ Reeborg's world is a simple grid, and we can refer to any part of the grid using
 Saving Your Work
 ----------------
 
-Although the code you are creating for this first few worlds is quite simple, as you progress to the more difficult steps, you will want to save your code. **To save the code** you have created, you need to click on "Additional Options", then under the *Program Editor* section, enter in a program name (such as **step5a**.py), then click the "Save program to file" button. You should now be able to open the text file on your computer (use a text editor like Notepad++ or Atom). You can load your code back onto the website using the "Import program from file" button in the same section.
+Although the code you are creating for this first few worlds is quite simple, as you progress to the more difficult steps, you will want to save your code. 
 
-.. image:: images/save_reeborg_code.gif
+**To save the code** you have created, use the **Ctrl-S** keyboard shortcut (**Cmd-S** on a Mac).
 
+**To load code** you have saved previously, use the **Ctrl-O** keyboard shortcut (**Cmd-O** on a Mac).
 
 
 Your Turn
