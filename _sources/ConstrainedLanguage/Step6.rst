@@ -32,7 +32,9 @@ well.
 
 Then, when you want to use the functions defined in your library, you will
 simply type ``from library import`` (followed by the function names, separated
-by commas) on its own line in the Python Code editor.
+by commas) on its own line in the Python Code editor. For example, if you have defined ``turn_right()`` in the library, you could type ``from library import turn_right``, and you would now be able to use the ``turn_right()`` function anywhere in your code.
+
+If you end up saving a large number of functions in the library, you will want to know that you can use ``from library import *`` to import **all** of the functions in the library. The `*` is called a wildcard character, and in this case tells Python to import all functions it can find in the library.
 
 .. note:: 
 
@@ -48,6 +50,5 @@ Open Step 6 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
 
 .. image:: images/step6.png
 
-Reeborg needs to go pick up the newspaper (The **Star** Phoenix) that is sitting outside his house. If you haven't done it yet, define both the ``turn_right()`` and ``turn_around()`` functions in the library tab. Now use the functions defined in the library to have Reeborg pick up the newspaper, walk back into the house, put the newspaper down, and turn off. Once again, be sure to use comments and whitespace to increase the readability of your solution!
-
+Reeborg needs to go pick up the newspaper (The **Star** Phoenix) that is sitting outside his house. If you haven't done it yet, define both the ``turn_right()`` and ``turn_around()`` functions in the library tab. Now use the functions defined in the library to have Reeborg pick up the newspaper, walk back into the house, and put the newspaper down. Once again, be sure to use comments and whitespace to increase the readability of your solution!
 
