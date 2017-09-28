@@ -33,6 +33,15 @@
    * The Computer Science Implementation Support Team (Stefan Scott, Leslie Ruo, and others) contributed many helpful resources for the book.
    * This interactive book uses the `Runestone Interactive tools <http://runestoneinteractive.org>`_, which you can find on GitHub.
 
+Preface
+:::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   About/ForStudents.rst
+   About/ForTeachers.rst
+   About/Acknowledgments.rst
 
 Scratch
 :::::::
