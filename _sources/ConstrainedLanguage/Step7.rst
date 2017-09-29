@@ -35,8 +35,8 @@ Reeborg has just turned 18 and wants to let everyone in the universe to know it.
 
 Define these new functions:
 
-- ``draw_one()`` to draw a numeral 1 in beepers
-- ``draw_zero()`` to draw a numeral 0 in beepers
+- ``draw_one()`` to plant the number 1 with daisies
+- ``draw_zero()`` to plant the number 0 with daisies
 
 Use the functions you have created to plant his birthday message. Each instruction should properly position and orient Guido for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!
 
