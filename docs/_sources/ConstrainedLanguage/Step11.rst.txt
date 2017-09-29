@@ -53,6 +53,10 @@ Reeborg wants to make some bouquets of flowers for it's friends, Zoe and Eli. Re
 
 Create a program to have Reeborg walk around the outside of the garden, picking up a tulip if it can, and moving ahead if it cannot. You **must** use a ``repeat 23:`` and ``if/else``.
 
+.. note:: For this step, the world will be different each time you press the *Play* button. When you first open the world, the world will look empty, but will be built when you press *Play*. Later in the course, I will show you the Python code that creates this world randomly each time.
+
+
+
 
 If You're Having Trouble (a more detailed explanation)
 ------------------------------------------------------
