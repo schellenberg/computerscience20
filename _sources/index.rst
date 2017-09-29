@@ -9,6 +9,8 @@
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
+Computer Science 20 - Saskatchewan
+----------------------------------
 
 Preface
 :::::::

@@ -14,3 +14,8 @@ Reeborg has been running tests on it's physical abilities lately. One of the thi
         # your code goes here
 
 You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at the goal (12, 1).
+
+The completed world should look like this:
+
+.. image:: images/step10_solution.png
+
