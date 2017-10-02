@@ -41,6 +41,32 @@ Note that this is hard to pin down to exactly what students will get through, si
 
 Still going through this. I'm thinking approximately two weeks to get through this, but to keep the keen students interested, that might mean creating a few "extra challenges" that aren't required...
 
+.. admonition:: Loading Quizzes
+
+    You might want to use the ``World()`` function instead to load a world file::
+
+        World("Step 6")
+        move()
+        move()
+
+    If the world currently displayed is not
+    **Step 6**, then running this program will result in the selected
+    world changing to **Step 6** and the rest of the program will be ignored.
+    Running it a second time (when the world shown **is** the desired
+    world **Step 6**), the ``World()`` function will be ignored and the rest
+    of the program will be executed.
+
+    Instead of using pre-defined worlds, you can use any world accessible
+    by a URL somewhere on the web.  Using this, you could create and save a quiz world anywhere that is accessible on the web. To use it, you could have the students simply enter something like::
+
+        World("http://personnel.usainteanne.ca/aroberge/reeborg/token.json",
+              "Token test")
+
+    Running this program should add one more world to the current selection.
+    Note the second (optional) argument to ``World`` which, if provided,
+    is used as the name appearing in the world selector.
+
+
 Python
 ~~~~~~~
 
