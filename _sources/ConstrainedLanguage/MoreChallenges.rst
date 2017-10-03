@@ -67,7 +67,7 @@ Open the |find_center_1| to implement your solution!
 
 .. |find_center_1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
 
 The world will look something like this at the start:
 
@@ -84,8 +84,8 @@ Open the |find_center_2| to implement your solution!
 
 .. |find_center_2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center3.json&name=FindCenter3" target="_blank">Find Center 2 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/center2.json&name=FindCenter2" target="_blank">Find Center 2 world</a>
 
 The world will look something like this at the start:
 
-.. image:: images/center3_start.png
+.. image:: images/center2_start.png
