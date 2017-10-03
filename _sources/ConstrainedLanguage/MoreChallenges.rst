@@ -16,11 +16,20 @@ Open the |star_tower1| to implement your solution!
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower1.json&name=StarTower1" target="_blank">Star Tower 1 world</a>
 
 
-
 Star Towers - Version 2
 ------------------------
 
 other description
+
+
+Target Practice
+----------------
+
+Open the |target_practice| to implement your solution!
+
+.. |target_practice| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/target-practice.json&name=TargetPractice" target="_blank">Target Practice world</a>
 
 
 Find the Center - Version 1
