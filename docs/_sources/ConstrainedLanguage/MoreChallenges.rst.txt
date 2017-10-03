@@ -9,7 +9,7 @@ Star Towers - Version 1
 
 Reeborg loves to build - today it is making Star Towers. It has plenty of stars, and wants to make towers that are 3 stars high. Write a program that creates a Star Tower at Reeborg's starting position, and every other x-position after that (odd x-values).
 
-Open the |star_tower1|::
+Open the |star_tower1| to implement your solution!
 
 .. |star_tower1| raw:: html
 
