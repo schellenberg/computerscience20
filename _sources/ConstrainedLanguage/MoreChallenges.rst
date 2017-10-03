@@ -56,6 +56,22 @@ The world will look something like this at the start:
 
 .. image:: images/target_start.png
 
+Line Follower
+--------------
+
+Reeborg loves to hike in the backcounty, but one challenge is that it's sometimes easy to get lost. Write a program to help Reeborg carefully follow the hiking trail and eventually reach the end of the hiking path.
+
+Open the |line_follower| to implement your solution!
+
+.. |line_follower| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/line-follower.json&name=LineFollower" target="_blank">Line Follower world</a>
+
+The world will look something like this at the start:
+
+.. image:: images/line_follower_start.png
+
+
 
 Find the Center - Version 1
 ----------------------------
