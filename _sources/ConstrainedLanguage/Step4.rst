@@ -97,7 +97,7 @@ Open Step 4 on the |reeborg_environment|.
 
 .. image:: images/step4.png
 
-Use the functions we've learned about so far to make Reeborg walk down the gravel path, picking up dandelions as he finds them, and depositing them in the conveniently placed garbage cans (represented by greyscale dandelion images). Use the ``pause`` function to have Reeborg wait at each location he finds a dandelion to pick. Be sure to use comments and whitespace to increase the readability of your solution!
+Use the functions we've learned about so far to make Reeborg walk down the gravel path, picking up dandelions as it finds them, and depositing them in the conveniently placed garbage cans (represented by greyscale dandelion images). Use the ``pause`` function to have Reeborg wait at each location it finds a dandelion to pick. Be sure to use comments and whitespace to increase the readability of your solution!
 
 Recall that the functions discussed so far include:
 

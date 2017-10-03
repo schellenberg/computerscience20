@@ -6,7 +6,7 @@ Tutorial
 ---------
 
 In addition to having Reeborg making right turns, you *might* have had
-him turn around a few times; by turning around, I mean changing
+it turn around a few times; by turning around, I mean changing
 direction so that Reeborg is heading back to where it was coming from.
 We can define a function ``turn_around()`` as follows::
 

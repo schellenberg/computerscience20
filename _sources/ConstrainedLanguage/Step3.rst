@@ -30,12 +30,12 @@ bugs. Some of the problems with Reeborg are:
    to learn about **functions**. You will soon learn how
    to program a *workaround solution*, enabling Reeborg to turn right,
    although in a wasteful fashion. 
-#. Reeborg has a compass, enabling him to determine which direction he
+#. Reeborg has a compass, enabling it to determine which direction it
    is facing. Unfortunately, yet again, the program that enables Reeborg
    to get the information from the compass has a bug: it only tells
-   Reeborg if he is facing North ... or not. Once again, you will 
+   Reeborg if it is facing North ... or not. Once again, you will 
    learn how to implement a workaround solution soon.
-#. Reeborg can see if a wall is in front of him, and can also turn its
+#. Reeborg can see if a wall is in front of it, and can also turn its
    head to the right to see if there is a wall there. However, a
    software "glitch" (which is another weasel term that software
    manufacturers use to avoid having to say that their product has a
