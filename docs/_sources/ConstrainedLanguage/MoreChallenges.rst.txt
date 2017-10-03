@@ -45,16 +45,16 @@ Find the Center - Version 1
 
 Put down a token in the geometrical center of the following world. You are guaranteed that the **width** of the world will be an odd number, and that it will only be one unit tall.
 
-Open the |find_center_1| to implement your solution! Double check that the same  your solution with |find_center_2|.
+Open the |find_center_1| to implement your solution! Double check that the same  your solution with the |find_center_2|.
 
 
 .. |find_center_1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center1.json&name=FindCenter1" target="_blank">Target Practice world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
 
 .. |find_center_2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center2.json&name=FindCenter2" target="_blank">Target Practice world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center2.json&name=FindCenter2" target="_blank">Find Center 2 world</a>
 
 
 Find the Center - Version 2
@@ -67,5 +67,5 @@ Open the |find_center_1| to implement your solution!
 
 .. |find_center_3| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center3.json&name=FindCenter3" target="_blank">Target Practice world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center3.json&name=FindCenter3" target="_blank">Find Center 3 world</a>
 
