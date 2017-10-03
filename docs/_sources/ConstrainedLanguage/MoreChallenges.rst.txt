@@ -35,6 +35,15 @@ Open the |star_tower2| to implement your solution!
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower2.json&name=StarTower2" target="_blank">Star Tower 2 world</a>
 
+The world will look something like this at the start:
+
+.. image:: images/star_tower2_start.png
+
+When your program is done, the ending world should look like this:
+
+.. image:: images/star_tower2_end.png
+
+
 
 Target Practice
 ----------------
@@ -47,22 +56,26 @@ Open the |target_practice| to implement your solution!
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/target-practice.json&name=TargetPractice" target="_blank">Target Practice world</a>
 
+The world will look something like this at the start:
+
+.. image:: images/target_start.png
+
 
 Find the Center - Version 1
 ----------------------------
 
 Put down a token in the geometrical center of the following world. You are guaranteed that the **width** of the world will be an odd number, and that it will only be one unit tall.
 
-Open the |find_center_1| to implement your solution! Double check that the same  your solution with the |find_center_2|.
+Open the |find_center_1| to implement your solution!
 
 
 .. |find_center_1| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
 
-.. |find_center_2| raw:: html
+The world will look something like this at the start:
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center2.json&name=FindCenter2" target="_blank">Find Center 2 world</a>
+.. image:: images/center_start.png
 
 
 Find the Center - Version 2
@@ -71,9 +84,12 @@ Find the Center - Version 2
 Put down a token in the geometrical center of the following world. You are guaranteed that the **width and height** of the world will be odd numbers.
 
 
-Open the |find_center_1| to implement your solution!
+Open the |find_center_2| to implement your solution!
 
-.. |find_center_3| raw:: html
+.. |find_center_2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center3.json&name=FindCenter3" target="_blank">Find Center 3 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/tutorial_en/center3.json&name=FindCenter3" target="_blank">Find Center 2 world</a>
 
+The world will look something like this at the start:
+
+.. image:: images/center3_start.png
