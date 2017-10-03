@@ -1,11 +1,7 @@
 More Challenges
 ================
 
-If you have finished off all of steps 1 - 17, and are waiting for your classmates to catch up, take a look at the following challenges in the |reeborg_environment|. Some of them will require you to do a fair bit of thinking before you begin to code! You will likely find it helpful to think them through with paper/pencil before attempting to write out a solution on the computer.
-
-.. |reeborg_environment| raw:: html
-
-   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
+If you have finished off all of steps 1 - 17, and are waiting for your classmates to catch up, take a look at the following challenges. Some of them will require you to do a fair bit of thinking before you begin to code! You will likely find it helpful to think them through with paper/pencil before attempting to write out a solution on the computer.
 
 
 Star Towers - Version 1
@@ -13,13 +9,11 @@ Star Towers - Version 1
 
 Reeborg loves to build - today it is making Star Towers. It has plenty of stars, and wants to make towers that are 3 stars high. Write a program that creates a Star Tower at Reeborg's starting position, and every other x-position after that (odd x-values).
 
-Load the world by running the following code in the Python Code tab::
+Open the |star_tower1|::
 
-    World("src/worlds/steps/star-tower1.json", "Star Tower 1")
+.. |star_tower1| raw:: html
 
-It should look like this when you paste it in:
-
-.. image:: images/loadingMoreChallenges.png
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower1.json&name=StarTower1" target="_blank">Star Tower 1 world</a>
 
 
 
