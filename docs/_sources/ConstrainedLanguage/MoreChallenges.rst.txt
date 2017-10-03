@@ -15,6 +15,14 @@ Open the |star_tower1| to implement your solution!
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower1.json&name=StarTower1" target="_blank">Star Tower 1 world</a>
 
+The world will look something like this at the start:
+
+.. image:: images/star_tower1_start.png
+
+When your program is done, the ending world should look like this:
+
+.. image:: images/star_tower1_end.png
+
 
 Star Towers - Version 2
 ------------------------

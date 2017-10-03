@@ -4,21 +4,7 @@ Step 8: Asking Questions
 Tutorial
 --------
 
-Sometimes, we don't know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it.
-
-.. code-block:: python
-
-    if True:
-        move()
-
-    if False:
-        turn_left()
-
-In the code above, ``if``, ``True``, and ``False`` are all Python keywords. It is a good idea to try out the code above in Reeborg's World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.
-
-
-The so-called ``if`` **statement** follows a pattern somewhat similar to
-that of ``function``\ s :
+Sometimes, we don't know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it. To ask the computer a question, we use an ``if`` statement. The so-called ``if`` **statement** follows a pattern somewhat similar to that of ``function``\ s :
 
 .. code-block:: python
 
@@ -102,6 +88,16 @@ Create a program to have Reeborg walk across the front yard, picking up a dandel
 
 If You're Having Trouble (a more detailed explanation)
 ------------------------------------------------------
+
+.. code-block:: python
+
+    if True:
+        move()
+
+    if False:
+        turn_left()
+
+In the code above, ``if``, ``True``, and ``False`` are all Python keywords. It is a good idea to try out the code above in Reeborg's World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.
 
 When we introduced functions, we explained how we could think of a
 function **call** as being somewhat equivalent to inserting the code block for
