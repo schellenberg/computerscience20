@@ -20,6 +20,9 @@ Although the code you are creating for this first few worlds is quite simple, as
 
 **To load code** you have saved previously, use the **Ctrl-O** keyboard shortcut (**Cmd-O** on a Mac).
 
+.. note:: If your teacher has asked you to show them your code as you progress through the steps, you may find it helpful to open a new tab when you have completed a step, but are waiting for your teacher. That way, you can have a number of steps easily available for your teacher to look at when they get to you.
+
+
 
 Your Turn
 ---------
