@@ -39,10 +39,6 @@ The world will look something like this at the start:
 
 .. image:: images/star_tower2_start.png
 
-When your program is done, the ending world should look like this:
-
-.. image:: images/star_tower2_end.png
-
 
 
 Target Practice
