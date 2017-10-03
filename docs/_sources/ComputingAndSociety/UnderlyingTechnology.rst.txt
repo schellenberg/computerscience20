@@ -11,21 +11,22 @@ Explore the underlying technology of computing devices and the Internet, and the
 Indicators
 --------------
 
-Add some stuff here. Curriculum indicators are:
+Curriculum indicators are:
 
-* Research and describe career choices and trends in computer science in
-  Saskatchewan, Canada and the world.
+* Investigate how computing devices function and how the Internet allows connected devices to communicate.
 
-* Research which programming languages are prominent in specific computer
-  science sub-fields such as game, website and mobile development.
+* Research the history of computing devices and the Internet, including key milestones and contributors.
 
-* Identify and report on opportunities for experiential learning (e.g., co- op
-  programs, job shadowing and career fairs) in the field of computer science.
+* Identify the units used to measure computing specifications such as data storage capacity, processing speed and transmission speed.
 
-* Examine an area of collaborative research between computer science and
-  another field of study.
+* Describe the role of typical hardware (e.g., CPU, wireless card, RAM, graphics card, SIM card, hard drive and motherboard) found within computing devices.
 
-* Research and report on postsecondary educational programs leading to careers
-  in information systems and computer science (e.g., institutions offering
-  relevant programs, industry certifications, courses of study, entrance
-  requirements, length of programs and costs).
+* Examine the role of technologies (e.g., packets and routing) and protocols (e.g., DNS, IP addresses, HTTP and FTP) that support information transfer on the Internet.
+
+* Explore the societal impacts of ubiquitous Internet access, cloud computing and connected devices.
+
+* Explore implications of advances in computing performance.
+
+* Discuss limitations of current technologies and predict possible directions of future technologies.
+
+* Explore the interactions between humans and computing devices.

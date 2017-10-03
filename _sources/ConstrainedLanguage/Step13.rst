@@ -80,7 +80,7 @@ There is a function that is more specific to wall called
 Your Turn
 ---------
 
-Open Step 13a on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 13a on the |reeborg_environment|.
 
 .. image:: images/step13a.gif
 
@@ -90,6 +90,9 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 
 .. note:: Reeborg cannot use a ``repeat`` statement, since it has no idea of the dimensions of the lake it is walking around.
 
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
 
 Extra for Experts
 ------------------

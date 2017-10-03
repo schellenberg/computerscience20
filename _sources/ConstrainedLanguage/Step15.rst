@@ -16,10 +16,15 @@ Be sure to think the following situation through before you start coding. First,
 Your Turn
 ----------
 
-Open Step 15 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 15 on the |reeborg_environment|.
 
 .. image:: images/step15.png
 
 Reeborg has been hired to pick carrots in a number of gardens. Although the gardens are all the same size, the carrots have grown in different places in each of the gardens. You need to create a program that will allow Reeborg to harvest all of the carrots in each of the possible gardens. You know that at each location, there will only ever be either 1 or 0 carrots.
 
 .. note:: Remember (from our explorations in Scratch), that you can have a repeat statement inside another repeat statement -- we called this a nested repeat. Consider how you might be able to use a nested repeat to solve this problem.
+
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

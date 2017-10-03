@@ -22,6 +22,10 @@ If there is a specific place that objects should be put down (also known as a go
 Your Turn
 ---------
 
-Open Step 2 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 2 on the |reeborg_environment|.
 
 Give Reeborg the appropriate instructions to make him pick up the dandelions, put them in the garbage, and return home!
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

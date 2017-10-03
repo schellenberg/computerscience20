@@ -37,13 +37,17 @@ Here's a flowchart for this simple program:
 Your Turn
 ---------
 
-Open Step 12 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 12 on the |reeborg_environment|.
 
 .. image:: images/step12.png
 
 One of Reeborg's household jobs is to take out the compost. There is, however, a different amount of compost in the container in the house every time Reeborg needs to bring it outside.
 
 Create a program to have Reeborg take out the compost, then return to the house. Reeborg needs to pick up as many rotten apples as are in the compost pail, bring them to the compost container outside, then return to the goal (7, 8). You will need to use ``while`` loops in your solution.
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
 
 
 If You're Having Trouble (a more detailed explanation)

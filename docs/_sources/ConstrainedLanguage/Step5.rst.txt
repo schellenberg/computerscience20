@@ -96,7 +96,7 @@ block *as is* at that location.
 Your Turn - Part 1
 -------------------
 
-Open Step 5a on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 5a on the |reeborg_environment|.
 
 .. image:: images/step5a.png
 
@@ -106,8 +106,12 @@ Define a ``turn_right()`` function, and use it to have Reeborg walk down the gra
 Your Turn - Part 2
 -------------------
 
-Open Step 5b on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 5b on the |reeborg_environment|.
 
 .. image:: images/step5b.png
 
 Reeborg wants to pick some strawberries in his garden. His garden has a very strange shape, as you've seen above. Define a ``pick_two_berries()`` function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

@@ -24,6 +24,10 @@ Although the code you are creating for this first few worlds is quite simple, as
 Your Turn
 ---------
 
-Open Step 1 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 1 on the |reeborg_environment|.
 
 Give Reeborg the appropriate instructions to make him return home!
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

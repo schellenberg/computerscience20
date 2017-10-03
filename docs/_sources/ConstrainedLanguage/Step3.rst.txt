@@ -85,7 +85,7 @@ following:
 Your Turn
 ---------
 
-Open Step 3 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 3 on the |reeborg_environment|.
 
 As mentioned above, Reeborg can only turn in one direction: left. To tell Reeborg to turn, you can use the ``turn_left()`` function.
 
@@ -96,3 +96,7 @@ Use the ``move()`` function and the ``turn_left()`` function to make Reeborg wal
 .. topic:: Try this!
 
     To see what happens, let's do some things intentionally wrong. For example, make Reeborg walk into the lake. You might also want to try not walking all the way around the lake to see what the error message will be.
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

@@ -3,7 +3,11 @@ Step 0: Transitioning To Text
 
 .. topic:: Quick Overview of Day
 
-    Explore the `Reeborg <https://sk-opentexts.github.io/reeborg>`_ environment, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.
+    Explore the |reeborg_environment|, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
 
 Introduction
 ------------
@@ -13,7 +17,7 @@ Although there is a lot you can learn using an environment like Scratch, we'd li
 Reeborg's First Step
 --------------------
 
-Open the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ . If the Step 0 world does not open by default, select it in the world menu:
+Open the |reeborg_environment|. If the Step 0 world does not open by default, select it in the world menu:
 
 .. figure:: images/step0.png
    :align: center
@@ -98,3 +102,8 @@ Acknowledgments
 -------------------
 
 Reeborg is a modern adaptation of an environment called Karel the Robot, created by Richard Pattis at Stanford University in 1981. The version we will use was created by Andre Roberge. The tutorials you will be using are an adaptation of tutorials made by Roger Frank, Jeffrey Elkner, Andre Roberge and Dan Schellenberg.
+
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

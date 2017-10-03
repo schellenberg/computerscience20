@@ -27,7 +27,7 @@ for longer than you'd expect it to. Calling ``think(0)`` tells Reeborg to move a
 Your Turn
 ---------
 
-Open Step 7 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 7 on the |reeborg_environment|.
 
 .. image:: images/step7.png
 
@@ -40,3 +40,7 @@ Define these new functions:
 
 Use the functions you have created to plant his birthday message. Each instruction should properly position and orient Guido for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!
 
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

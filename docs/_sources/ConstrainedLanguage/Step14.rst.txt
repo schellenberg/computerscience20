@@ -4,7 +4,7 @@ Step 14: It's Going to Rain
 Project
 --------
 
-Open Step 14a on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 14a on the |reeborg_environment|.
 
 .. image:: images/step14a.png
 
@@ -16,3 +16,7 @@ The program you write to solve the problem above must also be able work on the s
 
 .. image:: images/step14b.png
 
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

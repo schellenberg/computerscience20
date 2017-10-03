@@ -4,7 +4,7 @@ Step 10: Jumping Hurdles (repeat and functions)
 Project
 ---------
 
-Open Step 10 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 10 on the |reeborg_environment|.
 
 .. image:: images/step10.png
 
@@ -19,3 +19,7 @@ The completed world should look like this:
 
 .. image:: images/step10_solution.png
 
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

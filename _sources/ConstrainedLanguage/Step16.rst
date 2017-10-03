@@ -12,10 +12,15 @@ Your challenge is to see if you can refine the pseudocode solution you come up w
 Your Turn
 ----------
 
-Open Step 16 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 16 on the |reeborg_environment|.
 
 Reeborg has lost it's lunchbox. Reeborg was playing in a maze and set it down and then wandered around. Now Reeborg is hungry. The lunchbox is represented by the flag. Each time you press play, both the flag and Reeborg will begin in a random location. Reeborg's situation looks like this:
 
 .. image:: images/step16.gif
 
 Write a program to help Reeborg find the lunchbox. The secret is to have Reeborg follow along the right edge of the maze, turning right if it can, going straight ahead if it can't turn right, or turning left as a last resort. Write a program using an if..elif..else statement so Reeborg can have lunch.
+
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

@@ -45,7 +45,7 @@ if there's a wall right in front him, using the function ``front_is_clear()``. T
 Your Turn
 ---------
 
-Open Step 11 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 11 on the |reeborg_environment|.
 
 .. image:: images/step11.png
 
@@ -56,6 +56,9 @@ Create a program to have Reeborg walk around the outside of the garden, picking 
 .. note:: For this step, the world will be different each time you press the *Play* button. When you first open the world, the world will look empty, but will be built when you press *Play*. Later in the course, I will show you the Python code that creates this world randomly each time.
 
 
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
 
 
 If You're Having Trouble (a more detailed explanation)

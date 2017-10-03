@@ -93,7 +93,7 @@ Note that in addition to comments, I have used blank lines (often called whitesp
 Your Turn
 ----------
 
-Open Step 4 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 4 on the |reeborg_environment|.
 
 .. image:: images/step4.png
 
@@ -107,3 +107,7 @@ Recall that the functions discussed so far include:
 -  ``put()``
 -  ``pause()``
 
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

@@ -46,9 +46,13 @@ If you end up saving a large number of functions in the library, you will want t
 Your Turn
 ----------
 
-Open Step 6 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 6 on the |reeborg_environment|.
 
 .. image:: images/step6.png
 
 Reeborg needs to go pick up the newspaper (The **Star** Phoenix) that is sitting outside his house. If you haven't done it yet, define both the ``turn_right()`` and ``turn_around()`` functions in the library tab. Now use the functions defined in the library to have Reeborg pick up the newspaper, walk back into the house, and put the newspaper down. Once again, be sure to use comments and whitespace to increase the readability of your solution!
 
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

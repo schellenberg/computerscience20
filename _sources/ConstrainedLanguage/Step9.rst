@@ -63,8 +63,13 @@ You might want to adjust the code that you have saved in the library tab to use 
 Your Turn
 ---------
 
-Open Step 9 on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ .
+Open Step 9 on the |reeborg_environment|.
 
 .. image:: images/step9.png
 
 Adjust the solution you created for Step 8, this time making use of two repeat loops. The world doesn't change from Step 8, but your solution should be much nicer. Remember to use comments and whitespace to increase the readability of your solution!
+
+
+.. |reeborg_environment| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
