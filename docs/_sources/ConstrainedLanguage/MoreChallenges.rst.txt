@@ -19,7 +19,11 @@ Open the |star_tower1| to implement your solution!
 Star Towers - Version 2
 ------------------------
 
-other description
+This time Reeborg wants to build star towers in a cave. There are stalactites on the roof of the cave of differing length, so Reeborg wants to make it's towers as tall as it can without bumping into them. Like last time, write a program that creates a Star Tower at Reeborg’s starting position, and every other x-position after that (odd x-values). The height of each Star Tower should allow for one empty square beneath the stalactites. Open the |star_tower2| to implement your solution!
+
+.. |star_tower2| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower2.json&name=StarTower2" target="_blank">Star Tower 2 world</a>
 
 
 Target Practice
