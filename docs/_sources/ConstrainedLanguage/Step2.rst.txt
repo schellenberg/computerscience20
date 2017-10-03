@@ -4,9 +4,9 @@ Step 2: Taking and Putting Down Objects
 Tutorial
 --------
 
-Sometimes Reeborg may need to take an object that is on the ground, or put down an object that he is carrying. You can use the ``take()`` function to tell Reeborg to pick up an object that is on the ground. To put an object that Reeborg is carrying back down on the ground, use the ``put()`` function.
+Sometimes Reeborg may need to take an object that is on the ground, or put down an object that it is carrying. You can use the ``take()`` function to tell Reeborg to pick up an object that is on the ground. To put an object that Reeborg is carrying back down on the ground, use the ``put()`` function.
 
-In the Step 2 world, there are three dandelions on the ground between Reeborg and his house. Your job is to pick them up, then put them in the garbage can, which is directly in front of the house at (5, 1).
+In the Step 2 world, there are three dandelions on the ground between Reeborg and its house. Your job is to pick them up, then put them in the garbage can, which is directly in front of the house at (5, 1).
 
 .. image:: images/step2.png
 
@@ -24,7 +24,7 @@ Your Turn
 
 Open Step 2 on the |reeborg_environment|.
 
-Give Reeborg the appropriate instructions to make him pick up the dandelions, put them in the garbage, and return home!
+Give Reeborg the appropriate instructions to make it pick up the dandelions, put them in the garbage, and return home!
 
 .. |reeborg_environment| raw:: html
 

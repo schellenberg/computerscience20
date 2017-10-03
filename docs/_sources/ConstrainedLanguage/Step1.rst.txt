@@ -4,7 +4,7 @@ Step 1: Move Reeborg Home and Saving Your Work
 Tutorial
 --------
 
-In some worlds, Reeborg may have a specific place he needs to get to. For example, when you open the Step 1 world, you will see an image of Reeborg's home. 
+In some worlds, Reeborg may have a specific place it needs to get to. For example, when you open the Step 1 world, you will see an image of Reeborg's home. 
 
 .. image:: images/step1.png
 
@@ -26,7 +26,7 @@ Your Turn
 
 Open Step 1 on the |reeborg_environment|.
 
-Give Reeborg the appropriate instructions to make him return home!
+Give Reeborg the appropriate instructions to make it return home!
 
 .. |reeborg_environment| raw:: html
 

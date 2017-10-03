@@ -31,14 +31,14 @@ Open Step 7 on the |reeborg_environment|.
 
 .. image:: images/step7.png
 
-Reeborg has just turned 18 and wants to let everyone in the universe to know it. He thinks it would be a funny joke to plant daisies on the front yard to celebrate. Reeborg is a robot and only knows binary, and 18 in decimal is represented as 10010 in binary.
+Reeborg has just turned 18 and wants to let everyone in the universe to know it. Reeborg thinks it would be a funny joke to plant daisies on the front yard to celebrate. Reeborg is a robot and only knows binary, and 18 in decimal is represented as 10010 in binary.
 
 Define these new functions:
 
 - ``draw_one()`` to plant the number 1 with daisies
 - ``draw_zero()`` to plant the number 0 with daisies
 
-Use the functions you have created to plant his birthday message. Each instruction should properly position and orient Guido for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!
+Use the functions you have created to plant Reeborg's birthday message. Each instruction should properly position and orient Reeborg for the next digit. Be sure to use comments and whitespace to increase the readability of your solution!
 
 
 .. |reeborg_environment| raw:: html

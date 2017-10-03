@@ -6,7 +6,7 @@ Tutorial
 ---------
 
 After completing the last step, you have realized that having Reeborg make
-three left turns in a row gives the same final result as if he were to
+three left turns in a row gives the same final result as if it were to
 make a single right turn. It was probably becoming quite
 tedious to have to write three ``turn_left()`` instructions each time
 you want to have Reeborg turn right. Wouldn't it be nicer if you could
@@ -110,7 +110,7 @@ Open Step 5b on the |reeborg_environment|.
 
 .. image:: images/step5b.png
 
-Reeborg wants to pick some strawberries in his garden. His garden has a very strange shape, as you've seen above. Define a ``pick_two_berries()`` function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!
+Reeborg wants to pick some strawberries in its garden. Reeborg's garden has a very strange shape, as you've seen above. Define a ``pick_two_berries()`` function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!
 
 .. |reeborg_environment| raw:: html
 
