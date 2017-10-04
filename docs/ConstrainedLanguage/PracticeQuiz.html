@@ -198,6 +198,7 @@
 <li><a class="reference internal" href="#question-3-loops-and-if">Question 3 - Loops and If</a></li>
 <li><a class="reference internal" href="#question-4-loops-and-if-else">Question 4 - Loops and If/Else</a></li>
 <li><a class="reference internal" href="#question-5-mirror-image">Question 5 - Mirror Image</a></li>
+<li><a class="reference internal" href="#question-6-mirror-image-part-2">Question 6 - Mirror Image - Part 2</a></li>
 </ul>
 </li>
 </ul>
@@ -374,6 +375,59 @@
     <span class="n">turn_around</span><span class="p">()</span>
     <span class="n">repeat</span> <span class="mi">5</span><span class="p">:</span>
         <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+
+<span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
+        <span class="n">move_daisy</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_around</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="question-6-mirror-image-part-2">
+<h2>Question 6 - Mirror Image - Part 2<a class="headerlink" href="#question-6-mirror-image-part-2" title="Permalink to this headline">¶</a></h2>
+<p>This time, the distance between the alcove on the right and left is not consistent (in other words, the alcoves can be different distances apart). Once again, for each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:</p>
+<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove2.json&name=PracticeQuizAlcove2" target="_blank">Mirror Image Practice Quiz world</a> and create a solution to this problem!</p>
+<img alt="../_images/practice_quiz_alcove2_start.png" src="../_images/practice_quiz_alcove2_start.png" />
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_practice_quiz_solution2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>Since there is an unknown distance to travel, you will need to use a <cite>while</cite> loop, instead of just a <cite>repeat</cite> loop. This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">think</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">turn_around</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">backup</span><span class="p">():</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">move_daisy</span><span class="p">():</span>
+    <span class="n">take</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="n">put</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="n">backup</span><span class="p">()</span>
     <span class="n">turn_right</span><span class="p">()</span>
 
 <span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>

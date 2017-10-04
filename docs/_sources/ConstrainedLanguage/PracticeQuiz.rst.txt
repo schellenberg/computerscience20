@@ -103,7 +103,7 @@ Question 5 - Mirror Image
 
 The room (shown below) has alcoves on the left and the right. Some of the alcoves contain daisies. For each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:
 
-Open the |reeborg_environment| and create a solution to this problem!
+Open the |alcove1| and create a solution to this problem!
 
 .. image:: images/practice_quiz_alcove_start.png
 
@@ -150,6 +150,70 @@ Open the |reeborg_environment| and create a solution to this problem!
                 move()
     
 
-.. |reeborg_environment| raw:: html
+.. |alcove1| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove.json&name=PracticeQuizAlcove" target="_blank">Mirror Image Practice Quiz world</a>
+
+
+
+Question 6 - Mirror Image - Part 2
+----------------------------------
+
+This time, the distance between the alcove on the right and left is not consistent (in other words, the alcoves can be different distances apart). Once again, for each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:
+
+Open the |alcove2| and create a solution to this problem!
+
+.. image:: images/practice_quiz_alcove2_start.png
+
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_practice_quiz_solution2
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    Since there is an unknown distance to travel, you will need to use a `while` loop, instead of just a `repeat` loop. This is one possible solution::
+
+        think(0)
+
+        def turn_around():
+            repeat 2:
+                turn_left()
+
+        def turn_right():
+            repeat 3:
+                turn_left()
+
+        def backup():
+            turn_around()
+            move()
+            turn_around()
+            
+        def move_daisy():
+            take()
+            turn_around()
+            while front_is_clear():
+                move()
+            put()
+            turn_around()
+            while front_is_clear():
+                move()
+            backup()
+            turn_right()
+
+        repeat 6:
+            move()
+            turn_left()
+            move()
+            if object_here():
+                move_daisy()
+            else:
+                turn_around()
+                move()
+                turn_left()
+            if front_is_clear():
+                move()
+
+
+.. |alcove2| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove2.json&name=PracticeQuizAlcove2" target="_blank">Mirror Image Practice Quiz world</a>
