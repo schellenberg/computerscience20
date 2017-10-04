@@ -101,7 +101,7 @@ Question 4 - Loops and If/Else
 Question 5 - Mirror Image
 -------------------------
 
-The room (shown below) has alcoves on the left and the right. Some of the alcoves contain daisies. For each alcove on the left side that contains a daisy, Reeborg should move that daisy in the opposite alcove on the right hand side. One possible starting world could look like the following:
+The room (shown below) has alcoves on the left and the right. Some of the alcoves contain daisies. For each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:
 
 Open the |reeborg_environment| and create a solution to this problem!
 
