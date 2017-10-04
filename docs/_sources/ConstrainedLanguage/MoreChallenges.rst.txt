@@ -76,13 +76,13 @@ The world will look something like this at the start:
 Double the Pile
 ---------------
 
-Reeborg has a pile of squares somewhere in front of it, but wants more! Two times more, to be precise. Reeborg is carrying a large number of squares, which you can use to help build the larger pile it wants. Create a pile of squares with exactly two times as many squares. You will always build the bigger pile one square to the right of where you find the initial pile.
+Reeborg has a pile of squares somewhere in front of it, but wants more! Two times more, to be precise. Reeborg is carrying a large number of squares, which you can use to help build the larger pile it wants. Create a pile of squares with exactly two times as many squares. You will always build the new, bigger pile one square to the right of where you find the initial pile.
 
 Open the |doubler| to implement your solution!
 
 .. |doubler| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/doubler.json&name=Doubler" target="_blank">Find Center 1 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/doubler.json&name=Doubler" target="_blank">Double the Pile world</a>
 
 The world will look something like this at the start:
 
