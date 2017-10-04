@@ -76,7 +76,7 @@ The world will look something like this at the start:
 Find the Center - Version 1
 ----------------------------
 
-Put down a token in the geometrical center of the following world. You are guaranteed that the **width** of the world will be an odd number, and that it will only be one unit tall.
+Put down a token in the geometrical center of the following world. You are guaranteed that the **width** of the world will be an odd number, and that it will only be one unit tall. Note that when your program is complete, there should only be one token down in the world.
 
 Open the |find_center_1| to implement your solution!
 
@@ -93,8 +93,7 @@ The world will look something like this at the start:
 Find the Center - Version 2
 ----------------------------
 
-Put down a token in the geometrical center of the following world. You are guaranteed that the **width and height** of the world will be odd numbers.
-
+Put down a token in the geometrical center of the following world. You are guaranteed that the **width and height** of the world will be odd numbers. Note that when your program is complete, there should only be one token down in the world.
 
 Open the |find_center_2| to implement your solution!
 

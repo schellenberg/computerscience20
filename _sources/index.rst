@@ -70,6 +70,7 @@ Reeborg
    ConstrainedLanguage/Step16.rst
    ConstrainedLanguage/Step17.rst
    ConstrainedLanguage/MoreChallenges.rst
+   ConstrainedLanguage/PracticeQuiz.rst
 
 Python
 ::::::

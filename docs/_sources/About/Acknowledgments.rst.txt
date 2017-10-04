@@ -16,7 +16,7 @@ Some of the ideas and progressions in the Scratch unit come from the `Beauty and
 Reeborg
 -------
 
-The `Reeborg <http://reeborg.ca/>`_  environment was created by André Roberge, and I (Dan Schellenberg) made small changes to the version used for this textbook. The tutorials used for the Reeborg section are adapted from work done by Roger Frank, which were later converted to work for `Guido van Robot <http://gvr.sourceforge.net/lessons/rfrank/>`_ by Jeff Elkner. Combined into these are tutorials written by `André Roberge <http://reeborg.ca/docs/en/>`_, along with ideas I added.
+The `Reeborg <http://reeborg.ca/>`_  environment was created by André Roberge, and I (Dan Schellenberg) made small changes to the version used for this textbook. The tutorials used for the Reeborg section are adapted from work done by Roger Frank, which were later converted to work for `Guido van Robot <http://gvr.sourceforge.net/lessons/rfrank/>`_ by Jeff Elkner. Combined into these are tutorials written by `André Roberge <http://reeborg.ca/docs/en/>`_, along with ideas I added. Stefan Scott contributed many of the More Challenges worlds.
 
 Python
 ------

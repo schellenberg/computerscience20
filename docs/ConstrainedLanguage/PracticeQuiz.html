@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Acknowledgments &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Practice Quiz &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Introduction to Scratch (Broadcasts)" href="../VisualProgrammingEnv/FirstProgram.html" />
-    <link rel="prev" title="How to Use This Textbook - For Teachers" href="ForTeachers.html" />
+    <link rel="next" title="1. Your First Python Program!" href="../Python/FirstProgram.html" />
+    <link rel="prev" title="More Challenges" href="MoreChallenges.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,12 +192,12 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Acknowledgments</a><ul>
-<li><a class="reference internal" href="#about-this-project">About This Project</a></li>
-<li><a class="reference internal" href="#scratch">Scratch</a></li>
-<li><a class="reference internal" href="#reeborg">Reeborg</a></li>
-<li><a class="reference internal" href="#python">Python</a></li>
-<li><a class="reference internal" href="#other-thanks">Other Thanks</a></li>
+<li><a class="reference internal" href="#">Practice Quiz</a><ul>
+<li><a class="reference internal" href="#question-1-while-loops">Question 1 - While Loops</a></li>
+<li><a class="reference internal" href="#question-2-while-and-repeat-loops">Question 2 - While and Repeat Loops</a></li>
+<li><a class="reference internal" href="#question-3-loops-and-if">Question 3 - Loops and If</a></li>
+<li><a class="reference internal" href="#question-4-loops-and-if-else">Question 4 - Loops and If/Else</a></li>
+<li><a class="reference internal" href="#question-5-mirror-image">Question 5 - Mirror Image</a></li>
 </ul>
 </li>
 </ul>
@@ -207,14 +207,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - How to Use This Textbook - For Teachers" data-toggle="tooltip">
-    <a href="ForTeachers.html" >
+  <li id="relations-prev" title="Previous Chapter - More Challenges" data-toggle="tooltip">
+    <a href="MoreChallenges.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 1. Introduction to Scratch (Broadcasts)' data-toggle="tooltip" >
-    <a href="../VisualProgrammingEnv/FirstProgram.html" >
+  <li id="relations-next" title='Next Chapter - 1. Your First Python Program!' data-toggle="tooltip" >
+    <a href="../Python/FirstProgram.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -244,48 +244,173 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="acknowledgments">
-<h1>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about-this-project">
-<h2>About This Project<a class="headerlink" href="#about-this-project" title="Permalink to this headline">¶</a></h2>
-<p>This book was created by Dan Schellenberg, who was relieved of teaching duties for one period in the fall semester of 2017 to create something useful for the impending release of the Saskatchewan Computer Science 20 curriculum.</p>
-<p>Much of the content of this book is remixed from work others have done in the past, and would never have been completed otherwise.</p>
+  <div class="section" id="practice-quiz">
+<h1>Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h1>
+<p>To confirm that you understand the major concepts you’ve seen with Reeborg, try to answer the first 4 questions <strong>without opening the Reeborg environment</strong>.</p>
+<div class="section" id="question-1-while-loops">
+<h2>Question 1 - While Loops<a class="headerlink" href="#question-1-while-loops" title="Permalink to this headline">¶</a></h2>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="reeborg_while_loops">
+            <p>sc-1-4: Reeborg is facing east. The following code is then executed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">is_facing_north</span><span class="p">():</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="scratch">
-<h2>Scratch<a class="headerlink" href="#scratch" title="Permalink to this headline">¶</a></h2>
-<p>Some of the ideas and progressions in the Scratch unit come from the <a class="reference external" href="http://bjc.edc.org/">Beauty and Joy of Computing</a>, although they use the Snap! environment.  <a class="reference external" href="https://scratch.mit.edu/info/credits">Scratch</a> itself is a project of the Lifelong Kindergarten Group at the MIT Media Lab.</p>
+<p>What direction is the robot is facing now?</p>
+
+            <li data-component="answer"  id="reeborg_while_loops_opt_a">east</li><li data-component="feedback" id="reeborg_while_loops_opt_a">Try again!</li>
+            
+            <li data-component="answer"  id="reeborg_while_loops_opt_b">south</li><li data-component="feedback" id="reeborg_while_loops_opt_b">Try again!</li>
+            
+            <li data-component="answer"  id="reeborg_while_loops_opt_c">west</li><li data-component="feedback" id="reeborg_while_loops_opt_c">Try again!</li>
+            
+            <li data-component="answer" data-correct id="reeborg_while_loops_opt_d">north</li><li data-component="feedback" id="reeborg_while_loops_opt_d">Great!</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2-while-and-repeat-loops">
+<h2>Question 2 - While and Repeat Loops<a class="headerlink" href="#question-2-while-and-repeat-loops" title="Permalink to this headline">¶</a></h2>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="reeborg_while_and_repeat">
+            <p>sc-1-5: Reeborg is facing east. The following code is then executed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">is_facing_north</span><span class="p">():</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+<span class="n">repeat</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="reeborg">
-<h2>Reeborg<a class="headerlink" href="#reeborg" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="http://reeborg.ca/">Reeborg</a>  environment was created by André Roberge, and I (Dan Schellenberg) made small changes to the version used for this textbook. The tutorials used for the Reeborg section are adapted from work done by Roger Frank, which were later converted to work for <a class="reference external" href="http://gvr.sourceforge.net/lessons/rfrank/">Guido van Robot</a> by Jeff Elkner. Combined into these are tutorials written by <a class="reference external" href="http://reeborg.ca/docs/en/">André Roberge</a>, along with ideas I added. Stefan Scott contributed many of the More Challenges worlds.</p>
+<p>What direction is the robot is facing now?</p>
+
+            <li data-component="answer"  id="reeborg_while_and_repeat_opt_a">east</li><li data-component="feedback" id="reeborg_while_and_repeat_opt_a">Try again!</li>
+            
+            <li data-component="answer"  id="reeborg_while_and_repeat_opt_b">south</li><li data-component="feedback" id="reeborg_while_and_repeat_opt_b">Try again!</li>
+            
+            <li data-component="answer" data-correct id="reeborg_while_and_repeat_opt_c">west</li><li data-component="feedback" id="reeborg_while_and_repeat_opt_c">Great!</li>
+            
+            <li data-component="answer"  id="reeborg_while_and_repeat_opt_d">north</li><li data-component="feedback" id="reeborg_while_and_repeat_opt_d">Try again!</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-3-loops-and-if">
+<h2>Question 3 - Loops and If<a class="headerlink" href="#question-3-loops-and-if" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="reeborg_while_repeat_if">
+            <p>Reeborg is standing in a world in which every location square has 3 carrots, which looks like this:</p>
+<img alt="../_images/practice_quiz_start.png" src="../_images/practice_quiz_start.png" />
+<p>The following code is then executed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
+        <span class="n">repeat</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">take</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<p>The Python section of the textbook is primarily a remix of <a class="reference external" href="https://runestone.academy/runestone/static/thinkcspy/index.html">How to Think Like a Computer Scientist</a>. The <a class="reference external" href="http://openbookproject.net/thinkcs/python/english2e/">original How to Think Like a Computer Scientist text</a> is by Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris Meyers, and Dario Mitchell. Since 2011 Brad Miller, David Ranum, Barbara Ericson, Mark Guzdial, and many others have built on the text <a class="reference external" href="https://runestone.academy/runestone/static/thinkcspy/index.html">making it interactive</a>, and it is the interactive version that this project is adapted from. Thanks to Allen, Jeff and Brad, who agreed to allow me to release this remix under a Creative Commons BY-SA license.</p>
+<p>How many carrots is Reeborg holding now?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [16, 16], "feedback": "Great!"}, {"number": [8, 8], "feedback": "Remember there is a repeat 2 inside the repeat 8."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="question-4-loops-and-if-else">
+<h2>Question 4 - Loops and If/Else<a class="headerlink" href="#question-4-loops-and-if-else" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="reeborg_while_repeat_if_else">
+            <p>Reeborg is holding a large handful of carrots, and is planning to plant them as he walks around a world that looks like this:</p>
+<img alt="../_images/quiz_if_else_start.png" src="../_images/quiz_if_else_start.png" />
+<p>The following code is then executed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+        <span class="n">put</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="other-thanks">
-<h2>Other Thanks<a class="headerlink" href="#other-thanks" title="Permalink to this headline">¶</a></h2>
-<p>The Computer Science Implementation Support Team contributed many helpful suggestions and resources for the book.</p>
-<p>This interactive book uses the <a class="reference external" href="http://runestoneinteractive.org">Runestone Interactive tools</a>, which you can find on <a class="reference external" href="https://github.com/RunestoneInteractive">GitHub</a>. The Runestone Interactive tools allowed me to focus on the content, instead of worrying about how to present the content.</p>
+<p>How many carrots has Reeborg planted when the code has finished?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [1, 1], "feedback": "Great!"}, {"number": [2, 2], "feedback": "Careful! Remember that the <cite>else</cite> does not include <cite>move</cite>."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="question-5-mirror-image">
+<h2>Question 5 - Mirror Image<a class="headerlink" href="#question-5-mirror-image" title="Permalink to this headline">¶</a></h2>
+<p>The room (shown below) has alcoves on the left and the right. Some of the alcoves contain daisies. For each alcove on the left side that contains a daisy, Reeborg should move that daisy in the opposite alcove on the right hand side. One possible starting world could look like the following:</p>
+<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove.json&name=PracticeQuizAlcove" target="_blank">Mirror Image Practice Quiz world</a> and create a solution to this problem!</p>
+<img alt="../_images/practice_quiz_alcove_start.png" src="../_images/practice_quiz_alcove_start.png" />
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_practice_quiz_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>Please note that there are many possible solutions to this problem. This is one:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">think</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">turn_around</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">move_daisy</span><span class="p">():</span>
+    <span class="n">take</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="n">put</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">repeat</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+
+<span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
+        <span class="n">move_daisy</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_around</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - How to Use This Textbook - For Teachers' data-toggle="tooltip">
-    <a href="ForTeachers.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - More Challenges' data-toggle="tooltip">
+    <a href="MoreChallenges.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="ForTeachers.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="MoreChallenges.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 1. Introduction to Scratch (Broadcasts)' data-toggle="tooltip" >
-    <a href="../VisualProgrammingEnv/FirstProgram.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 1. Your First Python Program!' data-toggle="tooltip" >
+    <a href="../Python/FirstProgram.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../VisualProgrammingEnv/FirstProgram.html" >Next Section - 1. Introduction to Scratch (Broadcasts)</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../Python/FirstProgram.html" >Next Section - 1. Your First Python Program!</a>
 
 <script type="text/javascript">
 
