@@ -27,7 +27,7 @@ When your program is done, the ending world should look like this:
 Star Towers - Version 2
 ------------------------
 
-This time Reeborg wants to build star towers in a cave. There are stalactites on the roof of the cave of differing length, so Reeborg wants to make it's towers as tall as it can without bumping into them. Like last time, write a program that creates a Star Tower at Reeborg’s starting position, and every other x-position after that (odd x-values). The height of each Star Tower should allow for one empty square beneath the stalactites. 
+This time Reeborg wants to build star towers in a cave. There are stalactites on the roof of the cave of differing length, so Reeborg wants to make its towers as tall as it can without bumping into them. Like last time, write a program that creates a Star Tower at Reeborg’s starting position, and every other x-position after that (odd x-values). The height of each Star Tower should allow for one empty square beneath the stalactites. 
 
 Open the |star_tower2| to implement your solution!
 
