@@ -7,9 +7,6 @@ Tutorial
 While learning how to program is fun, you should not spend all your
 time in front of the computer. When you are at home, ``if`` it rains, keep reading, otherwise, go outside and play!
 
-Two choices...
---------------
-
 Let's rewrite the sentence that starts with ``if`` above::
 
     if it rains,

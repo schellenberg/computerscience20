@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Step 16: Pseudocode &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Step 18: Harvest Time Revisited &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,6 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Step 17: Solving a Maze" href="Step17.html" />
-    <link rel="prev" title="Step 15: It’s Going to Rain" href="Step15.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,7 +190,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Step 16: Pseudocode</a><ul>
+<li><a class="reference internal" href="#">Step 18: Harvest Time Revisited</a><ul>
 <li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
 </ul>
@@ -204,18 +202,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Step 15: It’s Going to Rain" data-toggle="tooltip">
-    <a href="Step15.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-  <li id="relations-next" title='Next Chapter - Step 17: Solving a Maze' data-toggle="tooltip" >
-    <a href="Step17.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -241,43 +227,29 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="step-16-pseudocode">
-<h1>Step 16: Pseudocode<a class="headerlink" href="#step-16-pseudocode" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="step-18-harvest-time-revisited">
+<h1>Step 18: Harvest Time Revisited<a class="headerlink" href="#step-18-harvest-time-revisited" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="tutorial">
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>You have learned a lot about programming Reeborg. Congratulations! What you may not realize is that you have learned a lot about programming in any language. Most programs are a sequence of steps, interspersed with conditional decisions and groups of instructions that repeat.</p>
-<p>Implementing the solutions to the assignments so far has required a little more thought at each step. You understand the question and the desired result, but sometimes it’s not immediately clear how to get it done. When you are solving a non-trivial problem, it is often <strong>best to begin with pencil and paper</strong>.</p>
-<p>When coming up with the solution to a problem, write the steps down in your own words with pencil and paper. This is sometimes called <strong>pseudocode</strong> because it isn’t really instructions that Reeborg (or any programming language) could use. But it helps you understand what needs to happen. Then you code it – write the real instructions – to create a Reeborg program.</p>
-<p>Be sure to think the following situation through before you start coding. First, press the play button on the world a number of times to be sure you understand what the possible worlds look like. Now figure out the algorithm, or sequence of steps, required.  Then simulate in your mind the execution of the program you are going to write. If it does what you expect, then and only then should you start coding.</p>
+<p>As you consider how you will write a solution for the following situation, be sure to consider:</p>
+<ul class="simple">
+<li>writing pseudocode with paper/pencil before you begin to code</li>
+<li>use the library to store functions you might use again (such as <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">go_to_start()</span></code>)</li>
+<li>use comments and whitespace (blank lines) to keep your code as readable as possible for other humans</li>
+</ul>
 </div>
 <div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>Open Step 16 on the <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>.</p>
-<img alt="../_images/step16.png" src="../_images/step16.png" />
-<p>Reeborg has been hired to pick carrots in a number of gardens. Although the gardens are all the same size, the carrots have grown in different places in each of the gardens. You need to create a program that will allow Reeborg to harvest all of the carrots in each of the possible gardens. You know that at each location, there will only ever be either 1 or 0 carrots.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Remember (from our explorations in Scratch), that you can have a repeat statement inside another repeat statement – we called this a nested repeat. Consider how you might be able to use a nested repeat to solve this problem.</p>
-</div>
+<p>Open Step 18 on the <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>.</p>
+<p>Reeborg is harvesting carrots again. This time, however, the gardens are all different sizes. The carrots grow really well in some areas (so there are more than one in some spots), and not well at all in some spots (so there are places where no carrots grow). Reeborg can start anywhere in the garden, and can be facing in any direction. One possible garden looks like this:</p>
+<img alt="../_images/step18.png" src="../_images/step18.png" />
+<p>Reeborg’s job is to pick all the carrots, put them down in the big carrot bin at the north-east corner of the garden, then head back to the south-west corner of the garden for a well deserved rest.</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Step 15: It’s Going to Rain' data-toggle="tooltip">
-    <a href="Step15.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="Step15.html" ></a>
-  
-  <li id="relations-next" class="navLink" title='Next Section - Step 17: Solving a Maze' data-toggle="tooltip" >
-    <a href="Step17.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step17.html" >Next Section - Step 17: Solving a Maze</a>
 
 <script type="text/javascript">
 

@@ -71,6 +71,7 @@ Reeborg
    ConstrainedLanguage/Step15.rst
    ConstrainedLanguage/Step16.rst
    ConstrainedLanguage/Step17.rst
+   ConstrainedLanguage/Step18.rst
    ConstrainedLanguage/MoreChallenges.rst
    ConstrainedLanguage/PracticeQuiz.rst
 

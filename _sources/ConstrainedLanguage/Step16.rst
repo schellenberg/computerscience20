@@ -1,12 +1,16 @@
-Step 16: Solving a Maze
-=============================
+Step 16: Pseudocode
+======================
 
 Tutorial
 ---------
 
-As you begin to think through the following problem, I once again **highly recommend** that you begin by writing **pseudocode** with paper and pencil.
+You have learned a lot about programming Reeborg. Congratulations! What you may not realize is that you have learned a lot about programming in any language. Most programs are a sequence of steps, interspersed with conditional decisions and groups of instructions that repeat.
 
-Your challenge is to see if you can refine the pseudocode solution you come up with well enough that when you actually write the Reeborg solution, it works on the first try. To accomplish this, you should spend much more time with paper and pencil than with your keyboard on this step!
+Implementing the solutions to the assignments so far has required a little more thought at each step. You understand the question and the desired result, but sometimes it's not immediately clear how to get it done. When you are solving a non-trivial problem, it is often **best to begin with pencil and paper**.
+
+When coming up with the solution to a problem, write the steps down in your own words with pencil and paper. This is sometimes called **pseudocode** because it isn't really instructions that Reeborg (or any programming language) could use. But it helps you understand what needs to happen. Then you code it -- write the real instructions -- to create a Reeborg program.
+
+Be sure to think the following situation through before you start coding. First, press the play button on the world a number of times to be sure you understand what the possible worlds look like. Now figure out the algorithm, or sequence of steps, required.  Then simulate in your mind the execution of the program you are going to write. If it does what you expect, then and only then should you start coding.
 
 
 Your Turn
@@ -14,11 +18,11 @@ Your Turn
 
 Open Step 16 on the |reeborg_environment|.
 
-Reeborg has lost it's lunchbox. Reeborg was playing in a maze and set it down and then wandered around. Now Reeborg is hungry. The lunchbox is represented by the flag. Each time you press play, both the flag and Reeborg will begin in a random location. Reeborg's situation looks like this:
+.. image:: images/step16.png
 
-.. image:: images/step16.gif
+Reeborg has been hired to pick carrots in a number of gardens. Although the gardens are all the same size, the carrots have grown in different places in each of the gardens. You need to create a program that will allow Reeborg to harvest all of the carrots in each of the possible gardens. You know that at each location, there will only ever be either 1 or 0 carrots.
 
-Write a program to help Reeborg find the lunchbox. The secret is to have Reeborg follow along the right edge of the maze, turning right if it can, going straight ahead if it can't turn right, or turning left as a last resort. Write a program using an if..elif..else statement so Reeborg can have lunch.
+.. note:: Remember (from our explorations in Scratch), that you can have a repeat statement inside another repeat statement -- we called this a nested repeat. Consider how you might be able to use a nested repeat to solve this problem.
 
 
 .. |reeborg_environment| raw:: html
