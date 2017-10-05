@@ -63,6 +63,7 @@ Reeborg
    ConstrainedLanguage/Step7.rst
    ConstrainedLanguage/Step8.rst
    ConstrainedLanguage/Step9.rst
+   ConstrainedLanguage/MidwayPracticeQuiz.rst
    ConstrainedLanguage/Step10.rst
    ConstrainedLanguage/Step11.rst
    ConstrainedLanguage/Step12.rst
