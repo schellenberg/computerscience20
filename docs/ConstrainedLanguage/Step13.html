@@ -292,7 +292,7 @@ provided you fill in the missing pieces. <em>Note: You may find the `done` funct
      <span class="k">else</span><span class="p">:</span>
          <span class="c1"># something</span>
 
- <span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after we understand not in the next step!</span>
+ <span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after the next step...</span>
      <span class="n">run_jump_or_finish</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -302,9 +302,24 @@ will be executed</strong>.</p>
 </div>
 <div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>Open Step 13 on the <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>.</p>
+<p>Open Step 13 on the <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>, and copy/paste the following code to begin your solution:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
+     <span class="c1"># suitable definition</span>
+
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
+         <span class="n">done</span><span class="p">()</span>  <span class="c1">#tells Reeborg to stop</span>
+     <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+         <span class="c1"># something</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1"># something</span>
+
+ <span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after the next step...</span>
+     <span class="n">run_jump_or_finish</span><span class="p">()</span>
+</pre></div>
+</div>
 <img alt="../_images/step13.png" src="../_images/step13.png" />
-<p>Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a <code class="docutils literal"><span class="pre">repeat</span></code> loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You <strong>must</strong> use an <code class="docutils literal"><span class="pre">if/elif/else</span></code> structure in your program. You may want to use the program skeleton given above as a starting point.</p>
+<p>Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a <code class="docutils literal"><span class="pre">repeat</span></code> loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You <strong>must</strong> use an <code class="docutils literal"><span class="pre">if/elif/else</span></code> structure in your program.</p>
 </div>
 <div class="section" id="if-you-re-having-trouble-a-more-detailed-explanation">
 <h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>

@@ -59,7 +59,7 @@ provided you fill in the missing pieces. *Note: You may find the `done` function
         else:
             # something
 
-    repeat 42:  #we can replace this with a while after we understand not in the next step!
+    repeat 42:  #we can replace this with a while after the next step...
         run_jump_or_finish()
 
 Note the structure of the ``if/elif/else`` statements; as is mentioned above,
@@ -70,11 +70,27 @@ will be executed**.
 Your Turn
 ---------
 
-Open Step 13 on the |reeborg_environment|.
+Open Step 13 on the |reeborg_environment|, and copy/paste the following code to begin your solution:
+
+.. code-block:: python
+
+   def jump_over_hurdle():
+        # suitable definition
+
+   def run_jump_or_finish ():
+        if at_goal():
+            done()  #tells Reeborg to stop
+        elif front_is_clear():
+            # something
+        else:
+            # something
+
+    repeat 42:  #we can replace this with a while after the next step...
+        run_jump_or_finish()
 
 .. image:: images/step13.png
 
-Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You **must** use an ``if/elif/else`` structure in your program. You may want to use the program skeleton given above as a starting point. 
+Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You **must** use an ``if/elif/else`` structure in your program. 
 
 .. |reeborg_environment| raw:: html
 
