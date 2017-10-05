@@ -1,4 +1,4 @@
-Practice Quiz
+Second Practice Quiz
 ================================
 
 To confirm that you understand the major concepts you've seen with Reeborg, try to answer the first 4 questions **without opening the Reeborg environment**.
