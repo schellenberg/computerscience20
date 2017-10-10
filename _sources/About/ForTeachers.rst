@@ -8,8 +8,8 @@ Not sure what needs to be put in here for teachers. A bit of help, implementatio
 
 - that each page roughly maps to one day's worth of instruction (with the notable exception of the Reeborg unit)
 - what to do if you have junky internet access
-- download links for Thonny (for Python section), Notepad++ (to view Reeborg steps, and any other plain text you want)
-- 
+- download links for `Thonny <http://thonny.org/>`_ (for Python section), `Atom <https://atom.io/>`_ (to view any other plain text you want)
+- remixing the book `(source is available on GitHub) <https://github.com/sk-opentexts/computerscience20>`_
 
 Sample Overview of Days
 ------------------------
