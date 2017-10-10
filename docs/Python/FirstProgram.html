@@ -195,7 +195,8 @@
 <li><a class="reference internal" href="#">1. Your First Python Program!</a><ul>
 <li><a class="reference internal" href="#what-is-python">1.1. What is Python?</a></li>
 <li><a class="reference internal" href="#whitespace">1.2. Whitespace</a></li>
-<li><a class="reference internal" href="#multiple-choice">1.3. Multiple Choice</a></li>
+<li><a class="reference internal" href="#variables-and-data-types">1.3. Variables and Data Types</a></li>
+<li><a class="reference internal" href="#checking-data-types">1.4. Checking Data Types</a></li>
 </ul>
 </li>
 </ul>
@@ -251,7 +252,7 @@
 </div>
 <div class="section" id="whitespace">
 <h2>1.2. Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
-<p>Just like when you were programming Reeborg, it is <strong>really important to indent your code correctly</strong> in Python.</p>
+<p>Just like when you were programming Reeborg, it is <strong>really important to indent your code correctly</strong> in Python. For example, the code given below will cause a <strong>syntax error</strong> when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you’ve fixed it!</p>
 
 <div data-childcomponent="syntax_error_indentation" class="runestone explainer ac_section alert alert-warning">
 
@@ -262,24 +263,82 @@ print("Yeah, the number is bigger.")
 </textarea>
 </div>
 </div>
-<div class="section" id="multiple-choice">
-<h2>1.3. Multiple Choice<a class="headerlink" href="#multiple-choice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="variables-and-data-types">
+<h2>1.3. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
+<p>The fundamental data types that we are concerned about in Python include:</p>
+<ul class="simple">
+<li>int (integer, such as <cite>3</cite> or <cite>-5</cite>)</li>
+<li>float (floating point, such as <cite>1.2</cite> or <cite>-4.75</cite>)</li>
+<li>str (string, such as <cite>“hello”</cite> or <cite>‘Friday</cite> or <cite>“5”</cite>)</li>
+<li>bool (boolean, such as <cite>True</cite> or <cite>False</cite>)</li>
+</ul>
+<p>We will use each of the data types given above throughout the course, and it is <strong>really important</strong> that you understand the differences between them. Take a moment now to try the following questions.</p>
+<p><strong>Check Your Understanding</strong></p>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question1_2">
-            sc-1-4: Which colors might be found in a rainbow? (choose all that are correct)
-            <li data-component="answer" data-correct id="question1_2_opt_a">red</li><li data-component="feedback" id="question1_2_opt_a">Red is a definitely on of the colors.</li>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
+            sc-1-4: What is the data type of <cite>‘this is what kind of data’</cite>?
+            <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
             
-            <li data-component="answer" data-correct id="question1_2_opt_b">yellow</li><li data-component="feedback" id="question1_2_opt_b">Yes, yellow is correct.</li>
+            <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
             
-            <li data-component="answer"  id="question1_2_opt_c">black</li><li data-component="feedback" id="question1_2_opt_c">Remember the acronym...ROY G BIV.  B stands for blue.</li>
+            <li data-component="answer"  id="data_types_1_1_opt_c">float</li><li data-component="feedback" id="data_types_1_1_opt_c">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer" data-correct id="question1_2_opt_d">green</li><li data-component="feedback" id="question1_2_opt_d">Yes, green is one of the colors.</li>
+            <li data-component="answer" data-correct id="data_types_1_1_opt_d">string</li><li data-component="feedback" id="data_types_1_1_opt_d">Great! Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
+            sc-1-5: What is the data type of <cite>3</cite>?
+            <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_2_opt_c">float</li><li data-component="feedback" id="data_types_1_2_opt_c">The value is not numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_2_opt_d">string</li><li data-component="feedback" id="data_types_1_2_opt_d">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
+            sc-1-6: What is the data type of <cite>True</cite>?
+            <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_c">float</li><li data-component="feedback" id="data_types_1_3_opt_c">The value is not numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_d">string</li><li data-component="feedback" id="data_types_1_3_opt_d">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
+            sc-1-7: What is the data type of <cite>1.5</cite>?
+            <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_4_opt_c">float</li><li data-component="feedback" id="data_types_1_4_opt_c">Great! The value is numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_d">string</li><li data-component="feedback" id="data_types_1_4_opt_d">Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             </div>
+<div class="section" id="checking-data-types">
+<h2>1.4. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
