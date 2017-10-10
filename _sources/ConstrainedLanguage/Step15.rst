@@ -10,6 +10,8 @@ Open Step 15a on the |reeborg_environment|.
 
 Reeborg is standing by the door to the house, sees a storm coming, and decides to close all of the windows in the house. First, Reeborg ``put``s down a star where it is standing (so that it can tell when it gets back to the door). Then Reeborg will walk around the house, closing any open windows it finds. We will represent the window closing by Reeborg putting a star down at an open window (represented by wall openings). Reeborg loves storms, so after closing all the windows, it will step outside to watch the storm.
 
+Be sure to run your program multiple times, as Reeborg will need to be able to close all the windows in many different houses (the location of the windows can change).
+
 .. note:: Since the windows are in different places in each world, be sure that your solution does not *hard code* a number of steps to get to a window. Instead, Reeborg must check for an open window as it walks around the inside of the house.
 
 Extra for Experts
