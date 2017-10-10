@@ -28,10 +28,11 @@ In Reeborg's World, we can write a ``repeat`` *loop* as follows::
 .. note::
 
    Using ``repeat`` will not work in Python programs meant to be
-   run outside of Reeborg's World. A **loop** is a block of
-   instructions that is repeated. Each time the loop is repeated is called an iteration, so the code below would have 4 iterations.
+   run outside of Reeborg's World. 
 
-For example, the following code will make Reeborg trace a square::
+A **loop** is a block of instructions that is repeated. Each time the loop is repeated is called an iteration, so the code below would have 4 iterations.
+
+The following code will make Reeborg trace a square::
 
     repeat 4:
         move()

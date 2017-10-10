@@ -97,6 +97,8 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 Extra for Experts
 ------------------
 
+**Only attempt the following step if you are either: ahead of the rest of your peers, or finished off the rest of the steps. If you've been having any trouble with these Reeborg steps, just skip this Extra for Experts for now. You can always come back and try it later!**
+
 Reeborg has found a much more interesting lake to walk around. 
 
 .. image:: images/step14b.gif
