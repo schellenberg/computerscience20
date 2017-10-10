@@ -24,7 +24,18 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
 
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
-Class Activity: Repeat Until. Print out Practice with Repeat Until Sheets. 
+
+Class Activity: Repeat Until
+-----------------------------
+
+Print out the `Practice with Repeat Until Practice handout <../../_static/handouts/scratch_repeat_until_practice.pdf>`_ . 
+
+.. note:: If you would like to edit the Repeat Until Practice handout, download the `editable Word document <../../_static/handouts/scratch_repeat_until_practice.docx>`_.
+
+
+
+Demonstrating How to Use Repeat Until
+-------------------------------------
 
 Demo simple "shooting a cannon ball" example -- use an xSpeed and ySpeed variable, and a repeat until block (until the cannon ball hits the ground, by having a y-value less than something).  
 
