@@ -5,21 +5,22 @@ Your First Python Program!
 What is Python?
 ---------------
 
-Actually, you've already been writing Python programs. Now, however, you get to do so without having everything tied to the visual output that we've seen so far. This allows us to start exploring other ways our programs can produce output, and take input.
+You've already been writing Python programs using Reeborg. Everything you have already learned (with the exception of `repeat`), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.
 
-ActiveCode
-----------
+In today's high level exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
 
-.. activecode:: codeexample1
-   :coach:
-   :caption: This is a caption
+Whitespace
+-----------
 
-   print("My first program adds a list of numbers")
-   myList = [2, 4, 6, 8, 10]
-   total = 0
-   for num in myList:
-       total = total + num
-   print(total)
+Just like when you were programming Reeborg, it is **really important to indent your code correctly** in Python.
+
+.. activecode:: syntax_error_indentation
+   :caption: Fix the syntax error by indenting the code properly.
+
+   some_number = 5
+   if some_number > 3:
+   print("Yeah, the number is bigger.")
+
 
 Multiple Choice
 ---------------

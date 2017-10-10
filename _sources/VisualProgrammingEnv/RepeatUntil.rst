@@ -28,9 +28,9 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
 Class Activity: Repeat Until
 -----------------------------
 
-Print out the `Practice with Repeat Until Practice handout <../../_static/handouts/scratch_repeat_until_practice.pdf>`_ . 
+Print out the :download:`Practice with Repeat Until Practice handout <handouts/scratch_repeat_until_practice.pdf>`. 
 
-.. note:: If you would like to edit the Repeat Until Practice handout, download the `editable Word document <../../_static/handouts/scratch_repeat_until_practice.docx>`_.
+.. note:: If you would like to edit the Repeat Until Practice handout, download the :download:`editable Word document <handouts/scratch_repeat_until_practice.docx>`.
 
 
 
