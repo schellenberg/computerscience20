@@ -12,6 +12,11 @@ Reeborg is standing by the door to the house, sees a storm coming, and decides t
 
 .. note:: Since the windows are in different places in each world, be sure that your solution does not *hard code* a number of steps to get to a window. Instead, Reeborg must check for an open window as it walks around the inside of the house.
 
+Extra for Experts
+------------------
+
+**Only attempt the following step if you are either: ahead of the rest of your peers, or finished off the rest of the steps. If you've been having any trouble with these Reeborg steps, just skip this Extra for Experts for now. You can always come back and try it later!**
+
 The program you write to solve the problem above must also be able work on the second test world, which is Step 15b on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ . 
 
 .. image:: images/step15b.png
