@@ -12,7 +12,7 @@
 Computer Science 20 - Saskatchewan
 ----------------------------------
 
-.. warning:: This textbook is currently being written, so things will change/be added for the next few months. The only section that is currently (Oct 4, 2017) complete is Reeborg. For the Scratch unit, the order and headings of the content is correct, but very little text has been written to accompany the video tutorials for that section. If you spot any errors, please `let me know! <mailto:schellenberg@gmail.com>`_ 
+.. warning:: This textbook is currently being written, so things will change/be added for the next few months. The only section that is currently complete is Reeborg. For the Scratch unit, the order and headings of the content is correct, but very little text has been written to accompany the video tutorials for that section. If you spot any errors, please `let me know! <mailto:schellenberg@gmail.com>`_ 
 
 Preface
 :::::::
