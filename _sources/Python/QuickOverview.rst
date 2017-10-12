@@ -16,12 +16,12 @@ Whitespace
 Just like when you were programming Reeborg, it is **really important to indent your code correctly** in Python. For example, the code given below will cause a **syntax error** when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you've fixed it!
 
 .. activecode:: syntax_error_indentation
-   :caption: Fix the syntax error by indenting the code properly.
-   :nocodelens:
+    :caption: Fix the syntax error by indenting the code properly.
+    :nocodelens:
 
-   some_number = 5
-   if some_number > 3:
-   print("Yeah, the number is bigger.")
+    some_number = 5
+    if some_number > 3:
+    print("Yeah, the number is bigger.")
 
 
 Printing Output
@@ -49,56 +49,56 @@ We will use each of the data types given above throughout the course, and it is 
 **Check Your Understanding**
 
 .. mchoice:: data_types_1_1
-   :answer_a: boolean
-   :answer_b: integer
-   :answer_c: float
-   :answer_d: string
-   :correct: d
-   :feedback_a: It is not True or False.
-   :feedback_b: The data is not numeric.
-   :feedback_c: The value is not numeric with a decimal point.
-   :feedback_d: Great! Strings are enclosed in quotes.
+    :answer_a: boolean
+    :answer_b: integer
+    :answer_c: float
+    :answer_d: string
+    :correct: d
+    :feedback_a: It is not True or False.
+    :feedback_b: The data is not numeric.
+    :feedback_c: The value is not numeric with a decimal point.
+    :feedback_d: Great! Strings are enclosed in quotes.
 
-   What is the data type of ``'this is what kind of data'``?
+    What is the data type of ``'this is what kind of data'``?
 
 .. mchoice:: data_types_1_2
-   :answer_a: boolean
-   :answer_b: integer
-   :answer_c: float
-   :answer_d: string
-   :correct: b
-   :feedback_a: It is not True or False.
-   :feedback_b: Great! The data is numeric, without a decimal point.
-   :feedback_c: The value is not numeric with a decimal point.
-   :feedback_d: Strings are enclosed in quotes.
+    :answer_a: boolean
+    :answer_b: integer
+    :answer_c: float
+    :answer_d: string
+    :correct: b
+    :feedback_a: It is not True or False.
+    :feedback_b: Great! The data is numeric, without a decimal point.
+    :feedback_c: The value is not numeric with a decimal point.
+    :feedback_d: Strings are enclosed in quotes.
 
-   What is the data type of ``3``?
+    What is the data type of ``3``?
 
 .. mchoice:: data_types_1_3
-   :answer_a: boolean
-   :answer_b: integer
-   :answer_c: float
-   :answer_d: string
-   :correct: a
-   :feedback_a: Great! Boolean is either True or False.
-   :feedback_b: The data is not numeric.
-   :feedback_c: The value is not numeric with a decimal point.
-   :feedback_d: Strings are enclosed in quotes.
+    :answer_a: boolean
+    :answer_b: integer
+    :answer_c: float
+    :answer_d: string
+    :correct: a
+    :feedback_a: Great! Boolean is either True or False.
+    :feedback_b: The data is not numeric.
+    :feedback_c: The value is not numeric with a decimal point.
+    :feedback_d: Strings are enclosed in quotes.
 
-   What is the data type of ``True``?
+    What is the data type of ``True``?
    
 .. mchoice:: data_types_1_4
-   :answer_a: boolean
-   :answer_b: integer
-   :answer_c: float
-   :answer_d: string
-   :correct: c
-   :feedback_a: It is not True or False.
-   :feedback_b: The data is not numeric.
-   :feedback_c: Great! The value is numeric with a decimal point.
-   :feedback_d: Strings are enclosed in quotes.
+    :answer_a: boolean
+    :answer_b: integer
+    :answer_c: float
+    :answer_d: string
+    :correct: c
+    :feedback_a: It is not True or False.
+    :feedback_b: The data is not numeric.
+    :feedback_c: Great! The value is numeric with a decimal point.
+    :feedback_d: Strings are enclosed in quotes.
 
-   What is the data type of ``1.5``?
+    What is the data type of ``1.5``?
 
 
 Checking Data Types
@@ -107,9 +107,9 @@ Checking Data Types
 If you aren't sure what the data type of something is, you can check it using the ``type()`` function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the ``type()`` function to make sure you really understand what it is doing. Replace the ``5`` with ``5.3``. What do you get? How about ``"5.3"``?
 
 .. activecode:: checking_data_types
-   :nocodelens:
+    :nocodelens:
 
-   print( type(5) )
+    print( type(5) )
 
 
 Converting Between Data Types
@@ -122,16 +122,16 @@ Sometimes you might need to convert from one data type to another. You can use t
 - ``float(x)`` to convert *x* to a floating point number
 
 .. activecode:: casting_data_types
-   :nocodelens:
+    :nocodelens:
 
-   a = 4         #a is an int
-   print( type(a) )
+    a = 4         #a is an int
+    print( type(a) )
 
-   b = str(a)    #b is the string '4'
-   print( type(b) )
+    b = str(a)    #b is the string '4'
+    print( type(b) )
    
-   c = float(b)  #c is the float 4.0
-   print( type(c) )
+    c = float(b)  #c is the float 4.0
+    print( type(c) )
    
 
 Math Operators
@@ -158,7 +158,7 @@ Symbols   Operations                        Example               Output
 The ``if/elif/else`` control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that **only one of the branches can execute**. Read the code below, and predict what you think the output will be. Then change it to ``temp = 25``. What will the output be now? How about if you change it to ``temp = 5``? What about ``temp = 15``?
 
 .. activecode:: if_elif_else_intro
-   :nocodelens:
+    :nocodelens:
     
     temp = -3
 
@@ -193,7 +193,7 @@ Recall that we used a ``while`` loop in Reeborg when we didn't know the number o
 When we knew the exact number of iterations required in Reeborg, we used the ``repeat`` command. That command was not part of regular Python -- it was added to keep Reeborg coding as simple as possible. Although I won't explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the ``10`` to some other number and try it again)
 
 .. activecode:: for_loop_intro_1
-   :nocodelens:
+    :nocodelens:
     
     for counter in range(10):
         print(counter)
@@ -201,7 +201,7 @@ When we knew the exact number of iterations required in Reeborg, we used the ``r
 Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:
 
 .. activecode:: for_loop_intro_2
-   :nocodelens:
+    :nocodelens:
     
     for counter in range(5, 11):
         print(counter)
@@ -209,7 +209,7 @@ Notice that the loop above repeats 10 times, but begins counting at 0, so the la
 One last version of the for loop that we will introduce allows us to go through a *list* of values, as follows. *Please note that there are a bunch of things in this example that you don't need to understand yet! We'll get there!*
 
 .. activecode:: for_loop_intro_3
-   :nocodelens:
+    :nocodelens:
     
     grocery_list = ["apples", "carrots", "milk", "yogurt"]
     for item in grocery_list:
@@ -222,7 +222,7 @@ Functions
 Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:
 
 .. activecode:: functions_intro_1
-   :nocodelens:
+    :nocodelens:
     
     def say_hello():
         print("Hello there!")
@@ -231,7 +231,7 @@ Just like you were able to teach Reeborg to do new things by creating a new func
 
 
 .. activecode:: functions_intro_2
-   :nocodelens:
+    :nocodelens:
     
     def say_hello(some_name):
         print("Hello there, " + some_name)
