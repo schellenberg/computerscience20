@@ -194,17 +194,21 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">1. Quick Python Overview</a><ul>
 <li><a class="reference internal" href="#what-is-python">1.1. What is Python?</a></li>
-<li><a class="reference internal" href="#whitespace">1.2. Whitespace</a></li>
-<li><a class="reference internal" href="#printing-output">1.3. Printing Output</a></li>
-<li><a class="reference internal" href="#variables-and-data-types">1.4. Variables and Data Types</a></li>
-<li><a class="reference internal" href="#checking-data-types">1.5. Checking Data Types</a></li>
-<li><a class="reference internal" href="#converting-between-data-types">1.6. Converting Between Data Types</a></li>
-<li><a class="reference internal" href="#math-operators">1.7. Math Operators</a></li>
-<li><a class="reference internal" href="#if-elif-else">1.8. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
-<li><a class="reference internal" href="#while-loop">1.9. <code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
-<li><a class="reference internal" href="#for-loop">1.10. <code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
-<li><a class="reference internal" href="#functions">1.11. Functions</a></li>
-<li><a class="reference internal" href="#taking-input-from-user">1.12. Taking Input from User</a></li>
+<li><a class="reference internal" href="#running-python-on-your-computer">1.2. Running Python on Your Computer</a></li>
+<li><a class="reference internal" href="#whitespace">1.3. Whitespace</a></li>
+<li><a class="reference internal" href="#printing-output">1.4. Printing Output</a></li>
+<li><a class="reference internal" href="#variables-and-data-types">1.5. Variables and Data Types</a></li>
+<li><a class="reference internal" href="#checking-data-types">1.6. Checking Data Types</a></li>
+<li><a class="reference internal" href="#converting-between-data-types">1.7. Converting Between Data Types</a></li>
+<li><a class="reference internal" href="#math-operators">1.8. Math Operators</a></li>
+<li><a class="reference internal" href="#if">1.9. <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li><a class="reference internal" href="#if-elif-else">1.10. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
+<li><a class="reference internal" href="#while-loop">1.11. <code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
+<li><a class="reference internal" href="#for-loop">1.12. <code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
+<li><a class="reference internal" href="#functions">1.13. Functions</a></li>
+<li><a class="reference internal" href="#taking-input-from-user">1.14. Taking Input from User</a></li>
+<li><a class="reference internal" href="#python-modules">1.15. Python Modules</a></li>
+<li><a class="reference internal" href="#number-guessing-game">1.16. Number Guessing Game</a></li>
 </ul>
 </li>
 </ul>
@@ -253,13 +257,21 @@
   
   <div class="section" id="quick-python-overview">
 <h1>1. Quick Python Overview<a class="headerlink" href="#quick-python-overview" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In today’s quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.</p>
+</div>
 <div class="section" id="what-is-python">
 <h2>1.1. What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
 <p>Python is a programming language that lets you teach the computer to do what you want. You’ve already been writing Python programs using Reeborg. Everything you have already learned (with the exception of <cite>repeat</cite>), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.</p>
-<p>In today’s quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.</p>
+</div>
+<div class="section" id="running-python-on-your-computer">
+<h2>1.2. Running Python on Your Computer<a class="headerlink" href="#running-python-on-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to <a class="reference external" href="http://thonny.org/">download Thonny</a>. Go download Thonny now. It doesn’t require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well.</p>
+<p>For each of the code segments that you see on this page, you can either run them directly in your web browser <strong>OR</strong> you can copy/paste the code into Thonny to run it.</p>
 </div>
 <div class="section" id="whitespace">
-<h2>1.2. Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
 <p>Just like when you were programming Reeborg, it is <strong>really important to indent your code correctly</strong> in Python. For example, the code given below will cause a <strong>syntax error</strong> when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you’ve fixed it!</p>
 
 <div data-childcomponent="syntax_error_indentation" class="runestone explainer ac_section alert alert-warning">
@@ -272,7 +284,7 @@ print("Yeah, the number is bigger.")
 </div>
 </div>
 <div class="section" id="printing-output">
-<h2>1.3. Printing Output<a class="headerlink" href="#printing-output" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Printing Output<a class="headerlink" href="#printing-output" title="Permalink to this headline">¶</a></h2>
 <p>As you saw in the example above, you can <code class="docutils literal"><span class="pre">print()</span></code> things to standard output (usually the Python console/interpreter). The <code class="docutils literal"><span class="pre">print()</span></code> function will be used in many of the examples that follow.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -280,7 +292,7 @@ print("Yeah, the number is bigger.")
 </div>
 </div>
 <div class="section" id="variables-and-data-types">
-<h2>1.4. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
 <p>The fundamental data types that we are concerned about in Python include:</p>
 <ul class="simple">
@@ -353,7 +365,7 @@ print("Yeah, the number is bigger.")
             </div>
             </div>
 <div class="section" id="checking-data-types">
-<h2>1.5. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal"><span class="pre">5</span></code> with <code class="docutils literal"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal"><span class="pre">&quot;5.3&quot;</span></code>?</p>
 
 <div data-childcomponent="checking_data_types" class="runestone explainer ac_section alert alert-warning">
@@ -364,7 +376,7 @@ print( type(5) )
 </div>
 </div>
 <div class="section" id="converting-between-data-types">
-<h2>1.6. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>1.7. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">str(x)</span></code> to convert <em>x</em> to a string</li>
@@ -387,7 +399,7 @@ print( type(c) )
 </div>
 </div>
 <div class="section" id="math-operators">
-<h2>1.7. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
+<h2>1.8. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can do math with Python, but we need to know the operators to use. The following table shows the most frequently used math operators in Python.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -442,50 +454,71 @@ print( type(c) )
 </tbody>
 </table>
 </div>
+<div class="section" id="if">
+<h2>1.9. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A single equal sign = is used to <strong>assign</strong> a value. Two equal signs are used when <strong>comparing</strong> a value.</p>
+</div>
+
+<div data-childcomponent="if_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=if_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+number = 42
+
+if number == 42:
+    print("So long and thanks for all the fish.")
+
+if number == 23:
+    print("Michael Jordan is the GOAT (Greatest of All Time)")
+</textarea>
+</div>
+</div>
 <div class="section" id="if-elif-else">
-<h2>1.8. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<h2>1.10. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
 
 <div data-childcomponent="if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=if_elif_else_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
- temp = -3
+temp = -3
 
- if temp < -10:
-     print("wear winter jacket")
- elif temp < 15:
-     print("wear long sleeve shirt")
- else:
-     print("wear t-shirt")
+if temp < -10:
+    print("wear winter jacket")
+elif temp < 15:
+    print("wear long sleeve shirt")
+else:
+    print("wear t-shirt")
 </textarea>
 </div>
 </div>
 <div class="section" id="while-loop">
-<h2>1.9. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
+<h2>1.11. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
 <p>Recall that we used a <code class="docutils literal"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
 <div data-childcomponent="while_loop_intro" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=while_loop_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
- counter = 10
+counter = 10
 
- while counter > 0:
-     print(counter)
-     counter = counter - 1   #decrease the counter each iteration
+while counter > 0:
+    print(counter)
+    counter = counter - 1   #decrease the counter each iteration
 
- print("Blastoff!")
+print("Blastoff!")
 </textarea>
 </div>
 </div>
 <div class="section" id="for-loop">
-<h2>1.10. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<h2>1.12. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal"><span class="pre">10</span></code> to some other number and try it again)</p>
 
 <div data-childcomponent="for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=for_loop_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
- for counter in range(10):
-     print(counter)
+for counter in range(10):
+    print(counter)
 </textarea>
 </div>
 <p>Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:</p>
@@ -493,8 +526,8 @@ print( type(c) )
 <div data-childcomponent="for_loop_intro_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=for_loop_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
- for counter in range(5, 11):
-     print(counter)
+for counter in range(5, 11):
+    print(counter)
 </textarea>
 </div>
 <p>One last version of the for loop that we will introduce allows us to go through a <em>list</em> of values, as follows. <em>Please note that there are a bunch of things in this example that you don’t need to understand yet! We’ll get there!</em></p>
@@ -502,39 +535,153 @@ print( type(c) )
 <div data-childcomponent="for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=for_loop_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
- grocery_list = ["apples", "carrots", "milk", "yogurt"]
- for item in grocery_list:
-     print("Don't forget to buy the " + item)
+grocery_list = ["apples", "carrots", "milk", "yogurt"]
+for item in grocery_list:
+    print("Don't forget to buy the " + item)
 </textarea>
 </div>
 </div>
 <div class="section" id="functions">
-<h2>1.11. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>1.13. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
 
 <div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
- def say_hello():
-     print("Hello there!")
+def say_hello():
+    print("Hello there!")
 
- say_hello()
+say_hello()
 </textarea>
 </div>
 
 <div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
- def say_hello(some_name):
-     print("Hello there, " + some_name)
+def say_hello(some_name):
+    print("Hello there, " + some_name)
 
- say_hello("Eli")
+say_hello("Eli")
 </textarea>
 </div>
 </div>
 <div class="section" id="taking-input-from-user">
-<h2>1.12. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
+<h2>1.14. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
 <p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">input()</span></code> will always return a string. You will need to convert it to an int or a float if you are expecting a number.</p>
+</div>
+
+<div data-childcomponent="input_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+your_name = input("What is your name?")
+print(your_name)
+</textarea>
+</div>
+
+<div data-childcomponent="input_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def say_hello(some_name):
+    print("Hello there, " + some_name)
+
+your_name = input("What is your name?")
+say_hello(your_name)
+</textarea>
+</div>
+<p>The following example is not going to work when you try to run it. Try entering in <code class="docutils literal"><span class="pre">16</span></code>, then <code class="docutils literal"><span class="pre">15</span></code>. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
+
+<div data-childcomponent="input_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Can you figure out what is wrong?'>
+age = input("How old are you?")
+
+if age == 16:
+    print("You can get your driver's license!")
+elif age == 15:
+    print("You can get your learner driver's license.")
+</textarea>
+</div>
+</div>
+<div class="section" id="python-modules">
+<h2>1.15. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
+<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
+
+<div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This works, but isn't recommended.'>
+from math import *
+
+print( sqrt(16) )
+print( cos(0) )
+</textarea>
+</div>
+
+<div data-childcomponent="module_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This is the better way to import a module.'>
+import math
+
+print( math.sqrt(16) )
+print( math.cos(0) )
+</textarea>
+</div>
+
+<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import random
+
+print( random.randint(1, 10) )
+</textarea>
+</div>
+</div>
+<div class="section" id="number-guessing-game">
+<h2>1.16. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
+<p>Remember the number guessing game we created in Scratch? The basic premise was as follows:</p>
+<ul class="simple">
+<li>generates a random number from 1 to 100 and stores it in a variable</li>
+<li>repeats the following until the user guesses the number</li>
+<li>gets the user to guess the number (using the <strong>ask</strong> block)</li>
+<li>tells the user if the number is too high or too low</li>
+<li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
+</ul>
+<p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem.</p>
+
+<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='Create a number guessing game here!'>
+# the algorithm for the game can be described as follows
+# your job is to try to convert the comments into real Python code!
+
+# have the computer pick a random number between 1 to 100
+
+
+# create a variable to keep track of the number of guesses taken
+
+
+# set a variable with an initial value for the users guess, like this:
+user_guess = -1
+
+# repeat the following until the user guesses correctly
+
+    # ask the user for their guess
+
+
+    # update the number of guesses variable
+
+
+    # if they guess high, tell them
+
+
+    # if they guess low, tell them
+
+
+# congratulate the user, telling them how many guesses it took
+</textarea>
+</div>
 </div>
 </div>
 

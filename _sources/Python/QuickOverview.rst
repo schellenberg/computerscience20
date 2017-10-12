@@ -1,13 +1,21 @@
 Quick Python Overview
 ==========================
 
+.. note:: In today's quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
+
 
 What is Python?
 ---------------
 
 Python is a programming language that lets you teach the computer to do what you want. You've already been writing Python programs using Reeborg. Everything you have already learned (with the exception of `repeat`), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.
 
-In today's quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
+
+Running Python on Your Computer
+-------------------------------
+
+There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to `download Thonny <http://thonny.org/>`_. Go download Thonny now. It doesn't require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well. 
+
+For each of the code segments that you see on this page, you can either run them directly in your web browser **OR** you can copy/paste the code into Thonny to run it. 
 
 
 Whitespace
@@ -152,6 +160,27 @@ Symbols   Operations                        Example               Output
 =======   ==============================    ===============       ======
 
 
+
+``if``
+----------------
+
+The ``if`` control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to ``number = 23``. How about ``number = 10``? 
+
+.. note:: A single equal sign = is used to **assign** a value. Two equal signs are used when **comparing** a value.
+
+.. activecode:: if_intro_1
+    :nocodelens:
+    
+    number = 42
+
+    if number == 42:
+        print("So long and thanks for all the fish.")
+
+    if number == 23:
+        print("Michael Jordan is the GOAT (Greatest of All Time)")
+
+
+
 ``if/elif/else``
 ----------------
 
@@ -176,7 +205,7 @@ The ``if/elif/else`` control structure works in the exact same way it did when y
 Recall that we used a ``while`` loop in Reeborg when we didn't know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to ``True``. Run the code below. Can you change the code so that it counts **up** from 1 to 10, then says "Here I come!"?
 
 .. activecode:: while_loop_intro
-   :nocodelens:
+    :nocodelens:
     
     counter = 10
 
@@ -243,6 +272,117 @@ Taking Input from User
 -------------------------
 
 If you want the user to type something, you can use the ``input()`` function. Here are a couple examples:
+
+.. note:: ``input()`` will always return a string. You will need to convert it to an int or a float if you are expecting a number.
+
+
+.. activecode:: input_intro_1
+    :nocodelens:
+    
+    your_name = input("What is your name?")
+    print(your_name)
+
+
+.. activecode:: input_intro_2
+    :nocodelens:
+    
+    def say_hello(some_name):
+        print("Hello there, " + some_name)
+
+    your_name = input("What is your name?")
+    say_hello(your_name)
+
+
+The following example is not going to work when you try to run it. Try entering in ``16``, then ``15``. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? *Hint: think about data types!*
+
+.. activecode:: input_intro_3
+    :nocodelens:
+    :caption: Can you figure out what is wrong?
+    
+    age = input("How old are you?")
+
+    if age == 16:
+        print("You can get your driver's license!")
+    elif age == 15:
+        print("You can get your learner driver's license.")
+
+
+Python Modules
+---------------
+
+One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import *```, you made all of the functions in the library tab available to your program. Please note that although we could use the ``from library import *`` syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import. 
+
+.. activecode:: module_intro_1
+    :nocodelens:
+    :caption: This works, but isn't recommended.
+    
+    from math import *
+
+    print( sqrt(16) )
+    print( cos(0) )
+
+.. activecode:: module_intro_2
+    :nocodelens:
+    :caption: This is the better way to import a module.
+    
+    import math
+
+    print( math.sqrt(16) )
+    print( math.cos(0) )
+
+.. activecode:: module_intro_3
+    :nocodelens:
+    
+    import random
+
+    print( random.randint(1, 10) )
+
+
+Number Guessing Game
+--------------------
+
+Remember the number guessing game we created in Scratch? The basic premise was as follows:
+
+- generates a random number from 1 to 100 and stores it in a variable
+- repeats the following until the user guesses the number
+- gets the user to guess the number (using the **ask** block)
+- tells the user if the number is too high or too low
+- congratulates the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
+
+We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem.
+
+
+.. activecode:: module_intro_3
+    :caption: Create a number guessing game here!
+    
+    # the algorithm for the game can be described as follows
+    # your job is to try to convert the comments into real Python code!
+
+    # have the computer pick a random number between 1 to 100
+
+
+    # create a variable to keep track of the number of guesses taken
+
+
+    # set a variable with an initial value for the users guess, like this:
+    user_guess = -1
+
+    # repeat the following until the user guesses correctly
+
+        # ask the user for their guess
+
+
+        # update the number of guesses variable
+
+
+        # if they guess high, tell them
+
+
+        # if they guess low, tell them
+
+
+    # congratulate the user, telling them how many guesses it took
+
 
 
 
