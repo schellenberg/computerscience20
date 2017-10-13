@@ -1,6 +1,12 @@
 Step 1: Move Reeborg Home and Saving Your Work
 ==============================================
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+
+
 Tutorial
 --------
 

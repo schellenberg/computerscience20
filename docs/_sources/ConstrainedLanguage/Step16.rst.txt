@@ -1,10 +1,18 @@
 Step 16: Pseudocode
 ======================
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
+
 Tutorial
 ---------
 
-You have learned a lot about programming Reeborg. Congratulations! What you may not realize is that you have learned a lot about programming in any language. Most programs are a sequence of steps, interspersed with conditional decisions and groups of instructions that repeat.
+You have learned a lot about programming Reeborg. Congratulations! What you may not realize is that you have learned a lot about programming in any language. Most programs are a sequence of steps (called an **algorithm**), interspersed with conditional decisions and groups of instructions that repeat.
 
 Implementing the solutions to the assignments so far has required a little more thought at each step. You understand the question and the desired result, but sometimes it's not immediately clear how to get it done. When you are solving a non-trivial problem, it is often **best to begin with pencil and paper**.
 

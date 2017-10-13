@@ -5,9 +5,12 @@ Step 0: Transitioning To Text
 
     Explore the |reeborg_environment|, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.
 
-.. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+
 
 Introduction
 ------------

@@ -1,6 +1,13 @@
 Step 7: Thinking and Birthday Message
 =======================================
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
+    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+
 Tutorial
 ------------
 

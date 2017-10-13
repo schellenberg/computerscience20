@@ -1,6 +1,14 @@
 Second Practice Quiz
 ================================
 
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+
 To confirm that you understand the major concepts you've seen with Reeborg, try to answer the first 4 questions **without opening the Reeborg environment**.
 
 Question 1 - While Loops
