@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1. Quick Python Overview &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../../ComputingAndSociety/UnderlyingTechnology.html" />
+    <link rel="prev" title="Second Practice Quiz" href="../../ConstrainedLanguage/PracticeQuiz.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">1. Quick Python Overview</a><ul>
+<li><a class="reference internal" href="#what-is-python">1.1. What is Python?</a></li>
+<li><a class="reference internal" href="#running-python-on-your-computer">1.2. Running Python on Your Computer</a></li>
+<li><a class="reference internal" href="#whitespace">1.3. Whitespace</a></li>
+<li><a class="reference internal" href="#printing-output">1.4. Printing Output</a></li>
+<li><a class="reference internal" href="#variables-and-data-types">1.5. Variables and Data Types</a></li>
+<li><a class="reference internal" href="#checking-data-types">1.6. Checking Data Types</a></li>
+<li><a class="reference internal" href="#converting-between-data-types">1.7. Converting Between Data Types</a></li>
+<li><a class="reference internal" href="#math-operators">1.8. Math Operators</a></li>
+<li><a class="reference internal" href="#if">1.9. <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li><a class="reference internal" href="#if-elif-else">1.10. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
+<li><a class="reference internal" href="#while-loop">1.11. <code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
+<li><a class="reference internal" href="#for-loop">1.12. <code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
+<li><a class="reference internal" href="#functions">1.13. Functions</a></li>
+<li><a class="reference internal" href="#taking-input-from-user">1.14. Taking Input from User</a></li>
+<li><a class="reference internal" href="#python-modules">1.15. Python Modules</a></li>
+<li><a class="reference internal" href="#number-guessing-game">1.16. Number Guessing Game</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Second Practice Quiz" data-toggle="tooltip">
+    <a href="../../ConstrainedLanguage/PracticeQuiz.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
+    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="quick-python-overview">
+<h1>1. Quick Python Overview<a class="headerlink" href="#quick-python-overview" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In today’s quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.</p>
+</div>
+<div class="section" id="what-is-python">
+<h2>1.1. What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
+<p>Python is a programming language that lets you teach the computer to do what you want. You’ve already been writing Python programs using Reeborg. Everything you have already learned (with the exception of <cite>repeat</cite>), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.</p>
+</div>
+<div class="section" id="running-python-on-your-computer">
+<h2>1.2. Running Python on Your Computer<a class="headerlink" href="#running-python-on-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to <a class="reference external" href="http://thonny.org/">download Thonny</a>. Go download Thonny now. It doesn’t require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well.</p>
+<p>For each of the code segments that you see on this page, you can either run them directly in your web browser <strong>OR</strong> you can copy/paste the code into Thonny to run it.</p>
+<p>When using Thonny, you need to understand the difference between the <strong>text editor</strong> and the <strong>shell</strong> (also known as the interpreter). If you want to save your code to use again later, you should type your code into the text editor, which will prompt you to save your file somewhere on disk when you press the Run Current Script button (or press F5). The output of your code will show up in the shell (underneath the text editor). You can also type in any Python code you’d like into the shell, which is a handy way to try out new things in Python.</p>
+<img alt="../../_images/thonny_window.png" src="../../_images/thonny_window.png" />
+</div>
+<div class="section" id="whitespace">
+<h2>1.3. Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<p>Just like when you were programming Reeborg, it is <strong>really important to indent your code correctly</strong> in Python. For example, the code given below will cause a <strong>syntax error</strong> when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you’ve fixed it!</p>
+
+<div data-childcomponent="syntax_error_indentation" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=syntax_error_indentation data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Fix the syntax error by indenting the code properly.'>
+some_number = 5
+if some_number > 3:
+print("Yeah, the number is bigger.")
+</textarea>
+</div>
+</div>
+<div class="section" id="printing-output">
+<h2>1.4. Printing Output<a class="headerlink" href="#printing-output" title="Permalink to this headline">¶</a></h2>
+<p>As you saw in the example above, you can <code class="docutils literal"><span class="pre">print()</span></code> things to standard output (usually the Python console/interpreter). The <code class="docutils literal"><span class="pre">print()</span></code> function will be used in many of the examples that follow.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.</p>
+</div>
+</div>
+<div class="section" id="variables-and-data-types">
+<h2>1.5. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
+<p>The fundamental data types that we are concerned about in Python include:</p>
+<ul class="simple">
+<li><strong>int</strong> (integer, such as <code class="docutils literal"><span class="pre">3</span></code> or <code class="docutils literal"><span class="pre">-5</span></code>)</li>
+<li><strong>float</strong> (floating point number, such as <code class="docutils literal"><span class="pre">1.2</span></code> or <code class="docutils literal"><span class="pre">-4.75</span></code>)</li>
+<li><strong>str</strong> (string, such as <code class="docutils literal"><span class="pre">&quot;hello&quot;</span></code> or <code class="docutils literal"><span class="pre">'Friday'</span></code> or <code class="docutils literal"><span class="pre">&quot;5&quot;</span></code>)</li>
+<li><strong>bool</strong> (boolean, such as <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>)</li>
+</ul>
+<p>We will use each of the data types given above throughout the course, and it is <strong>really important</strong> that you understand the differences between them. Take a moment now to try the following questions.</p>
+<p><strong>Check Your Understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
+            sc-1-4: What is the data type of <code class="docutils literal"><span class="pre">'this</span> <span class="pre">is</span> <span class="pre">what</span> <span class="pre">kind</span> <span class="pre">of</span> <span class="pre">data'</span></code>?
+            <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
+            
+            <li data-component="answer"  id="data_types_1_1_opt_c">float</li><li data-component="feedback" id="data_types_1_1_opt_c">The value is not numeric with a decimal point.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_1_opt_d">string</li><li data-component="feedback" id="data_types_1_1_opt_d">Great! Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
+            sc-1-5: What is the data type of <code class="docutils literal"><span class="pre">3</span></code>?
+            <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_2_opt_c">float</li><li data-component="feedback" id="data_types_1_2_opt_c">The value is not numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_2_opt_d">string</li><li data-component="feedback" id="data_types_1_2_opt_d">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
+            sc-1-6: What is the data type of <code class="docutils literal"><span class="pre">True</span></code>?
+            <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_c">float</li><li data-component="feedback" id="data_types_1_3_opt_c">The value is not numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_3_opt_d">string</li><li data-component="feedback" id="data_types_1_3_opt_d">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
+            sc-1-7: What is the data type of <code class="docutils literal"><span class="pre">1.5</span></code>?
+            <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_4_opt_c">float</li><li data-component="feedback" id="data_types_1_4_opt_c">Great! The value is numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_d">string</li><li data-component="feedback" id="data_types_1_4_opt_d">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="checking-data-types">
+<h2>1.6. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
+<p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal"><span class="pre">5</span></code> with <code class="docutils literal"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal"><span class="pre">&quot;5.3&quot;</span></code>?</p>
+
+<div data-childcomponent="checking_data_types" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=checking_data_types data-lang="python"    data-timelimit=25000   data-audio=''     >
+print( type(5) )
+</textarea>
+</div>
+</div>
+<div class="section" id="converting-between-data-types">
+<h2>1.7. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">str(x)</span></code> to convert <em>x</em> to a string</li>
+<li><code class="docutils literal"><span class="pre">int(x)</span></code> to convert <em>x</em> to an integer</li>
+<li><code class="docutils literal"><span class="pre">float(x)</span></code> to convert <em>x</em> to a floating point number</li>
+</ul>
+
+<div data-childcomponent="casting_data_types" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=casting_data_types data-lang="python"    data-timelimit=25000   data-audio=''     >
+a = 4         #a is an int
+print( type(a) )
+
+b = str(a)    #b is the string '4'
+print( type(b) )
+
+c = float(b)  #c is the float 4.0
+print( type(c) )
+</textarea>
+</div>
+</div>
+<div class="section" id="math-operators">
+<h2>1.8. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
+<p>We can do math with Python, but we need to know the operators to use. The following table shows the most frequently used math operators in Python.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="52%" />
+<col width="26%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbols</th>
+<th class="head">Operations</th>
+<th class="head">Example</th>
+<th class="head">Output</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>+</td>
+<td>Addition</td>
+<td><code class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code></td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>-</td>
+<td>Subtraction</td>
+<td><code class="docutils literal"><span class="pre">2</span> <span class="pre">-</span> <span class="pre">1</span></code></td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>*</td>
+<td>Multiplication</td>
+<td><code class="docutils literal"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code></td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>Division</td>
+<td><code class="docutils literal"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">2</span></code></td>
+<td>2.5</td>
+</tr>
+<tr class="row-even"><td>//</td>
+<td>Truncating Division (quotient)</td>
+<td><code class="docutils literal"><span class="pre">5</span> <span class="pre">//</span> <span class="pre">2</span></code></td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>%</td>
+<td>Modulo (remainder)</td>
+<td><code class="docutils literal"><span class="pre">5</span> <span class="pre">%</span> <span class="pre">2</span></code></td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>**</td>
+<td>Power</td>
+<td><code class="docutils literal"><span class="pre">5</span> <span class="pre">**</span> <span class="pre">2</span></code></td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="if">
+<h2>1.9. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A single equal sign = is used to <strong>assign</strong> a value. Two equal signs are used when <strong>comparing</strong> a value.</p>
+</div>
+
+<div data-childcomponent="if_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=if_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+number = 42
+
+if number == 42:
+    print("So long and thanks for all the fish.")
+
+if number == 23:
+    print("Michael Jordan is the GOAT (Greatest of All Time)")
+</textarea>
+</div>
+</div>
+<div class="section" id="if-elif-else">
+<h2>1.10. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
+
+<div data-childcomponent="if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=if_elif_else_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
+temp = -3
+
+if temp < -10:
+    print("wear winter jacket")
+elif temp < 15:
+    print("wear long sleeve shirt")
+else:
+    print("wear t-shirt")
+</textarea>
+</div>
+</div>
+<div class="section" id="while-loop">
+<h2>1.11. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
+<p>Recall that we used a <code class="docutils literal"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
+
+<div data-childcomponent="while_loop_intro" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=while_loop_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
+counter = 10
+
+while counter > 0:
+    print(counter)
+    counter = counter - 1   #decrease the counter each iteration
+
+print("Blastoff!")
+</textarea>
+</div>
+</div>
+<div class="section" id="for-loop">
+<h2>1.12. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal"><span class="pre">10</span></code> to some other number and try it again)</p>
+
+<div data-childcomponent="for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=for_loop_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+for counter in range(10):
+    print(counter)
+</textarea>
+</div>
+<p>Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:</p>
+
+<div data-childcomponent="for_loop_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=for_loop_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+for counter in range(5, 11):
+    print(counter)
+</textarea>
+</div>
+<p>One last version of the for loop that we will introduce allows us to go through a <em>list</em> of values, as follows. <em>Please note that there are a bunch of things in this example that you don’t need to understand yet! We’ll get there!</em></p>
+
+<div data-childcomponent="for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=for_loop_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+grocery_list = ["apples", "carrots", "milk", "yogurt"]
+for item in grocery_list:
+    print("Don't forget to buy the " + item)
+</textarea>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>1.13. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
+
+<div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def say_hello():
+    print("Hello there!")
+
+say_hello()
+</textarea>
+</div>
+
+<div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def say_hello(some_name):
+    print("Hello there, " + some_name)
+
+say_hello("Eli")
+</textarea>
+</div>
+</div>
+<div class="section" id="taking-input-from-user">
+<h2>1.14. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
+<p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">input()</span></code> will always return a string. You will need to convert it to an int or a float if you are expecting a number.</p>
+</div>
+
+<div data-childcomponent="input_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+your_name = input("What is your name?")
+print(your_name)
+</textarea>
+</div>
+
+<div data-childcomponent="input_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def say_hello(some_name):
+    print("Hello there, " + some_name)
+
+your_name = input("What is your name?")
+say_hello(your_name)
+</textarea>
+</div>
+<p>The following example is not going to work when you try to run it. Try entering in <code class="docutils literal"><span class="pre">16</span></code>, then <code class="docutils literal"><span class="pre">15</span></code>. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
+
+<div data-childcomponent="input_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Can you figure out what is wrong?'>
+age = input("How old are you?")
+
+if age == 16:
+    print("You can get your driver's license!")
+elif age == 15:
+    print("You can get your learner driver's license.")
+</textarea>
+</div>
+</div>
+<div class="section" id="python-modules">
+<h2>1.15. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
+<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
+
+<div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This works, but isn't recommended.'>
+from math import *
+
+print( sqrt(16) )
+print( cos(0) )
+</textarea>
+</div>
+
+<div data-childcomponent="module_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This is the better way to import a module.'>
+import math
+
+print( math.sqrt(16) )
+print( math.cos(0) )
+</textarea>
+</div>
+
+<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import random
+
+print( random.randint(1, 10) )
+</textarea>
+</div>
+</div>
+<div class="section" id="number-guessing-game">
+<h2>1.16. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
+<p>Remember the number guessing game we created in Scratch? The basic premise was as follows:</p>
+<ul class="simple">
+<li>generates a random number from 1 to 100 and stores it in a variable</li>
+<li>repeats the following until the user guesses the number</li>
+<li>gets the user to guess the number (using the <strong>ask</strong> block)</li>
+<li>tells the user if the number is too high or too low</li>
+<li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
+</ul>
+<p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem.</p>
+
+<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=module_intro_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='Create a number guessing game here!'>
+# the algorithm for the game can be described as follows
+# your job is to try to convert the comments into real Python code!
+
+# have the computer pick a random number between 1 to 100
+
+
+# create a variable to keep track of the number of guesses taken
+
+
+# set a variable with an initial value for the users guess, like this:
+user_guess = -1
+
+# repeat the following until the user guesses correctly
+
+    # ask the user for their guess
+
+
+    # update the number of guesses variable
+
+
+    # if they guess high, tell them
+
+
+    # if they guess low, tell them
+
+
+# congratulate the user, telling them how many guesses it took
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Second Practice Quiz' data-toggle="tooltip">
+    <a href="../../ConstrainedLanguage/PracticeQuiz.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../../ConstrainedLanguage/PracticeQuiz.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
+    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../ComputingAndSociety/UnderlyingTechnology.html" >Next Section - Underlying Technology of Computing Devices and the Internet</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

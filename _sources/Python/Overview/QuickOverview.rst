@@ -17,6 +17,10 @@ There are many different ways to install Python on your computer (in fact, some 
 
 For each of the code segments that you see on this page, you can either run them directly in your web browser **OR** you can copy/paste the code into Thonny to run it. 
 
+When using Thonny, you need to understand the difference between the **text editor** and the **shell** (also known as the interpreter). If you want to save your code to use again later, you should type your code into the text editor, which will prompt you to save your file somewhere on disk when you press the Run Current Script button (or press F5). The output of your code will show up in the shell (underneath the text editor). You can also type in any Python code you'd like into the shell, which is a handy way to try out new things in Python.
+
+.. image:: images/thonny_window.png
+
 
 Whitespace
 -----------

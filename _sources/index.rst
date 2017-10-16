@@ -83,7 +83,7 @@ Python
    :numbered:
    :maxdepth: 1
 
-   Python/QuickOverview.rst
+   Python/Overview/QuickOverview.rst
 
 Computing and Society
 :::::::::::::::::::::
