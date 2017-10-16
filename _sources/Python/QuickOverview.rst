@@ -49,7 +49,7 @@ The fundamental data types that we are concerned about in Python include:
 
 - **int** (integer, such as ``3`` or ``-5``)
 - **float** (floating point number, such as ``1.2`` or ``-4.75``)
-- **str** (string, such as ``"hello"`` or ``'Friday`` or ``"5"``)
+- **str** (string, such as ``"hello"`` or ``'Friday'`` or ``"5"``)
 - **bool** (boolean, such as ``True`` or ``False``) 
 
 We will use each of the data types given above throughout the course, and it is **really important** that you understand the differences between them. Take a moment now to try the following questions.
