@@ -318,7 +318,7 @@ One of the great things about Python is that there are a lot of modules that ext
 
 .. activecode:: module_intro_1
     :nocodelens:
-    :caption: This works, but isn't recommended.
+    :caption: This works, but is not recommended.
     
     from math import *
 
