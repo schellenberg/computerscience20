@@ -464,18 +464,49 @@ Practice Problems
 
 Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
+.. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string!
+
 
 Area of a Circle
 ~~~~~~~~~~~~~~~~
+
 Write a program that will compute the area of a circle.  Prompt the user to enter the radius and print a nice message back to the user with the answer.
    
 .. activecode:: practice_problem_variables_data_types_1
     :nocodelens:
 
-    # Put Your Name Here
     # Area of a Circle Calculator
+    # Put Your Name Here
     # Put the Date Here
 
     # your code goes here
 
 
+Area of a Rectangle
+~~~~~~~~~~~~~~~~~~~
+
+Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle. Print a nice message with the answer.
+   
+.. activecode:: practice_problem_variables_data_types_2
+    :nocodelens:
+
+    # Area of a Rectangle Calculator
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
+
+
+Car Gas Usage
+~~~~~~~~~~~~~
+
+Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Promp the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. *Note: If you aren't sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km*.
+
+.. activecode:: practice_problem_variables_data_types_3
+    :nocodelens:
+
+    # Gas Mileage Calculator
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here

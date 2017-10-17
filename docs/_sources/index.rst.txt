@@ -84,7 +84,7 @@ Python
    :maxdepth: 1
 
    Python/Overview/QuickOverview.rst
-   Python/VariablesAndExpressions/GettingStarted.rst
+   Python/VariablesAndExpressions/VariablesAndDataTypes.rst
 
 
 Computing and Society

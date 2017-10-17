@@ -39,7 +39,7 @@ Just like when you were programming Reeborg, it is **really important to indent 
 Printing Output
 ---------------
 
-As you saw in the example above, you can ``print()`` things to standard output (usually the Python console/interpreter). The ``print()`` function will be used in many of the examples that follow. 
+As you saw in the example above, you can ``print()`` things to standard output (usually the Python console/interpreter). The ``print()`` function will be used in many of the examples that follow. Note that ``print()`` can take any number of arguments, separated by commas. So you could print something like this: ``print("Monday", "Tuesday", "Wednesday")``, which would print ``Monday Tuesday Wednesday``, with each argument separated by a space.
 
 .. note:: There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.
 
@@ -246,7 +246,7 @@ One last version of the for loop that we will introduce allows us to go through 
     
     grocery_list = ["apples", "carrots", "milk", "yogurt"]
     for item in grocery_list:
-        print("Don't forget to buy the " + item)
+        print("Don't forget to buy the", item)
 
 
 Functions
@@ -267,7 +267,7 @@ Just like you were able to teach Reeborg to do new things by creating a new func
     :nocodelens:
     
     def say_hello(some_name):
-        print("Hello there, " + some_name)
+        print("Hello there,", some_name)
 
     say_hello("Eli")
 
@@ -291,7 +291,7 @@ If you want the user to type something, you can use the ``input()`` function. He
     :nocodelens:
     
     def say_hello(some_name):
-        print("Hello there, " + some_name)
+        print("Hello there, ", some_name)
 
     your_name = input("What is your name?")
     say_hello(your_name)
@@ -353,7 +353,7 @@ Remember the number guessing game we created in Scratch? The basic premise was a
 - tells the user if the number is too high or too low
 - congratulates the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
 
-We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem.
+We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.
 
 
 .. activecode:: module_intro_3

@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Getting Started and Data Types Review" href="../VariablesAndExpressions/GettingStarted.html" />
+    <link rel="next" title="2. Variables, Data Types, and Python Information" href="../VariablesAndExpressions/GettingStarted.html" />
     <link rel="prev" title="Second Practice Quiz" href="../../ConstrainedLanguage/PracticeQuiz.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -224,7 +224,7 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 2. Getting Started and Data Types Review' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 2. Variables, Data Types, and Python Information' data-toggle="tooltip" >
     <a href="../VariablesAndExpressions/GettingStarted.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -287,7 +287,7 @@ print("Yeah, the number is bigger.")
 </div>
 <div class="section" id="printing-output">
 <h2>1.4. Printing Output<a class="headerlink" href="#printing-output" title="Permalink to this headline">¶</a></h2>
-<p>As you saw in the example above, you can <code class="docutils literal"><span class="pre">print()</span></code> things to standard output (usually the Python console/interpreter). The <code class="docutils literal"><span class="pre">print()</span></code> function will be used in many of the examples that follow.</p>
+<p>As you saw in the example above, you can <code class="docutils literal"><span class="pre">print()</span></code> things to standard output (usually the Python console/interpreter). The <code class="docutils literal"><span class="pre">print()</span></code> function will be used in many of the examples that follow. Note that <code class="docutils literal"><span class="pre">print()</span></code> can take any number of arguments, separated by commas. So you could print something like this: <code class="docutils literal"><span class="pre">print(&quot;Monday&quot;,</span> <span class="pre">&quot;Tuesday&quot;,</span> <span class="pre">&quot;Wednesday&quot;)</span></code>, which would print <code class="docutils literal"><span class="pre">Monday</span> <span class="pre">Tuesday</span> <span class="pre">Wednesday</span></code>, with each argument separated by a space.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.</p>
@@ -539,7 +539,7 @@ for counter in range(5, 11):
 <textarea data-component="activecode" id=for_loop_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
 grocery_list = ["apples", "carrots", "milk", "yogurt"]
 for item in grocery_list:
-    print("Don't forget to buy the " + item)
+    print("Don't forget to buy the", item)
 </textarea>
 </div>
 </div>
@@ -561,7 +561,7 @@ say_hello()
 
 <textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def say_hello(some_name):
-    print("Hello there, " + some_name)
+    print("Hello there,", some_name)
 
 say_hello("Eli")
 </textarea>
@@ -587,7 +587,7 @@ print(your_name)
 
 <textarea data-component="activecode" id=input_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def say_hello(some_name):
-    print("Hello there, " + some_name)
+    print("Hello there, ", some_name)
 
 your_name = input("What is your name?")
 say_hello(your_name)
@@ -650,7 +650,7 @@ print( random.randint(1, 10) )
 <li>tells the user if the number is too high or too low</li>
 <li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
 </ul>
-<p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem.</p>
+<p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.</p>
 
 <div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
 
@@ -697,12 +697,12 @@ user_guess = -1
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../../ConstrainedLanguage/PracticeQuiz.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 2. Getting Started and Data Types Review' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 2. Variables, Data Types, and Python Information' data-toggle="tooltip" >
     <a href="../VariablesAndExpressions/GettingStarted.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../VariablesAndExpressions/GettingStarted.html" >Next Section - 2. Getting Started and Data Types Review</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../VariablesAndExpressions/GettingStarted.html" >Next Section - 2. Variables, Data Types, and Python Information</a>
 
 <script type="text/javascript">
 
