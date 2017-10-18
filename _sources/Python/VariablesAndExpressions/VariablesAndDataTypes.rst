@@ -42,6 +42,16 @@ For the following examples, consider the data type of each variable. What will t
     y = 3 + x
     print(x + y)
 
+.. activecode:: wdtpd_variable_assignment_3
+    :caption: What will this program print?
+    :nocodelens:
+
+    x = 4
+    y = 3
+    z = "five"
+    x = 2
+    print(x + y)
+
 .. activecode:: wdtpd_variable_assignment_2
     :caption: What will this program print?
     :nocodelens:
@@ -50,16 +60,6 @@ For the following examples, consider the data type of each variable. What will t
     y = 3
     z = "five"
     print(y + z)
-
-
-.. activecode:: wdtpd_variable_assignment_3
-    :caption: What will this program print?
-    :nocodelens:
-
-    x = 4
-    y = 3
-    z = "five"
-    print(str(y) + z)
 
 
 The Python Programming Language
