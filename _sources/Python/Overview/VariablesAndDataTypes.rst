@@ -30,7 +30,7 @@ Remember the we learned four primitive data types in our overview of Python. The
 - ``bool``
 
 
-.. note:: Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do. 
+.. note:: Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code. 
 
 For the following examples, consider the data type of each variable. What will the program output? Why?
 
@@ -395,3 +395,9 @@ Write a program that will compute the Litres per Kilometers (l/100km) that a car
     # Put the Date Here
 
     # your code goes here
+
+
+If You Finish Early
+~~~~~~~~~~~~~~~~~~~~
+
+If you completed all the questions above before the end of class, you might want to try making a calculator for a more complicated math problem. 
