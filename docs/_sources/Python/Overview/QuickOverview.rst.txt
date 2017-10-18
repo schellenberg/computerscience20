@@ -170,7 +170,7 @@ Symbols   Operations                        Example               Output
 
 The ``if`` control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to ``number = 23``. How about ``number = 10``? 
 
-.. note:: A single equal sign = is used to **assign** a value. Two equal signs are used when **comparing** a value.
+.. note:: A single equal sign ``=`` is used to **assign** a value. Two equal signs ``==`` are used when **comparing** a value.
 
 .. activecode:: if_intro_1
     :nocodelens:

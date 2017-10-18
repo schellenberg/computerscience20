@@ -84,7 +84,9 @@ Python
    :maxdepth: 1
 
    Python/Overview/QuickOverview.rst
-   Python/VariablesAndExpressions/VariablesAndDataTypes.rst
+   Python/Overview/VariablesAndDataTypes.rst
+   Python/Overview/Conditionals.rst
+
 
 
 Computing and Society

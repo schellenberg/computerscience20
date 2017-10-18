@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>2. Variables, Data Types, and Python Information &#8212; Computer Science 20 Saskatchewan</title>
+    <title>2. Variables, Data Types, and User Input &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../../ComputingAndSociety/UnderlyingTechnology.html" />
-    <link rel="prev" title="1. Quick Python Overview" href="../Overview/QuickOverview.html" />
+    <link rel="next" title="3. Conditionals" href="Conditionals.html" />
+    <link rel="prev" title="1. Quick Python Overview" href="QuickOverview.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,15 +192,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">2. Variables, Data Types, and Python Information</a><ul>
+<li><a class="reference internal" href="#">2. Variables, Data Types, and User Input</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">2.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#the-python-programming-language">2.2. The Python Programming Language</a></li>
+<li><a class="reference internal" href="#using-thonny">2.2. Using Thonny</a></li>
 <li><a class="reference internal" href="#comments">2.3. Comments</a></li>
 <li><a class="reference internal" href="#variables">2.4. Variables</a></li>
 <li><a class="reference internal" href="#variable-names-and-keywords">2.5. Variable Names and Keywords</a></li>
-<li><a class="reference internal" href="#reassignment">2.6. Reassignment</a></li>
-<li><a class="reference internal" href="#practice-problems">2.7. Practice Problems</a><ul>
-<li><a class="reference internal" href="#area-of-a-circle">2.7.1. Area of a Circle</a></li>
+<li><a class="reference internal" href="#practice-problems">2.6. Practice Problems</a><ul>
+<li><a class="reference internal" href="#area-of-a-circle">2.6.1. Area of a Circle</a></li>
+<li><a class="reference internal" href="#area-of-a-rectangle">2.6.2. Area of a Rectangle</a></li>
+<li><a class="reference internal" href="#car-gas-usage">2.6.3. Car Gas Usage</a></li>
 </ul>
 </li>
 </ul>
@@ -213,13 +214,13 @@
         
           
   <li id="relations-prev" title="Previous Chapter - 1. Quick Python Overview" data-toggle="tooltip">
-    <a href="../Overview/QuickOverview.html" >
+    <a href="QuickOverview.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" title='Next Chapter - 3. Conditionals' data-toggle="tooltip" >
+    <a href="Conditionals.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -249,8 +250,8 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="variables-data-types-and-python-information">
-<h1>2. Variables, Data Types, and Python Information<a class="headerlink" href="#variables-data-types-and-python-information" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="variables-data-types-and-user-input">
+<h1>2. Variables, Data Types, and User Input<a class="headerlink" href="#variables-data-types-and-user-input" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.</p>
@@ -287,6 +288,17 @@ print(x + y)
 </textarea>
 </div>
 
+<div data-childcomponent="wdtpd_variable_assignment_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_variable_assignment_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+x = 4
+y = 3
+z = "five"
+x = 2
+print(x + y)
+</textarea>
+</div>
+
 <div data-childcomponent="wdtpd_variable_assignment_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=wdtpd_variable_assignment_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
@@ -296,48 +308,10 @@ z = "five"
 print(y + z)
 </textarea>
 </div>
-
-<div data-childcomponent="wdtpd_variable_assignment_3" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_variable_assignment_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-x = 4
-y = 3
-z = "five"
-print(str(y) + z)
-</textarea>
 </div>
-</div>
-<div class="section" id="the-python-programming-language">
-<h2>2.2. The Python Programming Language<a class="headerlink" href="#the-python-programming-language" title="Permalink to this headline">¶</a></h2>
-<p>Python is an example of a <strong>high-level language</strong>; other high-level languages you might have heard of are C++, PHP, and Java.</p>
-<p>As you might infer from the name high-level language, there are also <strong>low-level languages</strong>, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer.  Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages.  To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous.</p>
-<p>First, it is much easier to program in a
-high-level language. Programs written in a high-level language take less time
-to write, they are shorter and easier to read, and they are more likely to be
-correct. Second, high-level languages are <strong>portable</strong>, meaning that they can
-run on different kinds of computers with few or no modifications. Low-level
-programs can run on only one kind of computer and have to be rewritten to run
-on another.</p>
-<p>Due to these advantages, almost all programs are written in high-level
-languages. Low-level languages are used only for a few specialized
-applications.</p>
-<p>Two kinds of programs process high-level languages into low-level languages:
-<strong>interpreters</strong> and <strong>compilers</strong>. An interpreter reads a high-level program
-and executes it, meaning that it does what the program says. It processes the
-program a little at a time, alternately reading lines and performing
-computations.</p>
-<img alt="Interpret illustration" src="../../_images/interpret.png" />
-<p>A compiler reads the program and translates it completely before the program
-starts running. In this case, the high-level program is called the <strong>source
-code</strong>, and the translated program is called the <strong>object code</strong> or the
-<strong>executable</strong>. Once a program is compiled, you can execute it repeatedly
-without further translation.</p>
-<img alt="Compile illustration" src="../../_images/compile.png" />
-<p>Many modern languages use both processes. They are first compiled into a lower
-level language, called <strong>byte code</strong>, and then interpreted by a program called
-a <strong>virtual machine</strong>. Python uses both processes, but because of the way
-programmers interact with it, it is usually considered an interpreted language.</p>
-<p>There are two ways to use the Python interpreter: <em>shell mode</em> and <em>program
+<div class="section" id="using-thonny">
+<h2>2.2. Using Thonny<a class="headerlink" href="#using-thonny" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to use Thonny: <em>shell mode</em> and <em>program
 mode</em>. In shell mode, you type Python expressions into the <strong>Python shell</strong>,
 and the interpreter immediately shows the result.  The example below shows the Python shell at work.</p>
 <img alt="../../_images/thonny_shell.png" src="../../_images/thonny_shell.png" />
@@ -355,8 +329,7 @@ example, we used a Thonny to create a source code file named <code class="docuti
 the following contents:</p>
 <img alt="../../_images/thonny_editor.png" src="../../_images/thonny_editor.png" />
 <p>By convention, files that contain Python programs have names that end with
-<code class="docutils literal"><span class="pre">.py</span></code> .  Following this convention will help your operating system and other
-programs identify a file as containing python code.</p>
+<code class="docutils literal"><span class="pre">.py</span></code> .  Thonny will save your files with a .py extension automatically, and you should be able to open them in Thonny by double clicking them in File Explorer (or Finder).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Notice that when we were using the <strong>shell</strong>, we didn’t have to worry about using <code class="docutils literal"><span class="pre">print()</span></code> to see the value of a statement. The shell does that automatically. However, if we are using the <strong>code editor</strong>, we need to call <strong>print()</strong> any time we want to see output.</p>
@@ -377,33 +350,17 @@ programs identify a file as containing python code.</p>
 
             </ul>
             </div>
-            
-            <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_2_2">
-            intro-12:  What is the difference between a high-level programming language and a low-level programming language?
-            <li data-component="answer"  id="question1_2_2_opt_a">It is high-level if you are standing and low-level if you are sitting.</li><li data-component="feedback" id="question1_2_2_opt_a">In this case high and low have nothing to do with altitude.</li>
-            
-            <li data-component="answer"  id="question1_2_2_opt_b">It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.</li><li data-component="feedback" id="question1_2_2_opt_b">High and low have nothing to do with the type of device you are programming for.  Instead, look at what it takes to run the program written in the language.</li>
-            
-            <li data-component="answer" data-correct id="question1_2_2_opt_c">It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.</li><li data-component="feedback" id="question1_2_2_opt_c">Python is a high level language but must be interpreted into machine code (binary) before it can be executed.</li>
-            
-            <li data-component="answer"  id="question1_2_2_opt_d">It is high-level if it easy to program in and is very short; it is low-level if it is really hard to program in and the programs are really long.</li><li data-component="feedback" id="question1_2_2_opt_d">While it is true that it is generally easier to program in a high-level language and programs written in a high-level language are usually shorter, this is not always the case.</li>
-            
-
-            </ul>
-            </div>
             </div>
 <div class="section" id="comments">
 <h2>2.3. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <p>As programs get bigger and more complicated, they get more difficult to read.
-Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of
-code and figure out what it is doing, or why.
+Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of code and figure out what it is doing, or why.
 For this reason, it is a good idea to add notes to your programs to explain in
 natural language what the program is doing.  These notes are called comments.</p>
 <p>A <strong>comment</strong> in a computer program is text that is intended only for the human
 reader - it is completely ignored by the interpreter.
 In Python, the <code class="docutils literal"><span class="pre">#</span></code> token starts a comment.  The rest of the line is ignored.
-Every program you write should start with a comment header, which could look something like this:</p>
+<strong>Every program you write should start with a comment header</strong>, which could look something like this:</p>
 
 <div data-childcomponent="ch01_3" class="runestone explainer ac_section alert alert-warning">
 
@@ -419,16 +376,16 @@ print("Hello, World!")
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Create a folder (call it Computer Science 20) on your computer to hold all of the code you will write in Python this semester. Save the file you created above as <code class="docutils literal"><span class="pre">hello_world.py</span></code>, and save it in that folder.</p>
+<p class="last">Create a folder (call it Computer Science 20) on your computer to hold all of the code you will write in Python this semester. Save the file you created above as <code class="docutils literal"><span class="pre">template.py</span></code>, and save it in that folder.</p>
 </div>
-<p>Notice that when you run this program, it  only prints the phrase Hello, World!  None of the comments appear. You’ll also notice that we’ve left a blank line in the program.  Blank lines
+<p>Notice that when you run this program, it only prints the phrase Hello, World!  None of the comments appear. You’ll also notice that we’ve left a blank line in the program.  Blank lines
 are also ignored by the interpreter, but comments and blank lines can make your
 programs much easier for humans to parse.  Use them liberally!</p>
 <p><strong>Check your understanding</strong></p>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_12_1">
-            intro-13: What are comments for?
+            intro-12: What are comments for?
             <li data-component="answer"  id="question1_12_1_opt_a">To tell the computer what you mean in your program.</li><li data-component="feedback" id="question1_12_1_opt_a">Comments are ignored by the computer.</li>
             
             <li data-component="answer" data-correct id="question1_12_1_opt_b">For the people who are reading your code to know, in natural language, what the program is doing.</li><li data-component="feedback" id="question1_12_1_opt_b">The computer ignores comments.  It's for the humans that will "consume" your program.</li>
@@ -489,58 +446,7 @@ print(n)
 print(pi)
 </textarea>
 </div>
-<p>In each case the result is the value of the variable.
-To see this in even more detail, we can run the program using codelens.</p>
-
-<div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="ch02_9_codelens"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (ch02_9_codelens)</span> </p>
-</div>
-<script type="text/javascript">
-var ch02_9_codelens_trace = {"code": "message = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n\nprint(message)\nprint(n)\nprint(pi)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"message": "What's up, Doc?"}, "ordered_globals": ["message"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"message": "What's up, Doc?", "n": 17}, "ordered_globals": ["message", "n"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"message": "What's up, Doc?", "n": 17, "pi": 3.1416}, "ordered_globals": ["message", "n", "pi"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"message": "What's up, Doc?", "n": 17, "pi": 3.1416}, "ordered_globals": ["message", "n", "pi"], "stack_to_render": [], "heap": {}, "stdout": "What's up, Doc?\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"message": "What's up, Doc?", "n": 17, "pi": 3.1416}, "ordered_globals": ["message", "n", "pi"], "stack_to_render": [], "heap": {}, "stdout": "What's up, Doc?\n17\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"message": "What's up, Doc?", "n": 17, "pi": 3.1416}, "ordered_globals": ["message", "n", "pi"], "stack_to_render": [], "heap": {}, "stdout": "What's up, Doc?\n17\n3.14159\n"}]};
-var ch02_9_codelens_vis;
-
-$(document).ready(function() {
-    try {
-        ch02_9_codelens_vis = new ExecutionVisualizer('ch02_9_codelens',ch02_9_codelens_trace,
-                                    {embeddedMode: false,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(ch02_9_codelens_vis,'ch02_9_codelens');
-        styleButtons('ch02_9_codelens');
-        allVisualizers.push(ch02_9_codelens_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component ch02_9_codelens_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#ch02_9_codelens_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch02_9_codelens'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
-}
-
-
-$(window).resize(function() {
-    if (ch02_9_codelens_vis) {
-        ch02_9_codelens_vis.redrawConnectors();
-    }
-});
-</script>
-</div>
-<p>Now, as you step through the statements, you can see
-the variables and the values they reference as those references are
-created.</p>
+<p>In each case the result is the value of the variable.</p>
 <p>Variables also have types; again, we can ask the interpreter what they are.</p>
 
 <div data-childcomponent="ch02_10" class="runestone explainer ac_section alert alert-warning">
@@ -623,7 +529,7 @@ or change the variable so that it will always reflect the correct value.</p>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question2_3_2">
-            <p>intro-14: What is printed when the following statements execute?</p>
+            <p>intro-13: What is printed when the following statements execute?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="s2">&quot;Thursday&quot;</span>
 <span class="n">day</span> <span class="o">=</span> <span class="mf">32.5</span>
 <span class="n">day</span> <span class="o">=</span> <span class="mi">19</span>
@@ -646,18 +552,17 @@ or change the variable so that it will always reflect the correct value.</p>
 <div class="section" id="variable-names-and-keywords">
 <h2>2.5. Variable Names and Keywords<a class="headerlink" href="#variable-names-and-keywords" title="Permalink to this headline">¶</a></h2>
 <p><strong>Variable names</strong> can be arbitrarily long. They can contain both letters and
-digits, but they have to begin with a letter or an underscore. Although it is
-legal to use uppercase letters, by convention we don’t. If you do, remember
-that case matters. <code class="docutils literal"><span class="pre">Bruce</span></code> and <code class="docutils literal"><span class="pre">bruce</span></code> are different variables.</p>
+digits, but they have to begin with a letter or an underscore. You should use long, descriptive variable names. For example, if you were creating a program to calculate how much gas a car uses, a good variable name might be <code class="docutils literal"><span class="pre">litres_per_100_kms</span></code>. A bad variable name in that case would be <code class="docutils literal"><span class="pre">l</span></code>. Using a single letter as the variable name usually makes your program harder to understand for other people. Although that can be a bit annoying to type out a long variable name the first time, once you have typed it once in Thonny, you should be able to simply type the first few letters of the variable name, then press <strong>Ctrl-Space</strong> to have the rest of the variable name auto-complete for you. <em>If that doesn’t work for you, check Thonny’s preferences.</em></p>
+<p>The underscore character ( <code class="docutils literal"><span class="pre">_</span></code>) can also appear in a name. It is often used in
+names with multiple words, such as <code class="docutils literal"><span class="pre">my_name</span></code> or <code class="docutils literal"><span class="pre">price_of_tea_in_china</span></code>. <strong>This is the preferred way to write long variable names in Python, and you should use this style!</strong></p>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
 <p class="last">Variable names can never contain spaces.</p>
 </div>
-<p>The underscore character ( <code class="docutils literal"><span class="pre">_</span></code>) can also appear in a name. It is often used in
-names with multiple words, such as <code class="docutils literal"><span class="pre">my_name</span></code> or <code class="docutils literal"><span class="pre">price_of_tea_in_china</span></code>.
-There are some situations in which names beginning with an underscore have
+<p>There are some situations in which names beginning with an underscore have
 special meaning, so a safe rule for beginners is to start all names with a
 letter.</p>
+<p>Although it is legal to use uppercase letters, by convention we don’t. If you choose to use uppercase letters, remember that case matters. <code class="docutils literal"><span class="pre">Bruce</span></code> and <code class="docutils literal"><span class="pre">bruce</span></code> are different variables.</p>
 <p>If you give a variable an illegal name, you get a syntax error.  In the example below, each
 of the variable names is illegal.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>76trombones = &quot;big parade&quot;
@@ -733,57 +638,52 @@ of your variable names and you don’t know why, see if it is on this list.</p>
 the human readers of the program — they help the programmer document, or
 remember, what the variable is used for.</p>
 </div>
-<div class="section" id="reassignment">
-<h2>2.6. Reassignment<a class="headerlink" href="#reassignment" title="Permalink to this headline">¶</a></h2>
-<p>As we have seen previously, it is legal to make more than one assignment to the
-same variable. A new assignment makes an existing variable refer to a new value
-(and stop referring to the old value).</p>
-
-<div data-childcomponent="ch07_reassign1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch07_reassign1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-bruce = 5
-print(bruce)
-bruce = 7
-print(bruce)
-</textarea>
-</div>
-<p>The first time <code class="docutils literal"><span class="pre">bruce</span></code> is
-printed, its value is 5, and the second time, its value is 7.  The assignment statement changes
-the value (the object) that <code class="docutils literal"><span class="pre">bruce</span></code> refers to.</p>
-<p>Here is what <strong>reassignment</strong> looks like in a reference diagram:</p>
-<img alt="reassignment" src="../../_images/reassign11.png" />
-<p>It is important to note that in mathematics, a statement of equality is always true.  In math, if <code class="docutils literal"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">equal</span> <span class="pre">to</span> <span class="pre">b</span></code>
-now, then <code class="docutils literal"><span class="pre">a</span> <span class="pre">will</span> <span class="pre">always</span> <span class="pre">equal</span> <span class="pre">to</span> <span class="pre">b</span></code>.</p>
-<p>In Python, however, an assignment statement can make
-two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
-they don’t have to stay that way:</p>
-
-<div data-childcomponent="ch07_reassign2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch07_reassign2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-a = 5
-b = a    # after executing this line, a and b are now equal
-print(a, b)
-a = 3    # after executing this line, a and b are no longer equal
-print(a, b)
-</textarea>
-</div>
-<p>Line 4 changes the value of <code class="docutils literal"><span class="pre">a</span></code> but does not change the value of
-<code class="docutils literal"><span class="pre">b</span></code>, so they are no longer equal. We will have much more to say about equality in a later chapter.</p>
-</div>
 <div class="section" id="practice-problems">
-<h2>2.7. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
+<h2>2.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that every time you take <code class="docutils literal"><span class="pre">input()</span></code> from the user, the data type of that input will be a string!</p>
+</div>
 <div class="section" id="area-of-a-circle">
-<h3>2.7.1. Area of a Circle<a class="headerlink" href="#area-of-a-circle" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.1. Area of a Circle<a class="headerlink" href="#area-of-a-circle" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the area of a circle.  Prompt the user to enter the radius and print a nice message back to the user with the answer.</p>
 
 <div data-childcomponent="practice_problem_variables_data_types_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_variables_data_types_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Put Your Name Here
 # Area of a Circle Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+</div>
+<div class="section" id="area-of-a-rectangle">
+<h3>2.6.2. Area of a Rectangle<a class="headerlink" href="#area-of-a-rectangle" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle. Print a nice message with the answer.</p>
+
+<div data-childcomponent="practice_problem_variables_data_types_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_variables_data_types_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Area of a Rectangle Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+</div>
+<div class="section" id="car-gas-usage">
+<h3>2.6.3. Car Gas Usage<a class="headerlink" href="#car-gas-usage" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Promp the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. <em>Note: If you aren’t sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km</em>.</p>
+
+<div data-childcomponent="practice_problem_variables_data_types_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_variables_data_types_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Gas Mileage Calculator
+# Put Your Name Here
 # Put the Date Here
 
 # your code goes here
@@ -797,18 +697,18 @@ print(a, b)
   
       
   <li id="relations-prev" class="navLink" title='Previous Section - 1. Quick Python Overview' data-toggle="tooltip">
-    <a href="../Overview/QuickOverview.html" >
+    <a href="QuickOverview.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../Overview/QuickOverview.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="QuickOverview.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 3. Conditionals' data-toggle="tooltip" >
+    <a href="Conditionals.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../ComputingAndSociety/UnderlyingTechnology.html" >Next Section - Underlying Technology of Computing Devices and the Internet</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Conditionals.html" >Next Section - 3. Conditionals</a>
 
 <script type="text/javascript">
 

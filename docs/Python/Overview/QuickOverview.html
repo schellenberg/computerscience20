@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Variables, Data Types, and Python Information" href="../VariablesAndExpressions/GettingStarted.html" />
+    <link rel="next" title="2. Variables, Data Types, and User Input" href="VariablesAndDataTypes.html" />
     <link rel="prev" title="Second Practice Quiz" href="../../ConstrainedLanguage/PracticeQuiz.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -224,8 +224,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 2. Variables, Data Types, and Python Information' data-toggle="tooltip" >
-    <a href="../VariablesAndExpressions/GettingStarted.html" >
+  <li id="relations-next" title='Next Chapter - 2. Variables, Data Types, and User Input' data-toggle="tooltip" >
+    <a href="VariablesAndDataTypes.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -308,7 +308,7 @@ print("Yeah, the number is bigger.")
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
-            sc-1-4: What is the data type of <code class="docutils literal"><span class="pre">'this</span> <span class="pre">is</span> <span class="pre">what</span> <span class="pre">kind</span> <span class="pre">of</span> <span class="pre">data'</span></code>?
+            conditionals-14: What is the data type of <code class="docutils literal"><span class="pre">'this</span> <span class="pre">is</span> <span class="pre">what</span> <span class="pre">kind</span> <span class="pre">of</span> <span class="pre">data'</span></code>?
             <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
@@ -323,7 +323,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
-            sc-1-5: What is the data type of <code class="docutils literal"><span class="pre">3</span></code>?
+            conditionals-15: What is the data type of <code class="docutils literal"><span class="pre">3</span></code>?
             <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
             
             <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
@@ -338,7 +338,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
-            sc-1-6: What is the data type of <code class="docutils literal"><span class="pre">True</span></code>?
+            conditionals-16: What is the data type of <code class="docutils literal"><span class="pre">True</span></code>?
             <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
             
             <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
@@ -353,7 +353,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
-            sc-1-7: What is the data type of <code class="docutils literal"><span class="pre">1.5</span></code>?
+            conditionals-17: What is the data type of <code class="docutils literal"><span class="pre">1.5</span></code>?
             <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
@@ -461,7 +461,7 @@ print( type(c) )
 <p>The <code class="docutils literal"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">A single equal sign = is used to <strong>assign</strong> a value. Two equal signs are used when <strong>comparing</strong> a value.</p>
+<p class="last">A single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 </div>
 
 <div data-childcomponent="if_intro_1" class="runestone explainer ac_section alert alert-warning">
@@ -697,12 +697,12 @@ user_guess = -1
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../../ConstrainedLanguage/PracticeQuiz.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 2. Variables, Data Types, and Python Information' data-toggle="tooltip" >
-    <a href="../VariablesAndExpressions/GettingStarted.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 2. Variables, Data Types, and User Input' data-toggle="tooltip" >
+    <a href="VariablesAndDataTypes.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../VariablesAndExpressions/GettingStarted.html" >Next Section - 2. Variables, Data Types, and Python Information</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="VariablesAndDataTypes.html" >Next Section - 2. Variables, Data Types, and User Input</a>
 
 <script type="text/javascript">
 
