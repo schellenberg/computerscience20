@@ -4,8 +4,8 @@
    :start: 1
 
 
-Variables, Data Types, and Python Information
-==============================================
+Variables, Data Types, and User Input
+======================================
 
 .. topic:: Quick Overview of Day
 
@@ -62,54 +62,14 @@ For the following examples, consider the data type of each variable. What will t
     print(y + z)
 
 
-The Python Programming Language
--------------------------------
+Using Thonny
+-------------
 
-Python is an example of a **high-level language**; other high-level languages you might have heard of are C++, PHP, and Java.
-
-As you might infer from the name high-level language, there are also **low-level languages**, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer.  Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages.  To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous.
-
-First, it is much easier to program in a
-high-level language. Programs written in a high-level language take less time
-to write, they are shorter and easier to read, and they are more likely to be
-correct. Second, high-level languages are **portable**, meaning that they can
-run on different kinds of computers with few or no modifications. Low-level
-programs can run on only one kind of computer and have to be rewritten to run
-on another.
-
-Due to these advantages, almost all programs are written in high-level
-languages. Low-level languages are used only for a few specialized
-applications.
-
-Two kinds of programs process high-level languages into low-level languages:
-**interpreters** and **compilers**. An interpreter reads a high-level program
-and executes it, meaning that it does what the program says. It processes the
-program a little at a time, alternately reading lines and performing
-computations.
-
-.. image:: images/interpret.png
-   :alt: Interpret illustration
-
-A compiler reads the program and translates it completely before the program
-starts running. In this case, the high-level program is called the **source
-code**, and the translated program is called the **object code** or the
-**executable**. Once a program is compiled, you can execute it repeatedly
-without further translation.
-
-.. image:: images/compile.png
-   :alt: Compile illustration
-
-Many modern languages use both processes. They are first compiled into a lower
-level language, called **byte code**, and then interpreted by a program called
-a **virtual machine**. Python uses both processes, but because of the way
-programmers interact with it, it is usually considered an interpreted language.
-
-There are two ways to use the Python interpreter: *shell mode* and *program
+There are two ways to use Thonny: *shell mode* and *program
 mode*. In shell mode, you type Python expressions into the **Python shell**,
 and the interpreter immediately shows the result.  The example below shows the Python shell at work.
 
 .. image:: images/thonny_shell.png
-
 
 The ``>>>`` is called the **Python prompt**. The interpreter uses the prompt to
 indicate that it is ready for instructions. We typed ``2 + 3``, then pressed Enter.  The
@@ -128,10 +88,8 @@ the following contents:
 
 .. image:: images/thonny_editor.png
 
-
 By convention, files that contain Python programs have names that end with
-``.py`` .  Following this convention will help your operating system and other
-programs identify a file as containing python code.
+``.py`` .  Thonny will save your files with a .py extension automatically, and you should be able to open them in Thonny by double clicking them in File Explorer (or Finder).
 
 .. note:: Notice that when we were using the **shell**, we didn't have to worry about using ``print()`` to see the value of a statement. The shell does that automatically. However, if we are using the **code editor**, we need to call **print()** any time we want to see output. 
 
@@ -151,35 +109,19 @@ programs identify a file as containing python code.
 
    Source code is another name for:
 
-.. mchoice:: question1_2_2
-   :answer_a: It is high-level if you are standing and low-level if you are sitting.
-   :answer_b: It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.
-   :answer_c: It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.
-   :answer_d: It is high-level if it easy to program in and is very short; it is low-level if it is really hard to program in and the programs are really long.
-   :correct: c
-   :feedback_a: In this case high and low have nothing to do with altitude.
-   :feedback_b: High and low have nothing to do with the type of device you are programming for.  Instead, look at what it takes to run the program written in the language.
-   :feedback_c: Python is a high level language but must be interpreted into machine code (binary) before it can be executed.
-   :feedback_d: While it is true that it is generally easier to program in a high-level language and programs written in a high-level language are usually shorter, this is not always the case.
-
-
-    What is the difference between a high-level programming language and a low-level programming language?
-
-
 
 Comments
 --------
 
 As programs get bigger and more complicated, they get more difficult to read.
-Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of
-code and figure out what it is doing, or why.
+Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of code and figure out what it is doing, or why.
 For this reason, it is a good idea to add notes to your programs to explain in
 natural language what the program is doing.  These notes are called comments.
 
 A **comment** in a computer program is text that is intended only for the human
 reader - it is completely ignored by the interpreter.
 In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
-Every program you write should start with a comment header, which could look something like this:
+**Every program you write should start with a comment header**, which could look something like this:
 
 .. activecode:: ch01_3
 
@@ -192,9 +134,9 @@ Every program you write should start with a comment header, which could look som
     print("Hello, World!")
 
 
-.. note:: Create a folder (call it Computer Science 20) on your computer to hold all of the code you will write in Python this semester. Save the file you created above as ``hello_world.py``, and save it in that folder.
+.. note:: Create a folder (call it Computer Science 20) on your computer to hold all of the code you will write in Python this semester. Save the file you created above as ``template.py``, and save it in that folder.
 
-Notice that when you run this program, it  only prints the phrase Hello, World!  None of the comments appear. You'll also notice that we've left a blank line in the program.  Blank lines
+Notice that when you run this program, it only prints the phrase Hello, World!  None of the comments appear. You'll also notice that we've left a blank line in the program.  Blank lines
 are also ignored by the interpreter, but comments and blank lines can make your
 programs much easier for humans to parse.  Use them liberally!
 
@@ -272,23 +214,6 @@ by the variable.
     print(pi)
 
 In each case the result is the value of the variable.
-To see this in even more detail, we can run the program using codelens.
-
-.. codelens:: ch02_9_codelens
-    :showoutput:
-
-    message = "What's up, Doc?"
-    n = 17
-    pi = 3.14159
-
-    print(message)
-    print(n)
-    print(pi)
-
-Now, as you step through the statements, you can see
-the variables and the values they reference as those references are
-created.
-
 
 Variables also have types; again, we can ask the interpreter what they are.
 
@@ -365,19 +290,22 @@ Variable Names and Keywords
 ---------------------------
 
 **Variable names** can be arbitrarily long. They can contain both letters and
-digits, but they have to begin with a letter or an underscore. Although it is
-legal to use uppercase letters, by convention we don't. If you do, remember
-that case matters. ``Bruce`` and ``bruce`` are different variables.
+digits, but they have to begin with a letter or an underscore. You should use long, descriptive variable names. For example, if you were creating a program to calculate how much gas a car uses, a good variable name might be ``litres_per_100_kms``. A bad variable name in that case would be ``l``. Using a single letter as the variable name usually makes your program harder to understand for other people. Although that can be a bit annoying to type out a long variable name the first time, once you have typed it once in Thonny, you should be able to simply type the first few letters of the variable name, then press **Ctrl-Space** to have the rest of the variable name auto-complete for you. *If that doesn't work for you, check Thonny's preferences.*
+
+
+
+The underscore character ( ``_``) can also appear in a name. It is often used in
+names with multiple words, such as ``my_name`` or ``price_of_tea_in_china``. **This is the preferred way to write long variable names in Python, and you should use this style!**
 
 .. caution::
 
    Variable names can never contain spaces.
 
-The underscore character ( ``_``) can also appear in a name. It is often used in
-names with multiple words, such as ``my_name`` or ``price_of_tea_in_china``.
 There are some situations in which names beginning with an underscore have
 special meaning, so a safe rule for beginners is to start all names with a
 letter.
+
+Although it is legal to use uppercase letters, by convention we don't. If you choose to use uppercase letters, remember that case matters. ``Bruce`` and ``bruce`` are different variables.
 
 If you give a variable an illegal name, you get a syntax error.  In the example below, each
 of the variable names is illegal.
@@ -415,54 +343,11 @@ Programmers generally choose names for their variables that are meaningful to
 the human readers of the program --- they help the programmer document, or
 remember, what the variable is used for.
 
-Reassignment
-------------
-
-As we have seen previously, it is legal to make more than one assignment to the
-same variable. A new assignment makes an existing variable refer to a new value
-(and stop referring to the old value).
-
-.. activecode:: ch07_reassign1
-
-    bruce = 5
-    print(bruce)
-    bruce = 7
-    print(bruce)
-
-
-The first time ``bruce`` is
-printed, its value is 5, and the second time, its value is 7.  The assignment statement changes
-the value (the object) that ``bruce`` refers to.
-
-Here is what **reassignment** looks like in a reference diagram:
-
-.. image:: images/reassign1.png
-   :alt: reassignment
-
-
-It is important to note that in mathematics, a statement of equality is always true.  In math, if ``a is equal to b``
-now, then ``a will always equal to b``. 
-
-In Python, however, an assignment statement can make
-two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
-they don't have to stay that way:
-
-.. activecode:: ch07_reassign2
-
-    a = 5
-    b = a    # after executing this line, a and b are now equal
-    print(a, b)
-    a = 3    # after executing this line, a and b are no longer equal
-    print(a, b)
-
-Line 4 changes the value of ``a`` but does not change the value of
-``b``, so they are no longer equal. We will have much more to say about equality in a later chapter.
-
 
 Practice Problems
 ------------------
 
-Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
 .. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string!
 
