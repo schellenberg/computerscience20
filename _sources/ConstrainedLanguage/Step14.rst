@@ -98,6 +98,10 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 
 .. note:: Reeborg cannot use a ``repeat`` statement, since it has no idea of the dimensions of the lake it is walking around.
 
+.. warning:: You cannot use a ``from library import *`` statement in this world, or the code that checks your solution will not work. Instead, use something like ``from library import turn_right``. *If you are curious, the reason for this is that I have redefined how the ``move()`` function works (in order to keep track of where you move Reeborg), and when you call ``from library import *``, ``move()`` is reset to it's original version, so I cannot keep track of where Reeborg goes.*
+
+
+
 .. |reeborg_environment| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>

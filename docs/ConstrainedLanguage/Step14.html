@@ -326,6 +326,10 @@ There is a function that is more specific to wall called
 <p class="first admonition-title">Note</p>
 <p class="last">Reeborg cannot use a <code class="docutils literal"><span class="pre">repeat</span></code> statement, since it has no idea of the dimensions of the lake it is walking around.</p>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You cannot use a <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> statement in this world, or the code that checks your solution will not work. Instead, use something like <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>. <em>If you are curious, the reason for this is that I have redefined how the ``move()`` function works (in order to keep track of where you move Reeborg), and when you call ``from library import *``, ``move()`` is reset to it’s original version, so I cannot keep track of where Reeborg goes.</em></p>
+</div>
 </div>
 <div class="section" id="extra-for-experts">
 <h2>Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h2>
