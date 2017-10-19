@@ -25,7 +25,7 @@ What Does This Program Do?
 
 Remember that in our quick Python overview, we saw that a single equal sign ``=`` is used to **assign** a value. Two equal signs ``==`` are used when **comparing** a value.
 
-.. note:: Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do. 
+.. note:: Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code. 
 
 What will the following programs output? Why?
 
