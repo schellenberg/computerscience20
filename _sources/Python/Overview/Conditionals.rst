@@ -9,7 +9,7 @@ Conditionals
 
 .. topic:: Quick Overview of Day
 
-    Give more details about boolean expressions. Practice some Python problems with input/output and conditionals.
+    Go over practice problems from last day. Give more details about boolean expressions. Practice some Python problems with input/output and conditionals.
 
 
 .. reveal:: curriculum_addressed
