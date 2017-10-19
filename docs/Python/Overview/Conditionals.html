@@ -195,12 +195,15 @@
 <li><a class="reference internal" href="#">3. Conditionals</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">3.1. What Does This Program Do?</a></li>
 <li><a class="reference internal" href="#booleans">3.2. Booleans</a></li>
-<li><a class="reference internal" href="#if-else">3.3. <code class="docutils literal"><span class="pre">if/else</span></code></a></li>
-<li><a class="reference internal" href="#if">3.4. <code class="docutils literal"><span class="pre">if</span></code></a></li>
-<li><a class="reference internal" href="#if-elif-else">3.5. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
-<li><a class="reference internal" href="#practice-problems">3.6. Practice Problems</a><ul>
-<li><a class="reference internal" href="#add-subtract-two-numbers">3.6.1. Add/Subtract Two Numbers</a></li>
-<li><a class="reference internal" href="#area-calculator">3.6.2. Area Calculator</a></li>
+<li><a class="reference internal" href="#practice-problems">3.3. Practice Problems</a><ul>
+<li><a class="reference internal" href="#add-subtract-two-numbers">3.3.1. Add/Subtract Two Numbers</a></li>
+<li><a class="reference internal" href="#area-calculator">3.3.2. Area Calculator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if-you-are-having-trouble-more-details-on-conditionals">3.4. If You Are Having Trouble - More Details on Conditionals</a><ul>
+<li><a class="reference internal" href="#if-else">3.4.1. <code class="docutils literal"><span class="pre">if/else</span></code></a></li>
+<li><a class="reference internal" href="#if">3.4.2. <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li><a class="reference internal" href="#if-elif-else">3.4.3. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -253,7 +256,7 @@
 <h1>3. Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.</p>
+<p>Give more details about boolean expressions. Practice some Python problems with input/output and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -269,7 +272,7 @@
 <p>Remember that in our quick Python overview, we saw that a single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do.</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
 
@@ -309,8 +312,25 @@ else:
 age = 15
 name = "Zoe"
 
+if age == 15:
+  print("Almost old enough to drive on your own.")
+elif name == "Zoe":
+  print("Hi Zoe! Good to see you!")
+else:
+  print("Either older or younger than 15")
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_conditionals_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_conditionals_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+age = 15
+name = "Zoe"
+
 if name == "Eli":
   print("Good to see you again!")
+elif age == 16:
+  print("You can drive!")
 else:
   print("It's been awhile!")
 
@@ -334,18 +354,17 @@ sensitive).</p>
 
 <div data-childcomponent="boolean_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=boolean_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=boolean_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 print(type(True))
 print(type("True"))
 </textarea>
 </div>
 <p>A <strong>boolean expression</strong> is an expression that evaluates to a boolean value.
-The equality operator, <code class="docutils literal"><span class="pre">==</span></code>, compares two values and produces a boolean value related to whether the
-two values are equal to one another.</p>
+The equality operator, <code class="docutils literal"><span class="pre">==</span></code>, compares two values and produces a boolean value related to whether the two values are equal to one another.</p>
 
 <div data-childcomponent="boolean_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=boolean_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=boolean_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 print(5 == 5)
 print(5 == 6)
 </textarea>
@@ -360,18 +379,64 @@ to <code class="docutils literal"><span class="pre">True</span></code>.  In the 
 <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>               <span class="c1"># x is less than or equal to y</span>
 </pre></div>
 </div>
-<p>Although these operations are probably familiar to you, the Python symbols are
-different from the mathematical symbols. A common error is to use a single
-equal sign (<code class="docutils literal"><span class="pre">=</span></code>) instead of a double equal sign (<code class="docutils literal"><span class="pre">==</span></code>). Remember that <code class="docutils literal"><span class="pre">=</span></code>
-is an assignment operator and <code class="docutils literal"><span class="pre">==</span></code> is a comparison operator. Be careful with the order you write your greater than and less than operators –  there is no such thing as <code class="docutils literal"><span class="pre">=&lt;</span></code> or <code class="docutils literal"><span class="pre">=&gt;</span></code>.</p>
+<p>We have already been using most of these, but <code class="docutils literal"><span class="pre">!=</span></code> is new to us. We have used <code class="docutils literal"><span class="pre">not</span></code> with Reeborg, but <code class="docutils literal"><span class="pre">not</span></code> switches the value of a boolean expression. Consider the following:</p>
+
+<div data-childcomponent="boolean_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=boolean_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+print(5 != 5)
+print(not 5 != 5)
+</textarea>
 </div>
+<p>When asking the computer a question with a boolean expression, a common error is to use a single equal sign (<code class="docutils literal"><span class="pre">=</span></code>) instead of a double equal sign (<code class="docutils literal"><span class="pre">==</span></code>). <strong>Remember that ``=`` is an assignment operator and ``==`` is a comparison operator</strong>.</p>
+</div>
+<div class="section" id="practice-problems">
+<h2>3.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that every time you take <code class="docutils literal"><span class="pre">input()</span></code> from the user, the data type of that input will be a string! Sometimes you need to convert what the user enters into a number.</p>
+</div>
+<div class="section" id="add-subtract-two-numbers">
+<h3>3.3.1. Add/Subtract Two Numbers<a class="headerlink" href="#add-subtract-two-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that can either add or subtract two numbers. You should first ask the user whether they want to add or subtract, then take in the two numbers, then finally perform the required operation and print the result.</p>
+
+<div data-childcomponent="practice_problem_conditionals_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_conditionals_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Add/Subtract Two Numbers
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+</div>
+<div class="section" id="area-calculator">
+<h3>3.3.2. Area Calculator<a class="headerlink" href="#area-calculator" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. <em>Note: You might want to use the code you created yesterday to help you create parts of this!</em></p>
+
+<div data-childcomponent="practice_problem_conditionals_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_conditionals_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Area Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="if-you-are-having-trouble-more-details-on-conditionals">
+<h2>3.4. If You Are Having Trouble - More Details on Conditionals<a class="headerlink" href="#if-you-are-having-trouble-more-details-on-conditionals" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="if-else">
-<h2>3.3. <code class="docutils literal"><span class="pre">if/else</span></code><a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
+<h3>3.4.1. <code class="docutils literal"><span class="pre">if/else</span></code><a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">if/else</span></code> and <code class="docutils literal"><span class="pre">if/elif/else</span></code> control structures are all referred to as conditional statements. Note that each time you ask the computer a question using one of these conditional statements, Python evaluates the question as a Boolean expression.</p>
 
 <div data-childcomponent="conditionals_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=conditionals_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=conditionals_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 x = 15
 
 if x % 2 == 0:
@@ -379,6 +444,10 @@ if x % 2 == 0:
 else:
     print(x, "is odd")
 </textarea>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Flowchart of a <strong>if</strong> statement with an <strong>else</strong></p>
+<img alt="../../_images/flowchart_if_else.png" class="last" src="../../_images/flowchart_if_else.png" />
 </div>
 <p>Just like with Reeborg, the syntax for an <code class="docutils literal"><span class="pre">if</span></code> statement looks like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">BOOLEAN</span> <span class="n">EXPRESSION</span><span class="p">:</span>
@@ -390,10 +459,6 @@ else:
 <p>The boolean expression after the <code class="docutils literal"><span class="pre">if</span></code> statement is called the <strong>condition</strong>.
 If it is true, then the immediately following indented statements get executed. If not, then the statements
 indented under the <code class="docutils literal"><span class="pre">else</span></code> clause get executed.</p>
-<div class="sidebar">
-<p class="first sidebar-title">Flowchart of a <strong>if</strong> statement with an <strong>else</strong></p>
-<img alt="../../_images/flowchart_if_else.png" class="last" src="../../_images/flowchart_if_else.png" />
-</div>
 <p>The more indented statements that follow are called a <strong>block</strong>. There is no limit on the number of statements that can appear under the two clauses of an
 <code class="docutils literal"><span class="pre">if</span></code> statement, but there has to be at least one statement in each block.</p>
 
@@ -458,7 +523,7 @@ indented under the <code class="docutils literal"><span class="pre">else</span><
             </div>
             </div>
 <div class="section" id="if">
-<h2>3.4. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<h3>3.4.2. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h3>
 <div class="sidebar">
 <p class="first sidebar-title">Flowchart of an <strong>if</strong> with no <strong>else</strong></p>
 <img alt="../../_images/flowchart_if_only.png" class="last" src="../../_images/flowchart_if_only.png" />
@@ -470,7 +535,7 @@ executed.  Otherwise the flow of execution continues to the statement after the 
 
 <div data-childcomponent="conditionals_if_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=conditionals_if_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=conditionals_if_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 x = 10
 if x < 0:
     print("The negative number ",  x, " is not valid here.")
@@ -514,7 +579,7 @@ print("This is always printed")
             </div>
             </div>
 <div class="section" id="if-elif-else">
-<h2>3.5. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<h3>3.4.3. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">elif</span></code> is an abbreviation of <code class="docutils literal"><span class="pre">else</span> <span class="pre">if</span></code>. Remember that exactly one branch will be
 executed. There is no limit of the number of <code class="docutils literal"><span class="pre">elif</span></code> statements but only a
 single (and optional) final <code class="docutils literal"><span class="pre">else</span></code> statement is allowed and it must be the last
@@ -527,7 +592,7 @@ branch executes</strong>.</p>
 
 <div data-childcomponent="conditionals_if_elif_else_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=conditionals_if_elif_else_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=conditionals_if_elif_else_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 x = 10
 y = 10
 
@@ -537,43 +602,6 @@ elif x > y:
     print("x is greater than y")
 else:
     print("x and y must be equal")
-</textarea>
-</div>
-</div>
-<div class="section" id="practice-problems">
-<h2>3.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Remember that every time you take <code class="docutils literal"><span class="pre">input()</span></code> from the user, the data type of that input will be a string! Sometimes you need to convert what the user enters into a number.</p>
-</div>
-<div class="section" id="add-subtract-two-numbers">
-<h3>3.6.1. Add/Subtract Two Numbers<a class="headerlink" href="#add-subtract-two-numbers" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that can either add or subtract two numbers. You should first ask the user whether they want to add or subtract, then take in the two numbers, then finally perform the required operation and print the result.</p>
-
-<div data-childcomponent="practice_problem_conditionals_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_conditionals_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Add/Subtract Two Numbers
-# Put Your Name Here
-# Put the Date Here
-
-# your code goes here
-</textarea>
-</div>
-</div>
-<div class="section" id="area-calculator">
-<h3>3.6.2. Area Calculator<a class="headerlink" href="#area-calculator" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. <em>Note: You might want to use the code you created yesterday to help you create parts of this!</em></p>
-
-<div data-childcomponent="practice_problem_conditionals_2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_conditionals_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Area Calculator
-# Put Your Name Here
-# Put the Date Here
-
-# your code goes here
 </textarea>
 </div>
 </div>

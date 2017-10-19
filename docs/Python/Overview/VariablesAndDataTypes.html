@@ -202,6 +202,7 @@
 <li><a class="reference internal" href="#area-of-a-circle">2.6.1. Area of a Circle</a></li>
 <li><a class="reference internal" href="#area-of-a-rectangle">2.6.2. Area of a Rectangle</a></li>
 <li><a class="reference internal" href="#car-gas-usage">2.6.3. Car Gas Usage</a></li>
+<li><a class="reference internal" href="#if-you-finish-early">2.6.4. If You Finish Early</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +276,7 @@
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do.</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>For the following examples, consider the data type of each variable. What will the program output? Why?</p>
 
@@ -522,9 +523,6 @@ $(window).resize(function() {
 });
 </script>
 </div>
-<p>A great deal of programming is about having the computer remember things.  For example, we might want to keep
-track of the number of missed calls on your phone.  Each time another call is missed, we will arrange to update
-or change the variable so that it will always reflect the correct value.</p>
 <p><strong>Check your understanding</strong></p>
 
             <div class="runestone">
@@ -659,7 +657,27 @@ remember, what the variable is used for.</p>
 # your code goes here
 </textarea>
 </div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Area of a Circle Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 18, 2017</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the radius: &quot;</span><span class="p">)</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>  <span class="c1">#convert input into a number</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The area of the circle is&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 <div class="section" id="area-of-a-rectangle">
 <h3>2.6.2. Area of a Rectangle<a class="headerlink" href="#area-of-a-rectangle" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle. Print a nice message with the answer.</p>
@@ -674,7 +692,28 @@ remember, what the variable is used for.</p>
 # your code goes here
 </textarea>
 </div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Area of a Rectangle Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 19, 2017</span>
+
+<span class="n">length</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the length of the rectangle: &quot;</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the width of the rectangle: &quot;</span><span class="p">)</span>
+
+<span class="c1">#convert user input into numbers</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The area of the rectangle is&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 <div class="section" id="car-gas-usage">
 <h3>2.6.3. Car Gas Usage<a class="headerlink" href="#car-gas-usage" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Promp the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. <em>Note: If you aren’t sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km</em>.</p>
@@ -689,6 +728,32 @@ remember, what the variable is used for.</p>
 # your code goes here
 </textarea>
 </div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Gas Mileage Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 19, 2017</span>
+
+<span class="n">kilometers_driven</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many kilometers did you drive? &quot;</span><span class="p">)</span>
+<span class="n">litres_used</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many litres of gas did it take? &quot;</span><span class="p">)</span>
+
+<span class="c1">#convert user input to numbers</span>
+<span class="n">kilometers_driven</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kilometers_driven</span><span class="p">)</span>
+<span class="n">litres_used</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">litres_used</span><span class="p">)</span>
+
+<span class="n">gas_usage</span> <span class="o">=</span> <span class="n">litres_used</span> <span class="o">/</span> <span class="n">kilometers_driven</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your car is using&quot;</span><span class="p">,</span> <span class="n">gas_usage</span><span class="p">,</span> <span class="s2">&quot;L/100km&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="if-you-finish-early">
+<h3>2.6.4. If You Finish Early<a class="headerlink" href="#if-you-finish-early" title="Permalink to this headline">¶</a></h3>
+<p>If you completed all the questions above before the end of class, you might want to try making a calculator for a more complicated math problem.</p>
 </div>
 </div>
 </div>

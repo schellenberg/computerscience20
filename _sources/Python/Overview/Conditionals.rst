@@ -9,7 +9,7 @@ Conditionals
 
 .. topic:: Quick Overview of Day
 
-    Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.
+    Give more details about boolean expressions. Practice some Python problems with input/output and conditionals.
 
 
 .. reveal:: curriculum_addressed
@@ -66,8 +66,25 @@ What will the following programs output? Why?
     age = 15
     name = "Zoe"
 
+    if age == 15:
+      print("Almost old enough to drive on your own.")
+    elif name == "Zoe":
+      print("Hi Zoe! Good to see you!")
+    else:
+      print("Either older or younger than 15")
+
+
+.. activecode:: wdtpd_conditionals_4
+    :caption: What will this program print?
+    :nocodelens:
+
+    age = 15
+    name = "Zoe"
+
     if name == "Eli":
       print("Good to see you again!")
+    elif age == 16:
+      print("You can drive!")
     else:
       print("It's been awhile!")
 
@@ -91,15 +108,16 @@ sensitive).
 
 
 .. activecode:: boolean_1
+    :nocodelens:
 
     print(type(True))
     print(type("True"))
 
 A **boolean expression** is an expression that evaluates to a boolean value.
-The equality operator, ``==``, compares two values and produces a boolean value related to whether the
-two values are equal to one another.
+The equality operator, ``==``, compares two values and produces a boolean value related to whether the two values are equal to one another.
 
 .. activecode:: boolean_2
+    :nocodelens:
 
     print(5 == 5)
     print(5 == 6)
@@ -117,18 +135,70 @@ The ``==`` operator is one of six common **comparison operators**; the others ar
     x >= y               # x is greater than or equal to y
     x <= y               # x is less than or equal to y
 
-Although these operations are probably familiar to you, the Python symbols are
-different from the mathematical symbols. A common error is to use a single
-equal sign (``=``) instead of a double equal sign (``==``). Remember that ``=``
-is an assignment operator and ``==`` is a comparison operator. Be careful with the order you write your greater than and less than operators --  there is no such thing as ``=<`` or ``=>``.
+We have already been using most of these, but ``!=`` is new to us. We have used ``not`` with Reeborg, but ``not`` switches the value of a boolean expression. Consider the following:
+
+.. activecode:: boolean_3
+    :nocodelens:
+
+    print(5 != 5)
+    print(not 5 != 5)
+
+
+When asking the computer a question with a boolean expression, a common error is to use a single equal sign (``=``) instead of a double equal sign (``==``). **Remember that ``=`` is an assignment operator and ``==`` is a comparison operator**.
+
+
+
+Practice Problems
+------------------
+
+Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+
+.. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string! Sometimes you need to convert what the user enters into a number.
+
+
+Add/Subtract Two Numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that can either add or subtract two numbers. You should first ask the user whether they want to add or subtract, then take in the two numbers, then finally perform the required operation and print the result.
+   
+.. activecode:: practice_problem_conditionals_1
+    :nocodelens:
+
+    # Add/Subtract Two Numbers
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
+
+
+
+Area Calculator
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. *Note: You might want to use the code you created yesterday to help you create parts of this!*
+   
+.. activecode:: practice_problem_conditionals_2
+    :nocodelens:
+
+    # Area Calculator
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
+
+
+
+If You Are Having Trouble - More Details on Conditionals
+---------------------------------------------------------
 
 
 ``if/else``
--------------
+~~~~~~~~~~~~
 
 The ``if``, ``if/else`` and ``if/elif/else`` control structures are all referred to as conditional statements. Note that each time you ask the computer a question using one of these conditional statements, Python evaluates the question as a Boolean expression. 
 
 .. activecode:: conditionals_1
+    :nocodelens:
 
     x = 15
 
@@ -137,6 +207,9 @@ The ``if``, ``if/else`` and ``if/elif/else`` control structures are all referred
     else:
         print(x, "is odd")
 
+.. sidebar::  Flowchart of a **if** statement with an **else**
+
+   .. image:: images/flowchart_if_else.png
 
 Just like with Reeborg, the syntax for an ``if`` statement looks like this:
 
@@ -150,10 +223,6 @@ Just like with Reeborg, the syntax for an ``if`` statement looks like this:
 The boolean expression after the ``if`` statement is called the **condition**.
 If it is true, then the immediately following indented statements get executed. If not, then the statements
 indented under the ``else`` clause get executed.
-
-.. sidebar::  Flowchart of a **if** statement with an **else**
-
-   .. image:: images/flowchart_if_else.png
 
 The more indented statements that follow are called a **block**. There is no limit on the number of statements that can appear under the two clauses of an
 ``if`` statement, but there has to be at least one statement in each block.
@@ -219,7 +288,7 @@ The more indented statements that follow are called a **block**. There is no lim
 
 
 ``if``
--------
+~~~~~~~
 
 .. sidebar::  Flowchart of an **if** with no **else**
 
@@ -232,6 +301,7 @@ executed.  Otherwise the flow of execution continues to the statement after the 
 
 
 .. activecode:: conditionals_if_1
+    :nocodelens:
 
     x = 10
     if x < 0:
@@ -278,7 +348,7 @@ What would be printed if the value of ``x`` is negative?  Try it.
 
 
 ``if/elif/else``
-----------------
+~~~~~~~~~~~~~~~~~
 
 ``elif`` is an abbreviation of ``else if``. Remember that exactly one branch will be
 executed. There is no limit of the number of ``elif`` statements but only a
@@ -294,7 +364,8 @@ branch executes**.
 
 
 .. activecode:: conditionals_if_elif_else_1
-
+    :nocodelens:
+    
     x = 10
     y = 10
 
@@ -304,43 +375,3 @@ branch executes**.
         print("x is greater than y")
     else:
         print("x and y must be equal")
-
-
-
-Practice Problems
-------------------
-
-Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
-
-.. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string! Sometimes you need to convert what the user enters into a number.
-
-
-Add/Subtract Two Numbers
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write a program that can either add or subtract two numbers. You should first ask the user whether they want to add or subtract, then take in the two numbers, then finally perform the required operation and print the result.
-   
-.. activecode:: practice_problem_conditionals_1
-    :nocodelens:
-
-    # Add/Subtract Two Numbers
-    # Put Your Name Here
-    # Put the Date Here
-
-    # your code goes here
-
-
-
-Area Calculator
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. *Note: You might want to use the code you created yesterday to help you create parts of this!*
-   
-.. activecode:: practice_problem_conditionals_2
-    :nocodelens:
-
-    # Area Calculator
-    # Put Your Name Here
-    # Put the Date Here
-
-    # your code goes here
