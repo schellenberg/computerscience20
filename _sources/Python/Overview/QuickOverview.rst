@@ -124,6 +124,8 @@ If you aren't sure what the data type of something is, you can check it using th
     print( type(5) )
 
 
+.. _type_casting_functions:
+
 Converting Between Data Types
 -----------------------------
 
@@ -145,6 +147,8 @@ Sometimes you might need to convert from one data type to another. You can use t
     c = float(b)  #c is the float 4.0
     print( type(c) )
    
+
+.. _math_operator_list:
 
 Math Operators
 --------------

@@ -345,7 +345,7 @@ Practice Problems
 
 Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
-.. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string!
+.. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string! You might want to look back at :ref:`type_casting_functions`.
 
 
 Area of a Circle
@@ -466,4 +466,8 @@ Write a program that will compute the Litres per Kilometers (l/100km) that a car
 If You Finish Early
 ~~~~~~~~~~~~~~~~~~~~
 
-If you completed all the questions above before the end of class, you might want to try making a calculator for a more complicated math problem. 
+If you completed all the questions above before the end of class, you might want to try one of the following extra challenges:
+
+- making a calculator for a more complicated math problem. 
+- you look at the clock and it is exactly 2pm. You set an alarm to go off in 51 hours. At what time does the alarm go off? Write a Python program to solve the general version of this problem. Ask the user for the time now (in hours), and ask for the number of hours to wait. Your program should output what the time will be on the clock when the alarm goes off. Note: You might want to look back at :ref:`math_operator_list`.
+
