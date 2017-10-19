@@ -329,3 +329,18 @@ Write a program that can either add or subtract two numbers. You should first as
 
     # your code goes here
 
+
+
+Area Calculator
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. *Note: You might want to use the code you created yesterday to help you create parts of this!*
+   
+.. activecode:: practice_problem_conditionals_2
+    :nocodelens:
+
+    # Area Calculator
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
