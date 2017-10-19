@@ -259,10 +259,6 @@ assignment we even give it a value that is of a different type.
     print(day)
 
 
-A great deal of programming is about having the computer remember things.  For example, we might want to keep
-track of the number of missed calls on your phone.  Each time another call is missed, we will arrange to update
-or change the variable so that it will always reflect the correct value.
-
 **Check your understanding**
 
 .. mchoice:: test_question2_3_2
@@ -366,6 +362,28 @@ Write a program that will compute the area of a circle.  Prompt the user to ente
 
     # your code goes here
 
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_solution_practice_problem_variables_data_types_1
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    This is one possible solution::
+
+        # Area of a Circle Calculator
+        # Dan Schellenberg
+        # Oct 18, 2017
+
+        pi = 3.14
+
+        radius = input("Please enter the radius: ")
+        radius = float(radius)  #convert input into a number
+
+        area = pi*radius**2
+
+        print("The area of the circle is", area)
+
+
 
 Area of a Rectangle
 ~~~~~~~~~~~~~~~~~~~
@@ -382,6 +400,30 @@ Write a program that will compute the area of a rectangle.  Prompt the user to e
     # your code goes here
 
 
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_solution_practice_problem_variables_data_types_2
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    This is one possible solution::
+
+        # Area of a Rectangle Calculator
+        # Dan Schellenberg
+        # Oct 19, 2017
+
+        length = input("Enter the length of the rectangle: ")
+        width = input("Enter the width of the rectangle: ")
+
+        #convert user input into numbers
+        length = float(length)
+        width = float(width)
+
+        area = length * width
+        print("The area of the rectangle is", area)
+
+
+
 Car Gas Usage
 ~~~~~~~~~~~~~
 
@@ -395,6 +437,30 @@ Write a program that will compute the Litres per Kilometers (l/100km) that a car
     # Put the Date Here
 
     # your code goes here
+
+
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_solution_practice_problem_variables_data_types_2
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    This is one possible solution::
+
+        # Gas Mileage Calculator
+        # Dan Schellenberg
+        # Oct 19, 2017
+
+        kilometers_driven = input("How many kilometers did you drive? ")
+        litres_used = input("How many litres of gas did it take? ")
+
+        #convert user input to numbers
+        kilometers_driven = float(kilometers_driven)
+        litres_used = float(litres_used)
+
+        gas_usage = litres_used / kilometers_driven * 100
+
+        print("Your car is using", gas_usage, "L/100km")
 
 
 If You Finish Early
