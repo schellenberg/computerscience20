@@ -87,6 +87,7 @@ Python
    Python/Overview/VariablesAndDataTypes.rst
    Python/Overview/Conditionals.rst
    Python/Overview/InputOutputAssignment.rst
+   Python/Overview/StringOperations.rst
 
 
 Computing and Society
