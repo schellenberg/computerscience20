@@ -171,9 +171,52 @@ Write a program that can either add or subtract two numbers. You should first as
     # your code goes here
 
 
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_solution_practice_problem_conditionals_1
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    This is one possible solution. Note that it is not particularly efficient, as the same code appears in the ``if`` and ``elif`` blocks. This can be improved once variable scope and functions are understood.::
+
+    # Add/Subtract Two Numbers
+    # Dan Schellenberg
+    # Oct 23, 2017
+
+    operation_chosen = input("Would you like to add or subtract? ")
+
+    if operation_chosen == "add":
+        #get user input
+        first_number = input("Please enter the first number: ")
+        second_number = input("Please enter the second number: ")
+
+        #convert input into numbers
+        first_number = float(first_number)
+        second_number = float(second_number)
+        
+        the_answer = first_number + second_number
+        print("The answer when you add is", the_answer)
+
+    elif operation_chosen == "subtract":
+        #get user input
+        first_number = input("Please enter the first number: ")
+        second_number = input("Please enter the second number: ")
+
+        #convert input into numbers
+        first_number = float(first_number)
+        second_number = float(second_number)
+        
+        the_answer = first_number - second_number
+        print("The answer when you subtract is", the_answer)
+
+    else:
+        #neither add or subtract was entered
+        print("Error. I don't know what that means. Please enter 'add' or 'subtract'.")
+        
+        
 
 Area Calculator
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. *Note: You might want to use the code you created yesterday to help you create parts of this!*
    
