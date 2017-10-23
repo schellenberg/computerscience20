@@ -3,6 +3,14 @@ Quick Python Overview
 
 .. note:: In today's quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
 
+If you'd prefer to watch a video describing some important features of Python, `the following video <https://www.youtube.com/watch?v=d97kS830e-c>`_ demonstrates the same ideas as what I've described in text below.
+
+.. youtube:: d97kS830e-c
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
 
 What is Python?
 ---------------
