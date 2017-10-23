@@ -411,7 +411,44 @@ print(not 5 != 5)
 # your code goes here
 </textarea>
 </div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_conditionals_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution. Note that it is not particularly efficient, as the same code appears in the <code class="docutils literal"><span class="pre">if</span></code> and <code class="docutils literal"><span class="pre">elif</span></code> blocks. This can be improved once variable scope and functions are understood.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Add/Subtract Two Numbers</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 23, 2017</span>
+</pre></div>
 </div>
+<p>operation_chosen = input(“Would you like to add or subtract? “)</p>
+<dl class="docutils">
+<dt>if operation_chosen == “add”:</dt>
+<dd><p class="first">#get user input
+first_number = input(“Please enter the first number: “)
+second_number = input(“Please enter the second number: “)</p>
+<p>#convert input into numbers
+first_number = float(first_number)
+second_number = float(second_number)</p>
+<p class="last">the_answer = first_number + second_number
+print(“The answer when you add is”, the_answer)</p>
+</dd>
+<dt>elif operation_chosen == “subtract”:</dt>
+<dd><p class="first">#get user input
+first_number = input(“Please enter the first number: “)
+second_number = input(“Please enter the second number: “)</p>
+<p>#convert input into numbers
+first_number = float(first_number)
+second_number = float(second_number)</p>
+<p class="last">the_answer = first_number - second_number
+print(“The answer when you subtract is”, the_answer)</p>
+</dd>
+<dt>else:</dt>
+<dd>#neither add or subtract was entered
+print(“Error. I don’t know what that means. Please enter ‘add’ or ‘subtract’.”)</dd>
+</dl>
+
+    </div>
+    </div>
 <div class="section" id="area-calculator">
 <h3>3.3.2. Area Calculator<a class="headerlink" href="#area-calculator" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that asks the user if they want to find the area of a rectangle, circle, or triangle. Then have the user input the appropriate sizes (length and width, radius, or base and height) for the shape you will be calculating. Finally, perform the calculation and output the result with a nice message. <em>Note: You might want to use the code you created yesterday to help you create parts of this!</em></p>

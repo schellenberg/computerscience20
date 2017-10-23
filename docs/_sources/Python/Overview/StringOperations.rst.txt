@@ -50,6 +50,17 @@ Enter ``3`` and ``5`` when you run the code below. What will the program print? 
     combined_value = number_one + number_two
     print(combined_value)
 
+Type in your first name and last name when you run the code below. How can you fix this code to write your name properly?
+
+.. activecode:: wdtpd_string_operators_3
+    :caption: Fix the output of this code.
+    :nocodelens:
+
+    first_name = input("Please enter your first name: ")
+    last_name = input("Please enter your last name: ")
+    full_name = first_name + last_name
+    print("Good to see you," + full_name)
+
 
 Operations on Strings
 ---------------------
