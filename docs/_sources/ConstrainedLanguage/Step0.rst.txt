@@ -11,6 +11,14 @@ Step 0: Transitioning To Text
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
 
+If you'd prefer to watch a video introducing Reeborg, `the following video <https://www.youtube.com/watch?v=GSszijgTFxU>`_ demonstrates the same ideas as what I've described in text below.
+
+.. youtube:: GSszijgTFxU
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
 
 Introduction
 ------------
