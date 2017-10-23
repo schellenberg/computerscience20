@@ -86,7 +86,7 @@ Python
    Python/Overview/QuickOverview.rst
    Python/Overview/VariablesAndDataTypes.rst
    Python/Overview/Conditionals.rst
-
+   Python/Overview/FirstAssignment.rst
 
 
 Computing and Society

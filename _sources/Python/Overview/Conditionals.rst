@@ -144,7 +144,7 @@ We have already been using most of these, but ``!=`` is new to us. We have used 
     print(not 5 != 5)
 
 
-When asking the computer a question with a boolean expression, a common error is to use a single equal sign (``=``) instead of a double equal sign (``==``). **Remember that ``=`` is an assignment operator and ``==`` is a comparison operator**.
+When asking the computer a question with a boolean expression, a common error is to use a single equal sign (``=``) instead of a double equal sign (``==``). Remember that ``=`` is an assignment operator and ``==`` is a comparison operator.
 
 
 
