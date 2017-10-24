@@ -88,6 +88,7 @@ Python
    Python/Overview/Conditionals.rst
    Python/Overview/InputOutputAssignment.rst
    Python/Overview/StringOperations.rst
+   Python/Overview/SecondInputOutputAssignment.rst
 
 
 Computing and Society

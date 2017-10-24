@@ -59,7 +59,7 @@ Type in your first name and last name when you run the code below. How can you f
     first_name = input("Please enter your first name: ")
     last_name = input("Please enter your last name: ")
     full_name = first_name + last_name
-    print("Good to see you," + full_name)
+    print("Good to see you" + full_name)
 
 
 Operations on Strings
@@ -78,7 +78,9 @@ has type string):
 
 Interestingly, the ``+`` operator does work with strings, but for strings, the
 ``+`` operator represents **concatenation**, not addition.  Concatenation means
-joining the two operands by linking them end-to-end. For example:
+joining the two operands by linking them end-to-end. This is the equivalent of using the Scratch |scratch_join_block_inline| join block.  For example:
+
+.. |scratch_join_block_inline| image:: images/scratch_join_block.png
 
 .. activecode:: string_concatenation
     :nocanvas:

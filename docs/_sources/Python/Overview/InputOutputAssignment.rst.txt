@@ -100,7 +100,6 @@ As this is the first Python assignment you are going to submit, the following no
 
 - try to foolproof the user input (in other words, make sure your program doesn't crash if the user types in "frank" instead of 15 when asked for a temperature). *Hint: check out the try and except control structure in Python. You'll probably want to search the internet for some ideas on that.*
 - add the ability to convert to/from Kelvin as well
-- encapsulate both conversions in appropriate functions, say ``fahrenheitToCelsius(temperature)`` and ``celsiusToFahrenheit(temperature)``.
 
 
 .. activecode:: first_input_output_assignment_scratch_work_area

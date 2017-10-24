@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>5. String Operators and Assignment Work Time &#8212; Computer Science 20 Saskatchewan</title>
+    <title>6. Input/Output Strings Assignment &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../../ComputingAndSociety/UnderlyingTechnology.html" />
-    <link rel="prev" title="4. Input/Output Assignment" href="InputOutputAssignment.html" />
+    <link rel="prev" title="5. String Operators and Assignment Work Time" href="StringOperations.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,10 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">5. String Operators and Assignment Work Time</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">5.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#operations-on-strings">5.2. Operations on Strings</a></li>
-<li><a class="reference internal" href="#assignment-work-time">5.3. Assignment Work Time</a></li>
+<li><a class="reference internal" href="#">6. Input/Output Strings Assignment</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">6.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#madlibs-assignment">6.2. Madlibs Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -205,8 +204,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 4. Input/Output Assignment" data-toggle="tooltip">
-    <a href="InputOutputAssignment.html" >
+  <li id="relations-prev" title="Previous Chapter - 5. String Operators and Assignment Work Time" data-toggle="tooltip">
+    <a href="StringOperations.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -242,11 +241,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="string-operators-and-assignment-work-time">
-<h1>5. String Operators and Assignment Work Time<a class="headerlink" href="#string-operators-and-assignment-work-time" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="input-output-strings-assignment">
+<h1>6. Input/Output Strings Assignment<a class="headerlink" href="#input-output-strings-assignment" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Explore how the <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">*</span></code> operators work on strings. Continue to work on the first Python assignment, focused on input/output, data types and conditionals.</p>
+<p>Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -258,154 +257,115 @@
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>5.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
-<p>As you saw in the WDTPD questions from yesterday, using the <code class="docutils literal"><span class="pre">*</span></code> operator with strings results in something very different than using the <code class="docutils literal"><span class="pre">*</span></code> operator with numeric data. Consider the following questions carefully, being sure you understand WHY they output what they do.</p>
+<h2>6.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<p>Remember that a single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
-<p><strong>What will the following programs output? Why?</strong></p>
-<p>What will this print if you enter in a <code class="docutils literal"><span class="pre">15</span></code>? How about typing <code class="docutils literal"><span class="pre">hey</span></code>?</p>
+<p>What will the following programs output? Why?</p>
+<p>Try the following code with <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">42</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">32</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">82</span></code>, and <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">142</span></code>.</p>
 
-<div data-childcomponent="wdtpd_string_operators_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_input_output_strings_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_operators_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-number = input("What value should we change? ")
-changed_value = number * 4
-print(changed_value)
+<textarea data-component="activecode" id=wdtpd_input_output_strings_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+x = 42
+if x < 10:
+    x = x + 10
+elif x < 40:
+    x = x + 5
+elif x < 70:
+    x = x - 10
+elif x < 100:
+    x = x - 5
+else:
+    print("big number!")
+
+print(x)
 </textarea>
 </div>
-<p>Enter <code class="docutils literal"><span class="pre">3</span></code> and <code class="docutils literal"><span class="pre">5</span></code> when you run the code below. What will the program print? <em>Hint: it will not be an error!</em></p>
 
-<div data-childcomponent="wdtpd_string_operators_2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_input_output_strings_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_operators_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-number_one = input("Please enter the first number: ")
-number_two = input("Please enter the second number: ")
-combined_value = number_one + number_two
-print(combined_value)
+<textarea data-component="activecode" id=wdtpd_input_output_strings_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+age = input("How old are you?")
+print("Wow! Already " + age + " years old!")
 </textarea>
 </div>
-<p>Type in your first name and last name when you run the code below. How can you fix this code to write your name properly?</p>
+<p>Try the following, entering in <code class="docutils literal"><span class="pre">17</span></code>. How about <code class="docutils literal"><span class="pre">14</span></code>? Can you fix it? <em>Hint: think data types!</em></p>
 
-<div data-childcomponent="wdtpd_string_operators_3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_input_output_strings_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_operators_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Fix the output of this code.'>
-first_name = input("Please enter your first name: ")
-last_name = input("Please enter your last name: ")
-full_name = first_name + last_name
-print("Good to see you" + full_name)
+<textarea data-component="activecode" id=wdtpd_input_output_strings_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+age = input("How old are you?")
+if age > 15:
+    print("Wow! Already " + age + " years old!")
 </textarea>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. You will now put the knowledge you’ve gained into practice on your first Python hand-in assignment. Your teacher may choose to give you a different assignment, but one possible assignment is given below.</p>
 </div>
-<div class="section" id="operations-on-strings">
-<h2>5.2. Operations on Strings<a class="headerlink" href="#operations-on-strings" title="Permalink to this headline">¶</a></h2>
-<p>In general, you cannot perform mathematical operations on strings, even if the
-strings look like numbers. The following are illegal (assuming that <code class="docutils literal"><span class="pre">message</span></code>
-has type string):</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="s2">&quot;Hello&quot;</span> <span class="o">/</span> <span class="mi">123</span>
-<span class="n">message</span> <span class="o">*</span> <span class="s2">&quot;Hello&quot;</span>
-<span class="s2">&quot;15&quot;</span> <span class="o">+</span> <span class="mi">2</span>
-</pre></div>
 </div>
-<p>Interestingly, the <code class="docutils literal"><span class="pre">+</span></code> operator does work with strings, but for strings, the
-<code class="docutils literal"><span class="pre">+</span></code> operator represents <strong>concatenation</strong>, not addition.  Concatenation means
-joining the two operands by linking them end-to-end. This is the equivalent of using the Scratch <img alt="scratch_join_block_inline" src="../../_images/scratch_join_block.png" /> join block.  For example:</p>
+<div class="section" id="madlibs-assignment">
+<h2>6.2. Madlibs Assignment<a class="headerlink" href="#madlibs-assignment" title="Permalink to this headline">¶</a></h2>
+<p>You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!</p>
+<p>Your assignment is to make a program that asks the user choose which madlib they would like to use (your program must have at least two madlibs for the user to choose from), take in user input, and print out the result.</p>
+<p>If you are not familiar with madlibs, you may want to investigate what they are all about by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might take the classic Old MacDonald rhyme:</p>
+<blockquote>
+<div>Old Macdonald had a farm, E-I-E-I-O
+and on that farm he had an cow, E-I-E-I-O
+with a moo moo here
+and a moo moo there,
+here a moo, there a moo,
+everywhere a moo moo,
+Old Macdonald had a farm, E-I-E-I-O.</div></blockquote>
+<p>In your program, you could take user input:</p>
+<blockquote>
+<div>Adjective: Post-war
+Noun: dog toy
+Animal: Redtail Catfish
+Noise: crack</div></blockquote>
+<p>After processing the user input, your program might print out:</p>
+<blockquote>
+<div>Post-War Macdonald had a dog toy, E-I-E-I-O
+and on that dog toy he had an Redtail Catfish, E-I-E-I-O
+with a crack crack here
+and a crack crack there,
+here a crack, there a crack,
+everywhere a crack crack,
+Post-War Macdonald had a dog toy, E-I-E-I-O.</div></blockquote>
+<p>Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Make sure your story makes sense, though!</p>
+<p>Remember to use a comment header at the top of your program!</p>
+<p><strong>Extra for Experts</strong></p>
+<ul class="simple">
+<li>instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:</li>
+<li>easier: create a list of possible words, and have Python choose one of these words <a class="reference external" href="http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python">at random</a>.</li>
+<li>harder: create text files for each of the parts of speech that you will require (ie. nouns.txt, adjectives.txt, etc) and have the computer randomly choose one of the words from the appropriate text file to complete the madlib. Hint: To simplify things, I’d recommend that you generate the text file with one word per line.</li>
+</ul>
 
-<div data-childcomponent="string_concatenation" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="second_input_output_assignment_scratch_work_area" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_concatenation data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-fruit = "banana"
-bakedGood = " nut bread"
-print(fruit + bakedGood)
+<textarea data-component="activecode" id=second_input_output_assignment_scratch_work_area data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Madlib Assignment
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
 </textarea>
 </div>
-<p>The output of this program is <code class="docutils literal"><span class="pre">banana</span> <span class="pre">nut</span> <span class="pre">bread</span></code>. The space before the word
-<code class="docutils literal"><span class="pre">nut</span></code> is part of the string and is necessary to produce the space between
-the concatenated strings.  Take out the space and run it again.</p>
-<p>The <code class="docutils literal"><span class="pre">*</span></code> operator also works on strings.  It performs repetition. For example,
-<code class="docutils literal"><span class="pre">'Fun'*3</span></code> is <code class="docutils literal"><span class="pre">'FunFunFun'</span></code>. One of the operands has to be a string and the
-other has to be an integer.</p>
-
-<div data-childcomponent="string_repetition" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=string_repetition data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-print("Go" * 6)
-
-name = "Packers"
-print(name * 3)
-
-print(name + "Go" * 3)
-
-print((name + "Go") * 3)
-</textarea>
-</div>
-<p>This interpretation of <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">*</span></code> makes sense by analogy with
-addition and multiplication. Just as <code class="docutils literal"><span class="pre">4*3</span></code> is equivalent to <code class="docutils literal"><span class="pre">4+4+4</span></code>, we
-expect <code class="docutils literal"><span class="pre">&quot;Go&quot;*3</span></code> to be the same as <code class="docutils literal"><span class="pre">&quot;Go&quot;+&quot;Go&quot;+&quot;Go&quot;</span></code>, and it is.  Note also in the last
-example that the order of operations for <code class="docutils literal"><span class="pre">*</span></code> and <code class="docutils literal"><span class="pre">+</span></code> is the same as it was for arithmetic.
-The repetition is done before the concatenation.  If you want to cause the concatenation to be
-done first, you will need to use parenthesis.</p>
-<p><strong>Check your understanding</strong></p>
-
-            <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_operators_practice_1">
-            <p>string-operators-11: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
-<span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-
-            <li data-component="answer"  id="string_operators_practice_1_opt_a">python rocks</li><li data-component="feedback" id="string_operators_practice_1_opt_a">Concatenation does not automatically add a space.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_1_opt_b">python</li><li data-component="feedback" id="string_operators_practice_1_opt_b">The expression s+t is evaluated first, then the resulting string is printed.</li>
-            
-            <li data-component="answer" data-correct id="string_operators_practice_1_opt_c">pythonrocks</li><li data-component="feedback" id="string_operators_practice_1_opt_c">Yes, the two strings are glued end to end.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_1_opt_d">Error, you cannot add two strings together.</li><li data-component="feedback" id="string_operators_practice_1_opt_d">The + operator has different meanings depending on the operands, in this case, two strings.</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_operators_practice_2">
-            <p>string-operators-12: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
-<span class="n">excl</span> <span class="o">=</span> <span class="s2">&quot;!&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">excl</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-
-            <li data-component="answer" data-correct id="string_operators_practice_2_opt_a">python!!!</li><li data-component="feedback" id="string_operators_practice_2_opt_a">Yes, repetition has precedence over concatenation</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_b">python!python!python!</li><li data-component="feedback" id="string_operators_practice_2_opt_b">Repetition is done first.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_c">pythonpythonpython!</li><li data-component="feedback" id="string_operators_practice_2_opt_c">The repetition operator is working on the excl variable.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_d">Error, you cannot perform concatenation and repetition at the same time.</li><li data-component="feedback" id="string_operators_practice_2_opt_d">The + and * operator are defined for strings as well as numbers.</li>
-            
-
-            </ul>
-            </div>
-            </div>
-<div class="section" id="assignment-work-time">
-<h2>5.3. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
-<p>Please spend the rest of the class continuing to work on your first Python assignment (Temperature Conversion, or something similar). If you are completely done that assignment, you can look ahead at the next assignment (creating a Madlib).</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 4. Input/Output Assignment' data-toggle="tooltip">
-    <a href="InputOutputAssignment.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 5. String Operators and Assignment Work Time' data-toggle="tooltip">
+    <a href="StringOperations.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="InputOutputAssignment.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="StringOperations.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
     <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
