@@ -80,7 +80,7 @@ You can either work directly in the textbook, or using Thonny. Either way, copy/
 
 Your assignment is to make a program that asks the user choose which madlib they would like to use (your program must have at least two madlibs for the user to choose from), take in user input, and print out the result.
 
-If you are not familiar with madlibs, you may want to investigate what they are all about by searching the web for a "madlibs website". In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might take the classic Old MacDonald rhyme:
+If you are not familiar with madlibs, you may want to investigate what they are all about by searching the web for a "madlibs website". In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might take the classic Old MacDonald rhyme::
 
     Old Macdonald had a farm, E-I-E-I-O
     and on that farm he had an cow, E-I-E-I-O
@@ -90,14 +90,14 @@ If you are not familiar with madlibs, you may want to investigate what they are 
     everywhere a moo moo,
     Old Macdonald had a farm, E-I-E-I-O.
 
-In your program, you could take user input:
+In your program, you could take user input::
 
     Adjective: Post-war
     Noun: dog toy
     Animal: Redtail Catfish
     Noise: crack
 
-After processing the user input, your program might print out:  
+After processing the user input, your program might print out::
 
     Post-War Macdonald had a dog toy, E-I-E-I-O
     and on that dog toy he had an Redtail Catfish, E-I-E-I-O
