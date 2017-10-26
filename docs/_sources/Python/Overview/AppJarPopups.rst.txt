@@ -33,9 +33,9 @@ Can you fix the error in the following program?
     :caption: Find and fix the error in this program!
     :nocodelens:
 
-    the_quote = "Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in.""
+    song_quote = "Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in.""
 
-    print(the_story)
+    print(song_quote)
 
 .. activecode:: wdtpd_other_input_methods_2
     :caption: What will this program print?
