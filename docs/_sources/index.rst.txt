@@ -89,6 +89,7 @@ Python
    Python/Overview/InputOutputAssignment.rst
    Python/Overview/StringOperations.rst
    Python/Overview/SecondInputOutputAssignment.rst
+   Python/Overview/AppJarPopups.rst
 
 
 Computing and Society
