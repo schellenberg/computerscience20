@@ -84,7 +84,8 @@ You will now be able to use the appJar module in the same way you can use any ot
     app = gui()
 
     #spawn pop-up boxes
-    first_name = app.textBox("Name", "First Name?") #Name is the window title, First Name? is the label text
+    #arguments are two strings (window_title, label_text)
+    first_name = app.textBox("Name", "First Name?") 
     last_name = app.textBox("Name", "Last Name?")
 
     #use concatenation to join the strings together
