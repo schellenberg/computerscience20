@@ -277,7 +277,17 @@ print(song_quote)
 
 <div data-childcomponent="wdtpd_other_input_methods_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the error in this program!'>
+part_one = '''Leonard Cohen, in his song "Anthem", sings '''
+part_two = '''"There is a crack in everything; That's how the light gets in."'''
+
+print(part_one + part_two)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_other_input_methods_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
 the_story = '''This is a really long story. There
 is so much to tell that it takes
 more than one line to say it all.'''
@@ -286,9 +296,9 @@ print(the_story)
 </textarea>
 </div>
 
-<div data-childcomponent="wdtpd_other_input_methods_3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_other_input_methods_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_other_input_methods_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
 interesting_quotes = '''There's a lot of people who have said interesting things. Some fun quotes include:
 
 "What I cannot create, I do not understand." - Richard Feynman
@@ -301,7 +311,12 @@ print(interesting_quotes)
 </div>
 <div class="section" id="getting-user-input-with-appjar">
 <h2>7.2. Getting User Input With appJar<a class="headerlink" href="#getting-user-input-with-appjar" title="Permalink to this headline">¶</a></h2>
-<p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <em>Library</em> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. For example, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can do that easily by installing a module called <code class="docutils literal"><span class="pre">appJar</span></code>. In Thonny, open <em>Tools -&gt; Manage packages…</em>.</p>
+<p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
+<img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
+<p>In Reeborg, we would often import that code using from <code class="docutils literal"><span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
+<img alt="../../_images/reeborg_code_calling_library.png" src="../../_images/reeborg_code_calling_library.png" />
+<p>You can think of this code as saying “Look into the <code class="docutils literal"><span class="pre">library</span></code>, and find something called <code class="docutils literal"><span class="pre">turn_right()</span></code>”. For many Python modules, this is equivalent to saying, “Look into the library.py file, and find a function called turn_right()”.</p>
+<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal"><span class="pre">appJar</span></code>. In Thonny, open <em>Tools -&gt; Manage packages…</em>.</p>
 <img alt="../../_images/thonny_manage_packages_menu_item.png" src="../../_images/thonny_manage_packages_menu_item.png" />
 <p>Now type in <code class="docutils literal"><span class="pre">appJar</span></code> into the Search box (capitalization doesn’t matter, but be sure to spell it <em>exactly</em>). Now click the Install button.</p>
 <img alt="../../_images/thonny_add_appjar_module.png" src="../../_images/thonny_add_appjar_module.png" />
@@ -313,12 +328,18 @@ print(interesting_quotes)
 <span class="n">app</span> <span class="o">=</span> <span class="n">gui</span><span class="p">()</span>
 
 <span class="c1">#spawn pop-up boxes</span>
-<span class="n">first_name</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">textBox</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;First Name?&quot;</span><span class="p">)</span> <span class="c1">#Name is the window title, First Name? is the label text</span>
+<span class="c1">#arguments are two strings (window_title, label_text)</span>
+<span class="c1">#think of this as, &quot;look inside app, and call the textBox function&quot;</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">textBox</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;First Name?&quot;</span><span class="p">)</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">textBox</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Last Name?&quot;</span><span class="p">)</span>
 
 <span class="c1">#use concatenation to join the strings together</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For Teachers: The line <code class="docutils literal"><span class="pre">app</span> <span class="pre">=</span> <span class="pre">gui()</span></code> creates an instance of the gui class (the class that you have imported from the appJar module), which you probably don’t want to fully explain to students (as object oriented programming won’t be discussed in this course at all). One possible way to give students a basic (though somewhat flawed) understanding of this is to say that calling <code class="docutils literal"><span class="pre">from</span> <span class="pre">appJar</span> <span class="pre">import</span> <span class="pre">gui</span></code> allows you to access a new data type called gui, so app is a variable of the data type gui. Variables of this new data type allow you to call special functions defined as part of that data type, such as <code class="docutils literal"><span class="pre">textBox(window_title,</span> <span class="pre">label_text)</span></code>.</p>
 </div>
 </div>
 <div class="section" id="assignment-work-time">
