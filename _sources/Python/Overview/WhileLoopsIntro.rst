@@ -7,6 +7,7 @@ The ``while`` Statement
 -----------------------
 
 When we programmed in Reeborg, we used a ``while`` loop whenever we did not know the number of iterations (times the loop would repeat) before hand. This was helpful when we needed to do things like::
+
     while front_is_clear(): 
         move() 
 
@@ -14,7 +15,7 @@ Similar to the ``if`` statement, a ``while`` statement uses a boolean expression
 
 The following figure shows the flow of control.
 
-.. image:: Figures/while_flow.png
+.. image:: images/while_flow.png
 
 A short (and not overly helpful) example of a ``while`` statement follows.
 
