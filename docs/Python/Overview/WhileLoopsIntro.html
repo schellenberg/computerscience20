@@ -192,8 +192,15 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">8. The <code class="docutils literal"><span class="pre">while</span></code> Statement</a></li>
-<li><a class="reference internal" href="#assignment-work-time">9. Assignment Work Time</a></li>
+<li><a class="reference internal" href="#">8. The <code class="docutils literal"><span class="pre">while</span></code> Statement</a><ul>
+<li><a class="reference internal" href="#quick-practice-problems">8.1. Quick Practice Problems</a><ul>
+<li><a class="reference internal" href="#counting-up">8.1.1. Counting Up</a></li>
+<li><a class="reference internal" href="#counting-down">8.1.2. Counting Down</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#assignment-work-time">8.2. Assignment Work Time</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -245,10 +252,14 @@
     <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Similar to the <code class="docutils literal"><span class="pre">if</span></code> statement, a <code class="docutils literal"><span class="pre">while</span></code> statement uses a boolean expression to control the flow of execution.  The body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. In the example above, the function front_is_clear() returned either <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>.</p>
+<p>Similar to the <code class="docutils literal"><span class="pre">if</span></code> statement, a <code class="docutils literal"><span class="pre">while</span></code> statement uses a boolean expression to control the flow of execution.  The body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. In the example above, the function <code class="docutils literal"><span class="pre">front_is_clear()</span></code> returned either <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>.</p>
 <p>The following figure shows the flow of control.</p>
 <img alt="../../_images/while_flow1.png" src="../../_images/while_flow1.png" />
-<p>A short (and not overly helpful) example of a <code class="docutils literal"><span class="pre">while</span></code> statement follows.</p>
+<p>A short example of a <code class="docutils literal"><span class="pre">while</span></code> statement follows.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For these introductory examples, we know the number of iterations (times the loop repeats) <em>before</em> the code executes. Later on, we will practice while loops in which we do not know the number of iterations ahead of time.</p>
+</div>
 
 <div data-childcomponent="while_intro_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -259,7 +270,63 @@ while (i < 5):
     i = i + 1
 </textarea>
 </div>
-<p>Consider how this is different than the following:</p>
+<p>It may be helpful to view the code above using codelens:</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="while_intro_1_codelens"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (while_intro_1_codelens)</span> </p>
+</div>
+<script type="text/javascript">
+var while_intro_1_codelens_trace = {"code": "i = 0\nwhile (i < 5):\n    print(i)\n    i = i + 1", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}]};
+var while_intro_1_codelens_vis;
+
+$(document).ready(function() {
+    try {
+        while_intro_1_codelens_vis = new ExecutionVisualizer('while_intro_1_codelens',while_intro_1_codelens_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(while_intro_1_codelens_vis,'while_intro_1_codelens');
+        styleButtons('while_intro_1_codelens');
+        allVisualizers.push(while_intro_1_codelens_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component while_intro_1_codelens_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#while_intro_1_codelens_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'while_intro_1_codelens'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (while_intro_1_codelens_vis) {
+        while_intro_1_codelens_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>You can do something similar to the codelens feature above using Thonny. First, click on <em>View -&gt; Variables</em> to see the values of variables while your code runs.</p>
+<p><strong>Insert image of menu here.</strong></p>
+<p>Copy/paste the while loop code from above into the Thonny text editor. Now press the <em>Debug current script</em> button. Thonny will now highlight the next line it will evaluate. You can control the debugger using the <em>Step over</em>, <em>Step into</em>, and <em>Step out</em> buttons. For now, have Thonny go through the code by pressing <strong>Step into</strong> (or press the keyboard shortcut <strong>F7</strong>).</p>
+<p><strong>Insert animation of stepping through the code here.</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Using a visualization tool like codelens or Thonny’s debugger can really help you build a mental model of how Python works. Whenever you encounter a piece of Python code that you do not understand, your first reaction should be to run the code in one of these environments to help yourself figure out how it works!</p>
+</div>
+<p>The following code is just slightly different from the version above. Can you spot the difference? Before you run the code, try to figure out what it will print. Will it be the same as the first version?</p>
 
 <div data-childcomponent="while_intro_2" class="runestone explainer ac_section alert alert-warning">
 
@@ -268,22 +335,6 @@ i = 0
 while (i < 5):
     i = i + 1
     print(i)
-</textarea>
-</div>
-<p>Can you make a program that will print out the numbers 1 to 100?</p>
-
-<div data-childcomponent="while_intro_3" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=while_intro_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-#put your code here!
-</textarea>
-</div>
-<p>How about a program that counts down from 20, then prints <em>Blastoff!</em>?</p>
-
-<div data-childcomponent="while_intro_4" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=while_intro_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-#put your code here!
 </textarea>
 </div>
 <div class="admonition warning">
@@ -295,10 +346,44 @@ with Y.  In Python there is <em>not</em> an immediate stop:  After the
 initial test, any following tests come only after the execution of
 the <em>whole</em> body, even if the condition becomes false in the middle of the loop body.</p>
 </div>
+<p>What will the following code do? <em>Note: it might be better to run this in Thonny, rather than here in your browser…</em></p>
+
+<div data-childcomponent="while_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=while_intro_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+while True:
+    print("hello")
+</textarea>
+</div>
+<div class="section" id="quick-practice-problems">
+<h2>8.1. Quick Practice Problems<a class="headerlink" href="#quick-practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="counting-up">
+<h3>8.1.1. Counting Up<a class="headerlink" href="#counting-up" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will print out the numbers 1 to 100.</p>
+
+<div data-childcomponent="while_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=while_intro_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+#put your code here!
+</textarea>
+</div>
+</div>
+<div class="section" id="counting-down">
+<h3>8.1.2. Counting Down<a class="headerlink" href="#counting-down" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that counts down from 20 to 1, then prints <em>Blastoff!</em>.</p>
+
+<div data-childcomponent="while_intro_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=while_intro_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+#put your code here!
+</textarea>
+</div>
+</div>
 </div>
 <div class="section" id="assignment-work-time">
-<h1>9. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h1>
+<h2>8.2. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
 <p>Please spend the rest of the class continuing to work on your current Python assignment (Madlib, or something similar).</p>
+</div>
 </div>
 
 
