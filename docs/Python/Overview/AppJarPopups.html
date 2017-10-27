@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../../ComputingAndSociety/UnderlyingTechnology.html" />
+    <link rel="next" title="8. The while Statement" href="WhileLoopsIntro.html" />
     <link rel="prev" title="6. Input/Output Strings Assignment" href="SecondInputOutputAssignment.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -193,9 +193,10 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">7. Other Input Methods (appJar)</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">7.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#getting-user-input-with-appjar">7.2. Getting User Input With appJar</a></li>
-<li><a class="reference internal" href="#assignment-work-time">7.3. Assignment Work Time</a></li>
+<li><a class="reference internal" href="#a-bit-more-detail-about-strings">7.1. A Bit More Detail About Strings</a></li>
+<li><a class="reference internal" href="#what-does-this-program-do">7.2. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#getting-user-input-with-appjar">7.3. Getting User Input With appJar</a></li>
+<li><a class="reference internal" href="#assignment-work-time">7.4. Assignment Work Time</a></li>
 </ul>
 </li>
 </ul>
@@ -211,8 +212,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" title='Next Chapter - 8. The <code class="docutils literal"><span class="pre">while</span></code> Statement' data-toggle="tooltip" >
+    <a href="WhileLoopsIntro.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -246,7 +247,7 @@
 <h1>7. Other Input Methods (appJar)<a class="headerlink" href="#other-input-methods-appjar" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Triple quoted strings can span multiple lines. Getting user input with a pop-up window using the appJar module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
+<p>Triple quoted strings can span multiple lines, and contain other types of quotes. Getting user input with a pop-up window using the appJar module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -257,19 +258,68 @@
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
-<h2>7.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="a-bit-more-detail-about-strings">
+<h2>7.1. A Bit More Detail About Strings<a class="headerlink" href="#a-bit-more-detail-about-strings" title="Permalink to this headline">¶</a></h2>
+<p>Strings in Python can be enclosed in either single quotes (<code class="docutils literal"><span class="pre">'</span></code>) or double
+quotes (<code class="docutils literal"><span class="pre">&quot;</span></code> - the double quote character), or three of the same separate quote characters (<code class="docutils literal"><span class="pre">'''</span></code> or <code class="docutils literal"><span class="pre">&quot;&quot;&quot;</span></code>).</p>
+
+<div data-childcomponent="ch02_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(type('This is a string.') )
+print(type("And so is this.") )
+print(type("""and this.""") )
+print(type('''and even this...''') )
+</textarea>
+</div>
+<p>Double quoted strings can contain single quotes inside them, as in <code class="docutils literal"><span class="pre">&quot;Bruce's</span>
+<span class="pre">beard&quot;</span></code>, and single quoted strings can have double quotes inside them, as in
+<code class="docutils literal"><span class="pre">'The</span> <span class="pre">knights</span> <span class="pre">who</span> <span class="pre">say</span> <span class="pre">&quot;Ni!&quot;'</span></code>.
+Strings enclosed with three occurrences of either quote symbol are called
+triple quoted strings.  They can contain either single or double quotes:</p>
+
+<div data-childcomponent="ch02_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
+</textarea>
+</div>
+<p>Triple quoted strings can even span multiple lines:</p>
+
+<div data-childcomponent="ch02_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print("""This message will span
+several lines
+of the text.""")
+</textarea>
+</div>
+<p>Python doesn’t care whether you use single or double quotes or the
+three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
+your program or command, the way it stores the value is identical in all cases,
+and the surrounding quotes are not part of the value.</p>
+
+<div data-childcomponent="ch02_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_7 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('This is a string.')
+print("""And so is this.""")
+</textarea>
+</div>
+</div>
+<div class="section" id="what-does-this-program-do">
+<h2>7.2. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
-<p>Can you fix the error in the following program?</p>
+<p>Can you fix the error in the following programs?</p>
 
 <div data-childcomponent="wdtpd_other_input_methods_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=wdtpd_other_input_methods_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the error in this program!'>
-song_quote = "Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in.""
+song_quote = 'Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in."'
 
 print(song_quote)
 </textarea>
@@ -277,9 +327,9 @@ print(song_quote)
 
 <div data-childcomponent="wdtpd_other_input_methods_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the error in this program!'>
-part_one = '''Leonard Cohen, in his song "Anthem", sings '''
-part_two = '''"There is a crack in everything; That's how the light gets in."'''
+<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
+part_one = "Leonard Cohen, in his song "Anthem", sings"
+part_two = 'There is a crack in everything; That's how the light gets in.'
 
 print(part_one + part_two)
 </textarea>
@@ -287,30 +337,19 @@ print(part_one + part_two)
 
 <div data-childcomponent="wdtpd_other_input_methods_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-the_story = '''This is a really long story. There
-is so much to tell that it takes
-more than one line to say it all.'''
-
-print(the_story)
-</textarea>
-</div>
-
-<div data-childcomponent="wdtpd_other_input_methods_4" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_other_input_methods_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-interesting_quotes = '''There's a lot of people who have said interesting things. Some fun quotes include:
+<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
+interesting_quotes = 'There's a lot of people who have said interesting things. Some fun quotes include:
 
 "What I cannot create, I do not understand." - Richard Feynman
 "Judge a man by his questions rather than by his answers." - Voltaire
-"Our ignorance of history causes us to slander our own times." - Gustave Flaubert'''
+"Our ignorance of history causes us to slander our own times." - Gustave Flaubert'
 
 print(interesting_quotes)
 </textarea>
 </div>
 </div>
 <div class="section" id="getting-user-input-with-appjar">
-<h2>7.2. Getting User Input With appJar<a class="headerlink" href="#getting-user-input-with-appjar" title="Permalink to this headline">¶</a></h2>
+<h2>7.3. Getting User Input With appJar<a class="headerlink" href="#getting-user-input-with-appjar" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
 <img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
 <p>In Reeborg, we would often import that code using <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
@@ -343,7 +382,7 @@ print(interesting_quotes)
 </div>
 </div>
 <div class="section" id="assignment-work-time">
-<h2>7.3. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
+<h2>7.4. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
 <p>Please spend the rest of the class continuing to work on your current Python assignment (Madlib, or something similar).</p>
 </div>
 </div>
@@ -358,12 +397,12 @@ print(interesting_quotes)
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="SecondInputOutputAssignment.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 8. The <code class="docutils literal"><span class="pre">while</span></code> Statement' data-toggle="tooltip" >
+    <a href="WhileLoopsIntro.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../ComputingAndSociety/UnderlyingTechnology.html" >Next Section - Underlying Technology of Computing Devices and the Internet</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="WhileLoopsIntro.html" >Next Section - 8. The <code class="docutils literal"><span class="pre">while</span></code> Statement</a>
 
 <script type="text/javascript">
 

@@ -90,6 +90,7 @@ Python
    Python/Overview/StringOperations.rst
    Python/Overview/SecondInputOutputAssignment.rst
    Python/Overview/AppJarPopups.rst
+   Python/Overview/WhileLoopsIntro.rst
 
 
 Computing and Society
