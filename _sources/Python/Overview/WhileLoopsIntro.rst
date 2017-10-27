@@ -57,23 +57,6 @@ The following code is just slightly different from the version above. Can you sp
         print(i)
 
 
-Quick Practice Problems
------------------------
-
-Can you make a program that will print out the numbers 1 to 100?
-
-.. activecode:: while_intro_3
-
-    #put your code here!
-
-
-How about a program that counts down from 20, then prints *Blastoff!*?
-
-.. activecode:: while_intro_4
-
-    #put your code here!
-
-
 .. warning::
    Though Python's ``while`` is very close to the English "while", 
    there is an important difference:  In English "while X, do Y", 
@@ -81,6 +64,29 @@ How about a program that counts down from 20, then prints *Blastoff!*?
    with Y.  In Python there is *not* an immediate stop:  After the 
    initial test, any following tests come only after the execution of 
    the *whole* body, even if the condition becomes false in the middle of the loop body.
+
+
+Quick Practice Problems
+-----------------------
+
+Counting Up
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that will print out the numbers 1 to 100.
+
+.. activecode:: while_intro_3
+
+    #put your code here!
+
+
+Counting Down
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that counts down from 20 to 1, then prints *Blastoff!*.
+
+.. activecode:: while_intro_4
+
+    #put your code here!
 
 
 
