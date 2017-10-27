@@ -39,11 +39,11 @@ It may be helpful to view the code above using codelens:
 
 You can do something similar to the codelens feature above using Thonny. First, click on *View -> Variables* to see the values of variables while your code runs.
 
-**Insert image of menu here.**
+.. image:: images/thonny_show_variables.png
 
 Copy/paste the while loop code from above into the Thonny text editor. Now press the *Debug current script* button. Thonny will now highlight the next line it will evaluate. You can control the debugger using the *Step over*, *Step into*, and *Step out* buttons. For now, have Thonny go through the code by pressing **Step into** (or press the keyboard shortcut **F7**). 
 
-**Insert animation of stepping through the code here.**
+.. image:: images/debug_mode_in_thonny_high_quality.gif
 
 .. note:: Using a visualization tool like codelens or Thonny's debugger can really help you build a mental model of how Python works. Whenever you encounter a piece of Python code that you do not understand, your first reaction should be to run the code in one of these environments to help yourself figure out how it works!
 
