@@ -65,6 +65,13 @@ The following code is just slightly different from the version above. Can you sp
    initial test, any following tests come only after the execution of 
    the *whole* body, even if the condition becomes false in the middle of the loop body.
 
+What will the following code do? *Note: it might be better to run this in Thonny, rather than here in your browser...*
+
+.. activecode:: while_intro_3
+
+    while True:
+        print("hello")
+
 
 Quick Practice Problems
 -----------------------
