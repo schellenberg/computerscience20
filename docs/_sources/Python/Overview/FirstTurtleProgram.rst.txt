@@ -285,7 +285,7 @@ Practice Problems
 
 Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
-**You might find the Python Documentation for the turtle module to be helpful: https://docs.python.org/3/library/turtle.html**
+You might find the Python Documentation for the turtle module to be helpful: `https://docs.python.org/3/library/turtle.html <https://docs.python.org/3/library/turtle.html>`_ 
 
 
 Color Selection
@@ -293,8 +293,10 @@ Color Selection
 
 Modify the program given below so that before it creates the window, it prompts the user to enter the desired background color. It should store the user's response in a variable, and modify the color of the window according to the user's wishes. Do similar changes to allow the user to set the turtle bree's color as well.
 
-*(Hint: you can find a list of permitted color names at https://www.w3schools.com/colors/colors_names.asp.  It includes some quite unusual ones, like "PeachPuff" and "HotPink".)*
-   
+(Hint: you can find a list of permitted color names at `https://www.w3schools.com/colors/colors_names.asp <https://www.w3schools.com/colors/colors_names.asp>`_ .  It includes some quite unusual ones, like "PeachPuff" and "HotPink".)
+
+.. note:: If you are running your code in Thonny, the order of your instructions matters a lot! You might, for example, want to ask the user questions *before* creating a Screen() to draw on. Or you might choose to use something like ``appJar`` to ask the questions.
+
 .. activecode:: practice_problem_turtle_intro_1
     :nocodelens:
 
