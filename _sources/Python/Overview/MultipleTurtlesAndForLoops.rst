@@ -404,12 +404,9 @@ You might find the Python Documentation for the turtle module to be helpful: `ht
 Regular Polygons
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a program that uses for loops to make a turtle draw these regular polygons (regular means all sides the same lengths, all angles the same):
+Create a program that uses for loops to make a turtle draw regular polygons (regular means all sides the same lengths, all angles the same). First, ask the user how many sides they want the polygon to have, and how long each side length should be. Now draw the regular polygon that meets the user's requirements!
 
-- An equilateral triangle
-- A square
-- A hexagon (six sides) 
-- An octagon (eight sides)
+.. note:: Remember that in a regular polygon, the sum of the interior angles of the polygon will always be 360 degrees.
    
 .. activecode:: practice_problem_turtle_for_loops_1
     :nocodelens:
