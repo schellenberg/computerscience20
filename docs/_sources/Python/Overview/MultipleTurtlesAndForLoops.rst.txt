@@ -74,7 +74,8 @@ Here are some *How to think like a computer scientist* observations:
   ideas. They're not always explicit in the code.
 
 
-**Mixed up programs**
+Mixed Up Programs
+~~~~~~~~~~~~~~~~~~~~
 
 .. parsonsprob:: for-loops-parsons-1
 
