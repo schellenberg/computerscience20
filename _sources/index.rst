@@ -94,6 +94,7 @@ Python
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst
    Python/Overview/TurtlePractice.rst
+   Python/Overview/Microbit.rst
 
 
 Computing and Society
