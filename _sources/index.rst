@@ -93,6 +93,7 @@ Python
    Python/Overview/WhileLoopsIntro.rst
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst
+   Python/Overview/TurtlePractice.rst
 
 
 Computing and Society
@@ -123,3 +124,12 @@ Student-Directed Research
 
    StudentResearch/ProjectOverview.rst
 
+
+Appendices
+::::::::::
+
+.. toctree::
+   :caption: Appendices
+   :maxdepth: 1
+
+   Python/TurtleConfusion/Challenges.rst

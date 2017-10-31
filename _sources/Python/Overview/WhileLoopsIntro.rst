@@ -6,6 +6,18 @@
 The ``while`` Statement
 ========================
 
+.. topic:: Quick Overview of Day
+
+    Explore how the ``while`` loop works in Python. Learn how to use the debug functions of Thonny. Continue to work on the current Python assignment, focused on input/output and string concatenation.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
 When we programmed in Reeborg, we used a ``while`` loop whenever we did not know the number of iterations (times the loop would repeat) before hand. This was helpful when we needed to do things like::
 
     while front_is_clear(): 

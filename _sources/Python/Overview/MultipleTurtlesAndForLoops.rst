@@ -6,6 +6,18 @@
 Multiple Turtles and ``for`` Loops
 =============================================
 
+.. topic:: Quick Overview of Day
+
+    Explore how to instantiate more than one turtle object in the same program. Introduce the ``for`` loop, and use the ``range()``function to simplify the creation of large for loops.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
 Instances --- A Herd of Turtles
 -------------------------------
 

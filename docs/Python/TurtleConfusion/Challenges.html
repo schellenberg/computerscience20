@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Turtle Confusion Challenges &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Project Overview" href="../../StudentResearch/ProjectOverview.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Turtle Confusion Challenges</a><ul>
+<li><a class="reference internal" href="#id1">1</a></li>
+<li><a class="reference internal" href="#id2">2</a></li>
+<li><a class="reference internal" href="#id3">3</a></li>
+<li><a class="reference internal" href="#id4">4</a></li>
+<li><a class="reference internal" href="#id5">5</a></li>
+<li><a class="reference internal" href="#id6">6</a></li>
+<li><a class="reference internal" href="#id7">7</a></li>
+<li><a class="reference internal" href="#id8">8</a></li>
+<li><a class="reference internal" href="#id9">9</a></li>
+<li><a class="reference internal" href="#id10">10</a></li>
+<li><a class="reference internal" href="#id11">11</a></li>
+<li><a class="reference internal" href="#id12">12</a></li>
+<li><a class="reference internal" href="#id13">13</a></li>
+<li><a class="reference internal" href="#id14">14</a></li>
+<li><a class="reference internal" href="#id15">15</a></li>
+<li><a class="reference internal" href="#id16">16</a></li>
+<li><a class="reference internal" href="#id17">17</a></li>
+<li><a class="reference internal" href="#id18">19</a></li>
+<li><a class="reference internal" href="#id19">20</a></li>
+<li><a class="reference internal" href="#id20">21</a></li>
+<li><a class="reference internal" href="#id21">22</a></li>
+<li><a class="reference internal" href="#id22">23</a></li>
+<li><a class="reference internal" href="#id23">24</a></li>
+<li><a class="reference internal" href="#id24">25</a></li>
+<li><a class="reference internal" href="#id25">26</a></li>
+<li><a class="reference internal" href="#id26">27</a></li>
+<li><a class="reference internal" href="#id27">28</a></li>
+<li><a class="reference internal" href="#id28">29</a></li>
+<li><a class="reference internal" href="#id29">30</a></li>
+<li><a class="reference internal" href="#id30">31</a></li>
+<li><a class="reference internal" href="#id31">32</a></li>
+<li><a class="reference internal" href="#id32">33</a></li>
+<li><a class="reference internal" href="#id33">34</a></li>
+<li><a class="reference internal" href="#id34">35</a></li>
+<li><a class="reference internal" href="#id35">36</a></li>
+<li><a class="reference internal" href="#id36">37</a></li>
+<li><a class="reference internal" href="#id37">38</a></li>
+<li><a class="reference internal" href="#id38">39</a></li>
+<li><a class="reference internal" href="#id39">40</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Project Overview" data-toggle="tooltip">
+    <a href="../../StudentResearch/ProjectOverview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="turtle-confusion-challenges">
+<span id="turtle-confusion"></span><h1>Turtle Confusion Challenges<a class="headerlink" href="#turtle-confusion-challenges" title="Permalink to this headline">¶</a></h1>
+<p>The following images will provide you a chance to think through the logic of how to draw a particular image. It is a great challenge to try to think through the solution completely first, then write the code. Challenge yourself to have your code work correctly the first time it runs!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These images, and the riddles that accompany them, are included with the permission of Barry Newell. They are from Barry’s book <em>Turtle Confusion</em> (1988).</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To do: add some restrictions/instructions on how the images should be drawn.</p>
+</div>
+<div class="section" id="id1">
+<h2>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-1.png" src="../../_images/confusion-1.png" />
+<p>Use at least one variable to make it easy to change the size of the square.</p>
+<blockquote>
+<div><p>There was a young student named Myrtle,</p>
+<p>Who tried to converse with the Turtle,</p>
+<p>She later said, “Guys,</p>
+<p>The scales fall from your eyes,</p>
+<p>When you clear the homology hurdle.”</p>
+</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-2.png" src="../../_images/confusion-2.png" />
+<p>Use the <code class="docutils literal"><span class="pre">for</span></code> loop structure when drawing this rectangle. Consider the ways the rectangle is the same as a square, and the ways it is different.</p>
+<blockquote>
+<div><p>A butterfly floated delicately down and alighted on a branch near a hungry caterpillar. The butterfly, peering down its proboscis at the caterpillar, said, “Move aside, you uncouth beast.”</p>
+<p>The caterpillar looked up from its munching and said, in a rather muffled, mouth-fullish way, “You might think that you are special, My Lady, but consider your origins. Also, I ask that you remember my versatility; can you, My Lady, …BURP, pardon me… perform the Big Change?”</p>
+</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>3<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-3.png" src="../../_images/confusion-3.png" />
+<p>It might help if you regarded this shape as a rectangle with a chunk bitten out of the corner. See if you can draw the shape with the bite taken out of a different corner as well. Sometimes you can solve these puzzles in a nice, simple way; other times, you can’t. Looking for a pattern to write a simple solution can usually help you learn something, though!</p>
+
+<div data-childcomponent="turtle_confusion_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-4.png" src="../../_images/confusion-4.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The small triangle indicates the corner which the turtle should start and end when the Hollow C is drawn. Make sure that the turtle is pointing in the same direction at the beginning and end.</p>
+</div>
+<p>Let’s draw the image three different ways:</p>
+<ul>
+<li><p class="first">using any commands that you like</p>
+</li>
+<li><p class="first">using only the <code class="docutils literal"><span class="pre">.forward()</span></code> and <code class="docutils literal"><span class="pre">.right()</span></code> commands</p>
+</li>
+<li><p class="first">using <code class="docutils literal"><span class="pre">.forward()</span></code>, <code class="docutils literal"><span class="pre">.backward()</span></code>, and <code class="docutils literal"><span class="pre">.right(90)</span></code> (note that you may use 90, and only 90, as the argument to the <code class="docutils literal"><span class="pre">.right()</span></code> command for this solution)</p>
+<blockquote>
+<div><p>Said Senator Seemore, “I’m feeling ambivalent,</p>
+<p>I’ve come to believe all parties equivalent,</p>
+<p>Even those at extremes of political persuasion,</p>
+<p>Tend to create the same State of the Nation.”</p>
+</div></blockquote>
+</li>
+</ul>
+
+<div data-childcomponent="turtle_confusion_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>5<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-5.png" src="../../_images/confusion-5.png" />
+<p>What does this puzzle have in common with:</p>
+<blockquote>
+<div><p>A barque, but not a schooner?</p>
+<p>A steak with three veg., but not a can of beans?</p>
+<p><em>The Four Seasons</em>, but not <em>Yellow Submarine</em>?</p>
+<p>A reef knot, but not a turk’s head?</p>
+</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>6<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-6.png" src="../../_images/confusion-6.png" />
+<p>Go back to the code you wrote for the first 5 images, and turn them each into functions, so that you can call something like <code class="docutils literal"><span class="pre">my_turtle.square(100)</span></code>.</p>
+<blockquote>
+<div><p>Have you ever thought about the way a pizza,</p>
+<p>As you wrap yourself around each tasty wedge,</p>
+<p>Is eaten in the manner cakes and sweets are,</p>
+<p>We consume them from the middle to the edge.</p>
+</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_6 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>7<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-7.png" src="../../_images/confusion-7.png" />
+<p>A <strong>pointer</strong> is a riddle that has a single number as its solution; the number is the sequence-number of another puzzle on this page. In some cases the related puzzle will be a harder puzzle, in some cases it will be an easier puzzle. Consider the following pointer:</p>
+<blockquote>
+<div><p>“If they explode enough uranium devices,</p>
+<p>Our planet will become somewhat exciting,</p>
+<p>We may end up with glowing herbs and spices,</p>
+<p>And bones that give a soft internal lighting.”</p>
+</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_7 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>8<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-8.png" src="../../_images/confusion-8.png" />
+<p>If you are struggling with the shapes we are drawing, don’t worry too much about making the solution to this problem elegant. However, if you are feeling confident, see if you can think through how you might be able to draw this shape in a different, simpler way.</p>
+<blockquote>
+<div>You are better off thinking of a <em>llama</em> on a <em>llano</em>, than you are contemplating the Cyclops’s barbershop quartet.</div></blockquote>
+
+<div data-childcomponent="turtle_confusion_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_8 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>9<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+
+<div data-childcomponent="turtle_confusion_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_9 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>10<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-10.png" src="../../_images/confusion-10.png" />
+
+<div data-childcomponent="turtle_confusion_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_10 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>11<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-11.png" src="../../_images/confusion-11.png" />
+
+<div data-childcomponent="turtle_confusion_11" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_11 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>12<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-12.png" src="../../_images/confusion-12.png" />
+
+<div data-childcomponent="turtle_confusion_12" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_12 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>13<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-13.png" src="../../_images/confusion-13.png" />
+
+<div data-childcomponent="turtle_confusion_13" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_13 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>14<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-14.png" src="../../_images/confusion-14.png" />
+
+<div data-childcomponent="turtle_confusion_14" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_14 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>15<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-15.png" src="../../_images/confusion-15.png" />
+
+<div data-childcomponent="turtle_confusion_15" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_15 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>16<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-16.png" src="../../_images/confusion-16.png" />
+
+<div data-childcomponent="turtle_confusion_16" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_16 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>17<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-17.png" src="../../_images/confusion-17.png" />
+
+<div data-childcomponent="turtle_confusion_17" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_17 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>19<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-19.png" src="../../_images/confusion-19.png" />
+
+<div data-childcomponent="turtle_confusion_19" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_19 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>20<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-20.png" src="../../_images/confusion-20.png" />
+
+<div data-childcomponent="turtle_confusion_20" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_20 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>21<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-21.png" src="../../_images/confusion-21.png" />
+
+<div data-childcomponent="turtle_confusion_21" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_21 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>22<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-22.png" src="../../_images/confusion-22.png" />
+
+<div data-childcomponent="turtle_confusion_22" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_22 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>23<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-23.png" src="../../_images/confusion-23.png" />
+
+<div data-childcomponent="turtle_confusion_23" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_23 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>24<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-24.png" src="../../_images/confusion-24.png" />
+
+<div data-childcomponent="turtle_confusion_24" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_24 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>25<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-25.png" src="../../_images/confusion-25.png" />
+
+<div data-childcomponent="turtle_confusion_25" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_25 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>26<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-26.png" src="../../_images/confusion-26.png" />
+
+<div data-childcomponent="turtle_confusion_26" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_26 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>27<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-27.png" src="../../_images/confusion-27.png" />
+
+<div data-childcomponent="turtle_confusion_27" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_27 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>28<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-28.png" src="../../_images/confusion-28.png" />
+
+<div data-childcomponent="turtle_confusion_28" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_28 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id28">
+<h2>29<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-29.png" src="../../_images/confusion-29.png" />
+
+<div data-childcomponent="turtle_confusion_29" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_29 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>30<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-30.png" src="../../_images/confusion-30.png" />
+
+<div data-childcomponent="turtle_confusion_30" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_30 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>31<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-31.png" src="../../_images/confusion-31.png" />
+
+<div data-childcomponent="turtle_confusion_31" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_31 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>32<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-32.png" src="../../_images/confusion-32.png" />
+
+<div data-childcomponent="turtle_confusion_32" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_32 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>33<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-33.png" src="../../_images/confusion-33.png" />
+
+<div data-childcomponent="turtle_confusion_33" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_33 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>34<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-34.png" src="../../_images/confusion-34.png" />
+
+<div data-childcomponent="turtle_confusion_34" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_34 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>35<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-35.png" src="../../_images/confusion-35.png" />
+
+<div data-childcomponent="turtle_confusion_35" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_35 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id35">
+<h2>36<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-36.png" src="../../_images/confusion-36.png" />
+
+<div data-childcomponent="turtle_confusion_36" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_36 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>37<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-37.png" src="../../_images/confusion-37.png" />
+
+<div data-childcomponent="turtle_confusion_37" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_37 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id37">
+<h2>38<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-38.png" src="../../_images/confusion-38.png" />
+
+<div data-childcomponent="turtle_confusion_38" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_38 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>39<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-39.png" src="../../_images/confusion-39.png" />
+
+<div data-childcomponent="turtle_confusion_39" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_39 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="id39">
+<h2>40<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-40.png" src="../../_images/confusion-40.png" />
+
+<div data-childcomponent="turtle_confusion_40" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_40 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Project Overview' data-toggle="tooltip">
+    <a href="../../StudentResearch/ProjectOverview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../../StudentResearch/ProjectOverview.html" ></a>
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

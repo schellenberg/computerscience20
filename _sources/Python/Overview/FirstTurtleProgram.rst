@@ -6,6 +6,18 @@
 Our First Turtle Program
 =========================
 
+.. topic:: Quick Overview of Day
+
+    Learn how to do basic drawing in Python using the turtle module.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
+    - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
+    - **CS20-FP2** Investigate how control structures affect program flow.
+
 There are many *modules* in Python that provide very powerful features that we
 can use in our own programs.  Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations. We have already used one module, called ``appJar``, which allowed us to use pop-up windows when asking for user input. Today, we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures. *The turtle module is very similar to the Pen functionality that we explored using Scratch!* Note that the ``turtle`` module is part of the standard Python installation, so you do not need to install it before using it.
 
