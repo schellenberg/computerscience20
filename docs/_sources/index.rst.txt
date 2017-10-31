@@ -92,6 +92,7 @@ Python
    Python/Overview/AppJarPopups.rst
    Python/Overview/WhileLoopsIntro.rst
    Python/Overview/FirstTurtleProgram.rst
+   Python/Overview/MultipleTurtlesAndForLoops.rst
 
 
 Computing and Society
