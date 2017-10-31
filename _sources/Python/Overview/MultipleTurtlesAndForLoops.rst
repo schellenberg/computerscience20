@@ -444,10 +444,11 @@ One run of the program might produce a star that looks like the following:
 Drawing a Clock
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a program that uses the turtle module to draw the shape of an analogue clock. It should look like the following:
+Create a program that uses the turtle module to draw the shape of an analogue clock. Do this using **ONLY ONE TURTLE object**. It should look like the following:
 
 .. image:: images/tess_clock1.png
 
+You might need to explore the `Turtle documentation on the Python Docs website <https://docs.python.org/3/library/turtle.html>`_ to figure out how to leave an image of where the turtle was.
 
 .. activecode:: practice_problem_turtle_for_loops_3
     :nocodelens:
