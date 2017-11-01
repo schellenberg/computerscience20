@@ -27,7 +27,7 @@ Time Module
 Sometimes, we'd like to wait a bit before running the next command in a Python program. To do this, we can ``import time``, then use the ``.sleep()`` function. An example is below:
 
 .. activecode:: time-sleep-1
-    :nocodelens:
+	:nocodelens:
 
 	# How to Pause in Python
 
@@ -36,8 +36,9 @@ Sometimes, we'd like to wait a bit before running the next command in a Python p
 	time.sleep(2)
 	print("second thing")
 
+
 .. activecode:: time-sleep-2
-    :nocodelens:
+	:nocodelens:
 
 	# Another Pausing Program
 
