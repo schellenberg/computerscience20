@@ -70,7 +70,13 @@ To use the Micro:bit as an input/output device, you need to "flash" it with a .h
 
 .. image:: images/bitio.png
 
-Now, navigate to the src/ folder, and open the file ``std_image.py`` in Thonny. When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. Once that is complete, you should see a series of images begin to show up on the 5x5 LED grid on your Micro:bit. The console will look something like this:
+Now, install the package ``cs20-microbitio`` in Thonny. Once you have done that, try running the code below::
+
+	import microbit
+
+	microbit.display.scroll("Hey there, CS20")
+
+When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. Once that is complete, you should see a series of images begin to show up on the 5x5 LED grid on your Micro:bit. The console will look something like this:
 
 	No micro:bit has previously been detected
 	Scanning for serial ports
@@ -87,14 +93,8 @@ Now, navigate to the src/ folder, and open the file ``std_image.py`` in Thonny. 
 	Your micro:bit has been detected
 	Now running your program
 
-Change the code in this file to read::
 
-	import microbit
-
-	microbit.display.scroll("Hey there, CS20")
-
-
-Try some of the other demonstration code files, including:
+To explore the possibilities, try some of the other demonstration code files, including:
 
 - tilt.py
 - touched.py

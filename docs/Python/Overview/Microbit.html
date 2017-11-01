@@ -306,7 +306,13 @@ print("All done!")
 <p>Download the <a class="reference external" href="https://github.com/whaleygeek/bitio/archive/master.zip">bitio module</a> and extract the contents of the .zip file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up sensors).</p>
 <p>To use the Micro:bit as an input/output device, you need to “flash” it with a .hex file that contains code to communicate with your computer. Do this by dragging and dropping the <code class="docutils literal"><span class="pre">bitio.hex</span></code> file inside the folder you just extracted onto the <code class="docutils literal"><span class="pre">MICROBIT</span></code> device (in Windows Explorer, or the Mac Finder). You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python via the bitio module.</p>
 <img alt="../../_images/bitio.png" src="../../_images/bitio.png" />
-<p>Now, navigate to the src/ folder, and open the file <code class="docutils literal"><span class="pre">std_image.py</span></code> in Thonny. When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. Once that is complete, you should see a series of images begin to show up on the 5x5 LED grid on your Micro:bit. The console will look something like this:</p>
+<p>Now, install the package <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> in Thonny. Once you have done that, try running the code below:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Hey there, CS20&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. Once that is complete, you should see a series of images begin to show up on the 5x5 LED grid on your Micro:bit. The console will look something like this:</p>
 <blockquote>
 <div>No micro:bit has previously been detected
 Scanning for serial ports
@@ -322,13 +328,7 @@ Do you want this device to be remembered? (Y/N)Y
 connecting…
 Your micro:bit has been detected
 Now running your program</div></blockquote>
-<p>Change the code in this file to read:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
-
-<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Hey there, CS20&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Try some of the other demonstration code files, including:</p>
+<p>To explore the possibilities, try some of the other demonstration code files, including:</p>
 <ul class="simple">
 <li>tilt.py</li>
 <li>touched.py</li>
