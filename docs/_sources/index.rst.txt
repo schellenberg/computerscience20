@@ -93,8 +93,9 @@ Python
    Python/Overview/WhileLoopsIntro.rst
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst
-   Python/Overview/TurtlePractice.rst
    Python/Overview/Microbit.rst
+   Python/Overview/TurtlePractice.rst
+   
 
 
 Computing and Society
