@@ -3,12 +3,12 @@
    :prefix: microbit-intro-
    :start: 1
 
-Using a Micro:bit with Python
-==============================
+The Time Module and Using a Micro:bit
+======================================
 
 .. topic:: Quick Overview of Day
 
-    Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.
+    Learn about the time module. Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.
 
 
 .. reveal:: curriculum_addressed
@@ -20,6 +20,38 @@ Using a Micro:bit with Python
 
 
 .. warning:: This is just a stub, to show what should go here. It will be written up properly later. The install process for bitio is also really awkward right now. It will be improved to use the "Manage Packages..." menu soon.
+
+Time Module
+------------
+
+Sometimes, we'd like to wait a bit before running the next command in a Python program. To do this, we can ``import time``, then use the ``.sleep()`` function. An example is below:
+
+.. activecode:: time-sleep-1
+    :nocodelens:
+
+	# How to Pause in Python
+
+	import time
+	print("first thing")
+	time.sleep(2)
+	print("second thing")
+
+.. activecode:: time-sleep-2
+    :nocodelens:
+
+	# Another Pausing Program
+
+	import time
+
+	for counter in range(10):
+		print("Counting up. Now at", counter)
+		time.sleep(1)
+
+	print("All done!")
+
+
+Micro:bit
+----------
 
 .. note:: If you are on a Windows machine (< Windows 10), you will need to download the `mbed driver <https://os.mbed.com/handbook/Windows-serial-configuration>`_ if you want to use your Micro:bit as an input/output device. If you are on Mac, Linux, or Windows 10, no driver install is required. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done).
 

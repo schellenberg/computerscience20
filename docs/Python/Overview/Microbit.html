@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>12. Using a Micro:bit with Python &#8212; Computer Science 20 Saskatchewan</title>
+    <title>12. The Time Module and Using a Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,7 +192,11 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">12. Using a Micro:bit with Python</a></li>
+<li><a class="reference internal" href="#">12. The Time Module and Using a Micro:bit</a><ul>
+<li><a class="reference internal" href="#time-module">12.1. Time Module</a></li>
+<li><a class="reference internal" href="#micro-bit">12.2. Micro:bit</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -237,11 +241,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="using-a-micro-bit-with-python">
-<h1>12. Using a Micro:bit with Python<a class="headerlink" href="#using-a-micro-bit-with-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="the-time-module-and-using-a-micro-bit">
+<h1>12. The Time Module and Using a Micro:bit<a class="headerlink" href="#the-time-module-and-using-a-micro-bit" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.</p>
+<p>Learn about the time module. Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -256,6 +260,39 @@
 <p class="first admonition-title">Warning</p>
 <p class="last">This is just a stub, to show what should go here. It will be written up properly later. The install process for bitio is also really awkward right now. It will be improved to use the “Manage Packages…” menu soon.</p>
 </div>
+<div class="section" id="time-module">
+<h2>12.1. Time Module<a class="headerlink" href="#time-module" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes, we’d like to wait a bit before running the next command in a Python program. To do this, we can <code class="docutils literal"><span class="pre">import</span> <span class="pre">time</span></code>, then use the <code class="docutils literal"><span class="pre">.sleep()</span></code> function. An example is below:</p>
+
+<div data-childcomponent="time-sleep-1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=time-sleep-1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+    # How to Pause in Python
+
+    import time
+    print("first thing")
+    time.sleep(2)
+    print("second thing")
+</textarea>
+</div>
+
+<div data-childcomponent="time-sleep-2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=time-sleep-2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+    # Another Pausing Program
+
+    import time
+
+    for counter in range(10):
+            print("Counting up. Now at", counter)
+            time.sleep(1)
+
+    print("All done!")
+</textarea>
+</div>
+</div>
+<div class="section" id="micro-bit">
+<h2>12.2. Micro:bit<a class="headerlink" href="#micro-bit" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you are on a Windows machine (&lt; Windows 10), you will need to download the <a class="reference external" href="https://os.mbed.com/handbook/Windows-serial-configuration">mbed driver</a> if you want to use your Micro:bit as an input/output device. If you are on Mac, Linux, or Windows 10, no driver install is required. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done).</p>
@@ -307,6 +344,7 @@ Now running your program</div></blockquote>
 <li>create a program that controls a turtles drawing by using the accelerometer. You might want to use the code in <code class="docutils literal"><span class="pre">tilt.py</span></code> as a starting point.</li>
 <li>try something new!</li>
 </ul>
+</div>
 </div>
 
 
