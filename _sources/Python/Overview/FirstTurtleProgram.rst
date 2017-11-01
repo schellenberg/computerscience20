@@ -300,8 +300,9 @@ Try the following practice problems. You can either work directly in the textboo
 You might find the Python Documentation for the turtle module to be helpful: `https://docs.python.org/3/library/turtle.html <https://docs.python.org/3/library/turtle.html>`_ 
 
 
-.. warning:: Be sure that you DO NOT save any file as ``turtle.py``. If you do, when you call ``import turtle``, Python looks for a file called turtle.py, which means that it will import the turtle.py file you just saved. You will get an error when attempting to create a Screen() or Turtle() object, as these will not actually be defined.
+.. caution::
 
+   Be sure that you DO NOT save any file as ``turtle.py``. If you do, when you call ``import turtle``, Python looks for a file called turtle.py, which means that it will import the turtle.py file you just saved. You will get an error when attempting to create a Screen() or Turtle() object, as these will not actually be defined.
 
 
 Color Selection
