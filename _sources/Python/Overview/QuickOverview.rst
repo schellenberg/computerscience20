@@ -351,7 +351,7 @@ One of the great things about Python is that there are a lot of modules that ext
     
     import random
 
-    print( random.randint(1, 10) )
+    print( random.randrange(1, 10) )
 
 
 Number Guessing Game
