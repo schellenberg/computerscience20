@@ -99,6 +99,16 @@ Python
    Python/MoreTurtles/TurtlePractice.rst
 
 
+
+Python Practice Quizzes
+:::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   Python/PracticeQuizzes/Loops.rst
+   Python/PracticeQuizzes/Booleans.rst
+
 Computing and Society
 :::::::::::::::::::::
 
@@ -136,3 +146,4 @@ Appendices
    :maxdepth: 1
 
    Python/TurtleConfusion/Challenges.rst
+   Python/Microbit/QuickStartExamples.rst
