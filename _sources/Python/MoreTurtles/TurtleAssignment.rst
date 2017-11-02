@@ -161,7 +161,8 @@ instance --- can you figure out which one is the real tess?  (Hint: if you're
 not sure, write a new line of code after the ``for`` loop to change tess'
 color, or to put her pen down and draw a line, or to change her shape, etc.)
 
-**Mixed up program**
+Mixed Up Programs
+~~~~~~~~~~~~~~~~~
 
 .. parsonsprob:: wdtpd_turtle_assn_parsons_1
 
@@ -185,7 +186,6 @@ color, or to put her pen down and draw a line, or to change her shape, etc.)
    =====
    wn.exitonclick()
 
-**Mixed up program**
 
 .. parsonsprob:: wdtpd_turtle_assn_parsons_2
 
@@ -209,6 +209,7 @@ color, or to put her pen down and draw a line, or to change her shape, etc.)
    wn.exitonclick()
 
 
+.. _turtle_methods_list:
 
 Summary of Turtle Methods
 -------------------------
@@ -227,6 +228,8 @@ color       color name    Changes the color of the turtle's tail
 fillcolor   color name    Changes the color of the turtle will use to fill a polygon
 heading     None          Returns the current heading
 position    None          Returns the current position
+xcor        None          Return the current x coordinate
+ycor        None          Return the current y coordinate
 goto        x,y           Move the turtle to position x,y
 begin_fill  None          Remember the starting point for a filled polygon
 end_fill    None          Close the polygon and fill with the current fill color

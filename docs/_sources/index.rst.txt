@@ -96,7 +96,7 @@ Python
    Python/Overview/Microbit.rst
    
    Python/MoreTurtles/TurtleAssignment.rst
-   Python/MoreTurtles/TurtlePractice.rst
+   Python/MoreTurtles/TurtleRace.rst
 
 
 
