@@ -237,6 +237,24 @@ shape       shape name    Should be 'arrow', 'classic', 'turtle', 'circle' or 's
 
 As we have seen previously, you can read about even more options on the `Python Docs Website <http://docs.python.org/dev/py3k/library/turtle.html>`_.  
 
+Practice Problem
+-----------------
+
+.. image:: images/confusion-4.png
+
+.. note:: The small triangle indicates the corner which the turtle should start and end when the Hollow C is drawn. Make sure that the turtle is pointing in the same direction at the beginning and end.
+
+Let's draw the image three different ways:
+
+- using any commands that you like
+- using only the ``.forward()`` and ``.right()`` commands
+- using ``.forward()``, ``.backward()``, and ``.right(90)`` (note that you may use 90, and only 90, as the argument to the ``.right()`` command for this solution)
+
+.. activecode:: turtle_confusion_4
+    :nocodelens:
+
+    import turtle
+
 
 Turtle Graphics Assignment
 ---------------------------
