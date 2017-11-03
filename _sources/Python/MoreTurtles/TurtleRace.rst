@@ -147,7 +147,7 @@ We can ask a turtle what it's current x or y coordinate is, using the ``turtle.x
     print(lance.xcor())
     print(lance.ycor())
 
-Use the ``xcor()`` function to write a version of the turtle race that has the turtles stop after they reach a virtual finish line.
+Use the ``xcor()`` function to write a version of the turtle race that has the turtles stop after they reach a virtual finish line. *You might want to create a third turtle that draws a finish line before the race begins.*
 
 
 .. activecode:: turtle_races_3
@@ -176,8 +176,11 @@ Use the ``xcor()`` function to write a version of the turtle race that has the t
    # your code goes here
 
 
-Turtle Race with Micro:bits
------------------------------
+.. note:: Although we will explore the ``and`` and ``or`` keywords in more detail later, after you get the program working, you should try switching your while conditional statement to use ``and`` instead of ``or``. Can you predict what the program will do?
+
+
+Extension - Turtle Race with Micro:bits
+----------------------------------------
 
 Can you adapt the turtle racing code you made above to work with micro:bit? One idea might be to have one turtle move when the a button is pressed, and the other turtle to move when the b button is pressed. You might want to look at the :ref:`microbit_examples` page.
 
