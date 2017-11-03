@@ -90,7 +90,7 @@ Question 4
     :feedback_a: Nope. Remember that range(4) will create a list with elements [0,1,2,3].
     :feedback_b: Great!
 
-    The following will print a line containing a 4::
+    The following will print a line showing the number 4::
 
         for i in range(4):
             print(i)
