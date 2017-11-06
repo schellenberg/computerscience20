@@ -97,6 +97,7 @@ Python
    
    Python/MoreTurtles/TurtleAssignment.rst
    Python/MoreTurtles/TurtleRace.rst
+   Python/MoreTurtles/FunctionIntro.rst
 
 
 

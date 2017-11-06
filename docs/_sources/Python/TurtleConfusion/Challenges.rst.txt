@@ -123,7 +123,7 @@ What does this puzzle have in common with:
 
 .. image:: images/confusion-6.png
 
-Go back to the code you wrote for the first 5 images, and turn them each into functions, so that you can call something like ``my_turtle.square(100)``.
+Go back to the code you wrote for the first 5 images, and turn them each into functions, so that you can call something like ``square(my_turtle, 100)``.
 
     Have you ever thought about the way a pizza, 
 

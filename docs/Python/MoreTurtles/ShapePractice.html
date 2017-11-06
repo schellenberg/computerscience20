@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Functions Introduction &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Functions Introduction</a><ul>
+<li><a class="reference internal" href="#practice-problem">Practice Problem</a></li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">Check your understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions-practice">Functions Practice</a></li>
+<li><a class="reference internal" href="#turtle-graphics-assignment">Turtle Graphics Assignment</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="functions-introduction">
+<h1>Functions Introduction<a class="headerlink" href="#functions-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Use <code class="docutils literal"><span class="pre">for</span></code> loops to draw shapes elegantly. Introduce non-fruitful functions in Python. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+</ul>
+
+    </div>
+    <div class="section" id="practice-problem">
+<h2>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-51.png" src="../../_images/confusion-51.png" />
+<p>Draw the shape above. After you have finished drawing your version, share your code with another student. Work together to see if you can come up with a more efficient way to draw this shape!</p>
+
+<div data-childcomponent="turtle_confusion_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>In Python, a <strong>function</strong> is a named sequence of statements that belong together.  Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem.</p>
+<p>The syntax for a <strong>function definition</strong> is the same as it was when we wrote functions in Reeborg:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span> <span class="n">parameters</span> <span class="p">):</span>
+    <span class="n">statements</span>
+</pre></div>
+</div>
+<p>The one part of this function definition that looks different from our Reeborg investigations is the parameters inside the parentheses. The parameters specify what information, if any, you have to provide in order to use the new function.  Another way to say this is that the parameters specify what the function needs to do its work.</p>
+<p>There can be any number of statements inside the function, but they have to be
+indented from the <code class="docutils literal"><span class="pre">def</span></code>. In the examples in this book, we will use the
+standard indentation of four spaces.</p>
+<p>In a function definition, the keyword in the header is <code class="docutils literal"><span class="pre">def</span></code>, which is
+followed by the name of the function and some <em>parameters</em> enclosed in
+parentheses. The parameter list may be empty, or it may contain any number of
+parameters separated from one another by commas. In either case, the parentheses are required.</p>
+<p>We need to say a bit more about the parameters.  In the definition, the parameter list is more specifically known
+as the <strong>formal parameters</strong>.  This list of names describes those things that the function will
+need to receive from the user of the function.  When you use a function, you provide values to the formal parameters.</p>
+<p>The figure below shows this relationship.  A function needs certain information to do its work.  These values, often called <strong>arguments</strong> or <strong>actual parameters</strong>, are passed to the function by the user.</p>
+<img alt="../../_images/blackboxproc1.png" src="../../_images/blackboxproc1.png" />
+<p>This type of diagram is often called a <strong>black-box diagram</strong> because it only states the requirements from the perspective of the user.  The user must know the name of the function and what arguments need to be passed.  The details of how the function works are hidden inside the “black-box”.</p>
+<p>Suppose we’re working with turtles and a common operation we need is to draw
+squares.  It would make sense if we did not have to duplicate all the steps each time we want to make a square.   “Draw a square” can be thought of as an <em>abstraction</em> of a number of smaller steps.  We will need to provide two pieces of information for the function to do its work: a turtle to do the drawing and a size for the side of the square.  We could represent this using the following black-box diagram.</p>
+<img alt="../../_images/turtleproc1.png" src="../../_images/turtleproc1.png" />
+<p>Here is a program containing a function to capture this idea.  Give it a try.</p>
+
+<div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def draw_square(some_turtle, side_length):
+    """Make turtle some_turtle draw a square, with each side being of length side_length."""
+
+    for counter in range(4):
+        some_turtle.forward(side_length)
+        some_turtle.left(90)
+
+
+# Set up the window and its attributes
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+
+# Call the function to draw the square passing the actual turtle and the actual side size
+drawSquare(alex, 50)
+</textarea>
+</div>
+<p>This function is named <code class="docutils literal"><span class="pre">draw_square</span></code>.  It has two parameters — one to tell
+the function which turtle to move around and the other to tell it the size
+of the square we want drawn.  In the function definition they are called <code class="docutils literal"><span class="pre">some_turtle</span></code> and <code class="docutils literal"><span class="pre">side_length</span></code> respectively.   Make sure you know where the body of the function ends — it depends on the indentation and the blank lines don’t count for
+this purpose!</p>
+<div class="admonition-docstrings admonition">
+<p class="first admonition-title">docstrings</p>
+<p>If the first thing after the function header is a string (some tools insist that
+it must be a triple-quoted string), it is called a <strong>docstring</strong>
+and gets special treatment in Python and in some of the programming tools.</p>
+<p>Another way to retrieve this information is to use the interactive
+interpreter, and enter the expression <code class="docutils literal"><span class="pre">&lt;function_name&gt;.__doc__</span></code>, which will retrieve the
+docstring for the function.  So the string you write as documentation at the start of a function is
+retrievable by python tools <em>at runtime</em>.  This is different from comments in your code,
+which are completely eliminated when the program is parsed.</p>
+<p class="last">By convention, Python programmers use docstrings for the key documentation of
+their functions.</p>
+</div>
+<p>Defining a new function does not make the function run. To do that we need a
+<strong>function call</strong>.  This is also known as a <strong>function invocation</strong>. We’ve already seen how to call some built-in functions like
+<code class="docutils literal"><span class="pre">print</span></code>, <code class="docutils literal"><span class="pre">range</span></code> and <code class="docutils literal"><span class="pre">int</span></code>. Function calls contain the name of the function to be
+executed followed by a list of values in parentheses, called <em>arguments</em>, which are assigned
+to the parameters in the function definition.
+So in the  last line of the program, we call the function, and pass <code class="docutils literal"><span class="pre">alex</span></code> as the turtle to be manipulated,
+and 50 as the size of the square we want.</p>
+<p>Once we’ve defined a function, we can call it as often as we like and its
+statements will be executed each time we call it.  In this case, we could use it to get
+one of our turtles to draw a square and then we can move the turtle and have it draw a different square in a
+different location.  Note that we lift the tail so that when <code class="docutils literal"><span class="pre">alex</span></code> moves there is no trace.  We put the tail
+back down before drawing the next square.  Make sure you can identify both invocations of the <code class="docutils literal"><span class="pre">draw_square</span></code> function.</p>
+
+<div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def draw_square(some_turtle, side_length):
+    """Make turtle some_turtle draw a square, with each side being of length side_length."""
+
+    for counter in range(4):
+        some_turtle.forward(side_length)
+        some_turtle.left(90)
+
+
+# Set up the window and its attributes
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+
+# Call the function to draw the square
+draw_square(alex, 50)
+
+alex.penup()
+alex.goto(100,100)
+alex.pendown()
+
+# Draw another square
+draw_square(alex,75)
+</textarea>
+</div>
+<p>In the next example, we’ve changed the <code class="docutils literal"><span class="pre">draw_square</span></code>
+function a little and we get <code class="docutils literal"><span class="pre">tess</span></code> to draw 15 squares with some variations.  Once the function has
+been defined, we can call it as many times as we like with whatever actual parameters we like.</p>
+
+<div data-childcomponent="functions_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def draw_multicolor_square(some_turtle, side_length):
+    """Make turtle some_turtle draw a multi-colour square with the given side_length."""
+    for the_color in ['red','purple','hotpink','blue']:
+        some_turtle.color(the_color)
+        some_turtle.forward(side_length)
+        some_turtle.left(90)
+
+# Set up the window and its attributes
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+# create tess and set some attributes
+tess = turtle.Turtle()
+tess.pensize(3)
+
+# size of the smallest square
+size = 20
+
+# repeatedly draw a square, increase the size, move a bit, turn a bit
+for i in range(15):
+    draw_multicolor_square(tess, size)
+    size = size + 10
+    tess.forward(10)
+    tess.right(18)
+</textarea>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if a function call needs no arguments,
+the parentheses <code class="docutils literal"><span class="pre">(</span> <span class="pre">)</span></code> after the function name are <em>required</em>.  This
+can lead to a difficult bug:  A function name without the
+parenthesis is a legal expression <em>referring</em> to the function; for example,
+<code class="docutils literal"><span class="pre">print</span></code> and <code class="docutils literal"><span class="pre">alex.penup</span></code>, but they do
+not <em>call</em> the associated functions.</p>
+</div>
+<div class="section" id="check-your-understanding">
+<h3>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_3">
+            turtle-functions-intro1: Which of the following is a valid function header (first line of a function definition)?
+            <li data-component="answer" data-correct id="test_question5_1_3_opt_a">def drawCircle(t):</li><li data-component="feedback" id="test_question5_1_3_opt_a">A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.</li>
+            
+            <li data-component="answer"  id="test_question5_1_3_opt_b">def drawCircle:</li><li data-component="feedback" id="test_question5_1_3_opt_b">A function needs to specify its parameters in its header.</li>
+            
+            <li data-component="answer"  id="test_question5_1_3_opt_c">drawCircle(t, sz):</li><li data-component="feedback" id="test_question5_1_3_opt_c">A function definition needs to include the keyword def.</li>
+            
+            <li data-component="answer"  id="test_question5_1_3_opt_d">def drawCircle(t, sz)</li><li data-component="feedback" id="test_question5_1_3_opt_d">A function definition header must end in a colon (:).</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_5">
+            <p>turtle-functions-intro2: What are the parameters of the following function?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawSquare</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make turtle t draw a square of with side sz.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question5_1_5_opt_a">i</li><li data-component="feedback" id="test_question5_1_5_opt_a">i is a variable used inside of the function, but not a parameter, which is passed in to the function.</li>
+            
+            <li data-component="answer"  id="test_question5_1_5_opt_b">t</li><li data-component="feedback" id="test_question5_1_5_opt_b">t is only one of the parameters to this function.</li>
+            
+            <li data-component="answer" data-correct id="test_question5_1_5_opt_c">t, sz</li><li data-component="feedback" id="test_question5_1_5_opt_c">Yes, the function specifies two parameters: t and sz.</li>
+            
+            <li data-component="answer"  id="test_question5_1_5_opt_d">t, sz, i</li><li data-component="feedback" id="test_question5_1_5_opt_d">the parameters include only those variables whose values that the function expects to receive as input.  They are specified in the header of the function.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_6">
+            <p>turtle-functions-intro3: Considering the function below, which of the following statements correctly invokes, or calls, this function (i.e., causes it to run)?  Assume we already have a turtle named alex.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawSquare</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make turtle t draw a square of with side sz.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question5_1_6_opt_a">def drawSquare(t, sz)</li><li data-component="feedback" id="test_question5_1_6_opt_a">No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.</li>
+            
+            <li data-component="answer"  id="test_question5_1_6_opt_b">drawSquare</li><li data-component="feedback" id="test_question5_1_6_opt_b">A function call always requires parentheses after the name of the function.</li>
+            
+            <li data-component="answer"  id="test_question5_1_6_opt_c">drawSquare(10)</li><li data-component="feedback" id="test_question5_1_6_opt_c">This function takes two parameters (arguments)</li>
+            
+            <li data-component="answer"  id="test_question5_1_6_opt_d">drawSquare(alex, 10):</li><li data-component="feedback" id="test_question5_1_6_opt_d">A colon is only required in a function definition.  It will cause an error with a function call.</li>
+            
+            <li data-component="answer" data-correct id="test_question5_1_6_opt_e">drawSquare(alex, 10)</li><li data-component="feedback" id="test_question5_1_6_opt_e">Since alex was already previously defined and 10 is a value, we have passed in two correct values for this function.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_7">
+            turtle-functions-intro4: True or false: A function can be called several times by placing a function call in the body of a loop.
+            <li data-component="answer" data-correct id="test_question5_1_7_opt_a">True</li><li data-component="feedback" id="test_question5_1_7_opt_a">Yes, you can call a function multiple times by putting the call in a loop.</li>
+            
+            <li data-component="answer"  id="test_question5_1_7_opt_b">False</li><li data-component="feedback" id="test_question5_1_7_opt_b">One of the purposes of a function is to allow you to call it more than once.   Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="functions-practice">
+<h2>Functions Practice<a class="headerlink" href="#functions-practice" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-41.png" src="../../_images/confusion-41.png" />
+<p>Look back to the code you made when you drew a <em>hollow c</em> last class. Adapt your code by creating a function called <code class="docutils literal"><span class="pre">draw_c(a_turtle,</span> <span class="pre">longest_side_length,</span> <span class="pre">width_of_c)</span></code>. You should be able to draw a hollow c by calling the function with something like <code class="docutils literal"><span class="pre">draw_c(tess,</span> <span class="pre">150,</span> <span class="pre">25)</span></code>.</p>
+</div>
+<div class="section" id="turtle-graphics-assignment">
+<h2>Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Use the rest of this class time to keep working on your current Python assignment (possibly a turtle graphics drawing, with a focus on looping and conditionals).</p>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
