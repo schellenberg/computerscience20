@@ -278,8 +278,19 @@ Check your understanding
    True or false: A function can be called several times by placing a function call in the body of a loop.
 
 
-Functions Practice
+Practice Problems
 -------------------
+
+Cross
+~~~~~~
+
+.. image:: images/confusion-5.png
+
+Convert the code you wrote at the start of today's class into a function. You should be able to call something like ``draw_cross(some_turtle, side_length)``.
+
+
+Hollow C
+~~~~~~~~~
 
 .. image:: images/confusion-4.png
 
