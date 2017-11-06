@@ -93,7 +93,7 @@ Here is a program containing a function to capture this idea.  Give it a try.
     alex = turtle.Turtle()
 
     # Call the function to draw the square passing the actual turtle and the actual side size
-    drawSquare(alex, 50)
+    draw_square(alex, 50)
 
 
 This function is named ``draw_square``.  It has two parameters --- one to tell
@@ -182,6 +182,7 @@ been defined, we can call it as many times as we like with whatever actual param
 
     # create tess and set some attributes
     tess = turtle.Turtle()
+    tess.speed(8)
     tess.pensize(3)
 
     # size of the smallest square
