@@ -435,24 +435,24 @@ not <em>call</em> the associated functions.</p>
 <h3>14.2.1. Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_3">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_1">
             turtle-functions-intro1: Which of the following is a valid function header (first line of a function definition)?
-            <li data-component="answer" data-correct id="test_question5_1_3_opt_a">def drawCircle(t):</li><li data-component="feedback" id="test_question5_1_3_opt_a">A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.</li>
+            <li data-component="answer" data-correct id="functions_intro_understanding_1_opt_a">def draw_circle(t):</li><li data-component="feedback" id="functions_intro_understanding_1_opt_a">A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.</li>
             
-            <li data-component="answer"  id="test_question5_1_3_opt_b">def drawCircle:</li><li data-component="feedback" id="test_question5_1_3_opt_b">A function needs to specify its parameters in its header.</li>
+            <li data-component="answer"  id="functions_intro_understanding_1_opt_b">def draw_circle:</li><li data-component="feedback" id="functions_intro_understanding_1_opt_b">A function needs to specify its parameters in its header.</li>
             
-            <li data-component="answer"  id="test_question5_1_3_opt_c">drawCircle(t, sz):</li><li data-component="feedback" id="test_question5_1_3_opt_c">A function definition needs to include the keyword def.</li>
+            <li data-component="answer"  id="functions_intro_understanding_1_opt_c">draw_circle(t, sz):</li><li data-component="feedback" id="functions_intro_understanding_1_opt_c">A function definition needs to include the keyword def.</li>
             
-            <li data-component="answer"  id="test_question5_1_3_opt_d">def drawCircle(t, sz)</li><li data-component="feedback" id="test_question5_1_3_opt_d">A function definition header must end in a colon (:).</li>
+            <li data-component="answer"  id="functions_intro_understanding_1_opt_d">def draw_circle(t, sz)</li><li data-component="feedback" id="functions_intro_understanding_1_opt_d">A function definition header must end in a colon (:).</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_5">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_2">
             <p>turtle-functions-intro2: What are the parameters of the following function?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawSquare</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make turtle t draw a square of with side sz.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span>
@@ -460,22 +460,22 @@ not <em>call</em> the associated functions.</p>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question5_1_5_opt_a">i</li><li data-component="feedback" id="test_question5_1_5_opt_a">i is a variable used inside of the function, but not a parameter, which is passed in to the function.</li>
+            <li data-component="answer"  id="functions_intro_understanding_2_opt_a">i</li><li data-component="feedback" id="functions_intro_understanding_2_opt_a">i is a variable used inside of the function, but not a parameter, which is passed in to the function.</li>
             
-            <li data-component="answer"  id="test_question5_1_5_opt_b">t</li><li data-component="feedback" id="test_question5_1_5_opt_b">t is only one of the parameters to this function.</li>
+            <li data-component="answer"  id="functions_intro_understanding_2_opt_b">t</li><li data-component="feedback" id="functions_intro_understanding_2_opt_b">t is only one of the parameters to this function.</li>
             
-            <li data-component="answer" data-correct id="test_question5_1_5_opt_c">t, sz</li><li data-component="feedback" id="test_question5_1_5_opt_c">Yes, the function specifies two parameters: t and sz.</li>
+            <li data-component="answer" data-correct id="functions_intro_understanding_2_opt_c">t, sz</li><li data-component="feedback" id="functions_intro_understanding_2_opt_c">Yes, the function specifies two parameters: t and sz.</li>
             
-            <li data-component="answer"  id="test_question5_1_5_opt_d">t, sz, i</li><li data-component="feedback" id="test_question5_1_5_opt_d">the parameters include only those variables whose values that the function expects to receive as input.  They are specified in the header of the function.</li>
+            <li data-component="answer"  id="functions_intro_understanding_2_opt_d">t, sz, i</li><li data-component="feedback" id="functions_intro_understanding_2_opt_d">the parameters include only those variables whose values that the function expects to receive as input.  They are specified in the header of the function.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_6">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_3">
             <p>turtle-functions-intro3: Considering the function below, which of the following statements correctly invokes, or calls, this function (i.e., causes it to run)?  Assume we already have a turtle named alex.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawSquare</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make turtle t draw a square of with side sz.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span>
@@ -483,26 +483,26 @@ not <em>call</em> the associated functions.</p>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question5_1_6_opt_a">def drawSquare(t, sz)</li><li data-component="feedback" id="test_question5_1_6_opt_a">No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.</li>
+            <li data-component="answer"  id="functions_intro_understanding_3_opt_a">def draw_square(t, sz)</li><li data-component="feedback" id="functions_intro_understanding_3_opt_a">No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.</li>
             
-            <li data-component="answer"  id="test_question5_1_6_opt_b">drawSquare</li><li data-component="feedback" id="test_question5_1_6_opt_b">A function call always requires parentheses after the name of the function.</li>
+            <li data-component="answer"  id="functions_intro_understanding_3_opt_b">draw_square</li><li data-component="feedback" id="functions_intro_understanding_3_opt_b">A function call always requires parentheses after the name of the function.</li>
             
-            <li data-component="answer"  id="test_question5_1_6_opt_c">drawSquare(10)</li><li data-component="feedback" id="test_question5_1_6_opt_c">This function takes two parameters (arguments)</li>
+            <li data-component="answer"  id="functions_intro_understanding_3_opt_c">draw_square(10)</li><li data-component="feedback" id="functions_intro_understanding_3_opt_c">This function takes two parameters (arguments)</li>
             
-            <li data-component="answer"  id="test_question5_1_6_opt_d">drawSquare(alex, 10):</li><li data-component="feedback" id="test_question5_1_6_opt_d">A colon is only required in a function definition.  It will cause an error with a function call.</li>
+            <li data-component="answer"  id="functions_intro_understanding_3_opt_d">draw_Square(alex, 10):</li><li data-component="feedback" id="functions_intro_understanding_3_opt_d">A colon is only required in a function definition.  It will cause an error with a function call.</li>
             
-            <li data-component="answer" data-correct id="test_question5_1_6_opt_e">drawSquare(alex, 10)</li><li data-component="feedback" id="test_question5_1_6_opt_e">Since alex was already previously defined and 10 is a value, we have passed in two correct values for this function.</li>
+            <li data-component="answer" data-correct id="functions_intro_understanding_3_opt_e">draw_square(alex, 10)</li><li data-component="feedback" id="functions_intro_understanding_3_opt_e">Since alex was already previously defined and 10 is a value, we have passed in two correct values for this function.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_1_7">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_4">
             turtle-functions-intro4: True or false: A function can be called several times by placing a function call in the body of a loop.
-            <li data-component="answer" data-correct id="test_question5_1_7_opt_a">True</li><li data-component="feedback" id="test_question5_1_7_opt_a">Yes, you can call a function multiple times by putting the call in a loop.</li>
+            <li data-component="answer" data-correct id="functions_intro_understanding_4_opt_a">True</li><li data-component="feedback" id="functions_intro_understanding_4_opt_a">Yes, you can call a function multiple times by putting the call in a loop.</li>
             
-            <li data-component="answer"  id="test_question5_1_7_opt_b">False</li><li data-component="feedback" id="test_question5_1_7_opt_b">One of the purposes of a function is to allow you to call it more than once.   Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.</li>
+            <li data-component="answer"  id="functions_intro_understanding_4_opt_b">False</li><li data-component="feedback" id="functions_intro_understanding_4_opt_b">One of the purposes of a function is to allow you to call it more than once.   Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.</li>
             
 
             </ul>

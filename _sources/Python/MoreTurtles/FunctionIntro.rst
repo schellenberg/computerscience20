@@ -208,11 +208,11 @@ been defined, we can call it as many times as we like with whatever actual param
 Check your understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. mchoice:: test_question5_1_3
-   :answer_a: def drawCircle(t):
-   :answer_b: def drawCircle:
-   :answer_c: drawCircle(t, sz):
-   :answer_d: def drawCircle(t, sz)
+.. mchoice:: functions_intro_understanding_1
+   :answer_a: def draw_circle(t):
+   :answer_b: def draw_circle:
+   :answer_c: draw_circle(t, sz):
+   :answer_d: def draw_circle(t, sz)
    :correct: a
    :feedback_a: A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.
    :feedback_b: A function needs to specify its parameters in its header.
@@ -222,7 +222,7 @@ Check your understanding
    Which of the following is a valid function header (first line of a function definition)?
 
 
-.. mchoice:: test_question5_1_5
+.. mchoice:: functions_intro_understanding_2
    :answer_a: i
    :answer_b: t
    :answer_c: t, sz
@@ -237,7 +237,7 @@ Check your understanding
 
    .. code-block:: python
 
-     def drawSquare(t, sz):
+     def draw_square(t, sz):
          """Make turtle t draw a square of with side sz."""
          for i in range(4):
              t.forward(sz)
@@ -245,12 +245,12 @@ Check your understanding
 
 
 
-.. mchoice:: test_question5_1_6
-   :answer_a: def drawSquare(t, sz)
-   :answer_b: drawSquare
-   :answer_c: drawSquare(10)
-   :answer_d: drawSquare(alex, 10):
-   :answer_e: drawSquare(alex, 10)
+.. mchoice:: functions_intro_understanding_3
+   :answer_a: def draw_square(t, sz)
+   :answer_b: draw_square
+   :answer_c: draw_square(10)
+   :answer_d: draw_Square(alex, 10):
+   :answer_e: draw_square(alex, 10)
    :correct: e
    :feedback_a: No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.
    :feedback_b: A function call always requires parentheses after the name of the function.
@@ -262,13 +262,13 @@ Check your understanding
 
    .. code-block:: python
 
-     def drawSquare(t, sz):
+     def draw_square(t, sz):
          """Make turtle t draw a square of with side sz."""
          for i in range(4):
              t.forward(sz)
              t.left(90)
 
-.. mchoice:: test_question5_1_7
+.. mchoice:: functions_intro_understanding_4
    :answer_a: True
    :answer_b: False
    :correct: a
