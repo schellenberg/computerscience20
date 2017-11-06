@@ -249,7 +249,7 @@ Check your understanding
    :answer_a: def draw_square(t, sz)
    :answer_b: draw_square
    :answer_c: draw_square(10)
-   :answer_d: draw_Square(alex, 10):
+   :answer_d: draw_square(alex, 10):
    :answer_e: draw_square(alex, 10)
    :correct: e
    :feedback_a: No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.
