@@ -99,6 +99,7 @@ Python
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst
+   Python/MoreTurtles/AssignmentWorkPeriod.rst
 
 
 
