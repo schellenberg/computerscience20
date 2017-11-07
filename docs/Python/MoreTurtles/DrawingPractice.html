@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>12. Turtle Confusion Practice Problems &#8212; Computer Science 20 Saskatchewan</title>
+    <title>15. Turtle Drawing Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../../ComputingAndSociety/UnderlyingTechnology.html" />
-    <link rel="prev" title="11. The Time Module and Using a Micro:bit" href="Microbit.html" />
+    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="14. Functions Introduction" href="FunctionIntro.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,9 +192,15 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">12. Turtle Confusion Practice Problems</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">12.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#practice-problems">12.2. Practice Problems</a></li>
+<li><a class="reference internal" href="#">15. Turtle Drawing Practice</a><ul>
+<li><a class="reference internal" href="#practice-problems">15.1. Practice Problems</a><ul>
+<li><a class="reference internal" href="#inner-squares">15.1.1. Inner Squares</a></li>
+<li><a class="reference internal" href="#square-logo">15.1.2. Square Logo</a></li>
+<li><a class="reference internal" href="#overlapped-squares">15.1.3. Overlapped Squares</a></li>
+<li><a class="reference internal" href="#bonus-if-you-are-done-before-others">15.1.4. Bonus - If You Are Done Before Others</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#turtle-graphics-assignment">15.2. Turtle Graphics Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -204,14 +210,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 11. The Time Module and Using a Micro:bit" data-toggle="tooltip">
-    <a href="Microbit.html" >
+  <li id="relations-prev" title="Previous Chapter - 14. Functions Introduction" data-toggle="tooltip">
+    <a href="FunctionIntro.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -241,11 +247,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="turtle-confusion-practice-problems">
-<h1>12. Turtle Confusion Practice Problems<a class="headerlink" href="#turtle-confusion-practice-problems" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="turtle-drawing-practice">
+<h1>15. Turtle Drawing Practice<a class="headerlink" href="#turtle-drawing-practice" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Practice using the Python turtle module to draw selected shapes from the <a class="reference internal" href="../TurtleConfusion/Challenges.html#turtle-confusion"><span class="std std-ref">Turtle Confusion Challenges</span></a> page.</p>
+<p>Use <code class="docutils literal"><span class="pre">for</span></code> loops and functions to draw shapes elegantly. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -253,45 +259,83 @@
 <li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
 <li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
 <li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
-<h2>12.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
-<p>insert some WDTPD questions here…</p>
-</div>
-<div class="section" id="practice-problems">
-<h2>12.2. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
-<p>Your teacher will ask you to attempt selected questions from the <a class="reference internal" href="../TurtleConfusion/Challenges.html#turtle-confusion"><span class="std std-ref">Turtle Confusion Challenges</span></a> page.</p>
+    <div class="section" id="practice-problems">
+<h2>15.1. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="inner-squares">
+<h3>15.1.1. Inner Squares<a class="headerlink" href="#inner-squares" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/confusion-6.png" src="../../_images/confusion-6.png" />
+<p>Draw the shape above. You may find it helpful to consider how you might draw this shape by defining a new version of <code class="docutils literal"><span class="pre">draw_square()</span></code>. Perhaps you might not start in the same location as we did the last time we drew a square?</p>
 
-<div data-childcomponent="practice_problem_turtle_confusion_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problems_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_turtle_confusion_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Turtle Confusion
-
+<textarea data-component="activecode" id=practice_problems_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import turtle
 </textarea>
 </div>
+</div>
+<div class="section" id="square-logo">
+<h3>15.1.2. Square Logo<a class="headerlink" href="#square-logo" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/confusion-7.png" src="../../_images/confusion-7.png" />
+<p>Draw the shape above. Depending on how you defined the <code class="docutils literal"><span class="pre">draw_square()</span></code> function in the problem above, you may be able to easily use reuse your function.</p>
+
+<div data-childcomponent="practice_problems_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problems_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="overlapped-squares">
+<h3>15.1.3. Overlapped Squares<a class="headerlink" href="#overlapped-squares" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/confusion-8.png" src="../../_images/confusion-8.png" />
+<p>Draw the shape above. Depending on how you defined the <code class="docutils literal"><span class="pre">draw_square()</span></code> function in the problems aboves, you may be able to easily use reuse your function.</p>
+
+<div data-childcomponent="practice_problems_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problems_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+<div class="section" id="bonus-if-you-are-done-before-others">
+<h3>15.1.4. Bonus - If You Are Done Before Others<a class="headerlink" href="#bonus-if-you-are-done-before-others" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/confusion-14.png" src="../../_images/confusion-14.png" />
+<p>Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)!</p>
+
+<div data-childcomponent="practice_problems_14" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problems_14 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="turtle-graphics-assignment">
+<h2>15.2. Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Use the rest of this class time to keep working on your current Python assignment (possibly a turtle graphics drawing, with a focus on looping and conditionals).</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 11. The Time Module and Using a Micro:bit' data-toggle="tooltip">
-    <a href="Microbit.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 14. Functions Introduction' data-toggle="tooltip">
+    <a href="FunctionIntro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="Microbit.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="FunctionIntro.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
-    <a href="../../ComputingAndSociety/UnderlyingTechnology.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../ComputingAndSociety/UnderlyingTechnology.html" >Next Section - Underlying Technology of Computing Devices and the Internet</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
 
 <script type="text/javascript">
 

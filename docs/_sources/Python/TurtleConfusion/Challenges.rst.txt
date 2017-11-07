@@ -180,6 +180,8 @@ If you are struggling with the shapes we are drawing, don't worry too much about
 
 .. image:: images/confusion-9.png
 
+You might find the following riddle helpful.
+
     The bugs are all dead, you feel like you're Lister, 
 
     You've a puzzle for Clio, one more for each sister, 

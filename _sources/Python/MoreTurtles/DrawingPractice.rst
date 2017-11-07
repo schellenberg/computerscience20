@@ -63,6 +63,18 @@ Draw the shape above. Depending on how you defined the ``draw_square()`` functio
     import turtle
 
 
+Bonus - If You Are Done Before Others
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: images/confusion-14.png
+
+Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)!
+
+.. activecode:: practice_problems_14
+    :nocodelens:
+
+    import turtle
+
 
 Turtle Graphics Assignment
 ---------------------------
