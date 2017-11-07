@@ -36,6 +36,10 @@ Draw the shape above. You may find it helpful to consider how you might draw thi
 
     import turtle
 
+.. reveal:: hint_given
+    :showtitle: Need a Hint?
+
+    For both of the first two problems, beginning your drawing from the *middle* of the square, then ending in the middle of the square (facing the same direction as you started) can be a really helpful strategy. You might want to create a function such as ``draw_square_from_centre(the_turtle, side_length)`` that does this. This new function could even call your old ``draw_square()`` function, if you'd like.
 
 Square Logo
 ~~~~~~~~~~~~~~
