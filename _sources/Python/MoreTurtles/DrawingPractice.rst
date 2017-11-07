@@ -59,7 +59,7 @@ Overlapped Squares
 
 .. image:: images/confusion-8.png
 
-Draw the shape above. Depending on how you defined the ``draw_square()`` function in the problems aboves, you may be able to easily use reuse your function.
+Draw the shape above. Depending on how you defined your earlier function(s) in the problems aboves, you may be able to easily use reuse your function(s).
 
 .. activecode:: practice_problems_3
     :nocodelens:
