@@ -24,9 +24,6 @@ Assignment Work Period
 Practice Problem
 -----------------
 
-Inner Squares
-~~~~~~~~~~~~~~
-
 .. image:: images/confusion-17.png
 
 Draw the shape above. You can choose to either:
