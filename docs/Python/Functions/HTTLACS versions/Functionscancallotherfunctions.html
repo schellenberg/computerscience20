@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Functions can Call Other Functions &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Functions can Call Other Functions</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="functions-can-call-other-functions">
+<span id="index-0"></span><h1>Functions can Call Other Functions<a class="headerlink" href="#functions-can-call-other-functions" title="Permalink to this headline">¶</a></h1>
+<p>It is important to understand that each of the functions we write can be used
+and called from other functions we write.  This is one of the most important
+ways that computer scientists take a large problem and break it down into a
+group of smaller problems. This process of breaking a problem into smaller
+subproblems is called <strong>functional decomposition</strong>.</p>
+<p>Here’s a simple example of functional decomposition using two functions. The
+first function called <code class="docutils literal"><span class="pre">square</span></code> simply computes the square of a given number.
+The second function called <code class="docutils literal"><span class="pre">sum_of_squares</span></code> makes use of square to compute
+the sum of three numbers that have been squared.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="sumofsquares"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (sumofsquares)</span> </p>
+</div>
+<script type="text/javascript">
+var sumofsquares_trace = {"code": "def square(x):\n    y = x * x\n    return y\n\ndef sum_of_squares(x, y, z):\n    a = square(x)\n    b = square(y)\n    c = square(z)\n\n    return a + b + c\n\na = -5\nb = 2\nc = 10\nresult = sum_of_squares(a, b, c)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2]}, "ordered_globals": ["square", "sum_of_squares"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 13, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5}, "ordered_globals": ["square", "sum_of_squares", "a"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2}, "ordered_globals": ["square", "sum_of_squares", "a", "b"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 15, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 5, "event": "call", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"x": -5}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f2"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"x": -5}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f2"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"x": -5, "y": 25}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f2"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5}, "ordered_varnames": ["x", "y", "z"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"x": -5, "y": 25, "__return__": 25}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f2"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25}, "ordered_varnames": ["x", "y", "z", "a"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25}, "ordered_varnames": ["x", "y", "z", "a"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f3"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25}, "ordered_varnames": ["x", "y", "z", "a"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f3"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25}, "ordered_varnames": ["x", "y", "z", "a"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"x": 2, "y": 4}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f3"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25}, "ordered_varnames": ["x", "y", "z", "a"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"x": 2, "y": 4, "__return__": 4}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f3"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4}, "ordered_varnames": ["x", "y", "z", "a", "b"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4}, "ordered_varnames": ["x", "y", "z", "a", "b"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f4"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4}, "ordered_varnames": ["x", "y", "z", "a", "b"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f4"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4}, "ordered_varnames": ["x", "y", "z", "a", "b"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f4"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4}, "ordered_varnames": ["x", "y", "z", "a", "b"], "is_zombie": false, "is_highlighted": false, "unique_hash": "sum_of_squares_f1"}, {"func_name": "square", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f4"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4, "c": 100}, "ordered_varnames": ["x", "y", "z", "a", "b", "c"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 10, "event": "return", "func_name": "sum_of_squares", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c"], "stack_to_render": [{"func_name": "sum_of_squares", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"z": 10, "y": 2, "x": -5, "a": 25, "b": 4, "c": 100, "__return__": 129}, "ordered_varnames": ["x", "y", "z", "a", "b", "c", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "sum_of_squares_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 16, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10, "result": 129}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": ""}, {"line": 16, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "sum_of_squares": ["REF", 2], "a": -5, "b": 2, "c": 10, "result": 129}, "ordered_globals": ["square", "sum_of_squares", "a", "b", "c", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null], "2": ["FUNCTION", "sum_of_squares(x, y, z)", null]}, "stdout": "129\n"}]};
+var sumofsquares_vis;
+
+$(document).ready(function() {
+    try {
+        sumofsquares_vis = new ExecutionVisualizer('sumofsquares',sumofsquares_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(sumofsquares_vis,'sumofsquares');
+        styleButtons('sumofsquares');
+        allVisualizers.push(sumofsquares_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component sumofsquares_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#sumofsquares_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'sumofsquares'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (sumofsquares_vis) {
+        sumofsquares_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>Even though this is a pretty simple idea, in practice this example
+illustrates many very important Python concepts, including local and global
+variables along with parameter passing.  Note that when you step through this
+example, codelens bolds line 1 and line 5 as the functions are defined.  The
+body of square is not executed until it is called from the <code class="docutils literal"><span class="pre">sum_of_squares</span></code>
+function for the first time on line 6.  Also notice that when <code class="docutils literal"><span class="pre">square</span></code> is
+called there are two groups of local variables, one for <code class="docutils literal"><span class="pre">square</span></code> and one
+for <code class="docutils literal"><span class="pre">sum_of_squares</span></code>.  As you step through you will notice that <code class="docutils literal"><span class="pre">x</span></code>, and <code class="docutils literal"><span class="pre">y</span></code> are local variables in both functions and may even have
+different values.  This illustrates that even though they are named the same,
+they are in fact, very different.</p>
+<p>Now we will look at another example that uses two functions.  This example illustrates an
+important computer science problem solving technique called
+<strong>generalization</strong>.  Assume we want to write a
+function to draw a square.  The generalization step is to realize that a
+square is just a special kind of rectangle.</p>
+<p>To draw a rectangle we need to be able to call a function with different
+arguments for width and height.  Unlike the case of the square,
+we cannot repeat the same thing 4 times, because the four sides are not equal.
+However, it is the case that drawing the bottom and right sides are the
+same sequence as drawing the top and left sides.  So we eventually come up with
+this rather nice code that can draw a rectangle.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawRectangle</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get turtle t to draw a rectangle of width w and height h.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The parameter names are chosen as single letters for conciseness.
+In real programs, we will insist on better variable names than this.
+The point is that the program doesn’t “understand” that you’re drawing a rectangle or that the
+parameters represent the width and the height.  Concepts like rectangle, width, and height are meaningful
+for humans.  They are not concepts that the program or the computer understands.</p>
+<p><em>Thinking like a computer scientist</em> involves looking for patterns and
+relationships.  In the code above, we’ve done that to some extent.  We did
+not just draw four sides. Instead, we spotted that we could draw the
+rectangle as two halves and used a loop to repeat that pattern twice.</p>
+<p>But now we might spot that a square is a special kind of rectangle.  A square
+simply uses the same value for both the height and the width.
+We already have a function that draws a rectangle, so we can use that to draw
+our square.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drawSquare</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">sz</span><span class="p">):</span>        <span class="c1"># a new version of drawSquare</span>
+    <span class="n">drawRectangle</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">sz</span><span class="p">,</span> <span class="n">sz</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here is the entire example with the necessary set up code.</p>
+
+<div data-childcomponent="ch04_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch04_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def drawRectangle(t, w, h):
+    """Get turtle t to draw a rectangle of width w and height h."""
+    for i in range(2):
+        t.forward(w)
+        t.left(90)
+        t.forward(h)
+        t.left(90)
+
+def drawSquare(tx, sz):        # a new version of drawSquare
+    drawRectangle(tx, sz, sz)
+
+wn = turtle.Screen()             # Set up the window
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()           # create tess
+
+drawSquare(tess, 50)
+
+wn.exitonclick()
+</textarea>
+</div>
+<p>There are some points worth noting here:</p>
+<ul class="simple">
+<li>Functions can call other functions.</li>
+<li>Rewriting <cite>drawSquare</cite> like this captures the relationship
+that we’ve spotted.</li>
+<li>A caller of this function might say <cite>drawSquare(tess, 50)</cite>.  The parameters
+of this function, <code class="docutils literal"><span class="pre">tx</span></code> and <code class="docutils literal"><span class="pre">sz</span></code>, are assigned the values of the tess object, and
+the integer 50 respectively.</li>
+<li>In the body of the function, <code class="docutils literal"><span class="pre">tz</span></code> and <code class="docutils literal"><span class="pre">sz</span></code> are just like any other variable.</li>
+<li>When the call is made to <code class="docutils literal"><span class="pre">drawRectangle</span></code>, the values in variables <code class="docutils literal"><span class="pre">tx</span></code> and <code class="docutils literal"><span class="pre">sz</span></code>
+are fetched first, then the call happens.  So as we enter the top of
+function <cite>drawRectangle</cite>, its variable <code class="docutils literal"><span class="pre">t</span></code> is assigned the tess object, and <code class="docutils literal"><span class="pre">w</span></code> and
+<code class="docutils literal"><span class="pre">h</span></code> in that function are both given the value 50.</li>
+</ul>
+<p>So far, it may not be clear why it is worth the trouble to create all of these
+new functions. Actually, there are a lot of reasons, but this example
+demonstrates two:</p>
+<ol class="arabic simple">
+<li>Creating a new function gives you an opportunity to name a group of
+statements. Functions can simplify a program by hiding a complex computation
+behind a single command. The function (including its name) can capture your
+mental chunking, or <em>abstraction</em>, of the problem.</li>
+<li>Creating a new function can make a program smaller by eliminating repetitive
+code.</li>
+<li>Sometimes you can write functions that allow you to solve a specific
+problem using a more general solution.</li>
+</ol>
+<div class="admonition-lab admonition">
+<p class="first admonition-title">Lab</p>
+<ul class="last simple">
+<li><a class="reference external" href="../Labs/lab04_01.html">Drawing a Circle</a> In this guided lab exercise we will work
+through a simple problem solving exercise related to drawing a circle with the turtle.</li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -101,6 +101,7 @@ Python
    Python/MoreTurtles/DrawingPractice.rst
    Python/MoreTurtles/AssignmentWorkPeriod.rst
 
+   Python/Functions/MoreFunctionDetails.rst
 
 
 Python Practice Quizzes

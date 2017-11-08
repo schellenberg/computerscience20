@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>8.11. 2-Dimensional Iteration: Image Processing &#8212; Computer Science 20 Saskatchewan</title>
+    <title>7.11. 2-Dimensional Iteration: Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -190,10 +190,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">8.11. 2-Dimensional Iteration: Image Processing</a><ul>
-<li><a class="reference internal" href="#the-rgb-color-model">8.11.1. The RGB Color Model</a></li>
-<li><a class="reference internal" href="#image-objects">8.11.2. Image Objects</a></li>
-<li><a class="reference internal" href="#image-processing-and-nested-iteration">8.11.3. Image Processing and Nested Iteration</a></li>
+<li><a class="reference internal" href="#">7.11. 2-Dimensional Iteration: Image Processing</a><ul>
+<li><a class="reference internal" href="#the-rgb-color-model">7.11.1. The RGB Color Model</a></li>
+<li><a class="reference internal" href="#image-objects">7.11.2. Image Objects</a></li>
+<li><a class="reference internal" href="#image-processing-and-nested-iteration">7.11.3. Image Processing and Nested Iteration</a></li>
 </ul>
 </li>
 </ul>
@@ -229,7 +229,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="dimensional-iteration-image-processing">
-<h1>8.11. 2-Dimensional Iteration: Image Processing<a class="headerlink" href="#dimensional-iteration-image-processing" title="Permalink to this headline">¶</a></h1>
+<h1>7.11. 2-Dimensional Iteration: Image Processing<a class="headerlink" href="#dimensional-iteration-image-processing" title="Permalink to this headline">¶</a></h1>
 <p>Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
 spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
 explore how iteration allows us to manipulate these images.</p>
@@ -240,7 +240,7 @@ that computer scientists like to start counting with 0!  This means that if ther
 <p>In the figure below, the pixel of interest is found at column <strong>c</strong> and row <strong>r</strong>.</p>
 <img alt="../../_images/image.png" src="../../_images/image.png" />
 <div class="section" id="the-rgb-color-model">
-<h2>8.11.1. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<h2>7.11.1. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
 The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
@@ -389,7 +389,7 @@ print(p.getGreen(), p.getBlue())
             </div>
             </div>
 <div class="section" id="image-objects">
-<h2>8.11.2. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<h2>7.11.2. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To access the pixels in a real image, we need to first create an <code class="docutils literal"><span class="pre">Image</span></code> object.  Image objects can be created in two
 ways.  First, an Image object can be made from the
 files that store digital images.  The image object has an attribute corresponding to the width, the height, and the
@@ -479,7 +479,7 @@ pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few othe
             </div>
             </div>
 <div class="section" id="image-processing-and-nested-iteration">
-<h2>8.11.3. Image Processing and Nested Iteration<a class="headerlink" href="#image-processing-and-nested-iteration" title="Permalink to this headline">¶</a></h2>
+<h2>7.11.3. Image Processing and Nested Iteration<a class="headerlink" href="#image-processing-and-nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
