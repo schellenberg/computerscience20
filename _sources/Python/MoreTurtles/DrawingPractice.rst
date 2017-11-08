@@ -70,11 +70,11 @@ Draw the shape above. Depending on how you defined your earlier function(s) in t
 Bonus - If You Are Done Before Others
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/confusion-14.png
+.. image:: images/confusion-20.png
 
 Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)!
 
-.. activecode:: practice_problems_14
+.. activecode:: practice_problems_4
     :nocodelens:
 
     import turtle
