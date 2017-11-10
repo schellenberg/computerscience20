@@ -151,3 +151,10 @@ Appendices
 
    Python/TurtleConfusion/Challenges.rst
    Python/Microbit/QuickStartExamples.rst
+
+Helpful Links
+::::::::::::::
+
+- `List of Turtle Color Names <https://www.w3schools.com/colors/colors_names.asp>`_
+- `Python Turtle Docs <https://docs.python.org/3/library/turtle.html>`_
+- `Python Visualizer Tool <http://www.pythontutor.com/visualize.html#py=3>`_
