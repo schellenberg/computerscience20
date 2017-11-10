@@ -85,7 +85,7 @@ What will the following code do? *Note: it might be better to run this in Thonny
         print("hello")
 
 
-Quick Practice Problems
+Practice Problems
 -----------------------
 
 Counting Up
