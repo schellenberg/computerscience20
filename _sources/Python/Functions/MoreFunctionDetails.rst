@@ -9,7 +9,7 @@ More Details About Functions
 
 .. topic:: Quick Overview of Day
 
-    Introduce fruitful functions (functions that return values), and 
+    Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). 
 
 
 .. reveal:: curriculum_addressed
@@ -19,6 +19,14 @@ More Details About Functions
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+
+
+Warmup Problem
+---------------
+
+.. image:: images/confusion-16.png
+
+Draw the image above using the Python turtle module. **You must define a function as part of your solution!**
 
 
 Functions that Return Values
@@ -69,10 +77,7 @@ expressions. In the last example, 503 is returned, since it is larger than 33,
 
 Notice that each of the above functions return values that can be used to build more complex expressions.
 
-So an important difference between these functions and one like ``draw_square`` is that
-``draw_square`` was not executed because we wanted it to compute a value --- on the contrary,
-we wrote ``draw_square`` because we wanted it to execute a sequence of steps that caused
-the turtle to draw a specific shape.
+So an important difference between these functions and one like ``draw_square`` or ``draw_rectangle`` is that ``draw_square`` was not executed because we wanted it to compute a value --- on the contrary, we wrote ``draw_square`` because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.
 
 Functions that return values are sometimes called **fruitful functions**.
 A function that doesn't return a value can be simply called a function, or if we want
@@ -107,7 +112,7 @@ Because the return statement can contain any Python expression we could have
 avoided creating the **temporary variable** ``y`` and simply used
 ``return original_number*original_number``.
 Try modifying the square function above to see that this works just the same.
-On the other hand, using **temporary variables** like ``squared_value`` in the program above makes debugging easier.  These temporary variables are examples of **local variables**, pursued further in the next section.
+On the other hand, using **temporary variables** like ``squared_value`` in the program above makes debugging easier.  These temporary variables are examples of **local variables**, which will be explained further in the next section.
 
 Notice something important here. The name of the variable we pass as an
 argument --- ``to_square`` --- has nothing to do with the name of the formal parameter
@@ -192,7 +197,7 @@ Check Your Understanding
 
    .. code-block:: python
 
-     def addEm(x, y, z):
+     def add_em(x, y, z):
          return x + y + z
          print('the answer is', x + y + z)
 
@@ -210,7 +215,106 @@ Check Your Understanding
 
    .. code-block:: python
 
-    def addEm(x, y, z):
+    def add_em(x, y, z):
         print(x + y + z)
 
 
+Practice Problems
+------------------
+
+Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have** to return the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
+
+
+Double It
+~~~~~~~~~~
+
+.. activecode:: double-it
+    :nocodelens:
+
+    The parameter the_number needs to be doubled. Return the doubled value of the number that is passed in.
+
+    ``double_it(5) → 10``
+    ``double_it(0) → 0``
+    ``double_it(-4) → -8``
+    ~~~~
+    def double_it(the_number):
+        return 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(double_it(5),10,"X")
+            self.assertEqual(double_it(0),0,"X")
+            self.assertEqual(double_it(-12),-24,"X")
+            self.assertEqual(double_it(-1),-2,"X")
+
+    myTests().main()
+
+
+Double It Positive
+~~~~~~~~~~~~~~~~~~~~
+
+.. activecode:: double-it-positive
+    :nocodelens:
+
+    The parameter the_number needs to be doubled, but only if the_number is positive. Return the doubled value of the number that is passed in if the_number is positive. If the_number is negative, return -1. If the_number is 0, return 0.
+
+    ``double_it_positive(5) → 10``
+    ``double_it_positive(0) → 0``
+    ``double_it_positive(-4) → -1``
+    ~~~~
+    def double_it_positive(the_number):
+        return 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(double_it_positive(5),10,"X")
+            self.assertEqual(double_it_positive(11),22,"X")
+            self.assertEqual(double_it_positive(0),0,"X")
+            self.assertEqual(double_it_positive(-12),-1,"X")
+            self.assertEqual(double_it_positive(-1),-1,"X")
+
+    myTests().main()
+
+
+Wear the Right Thing
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. activecode:: wear-the-right-thing
+    :nocodelens:
+
+    Write a function which returns the type of clothing you should wear, based on the parameter temperature. If the temp is below -10, you will wear a parka and toque (return "parka and toque"). If the temp is between -10 and 0, wear a toque (return "toque"). If the temp is greater than 0 but less than 10, wear a sweater (return "sweater"). If the temp is between 10 and 20, wear a t-shirt (return "t-shirt"). If the temp is greater than 20, wear shorts (return "shorts").
+
+    ``wear_the_right_thing(25) → "shorts"``
+    ``wear_the_right_thing(-25) → "parka and toque"``
+    ``wear_the_right_thing(-5) → "toque"``
+    ~~~~
+    def wear_the_right_thing(temperature):
+        return "some clothes"
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(wear_the_right_thing(25),"shorts","X")
+            self.assertEqual(wear_the_right_thing(20),"t-shirt","X")
+            self.assertEqual(wear_the_right_thing(15),"t-shirt","X")
+            self.assertEqual(wear_the_right_thing(10),"t-shirt","X")
+            self.assertEqual(wear_the_right_thing(9),"sweater","X")
+            self.assertEqual(wear_the_right_thing(1),"sweater","X")
+            self.assertEqual(wear_the_right_thing(0),"toque","X")
+            self.assertEqual(wear_the_right_thing(-10),"toque","X")
+            self.assertEqual(wear_the_right_thing(-11),"parka and toque","X")
+            self.assertEqual(wear_the_right_thing(-30),"parka and toque","X")
+
+    myTests().main()

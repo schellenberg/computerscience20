@@ -193,8 +193,15 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">17. More Details About Functions</a><ul>
-<li><a class="reference internal" href="#functions-that-return-values">17.1. Functions that Return Values</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">17.1.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#warmup-problem">17.1. Warmup Problem</a></li>
+<li><a class="reference internal" href="#functions-that-return-values">17.2. Functions that Return Values</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">17.2.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practice-problems">17.3. Practice Problems</a><ul>
+<li><a class="reference internal" href="#double-it">17.3.1. Double It</a></li>
+<li><a class="reference internal" href="#double-it-positive">17.3.2. Double It Positive</a></li>
+<li><a class="reference internal" href="#wear-the-right-thing">17.3.3. Wear the Right Thing</a></li>
 </ul>
 </li>
 </ul>
@@ -247,7 +254,7 @@
 <h1>17. More Details About Functions<a class="headerlink" href="#more-details-about-functions" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Introduce fruitful functions (functions that return values), and</p>
+<p>Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values).</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -259,8 +266,13 @@
 </ul>
 
     </div>
-    <div class="section" id="functions-that-return-values">
-<h2>17.1. Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="warmup-problem">
+<h2>17.1. Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/confusion-161.png" src="../../_images/confusion-161.png" />
+<p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
+</div>
+<div class="section" id="functions-that-return-values">
+<h2>17.2. Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h2>
 <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number (defined as the distance of a number from zero on a number line), you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
 
 <div data-childcomponent="ch04_4" class="runestone explainer ac_section alert alert-warning">
@@ -306,10 +318,7 @@ return the maximum value sent. The arguments can be either simple values or
 expressions. In the last example, 503 is returned, since it is larger than 33,
 125, and 1.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
 <p>Notice that each of the above functions return values that can be used to build more complex expressions.</p>
-<p>So an important difference between these functions and one like <code class="docutils literal"><span class="pre">draw_square</span></code> is that
-<code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary,
-we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused
-the turtle to draw a specific shape.</p>
+<p>So an important difference between these functions and one like <code class="docutils literal"><span class="pre">draw_square</span></code> or <code class="docutils literal"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
 <p>Functions that return values are sometimes called <strong>fruitful functions</strong>.
 A function that doesn’t return a value can be simply called a function, or if we want
 to make it extremely clear, a <em>non-fruitful</em> function.</p>
@@ -339,7 +348,7 @@ Because the return statement can contain any Python expression we could have
 avoided creating the <strong>temporary variable</strong> <code class="docutils literal"><span class="pre">y</span></code> and simply used
 <code class="docutils literal"><span class="pre">return</span> <span class="pre">original_number*original_number</span></code>.
 Try modifying the square function above to see that this works just the same.
-On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal"><span class="pre">squared_value</span></code> in the program above makes debugging easier.  These temporary variables are examples of <strong>local variables</strong>, pursued further in the next section.</p>
+On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal"><span class="pre">squared_value</span></code> in the program above makes debugging easier.  These temporary variables are examples of <strong>local variables</strong>, which will be explained further in the next section.</p>
 <p>Notice something important here. The name of the variable we pass as an
 argument — <code class="docutils literal"><span class="pre">to_square</span></code> — has nothing to do with the name of the formal parameter
 — <code class="docutils literal"><span class="pre">original_number</span></code>.  It is as if  <code class="docutils literal"><span class="pre">original_number</span> <span class="pre">=</span> <span class="pre">to_square</span></code> is executed when <code class="docutils literal"><span class="pre">square</span></code> is called. It doesn’t matter what the value was named in
@@ -470,12 +479,12 @@ $(window).resize(function() {
 where the call was made.  Since line 6 uses the return value as the right hand side of an assignment statement, the evaluation of the
 function will be <code class="docutils literal"><span class="pre">None</span></code>.  In this case, <code class="docutils literal"><span class="pre">result</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
 <div class="section" id="check-your-understanding">
-<h3>17.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>17.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_1">
             <p>more-function-details1: What is wrong with the following function definition:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addEm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;the answer is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
@@ -496,7 +505,7 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_2">
             <p>more-function-details2: What will the following function return?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addEm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -511,6 +520,101 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
             </ul>
             </div>
             </div>
+</div>
+<div class="section" id="practice-problems">
+<h2>17.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<div class="section" id="double-it">
+<h3>17.3.1. Double It<a class="headerlink" href="#double-it" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="double-it" class="runestone explainer ac_section alert alert-warning">
+<p>The parameter the_number needs to be doubled. Return the doubled value of the number that is passed in.</p>
+<p><code class="docutils literal"><span class="pre">double_it(5)</span> <span class="pre">→</span> <span class="pre">10</span></code>
+<code class="docutils literal"><span class="pre">double_it(0)</span> <span class="pre">→</span> <span class="pre">0</span></code>
+<code class="docutils literal"><span class="pre">double_it(-4)</span> <span class="pre">→</span> <span class="pre">-8</span></code></p>
+
+<textarea data-component="activecode" id=double-it data-lang="python"    data-timelimit=25000   data-audio=''     >
+def double_it(the_number):
+    return 0
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(double_it(5),10,"X")
+        self.assertEqual(double_it(0),0,"X")
+        self.assertEqual(double_it(-12),-24,"X")
+        self.assertEqual(double_it(-1),-2,"X")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="double-it-positive">
+<h3>17.3.2. Double It Positive<a class="headerlink" href="#double-it-positive" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="double-it-positive" class="runestone explainer ac_section alert alert-warning">
+<p>The parameter the_number needs to be doubled, but only if the_number is positive. Return the doubled value of the number that is passed in if the_number is positive. If the_number is negative, return -1. If the_number is 0, return 0.</p>
+<p><code class="docutils literal"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code>
+<code class="docutils literal"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code>
+<code class="docutils literal"><span class="pre">double_it_positive(-4)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
+
+<textarea data-component="activecode" id=double-it-positive data-lang="python"    data-timelimit=25000   data-audio=''     >
+def double_it_positive(the_number):
+    return 0
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(double_it_positive(5),10,"X")
+        self.assertEqual(double_it_positive(11),22,"X")
+        self.assertEqual(double_it_positive(0),0,"X")
+        self.assertEqual(double_it_positive(-12),-1,"X")
+        self.assertEqual(double_it_positive(-1),-1,"X")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="wear-the-right-thing">
+<h3>17.3.3. Wear the Right Thing<a class="headerlink" href="#wear-the-right-thing" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="wear-the-right-thing" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function which returns the type of clothing you should wear, based on the parameter temperature. If the temp is below -10, you will wear a parka and toque (return “parka and toque”). If the temp is between -10 and 0, wear a toque (return “toque”). If the temp is greater than 0 but less than 10, wear a sweater (return “sweater”). If the temp is between 10 and 20, wear a t-shirt (return “t-shirt”). If the temp is greater than 20, wear shorts (return “shorts”).</p>
+<p><code class="docutils literal"><span class="pre">wear_the_right_thing(25)</span> <span class="pre">→</span> <span class="pre">&quot;shorts&quot;</span></code>
+<code class="docutils literal"><span class="pre">wear_the_right_thing(-25)</span> <span class="pre">→</span> <span class="pre">&quot;parka</span> <span class="pre">and</span> <span class="pre">toque&quot;</span></code>
+<code class="docutils literal"><span class="pre">wear_the_right_thing(-5)</span> <span class="pre">→</span> <span class="pre">&quot;toque&quot;</span></code></p>
+
+<textarea data-component="activecode" id=wear-the-right-thing data-lang="python"    data-timelimit=25000   data-audio=''     >
+def wear_the_right_thing(temperature):
+    return "some clothes"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(wear_the_right_thing(25),"shorts","X")
+        self.assertEqual(wear_the_right_thing(20),"t-shirt","X")
+        self.assertEqual(wear_the_right_thing(15),"t-shirt","X")
+        self.assertEqual(wear_the_right_thing(10),"t-shirt","X")
+        self.assertEqual(wear_the_right_thing(9),"sweater","X")
+        self.assertEqual(wear_the_right_thing(1),"sweater","X")
+        self.assertEqual(wear_the_right_thing(0),"toque","X")
+        self.assertEqual(wear_the_right_thing(-10),"toque","X")
+        self.assertEqual(wear_the_right_thing(-11),"parka and toque","X")
+        self.assertEqual(wear_the_right_thing(-30),"parka and toque","X")
+
+myTests().main()
+</textarea>
+</div>
+</div>
 </div>
 </div>
 
