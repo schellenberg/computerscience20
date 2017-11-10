@@ -418,34 +418,38 @@ print(not 5 != 5)
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Add/Subtract Two Numbers</span>
 <span class="c1"># Dan Schellenberg</span>
 <span class="c1"># Oct 23, 2017</span>
+
+<span class="n">operation_chosen</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Would you like to add or subtract? &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">operation_chosen</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+    <span class="c1">#get user input</span>
+    <span class="n">first_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the first number: &quot;</span><span class="p">)</span>
+    <span class="n">second_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the second number: &quot;</span><span class="p">)</span>
+
+    <span class="c1">#convert input into numbers</span>
+    <span class="n">first_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_number</span><span class="p">)</span>
+    <span class="n">second_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">second_number</span><span class="p">)</span>
+
+    <span class="n">the_answer</span> <span class="o">=</span> <span class="n">first_number</span> <span class="o">+</span> <span class="n">second_number</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer when you add is&quot;</span><span class="p">,</span> <span class="n">the_answer</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">operation_chosen</span> <span class="o">==</span> <span class="s2">&quot;subtract&quot;</span><span class="p">:</span>
+    <span class="c1">#get user input</span>
+    <span class="n">first_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the first number: &quot;</span><span class="p">)</span>
+    <span class="n">second_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the second number: &quot;</span><span class="p">)</span>
+
+    <span class="c1">#convert input into numbers</span>
+    <span class="n">first_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_number</span><span class="p">)</span>
+    <span class="n">second_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">second_number</span><span class="p">)</span>
+
+    <span class="n">the_answer</span> <span class="o">=</span> <span class="n">first_number</span> <span class="o">-</span> <span class="n">second_number</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer when you subtract is&quot;</span><span class="p">,</span> <span class="n">the_answer</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1">#neither add or subtract was entered</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error. I don&#39;t know what that means. Please enter &#39;add&#39; or &#39;subtract&#39;.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>operation_chosen = input(“Would you like to add or subtract? “)</p>
-<dl class="docutils">
-<dt>if operation_chosen == “add”:</dt>
-<dd><p class="first">#get user input
-first_number = input(“Please enter the first number: “)
-second_number = input(“Please enter the second number: “)</p>
-<p>#convert input into numbers
-first_number = float(first_number)
-second_number = float(second_number)</p>
-<p class="last">the_answer = first_number + second_number
-print(“The answer when you add is”, the_answer)</p>
-</dd>
-<dt>elif operation_chosen == “subtract”:</dt>
-<dd><p class="first">#get user input
-first_number = input(“Please enter the first number: “)
-second_number = input(“Please enter the second number: “)</p>
-<p>#convert input into numbers
-first_number = float(first_number)
-second_number = float(second_number)</p>
-<p class="last">the_answer = first_number - second_number
-print(“The answer when you subtract is”, the_answer)</p>
-</dd>
-<dt>else:</dt>
-<dd>#neither add or subtract was entered
-print(“Error. I don’t know what that means. Please enter ‘add’ or ‘subtract’.”)</dd>
-</dl>
 
     </div>
     </div>

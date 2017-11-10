@@ -179,39 +179,39 @@ Write a program that can either add or subtract two numbers. You should first as
 
     This is one possible solution. Note that it is not particularly efficient, as the same code appears in the ``if`` and ``elif`` blocks. This can be improved once variable scope and functions are understood.::
 
-    # Add/Subtract Two Numbers
-    # Dan Schellenberg
-    # Oct 23, 2017
+      # Add/Subtract Two Numbers
+      # Dan Schellenberg
+      # Oct 23, 2017
 
-    operation_chosen = input("Would you like to add or subtract? ")
+      operation_chosen = input("Would you like to add or subtract? ")
 
-    if operation_chosen == "add":
-        #get user input
-        first_number = input("Please enter the first number: ")
-        second_number = input("Please enter the second number: ")
+      if operation_chosen == "add":
+          #get user input
+          first_number = input("Please enter the first number: ")
+          second_number = input("Please enter the second number: ")
 
-        #convert input into numbers
-        first_number = float(first_number)
-        second_number = float(second_number)
-        
-        the_answer = first_number + second_number
-        print("The answer when you add is", the_answer)
+          #convert input into numbers
+          first_number = float(first_number)
+          second_number = float(second_number)
+          
+          the_answer = first_number + second_number
+          print("The answer when you add is", the_answer)
 
-    elif operation_chosen == "subtract":
-        #get user input
-        first_number = input("Please enter the first number: ")
-        second_number = input("Please enter the second number: ")
+      elif operation_chosen == "subtract":
+          #get user input
+          first_number = input("Please enter the first number: ")
+          second_number = input("Please enter the second number: ")
 
-        #convert input into numbers
-        first_number = float(first_number)
-        second_number = float(second_number)
-        
-        the_answer = first_number - second_number
-        print("The answer when you subtract is", the_answer)
+          #convert input into numbers
+          first_number = float(first_number)
+          second_number = float(second_number)
+          
+          the_answer = first_number - second_number
+          print("The answer when you subtract is", the_answer)
 
-    else:
-        #neither add or subtract was entered
-        print("Error. I don't know what that means. Please enter 'add' or 'subtract'.")
+      else:
+          #neither add or subtract was entered
+          print("Error. I don't know what that means. Please enter 'add' or 'subtract'.")
         
         
 
