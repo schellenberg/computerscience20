@@ -312,7 +312,7 @@ Modify the program given below so that before it creates the window, it prompts 
 
 (Hint: you can find a list of permitted color names at `https://www.w3schools.com/colors/colors_names.asp <https://www.w3schools.com/colors/colors_names.asp>`_ .  It includes some quite unusual ones, like "PeachPuff" and "HotPink".)
 
-.. note:: If you are running your code in Thonny, the order of your instructions matters a lot! You might, for example, want to ask the user questions *before* creating a Screen() to draw on. Or you might choose to use something like ``appJar`` to ask the questions. There is also a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module so that you can ask for user input in a graphical manner.
+.. note:: If you are running your code in Thonny, the order of your instructions matters a lot! You might, for example, want to ask the user questions *before* creating a Screen() to draw on. Or you might choose to use something like ``appJar`` to ask the questions. There is also a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module so that you can ask for user input in a graphical manner. Be aware, however, that the ``textinput()`` function will not work in the browser version of Python.
 
 .. activecode:: practice_problem_turtle_intro_1
     :nocodelens:
