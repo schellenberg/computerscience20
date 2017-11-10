@@ -568,7 +568,56 @@ bree.right(60)
 bree.forward(100)
 </textarea>
 </div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_turtle_intro_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>The following solution will work well in the browser, where a text input box appears automatically when you call the <code class="docutils literal"><span class="pre">input()</span></code> function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Color Selection</span>
+
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="c1"># create window, and set it&#39;s color</span>
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">the_background_color</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a background color: &quot;</span><span class="p">)</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="n">the_background_color</span><span class="p">)</span>
+
+<span class="c1">#create the turtle, and it&#39;s attributes</span>
+<span class="n">bree</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">brees_color</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the color of the turtle: &quot;</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">brees_color</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#draw!</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
 </div>
+<p>If you are using Thonny to create your solution, you will likely want to use the <code class="docutils literal"><span class="pre">screen.textinput(&quot;window</span> <span class="pre">name&quot;,</span> <span class="pre">&quot;question</span> <span class="pre">to</span> <span class="pre">ask&quot;)</span></code> function when asking for user input. Here is a version that does that:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Color Selection</span>
+
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="c1"># create window, and set it&#39;s color</span>
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">the_background_color</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">textinput</span><span class="p">(</span><span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Please enter a background color: &quot;</span><span class="p">)</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="n">the_background_color</span><span class="p">)</span>
+
+<span class="c1">#create the turtle, and it&#39;s attributes</span>
+<span class="n">bree</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">brees_color</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">textinput</span><span class="p">(</span><span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Please enter the color of the turtle: &quot;</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">brees_color</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#draw!</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">bree</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
 <div class="section" id="drawing-any-size-of-square">
 <h3>9.5.2. Drawing any Size of Square<a class="headerlink" href="#drawing-any-size-of-square" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses the turtle module to draw a square. The user should be able to set a number of options each time the code runs, so the program should ask the user for:</p>

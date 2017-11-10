@@ -335,6 +335,56 @@ Modify the program given below so that before it creates the window, it prompts 
     bree.right(60)
     bree.forward(100)
 
+**Do not look** at this sample solution unless you have already finished creating your own solution!
+
+.. reveal:: reveal_solution_practice_problem_turtle_intro_1
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    The following solution will work well in the browser, where a text input box appears automatically when you call the ``input()`` function::
+
+      # Color Selection
+
+      import turtle
+
+      # create window, and set it's color
+      canvas = turtle.Screen()
+      the_background_color = input("Please enter a background color: ")
+      canvas.bgcolor(the_background_color)
+
+      #create the turtle, and it's attributes
+      bree = turtle.Turtle()
+      brees_color = input("Please enter the color of the turtle: ")
+      bree.color(brees_color)
+      bree.pensize(3)
+
+      #draw!
+      bree.forward(100)
+      bree.right(60)
+      bree.forward(100)
+
+    If you are using Thonny to create your solution, you will likely want to use the ``screen.textinput("window name", "question to ask")`` function when asking for user input. Here is a version that does that::
+
+      # Color Selection
+
+      import turtle
+
+      # create window, and set it's color
+      canvas = turtle.Screen()
+      the_background_color = canvas.textinput("Color", "Please enter a background color: ")
+      canvas.bgcolor(the_background_color)
+
+      #create the turtle, and it's attributes
+      bree = turtle.Turtle()
+      brees_color = canvas.textinput("Color", "Please enter the color of the turtle: ")
+      bree.color(brees_color)
+      bree.pensize(3)
+
+      #draw!
+      bree.forward(100)
+      bree.right(60)
+      bree.forward(100)
+
 
 Drawing any Size of Square
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
