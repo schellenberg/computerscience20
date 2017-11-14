@@ -28,13 +28,19 @@ Warmup Problem
 
 Draw the image above using the Python turtle module. **You must define a function as part of your solution!**
 
+.. activecode:: turtle_confusion_practice_16
+    :nocanvas:
+    :nocodelens:
+
+    import turtle
+
 
 Functions that Return Values
 ----------------------------
 
 Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number (defined as the distance of a number from zero on a number line), you have to indicate what the number is. Python has a built-in function for computing the absolute value:
 
-.. activecode:: ch04_4
+.. activecode:: more_function_details_1
     :nocanvas:
     :nocodelens:
 
@@ -48,7 +54,7 @@ In this example, the arguments to the ``abs`` function are 5 and -5.
 
 Some functions take more than one argument. For example the math module contains a function called ``pow`` which takes two arguments, the base and the exponent.
 
-.. activecode:: ch04_5
+.. activecode:: more_function_details_2
     :nocanvas:
     :nocodelens:
 
@@ -63,7 +69,7 @@ Some functions take more than one argument. For example the math module contains
 
 Another built-in function that takes more than one argument is ``max``.
 
-.. activecode:: ch04_6
+.. activecode:: more_function_details_3
     :nocanvas:
 
     print(max(7, 11))
@@ -96,7 +102,7 @@ black-box diagram with the Python code following.
 
 .. image:: images/squarefun.png
 
-.. activecode:: ch04_square
+.. activecode:: more_function_details_4
 
     def square(original_number):
         squared_value = original_number * original_number
@@ -129,7 +135,7 @@ As you step through the example in codelens below, notice that the **return** st
    follow, and the further statements are *not* executed.
 
 
-.. codelens:: ch04_clsquare
+.. codelens:: more_function_details_codelens_square
 
     def square(original_number):
         squared_value = original_number * original_number
@@ -164,7 +170,7 @@ value in the local variables listing.  Then look at what is printed when the
 function returns.
 
 
-.. codelens:: ch04_clsquare_bad
+.. codelens:: more_function_details_codelens_square_bad
 
     def square(original_number):
         squared_value = original_number * original_number
@@ -228,20 +234,20 @@ consider again the ``square`` function:
 
 .. codelens:: bad_local
 
-    def square(x):
-        y = x * x
-        return y
+    def square(original_number):
+        squared_value = original_number * original_number
+        return squared_value
 
-    z = square(10)
-    print(y)
+    result = square(10)
+    print(squared_value)
 
 
 If you press the 'last >>' button you will see an error message.
-When we try to use ``y`` on line 6 (outside the function) Python looks for a global
-variable named ``y`` but does not find one.  This results in the
-error: ``Name Error: 'y' is not defined.``
+When we try to use ``squared_value`` on line 6 (outside the function) Python looks for a global
+variable named ``squared_value`` but does not find one.  This results in the
+error: ``Name Error: 'squared_value' is not defined.``
 
-The variable ``y`` only exists while the function is being executed ---
+The variable ``squared_value`` only exists while the function is being executed ---
 we call this its **lifetime**.
 When the execution of the function terminates (returns),
 the local variables  are destroyed.  Codelens helps you  visualize this
@@ -250,9 +256,8 @@ statements paying particular attention to the variables that are created when th
 Note when they are subsequently destroyed as the function returns.
 
 Formal parameters are also local and act like local variables.
-For example, the lifetime of ``x`` begins when ``square`` is
-called,
-and its lifetime ends when the function completes its execution.
+For example, the lifetime of ``original_number`` begins when ``square`` is
+called, and its lifetime ends when the function completes its execution.
 
 So it is not possible for a function to set some local variable to a
 value, complete its execution, and then when it is called again next
@@ -266,18 +271,13 @@ nonsensical variation of the square function.
 
 .. activecode:: badsquare_1
 
-    def badsquare(x):
-        y = x ** power
-        return y
+    def badsquare(original_number):
+        squared_value = original_number ** power
+        return squared_value
 
     power = 2
     result = badsquare(10)
     print(result)
-
-.. index::
-   local scope
-   global scope
-   scope
 
 
 Although the ``badsquare`` function works, it is silly and poorly written.  We have done it here to illustrate
@@ -288,18 +288,19 @@ found in the local scope, then Python looks at the global variables,
 or **global scope**.  This is exactly the case illustrated in the code above.
 ``power`` is not found locally in ``badsquare`` but it does exist globally.
 The appropriate way to write this function would be to pass power as a parameter.
-For practice, you should rewrite the badsquare example to have a second parameter called power.
+
+.. note:: For practice, you should rewrite the badsquare example above to have a second parameter called power.
 
 There is another variation on this theme of local versus global variables.  Assignment statements in the local function cannot 
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
 codelens example:
 
-.. codelens::  cl_powerof_bad
+.. codelens::  codelens_powerof_bad
 
-    def powerof(x, p):
+    def powerof(original_number, p):
         power = p   # Another dumb mistake
-        y = x ** power
-        return y
+        new_value = original_number ** power
+        return new_value
 
     power = 3
     result = powerof(10, 2)
@@ -307,8 +308,6 @@ codelens example:
 
 Now step through the code.  What do you notice about the values of variable ``power``
 in the local scope compared to the variable ``power`` in the global scope?
-
-.. index:: shadow
 
 The value of ``power`` in the local scope was different than the global scope.
 That is because in this example ``power`` was used on the left hand side of the
@@ -323,25 +322,28 @@ understand.
 
 To cement all of these ideas even further lets look at one final example.
 Inside the ``square`` function we are going to make an assignment to the
-parameter ``x``  There's no good reason to do this other than to emphasize
-the fact that the parameter ``x`` is a local variable.  If you step through
-the example in codelens you will see that although ``x`` is 0 in the local
-variables for ``square``, the ``x`` in the global scope remains 2.  This is confusing
+parameter ``original_number``  **There's no good reason to do this** other than to emphasize
+the fact that the parameter ``original_number`` is a local variable.  If you step through
+the example in codelens you will see that although ``original_number`` is 0 in the local
+variables for ``square``, the ``original_number`` in the global scope remains 2.  This is confusing
 to many beginning programmers who think that an assignment to a
 formal parameter will cause a change to the value of the variable that was
 used as the actual parameter, especially when the two share the same name.
 But this example demonstrates that that is clearly not how Python operates.
 
-.. codelens:: cl_change_parm
+.. codelens:: codelens_change_parm
 
-    def square(x):
-        y = x * x
-        x = 0       # assign a new value to the parameter x
-        return y
+    def square(original_number):
+        squared_value = original_number * original_number
 
-    x = 2
-    z = square(x)
-    print(z)
+        # assign a new value to the parameter original_number
+        original_number = 0
+
+        return squared_value
+
+    original_number = 2
+    result = square(original_number)
+    print(result)
 
 
 Check Your Understanding
@@ -349,7 +351,7 @@ Check Your Understanding
 
 .. mchoice:: test_question5_3_1
    :answer_a: Its value
-   :answer_b: The range of statements in the code where a variable can be accessed.
+   :answer_b: The area in the code where a variable can be accessed.
    :answer_c: Its name
    :correct: b
    :feedback_a: Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.
@@ -375,7 +377,7 @@ Check Your Understanding
    :answer_c: No, it will cause an error.
    :correct: b
    :feedback_a: While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.
-   :feedback_b: it is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.
+   :feedback_b: It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.
    :feedback_c: Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.
 
    Can you use the same name for a local variable as a global variable?
@@ -386,6 +388,8 @@ Practice Problems
 ------------------
 
 Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have** to return the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
+
+.. note:: The only thing you need to do for the following is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
 
 Double It
@@ -409,10 +413,10 @@ Double It
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(double_it(5),10,"X")
-            self.assertEqual(double_it(0),0,"X")
-            self.assertEqual(double_it(-12),-24,"X")
-            self.assertEqual(double_it(-1),-2,"X")
+            self.assertEqual(double_it(5),10,"You need to double whatever value is passed into the function!")
+            self.assertEqual(double_it(0),0,"You need to double whatever value is passed into the function!")
+            self.assertEqual(double_it(-12),-24,"You need to double whatever value is passed into the function!")
+            self.assertEqual(double_it(-1),-2,"You need to double whatever value is passed into the function!")
 
     myTests().main()
 
@@ -438,11 +442,11 @@ Double It Positive
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(double_it_positive(5),10,"X")
-            self.assertEqual(double_it_positive(11),22,"X")
-            self.assertEqual(double_it_positive(0),0,"X")
-            self.assertEqual(double_it_positive(-12),-1,"X")
-            self.assertEqual(double_it_positive(-1),-1,"X")
+            self.assertEqual(double_it_positive(5),10,"You need to double any positive value that is passed into the function!")
+            self.assertEqual(double_it_positive(11),22,"You need to double any positive value that is passed into the function!")
+            self.assertEqual(double_it_positive(0),0,"Zero is not negative, so you should just return zero doubled (zero).")
+            self.assertEqual(double_it_positive(-12),-1,"Any time a negative value is passed into the function, you should return -1.")
+            self.assertEqual(double_it_positive(-1),-1,"Any time a negative value is passed into the function, you should return -1.")
 
     myTests().main()
 
@@ -470,13 +474,13 @@ Wear the Right Thing
 
         def testOne(self):
             self.assertEqual(wear_the_right_thing(25),"shorts","X")
-            self.assertEqual(wear_the_right_thing(20),"t-shirt","X")
+            self.assertEqual(wear_the_right_thing(20),"t-shirt","Only wear shorts if greater than 20, not equal to.")
             self.assertEqual(wear_the_right_thing(15),"t-shirt","X")
             self.assertEqual(wear_the_right_thing(10),"t-shirt","X")
             self.assertEqual(wear_the_right_thing(9),"sweater","X")
             self.assertEqual(wear_the_right_thing(1),"sweater","X")
-            self.assertEqual(wear_the_right_thing(0),"toque","X")
-            self.assertEqual(wear_the_right_thing(-10),"toque","X")
+            self.assertEqual(wear_the_right_thing(0),"toque","0 is between -10 and 0.")
+            self.assertEqual(wear_the_right_thing(-10),"toque","-10 is between -10 and 0.")
             self.assertEqual(wear_the_right_thing(-11),"parka and toque","X")
             self.assertEqual(wear_the_right_thing(-30),"parka and toque","X")
 

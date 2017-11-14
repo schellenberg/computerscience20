@@ -274,14 +274,21 @@
 <h2>17.1. Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-161.png" src="../../_images/confusion-161.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
+
+<div data-childcomponent="turtle_confusion_practice_16" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_confusion_practice_16 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+</textarea>
+</div>
 </div>
 <div class="section" id="functions-that-return-values">
 <h2>17.2. Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h2>
 <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number (defined as the distance of a number from zero on a number line), you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
 
-<div data-childcomponent="ch04_4" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="more_function_details_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch04_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 print(abs(5))
 
 print(abs(-5))
@@ -294,9 +301,9 @@ print(abs(-5))
 </div>
 <p>Some functions take more than one argument. For example the math module contains a function called <code class="docutils literal"><span class="pre">pow</span></code> which takes two arguments, the base and the exponent.</p>
 
-<div data-childcomponent="ch04_5" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="more_function_details_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch04_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import math
 print(math.pow(2, 3))
 
@@ -309,9 +316,9 @@ print(math.pow(7, 4))
 </div>
 <p>Another built-in function that takes more than one argument is <code class="docutils literal"><span class="pre">max</span></code>.</p>
 
-<div data-childcomponent="ch04_6" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="more_function_details_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch04_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 print(max(7, 11))
 print(max(4, 1, 17, 2, 12))
 print(max(3 * 11, 5 ** 3, 512 - 9, 1024 ** 0))
@@ -334,9 +341,9 @@ as a parameter and return the result of squaring that number.  Here is the
 black-box diagram with the Python code following.</p>
 <img alt="../../_images/squarefun1.png" src="../../_images/squarefun1.png" />
 
-<div data-childcomponent="ch04_square" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="more_function_details_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch04_square data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 def square(original_number):
     squared_value = original_number * original_number
     return squared_value
@@ -369,35 +376,35 @@ follow, and the further statements are <em>not</em> executed.</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
-<div id="ch04_clsquare"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (ch04_clsquare)</span> </p>
+<div id="more_function_details_codelens_square"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (more_function_details_codelens_square)</span> </p>
 </div>
 <script type="text/javascript">
-var ch04_clsquare_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n    return squared_value\n\nto_square = 10\nresult = square(to_square)\nprint(\"The result of\", to_square, \"squared is\", result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": 100}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": 100}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "The result of 10 squared is 100\n"}]};
-var ch04_clsquare_vis;
+var more_function_details_codelens_square_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n    return squared_value\n\nto_square = 10\nresult = square(to_square)\nprint(\"The result of\", to_square, \"squared is\", result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": 100}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": 100}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "The result of 10 squared is 100\n"}]};
+var more_function_details_codelens_square_vis;
 
 $(document).ready(function() {
     try {
-        ch04_clsquare_vis = new ExecutionVisualizer('ch04_clsquare',ch04_clsquare_trace,
+        more_function_details_codelens_square_vis = new ExecutionVisualizer('more_function_details_codelens_square',more_function_details_codelens_square_trace,
                                     {embeddedMode: true,
                                     verticalStack: false,
                                     heightChangeCallback: redrawAllVisualizerArrows,
                                     codeDivWidth: 500,
                                     lang : 'py3'
                                     });
-        attachLoggers(ch04_clsquare_vis,'ch04_clsquare');
-        styleButtons('ch04_clsquare');
-        allVisualizers.push(ch04_clsquare_vis);
+        attachLoggers(more_function_details_codelens_square_vis,'more_function_details_codelens_square');
+        styleButtons('more_function_details_codelens_square');
+        allVisualizers.push(more_function_details_codelens_square_vis);
     } catch (e) {
-        console.log("Failed to Initialize CodeLens component ch04_clsquare_vis" );
+        console.log("Failed to Initialize CodeLens component more_function_details_codelens_square_vis" );
         console.log(e.toString());
     }
 
 });
 
 $(document).ready(function() {
-    $("#ch04_clsquare_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch04_clsquare'});
+    $("#more_function_details_codelens_square_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'more_function_details_codelens_square'});
     });
 });
 
@@ -407,8 +414,8 @@ if (allVisualizers === undefined) {
 
 
 $(window).resize(function() {
-    if (ch04_clsquare_vis) {
-        ch04_clsquare_vis.redrawConnectors();
+    if (more_function_details_codelens_square_vis) {
+        more_function_details_codelens_square_vis.redrawConnectors();
     }
 });
 </script>
@@ -435,35 +442,35 @@ function returns.</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
-<div id="ch04_clsquare_bad"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (ch04_clsquare_bad)</span> </p>
+<div id="more_function_details_codelens_square_bad"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (more_function_details_codelens_square_bad)</span> </p>
 </div>
 <script type="text/javascript">
-var ch04_clsquare_bad_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n    print(squared_value)  # Bad! Should use return instead of print!\n\nto_square = 10\nresult = square(to_square)\nprint(\"The result of\", to_square, \"squared is\", result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100, "__return__": null}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": null}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": null}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\nThe result of 10 squared is None\n"}]};
-var ch04_clsquare_bad_vis;
+var more_function_details_codelens_square_bad_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n    print(squared_value)  # Bad! Should use return instead of print!\n\nto_square = 10\nresult = square(to_square)\nprint(\"The result of\", to_square, \"squared is\", result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "to_square": 10}, "ordered_globals": ["square", "to_square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100, "__return__": null}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": null}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "to_square": 10, "result": null}, "ordered_globals": ["square", "to_square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "100\nThe result of 10 squared is None\n"}]};
+var more_function_details_codelens_square_bad_vis;
 
 $(document).ready(function() {
     try {
-        ch04_clsquare_bad_vis = new ExecutionVisualizer('ch04_clsquare_bad',ch04_clsquare_bad_trace,
+        more_function_details_codelens_square_bad_vis = new ExecutionVisualizer('more_function_details_codelens_square_bad',more_function_details_codelens_square_bad_trace,
                                     {embeddedMode: true,
                                     verticalStack: false,
                                     heightChangeCallback: redrawAllVisualizerArrows,
                                     codeDivWidth: 500,
                                     lang : 'py3'
                                     });
-        attachLoggers(ch04_clsquare_bad_vis,'ch04_clsquare_bad');
-        styleButtons('ch04_clsquare_bad');
-        allVisualizers.push(ch04_clsquare_bad_vis);
+        attachLoggers(more_function_details_codelens_square_bad_vis,'more_function_details_codelens_square_bad');
+        styleButtons('more_function_details_codelens_square_bad');
+        allVisualizers.push(more_function_details_codelens_square_bad_vis);
     } catch (e) {
-        console.log("Failed to Initialize CodeLens component ch04_clsquare_bad_vis" );
+        console.log("Failed to Initialize CodeLens component more_function_details_codelens_square_bad_vis" );
         console.log(e.toString());
     }
 
 });
 
 $(document).ready(function() {
-    $("#ch04_clsquare_bad_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch04_clsquare_bad'});
+    $("#more_function_details_codelens_square_bad_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'more_function_details_codelens_square_bad'});
     });
 });
 
@@ -473,8 +480,8 @@ if (allVisualizers === undefined) {
 
 
 $(window).resize(function() {
-    if (ch04_clsquare_bad_vis) {
-        ch04_clsquare_bad_vis.redrawConnectors();
+    if (more_function_details_codelens_square_bad_vis) {
+        more_function_details_codelens_square_bad_vis.redrawConnectors();
     }
 });
 </script>
@@ -538,7 +545,7 @@ consider again the <code class="docutils literal"><span class="pre">square</span
 <p class="cl_caption"><span class="cl_caption_text"> (bad_local)</span> </p>
 </div>
 <script type="text/javascript">
-var bad_local_trace = {"code": "def square(x):\n    y = x * x\n    return y\n\nz = square(10)\nprint(y)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "z": 100}, "ordered_globals": ["square", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 6, "event": "exception", "func_name": "<module>", "globals": {"square": ["REF", 1], "z": 100}, "ordered_globals": ["square", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "", "exception_msg": "NameError: name 'y' is not defined"}]};
+var bad_local_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n    return squared_value\n\nresult = square(10)\nprint(squared_value)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 10, "squared_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "result": 100}, "ordered_globals": ["square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 6, "event": "exception", "func_name": "<module>", "globals": {"square": ["REF", 1], "result": 100}, "ordered_globals": ["square", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "", "exception_msg": "NameError: name 'squared_value' is not defined"}]};
 var bad_local_vis;
 
 $(document).ready(function() {
@@ -579,10 +586,10 @@ $(window).resize(function() {
 </script>
 </div>
 <p>If you press the ‘last &gt;&gt;’ button you will see an error message.
-When we try to use <code class="docutils literal"><span class="pre">y</span></code> on line 6 (outside the function) Python looks for a global
-variable named <code class="docutils literal"><span class="pre">y</span></code> but does not find one.  This results in the
-error: <code class="docutils literal"><span class="pre">Name</span> <span class="pre">Error:</span> <span class="pre">'y'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined.</span></code></p>
-<p>The variable <code class="docutils literal"><span class="pre">y</span></code> only exists while the function is being executed —
+When we try to use <code class="docutils literal"><span class="pre">squared_value</span></code> on line 6 (outside the function) Python looks for a global
+variable named <code class="docutils literal"><span class="pre">squared_value</span></code> but does not find one.  This results in the
+error: <code class="docutils literal"><span class="pre">Name</span> <span class="pre">Error:</span> <span class="pre">'squared_value'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined.</span></code></p>
+<p>The variable <code class="docutils literal"><span class="pre">squared_value</span></code> only exists while the function is being executed —
 we call this its <strong>lifetime</strong>.
 When the execution of the function terminates (returns),
 the local variables  are destroyed.  Codelens helps you  visualize this
@@ -590,9 +597,8 @@ because the local variables disappear after the function returns.  Go back and s
 statements paying particular attention to the variables that are created when the function is called.
 Note when they are subsequently destroyed as the function returns.</p>
 <p>Formal parameters are also local and act like local variables.
-For example, the lifetime of <code class="docutils literal"><span class="pre">x</span></code> begins when <code class="docutils literal"><span class="pre">square</span></code> is
-called,
-and its lifetime ends when the function completes its execution.</p>
+For example, the lifetime of <code class="docutils literal"><span class="pre">original_number</span></code> begins when <code class="docutils literal"><span class="pre">square</span></code> is
+called, and its lifetime ends when the function completes its execution.</p>
 <p>So it is not possible for a function to set some local variable to a
 value, complete its execution, and then when it is called again next
 time, recover the local variable.  Each call of the function creates
@@ -605,59 +611,62 @@ nonsensical variation of the square function.</p>
 <div data-childcomponent="badsquare_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=badsquare_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-def badsquare(x):
-    y = x ** power
-    return y
+def badsquare(original_number):
+    squared_value = original_number ** power
+    return squared_value
 
 power = 2
 result = badsquare(10)
 print(result)
 </textarea>
 </div>
-<p id="index-0">Although the <code class="docutils literal"><span class="pre">badsquare</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
+<p>Although the <code class="docutils literal"><span class="pre">badsquare</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
 an important rule about how variables are looked up in Python.
 First, Python looks at the variables that are defined as local variables in
 the function.  We call this the <strong>local scope</strong>.  If the variable name is not
 found in the local scope, then Python looks at the global variables,
 or <strong>global scope</strong>.  This is exactly the case illustrated in the code above.
 <code class="docutils literal"><span class="pre">power</span></code> is not found locally in <code class="docutils literal"><span class="pre">badsquare</span></code> but it does exist globally.
-The appropriate way to write this function would be to pass power as a parameter.
-For practice, you should rewrite the badsquare example to have a second parameter called power.</p>
+The appropriate way to write this function would be to pass power as a parameter.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For practice, you should rewrite the badsquare example above to have a second parameter called power.</p>
+</div>
 <p>There is another variation on this theme of local versus global variables.  Assignment statements in the local function cannot
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
 codelens example:</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
-<div id="cl_powerof_bad"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (cl_powerof_bad)</span> </p>
+<div id="codelens_powerof_bad"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (codelens_powerof_bad)</span> </p>
 </div>
 <script type="text/javascript">
-var cl_powerof_bad_trace = {"code": "def powerof(x, p):\n    power = p   # Another dumb mistake\n    y = x ** power\n    return y\n\npower = 3\nresult = powerof(10, 2)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1]}, "ordered_globals": ["powerof"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "x": 10}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "x": 10}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "x": 10, "power": 2}, "ordered_varnames": ["x", "p", "power"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "x": 10, "power": 2, "y": 100}, "ordered_varnames": ["x", "p", "power", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "x": 10, "power": 2, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "p", "power", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": "100\n"}]};
-var cl_powerof_bad_vis;
+var codelens_powerof_bad_trace = {"code": "def powerof(original_number, p):\n    power = p   # Another dumb mistake\n    new_value = original_number ** power\n    return new_value\n\npower = 3\nresult = powerof(10, 2)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1]}, "ordered_globals": ["powerof"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2}, "ordered_varnames": ["original_number", "p", "power"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": "100\n"}]};
+var codelens_powerof_bad_vis;
 
 $(document).ready(function() {
     try {
-        cl_powerof_bad_vis = new ExecutionVisualizer('cl_powerof_bad',cl_powerof_bad_trace,
+        codelens_powerof_bad_vis = new ExecutionVisualizer('codelens_powerof_bad',codelens_powerof_bad_trace,
                                     {embeddedMode: true,
                                     verticalStack: false,
                                     heightChangeCallback: redrawAllVisualizerArrows,
                                     codeDivWidth: 500,
                                     lang : 'py3'
                                     });
-        attachLoggers(cl_powerof_bad_vis,'cl_powerof_bad');
-        styleButtons('cl_powerof_bad');
-        allVisualizers.push(cl_powerof_bad_vis);
+        attachLoggers(codelens_powerof_bad_vis,'codelens_powerof_bad');
+        styleButtons('codelens_powerof_bad');
+        allVisualizers.push(codelens_powerof_bad_vis);
     } catch (e) {
-        console.log("Failed to Initialize CodeLens component cl_powerof_bad_vis" );
+        console.log("Failed to Initialize CodeLens component codelens_powerof_bad_vis" );
         console.log(e.toString());
     }
 
 });
 
 $(document).ready(function() {
-    $("#cl_powerof_bad_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'cl_powerof_bad'});
+    $("#codelens_powerof_bad_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'codelens_powerof_bad'});
     });
 });
 
@@ -667,15 +676,15 @@ if (allVisualizers === undefined) {
 
 
 $(window).resize(function() {
-    if (cl_powerof_bad_vis) {
-        cl_powerof_bad_vis.redrawConnectors();
+    if (codelens_powerof_bad_vis) {
+        codelens_powerof_bad_vis.redrawConnectors();
     }
 });
 </script>
 </div>
 <p>Now step through the code.  What do you notice about the values of variable <code class="docutils literal"><span class="pre">power</span></code>
 in the local scope compared to the variable <code class="docutils literal"><span class="pre">power</span></code> in the global scope?</p>
-<p id="index-1">The value of <code class="docutils literal"><span class="pre">power</span></code> in the local scope was different than the global scope.
+<p>The value of <code class="docutils literal"><span class="pre">power</span></code> in the local scope was different than the global scope.
 That is because in this example <code class="docutils literal"><span class="pre">power</span></code> was used on the left hand side of the
 assignment statement <code class="docutils literal"><span class="pre">power</span> <span class="pre">=</span> <span class="pre">p</span></code>.  When a variable name is used on the
 left hand side of an assignment statement Python creates a local variable.
@@ -687,10 +696,10 @@ it makes your code confusing and difficult to
 understand.</p>
 <p>To cement all of these ideas even further lets look at one final example.
 Inside the <code class="docutils literal"><span class="pre">square</span></code> function we are going to make an assignment to the
-parameter <code class="docutils literal"><span class="pre">x</span></code>  There’s no good reason to do this other than to emphasize
-the fact that the parameter <code class="docutils literal"><span class="pre">x</span></code> is a local variable.  If you step through
-the example in codelens you will see that although <code class="docutils literal"><span class="pre">x</span></code> is 0 in the local
-variables for <code class="docutils literal"><span class="pre">square</span></code>, the <code class="docutils literal"><span class="pre">x</span></code> in the global scope remains 2.  This is confusing
+parameter <code class="docutils literal"><span class="pre">original_number</span></code>  <strong>There’s no good reason to do this</strong> other than to emphasize
+the fact that the parameter <code class="docutils literal"><span class="pre">original_number</span></code> is a local variable.  If you step through
+the example in codelens you will see that although <code class="docutils literal"><span class="pre">original_number</span></code> is 0 in the local
+variables for <code class="docutils literal"><span class="pre">square</span></code>, the <code class="docutils literal"><span class="pre">original_number</span></code> in the global scope remains 2.  This is confusing
 to many beginning programmers who think that an assignment to a
 formal parameter will cause a change to the value of the variable that was
 used as the actual parameter, especially when the two share the same name.
@@ -698,35 +707,35 @@ But this example demonstrates that that is clearly not how Python operates.</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
-<div id="cl_change_parm"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (cl_change_parm)</span> </p>
+<div id="codelens_change_parm"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (codelens_change_parm)</span> </p>
 </div>
 <script type="text/javascript">
-var cl_change_parm_trace = {"code": "def square(x):\n    y = x * x\n    x = 0       # assign a new value to the parameter x\n    return y\n\nx = 2\nz = square(x)\nprint(z)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2, "y": 4}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 0, "y": 4}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 0, "y": 4, "__return__": 4}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2, "z": 4}, "ordered_globals": ["square", "x", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2, "z": 4}, "ordered_globals": ["square", "x", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "4\n"}]};
-var cl_change_parm_vis;
+var codelens_change_parm_trace = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n\n    # assign a new value to the parameter original_number\n    original_number = 0\n\n    return squared_value\n\noriginal_number = 2\nresult = square(original_number)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2, "squared_value": 4}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 0, "squared_value": 4}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 0, "squared_value": 4, "__return__": 4}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2, "result": 4}, "ordered_globals": ["square", "original_number", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2, "result": 4}, "ordered_globals": ["square", "original_number", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "4\n"}]};
+var codelens_change_parm_vis;
 
 $(document).ready(function() {
     try {
-        cl_change_parm_vis = new ExecutionVisualizer('cl_change_parm',cl_change_parm_trace,
+        codelens_change_parm_vis = new ExecutionVisualizer('codelens_change_parm',codelens_change_parm_trace,
                                     {embeddedMode: true,
                                     verticalStack: false,
                                     heightChangeCallback: redrawAllVisualizerArrows,
                                     codeDivWidth: 500,
                                     lang : 'py3'
                                     });
-        attachLoggers(cl_change_parm_vis,'cl_change_parm');
-        styleButtons('cl_change_parm');
-        allVisualizers.push(cl_change_parm_vis);
+        attachLoggers(codelens_change_parm_vis,'codelens_change_parm');
+        styleButtons('codelens_change_parm');
+        allVisualizers.push(codelens_change_parm_vis);
     } catch (e) {
-        console.log("Failed to Initialize CodeLens component cl_change_parm_vis" );
+        console.log("Failed to Initialize CodeLens component codelens_change_parm_vis" );
         console.log(e.toString());
     }
 
 });
 
 $(document).ready(function() {
-    $("#cl_change_parm_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'cl_change_parm'});
+    $("#codelens_change_parm_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'codelens_change_parm'});
     });
 });
 
@@ -736,8 +745,8 @@ if (allVisualizers === undefined) {
 
 
 $(window).resize(function() {
-    if (cl_change_parm_vis) {
-        cl_change_parm_vis.redrawConnectors();
+    if (codelens_change_parm_vis) {
+        codelens_change_parm_vis.redrawConnectors();
     }
 });
 </script>
@@ -750,7 +759,7 @@ $(window).resize(function() {
             more-function-details3: What is a variable’s scope?
             <li data-component="answer"  id="test_question5_3_1_opt_a">Its value</li><li data-component="feedback" id="test_question5_3_1_opt_a">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
             
-            <li data-component="answer" data-correct id="test_question5_3_1_opt_b">The range of statements in the code where a variable can be accessed.</li><li data-component="feedback" id="test_question5_3_1_opt_b"></li>
+            <li data-component="answer" data-correct id="test_question5_3_1_opt_b">The area in the code where a variable can be accessed.</li><li data-component="feedback" id="test_question5_3_1_opt_b"></li>
             
             <li data-component="answer"  id="test_question5_3_1_opt_c">Its name</li><li data-component="feedback" id="test_question5_3_1_opt_c">The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.</li>
             
@@ -776,7 +785,7 @@ $(window).resize(function() {
             more-function-details5: Can you use the same name for a local variable as a global variable?
             <li data-component="answer"  id="test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback" id="test_question5_3_3_opt_a">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
             
-            <li data-component="answer" data-correct id="test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback" id="test_question5_3_3_opt_b">it is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
+            <li data-component="answer" data-correct id="test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback" id="test_question5_3_3_opt_b">It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
             
             <li data-component="answer"  id="test_question5_3_3_opt_c">No, it will cause an error.</li><li data-component="feedback" id="test_question5_3_3_opt_c">Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.</li>
             
@@ -788,6 +797,10 @@ $(window).resize(function() {
 <div class="section" id="practice-problems">
 <h2>17.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
 <div class="section" id="double-it">
 <h3>17.4.1. Double It<a class="headerlink" href="#double-it" title="Permalink to this headline">¶</a></h3>
 
@@ -807,10 +820,10 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(double_it(5),10,"X")
-        self.assertEqual(double_it(0),0,"X")
-        self.assertEqual(double_it(-12),-24,"X")
-        self.assertEqual(double_it(-1),-2,"X")
+        self.assertEqual(double_it(5),10,"You need to double whatever value is passed into the function!")
+        self.assertEqual(double_it(0),0,"You need to double whatever value is passed into the function!")
+        self.assertEqual(double_it(-12),-24,"You need to double whatever value is passed into the function!")
+        self.assertEqual(double_it(-1),-2,"You need to double whatever value is passed into the function!")
 
 myTests().main()
 </textarea>
@@ -835,11 +848,11 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(double_it_positive(5),10,"X")
-        self.assertEqual(double_it_positive(11),22,"X")
-        self.assertEqual(double_it_positive(0),0,"X")
-        self.assertEqual(double_it_positive(-12),-1,"X")
-        self.assertEqual(double_it_positive(-1),-1,"X")
+        self.assertEqual(double_it_positive(5),10,"You need to double any positive value that is passed into the function!")
+        self.assertEqual(double_it_positive(11),22,"You need to double any positive value that is passed into the function!")
+        self.assertEqual(double_it_positive(0),0,"Zero is not negative, so you should just return zero doubled (zero).")
+        self.assertEqual(double_it_positive(-12),-1,"Any time a negative value is passed into the function, you should return -1.")
+        self.assertEqual(double_it_positive(-1),-1,"Any time a negative value is passed into the function, you should return -1.")
 
 myTests().main()
 </textarea>
@@ -865,13 +878,13 @@ class myTests(TestCaseGui):
 
     def testOne(self):
         self.assertEqual(wear_the_right_thing(25),"shorts","X")
-        self.assertEqual(wear_the_right_thing(20),"t-shirt","X")
+        self.assertEqual(wear_the_right_thing(20),"t-shirt","Only wear shorts if greater than 20, not equal to.")
         self.assertEqual(wear_the_right_thing(15),"t-shirt","X")
         self.assertEqual(wear_the_right_thing(10),"t-shirt","X")
         self.assertEqual(wear_the_right_thing(9),"sweater","X")
         self.assertEqual(wear_the_right_thing(1),"sweater","X")
-        self.assertEqual(wear_the_right_thing(0),"toque","X")
-        self.assertEqual(wear_the_right_thing(-10),"toque","X")
+        self.assertEqual(wear_the_right_thing(0),"toque","0 is between -10 and 0.")
+        self.assertEqual(wear_the_right_thing(-10),"toque","-10 is between -10 and 0.")
         self.assertEqual(wear_the_right_thing(-11),"parka and toque","X")
         self.assertEqual(wear_the_right_thing(-30),"parka and toque","X")
 
