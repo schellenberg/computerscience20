@@ -415,10 +415,10 @@ Double It
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(double_it(5),10,"You need to double whatever value is passed into the function!")
-            self.assertEqual(double_it(0),0,"You need to double whatever value is passed into the function!")
-            self.assertEqual(double_it(-12),-24,"You need to double whatever value is passed into the function!")
-            self.assertEqual(double_it(-1),-2,"You need to double whatever value is passed into the function!")
+            self.assertEqual(double_it(5),10,"double_it(5)")
+            self.assertEqual(double_it(0),0,"double_it(0)")
+            self.assertEqual(double_it(-12),-24,"double_it(-12)")
+            self.assertEqual(double_it(-1),-2,"double_it(-1)")
 
     myTests().main()
 
@@ -446,11 +446,11 @@ Double It Positive
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(double_it_positive(5),10,"You need to double any positive value that is passed into the function!")
-            self.assertEqual(double_it_positive(11),22,"You need to double any positive value that is passed into the function!")
-            self.assertEqual(double_it_positive(0),0,"Zero is not negative, so you should just return zero doubled (zero).")
-            self.assertEqual(double_it_positive(-12),-1,"Any time a negative value is passed into the function, you should return -1.")
-            self.assertEqual(double_it_positive(-1),-1,"Any time a negative value is passed into the function, you should return -1.")
+            self.assertEqual(double_it_positive(5),10,"double_it_positive(5)")
+            self.assertEqual(double_it_positive(11),22,"double_it_positive(11)")
+            self.assertEqual(double_it_positive(0),0,"double_it_positive(0)")
+            self.assertEqual(double_it_positive(-12),-1,"double_it_positive(-12)")
+            self.assertEqual(double_it_positive(-1),-1,"double_it_positive(-1)")
 
     myTests().main()
 
@@ -479,15 +479,15 @@ Wear the Right Thing
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(wear_the_right_thing(25),"shorts","X")
-            self.assertEqual(wear_the_right_thing(20),"t-shirt","Only wear shorts if greater than 20, not equal to.")
-            self.assertEqual(wear_the_right_thing(15),"t-shirt","X")
-            self.assertEqual(wear_the_right_thing(10),"t-shirt","X")
-            self.assertEqual(wear_the_right_thing(9),"sweater","X")
-            self.assertEqual(wear_the_right_thing(1),"sweater","X")
-            self.assertEqual(wear_the_right_thing(0),"toque","0 is between -10 and 0.")
-            self.assertEqual(wear_the_right_thing(-10),"toque","-10 is between -10 and 0.")
-            self.assertEqual(wear_the_right_thing(-11),"parka and toque","X")
-            self.assertEqual(wear_the_right_thing(-30),"parka and toque","X")
+            self.assertEqual(wear_the_right_thing(25),"shorts","wear_the_right_thing(25)")
+            self.assertEqual(wear_the_right_thing(20),"t-shirt","wear_the_right_thing(20)")
+            self.assertEqual(wear_the_right_thing(15),"t-shirt","wear_the_right_thing(15)")
+            self.assertEqual(wear_the_right_thing(10),"t-shirt","wear_the_right_thing(10)")
+            self.assertEqual(wear_the_right_thing(9),"sweater","wear_the_right_thing(9)")
+            self.assertEqual(wear_the_right_thing(1),"sweater","wear_the_right_thing(1)")
+            self.assertEqual(wear_the_right_thing(0),"toque","wear_the_right_thing(0)")
+            self.assertEqual(wear_the_right_thing(-10),"toque","wear_the_right_thing(-10)")
+            self.assertEqual(wear_the_right_thing(-11),"parka and toque","wear_the_right_thing(-11)")
+            self.assertEqual(wear_the_right_thing(-30),"parka and toque","wear_the_right_thing(-30)")
 
     myTests().main()

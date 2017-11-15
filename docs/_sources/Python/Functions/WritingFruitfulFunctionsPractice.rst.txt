@@ -134,62 +134,6 @@ What will the following programs output? Why?
     foo()
 
 
-.. activecode:: wdtpd_functions_7
-    :caption: What will this program print?
-
-    def a(x):
-        print("A start, x =",x)
-        b(x + 1)
-        print("A end, x =",x)
-         
-    def b(x):
-        print("B start, x =",x)
-        c(x + 1)
-        print("B end, x =",x)
-         
-    def c(x):
-        print("C start and end, x =",x)
-         
-    a(5)
-
-
-.. activecode:: wdtpd_functions_8
-    :caption: What will this program print?
-
-    def a(x):
-        x = x + 1
-     
-    x = 3
-    a(x)
-     
-    print(x)
-
-
-.. activecode:: wdtpd_functions_9
-    :caption: What will this program print?
-
-    def a(x):
-        x = x + 1
-        return x
-     
-    x = 3
-    a(x)
-     
-    print(x)
-
-
-.. activecode:: wdtpd_functions_10
-    :caption: What will this program print?
-
-    def a(x):
-        x = x + 1
-        return x
-     
-    x = 3
-    x = a(x)
-     
-    print(x)
-
 
 Practice Problems
 ------------------
@@ -224,12 +168,12 @@ Area of rectangle
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(rectangle_area(5, 10),50,"X")
-            self.assertEqual(rectangle_area(1, 10),10,"X")
-            self.assertEqual(rectangle_area(2, 6),12,"X")
-            self.assertEqual(rectangle_area(1, 1),1,"X")
-            self.assertEqual(rectangle_area(3, 5),15,"X")
-            self.assertEqual(rectangle_area(15, 4),60,"X")
+            self.assertEqual(rectangle_area(5, 10),50,"rectangle_area(5, 10)")
+            self.assertEqual(rectangle_area(1, 10),10,"rectangle_area(1, 10)")
+            self.assertEqual(rectangle_area(2, 6),12,"rectangle_area(2, 6)")
+            self.assertEqual(rectangle_area(1, 1),1,"rectangle_area(1, 1)")
+            self.assertEqual(rectangle_area(3, 5),15,"rectangle_area(3, 5)")
+            self.assertEqual(rectangle_area(15, 4),60,"rectangle_area(15, 4)")
 
     myTests().main()
 
@@ -259,12 +203,12 @@ Find the Smallest
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(find_min(4, 7, 5),4,"X")
-            self.assertEqual(find_min(4, 5, 5),4,"X")
-            self.assertEqual(find_min(4, 4, 4),4,"X")
-            self.assertEqual(find_min(-2, -6, -100),-100,"X")
-            self.assertEqual(find_min(4, -7, 5),-7,"X")
-            self.assertEqual(find_min(-4, 7, -5),-5,"X")
+            self.assertEqual(find_min(4, 7, 5),4,"find_min(4, 7, 5)")
+            self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
+            self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
+            self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
+            self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
+            self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
 
     myTests().main()
 
@@ -307,14 +251,14 @@ Letter Grade
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(letter_grade(83),"B","X")
-            self.assertEqual(letter_grade(75),"C","X")
-            self.assertEqual(letter_grade(80),"B","X")
-            self.assertEqual(letter_grade(90),"A","X")
-            self.assertEqual(letter_grade(89.9),"B","X")
-            self.assertEqual(letter_grade(55),"F","X")
-            self.assertEqual(letter_grade(45),"F","X")
-            self.assertEqual(letter_grade(69.7),"D","X")
+            self.assertEqual(letter_grade(83),"B","letter_grade(83)")
+            self.assertEqual(letter_grade(75),"C","letter_grade(75)")
+            self.assertEqual(letter_grade(80),"B","letter_grade(80)")
+            self.assertEqual(letter_grade(90),"A","letter_grade(90)")
+            self.assertEqual(letter_grade(89.9),"B","letter_grade(89.9)")
+            self.assertEqual(letter_grade(55),"F","letter_grade(55)")
+            self.assertEqual(letter_grade(45),"F","letter_grade(45)")
+            self.assertEqual(letter_grade(69.7),"D","letter_grade(69.7)")
 
     myTests().main()
 
@@ -344,12 +288,12 @@ Is Even
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(is_even(4),True,"X")
-            self.assertEqual(is_even(-4),True,"X")
-            self.assertEqual(is_even(5),False,"X")
-            self.assertEqual(is_even(-5),False,"X")
-            self.assertEqual(is_even(0),True,"X")
-            self.assertEqual(is_even(513),False,"X")
+            self.assertEqual(is_even(4),True,"is_even(4)")
+            self.assertEqual(is_even(-4),True,"is_even(-4)")
+            self.assertEqual(is_even(5),False,"is_even(5)")
+            self.assertEqual(is_even(-5),False,"is_even(-5)")
+            self.assertEqual(is_even(0),True,"is_even(0)")
+            self.assertEqual(is_even(513),False,"is_even(513)")
 
     myTests().main()
 
@@ -385,11 +329,11 @@ Leap Year
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(leap_year(2001),False,"2001")
-            self.assertEqual(leap_year(2020),True,"2020")
-            self.assertEqual(leap_year(1900),False,"1900")
-            self.assertEqual(leap_year(2004),True,"2004")
-            self.assertEqual(leap_year(2000),True,"2000")
+            self.assertEqual(leap_year(2001),False,"leap_year(2001)")
+            self.assertEqual(leap_year(2020),True,"leap_year(2020)")
+            self.assertEqual(leap_year(1900),False,"leap_year(1900)")
+            self.assertEqual(leap_year(2004),True,"leap_year(2004)")
+            self.assertEqual(leap_year(2000),True,"leap_year(2000)")
 
             
     myTests().main()
