@@ -363,10 +363,10 @@ Leap Year
 
     A year is a leap year if it is divisible by 4 unless it is a century that is not divisible by 400. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise. The following pseudocode determines whether a year is a leap year or a common year in the Gregorian calendar (from `Wikipedia <http://en.wikipedia.org/wiki/Leap_year#Algorithm>`_):
 
-        if (year is not divisible by 4) then (it is a common year)
-        else if (year is not divisible by 100) then (it is a leap year)
-        else if (year is not divisible by 400) then (it is a common year)
-        else (it is a leap year)
+        | if (year is not divisible by 4) then (it is a common year)
+        | else if (year is not divisible by 100) then (it is a leap year)
+        | else if (year is not divisible by 400) then (it is a common year)
+        | else (it is a leap year)
 
     **Examples:**
 

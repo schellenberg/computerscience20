@@ -610,10 +610,13 @@ myTests().main()
 <div data-childcomponent="leap-year" class="runestone explainer ac_section alert alert-warning">
 <p>A year is a leap year if it is divisible by 4 unless it is a century that is not divisible by 400. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise. The following pseudocode determines whether a year is a leap year or a common year in the Gregorian calendar (from <a class="reference external" href="http://en.wikipedia.org/wiki/Leap_year#Algorithm">Wikipedia</a>):</p>
 <blockquote>
-<div>if (year is not divisible by 4) then (it is a common year)
-else if (year is not divisible by 100) then (it is a leap year)
-else if (year is not divisible by 400) then (it is a common year)
-else (it is a leap year)</div></blockquote>
+<div><div class="line-block">
+<div class="line">if (year is not divisible by 4) then (it is a common year)</div>
+<div class="line">else if (year is not divisible by 100) then (it is a leap year)</div>
+<div class="line">else if (year is not divisible by 400) then (it is a common year)</div>
+<div class="line">else (it is a leap year)</div>
+</div>
+</div></blockquote>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal"><span class="pre">leap_year(2001)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
 <p><code class="docutils literal"><span class="pre">leap_year(2020)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
