@@ -103,6 +103,7 @@ Python
 
    Python/Functions/MoreFunctionDetails.rst
    Python/Functions/WritingFruitfulFunctionsPractice.rst
+   Python/Functions/MicrobitReactionGame.rst
 
 
 Python Practice Quizzes

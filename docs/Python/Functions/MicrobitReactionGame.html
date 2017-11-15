@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>19. Reaction Game with Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="18. Writing Fruitful Functions Practice" href="WritingFruitfulFunctionsPractice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">19. Reaction Game with Micro:bit</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">19.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#micro-bit-reaction-game">19.2. Micro:bit Reaction Game</a></li>
+<li><a class="reference internal" href="#things-to-explain-in-the-code">19.3. Things to Explain in the Code</a></li>
+<li><a class="reference internal" href="#adapt-the-code">19.4. Adapt the Code</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 18. Writing Fruitful Functions Practice" data-toggle="tooltip">
+    <a href="WritingFruitfulFunctionsPractice.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="reaction-game-with-micro-bit">
+<h1>19. Reaction Game with Micro:bit<a class="headerlink" href="#reaction-game-with-micro-bit" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>WDTPD questions about functions. Play Micro:bit reaction game, and discuss how the code works. Add features to the game, if time.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="what-does-this-program-do">
+<h2>19.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<p>Remember that variables created inside of a function have <strong>local scope</strong> (can only be used inside that function), whereas variables created outside of a function have <strong>global scope</strong> (can be accessed from anywhere).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>What will the following programs output? Why?</p>
+
+<div data-childcomponent="wdtpd_functions_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_7 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a(x):
+    print("A start, x =",x)
+    b(x + 1)
+    print("A end, x =",x)
+
+def b(x):
+    print("B start, x =",x)
+    c(x + 1)
+    print("B end, x =",x)
+
+def c(x):
+    print("C start and end, x =",x)
+
+a(5)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_8 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a(x):
+    x = x + 1
+
+x = 3
+a(x)
+
+print(x)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_9 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a(x):
+    x = x + 1
+    return x
+
+x = 3
+a(x)
+
+print(x)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_10 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a(x):
+    x = x + 1
+    return x
+
+x = 3
+x = a(x)
+
+print(x)
+</textarea>
+</div>
+</div>
+<div class="section" id="micro-bit-reaction-game">
+<h2>19.2. Micro:bit Reaction Game<a class="headerlink" href="#micro-bit-reaction-game" title="Permalink to this headline">¶</a></h2>
+<p>Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the <code class="docutils literal"><span class="pre">cs-20microbitio</span></code> package installed (if you do not, just open Tools -&gt; Manage Packages… and type it into the search bar).</p>
+<p>In this game, you and a friend will compete to see who has faster reactions. After clicking Run, your Micro:bit will wait between 1 and 5 seconds, then display a happy face image. Whichever player presses their button (A or B) first gets one point. Be careful! If you click your button too soon, you will lose 2 points!</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Mico:bit Reaction Game</span>
+<span class="c1"># Computer Science 20</span>
+<span class="c1"># Dan Schellenberg</span>
+
+<span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="k">def</span> <span class="nf">button_clicked</span><span class="p">(</span><span class="n">current_score</span><span class="p">,</span> <span class="n">should_be_pressing</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">should_be_pressing</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">current_score</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">current_score</span> <span class="o">-=</span> <span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">current_score</span>
+
+
+<span class="c1"># global variables</span>
+<span class="n">a_score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b_score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">time_to_wait</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">starting_time</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ending_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># constants</span>
+<span class="n">POINTS_TO_WIN_GAME</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="c1"># game loop</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="c1"># check if need to pick a new amount of time to wait</span>
+    <span class="k">if</span> <span class="n">run_reset_code</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="c1"># pausing execution for 1 second stops players from accidentally clicking more than once</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">time_to_wait</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">starting_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="c1"># check if it is time to display the image</span>
+    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">time_since_start</span> <span class="o">=</span> <span class="n">time_now</span> <span class="o">-</span> <span class="n">starting_time</span>
+    <span class="k">if</span> <span class="n">time_since_start</span> <span class="o">&gt;</span> <span class="n">time_to_wait</span><span class="p">:</span>
+        <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">if</span> <span class="n">showing_image</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
+
+
+    <span class="c1"># deal with a button being pressed</span>
+    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+        <span class="n">a_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
+        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_b</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+        <span class="n">b_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">b_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
+        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="c1"># if somebody wins, end the game</span>
+    <span class="k">if</span> <span class="n">a_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span> <span class="ow">or</span> <span class="n">b_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Game over!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="things-to-explain-in-the-code">
+<h2>19.3. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This will be written up better soon. For now, use the following topic list to guide your class discussion regarding how the code works.</p>
+</div>
+<p>Talk through the following parts of the code:</p>
+<ul class="simple">
+<li>initializing the global variables with a value at the start of the code</li>
+<li>using ALL_CAPS when creating a constant (variable whose value should never be changed within your code)</li>
+<li>using an infinite loop for the game loop (<code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code>)</li>
+<li>using booleans to keep track of the state of the program</li>
+<li>time.sleep(1)  – comment out this line and run the code again…</li>
+<li>time.time()  – run this in the Python interpreter to see what the function returns [The epoch is the point where the time starts, and is platform dependent. For Unix, the epoch is January 1, 1970, 00:00:00 (UTC). To find out what the epoch is on a given platform, look at time.gmtime(0). <a class="reference external" href="https://docs.python.org/3/library/time.html#epoch">Python time docs</a>]</li>
+<li>might want to add a print(time_since_start) line, to be sure students understand what that variable is doing</li>
+<li>is_pressed() vs. was_pressed() for the button_a and button_b – is_pressed() is used, since we only want to know “is it pressed RIGHT NOW”? If we use was_pressed(), micro:bit keeps track of whether it’s been pressed since the last time that question was asked</li>
+<li><code class="docutils literal"><span class="pre">break</span></code> to force an exit out of loop. In this case, it allows us to exit the <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> infinite loop</li>
+</ul>
+</div>
+<div class="section" id="adapt-the-code">
+<h2>19.4. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
+<p>Try the following with a partner (the person you were playing the game with):</p>
+<ul class="simple">
+<li>change the game so that you need only 3 points to win the game</li>
+<li>change the game so that a click at the wrong time makes you only lose 1 point instead of 2</li>
+<li>change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.</li>
+<li>use this code as a starting point, and come up with your own game that uses the Micro:bit and functions! You are welcome to combine the turtle module as well…</li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 18. Writing Fruitful Functions Practice' data-toggle="tooltip">
+    <a href="WritingFruitfulFunctionsPractice.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="WritingFruitfulFunctionsPractice.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
