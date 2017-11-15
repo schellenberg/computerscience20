@@ -9,7 +9,7 @@ More Details About Functions
 
 .. topic:: Quick Overview of Day
 
-    Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). 
+    Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). Discuss local and global scope. Work on practice problems, in which students create functions that return values.
 
 
 .. reveal:: curriculum_addressed

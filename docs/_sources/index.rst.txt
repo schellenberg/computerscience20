@@ -102,6 +102,7 @@ Python
    Python/MoreTurtles/AssignmentWorkPeriod.rst
 
    Python/Functions/MoreFunctionDetails.rst
+   Python/Functions/WritingFruitfulFunctionsPractice.rst
 
 
 Python Practice Quizzes
