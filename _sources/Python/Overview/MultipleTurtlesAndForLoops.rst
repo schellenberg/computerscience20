@@ -235,7 +235,7 @@ It is also important to realize that we could have used a ``while`` loop to acco
 
     wn.exitonclick()
 
-Notice that although this code does the same thing as the for loop version, it requires some extra code compared to the for loop version. Generally speaking, if you know ahead of time how many times a loop should iterate, you should use a for loop (for example, iterating 4 times to draw a square). If you don't know ahead of time how many times a loop should iterate, a while loop is a better choice (for example, iterating until Reeborg had a wall in front of him). 
+Notice that although this code does the same thing as the for loop version, it requires some extra code compared to the for loop version. Generally speaking, if you know ahead of time how many times a loop should iterate, you should use a for loop (for example, iterating 4 times to draw a square). If you don't know ahead of time how many times a loop should iterate, a while loop is a better choice (for example, iterating until Reeborg had a wall in front of it). 
 
 Thinking back to the for loop version we saw above, the values [0,1,2,3] were provided to make the loop body execute 4 times. We could have used any four values. For example, consider the following program.
 
