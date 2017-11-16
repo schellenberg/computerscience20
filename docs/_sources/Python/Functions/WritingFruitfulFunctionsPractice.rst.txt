@@ -178,42 +178,6 @@ Area of rectangle
     myTests().main()
 
 
-Find the Smallest
-~~~~~~~~~~~~~~~~~~
-
-.. activecode:: find-min
-    :nocodelens:
-
-    The function find_min(a, b, c) will take three numbers as parameters and return the *smallest* value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the ``min`` function in this solution.
-
-    **Examples:**
-
-    ``find_min(4, 7, 5) → 4``
-
-    ``find_min(4, 5, 5) → 4``
-
-    ``find_min(4, -7, 5) → -7``
-    ~~~~
-    def find_min(a, b, c):
-        return a
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(find_min(4, 7, 5),4,"find_min(4, 7, 5)")
-            self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
-            self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
-            self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
-            self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
-            self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
-
-    myTests().main()
-
-
-
 Letter Grade
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -259,6 +223,41 @@ Letter Grade
             self.assertEqual(letter_grade(55),"F","letter_grade(55)")
             self.assertEqual(letter_grade(45),"F","letter_grade(45)")
             self.assertEqual(letter_grade(69.7),"D","letter_grade(69.7)")
+
+    myTests().main()
+
+
+Find the Smallest
+~~~~~~~~~~~~~~~~~~
+
+.. activecode:: find-min
+    :nocodelens:
+
+    The function find_min(a, b, c) will take three numbers as parameters and return the *smallest* value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the ``min`` function in this solution.
+
+    **Examples:**
+
+    ``find_min(4, 7, 5) → 4``
+
+    ``find_min(4, 5, 5) → 4``
+
+    ``find_min(4, -7, 5) → -7``
+    ~~~~
+    def find_min(a, b, c):
+        return a
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(find_min(4, 7, 5),4,"find_min(4, 7, 5)")
+            self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
+            self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
+            self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
+            self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
+            self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
 
     myTests().main()
 

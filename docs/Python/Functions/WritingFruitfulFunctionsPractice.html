@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="next" title="19. Reaction Game with Micro:bit" href="MicrobitReactionGame.html" />
     <link rel="prev" title="17. More Details About Functions" href="MoreFunctionDetails.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -197,8 +197,8 @@
 <li><a class="reference internal" href="#what-does-this-program-do">18.2. What Does This Program Do?</a></li>
 <li><a class="reference internal" href="#practice-problems">18.3. Practice Problems</a><ul>
 <li><a class="reference internal" href="#area-of-rectangle">18.3.1. Area of rectangle</a></li>
-<li><a class="reference internal" href="#find-the-smallest">18.3.2. Find the Smallest</a></li>
-<li><a class="reference internal" href="#letter-grade">18.3.3. Letter Grade</a></li>
+<li><a class="reference internal" href="#letter-grade">18.3.2. Letter Grade</a></li>
+<li><a class="reference internal" href="#find-the-smallest">18.3.3. Find the Smallest</a></li>
 <li><a class="reference internal" href="#is-even">18.3.4. Is Even</a></li>
 <li><a class="reference internal" href="#leap-year">18.3.5. Leap Year</a></li>
 </ul>
@@ -218,8 +218,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 19. Reaction Game with Micro:bit' data-toggle="tooltip" >
+    <a href="MicrobitReactionGame.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -419,39 +419,8 @@ myTests().main()
 </textarea>
 </div>
 </div>
-<div class="section" id="find-the-smallest">
-<h3>18.3.2. Find the Smallest<a class="headerlink" href="#find-the-smallest" title="Permalink to this headline">¶</a></h3>
-
-<div data-childcomponent="find-min" class="runestone explainer ac_section alert alert-warning">
-<p>The function find_min(a, b, c) will take three numbers as parameters and return the <em>smallest</em> value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the <code class="docutils literal"><span class="pre">min</span></code> function in this solution.</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">5,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">-7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">-7</span></code></p>
-
-<textarea data-component="activecode" id=find-min data-lang="python"    data-timelimit=25000   data-audio=''     >
-def find_min(a, b, c):
-    return a
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(find_min(4, 7, 5),4,"find_min(4, 7, 5)")
-        self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
-        self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
-        self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
-        self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
-        self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
-
-myTests().main()
-</textarea>
-</div>
-</div>
 <div class="section" id="letter-grade">
-<h3>18.3.3. Letter Grade<a class="headerlink" href="#letter-grade" title="Permalink to this headline">¶</a></h3>
+<h3>18.3.2. Letter Grade<a class="headerlink" href="#letter-grade" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="letter-grade" class="runestone explainer ac_section alert alert-warning">
 <p>Write a function that returns the letter grade, given an exam mark as the parameter. The grading scheme is:</p>
@@ -507,6 +476,37 @@ class myTests(TestCaseGui):
         self.assertEqual(letter_grade(55),"F","letter_grade(55)")
         self.assertEqual(letter_grade(45),"F","letter_grade(45)")
         self.assertEqual(letter_grade(69.7),"D","letter_grade(69.7)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="find-the-smallest">
+<h3>18.3.3. Find the Smallest<a class="headerlink" href="#find-the-smallest" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="find-min" class="runestone explainer ac_section alert alert-warning">
+<p>The function find_min(a, b, c) will take three numbers as parameters and return the <em>smallest</em> value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the <code class="docutils literal"><span class="pre">min</span></code> function in this solution.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">5,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">-7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">-7</span></code></p>
+
+<textarea data-component="activecode" id=find-min data-lang="python"    data-timelimit=25000   data-audio=''     >
+def find_min(a, b, c):
+    return a
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(find_min(4, 7, 5),4,"find_min(4, 7, 5)")
+        self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
+        self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
+        self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
+        self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
+        self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
 
 myTests().main()
 </textarea>
@@ -595,12 +595,12 @@ myTests().main()
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="MoreFunctionDetails.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 19. Reaction Game with Micro:bit' data-toggle="tooltip" >
+    <a href="MicrobitReactionGame.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="MicrobitReactionGame.html" >Next Section - 19. Reaction Game with Micro:bit</a>
 
 <script type="text/javascript">
 
