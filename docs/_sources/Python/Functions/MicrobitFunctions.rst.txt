@@ -147,6 +147,9 @@ Now that you have created some functions that let us easily find out what direct
 *Note: You will need to do this in Thonny, so there is no activecode area included below.* 
 
 
+.. note:: If your class doesn't have access to Micro:bits, you will be working on an assignment that focuses on creating fruitful and non-fruitful functions.
+
+
 Micro:bit Game Assignment
 -------------------------
 
