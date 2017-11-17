@@ -193,11 +193,13 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">20. Fruitful Functions and the Micro:bit</a><ul>
-<li><a class="reference internal" href="#micro-bit-accelerometer">20.1. Micro:bit Accelerometer</a></li>
-<li><a class="reference internal" href="#an-accelerometer-fruitful-function">20.2. An Accelerometer Fruitful Function</a></li>
-<li><a class="reference internal" href="#things-to-explain-in-the-code">20.3. Things to Explain in the Code</a></li>
-<li><a class="reference internal" href="#adapt-the-code">20.4. Adapt the Code</a></li>
-<li><a class="reference internal" href="#turtle-drawing">20.5. Turtle Drawing</a></li>
+<li><a class="reference internal" href="#adapting-the-reaction-game">20.1. Adapting the Reaction Game</a></li>
+<li><a class="reference internal" href="#micro-bit-accelerometer">20.2. Micro:bit Accelerometer</a></li>
+<li><a class="reference internal" href="#an-accelerometer-fruitful-function">20.3. An Accelerometer Fruitful Function</a></li>
+<li><a class="reference internal" href="#things-to-explain-in-the-code">20.4. Things to Explain in the Code</a></li>
+<li><a class="reference internal" href="#adapt-the-code">20.5. Adapt the Code</a></li>
+<li><a class="reference internal" href="#turtle-drawing">20.6. Turtle Drawing</a></li>
+<li><a class="reference internal" href="#micro-bit-game-assignment">20.7. Micro:bit Game Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -260,8 +262,14 @@
 </ul>
 
     </div>
-    <div class="section" id="micro-bit-accelerometer">
-<h2>20.1. Micro:bit Accelerometer<a class="headerlink" href="#micro-bit-accelerometer" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="adapting-the-reaction-game">
+<h2>20.1. Adapting the Reaction Game<a class="headerlink" href="#adapting-the-reaction-game" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.</li>
+</ul>
+</div>
+<div class="section" id="micro-bit-accelerometer">
+<h2>20.2. Micro:bit Accelerometer<a class="headerlink" href="#micro-bit-accelerometer" title="Permalink to this headline">¶</a></h2>
 <p>Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package installed (if you do not, just open Tools -&gt; Manage Packages… and type it into the search bar).</p>
 <p>The Micro:bit can measure movement along three axes:</p>
 <ul class="simple">
@@ -297,7 +305,7 @@
 </div>
 </div>
 <div class="section" id="an-accelerometer-fruitful-function">
-<h2>20.2. An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
+<h2>20.3. An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
 <p>Let’s adapt the code above to use a fruitful function. We will make a function called <code class="docutils literal"><span class="pre">horizontal_tilt()</span></code> that returns either “left”, “right”, or None.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -330,7 +338,7 @@
 </div>
 </div>
 <div class="section" id="things-to-explain-in-the-code">
-<h2>20.3. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>20.4. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This will be written up better soon. For now, use the following topic list to guide your class discussion regarding how the code works.</p>
@@ -341,7 +349,7 @@
 </ul>
 </div>
 <div class="section" id="adapt-the-code">
-<h2>20.4. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>20.5. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
 <p>Try the following (either by yourself or with a partner):</p>
 <ul class="simple">
 <li>create a fruitful function <code class="docutils literal"><span class="pre">vertical_tilt(sensitivity_amount)</span></code> that uses <code class="docutils literal"><span class="pre">get_y</span></code> and returns either “forward”, “backward”, or None</li>
@@ -350,7 +358,7 @@
 </ul>
 </div>
 <div class="section" id="turtle-drawing">
-<h2>20.5. Turtle Drawing<a class="headerlink" href="#turtle-drawing" title="Permalink to this headline">¶</a></h2>
+<h2>20.6. Turtle Drawing<a class="headerlink" href="#turtle-drawing" title="Permalink to this headline">¶</a></h2>
 <p>Now that you have created some functions that let us easily find out what direction the Micro:bit is tilted in, let’s use those functions to do some turtle drawing. Your program should be able to have your turtle:</p>
 <ul class="simple">
 <li>move forward when the Micro:bit is tilted forward</li>
@@ -365,6 +373,26 @@
 <li><strong>harder challenge</strong> - adapt your code to work so that movement is not backwards when the Micro:bit is held facing down. The turtle should still move intuitively, but just not leave a trail behind it.</li>
 </ul>
 <p><em>Note: You will need to do this in Thonny, so there is no activecode area included below.</em></p>
+</div>
+<div class="section" id="micro-bit-game-assignment">
+<h2>20.7. Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Use the examples we’ve done as a starting point, and come up with your own game that uses the Micro:bit and functions! You are welcome to combine the turtle module as well. At a minimum, your game must:</p>
+<ul class="simple">
+<li>use at least one fruitful function (that you have created). You are welcome to use the fruitful functions shown in our demos, but you need to create at least one of your own!</li>
+<li>use at least one non-fruitful function (that you have created).</li>
+</ul>
+<p>Some ideas of things you might want to try creating include:</p>
+<ul class="simple">
+<li>“guess the time” game (in which a number of seconds is displayed on the Micro:bit, and the user needs to try to press a button as close to the correct amount of time as possible)</li>
+<li>bop-it game (display an A or B, and user needs to press the correct button. User gets more points the faster they can press the correct button. The game ends if the user presses the wrong button, or after a certain number of clicks.)</li>
+<li>have an “object” (led) fall from the top of the screen. The user needs to catch the object, and can move left/right by using the buttons or accelerometer. If they do not catch the object, the game ends.</li>
+<li>create a morse code visualizer, in which the user can type in a message, and the Micro:bit will display the message by flashing the LEDs using morse code. Another option would be to have the Micro:bit flash AND play beeps on your headphones (<a class="reference external" href="https://makecode.microbit.org/projects/hack-your-headphones/make">see how to connect your headphones to the Micro:bit</a>)</li>
+<li><ul class="first">
+<li>dice rolling simulator, in which a random number is displayed on the Micro:bit, and used in the program you have running in Thonny</li>
+</ul>
+</li>
+<li>anything else you can dream up!</li>
+</ul>
 </div>
 </div>
 
