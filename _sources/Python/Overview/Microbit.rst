@@ -62,50 +62,44 @@ Your Micro:bit can be used in two modes:
 - running "flashed" code, independent of a computer (can run on batteries, or another power source)
 - communicating through the serial port with your computer as an input/output device
 
-The rest of today's demo's will assume that we are using the Micro:bit as an input/output device communicating through the serial port of your computer.
-
-Download the `bitio module <https://github.com/whaleygeek/bitio/archive/master.zip>`_ and extract the contents of the .zip file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up sensors).
-
-To use the Micro:bit as an input/output device, you need to "flash" it with a .hex file that contains code to communicate with your computer. Do this by dragging and dropping the ``bitio.hex`` file inside the folder you just extracted onto the ``MICROBIT`` device (in Windows Explorer, or the Mac Finder). You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python via the bitio module.
+The rest of today's demo's will assume that we are using the Micro:bit as an input/output device communicating through the serial port of your computer. To use the Micro:bit as an input/output device, you need to "flash" it with a .hex file that contains code to communicate with your computer. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -> Manage plug-ins..., then type ``thonny-flash-microbitio`` into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the "Flash I/O .hex to BBC Microbit" icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python via the bitio module.
 
 .. image:: images/bitio.png
 
-Now, install the package ``cs20-microbitio`` in Thonny. Once you have done that, try running the code below::
+
+.. note:: The ``thonny-flash-microbitio`` was written very quickly to try to ease the process of getting the Micro:bit going in my class, and is currently very much alpha quality. If the process fails for any reason, you can do the same thing manually. Download the `bitio module <https://github.com/whaleygeek/bitio/archive/master.zip>`_ and extract the contents of the .zip file. Flash the Micro:bit by dragging and dropping the ``bitio.hex`` file inside the folder you just extracted onto the ``MICROBIT`` device (in Windows Explorer, or the Mac Finder). 
+
+Now, install the package ``cs20-microbitio`` in Thonny. To do that, go to Tools -> Manage packages..., type in cs20-microbitio into the search bar, and install. Once you have done that, try running the code below::
 
 	import microbit
 
 	microbit.display.scroll("Hey there, CS20")
 
-When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. Once that is complete, you should see a series of images begin to show up on the 5x5 LED grid on your Micro:bit. The console will look something like this:
+When you press Run, there will be a prompt in the console telling you to disconnect the Micro:bit, then press ENTER. Follow the prompts, which allow the bitio module to detect which device connected to your computer is the Micro:bit. The console will look something like this:
 
-	No micro:bit has previously been detected
-	Scanning for serial ports
-	remove device, then press ENTER
-	scanning...
-	found 132 device(s)
-	plug in device, then press ENTER
-	scanning...
-	found 133 device(s)
-	found 1 new device
-	selected:/dev/tty.usbmodem1422
-	Do you want this device to be remembered? (Y/N)Y
-	connecting...
-	Your micro:bit has been detected
-	Now running your program
+	| No micro:bit has previously been detected
+	| Scanning for serial ports
+	| remove device, then press ENTER
+	| scanning...
+	| found 132 device(s)
+	| plug in device, then press ENTER
+	| scanning...
+	| found 133 device(s)
+	| found 1 new device
+	| selected:/dev/tty.usbmodem1422
+	| Do you want this device to be remembered? (Y/N)Y
+	| connecting...
+	| Your micro:bit has been detected
+	| Now running your program
 
 
-To explore the possibilities, try some of the other demonstration code files, including:
+Once the connection is established, you should see the message scroll across the 5x5 LED grid on your Micro:bit.
 
-- tilt.py
-- touched.py
-- sensing.py
-- custom_image.py
-- counter.py
-- button.py
-- arrows.py
+Look at the :ref:`microbit_reference` in the appendix, and run some of the demonstration code found there to get a sense of what the Micro:bit can do.
   
+
 Now that you've seen how some things can be accomplished, try this:
 
 - create a program that draws a square when you press the "A" button, and a triangle when you press the "B" button.
-- create a program that controls a turtles drawing by using the accelerometer. You might want to use the code in ``tilt.py`` as a starting point.
-- try something new! 
+
+
