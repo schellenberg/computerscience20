@@ -123,7 +123,6 @@ Try the following (either by yourself or with a partner):
 
 - create a fruitful function ``vertical_tilt(sensitivity_amount)`` that uses ``get_y`` and returns either "forward", "backward", or None
 - create a fruitful function ``held_up_down(sensitivity_amount)`` that uses ``get_z`` and returns either "up", "down", or None
-- create a fruitful function ``totally_level(sensitivity_amount)`` that calls your ``vertical_tilt()`` and ``horizontal_tilt`` functions. ``totally_level()`` should return True if there is no vertical tilt and no horizontal tilt, and False otherwise.
 
 
 Turtle Drawing
@@ -139,6 +138,7 @@ Now that you have created some functions that let us easily find out what direct
 
 **Extra Challenges**
 
+- create a fruitful function ``totally_level(sensitivity_amount)`` that calls your ``vertical_tilt()`` and ``horizontal_tilt`` functions. ``totally_level()`` should return True if there is no vertical tilt and no horizontal tilt, and False otherwise.
 - have the turtle ``stamp()`` it's image whenever the Micro:bit is held totally_level
 - control whether the pen is up or down based on whether the Micro:bit is being held facing up or down
 - **harder challenge** - adapt your code to work so that movement is not backwards when the Micro:bit is held facing down. The turtle should still move intuitively, but just not leave a trail behind it.
