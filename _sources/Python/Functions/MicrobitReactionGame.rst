@@ -92,7 +92,9 @@ What will the following programs output? Why?
 Micro:bit Reaction Game
 -------------------------
 
-Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the ``cs-20microbitio`` package installed (if you do not, just open Tools -> Manage Packages... and type it into the search bar). 
+.. caution:: Need to improve the description of how to connect the micro:bit. It's the same way we did it before...
+
+Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the ``cs20-microbitio`` package installed (if you do not, just open Tools -> Manage Packages... and type it into the search bar). The Micro:bit also needs to have the ``bitio.hex`` file (drag and drop this file onto the Micro:bit in Windows Explorer/Mac Finder, or install the ``thonny-flash-microbitio`` plugin by going to Tools -> Manage plugins...).
 
 In this game, you and a friend will compete to see who has faster reactions. After clicking Run, your Micro:bit will wait between 1 and 5 seconds, then display a happy face image. Whichever player presses their button (A or B) first gets one point. Be careful! If you click your button too soon, you will lose 2 points! 
 
