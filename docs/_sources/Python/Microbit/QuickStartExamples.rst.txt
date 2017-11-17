@@ -3,7 +3,7 @@
    :prefix: microbit-examples-
    :start: 1
 
-.. _microbit_examples:
+.. _microbit_reference:
 
 Micro:bit Reference
 ====================
