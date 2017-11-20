@@ -83,7 +83,7 @@ To create a list of images that we want to show, we can do the following:
 When you run the code above, you will see that your Micro:bit flashes through all of the images of the different arrows, but it happens really, really fast. To slow that down, we can use a ``sleep()`` function that pauses the execution of the program for a specified number of milliseconds. Notice that when we include the ``sleep()`` function below, we do so in the for loop, so that there is a pause prior to displaying the next image in the list.
 
 .. code-block:: python
-    :emphasize-lines: 6
+    :emphasize-lines: 7
 
     import microbit
 
@@ -96,6 +96,7 @@ When you run the code above, you will see that your Micro:bit flashes through al
 If you would like this animation to continue forever, simply enclose the for loop inside of a ``while True:`` loop that keeps the program going infinitely.
 
 .. code-block:: python
+    :emphasize-lines: 5
 
     import microbit
 
@@ -119,6 +120,16 @@ If you want to create a game that moves an LED around the 5x5 LED grid of the Mi
     print(color_list[0])
 
 After running the code above, change the 0 to some different numbers to make sure you understand how to access particular elements inside of a list.
+
+In the code below, print out the element of the list that contains "00090":
+
+.. activecode:: list-accessing-values-practice
+    :nocodelens:
+
+    possible_bottom_row_values = ["90000", "09000", "00900", "00090", "00009"]
+
+    print()
+
 
 Now that we can access an element inside a list, we can build a function that takes in a location specifying which LED on the bottom of the grid should be turned on, and return an image with that LED on that can be displayed on the Micro:bit.
 

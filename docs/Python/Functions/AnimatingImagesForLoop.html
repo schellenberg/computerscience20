@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Animating an Image with a for Loop &#8212; Computer Science 20 Saskatchewan</title>
+    <title>22. Animating an Image with a for Loop &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="21. Custom Images and Work Period for Micro:bit Game" href="FunctionsAssignmentWorkTime.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -190,10 +192,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Animating an Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop</a><ul>
-<li><a class="reference internal" href="#animate-built-in-images-on-micro-bit-leds">Animate Built-In Images On Micro:bit LEDs</a></li>
-<li><a class="reference internal" href="#moving-an-led-on-the-bottom-row">Moving an LED On the Bottom Row</a></li>
-<li><a class="reference internal" href="#work-time-on-assignment">Work Time on Assignment</a></li>
+<li><a class="reference internal" href="#">22. Animating an Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop</a><ul>
+<li><a class="reference internal" href="#animate-built-in-images-on-micro-bit-leds">22.1. Animate Built-In Images On Micro:bit LEDs</a></li>
+<li><a class="reference internal" href="#moving-an-led-on-the-bottom-row">22.2. Moving an LED On the Bottom Row</a></li>
+<li><a class="reference internal" href="#work-time-on-assignment">22.3. Work Time on Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -203,6 +205,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 21. Custom Images and Work Period for Micro:bit Game" data-toggle="tooltip">
+    <a href="FunctionsAssignmentWorkTime.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -229,7 +243,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="animating-an-image-with-a-for-loop">
-<h1>Animating an Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop<a class="headerlink" href="#animating-an-image-with-a-for-loop" title="Permalink to this headline">¶</a></h1>
+<h1>22. Animating an Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop<a class="headerlink" href="#animating-an-image-with-a-for-loop" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Animate images using a list and a <code class="docutils literal"><span class="pre">for</span></code> loop. Create a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.</p>
@@ -245,7 +259,7 @@
 
     </div>
     <div class="section" id="animate-built-in-images-on-micro-bit-leds">
-<h2>Animate Built-In Images On Micro:bit LEDs<a class="headerlink" href="#animate-built-in-images-on-micro-bit-leds" title="Permalink to this headline">¶</a></h2>
+<h2>22.1. Animate Built-In Images On Micro:bit LEDs<a class="headerlink" href="#animate-built-in-images-on-micro-bit-leds" title="Permalink to this headline">¶</a></h2>
 <p>Let’s pick a few of the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-predefined-images"><span class="std std-ref">List of Pre-Defined Images</span></a>), and have them show in succession, one after another. There are a number of ways we could do this, but let’s use a list to do it. We’ve used a list before, in code that looked like this:</p>
 
 <div data-childcomponent="colorlist-list-refresher" class="runestone explainer ac_section alert alert-warning">
@@ -302,24 +316,24 @@ for aColor in color_list:
 <span class="n">arrow_image_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_N</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_E</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_S</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SW</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_W</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NW</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">this_image</span> <span class="ow">in</span> <span class="n">arrow_image_list</span><span class="p">:</span>
-<span class="hll">    <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
-</span>    <span class="n">microbit</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
-</pre></div>
+    <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
+<span class="hll">    <span class="n">microbit</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+</span></pre></div>
 </div>
 <p>If you would like this animation to continue forever, simply enclose the for loop inside of a <code class="docutils literal"><span class="pre">while</span> <span class="pre">True:</span></code> loop that keeps the program going infinitely.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="n">arrow_image_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_N</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_E</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_S</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SW</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_W</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NW</span><span class="p">]</span>
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">this_image</span> <span class="ow">in</span> <span class="n">arrow_image_list</span><span class="p">:</span>
+<span class="hll"><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+</span>    <span class="k">for</span> <span class="n">this_image</span> <span class="ow">in</span> <span class="n">arrow_image_list</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="moving-an-led-on-the-bottom-row">
-<h2>Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this headline">¶</a></h2>
+<h2>22.2. Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this headline">¶</a></h2>
 <p>If you want to create a game that moves an LED around the 5x5 LED grid of the Micro:bit, you will need to learn how to manipulate strings. For now, however, we can make a simple visualization of how to “move” and LED left and right on the bottom row of the grid using the a and b buttons. Before we can do this, however, you need to understand how to access particular elements inside of a list. Consider the following:</p>
 
 <div data-childcomponent="list-accessing-values" class="runestone explainer ac_section alert alert-warning">
@@ -331,6 +345,16 @@ print(color_list[0])
 </textarea>
 </div>
 <p>After running the code above, change the 0 to some different numbers to make sure you understand how to access particular elements inside of a list.</p>
+<p>In the code below, print out the element of the list that contains “00090”:</p>
+
+<div data-childcomponent="list-accessing-values-practice" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list-accessing-values-practice data-lang="python"    data-timelimit=25000   data-audio=''     >
+possible_bottom_row_values = ["90000", "09000", "00900", "00090", "00009"]
+
+print()
+</textarea>
+</div>
 <p>Now that we can access an element inside a list, we can build a function that takes in a location specifying which LED on the bottom of the grid should be turned on, and return an image with that LED on that can be displayed on the Micro:bit.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -372,7 +396,7 @@ print(color_list[0])
 </div>
 </div>
 <div class="section" id="work-time-on-assignment">
-<h2>Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
+<h2>22.3. Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Continue working on your current assignment (focused on creating fruitful and non-fruitful functions).</p>
 </div>
 </div>
@@ -380,6 +404,19 @@ print(color_list[0])
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 21. Custom Images and Work Period for Micro:bit Game' data-toggle="tooltip">
+    <a href="FunctionsAssignmentWorkTime.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="FunctionsAssignmentWorkTime.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
 
 <script type="text/javascript">
 
