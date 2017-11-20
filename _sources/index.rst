@@ -106,6 +106,7 @@ Python
    Python/Functions/MicrobitReactionGame.rst
    Python/Functions/MicrobitFunctions.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
+   Python/Functions/AnimatingImagesForLoops.rst
 
 
 Python Practice Quizzes
