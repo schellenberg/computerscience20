@@ -273,7 +273,45 @@
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">boat</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Although we can figure out what is going on in the above code (each row is separated by a :), it would be nice to improve the readability of creating our own images. Consider the following, which accomplishes the same task of making and displaying a boat image:</p>
+<p>Although we can figure out what is going on in the above code (each row is separated by a :), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:</p>
+
+<div data-childcomponent="concatenation_reminder" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=concatenation_reminder data-lang="python"    data-timelimit=25000   data-audio=''     >
+message = "Hello there" + " Computer Science 20"
+print(message)
+</textarea>
+</div>
+<p>Recall that the <code class="docutils literal"><span class="pre">+</span></code> operator means <em>concatenation</em> (think join) when used on strings. Python gives us a second way to concatenate two strings together, as follows:</p>
+
+<div data-childcomponent="concatenation_reminder" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=concatenation_reminder data-lang="python"    data-timelimit=25000   data-audio=''     >
+message = "Hello there" \
+          " Computer Science 20"
+print(message)
+</textarea>
+</div>
+<p>The purpose of using this second style of concatenation is simply to increase the readability of your code. It would be a poor decision to use this style in the example above, but it is a great choice when we think back to how we might come up with a customized image for the Micro:bit to display. Consider the following, which accomplishes the same task of making and displaying a boat image:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="c1"># using the \ character at the end of a string tells Python to</span>
+<span class="c1"># keep looking for more of the string on the next line, and</span>
+<span class="c1"># concatenates the strings automatically for you</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="s2">&quot;05050:&quot;</span> \
+           <span class="s2">&quot;05050:&quot;</span> \
+           <span class="s2">&quot;05050:&quot;</span> \
+           <span class="s2">&quot;99999:&quot;</span> \
+           <span class="s2">&quot;09990&quot;</span>
+
+<span class="n">boat</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">my_image</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">boat</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you would rather not teach/use another method of concatenation, you could also accomplish the same thing by creating a fruitful function that combines multiple strings together for you, as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="k">def</span> <span class="nf">create_microbit_image</span><span class="p">(</span><span class="n">row1</span><span class="p">,</span> <span class="n">row2</span><span class="p">,</span> <span class="n">row3</span><span class="p">,</span> <span class="n">row4</span><span class="p">,</span> <span class="n">row5</span><span class="p">):</span>
@@ -293,7 +331,8 @@
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">boat</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">create_microbit_image()</span></code> fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.</p>
+<p class="last">The <code class="docutils literal"><span class="pre">create_microbit_image()</span></code> fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.</p>
+</div>
 </div>
 <div class="section" id="work-time-on-assignment">
 <h2>21.2. Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>

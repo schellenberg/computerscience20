@@ -47,30 +47,70 @@ The following code creates an image of a boat and displays it on the Micro:bit:
     microbit.display.show(boat)
 
 
-Although we can figure out what is going on in the above code (each row is separated by a :), it would be nice to improve the readability of creating our own images. Consider the following, which accomplishes the same task of making and displaying a boat image:
+Although we can figure out what is going on in the above code (each row is separated by a :), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:
+
+.. activecode:: concatenation_reminder
+    :nocanvas:
+    :nocodelens:
+
+    message = "Hello there" + " Computer Science 20"
+    print(message)
+
+Recall that the ``+`` operator means *concatenation* (think join) when used on strings. Python gives us a second way to concatenate two strings together, as follows:
+
+.. activecode:: concatenation_reminder
+    :nocanvas:
+    :nocodelens:
+
+    message = "Hello there" \
+              " Computer Science 20"
+    print(message)
+
+The purpose of using this second style of concatenation is simply to increase the readability of your code. It would be a poor decision to use this style in the example above, but it is a great choice when we think back to how we might come up with a customized image for the Micro:bit to display. Consider the following, which accomplishes the same task of making and displaying a boat image:
 
 .. code-block:: python
 
     import microbit
 
-    def create_microbit_image(row1, row2, row3, row4, row5):
-        """Takes in 5 strings, each containing 5 integers, and returns an image that works on the micro:bit"""
-        combined_string = row1 + ":" + row2 +  ":" + row3 +  ":" + row4 +  ":" + row5
-        custom_image = microbit.Image(combined_string)
-        return custom_image
+    # using the \ character at the end of a string tells Python to
+    # keep looking for more of the string on the next line, and
+    # concatenates the strings automatically for you
 
-
-    line1 = "05050"
-    line2 = "05050"
-    line3 = "05050"
-    line4 = "99999"
-    line5 = "09990"
-
-    boat = create_microbit_image(line1, line2, line3, line4, line5)
+    my_image = "05050:" \
+               "05050:" \
+               "05050:" \
+               "99999:" \
+               "09990"
+            
+    boat = microbit.Image(my_image)
     microbit.display.show(boat)
 
 
-The ``create_microbit_image()`` fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.
+.. note:: 
+    If you would rather not teach/use another method of concatenation, you could also accomplish the same thing by creating a fruitful function that combines multiple strings together for you, as follows:
+
+    .. code-block:: python
+
+        import microbit
+
+        def create_microbit_image(row1, row2, row3, row4, row5):
+            """Takes in 5 strings, each containing 5 integers, and returns an image that works on the micro:bit"""
+            combined_string = row1 + ":" + row2 +  ":" + row3 +  ":" + row4 +  ":" + row5
+            custom_image = microbit.Image(combined_string)
+            return custom_image
+
+
+        line1 = "05050"
+        line2 = "05050"
+        line3 = "05050"
+        line4 = "99999"
+        line5 = "09990"
+
+        boat = create_microbit_image(line1, line2, line3, line4, line5)
+        microbit.display.show(boat)
+
+
+    The ``create_microbit_image()`` fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.
 
 
 Work Time on Assignment
