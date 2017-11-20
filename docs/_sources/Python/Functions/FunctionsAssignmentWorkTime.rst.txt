@@ -94,7 +94,8 @@ The purpose of using this second style of concatenation is simply to increase th
         import microbit
 
         def create_microbit_image(row1, row2, row3, row4, row5):
-            """Takes in 5 strings, each containing 5 integers, and returns an image that works on the micro:bit"""
+            """Takes in 5 strings, each containing 5 integers.
+            Returns an image that works on the micro:bit"""
             combined_string = row1 + ":" + row2 +  ":" + row3 +  ":" + row4 +  ":" + row5
             custom_image = microbit.Image(combined_string)
             return custom_image

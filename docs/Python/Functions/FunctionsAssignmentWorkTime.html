@@ -315,7 +315,8 @@ print(message)
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="k">def</span> <span class="nf">create_microbit_image</span><span class="p">(</span><span class="n">row1</span><span class="p">,</span> <span class="n">row2</span><span class="p">,</span> <span class="n">row3</span><span class="p">,</span> <span class="n">row4</span><span class="p">,</span> <span class="n">row5</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Takes in 5 strings, each containing 5 integers, and returns an image that works on the micro:bit&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Takes in 5 strings, each containing 5 integers.</span>
+<span class="sd">    Returns an image that works on the micro:bit&quot;&quot;&quot;</span>
     <span class="n">combined_string</span> <span class="o">=</span> <span class="n">row1</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row2</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row3</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row4</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row5</span>
     <span class="n">custom_image</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">combined_string</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">custom_image</span>
