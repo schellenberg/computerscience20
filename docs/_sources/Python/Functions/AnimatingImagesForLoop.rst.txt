@@ -171,6 +171,57 @@ Now that we can access an element inside a list, we can build a function that ta
 
 .. note:: Although the code above works, you might want to adapt the code so that the program does not crash (or behave strangely) when the LED goes "off the screen".
 
+Moving a Turtle By Tilting Micro:bit
+-------------------------------------
+
+.. caution:: Explanation needs to be written up. Should include description of register_shape() function, saving the .gif image file in the same folder as the Python script.
+
+.. code-block:: python
+
+    import microbit
+    import turtle
+
+    def horizontal_tilt(sensitivity_amount):
+        """Returns left or right, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive."""
+        x_tilt = microbit.accelerometer.get_x()
+
+        if x_tilt > sensitivity_amount:
+            return "right"
+
+        elif x_tilt < -1 * sensitivity_amount:
+            return "left"
+
+
+    canvas = turtle.Screen()
+    canvas.bgcolor("black")
+    #canvas.register_shape("ship.gif")
+
+    travis = turtle.Turtle()
+    travis.color("white")
+    travis.penup()
+    #travis.shape("ship.gif")
+    travis.shape("square")
+    travis.pensize(5)
+
+    while True:
+        horizontal_tilt_direction = horizontal_tilt(100)
+
+        if horizontal_tilt_direction == "right":
+            microbit.display.show("R")
+            print("Tilted right.")
+            travis.forward(10)
+
+        elif horizontal_tilt_direction == "left":
+            microbit.display.show("L")
+            print("Tilted left.")
+            travis.backward(10)
+
+        else:
+            microbit.display.show("-")
+            print("Flat!")
+
+.. note:: Adapt the code above by creating another turtle that starts at the top of the screen and moves downward. If you want to get really fancy, you could look up xcor() and ycor(). These functions allow you to check where turtles are, and with some clever logic, whether two turtles are touching each other.
+
 
 Work Time on Assignment
 ------------------------

@@ -195,7 +195,8 @@
 <li><a class="reference internal" href="#">22. Animating an Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop</a><ul>
 <li><a class="reference internal" href="#animate-built-in-images-on-micro-bit-leds">22.1. Animate Built-In Images On Micro:bit LEDs</a></li>
 <li><a class="reference internal" href="#moving-an-led-on-the-bottom-row">22.2. Moving an LED On the Bottom Row</a></li>
-<li><a class="reference internal" href="#work-time-on-assignment">22.3. Work Time on Assignment</a></li>
+<li><a class="reference internal" href="#moving-a-turtle-by-tilting-micro-bit">22.3. Moving a Turtle By Tilting Micro:bit</a></li>
+<li><a class="reference internal" href="#work-time-on-assignment">22.4. Work Time on Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -395,8 +396,62 @@ print()
 <p class="last">Although the code above works, you might want to adapt the code so that the program does not crash (or behave strangely) when the LED goes “off the screen”.</p>
 </div>
 </div>
+<div class="section" id="moving-a-turtle-by-tilting-micro-bit">
+<h2>22.3. Moving a Turtle By Tilting Micro:bit<a class="headerlink" href="#moving-a-turtle-by-tilting-micro-bit" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Explanation needs to be written up. Should include description of register_shape() function, saving the .gif image file in the same folder as the Python script.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="k">def</span> <span class="nf">horizontal_tilt</span><span class="p">(</span><span class="n">sensitivity_amount</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns left or right, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive.&quot;&quot;&quot;</span>
+    <span class="n">x_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">x_tilt</span> <span class="o">&gt;</span> <span class="n">sensitivity_amount</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;right&quot;</span>
+
+    <span class="k">elif</span> <span class="n">x_tilt</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">sensitivity_amount</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;left&quot;</span>
+
+
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="c1">#canvas.register_shape(&quot;ship.gif&quot;)</span>
+
+<span class="n">travis</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">travis</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">travis</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="c1">#travis.shape(&quot;ship.gif&quot;)</span>
+<span class="n">travis</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">)</span>
+<span class="n">travis</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">horizontal_tilt_direction</span> <span class="o">=</span> <span class="n">horizontal_tilt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted right.&quot;</span><span class="p">)</span>
+        <span class="n">travis</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted left.&quot;</span><span class="p">)</span>
+        <span class="n">travis</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flat!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Adapt the code above by creating another turtle that starts at the top of the screen and moves downward. If you want to get really fancy, you could look up xcor() and ycor(). These functions allow you to check where turtles are, and with some clever logic, whether two turtles are touching each other.</p>
+</div>
+</div>
 <div class="section" id="work-time-on-assignment">
-<h2>22.3. Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
+<h2>22.4. Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Continue working on your current assignment (focused on creating fruitful and non-fruitful functions).</p>
 </div>
 </div>
