@@ -104,14 +104,55 @@ What will the following programs output? Why?
 
     some_function( 2, 3)
 
+Microbit Button Pressing - Extra Details
+-----------------------------------------
+
+Copy/paste the following code into Thonny, then run it and hold down the *a* button on your Micro:bit.
+
+.. code-block:: python
+
+    import microbit
+
+    count = 0
+
+    while True:
+        if microbit.button_a.is_pressed():
+            count = count + 1
+            print(count)
+
+Notice that the value of count continues to be increased as long as you hold button *a* down. The reason is that the ``is_pressed()`` function simply checks the current state of the button, and returns True or False.
+
+If we want to be able to only increase the value of count once for every separate time the a button is pressed, we can use the ``was_pressed()`` function instead. Try the following code in Thonny:
+
+.. code-block:: python
+
+    import microbit
+
+    count = 0
+
+    while True:
+        if microbit.button_a.was_pressed():
+            count = count + 1
+            print(count)
+
+The `Micro:bit micropython documentation <http://microbit-micropython.readthedocs.io/en/latest/button.html>`_  tells us that::
+
+    ``is_pressed()``
+    
+        Returns ``True`` if the specified button button is pressed, and ``False`` otherwise.
+
+    ``was_pressed()``
+
+        Returns ``True`` or ``False`` to indicate if the button was pressed since the device started or the last time this method was called.
+
 
 User Controlled Turtle Racing
 --------------------------------
 
 .. note:: If you have Micro:bit's, they are a great way to control a user controlled turtle race. If you do not have Micro:bit's, you can accomplish the same thing with keyboard input.
 
-Create a turtle racing game, in which one player presses the "a" button, and the other presses the "b" button. Be sure to create:
+Create a turtle racing game, in which one player presses the "a" button, and the other presses the "b" button. Be sure to:
 
-- a non-fruitful function called ``move_to_starting_locations(player1, player2, starting_x_cord)``
-- a non-fruitful function called ``draw_finish_line(ref_turtle, finish_line_x_cord)`` 
-
+- create a non-fruitful function called ``move_to_starting_locations(player1, player2, starting_x_cord)``
+- create a non-fruitful function called ``draw_finish_line(ref_turtle, finish_line_x_cord)`` 
+- experiment with ``is_pressed()`` and ``was_pressed()`` to see which makes more sense for this simulation

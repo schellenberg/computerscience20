@@ -194,7 +194,8 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">23. User Controlled Turtle Race</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">23.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#user-controlled-turtle-racing">23.2. User Controlled Turtle Racing</a></li>
+<li><a class="reference internal" href="#microbit-button-pressing-extra-details">23.2. Microbit Button Pressing - Extra Details</a></li>
+<li><a class="reference internal" href="#user-controlled-turtle-racing">23.3. User Controlled Turtle Racing</a></li>
 </ul>
 </li>
 </ul>
@@ -347,16 +348,53 @@ some_function( 2, 3)
 </textarea>
 </div>
 </div>
+<div class="section" id="microbit-button-pressing-extra-details">
+<h2>23.2. Microbit Button Pressing - Extra Details<a class="headerlink" href="#microbit-button-pressing-extra-details" title="Permalink to this headline">¶</a></h2>
+<p>Copy/paste the following code into Thonny, then run it and hold down the <em>a</em> button on your Micro:bit.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice that the value of count continues to be increased as long as you hold button <em>a</em> down. The reason is that the <code class="docutils literal"><span class="pre">is_pressed()</span></code> function simply checks the current state of the button, and returns True or False.</p>
+<p>If we want to be able to only increase the value of count once for every separate time the a button is pressed, we can use the <code class="docutils literal"><span class="pre">was_pressed()</span></code> function instead. Try the following code in Thonny:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="http://microbit-micropython.readthedocs.io/en/latest/button.html">Micro:bit micropython documentation</a>  tells us that:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>``is_pressed()``
+
+    Returns ``True`` if the specified button button is pressed, and ``False`` otherwise.
+
+``was_pressed()``
+
+    Returns ``True`` or ``False`` to indicate if the button was pressed since the device started or the last time this method was called.
+</pre></div>
+</div>
+</div>
 <div class="section" id="user-controlled-turtle-racing">
-<h2>23.2. User Controlled Turtle Racing<a class="headerlink" href="#user-controlled-turtle-racing" title="Permalink to this headline">¶</a></h2>
+<h2>23.3. User Controlled Turtle Racing<a class="headerlink" href="#user-controlled-turtle-racing" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you have Micro:bit’s, they are a great way to control a user controlled turtle race. If you do not have Micro:bit’s, you can accomplish the same thing with keyboard input.</p>
 </div>
-<p>Create a turtle racing game, in which one player presses the “a” button, and the other presses the “b” button. Be sure to create:</p>
+<p>Create a turtle racing game, in which one player presses the “a” button, and the other presses the “b” button. Be sure to:</p>
 <ul class="simple">
-<li>a non-fruitful function called <code class="docutils literal"><span class="pre">move_to_starting_locations(player1,</span> <span class="pre">player2,</span> <span class="pre">starting_x_cord)</span></code></li>
-<li>a non-fruitful function called <code class="docutils literal"><span class="pre">draw_finish_line(ref_turtle,</span> <span class="pre">finish_line_x_cord)</span></code></li>
+<li>create a non-fruitful function called <code class="docutils literal"><span class="pre">move_to_starting_locations(player1,</span> <span class="pre">player2,</span> <span class="pre">starting_x_cord)</span></code></li>
+<li>create a non-fruitful function called <code class="docutils literal"><span class="pre">draw_finish_line(ref_turtle,</span> <span class="pre">finish_line_x_cord)</span></code></li>
+<li>experiment with <code class="docutils literal"><span class="pre">is_pressed()</span></code> and <code class="docutils literal"><span class="pre">was_pressed()</span></code> to see which makes more sense for this simulation</li>
 </ul>
 </div>
 </div>
