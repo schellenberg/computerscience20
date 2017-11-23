@@ -107,6 +107,7 @@ Python
    Python/Functions/MicrobitFunctions.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
+   Python/Functions/UserControlledTurtleRace.rst
 
 
 Python Practice Quizzes
