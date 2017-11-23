@@ -2,8 +2,12 @@
    :prefix: boolean-functions-random-turtles
    :start: 1
 
-Boolean Functions with Randomly Walking Turtles
-------------------------------------------------
+Boolean Functions and Randomly Walking Turtles
+=================================================
+
+
+Boolean Functions
+------------------
 
 We have already seen that boolean values result from the evaluation of boolean expressions.  Since the result of any expression evaluation can be returned by a function (using the ``return`` statement), functions can return boolean values.  This turns out to be a very convenient way to hide the details of complicated tests. For example:
 
