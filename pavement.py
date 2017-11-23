@@ -30,7 +30,7 @@ options(
                        'loglevel': 0,
                        'course_url':master_url,
                        'use_services': 'false',
-                       'python3': 'false',
+                       'python3': 'true',
                        'dburl': '',
                        'basecourse': 'cs20sk'
                         }
