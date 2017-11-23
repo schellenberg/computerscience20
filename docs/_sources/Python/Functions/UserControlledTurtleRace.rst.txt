@@ -135,7 +135,7 @@ If we want to be able to only increase the value of count once for every separat
             count = count + 1
             print(count)
 
-The `Micro:bit micropython documentation <http://microbit-micropython.readthedocs.io/en/latest/button.html>`_  tells us that::
+The `Micro:bit micropython documentation <http://microbit-micropython.readthedocs.io/en/latest/button.html>`_  tells us that:
 
     ``is_pressed()``
     
