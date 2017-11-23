@@ -108,6 +108,7 @@ Python
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
    Python/Functions/UserControlledTurtleRace.rst
+   Python/Functions/BooleanFunctionsWithTurtles.rst
 
 
 Python Practice Quizzes
