@@ -106,13 +106,11 @@ to see the different kinds of behavior.
 * Use a single call to ``forward`` for each turtle, using a random number as
   the distance to move.
 
-* Create a for loop, using a random number for the parameter passed to the
+* Create a for loop, using a random number for the argument passed to the
   range function.  Inside the for loop move one of the turtles forward by
   some number of units.
 
-* Create a single for loop using something like 150 or 200 as the range 
-  parameter. Then inside the for loop move each turtle forward using a random
-  number as the parameter to forward.
+* Create a single for loop using something like ``range(150)`` or ``range(200)``. Then inside the for loop move each turtle forward using a random number as the argument to forward.
 
 
 So, which of these programs is better?  Which of these programs is most
