@@ -30,7 +30,6 @@ What will the following programs output? Why?
 
 .. activecode:: wdtpd_functions_11
     :caption: What will this program print?
-    :nocodelens:
 
     def a(x, y):
         x = x + 1
@@ -46,7 +45,6 @@ What will the following programs output? Why?
 
 .. activecode:: wdtpd_functions_12
     :caption: What will this program print?
-    :nocodelens:
 
     def a(x, y):
         x = x + 1
@@ -63,7 +61,6 @@ What will the following programs output? Why?
 
 .. activecode:: wdtpd_functions_13
     :caption: What will this program print?
-    :nocodelens:
 
     def a(x, y):
         x = x + 1
@@ -79,7 +76,6 @@ What will the following programs output? Why?
 
 .. activecode:: wdtpd_functions_14
     :caption: What will this program print?
-    :nocodelens:
 
     def a(my_data):
         print("function a, my_data =  ", my_data)
@@ -95,7 +91,6 @@ What will the following programs output? Why?
 
 .. activecode:: wdtpd_functions_15
     :caption: What will this program print?
-    :nocodelens:
 
     def some_function( a_number, another_number ):
         a_number = a_number * 2
@@ -119,5 +114,4 @@ Create a turtle racing game, in which one player presses the "a" button, and the
 
 - a non-fruitful function called ``move_to_starting_locations(player1, player2, starting_x_cord)``
 - a non-fruitful function called ``draw_finish_line(ref_turtle, finish_line_x_cord)`` 
--  a fruitful function called ``move_racer(which_turtle, how_far)`` that returns the x coordinate (``which_turtle.xcor()``) after moving the turtle.
 
