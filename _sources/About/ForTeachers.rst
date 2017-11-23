@@ -4,20 +4,23 @@ How to Use This Textbook - For Teachers
 Introduction
 ----------------------------
 
-Not sure what needs to be put in here for teachers. A bit of help, implementation support team? Some things I'm thinking of including:
+This textbook has been written to support your teaching of Computer Science 20 in Saskatchewan, and I have attempted to tie everything into the curricular outcomes of the course. There are a few important things you should know: 
 
-- that each page roughly maps to one day's worth of instruction (with the notable exception of the Reeborg unit)
-- what to do if you have junky internet access
-- download links for `Thonny <http://thonny.org/>`_ (for Python section), `Atom <https://atom.io/>`_ (to view any other plain text you want)
-- remixing the book `(source is available on GitHub) <https://github.com/sk-opentexts/computerscience20>`_
+- each page roughly maps to one day's worth of instruction (with the notable exception of the Reeborg unit, which is intended to be approximately a two week unit, during which the students work through the content at their own pace)
+- the Python editor I've chosen to use throughout the book is called Thonny, which you can download for free `Thonny <http://thonny.org/>`_. Thonny provides the same experience for the student whether they are on a Mac, PC, or Linux machine, which is a huge advantage when a student uses a different operating system at home and at school. No administrator rights are required to install Thonny, so I simply have the students download and install Thonny on our first day of Python (takes about 5 minutes). Thonny also makes installing Python packages/modules trivially easy, which is why I have included a few within the text. If you want to extend your Python teaching, you can search on the `Python Package Index <https://pypi.python.org/pypi>`_ for a package that does what you want, and install it easily with Thonny (Tools -> Manage Packages...).
+- I have incorporated Micro:bit hardware into some of the Python lessons (specifically, Python sections 19-22). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process.
+- if you would like to access the Teachers Only repository of code/quizzes/etc, please send me an email from your school division email address (so that I know it is from a teacher), and I'll give you access to it. My email is schellenberg@gmail.com.
+- if you find errors in the textbook, `please let me know! <https://github.com/sk-opentexts/computerscience20/#contributing-to-the-book>`_
+- if you want to create your own version of this book, you are free to do so. The general process of remixing the book is to `documented on the GitHub page that holds the source code of the book <https://github.com/sk-opentexts/computerscience20/#building-the-book-yourself>`_.
 
-Sample Overview of Days
-------------------------
 
-When I was creating this textbook (in the fall of 2017), I kept track of what I did each day below.
+
 
 Scratch
 ~~~~~~~
+
+When I was creating this textbook (in the fall of 2017), I kept track of what I did each day below.
+
 #. Introduction to Scratch (Broadcasts)
 #. Controlling a Character with WASD (Repetition and Conditionals)
 #. Chase the Mouse and Drawing Polygons (Repeat and If/Else)
@@ -37,35 +40,20 @@ Scratch
 Reeborg
 ~~~~~~~
 
-Note that this is hard to pin down to exactly what students will get through, since they all work through this section at a different pace. We started on a Tuesday, and I've asked them to all be done step 9 (if they aren't already) by Monday. 
+The exact amount of time that you spend on the Reeborg unit is hard to predict, as each class will progress through the material at a slightly different speed. A reasonable estimate, however, is that students should be done at least up to Step 9 by the end of the first 4/5 periods, which would be a logical time to give them a quiz on Steps 1-9. Finishing the remaining steps will likely take another 5-8 periods, at which point a quiz covering all of the content from Steps 1-18 would be a good idea.
 
-Still going through this. I'm thinking approximately two weeks to get through this, but to keep the keen students interested, that might mean creating a few "extra challenges" that aren't required...
+**Making Your Own Quiz Worlds**
 
-.. admonition:: Loading Quizzes
+Creating your own worlds in Reeborg can be time consuming, but once you understand the process, it works quite well. The general procedure is to select "Additional Options", then click "Edit world". Note that in order to use the world that you create with your students, you will need to save the world to your computer (Additional Options -> Save world to file). Then you need to give the students a way to access that file. One simple way to do this is to copy/paste the contents of the ``world_name.json`` file into a web service like `pastebin.com <pastebin.com>`_. I have done this with `a simple demo world <https://pastebin.com/yLb3CUzq>`_. Note that to get just the contents of the file, you can click the "raw" button on pastebin, which provides `something like this <https://pastebin.com/raw/yLb3CUzq>`_. You should now be able to use that url to create a link that your students can access. It will look something like this:
 
-    You might want to use the ``World()`` function instead to load a world file::
+    `https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld <https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld>`_
 
-        World("Step 6")
-        move()
-        move()
+To make the same thing work for you, simply replace the ``https://pastebin.com/raw/yLb3CUzq`` portion of the link with the link to your world, and change ``DemoExternalWorld`` to whatever name you would like to have appear in the Reeborg World Selector menu. **This is how I link to extra worlds in the More Challenges and Second Practice Quiz sections of Reeborg.**
 
-    If the world currently displayed is not
-    **Step 6**, then running this program will result in the selected
-    world changing to **Step 6** and the rest of the program will be ignored.
-    Running it a second time (when the world shown **is** the desired
-    world **Step 6**), the ``World()`` function will be ignored and the rest
-    of the program will be executed.
+.. note:: Although it does take one extra step, I like to use a url shortening service, such as `bitly.com <https://bitly.com>`_, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into `http://bit.ly/2hI9ejK <http://bit.ly/2hI9ejK>`_
 
-    Instead of using pre-defined worlds, you can use any world accessible
-    by a URL somewhere on the web.  Using this, you could create and save a quiz world anywhere that is accessible on the web. To use it, you could have the students simply enter something like::
-
-        World("http://personnel.usainteanne.ca/aroberge/reeborg/token.json",
-              "Token test")
-
-    Running this program should add one more world to the current selection.
-    Note the second (optional) argument to ``World`` which, if provided,
-    is used as the name appearing in the world selector.
-
+To find out much more information about how to create worlds, you might want to `read the guide created by André Roberge <https://github.com/aroberge/reeborg-world-creation>`_ (the creator of Reeborg).
+    
 
 Python
 ~~~~~~~
