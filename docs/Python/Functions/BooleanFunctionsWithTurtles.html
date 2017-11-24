@@ -198,6 +198,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#randomly-walking-turtles">24.2. Randomly Walking Turtles</a></li>
+<li><a class="reference internal" href="#detecting-if-turtles-are-touching">24.3. Detecting If Turtles are Touching</a></li>
 </ul>
 </li>
 </ul>
@@ -400,15 +401,15 @@ coin before it wanders out of the screen, so we can’t use a for loop in this
 case. In fact, although very unlikely, this program might never end;
 that is why we call this indefinite iteration.</p>
 <p>So based on the problem description above, we can outline a program as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">a</span> <span class="n">window</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">turtle</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>create a window and a turtle
 
-<span class="k">while</span> <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">still</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">window</span><span class="p">:</span>
-    <span class="n">generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">the</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">(</span><span class="n">heads</span><span class="p">):</span>
-        <span class="n">turn</span> <span class="n">left</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">turn</span> <span class="n">right</span>
-    <span class="n">move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="mi">50</span>
+while the turtle is still in the window:
+    generate a random number between 0 and 1
+    if the number == 0:  # flipped heads
+        turn left
+    else:                # flipped tails
+        turn right
+    move the turtle forward 50
 </pre></div>
 </div>
 <p>Now, probably the only thing that seems a bit confusing to you is the part
@@ -543,6 +544,75 @@ was still in the screen in another part of the program.  Another advantage is
 that if you ever need to write a similar program, you can reuse this function
 with confidence the next time you need it.  Breaking up this
 program into a couple of parts is an example of <strong>functional decomposition</strong> (in which a problem is broken down into smaller parts, in order to make solving each part of the problem easier).</p>
+</div>
+<div class="section" id="detecting-if-turtles-are-touching">
+<h2>24.3. Detecting If Turtles are Touching<a class="headerlink" href="#detecting-if-turtles-are-touching" title="Permalink to this headline">¶</a></h2>
+<p>When trying to create a visualization with turtles, it can be helpful to be able to ask if two turtles are “touching” each other. One fairly simple way to test this is to create a boolean function that determines if the turtles are within some distance of each other. To do this, we will use the distance equation that you have likely learned in math class.</p>
+<p>Assume that we want to find the distance between the two turtles (represented by circles) below. The turtle locations are (x1, y1) and (x2, y2), respectively.</p>
+<img alt="../../_images/turtle_distance.png" src="../../_images/turtle_distance.png" />
+<p>In order to calculate the distance between these two points, we construct a right triangle, then calculate the distance between the two turtles as the hypotenuse of that triangle.</p>
+<img alt="../../_images/turtle_distance_triangle.png" src="../../_images/turtle_distance_triangle.png" />
+<p>Knowing how to do this by hand, we can now create a boolean function that will return True or False, based on whether or not the turtles are less than the required distance apart. One possible implementation of this is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turtles_are_touching</span><span class="p">(</span><span class="n">first_turtle</span><span class="p">,</span> <span class="n">second_turtle</span><span class="p">,</span> <span class="n">close_enough_distance</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True or False, based on whether two turtles are &#39;close enough&#39; to be touching.&quot;&quot;&quot;</span>
+
+    <span class="n">x_dist</span> <span class="o">=</span> <span class="n">first_turtle</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span> <span class="o">-</span> <span class="n">second_turtle</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span>
+    <span class="n">y_dist</span> <span class="o">=</span> <span class="n">first_turtle</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">-</span> <span class="n">second_turtle</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span>
+
+    <span class="n">distance_apart</span> <span class="o">=</span> <span class="p">(</span> <span class="n">x_dist</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y_dist</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+
+    <span class="k">if</span> <span class="n">distance_apart</span> <span class="o">&lt;</span> <span class="n">close_enough_distance</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<p>To make sure that this function is working the way we want it to, we can create a simple testing program. In this program, we will have two turtles start on opposite sides of the screen, face each other, then continue to move towards each other until they are “close enough” to be touching.</p>
+
+<div data-childcomponent="distance_formula_testing_program" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=distance_formula_testing_program data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def turtles_are_touching(first_turtle, second_turtle, close_enough_distance):
+    """Returns True or False, based on whether two turtles are 'close enough' to be touching."""
+
+    x_dist = first_turtle.xcor() - second_turtle.xcor()
+    y_dist = first_turtle.ycor() - second_turtle.ycor()
+
+    distance_apart = ( x_dist**2 + y_dist**2) ** 0.5
+
+    if distance_apart < close_enough_distance:
+        return True
+    else:
+        return False
+
+
+canvas = turtle.Screen()
+canvas.bgcolor("black")
+
+charlie = turtle.Turtle()
+charlie.color("blue")
+charlie.up()
+
+musawer = turtle.Turtle()
+musawer.color("red")
+musawer.up()
+
+charlie.goto(-200, 0)
+musawer.goto(200, 5)
+
+musawer.left(180)
+
+while not turtles_are_touching(charlie, musawer, 20):
+    charlie.forward(5)
+    musawer.forward(2)
+
+
+print("That's close enough!")
+</textarea>
+</div>
+<p>Experiment with the program above by changing the “close enough” argument being passed into the <code class="docutils literal"><span class="pre">turtles_are_touching</span></code> function.</p>
 </div>
 </div>
 

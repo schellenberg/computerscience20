@@ -127,19 +127,21 @@ coin before it wanders out of the screen, so we can't use a for loop in this
 case. In fact, although very unlikely, this program might never end;
 that is why we call this indefinite iteration.
 
+
 So based on the problem description above, we can outline a program as follows:
 
-.. sourcecode:: python
+.. code-block:: html
 
     create a window and a turtle
 
     while the turtle is still in the window:
         generate a random number between 0 and 1
-        if the number == 0 (heads):
+        if the number == 0:  # flipped heads
             turn left
-        else:
+        else:                # flipped tails
             turn right
         move the turtle forward 50
+
 
 Now, probably the only thing that seems a bit confusing to you is the part
 about whether or not the turtle is still in the screen.  But this is the nice
@@ -277,3 +279,81 @@ was still in the screen in another part of the program.  Another advantage is
 that if you ever need to write a similar program, you can reuse this function
 with confidence the next time you need it.  Breaking up this
 program into a couple of parts is an example of **functional decomposition** (in which a problem is broken down into smaller parts, in order to make solving each part of the problem easier).
+
+
+Detecting If Turtles are Touching
+-----------------------------------
+
+When trying to create a visualization with turtles, it can be helpful to be able to ask if two turtles are "touching" each other. One fairly simple way to test this is to create a boolean function that determines if the turtles are within some distance of each other. To do this, we will use the distance equation that you have likely learned in math class.
+
+Assume that we want to find the distance between the two turtles (represented by circles) below. The turtle locations are (x1, y1) and (x2, y2), respectively.
+
+.. image:: images/turtle_distance.png
+
+In order to calculate the distance between these two points, we construct a right triangle, then calculate the distance between the two turtles as the hypotenuse of that triangle.
+
+.. image:: images/turtle_distance_triangle.png
+
+Knowing how to do this by hand, we can now create a boolean function that will return True or False, based on whether or not the turtles are less than the required distance apart. One possible implementation of this is:
+
+.. code-block:: python
+
+    def turtles_are_touching(first_turtle, second_turtle, close_enough_distance):
+        """Returns True or False, based on whether two turtles are 'close enough' to be touching."""
+
+        x_dist = first_turtle.xcor() - second_turtle.xcor()
+        y_dist = first_turtle.ycor() - second_turtle.ycor()
+        
+        distance_apart = ( x_dist**2 + y_dist**2) ** 0.5
+        
+        if distance_apart < close_enough_distance:
+            return True
+        else:
+            return False
+
+To make sure that this function is working the way we want it to, we can create a simple testing program. In this program, we will have two turtles start on opposite sides of the screen, face each other, then continue to move towards each other until they are "close enough" to be touching.
+
+.. activecode:: distance_formula_testing_program
+    :nocodelens:
+
+    import turtle
+
+    def turtles_are_touching(first_turtle, second_turtle, close_enough_distance):
+        """Returns True or False, based on whether two turtles are 'close enough' to be touching."""
+
+        x_dist = first_turtle.xcor() - second_turtle.xcor()
+        y_dist = first_turtle.ycor() - second_turtle.ycor()
+        
+        distance_apart = ( x_dist**2 + y_dist**2) ** 0.5
+        
+        if distance_apart < close_enough_distance:
+            return True
+        else:
+            return False
+
+
+    canvas = turtle.Screen()
+    canvas.bgcolor("black")
+
+    charlie = turtle.Turtle()
+    charlie.color("blue")
+    charlie.up()
+
+    musawer = turtle.Turtle()
+    musawer.color("red")
+    musawer.up()
+
+    charlie.goto(-200, 0)
+    musawer.goto(200, 5)
+
+    musawer.left(180)
+
+    while not turtles_are_touching(charlie, musawer, 20):
+        charlie.forward(5)
+        musawer.forward(2)
+
+
+    print("That's close enough!")
+
+
+Experiment with the program above by changing the "close enough" argument being passed into the ``turtles_are_touching`` function.
