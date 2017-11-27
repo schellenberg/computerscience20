@@ -206,6 +206,8 @@ Estimating Square Roots
 
 Write a function called ``my_sqrt`` that will approximate the square root of a number, call it n, by using Newton's algorithm. Newton's approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: new_guess = (1/2) * (old_guess + (n/old_guess)).
 
+To be sure you understand how this works, it is a good idea to try out Newton's algorithm by hand at least once! Try estimating the square root of 9 by hand. You will see that it only takes a couple iterations to get really close to the actual value of the square root.
+
 Be sure to test your square root function with a variety of numbers, and check with a calculator to see how well your function is performing!
 
 .. activecode:: my-sqrt
@@ -213,11 +215,23 @@ Be sure to test your square root function with a variety of numbers, and check w
     def my_sqrt(n, number_of_guesses):
        # your code here
 
+.. reveal:: reveal_my_sqrt_hint
+    :showtitle: Need a hint?
+    :hidetitle: Hide Hint
+
+    Don't forget to update the value of old_guess within your loop!
+
 
 Approximating Pi
 ~~~~~~~~~~~~~~~~~
 
 Write a function called ``my_pi()`` that will return an approximation of PI (3.14159…). Use the `Leibniz approximation <http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80>`_ . 
+
+.. reveal:: reveal_my_sqrt_hint
+    :showtitle: Need a hint?
+    :hidetitle: Hide Hint
+
+    You might find it helpful to look back at the :ref:`is_even_fruitful_function` fruitful function that you created when we started practicing fruitful functions. For the Leibniz approximation, depending on whether you are on an odd or even time through the loop, you will need to either add or subtract...
 
 .. activecode:: my-pi
 

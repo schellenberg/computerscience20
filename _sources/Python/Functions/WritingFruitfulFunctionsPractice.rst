@@ -261,6 +261,7 @@ Find the Smallest
 
     myTests().main()
 
+.. _is_even_fruitful_function:
 
 Is Even
 ~~~~~~~~~~~~~~~~~~
