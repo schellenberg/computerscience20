@@ -187,7 +187,11 @@ Dividing by 2::
 
 Writing this more generically to work for any number, the formula becomes:
 
-.. image:: images/sum_to_formula.png
+.. math::
+
+  S=\frac{n(n+1)}{2}
+
+.. .. image:: images/sum_to_formula.png
 
 Now that you understand Gauss' pattern for finding the sum of a series, rewrite the ``sum_to(n)`` function you created above, this time using the formula!
 
@@ -225,13 +229,21 @@ Be sure to test your square root function with a variety of numbers, and check w
 Approximating Pi
 ~~~~~~~~~~~~~~~~~
 
-Write a function called ``my_pi()`` that will return an approximation of PI (3.14159…). Use the `Leibniz approximation <http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80>`_ . 
+Write a function called ``my_pi()`` that will return an approximation of PI (3.14159…). Use the `Leibniz approximation <http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80>`_, which shows that you can approximate 1/4 of PI with the following series:
+
+.. math::
+
+  1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\cdots =\frac{\pi}{4}
+
+.. .. image:: images/leibniz_pi_formula.png
 
 .. reveal:: reveal_my_sqrt_hint
     :showtitle: Need a hint?
     :hidetitle: Hide Hint
 
-    You might find it helpful to look back at the :ref:`is_even_fruitful_function` fruitful function that you created when we started practicing fruitful functions. For the Leibniz approximation, depending on whether you are on an odd or even time through the loop, you will need to either add or subtract...
+    You might find it helpful to look back at the :ref:`is_even_fruitful_function` fruitful function that you created when we started practicing fruitful functions. For the Leibniz approximation, depending on whether you are on an odd or even time through the loop, you will need to either add or subtract... 
+
+    Remember that you will need to add 2 to the denominator every time through the loop, whether you were adding or subtracting.
 
 .. activecode:: my-pi
 
