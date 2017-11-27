@@ -109,6 +109,7 @@ Python
    Python/Functions/AnimatingImagesForLoop.rst
    Python/Functions/UserControlledTurtleRace.rst
    Python/Functions/BooleanFunctionsWithTurtles.rst
+   Python/Functions/TheAccumulatorPattern.rst
 
 
 Python Practice Quizzes
