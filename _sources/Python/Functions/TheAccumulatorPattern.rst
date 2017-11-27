@@ -118,11 +118,11 @@ Check Your Understanding
 
    .. code-block:: python
 
-     def square(x):
-         running_total = 0
-         for counter in range(x):
-             running_total = running_total + x
-         return running_total
+        def square(x):
+            running_total = 0
+            for counter in range(x):
+                running_total = running_total + x
+            return running_total
 
    What happens if you put the initialization of running_total (the
    line running_total = 0) inside the for loop as the first
@@ -213,7 +213,7 @@ Be sure to test your square root function with a variety of numbers, and check w
 .. activecode:: my-sqrt
 
     def my_sqrt(n, number_of_guesses):
-       # your code here
+        # your code here
 
 .. reveal:: reveal_my_sqrt_hint
     :showtitle: Need a hint?
@@ -236,6 +236,6 @@ Write a function called ``my_pi()`` that will return an approximation of PI (3.1
 .. activecode:: my-pi
 
     def my_pi():
-       # your code here
+        # your code here
 
 
