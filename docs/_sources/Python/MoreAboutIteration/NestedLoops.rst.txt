@@ -96,8 +96,8 @@ of the previous program. Because of the tab characters between the columns, the 
 ..         print()
 
 
-Image Processing
------------------
+Image Processing Introduction
+------------------------------
 
 .. note:: 
 
@@ -123,8 +123,9 @@ In the figure below, the pixel of interest is found at column **c** and row **r*
 
 .. image:: images/image_pixels.png
 
+
 The RGB Color Model
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the **RGB Color Model**.
@@ -188,7 +189,23 @@ the same as the current amount of green.
     print(p.getGreen(), p.getBlue())
 
 
-**Check Your Understanding**
+.. note:: 
+
+    Thonny version of the above code::
+
+        import cImage as image
+
+        p = image.Pixel(45, 76, 200)
+        print(p.getRed())
+        p.setRed(66)
+        print(p.getRed())
+        p.setBlue(p.getGreen())
+        print(p.getGreen(), p.getBlue())
+
+
+
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: test_question7_8_1_1
    :answer_a: Dark red
@@ -203,97 +220,9 @@ the same as the current amount of green.
 
    If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
 
-Creating an Empty Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the pixel collection consists of only "White" pixels when it is created. We can change the color of a specific pixel by using the ``setPixel`` function.
-
-.. activecode:: empty_image_demo
-    :nocodelens:
-
-    # to run this code in Thonny, uncomment the alternate import and 
-    # window creation code. 
-
-    #import cImage as image
-    import image
-
-    width = 600
-    height = 300
-
-    #win = image.ImageWin("Window Name",600,300)
-    win = image.ImageWin(600,300)
-
-    img = image.EmptyImage(width,height)
-
-    for row in range(height):
-        for col in range(width):
-            this_pixel = image.Pixel(255, 0, 0)
-            img.setPixel(col,row,this_pixel)
-
-    img.draw(win)
-
-
-
-Image Objects
-^^^^^^^^^^^^^
-
-To access the pixels in a real image, we need to first create an ``Image`` object.  Image objects can be created in two
-ways.  First, an Image object can be made from the
-files that store digital images.  The image object has an attribute corresponding to the width, the height, and the
-collection of pixels in the image.
-
-We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods.  We can also get a pixel from a particular location in the image using ``getPixel`` and change the pixel at
-a particular location using ``setPixel``.
-
-
-The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
-different depending on whether you are using an image file or creating an empty image.
-
-    =================== =============================== ==================================================
-    Method Name         Example                         Explanation
-    =================== =============================== ==================================================
-    Image(filename)     img = image.Image("cy.png")     Create an Image object from the file cy.png.
-    EmptyImage()        img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
-    getWidth()          w = img.getWidth()              Return the width of the image in pixels.
-    getHeight()         h = img.getHeight()             Return the height of the image in pixels.
-    getPixel(col,row)   p = img.getPixel(35,86)         Return the pixel at column 35, row 86.
-    setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
-    =================== =============================== ==================================================
-
-Consider the image shown below.  Assume that the image is stored in a file called ``luther.jpg``.  Line 2 opens the
-file and uses the contents to create an image object that is referred to by ``img``.  Once we have an image object,
-we can use the methods described above to access information about the image or to get a specific pixel and check
-on its basic color intensities.
-
-
-
-
-
-.. raw:: html
-
-    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
-
-
-
-.. activecode::  pixelex1
-    :nocodelens:
-
-    import image
-    img = image.Image("luther.jpg")
-
-    print(img.getWidth())
-    print(img.getHeight())
-
-    p = img.getPixel(45, 55)
-    print(p.getRed(), p.getGreen(), p.getBlue())
-
-
-When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
-
-
-Image Processing and Nested Iteration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nested Iteration
+-----------------
 
 **Image processing** refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
@@ -341,32 +270,239 @@ The resulting code will look like the following.  We are now free to do anything
 
 .. sourcecode:: python
 
-    for row in range(img.getHeight()):
-        for col in range(img.getWidth()):
+    width = 600
+    height = 300
+
+    for row in range(height):
+        for col in range(width):
             # do something with the pixel at position (col,row)
 
-One of the easiest image processing algorithms will create what is known as a **negative** image.  A negative image simply means that
-each pixel will be the `opposite` of what it was originally.  But what does opposite mean?
+
+Creating an Empty Image
+------------------------
+
+It is possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the pixel collection consists of only "White" pixels when it is created. We can create and draw an empty image like this:
+
+.. activecode:: empty_image_demo
+    :nocodelens:
+
+    import image
+
+    width = 600
+    height = 300
+
+    win = image.ImageWin(600,300)
+    img = image.EmptyImage(width,height)
+
+    img.draw(win)
+
+.. note:: 
+
+    Thonny version of the above code::
+
+        import cImage as image
+
+
+        width = 600
+        height = 300
+
+        win = image.ImageWin("Window Name",600,300)
+        img = image.EmptyImage(width,height)
+
+        img.draw(win)
+
+
+After creating an empty image, we can change the color of a specific pixel by using the ``setPixel`` function inside of a nested for loop.
+
+.. activecode:: empty_image_demo
+    :nocodelens:
+
+    import image
+
+    width = 600
+    height = 300
+
+    win = image.ImageWin(600,300)
+    img = image.EmptyImage(width,height)
+
+    for row in range(height):
+        for col in range(width):
+            this_pixel = image.Pixel(255, 0, 0)
+            img.setPixel(col,row,this_pixel)
+
+    img.draw(win)
+
+
+.. note:: 
+
+    Thonny version of the above code::
+
+        import cImage as image
+
+
+        width = 600
+        height = 300
+
+        win = image.ImageWin("Window Name",600,300)
+        img = image.EmptyImage(width,height)
+
+        for row in range(height):
+            for col in range(width):
+                this_pixel = image.Pixel(255, 0, 0)
+                img.setPixel(col,row,this_pixel)
+
+        img.draw(win)
+
+
+Try This
+~~~~~~~~~
+
+Change the code above to draw an image of a different color. Now, adapt the code above to draw a "pinstripe" image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?
+
+
+Image Objects
+--------------
+
+To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.
+
+We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods.  We can also get a pixel from a particular location in the image using ``getPixel`` and change the pixel at
+a particular location using ``setPixel``.
+
+
+The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
+different depending on whether you are using an image file or creating an empty image.
+
+    =================== =============================== ==================================================
+    Method Name         Example                         Explanation
+    =================== =============================== ==================================================
+    Image(filename)     img = image.Image("cy.png")     Create an Image object from the file cy.png.
+    EmptyImage()        img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
+    getWidth()          w = img.getWidth()              Return the width of the image in pixels.
+    getHeight()         h = img.getHeight()             Return the height of the image in pixels.
+    getPixel(col,row)   p = img.getPixel(35,86)         Return the pixel at column 35, row 86.
+    setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
+    =================== =============================== ==================================================
+
+Consider the image shown below.  Assume that the image is stored in a file called ``luther.jpg``.  Line 2 opens the
+file and uses the contents to create an image object that is referred to by ``img``.  Once we have an image object,
+we can use the methods described above to access information about the image or to get a specific pixel and check
+on its basic color intensities.
+
+
+.. raw:: html
+
+    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
+
+
+.. activecode::  pixelex1
+    :nocodelens:
+
+    import image
+    img = image.Image("luther.jpg")
+
+    print(img.getWidth())
+    print(img.getHeight())
+
+    p = img.getPixel(45, 55)
+    print(p.getRed(), p.getGreen(), p.getBlue())
+
+
+.. note:: 
+
+    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
+
+        import cImage as image
+        img = image.Image("luther.jpg")
+
+        print(img.getWidth())
+        print(img.getHeight())
+
+        p = img.getPixel(45, 55)
+        print(p.getRed(), p.getGreen(), p.getBlue())
+
+When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
+pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
+
+
+Image Processing with an Existing Image
+----------------------------------------
+
+Increasing a Color
+~~~~~~~~~~~~~~~~~~~
+
+Let's say that we wanted to increase the amount of green in a particular image. To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:
+
+.. activecode::  increase_color_amount
+    :nocodelens:
+
+    import image
+
+    img = image.Image("luther.jpg")
+    win = image.ImageWin(img.getWidth(), img.getHeight())
+    img.draw(win)
+    img.setDelay(1,15)   # setDelay(0) turns off animation
+
+    for row in range(img.getHeight()):
+        for col in range(img.getWidth()):
+            p = img.getPixel(col, row)
+
+            new_red = p.getRed()
+            new_green = p.getGreen() + 50
+            new_blue = p.getBlue()
+
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+            img.setPixel(col, row, new_pixel)
+
+    img.draw(win)
+
+.. note:: 
+
+    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
+
+        import cImage as image
+
+        img = image.Image("luther.jpg")
+        win = image.ImageWin("More Green!", img.getWidth(), img.getHeight())
+        img.draw(win)
+
+        for row in range(img.getHeight()):
+            for col in range(img.getWidth()):
+                p = img.getPixel(col, row)
+
+                new_red = p.getRed()
+                new_green = p.getGreen() + 50
+                new_blue = p.getBlue()
+
+                new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+                img.setPixel(col, row, new_pixel)
+
+            # redrawing the image after each row allows us to see how the image is being changed
+            # you can move this outside the for loop if you don't want to watch the process
+            img.draw(win)
+
+
+Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``getWidth()`` and ``getHeight()`` functions to create a window that is the same size as the image.
+
+Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
+Line 10 gets an individual pixel at the current location of the nested loop.
+
+Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the ``new_red``, ``new_green``, and ``new_blue`` values, we can create a new pixel (Line 15).
+
+Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.
+
+
+Negative Images
+~~~~~~~~~~~~~~~~
+
+One of the easiest image processing algorithms will create what is known as a **negative** image.  A negative image simply means that each pixel will be the *opposite* of what it was originally.  But what does opposite mean?
 
 In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
 ``255-50`` or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.
 
-The program below implements this algorithm using the previous image (luther.jpg).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.  In addition, here are two other images that you can use (cy.png and goldygopher.png).  
-
-
-.. raw:: html
-
-    <img src="../../_static/cy.png" id="cy.png">
-    <h4 style="text-align: center;">cy.png</h4>
-
-.. raw:: html
-
-    <img src="../../_static/goldygopher.png" id="goldygopher.png">
-    <h4 style="text-align: center;">goldygopher.png</h4>
-
-
-Change the name of the file in the ``image.Image()`` call to see how these images look as negatives.  Also, note that there is an ``exitonclick`` method call at the very end which will close the window when you click on it.  This will allow you to "clear the screen" before drawing the next negative.
+The program below implements this algorithm using the previous image (luther.jpg).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.
 
 
 .. activecode::  acimg_1
@@ -392,31 +528,63 @@ Change the name of the file in the ``image.Image()`` call to see how these image
             img.setPixel(col, row, newpixel)
 
     img.draw(win)
-    win.exitonclick()
 
-Let's take a closer look at the code.  After importing the image module, we create two image objects.  The first, ``img``, represents a typical digital photo.  The second, ``newimg``, is an empty image that will be "filled in" as we process the original pixel by pixel.  Note that the width and height of the empty image is set to be the same as the width and height of the original.
 
-Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
-Line 10 gets an individual pixel.
+.. note:: 
 
-Lines 12-14 create the negative intensity values by extracting the original intensity from the pixel and subtracting it
-from 255.  Once we have the ``newred``, ``newgreen``, and ``newblue`` values, we can create a new pixel (Line 15).
+    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
 
-Finally, we need to replace the old pixel with the new pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.
+        import cImage as image
 
-Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.
+        img = image.Image("luther.jpg")
+        win = image.ImageWin("Negatives", img.getWidth(), img.getHeight())
+        img.draw(win)
 
-.. admonition:: Other pixel manipulation
+        for row in range(img.getHeight()):
+            for col in range(img.getWidth()):
+                p = img.getPixel(col, row)
 
-    There are a number of different image processing algorithms that follow the same pattern as shown above.  Namely, take the original pixel, extract the red, green, and blue intensities, and then create a new pixel from them.  The new pixel is inserted into an empty image at the same location as the original.
+                newred = 255 - p.getRed()
+                newgreen = 255 - p.getGreen()
+                newblue = 255 - p.getBlue()
 
-    For example, you can create a **gray scale** pixel by averaging the red, green and blue intensities and then using that value for all intensities.
+                newpixel = image.Pixel(newred, newgreen, newblue)
 
-    You can create **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and selecting to either insert a white pixel or a black pixel into the empty image.
+                img.setPixel(col, row, newpixel)
 
-    You can also do some complex arithmetic and create interesting effects, such as
-    `Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_
+            # redrawing the image after each row allows us to see how the image is being changed
+            # you can move this outside the for loop if you don't want to watch the process
+            img.draw(win)
 
+        # the following line will save the adjusted version of the file into the save folder as your python script
+        img.save("negative.jpg")
+
+Try This
+~~~~~~~~~
+
+- Change the name of the file in the ``image.Image()`` call to see how other images look as negatives. Here are two other images that you can use (``cy.png`` and ``goldygopher.png``):
+
+
+.. raw:: html
+
+    <img src="../../_static/cy.png" id="cy.png">
+    <h4 style="text-align: center;">cy.png</h4>
+
+.. raw:: html
+
+    <img src="../../_static/goldygopher.png" id="goldygopher.png">
+    <h4 style="text-align: center;">goldygopher.png</h4>
+
+- Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.
+
+- See if you can create a **gray scale** version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. *Note that any RGB value that contains the same value for it's R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.* 
+
+- You can create **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.
+
+- You can also do some complex arithmetic and create interesting effects, such as `Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_
+
+
+.. caution:: If you are using Thonny, be careful to always pass integer values when using the ``setPixel()`` function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the ``int()`` function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.
 
 
 Check Your Understanding
@@ -505,3 +673,26 @@ Check Your Understanding
       newgreen = 0
       newblue = 0
 
+
+Practice Problem
+------------------
+
+Red Remover
+~~~~~~~~~~~~
+
+Write a program that opens an image and uses a nested loop to look at all of the pixels. For each pixel, you should remove all of the red intensity from the pixel. The green and blue intensities should remain unchanged.
+
+
+.. activecode::  practice_problem_red_remover
+    :nocodelens:
+
+    import image
+
+    img = image.Image("luther.jpg")
+    win = image.ImageWin(img.getWidth(), img.getHeight())
+    img.draw(win)
+    img.setDelay(1,15)   # setDelay(0) turns off animation
+
+    # your code goes here!    
+
+    img.draw(win)
