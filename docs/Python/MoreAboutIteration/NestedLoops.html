@@ -195,7 +195,10 @@
 <li><a class="reference internal" href="#">26. Image Processing and Nested Loops</a><ul>
 <li><a class="reference internal" href="#simple-tables">26.1. Simple Tables</a></li>
 <li><a class="reference internal" href="#image-processing">26.2. Image Processing</a><ul>
-<li><a class="reference internal" href="#the-rgb-color-model">26.2.1. The RGB Color Model</a></li>
+<li><a class="reference internal" href="#the-rgb-color-model">26.2.1. The RGB Color Model</a><ul>
+<li><a class="reference internal" href="#creating-an-empty-image">26.2.1.1. Creating an Empty Image</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#image-objects">26.2.2. Image Objects</a></li>
 <li><a class="reference internal" href="#image-processing-and-nested-iteration">26.2.3. Image Processing and Nested Iteration</a><ul>
 <li><a class="reference internal" href="#check-your-understanding">26.2.3.1. Check Your Understanding</a></li>
@@ -479,15 +482,43 @@ print(p.getGreen(), p.getBlue())
 
             </ul>
             </div>
-            </div>
+            <div class="section" id="creating-an-empty-image">
+<h4>26.2.1.1. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h4>
+<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only “White” pixels when it is created. We can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">setPixel</span></code> function.</p>
+
+<div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=empty_image_demo data-lang="python"    data-timelimit=25000   data-audio=''     >
+# to run this code in Thonny, uncomment the alternate import and
+# window creation code.
+
+#import cImage as image
+import image
+
+width = 600
+height = 300
+
+#win = image.ImageWin("Window Name",600,300)
+win = image.ImageWin(600,300)
+
+img = image.EmptyImage(width,height)
+
+for row in range(height):
+    for col in range(width):
+        this_pixel = image.Pixel(255, 0, 0)
+        img.setPixel(col,row,this_pixel)
+
+img.draw(win)
+</textarea>
+</div>
+</div>
+</div>
 <div class="section" id="image-objects">
 <h3>26.2.2. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h3>
 <p>To access the pixels in a real image, we need to first create an <code class="docutils literal"><span class="pre">Image</span></code> object.  Image objects can be created in two
 ways.  First, an Image object can be made from the
 files that store digital images.  The image object has an attribute corresponding to the width, the height, and the
 collection of pixels in the image.</p>
-<p>It is also possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the
-pixel collection consists of only “White” pixels.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">getWidth</span></code> and <code class="docutils literal"><span class="pre">getHeight</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">getPixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal"><span class="pre">setPixel</span></code>.</p>
 <p>The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are

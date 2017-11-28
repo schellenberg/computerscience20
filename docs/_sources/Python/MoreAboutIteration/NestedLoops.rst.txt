@@ -203,6 +203,36 @@ the same as the current amount of green.
 
    If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
 
+Creating an Empty Image
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the pixel collection consists of only "White" pixels when it is created. We can change the color of a specific pixel by using the ``setPixel`` function.
+
+.. activecode:: empty_image_demo
+    :nocodelens:
+
+    # to run this code in Thonny, uncomment the alternate import and 
+    # window creation code. 
+
+    #import cImage as image
+    import image
+
+    width = 600
+    height = 300
+
+    #win = image.ImageWin("Window Name",600,300)
+    win = image.ImageWin(600,300)
+
+    img = image.EmptyImage(width,height)
+
+    for row in range(height):
+        for col in range(width):
+            this_pixel = image.Pixel(255, 0, 0)
+            img.setPixel(col,row,this_pixel)
+
+    img.draw(win)
+
+
 
 Image Objects
 ^^^^^^^^^^^^^
@@ -211,9 +241,6 @@ To access the pixels in a real image, we need to first create an ``Image`` objec
 ways.  First, an Image object can be made from the
 files that store digital images.  The image object has an attribute corresponding to the width, the height, and the
 collection of pixels in the image.
-
-It is also possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the
-pixel collection consists of only "White" pixels.
 
 We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods.  We can also get a pixel from a particular location in the image using ``getPixel`` and change the pixel at
 a particular location using ``setPixel``.
