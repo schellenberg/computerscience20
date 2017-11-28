@@ -111,6 +111,8 @@ Python
    Python/Functions/BooleanFunctionsWithTurtles.rst
    Python/Functions/TheAccumulatorPattern.rst
 
+   Python/MoreAboutIteration/NestedLoops.rst
+
 
 Python Practice Quizzes
 :::::::::::::::::::::::
