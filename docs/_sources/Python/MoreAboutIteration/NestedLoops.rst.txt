@@ -673,26 +673,3 @@ Check Your Understanding
       newgreen = 0
       newblue = 0
 
-
-Practice Problem
-------------------
-
-Red Remover
-~~~~~~~~~~~~
-
-Write a program that opens an image and uses a nested loop to look at all of the pixels. For each pixel, you should remove all of the red intensity from the pixel. The green and blue intensities should remain unchanged.
-
-
-.. activecode::  practice_problem_red_remover
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)

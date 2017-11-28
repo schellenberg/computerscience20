@@ -112,6 +112,7 @@ Python
    Python/Functions/TheAccumulatorPattern.rst
 
    Python/MoreAboutIteration/NestedLoops.rst
+   Python/MoreAboutIteration/ImageProcessingPractice.rst
 
 
 Python Practice Quizzes
