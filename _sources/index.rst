@@ -113,6 +113,7 @@ Python
 
    Python/MoreAboutIteration/NestedLoops.rst
    Python/MoreAboutIteration/ImageProcessingPractice.rst
+   Python/MoreAboutIteration/ImageProcessingWithSelection.rst
 
 
 Python Practice Quizzes

@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="next" title="28. Image Processing With Conditionals" href="ImageProcessingWithSelection.html" />
     <link rel="prev" title="26. Image Processing and Nested Loops" href="NestedLoops.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -198,18 +198,10 @@
 <li><a class="reference internal" href="#red-remover">27.2.1. Red Remover</a></li>
 <li><a class="reference internal" href="#red-remover-function">27.2.2. Red Remover Function</a></li>
 <li><a class="reference internal" href="#color-swapping">27.2.3. Color Swapping</a></li>
-<li><a class="reference internal" href="#half-red">27.2.4. Half Red</a></li>
-<li><a class="reference internal" href="#combining-bits-of-colors">27.2.5. Combining Bits of Colors</a></li>
-<li><a class="reference internal" href="#half-each-color">27.2.6. Half Each Color</a></li>
-<li><a class="reference internal" href="#no-red-left-side">27.2.7. No Red Left Side</a></li>
-<li><a class="reference internal" href="#blue-tint-top-right">27.2.8. Blue Tint Top Right</a></li>
-<li><a class="reference internal" href="#keep-the-green">27.2.9. Keep the Green</a></li>
-<li><a class="reference internal" href="#bottom-half-grayscale">27.2.10. Bottom Half Grayscale</a></li>
-<li><a class="reference internal" href="#repeat-left-twice">27.2.11. Repeat Left Twice</a></li>
-<li><a class="reference internal" href="#mirror-horizontal">27.2.12. Mirror Horizontal</a></li>
-<li><a class="reference internal" href="#mirror-vertical">27.2.13. Mirror Vertical</a></li>
-<li><a class="reference internal" href="#gradient">27.2.14. Gradient</a></li>
-<li><a class="reference internal" href="#enlarge">27.2.15. Enlarge</a></li>
+<li><a class="reference internal" href="#keep-the-green">27.2.4. Keep the Green</a></li>
+<li><a class="reference internal" href="#half-red">27.2.5. Half Red</a></li>
+<li><a class="reference internal" href="#combining-bits-of-colors">27.2.6. Combining Bits of Colors</a></li>
+<li><a class="reference internal" href="#half-each-color">27.2.7. Half Each Color</a></li>
 </ul>
 </li>
 </ul>
@@ -227,8 +219,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 28. Image Processing With Conditionals' data-toggle="tooltip" >
+    <a href="ImageProcessingWithSelection.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -280,7 +272,7 @@
 <p class="first admonition-title">Caution</p>
 <p class="last">Need to explain this in text. For now, I’m just going to demonstrate this in class. Essentially, just make a function that takes in an Image object, performs some pixel manipulations, then returns the converted image.</p>
 </div>
-<p>Consider the following code, in which the increase green code from yesterday is turned into a function:</p>
+<p>Consider the following code, in which the increase green code from a previous lesson is turned into a function:</p>
 
 <div data-childcomponent="increase_green_function" class="runestone explainer ac_section alert alert-warning">
 
@@ -293,7 +285,7 @@ def increase_green(original_image):
     new_image = image.EmptyImage(width, height)
     for row in range(height):
         for col in range(width):
-            p = img.getPixel(col, row)
+            p = original_image.getPixel(col, row)
 
             new_red = p.getRed()
             new_green = p.getGreen() + 50
@@ -314,7 +306,7 @@ converted_img = increase_green(img)
 converted_img.draw(win)
 </textarea>
 </div>
-<p>If you’d like to watch the function do it’s work, you can reorganize your code as follows:</p>
+<p>If you’d like the function to animate while it runs, you can reorganize your code as follows:</p>
 
 <div data-childcomponent="increase_green_function_2" class="runestone explainer ac_section alert alert-warning">
 
@@ -326,7 +318,7 @@ def increase_green(original_image, window):
     height = original_image.getHeight()
     new_image = image.EmptyImage(width, height)
 
-    img.draw(window)
+    original_image.draw(window)
 
     for row in range(height):
         for col in range(width):
@@ -421,118 +413,8 @@ img.draw(win)
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="half-red">
-<h3>27.2.4. Half Red<a class="headerlink" href="#half-red" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that sets each pixel’s red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_half_red" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_half_red data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="combining-bits-of-colors">
-<h3>27.2.5. Combining Bits of Colors<a class="headerlink" href="#combining-bits-of-colors" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that sets each pixel’s blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_combining_colors" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_combining_colors data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="half-each-color">
-<h3>27.2.6. Half Each Color<a class="headerlink" href="#half-each-color" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that sets each pixel’s RGB intensities to be half of their original value.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_half_each_color" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_half_each_color data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="no-red-left-side">
-<h3>27.2.7. No Red Left Side<a class="headerlink" href="#no-red-left-side" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that sets the red intensity of all pixels on the left half of the picture to be 0. On the right side of the picture, the red intensity should remain the same as the original value. The green and blue intensities should remain the same as the original for all parts of the image.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_no_red_left_side" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_no_red_left_side data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="blue-tint-top-right">
-<h3>27.2.8. Blue Tint Top Right<a class="headerlink" href="#blue-tint-top-right" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that makes the top right quarter of the image be tinted blue.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_blue_tint_top_right" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_blue_tint_top_right data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
 <div class="section" id="keep-the-green">
-<h3>27.2.9. Keep the Green<a class="headerlink" href="#keep-the-green" title="Permalink to this headline">¶</a></h3>
+<h3>27.2.4. Keep the Green<a class="headerlink" href="#keep-the-green" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that keeps only the green values of all pixels in the image. Once it is working, turn the code into a function.</p>
 <blockquote>
 <div>
@@ -553,14 +435,14 @@ img.draw(win)
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="bottom-half-grayscale">
-<h3>27.2.10. Bottom Half Grayscale<a class="headerlink" href="#bottom-half-grayscale" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that turns the bottom half of the picture into a grayscale image. The top half should remain the same as the original image.</p>
+<div class="section" id="half-red">
+<h3>27.2.5. Half Red<a class="headerlink" href="#half-red" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that sets each pixel’s red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image. <em>Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_bottom_half_grayscale" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problem_half_red" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_bottom_half_grayscale data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_half_red data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
 img = image.Image("luther.jpg")
@@ -575,14 +457,14 @@ img.draw(win)
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="repeat-left-twice">
-<h3>27.2.11. Repeat Left Twice<a class="headerlink" href="#repeat-left-twice" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that takes the left side of an image and displays it both on the left half, and the right half, of the image. In other words, replace the right side of the image with a copy of the left side of the image.</p>
+<div class="section" id="combining-bits-of-colors">
+<h3>27.2.6. Combining Bits of Colors<a class="headerlink" href="#combining-bits-of-colors" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that sets each pixel’s blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image. <em>Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_repeat_left_twice" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problem_combining_colors" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_repeat_left_twice data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_combining_colors data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
 img = image.Image("luther.jpg")
@@ -597,80 +479,14 @@ img.draw(win)
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="mirror-horizontal">
-<h3>27.2.12. Mirror Horizontal<a class="headerlink" href="#mirror-horizontal" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. If you get it working, try to turn this into a function!</p>
+<div class="section" id="half-each-color">
+<h3>27.2.7. Half Each Color<a class="headerlink" href="#half-each-color" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that sets each pixel’s RGB intensities to be half of their original value. <em>Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_mirror_horizontal" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problem_half_each_color" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_mirror_horizontal data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="mirror-vertical">
-<h3>27.2.13. Mirror Vertical<a class="headerlink" href="#mirror-vertical" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. If you get it working, try to turn this into a function!</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_mirror_vertical" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_mirror_vertical data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="gradient">
-<h3>27.2.14. Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and after each row, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
-
-# your code goes here!
-
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="enlarge">
-<h3>27.2.15. Enlarge<a class="headerlink" href="#enlarge" title="Permalink to this headline">¶</a></h3>
-<p>Write a function to uniformly enlarge an image by a factor of 2 (double the size).</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_half_each_color data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
 img = image.Image("luther.jpg")
@@ -698,12 +514,12 @@ img.draw(win)
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="NestedLoops.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 28. Image Processing With Conditionals' data-toggle="tooltip" >
+    <a href="ImageProcessingWithSelection.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingWithSelection.html" >Next Section - 28. Image Processing With Conditionals</a>
 
 <script type="text/javascript">
 

@@ -25,7 +25,7 @@ Image Conversion with Functions
 .. caution:: Need to explain this in text. For now, I'm just going to demonstrate this in class. Essentially, just make a function that takes in an Image object, performs some pixel manipulations, then returns the converted image.
 
 
-Consider the following code, in which the increase green code from yesterday is turned into a function:
+Consider the following code, in which the increase green code from a previous lesson is turned into a function:
 
 
 .. activecode::  increase_green_function
@@ -39,7 +39,7 @@ Consider the following code, in which the increase green code from yesterday is 
         new_image = image.EmptyImage(width, height)
         for row in range(height):
             for col in range(width):
-                p = img.getPixel(col, row)
+                p = original_image.getPixel(col, row)
 
                 new_red = p.getRed()
                 new_green = p.getGreen() + 50
@@ -59,7 +59,8 @@ Consider the following code, in which the increase green code from yesterday is 
 
     converted_img.draw(win)
 
-If you'd like to watch the function do it's work, you can reorganize your code as follows:
+
+If you'd like the function to animate while it runs, you can reorganize your code as follows:
 
 .. activecode::  increase_green_function_2
     :nocodelens:
@@ -71,7 +72,7 @@ If you'd like to watch the function do it's work, you can reorganize your code a
         height = original_image.getHeight()
         new_image = image.EmptyImage(width, height)
         
-        img.draw(window)
+        original_image.draw(window)
         
         for row in range(height):
             for col in range(width):
@@ -179,108 +180,6 @@ Write a program that sets the red value to the original green value, the green v
     img.draw(win)
 
 
-Half Red
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write a program that sets each pixel's red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image.
-
- .. activecode::  practice_problem_half_red
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-Combining Bits of Colors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write a program that sets each pixel's blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image.
-
- .. activecode::  practice_problem_combining_colors
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-Half Each Color
-~~~~~~~~~~~~~~~~~~~
-
-Write a program that sets each pixel's RGB intensities to be half of their original value.
-
- .. activecode::  practice_problem_half_each_color
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-
-No Red Left Side
-~~~~~~~~~~~~~~~~~~~
-
-Write a program that sets the red intensity of all pixels on the left half of the picture to be 0. On the right side of the picture, the red intensity should remain the same as the original value. The green and blue intensities should remain the same as the original for all parts of the image.
-
- .. activecode::  practice_problem_no_red_left_side
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-
-Blue Tint Top Right
-~~~~~~~~~~~~~~~~~~~~
-
-Write a program that makes the top right quarter of the image be tinted blue.
-
- .. activecode::  practice_problem_blue_tint_top_right
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
 Keep the Green
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -301,13 +200,12 @@ Write a program that keeps only the green values of all pixels in the image. Onc
     img.draw(win)
 
 
+Half Red
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bottom Half Grayscale
-~~~~~~~~~~~~~~~~~~~~~~
+Write a program that sets each pixel's red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
 
-Write a program that turns the bottom half of the picture into a grayscale image. The top half should remain the same as the original image.
-
- .. activecode::  practice_problem_bottom_half_grayscale
+ .. activecode::  practice_problem_half_red
     :nocodelens:
 
     import image
@@ -322,13 +220,12 @@ Write a program that turns the bottom half of the picture into a grayscale image
     img.draw(win)
 
 
+Combining Bits of Colors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Repeat Left Twice
-~~~~~~~~~~~~~~~~~~~~~~
+Write a program that sets each pixel's blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
 
-Write a program that takes the left side of an image and displays it both on the left half, and the right half, of the image. In other words, replace the right side of the image with a copy of the left side of the image.
-
- .. activecode::  practice_problem_repeat_left_twice
+ .. activecode::  practice_problem_combining_colors
     :nocodelens:
 
     import image
@@ -343,13 +240,12 @@ Write a program that takes the left side of an image and displays it both on the
     img.draw(win)
 
 
+Half Each Color
+~~~~~~~~~~~~~~~~~~~
 
-Mirror Horizontal
-~~~~~~~~~~~~~~~~~~~~~~
+Write a program that sets each pixel's RGB intensities to be half of their original value. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
 
-Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. If you get it working, try to turn this into a function!
-
- .. activecode::  practice_problem_mirror_horizontal
+ .. activecode::  practice_problem_half_each_color
     :nocodelens:
 
     import image
@@ -364,65 +260,5 @@ Write a program that mirrors an image from left to right around a vertical line 
     img.draw(win)
 
 
-
-Mirror Vertical
-~~~~~~~~~~~~~~~~~~~~~~
-
-Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. If you get it working, try to turn this into a function!
-
- .. activecode::  practice_problem_mirror_vertical
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-
-Gradient
-~~~~~~~~~
-
-Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and after each row, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.
-
- .. activecode::  practice_problem_gradient
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
-
-
-Enlarge
-~~~~~~~~
-
-Write a function to uniformly enlarge an image by a factor of 2 (double the size).
-
- .. activecode::  practice_problem_gradient
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
-
-    # your code goes here!    
-
-    img.draw(win)
 
 

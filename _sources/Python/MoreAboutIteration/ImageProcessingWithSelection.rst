@@ -22,76 +22,52 @@ Image Processing With Conditionals
 Demonstration
 ---------------------------------
 
+Say you had an image that looked like this:
+
+.. raw:: html
+
+    <img src="../../_static/moon.jpg" id="moon.jpg">
+    <h4 style="text-align: center;">moon.jpg</h4>
 
 
-Consider the following code, in which the increase green code from a previous lesson is turned into a function:
+Due to the contrast in the image, we can apply certain effects to only a portion of the image. For example, we could turn the sky (which is currently black) into another colour, while leaving the moon itself untouched. The following code turns the sky a light gray colour.
 
-
-.. activecode::  increase_green_function
+.. activecode::  isolate_the_moon
     :nocodelens:
 
     import image
 
-    def increase_green(original_image):
-        width = original_image.getWidth()
-        height = original_image.getHeight()
-        new_image = image.EmptyImage(width, height)
-        for row in range(height):
-            for col in range(width):
-                p = original_image.getPixel(col, row)
+    img = image.Image("moon.jpg")
+    width = img.getWidth()
+    height = img.getHeight()
 
-                new_red = p.getRed()
-                new_green = p.getGreen() + 50
-                new_blue = p.getBlue()
+    win = image.ImageWin(width, height)
 
-                new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-                new_image.setPixel(col, row, new_pixel)
-        return new_image
-
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
+    img.setDelay(1,15)   # setDelay(0) turns off animation
 
-    converted_img = increase_green(img)
+    for x in range(width):
+        for y in range(height):
+            this_pixel = img.getPixel(col, row)
 
-    converted_img.draw(win)
+            r = this_pixel.getRed()
+            g = this_pixel.getGreen()
+            b = this_pixel.getBlue()
 
-If you'd like to watch the function do it's work, you can reorganize your code as follows:
+            if r + g + b < 30:
+                new_red = 100
+                new_green = 100
+                new_blue = 100
+            else:
+                new_red = r
+                new_green = g
+                new_blue = b
 
-.. activecode::  increase_green_function_2
-    :nocodelens:
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-    import image
+            img.setPixel(col, row, new_pixel)
 
-    def increase_green(original_image, window):
-        width = original_image.getWidth()
-        height = original_image.getHeight()
-        new_image = image.EmptyImage(width, height)
-        
-        original_image.draw(window)
-        
-        for row in range(height):
-            for col in range(width):
-                p = img.getPixel(col, row)
-
-                new_red = p.getRed()
-                new_green = p.getGreen() + 50
-                new_blue = p.getBlue()
-
-                new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-                new_image.setPixel(col, row, new_pixel)
-            new_image.draw(window)
-        return new_image
-
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-
-    converted_img = increase_green(img, win)
-    converted_img.draw(win)
+    img.draw(win)
 
 
 Practice Problems
@@ -102,18 +78,23 @@ For the following problems, use one of these images:
 
 .. raw:: html
 
-    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
-    <h4 style="text-align: center;">luther.jpg</h4>
+    <img src="../../_static/bird-far.jpg" id="bird-far.jpg">
+    <h4 style="text-align: center;">bird-far.jpg</h4>
 
 .. raw:: html
 
-    <img src="../../_static/cy.png" id="cy.png">
-    <h4 style="text-align: center;">cy.png</h4>
+    <img src="../../_static/berries.jpg" id="berries.jpg">
+    <h4 style="text-align: center;">berries.jpg</h4>
 
 .. raw:: html
 
-    <img src="../../_static/goldygopher.png" id="goldygopher.png">
-    <h4 style="text-align: center;">goldygopher.png</h4>
+    <img src="../../_static/rooster.jpg" id="rooster.jpg">
+    <h4 style="text-align: center;">rooster.jpg</h4>
+
+.. raw:: html
+
+    <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
+    <h4 style="text-align: center;">sneakers.jpg</h4>
 
 
 No Red Left Side
@@ -286,4 +267,4 @@ Write a function to uniformly enlarge an image by a factor of 2 (double the size
 Acknowledgments
 ~~~~~~~~~~~~~~~~~~
 
-Images are from `Pexels <url>`_, and are licensed as CC-0. Emoji artwork is provided by `EmojiOne <https://www.emojione.com/>`_ EmojiOne and is licensed under `CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode>`_.
+Images are from `Pexels <https://www.pexels.com/>`_, and are licensed as CC-0. Emoji artwork is provided by `EmojiOne <https://www.emojione.com/>`_ EmojiOne and is licensed under `CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode>`_.
