@@ -31,4 +31,11 @@ The Computer Science Implementation Support Team contributed many helpful sugges
 This interactive book uses the `Runestone Interactive tools <http://runestoneinteractive.org>`_, which you can find on `GitHub <https://github.com/RunestoneInteractive>`_. The Runestone Interactive tools allowed me to focus on the content, instead of worrying about how to present the content.
 
 
+Images Used
+~~~~~~~~~~~~
+
+The images that are used for the Python Image Processing sections come from:
+
+- `Pexels <https://www.pexels.com>`_ (CC0 license)
+- `EmojiOne <https://github.com/emojione/emojione/tree/2.2.7>`_ (CC-BY) - this applies to any emoji used in image processing
 
