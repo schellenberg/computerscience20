@@ -24,6 +24,7 @@ Image Conversion with Functions
 
 .. caution:: Need to explain this in text. For now, I'm just going to demonstrate this in class. Essentially, just make a function that takes in an Image object, performs some pixel manipulations, then returns the converted image.
 
+
 Consider the following code, in which the increase green code from yesterday is turned into a function:
 
 
@@ -96,6 +97,24 @@ If you'd like to watch the function do it's work, you can reorganize your code a
 
 Practice Problems
 ------------------
+
+For the following problems, use one of these images:
+
+
+.. raw:: html
+
+    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
+    <h4 style="text-align: center;">luther.jpg</h4>
+
+.. raw:: html
+
+    <img src="../../_static/cy.png" id="cy.png">
+    <h4 style="text-align: center;">cy.png</h4>
+
+.. raw:: html
+
+    <img src="../../_static/goldygopher.png" id="goldygopher.png">
+    <h4 style="text-align: center;">goldygopher.png</h4>
 
 Red Remover
 ~~~~~~~~~~~~
