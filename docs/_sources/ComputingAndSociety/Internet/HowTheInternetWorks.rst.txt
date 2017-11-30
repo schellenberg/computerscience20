@@ -1,0 +1,82 @@
+
+How the Internet Works Videos
+==============================
+
+The following videos were created by Code.org, and are released under a Creative Commons BY-NC-ND license. Showing these videos at the start of class (one per day) for a number of days can be a really nice way to start some conversations about the technology that powers the Internet.
+
+
+.. reveal:: curriculum_addressed
+    :showtitle: Curriculum Objectives Addressed In This Section
+
+    - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.
+
+
+What is the Internet?
+---------------------------
+
+.. youtube:: Dxcc6ycZ73M
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+Wires, Cables & Wifi
+--------------------------------------
+
+.. youtube:: ZhEf7e4kopM
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+IP Addresses & DNS
+--------------------------------------
+
+.. youtube:: ZhEf7e4kopM
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+HTTP & HTML
+--------------------------------------
+
+.. youtube:: kBXQZMmiA4s
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+Encryption & Public Keys
+--------------------------------------
+
+.. youtube:: ZghMPWGXexs
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+Cybersecurity & Crime
+--------------------------------------
+
+.. youtube:: AuYNXgO_f3Y
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+
+How Search Works
+--------------------------------------
+
+.. youtube:: LVV_93mBfSU
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
