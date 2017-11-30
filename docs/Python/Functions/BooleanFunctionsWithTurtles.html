@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>24. Boolean Functions and Randomly Walking Turtles &#8212; Computer Science 20 Saskatchewan</title>
+    <title>25. Boolean Functions and Randomly Walking Turtles &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
-    <link rel="prev" title="23. User Controlled Turtle Race" href="UserControlledTurtleRace.html" />
+    <link rel="next" title="26. Image Processing and Nested Loops" href="../MoreAboutIteration/NestedLoops.html" />
+    <link rel="prev" title="24. User Controlled Turtle Race" href="UserControlledTurtleRace.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,13 +192,13 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">24. Boolean Functions and Randomly Walking Turtles</a><ul>
-<li><a class="reference internal" href="#boolean-functions">24.1. Boolean Functions</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">24.1.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#">25. Boolean Functions and Randomly Walking Turtles</a><ul>
+<li><a class="reference internal" href="#boolean-functions">25.1. Boolean Functions</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">25.1.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#randomly-walking-turtles">24.2. Randomly Walking Turtles</a></li>
-<li><a class="reference internal" href="#detecting-if-turtles-are-touching">24.3. Detecting If Turtles are Touching</a></li>
+<li><a class="reference internal" href="#randomly-walking-turtles">25.2. Randomly Walking Turtles</a></li>
+<li><a class="reference internal" href="#detecting-if-turtles-are-touching">25.3. Detecting If Turtles are Touching</a></li>
 </ul>
 </li>
 </ul>
@@ -208,14 +208,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 23. User Controlled Turtle Race" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 24. User Controlled Turtle Race" data-toggle="tooltip">
     <a href="UserControlledTurtleRace.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 26. Image Processing and Nested Loops' data-toggle="tooltip" >
+    <a href="../MoreAboutIteration/NestedLoops.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -246,7 +246,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="boolean-functions-and-randomly-walking-turtles">
-<h1>24. Boolean Functions and Randomly Walking Turtles<a class="headerlink" href="#boolean-functions-and-randomly-walking-turtles" title="Permalink to this headline">¶</a></h1>
+<h1>25. Boolean Functions and Randomly Walking Turtles<a class="headerlink" href="#boolean-functions-and-randomly-walking-turtles" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Introduce the idea of Boolean functions (which return either True or False). Demonstrate two Boolean functions relating to turtle graphics.</p>
@@ -262,7 +262,7 @@
 
     </div>
     <div class="section" id="boolean-functions">
-<h2>24.1. Boolean Functions<a class="headerlink" href="#boolean-functions" title="Permalink to this headline">¶</a></h2>
+<h2>25.1. Boolean Functions<a class="headerlink" href="#boolean-functions" title="Permalink to this headline">¶</a></h2>
 <p>We have already seen that boolean values result from the evaluation of boolean expressions.  Since the result of any expression evaluation can be returned by a function (using the <code class="docutils literal"><span class="pre">return</span></code> statement), functions can return boolean values.  This turns out to be a very convenient way to hide the details of complicated tests. For example:</p>
 
 <div data-childcomponent="boolean_functions_1" class="runestone explainer ac_section alert alert-warning">
@@ -366,7 +366,7 @@ $(window).resize(function() {
 </script>
 </div>
 <div class="section" id="check-your-understanding">
-<h3>24.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>25.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="boolean_function_check_1">
@@ -398,7 +398,7 @@ $(window).resize(function() {
             </div>
 </div>
 <div class="section" id="randomly-walking-turtles">
-<h2>24.2. Randomly Walking Turtles<a class="headerlink" href="#randomly-walking-turtles" title="Permalink to this headline">¶</a></h2>
+<h2>25.2. Randomly Walking Turtles<a class="headerlink" href="#randomly-walking-turtles" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we want to entertain ourselves by watching a turtle wander around
 randomly inside the screen.  When we run the program we want the turtle and
 program to behave in the following way:</p>
@@ -560,7 +560,7 @@ with confidence the next time you need it.  Breaking up this
 program into a couple of parts is an example of <strong>functional decomposition</strong> (in which a problem is broken down into smaller parts, in order to make solving each part of the problem easier).</p>
 </div>
 <div class="section" id="detecting-if-turtles-are-touching">
-<h2>24.3. Detecting If Turtles are Touching<a class="headerlink" href="#detecting-if-turtles-are-touching" title="Permalink to this headline">¶</a></h2>
+<h2>25.3. Detecting If Turtles are Touching<a class="headerlink" href="#detecting-if-turtles-are-touching" title="Permalink to this headline">¶</a></h2>
 <p>When trying to create a visualization with turtles, it can be helpful to be able to ask if two turtles are “touching” each other. One fairly simple way to test this is to create a boolean function that determines if the turtles are within some distance of each other. To do this, we will use the distance equation that you have likely learned in math class.</p>
 <p>Assume that we want to find the distance between the two turtles (represented by circles) below. The turtle locations are (x1, y1) and (x2, y2), respectively.</p>
 <img alt="../../_images/turtle_distance.png" src="../../_images/turtle_distance.png" />
@@ -633,19 +633,19 @@ print("That's close enough!")
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 23. User Controlled Turtle Race' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 24. User Controlled Turtle Race' data-toggle="tooltip">
     <a href="UserControlledTurtleRace.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="UserControlledTurtleRace.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 26. Image Processing and Nested Loops' data-toggle="tooltip" >
+    <a href="../MoreAboutIteration/NestedLoops.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../MoreAboutIteration/NestedLoops.html" >Next Section - 26. Image Processing and Nested Loops</a>
 
 <script type="text/javascript">
 

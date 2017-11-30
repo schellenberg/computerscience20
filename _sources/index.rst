@@ -103,17 +103,19 @@ Python
 
    Python/Functions/MoreFunctionDetails.rst
    Python/Functions/WritingFruitfulFunctionsPractice.rst
+   Python/Functions/TheAccumulatorPattern.rst
+
    Python/Functions/MicrobitReactionGame.rst
    Python/Functions/MicrobitFunctions.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
    Python/Functions/UserControlledTurtleRace.rst
    Python/Functions/BooleanFunctionsWithTurtles.rst
-   Python/Functions/TheAccumulatorPattern.rst
 
    Python/MoreAboutIteration/NestedLoops.rst
    Python/MoreAboutIteration/ImageProcessingPractice.rst
    Python/MoreAboutIteration/ImageProcessingWithSelection.rst
+
 
 
 Python Practice Quizzes
