@@ -51,25 +51,49 @@ Sometimes, we'd like to wait a bit before running the next command in a Python p
 	print("All done!")
 
 
-Micro:bit
-----------
+Micro:bit Setup
+----------------
 
-.. note:: If you are on a Windows machine (< Windows 10), you will need to download the `mbed driver <https://os.mbed.com/handbook/Windows-serial-configuration>`_ if you want to use your Micro:bit as an input/output device. If you are on Mac, Linux, or Windows 10, no driver install is required. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done).
+Installing a Driver If Using Legacy Windows OS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+**The following only applies to users of Windows that are on a version earlier than Windows 10. If you are using Windows 10, Mac, or Linux, you can skip this step.**
+
+If you are on a Windows machine (*< Windows 10*), you will need to download the `mbed driver <https://os.mbed.com/handbook/Windows-serial-configuration>`_ if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done, and none of the examples in the textbook will work).
+
+Micro:bit Modes
+~~~~~~~~~~~~~~~
 
 Your Micro:bit can be used in two modes:
 
-- running "flashed" code, independent of a computer (can run on batteries, or another power source)
+- running "flashed" code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)
 - communicating through the serial port with your computer as an input/output device
 
-The rest of today's demo's will assume that we are using the Micro:bit as an input/output device communicating through the serial port of your computer. To use the Micro:bit as an input/output device, you need to "flash" it with a .hex file that contains code to communicate with your computer. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -> Manage plug-ins..., then type ``thonny-flash-microbitio`` into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the "Flash I/O .hex to BBC Microbit" icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python via the bitio module.
+For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating through the serial port. In order to do this, we need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). You should only have to do this once, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.
+
+.. note::
+	
+	If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the` Microbit website <http://microbit.org/>`_. 
+
+Flashing the Micro:bit
+~~~~~~~~~~~~~~~~~~~~~~
+
+To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -> Manage plug-ins..., then type ``thonny-flash-microbitio`` into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the "Flash I/O .hex to BBC Microbit" icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).
 
 .. image:: images/bitio.png
 
-
 .. note:: The ``thonny-flash-microbitio`` was written very quickly to try to ease the process of getting the Micro:bit going in my class, and is currently very much alpha quality. If the process fails for any reason, you can do the same thing manually. Download the `bitio module <https://github.com/whaleygeek/bitio/archive/master.zip>`_ and extract the contents of the .zip file. Flash the Micro:bit by dragging and dropping the ``bitio.hex`` file inside the folder you just extracted onto the ``MICROBIT`` device (in Windows Explorer, or the Mac Finder). 
 
-Now, install the package ``cs20-microbitio`` in Thonny. To do that, go to Tools -> Manage packages..., type in cs20-microbitio into the search bar, and install. Once you have done that, try running the code below::
+Installing the Micro:bit Module in Thonny
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to communicate with the microbit in Python, you need to install the package ``cs20-microbitio`` in Thonny. To do that, go to Tools -> Manage packages..., type in cs20-microbitio into the search bar, and install. You only need to do this once, after which you should be able to use ``import microbit`` whenever you want to interact with the Micro:bit in Python.
+
+
+Using the Micro:bit
+--------------------
+
+Once you have done that, try running the code below::
 
 	import microbit
 
@@ -96,7 +120,7 @@ When you press Run, there will be a prompt in the console telling you to disconn
 Once the connection is established, you should see the message scroll across the 5x5 LED grid on your Micro:bit.
 
 Look at the :ref:`microbit_reference` in the appendix, and run some of the demonstration code found there to get a sense of what the Micro:bit can do.
-  
+
 
 Now that you've seen how some things can be accomplished, try this:
 

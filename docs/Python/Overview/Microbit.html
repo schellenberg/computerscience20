@@ -194,7 +194,14 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">11. The Time Module and Using a Micro:bit</a><ul>
 <li><a class="reference internal" href="#time-module">11.1. Time Module</a></li>
-<li><a class="reference internal" href="#micro-bit">11.2. Micro:bit</a></li>
+<li><a class="reference internal" href="#micro-bit-setup">11.2. Micro:bit Setup</a><ul>
+<li><a class="reference internal" href="#installing-a-driver-if-using-legacy-windows-os">11.2.1. Installing a Driver If Using Legacy Windows OS</a></li>
+<li><a class="reference internal" href="#micro-bit-modes">11.2.2. Micro:bit Modes</a></li>
+<li><a class="reference internal" href="#flashing-the-micro-bit">11.2.3. Flashing the Micro:bit</a></li>
+<li><a class="reference internal" href="#installing-the-micro-bit-module-in-thonny">11.2.4. Installing the Micro:bit Module in Thonny</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-micro-bit">11.3. Using the Micro:bit</a></li>
 </ul>
 </li>
 </ul>
@@ -291,24 +298,43 @@ print("All done!")
 </textarea>
 </div>
 </div>
-<div class="section" id="micro-bit">
-<h2>11.2. Micro:bit<a class="headerlink" href="#micro-bit" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are on a Windows machine (&lt; Windows 10), you will need to download the <a class="reference external" href="https://os.mbed.com/handbook/Windows-serial-configuration">mbed driver</a> if you want to use your Micro:bit as an input/output device. If you are on Mac, Linux, or Windows 10, no driver install is required. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done).</p>
+<div class="section" id="micro-bit-setup">
+<h2>11.2. Micro:bit Setup<a class="headerlink" href="#micro-bit-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-a-driver-if-using-legacy-windows-os">
+<h3>11.2.1. Installing a Driver If Using Legacy Windows OS<a class="headerlink" href="#installing-a-driver-if-using-legacy-windows-os" title="Permalink to this headline">¶</a></h3>
+<p><strong>The following only applies to users of Windows that are on a version earlier than Windows 10. If you are using Windows 10, Mac, or Linux, you can skip this step.</strong></p>
+<p>If you are on a Windows machine (<em>&lt; Windows 10</em>), you will need to download the <a class="reference external" href="https://os.mbed.com/handbook/Windows-serial-configuration">mbed driver</a> if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done, and none of the examples in the textbook will work).</p>
 </div>
+<div class="section" id="micro-bit-modes">
+<h3>11.2.2. Micro:bit Modes<a class="headerlink" href="#micro-bit-modes" title="Permalink to this headline">¶</a></h3>
 <p>Your Micro:bit can be used in two modes:</p>
 <ul class="simple">
-<li>running “flashed” code, independent of a computer (can run on batteries, or another power source)</li>
+<li>running “flashed” code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)</li>
 <li>communicating through the serial port with your computer as an input/output device</li>
 </ul>
-<p>The rest of today’s demo’s will assume that we are using the Micro:bit as an input/output device communicating through the serial port of your computer. To use the Micro:bit as an input/output device, you need to “flash” it with a .hex file that contains code to communicate with your computer. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -&gt; Manage plug-ins…, then type <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the “Flash I/O .hex to BBC Microbit” icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python via the bitio module.</p>
+<p>For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating through the serial port. In order to do this, we need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). You should only have to do this once, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the` Microbit website &lt;http://microbit.org/&gt;`_.</p>
+</div>
+</div>
+<div class="section" id="flashing-the-micro-bit">
+<h3>11.2.3. Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
+<p>To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -&gt; Manage plug-ins…, then type <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the “Flash I/O .hex to BBC Microbit” icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).</p>
 <img alt="../../_images/bitio.png" src="../../_images/bitio.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> was written very quickly to try to ease the process of getting the Micro:bit going in my class, and is currently very much alpha quality. If the process fails for any reason, you can do the same thing manually. Download the <a class="reference external" href="https://github.com/whaleygeek/bitio/archive/master.zip">bitio module</a> and extract the contents of the .zip file. Flash the Micro:bit by dragging and dropping the <code class="docutils literal"><span class="pre">bitio.hex</span></code> file inside the folder you just extracted onto the <code class="docutils literal"><span class="pre">MICROBIT</span></code> device (in Windows Explorer, or the Mac Finder).</p>
 </div>
-<p>Now, install the package <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> in Thonny. To do that, go to Tools -&gt; Manage packages…, type in cs20-microbitio into the search bar, and install. Once you have done that, try running the code below:</p>
+</div>
+<div class="section" id="installing-the-micro-bit-module-in-thonny">
+<h3>11.2.4. Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
+<p>In order to communicate with the microbit in Python, you need to install the package <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> in Thonny. To do that, go to Tools -&gt; Manage packages…, type in cs20-microbitio into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
+</div>
+</div>
+<div class="section" id="using-the-micro-bit">
+<h2>11.3. Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this headline">¶</a></h2>
+<p>Once you have done that, try running the code below:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Hey there, CS20&quot;</span><span class="p">)</span>
