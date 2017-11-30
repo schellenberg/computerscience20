@@ -193,17 +193,27 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">28. Image Processing With Conditionals</a><ul>
-<li><a class="reference internal" href="#demonstration">28.1. Demonstration</a></li>
-<li><a class="reference internal" href="#practice-problems">28.2. Practice Problems</a><ul>
-<li><a class="reference internal" href="#no-red-left-side">28.2.1. No Red Left Side</a></li>
-<li><a class="reference internal" href="#blue-tint-top-right">28.2.2. Blue Tint Top Right</a></li>
-<li><a class="reference internal" href="#bottom-half-grayscale">28.2.3. Bottom Half Grayscale</a></li>
-<li><a class="reference internal" href="#repeat-left-twice">28.2.4. Repeat Left Twice</a></li>
-<li><a class="reference internal" href="#mirror-horizontal">28.2.5. Mirror Horizontal</a></li>
-<li><a class="reference internal" href="#mirror-vertical">28.2.6. Mirror Vertical</a></li>
-<li><a class="reference internal" href="#gradient">28.2.7. Gradient</a></li>
-<li><a class="reference internal" href="#enlarge">28.2.8. Enlarge</a></li>
-<li><a class="reference internal" href="#acknowledgments">28.2.9. Acknowledgments</a></li>
+<li><a class="reference internal" href="#applying-an-effect-based-on-pixel-colour">28.1. Applying an Effect Based on Pixel Colour</a><ul>
+<li><a class="reference internal" href="#try-this">28.1.1. Try This</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#applying-an-effect-to-an-area-of-an-image">28.2. Applying an Effect to an Area of an Image</a><ul>
+<li><a class="reference internal" href="#id1">28.2.1. Try This</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#combining-images">28.3. Combining Images</a><ul>
+<li><a class="reference internal" href="#id3">28.3.1. Try This</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practice-problems">28.4. Practice Problems</a><ul>
+<li><a class="reference internal" href="#no-red-left-side">28.4.1. No Red Left Side</a></li>
+<li><a class="reference internal" href="#blue-tint-top-right">28.4.2. Blue Tint Top Right</a></li>
+<li><a class="reference internal" href="#change-the-rooster-colour">28.4.3. Change the Rooster Colour</a></li>
+<li><a class="reference internal" href="#repeat-left-twice">28.4.4. Repeat Left Twice</a></li>
+<li><a class="reference internal" href="#mirror-horizontal">28.4.5. Mirror Horizontal</a></li>
+<li><a class="reference internal" href="#mirror-vertical">28.4.6. Mirror Vertical</a></li>
+<li><a class="reference internal" href="#gradient">28.4.7. Gradient</a></li>
+<li><a class="reference internal" href="#acknowledgments">28.4.8. Acknowledgments</a></li>
 </ul>
 </li>
 </ul>
@@ -268,8 +278,8 @@
 </ul>
 
     </div>
-    <div class="section" id="demonstration">
-<h2>28.1. Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="applying-an-effect-based-on-pixel-colour">
+<h2>28.1. Applying an Effect Based on Pixel Colour<a class="headerlink" href="#applying-an-effect-based-on-pixel-colour" title="Permalink to this headline">¶</a></h2>
 <p>Say you had an image that looked like this:</p>
 <img src="../../_static/moon.jpg" id="moon.jpg">
 <h4 style="text-align: center;">moon.jpg</h4><p>Due to the contrast in the image, we can apply certain effects to only a portion of the image. For example, we could turn the sky (which is currently black) into another colour, while leaving the moon itself untouched. The following code turns the sky a light gray colour.</p>
@@ -277,25 +287,35 @@
 <div data-childcomponent="isolate_the_moon" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=isolate_the_moon data-lang="python"    data-timelimit=25000   data-audio=''     >
+# import the module so we can access images
 import image
 
+# open an image
 img = image.Image("moon.jpg")
+
+# figure out how large the image is
 width = img.getWidth()
 height = img.getHeight()
 
+# make a window to draw on
 win = image.ImageWin(width, height)
 
+# draw the original image onto the window
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
 
+# use a nested for loop to look at every pixel in the image
 for x in range(width):
     for y in range(height):
-        this_pixel = img.getPixel(col, row)
+        # get the current pixel
+        this_pixel = img.getPixel(x, y)
 
+        # access the amount of red, green and blue for this pixel
         r = this_pixel.getRed()
         g = this_pixel.getGreen()
         b = this_pixel.getBlue()
 
+        # apply any effect to the pixels
         if r + g + b < 30:
             new_red = 100
             new_green = 100
@@ -305,23 +325,162 @@ for x in range(width):
             new_green = g
             new_blue = b
 
+        # create a new pixel with changed values
         new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-        img.setPixel(col, row, new_pixel)
+        # reassign the pixel value in the image to be the changed version
+        img.setPixel(x, y, new_pixel)
 
+# draw the changed image to the window
 img.draw(win)
 </textarea>
 </div>
+<div class="section" id="try-this">
+<h3>28.1.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<p>Adapt the code above to:</p>
+<ul class="simple">
+<li>change the color of the sky to a different colour (something other than gray)</li>
+<li>instead of changing the sky, adapt the program to tint the moon slightly blue</li>
+<li>switch the image to be <code class="docutils literal"><span class="pre">bird-far.jpg</span></code>, then change the program so that all of the sky is “erased” (turned white), while the bird itself is left alone</li>
+</ul>
+</div>
+</div>
+<div class="section" id="applying-an-effect-to-an-area-of-an-image">
+<h2>28.2. Applying an Effect to an Area of an Image<a class="headerlink" href="#applying-an-effect-to-an-area-of-an-image" title="Permalink to this headline">¶</a></h2>
+<p>You might want to affect only one area of an image. For example, perhaps you want to make the left half of the following image grayscale, but leave the right half of the image unchanged.</p>
+<img src="../../_static/sneakers.jpg" id="sneakers.jpg">
+<h4 style="text-align: center;">sneakers.jpg</h4><p>To apply an effect to just the left hand side, we can write a program that iterates through every pixel, but only apply the grayscale effect if the x coordinate is in the left half of the image. Here is a program that does just that:</p>
+
+<div data-childcomponent="grayscale_left_half" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=grayscale_left_half data-lang="python"    data-timelimit=25000   data-audio=''     >
+# import the module so we can access images
+import image
+
+# open an image
+img = image.Image("sneakers.jpg")
+
+# figure out how large the image is
+width = img.getWidth()
+height = img.getHeight()
+
+# make a window to draw on
+win = image.ImageWin(width, height)
+
+# draw the original image onto the window
+img.draw(win)
+img.setDelay(1,15)   # setDelay(0) turns off animation
+
+# use a nested for loop to look at every pixel in the image
+for x in range(width):
+    for y in range(height):
+        # get the current pixel
+        this_pixel = img.getPixel(x, y)
+
+        # access the amount of red, green and blue for this pixel
+        r = this_pixel.getRed()
+        g = this_pixel.getGreen()
+        b = this_pixel.getBlue()
+
+        # apply any effect to the pixels
+        if x < width/2:
+            average = int((r + b + g) / 3)
+            new_red = average
+            new_green = average
+            new_blue = average
+        else:
+            new_red = r
+            new_green = g
+            new_blue = b
+
+        # create a new pixel with changed values
+        new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+        # reassign the pixel value in the image to be the changed version
+        img.setPixel(x, y, new_pixel)
+
+# draw the changed image to the window
+img.draw(win)
+</textarea>
+</div>
+<div class="section" id="id1">
+<h3>28.2.1. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Adapt the code above to:</p>
+<ul class="simple">
+<li>adapt the program so that the left half of the image remains unchanged, but the right of the image is converted to grayscale</li>
+<li>adapt the program so that the bottom half of the image is converted to grayscale</li>
+<li>change the program so that the animation of the pixel manipulation goes from top to bottom (instead of left to right)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="combining-images">
+<h2>28.3. Combining Images<a class="headerlink" href="#combining-images" title="Permalink to this headline">¶</a></h2>
+<p>If you want to combine two images together, you need to copy the pixel information from one image onto the pixel information of the other image. For example, if we want to have the smile emoji below show up in the image of the rooster, we need to look through each of the pixels in the smile image to see if we are looking at a white background pixel, or part of the image that we should be copying over to the rooster image. <em>Note that to make this example simpler, the teeth in the smile emoji have been turned slightly off-white, and the color of the emoji has been changed so that the yellow value of the emoji is (248, 216, 102).</em></p>
+<img src="../../_static/emoji/smile-med.png" id="smile.png">
+<h4 style="text-align: center;">smile.png</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
+<h4 style="text-align: center;">rooster.jpg</h4><p>When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call <code class="docutils literal"><span class="pre">original_image.setPixel()</span></code> on line 36.</p>
+
+<div data-childcomponent="combining_images" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=combining_images data-lang="python"    data-timelimit=25000   data-audio=''     >
+# import the module so we can access images
+import image
+
+# open the original image and the image to add
+original_img = image.Image("rooster.jpg")
+img_to_add = image.Image("smile.png")
+
+# figure out how large the image to add is
+width_small = img_to_add.getWidth()
+height_small = img_to_add.getHeight()
+
+# figure out how large the original image is
+width = original_img.getWidth()
+height = original_img.getHeight()
+
+# make a window to draw on
+win = image.ImageWin(width, height)
+
+# draw the original image onto the window
+original_img.draw(win)
+original_img.setDelay(1,15)   # setDelay(0) turns off animation
+
+# use a nested for loop to look at every pixel in the image to add
+for x in range(width_small):
+    for y in range(height_small):
+        # get the current pixel
+        this_pixel = img_to_add.getPixel(x, y)
+
+        # access the amount of red, green and blue for this pixel
+        r = this_pixel.getRed()
+        g = this_pixel.getGreen()
+        b = this_pixel.getBlue()
+
+        # check if this is NOT a white background pixel
+        if r < 250 and g < 250 and b < 250:
+            original_img.setPixel(x, y + 135, this_pixel)
+
+
+# draw the changed image to the window
+original_img.draw(win)
+</textarea>
+</div>
+<div class="section" id="id3">
+<h3>28.3.1. Try This<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Adapt the code above to:</p>
+<ul class="simple">
+<li>adapt the program the smile shows up on top of the rooster’s head</li>
+</ul>
+</div>
 </div>
 <div class="section" id="practice-problems">
-<h2>28.2. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>For the following problems, use one of these images:</p>
+<h2>28.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>For the following problems, use one of the images from the examples above, or one of these new ones:</p>
 <img src="../../_static/bird-far.jpg" id="bird-far.jpg">
 <h4 style="text-align: center;">bird-far.jpg</h4><img src="../../_static/berries.jpg" id="berries.jpg">
-<h4 style="text-align: center;">berries.jpg</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
-<h4 style="text-align: center;">rooster.jpg</h4><img src="../../_static/sneakers.jpg" id="sneakers.jpg">
-<h4 style="text-align: center;">sneakers.jpg</h4><div class="section" id="no-red-left-side">
-<h3>28.2.1. No Red Left Side<a class="headerlink" href="#no-red-left-side" title="Permalink to this headline">¶</a></h3>
+<h4 style="text-align: center;">berries.jpg</h4><img src="../../_static/emoji/no-med.png" id="ban.png">
+<h4 style="text-align: center;">ban.png</h4><div class="section" id="no-red-left-side">
+<h3>28.4.1. No Red Left Side<a class="headerlink" href="#no-red-left-side" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets the red intensity of all pixels on the left half of the picture to be 0. On the right side of the picture, the red intensity should remain the same as the original value. The green and blue intensities should remain the same as the original for all parts of the image.</p>
 <blockquote>
 <div>
@@ -330,7 +489,7 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_no_red_left_side data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("berries.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -343,8 +502,8 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="blue-tint-top-right">
-<h3>28.2.2. Blue Tint Top Right<a class="headerlink" href="#blue-tint-top-right" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that makes the top right quarter of the image be tinted blue.</p>
+<h3>28.4.2. Blue Tint Top Right<a class="headerlink" href="#blue-tint-top-right" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that makes the top right quarter of the image be tinted blue (increase the amount of blue).</p>
 <blockquote>
 <div>
 <div data-childcomponent="practice_problem_blue_tint_top_right" class="runestone explainer ac_section alert alert-warning">
@@ -352,7 +511,7 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_blue_tint_top_right data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("bird-far.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -364,17 +523,17 @@ img.draw(win)
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="bottom-half-grayscale">
-<h3>28.2.3. Bottom Half Grayscale<a class="headerlink" href="#bottom-half-grayscale" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that turns the bottom half of the picture into a grayscale image. The top half should remain the same as the original image.</p>
+<div class="section" id="change-the-rooster-colour">
+<h3>28.4.3. Change the Rooster Colour<a class="headerlink" href="#change-the-rooster-colour" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that changes the colour of the rooster’s comb and wattle (the red stuff on the rooster’s head) from red to blue. <em>Note that your program will likely only partially work. That is okay! The edges of the converted parts of the image do not need to be clean.</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_bottom_half_grayscale" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problem_change_rooster_colour" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_bottom_half_grayscale data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_change_rooster_colour data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("rooster.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -387,7 +546,7 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="repeat-left-twice">
-<h3>28.2.4. Repeat Left Twice<a class="headerlink" href="#repeat-left-twice" title="Permalink to this headline">¶</a></h3>
+<h3>28.4.4. Repeat Left Twice<a class="headerlink" href="#repeat-left-twice" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that takes the left side of an image and displays it both on the left half, and the right half, of the image. In other words, replace the right side of the image with a copy of the left side of the image.</p>
 <blockquote>
 <div>
@@ -396,7 +555,7 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_repeat_left_twice data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("rooster.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -409,8 +568,8 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="mirror-horizontal">
-<h3>28.2.5. Mirror Horizontal<a class="headerlink" href="#mirror-horizontal" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. If you get it working, try to turn this into a function!</p>
+<h3>28.4.5. Mirror Horizontal<a class="headerlink" href="#mirror-horizontal" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. <em>Hint: you’ll need to figure out how far away from the line of symmetry you are…</em></p>
 <blockquote>
 <div>
 <div data-childcomponent="practice_problem_mirror_horizontal" class="runestone explainer ac_section alert alert-warning">
@@ -418,7 +577,7 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_mirror_horizontal data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("berries.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -431,8 +590,8 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="mirror-vertical">
-<h3>28.2.6. Mirror Vertical<a class="headerlink" href="#mirror-vertical" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. If you get it working, try to turn this into a function!</p>
+<h3>28.4.6. Mirror Vertical<a class="headerlink" href="#mirror-vertical" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. <em>Hint: you’ll need to figure out how far away from the line of symmetry you are…</em></p>
 <blockquote>
 <div>
 <div data-childcomponent="practice_problem_mirror_vertical" class="runestone explainer ac_section alert alert-warning">
@@ -440,7 +599,7 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_mirror_vertical data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
+img = image.Image("berries.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -453,8 +612,8 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="gradient">
-<h3>28.2.7. Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and after each row, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.</p>
+<h3>28.4.7. Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and <strong>after each pass of the inner loop</strong>, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.</p>
 <blockquote>
 <div>
 <div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
@@ -462,31 +621,12 @@ img.draw(win)
 <textarea data-component="activecode" id=practice_problem_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
+width = 255
+height = 255
 
-# your code goes here!
+win = image.ImageWin(width, height)
+img = image.EmptyImage(width, height)
 
-img.draw(win)
-</textarea>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="enlarge">
-<h3>28.2.8. Enlarge<a class="headerlink" href="#enlarge" title="Permalink to this headline">¶</a></h3>
-<p>Write a function to uniformly enlarge an image by a factor of 2 (double the size).</p>
-<blockquote>
-<div>
-<div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("luther.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
-img.draw(win)
 img.setDelay(1,15)   # setDelay(0) turns off animation
 
 # your code goes here!
@@ -497,7 +637,7 @@ img.draw(win)
 </div></blockquote>
 </div>
 <div class="section" id="acknowledgments">
-<h3>28.2.9. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3>28.4.8. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Emoji artwork is provided by <a class="reference external" href="https://www.emojione.com/">EmojiOne</a> EmojiOne and is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY 4.0</a>.</p>
 </div>
 </div>

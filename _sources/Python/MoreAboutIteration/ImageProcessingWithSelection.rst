@@ -19,8 +19,8 @@ Image Processing With Conditionals
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
 
-Demonstration
----------------------------------
+Applying an Effect Based on Pixel Colour
+---------------------------------------------
 
 Say you had an image that looked like this:
 
@@ -35,25 +35,35 @@ Due to the contrast in the image, we can apply certain effects to only a portion
 .. activecode::  isolate_the_moon
     :nocodelens:
 
+    # import the module so we can access images
     import image
 
+    # open an image 
     img = image.Image("moon.jpg")
+
+    # figure out how large the image is
     width = img.getWidth()
     height = img.getHeight()
 
+    # make a window to draw on
     win = image.ImageWin(width, height)
 
+    # draw the original image onto the window
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
 
+    # use a nested for loop to look at every pixel in the image
     for x in range(width):
         for y in range(height):
-            this_pixel = img.getPixel(col, row)
+            # get the current pixel
+            this_pixel = img.getPixel(x, y)
 
+            # access the amount of red, green and blue for this pixel
             r = this_pixel.getRed()
             g = this_pixel.getGreen()
             b = this_pixel.getBlue()
 
+            # apply any effect to the pixels
             if r + g + b < 30:
                 new_red = 100
                 new_green = 100
@@ -63,18 +73,174 @@ Due to the contrast in the image, we can apply certain effects to only a portion
                 new_green = g
                 new_blue = b
 
+            # create a new pixel with changed values
             new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-            img.setPixel(col, row, new_pixel)
+            # reassign the pixel value in the image to be the changed version
+            img.setPixel(x, y, new_pixel)
 
+    # draw the changed image to the window
     img.draw(win)
+
+
+Try This
+~~~~~~~~~~
+
+Adapt the code above to:
+
+- change the color of the sky to a different colour (something other than gray)
+- instead of changing the sky, adapt the program to tint the moon slightly blue
+- switch the image to be ``bird-far.jpg``, then change the program so that all of the sky is "erased" (turned white), while the bird itself is left alone
+
+
+Applying an Effect to an Area of an Image
+------------------------------------------
+
+You might want to affect only one area of an image. For example, perhaps you want to make the left half of the following image grayscale, but leave the right half of the image unchanged. 
+
+.. raw:: html
+
+    <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
+    <h4 style="text-align: center;">sneakers.jpg</h4>
+
+To apply an effect to just the left hand side, we can write a program that iterates through every pixel, but only apply the grayscale effect if the x coordinate is in the left half of the image. Here is a program that does just that:
+
+.. activecode::  grayscale_left_half
+    :nocodelens:
+
+    # import the module so we can access images
+    import image
+
+    # open an image 
+    img = image.Image("sneakers.jpg")
+
+    # figure out how large the image is
+    width = img.getWidth()
+    height = img.getHeight()
+
+    # make a window to draw on
+    win = image.ImageWin(width, height)
+
+    # draw the original image onto the window
+    img.draw(win)
+    img.setDelay(1,15)   # setDelay(0) turns off animation
+
+    # use a nested for loop to look at every pixel in the image
+    for x in range(width):
+        for y in range(height):
+            # get the current pixel
+            this_pixel = img.getPixel(x, y)
+
+            # access the amount of red, green and blue for this pixel
+            r = this_pixel.getRed()
+            g = this_pixel.getGreen()
+            b = this_pixel.getBlue()
+
+            # apply any effect to the pixels
+            if x < width/2:
+                average = int((r + b + g) / 3)
+                new_red = average
+                new_green = average
+                new_blue = average
+            else:
+                new_red = r
+                new_green = g
+                new_blue = b
+
+            # create a new pixel with changed values
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+            # reassign the pixel value in the image to be the changed version
+            img.setPixel(x, y, new_pixel)
+
+    # draw the changed image to the window
+    img.draw(win)
+
+
+Try This
+~~~~~~~~~
+
+Adapt the code above to:
+
+- adapt the program so that the left half of the image remains unchanged, but the right of the image is converted to grayscale 
+- adapt the program so that the bottom half of the image is converted to grayscale
+- change the program so that the animation of the pixel manipulation goes from top to bottom (instead of left to right)
+
+
+Combining Images
+-----------------
+
+If you want to combine two images together, you need to copy the pixel information from one image onto the pixel information of the other image. For example, if we want to have the smile emoji below show up in the image of the rooster, we need to look through each of the pixels in the smile image to see if we are looking at a white background pixel, or part of the image that we should be copying over to the rooster image. *Note that to make this example simpler, the teeth in the smile emoji have been turned slightly off-white, and the color of the emoji has been changed so that the yellow value of the emoji is (248, 216, 102).*
+
+.. raw:: html
+
+    <img src="../../_static/emoji/smile-med.png" id="smile.png">
+    <h4 style="text-align: center;">smile.png</h4>
+
+.. raw:: html
+
+    <img src="../../_static/rooster.jpg" id="rooster.jpg">
+    <h4 style="text-align: center;">rooster.jpg</h4>
+
+When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call ``original_image.setPixel()`` on line 36.
+
+.. activecode::  combining_images
+    :nocodelens:
+
+    # import the module so we can access images
+    import image
+
+    # open the original image and the image to add
+    original_img = image.Image("rooster.jpg")
+    img_to_add = image.Image("smile.png")
+
+    # figure out how large the image to add is
+    width_small = img_to_add.getWidth()
+    height_small = img_to_add.getHeight()
+
+    # figure out how large the original image is
+    width = original_img.getWidth()
+    height = original_img.getHeight()
+
+    # make a window to draw on
+    win = image.ImageWin(width, height)
+
+    # draw the original image onto the window
+    original_img.draw(win)
+    original_img.setDelay(1,15)   # setDelay(0) turns off animation
+
+    # use a nested for loop to look at every pixel in the image to add
+    for x in range(width_small):
+        for y in range(height_small):
+            # get the current pixel
+            this_pixel = img_to_add.getPixel(x, y)
+
+            # access the amount of red, green and blue for this pixel
+            r = this_pixel.getRed()
+            g = this_pixel.getGreen()
+            b = this_pixel.getBlue()
+
+            # check if this is NOT a white background pixel
+            if r < 250 and g < 250 and b < 250:
+                original_img.setPixel(x, y + 135, this_pixel)
+
+
+    # draw the changed image to the window
+    original_img.draw(win)
+
+
+Try This
+~~~~~~~~~
+
+Adapt the code above to:
+
+- adapt the program the smile shows up on top of the rooster's head
 
 
 Practice Problems
 ------------------
 
-For the following problems, use one of these images:
-
+For the following problems, use one of the images from the examples above, or one of these new ones:
 
 .. raw:: html
 
@@ -88,13 +254,10 @@ For the following problems, use one of these images:
 
 .. raw:: html
 
-    <img src="../../_static/rooster.jpg" id="rooster.jpg">
-    <h4 style="text-align: center;">rooster.jpg</h4>
+    <img src="../../_static/emoji/no-med.png" id="ban.png">
+    <h4 style="text-align: center;">ban.png</h4>
 
-.. raw:: html
 
-    <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
-    <h4 style="text-align: center;">sneakers.jpg</h4>
 
 
 No Red Left Side
@@ -107,7 +270,7 @@ Write a program that sets the red intensity of all pixels on the left half of th
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("berries.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -121,14 +284,14 @@ Write a program that sets the red intensity of all pixels on the left half of th
 Blue Tint Top Right
 ~~~~~~~~~~~~~~~~~~~~
 
-Write a program that makes the top right quarter of the image be tinted blue.
+Write a program that makes the top right quarter of the image be tinted blue (increase the amount of blue).
 
  .. activecode::  practice_problem_blue_tint_top_right
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("bird-far.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -138,18 +301,17 @@ Write a program that makes the top right quarter of the image be tinted blue.
     img.draw(win)
 
 
+Change the Rooster Colour
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bottom Half Grayscale
-~~~~~~~~~~~~~~~~~~~~~~
+Write a program that changes the colour of the rooster's comb and wattle (the red stuff on the rooster's head) from red to blue. *Note that your program will likely only partially work. That is okay! The edges of the converted parts of the image do not need to be clean.*
 
-Write a program that turns the bottom half of the picture into a grayscale image. The top half should remain the same as the original image.
-
- .. activecode::  practice_problem_bottom_half_grayscale
+ .. activecode::  practice_problem_change_rooster_colour
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("rooster.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -157,7 +319,6 @@ Write a program that turns the bottom half of the picture into a grayscale image
     # your code goes here!    
 
     img.draw(win)
-
 
 
 Repeat Left Twice
@@ -170,7 +331,7 @@ Write a program that takes the left side of an image and displays it both on the
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("rooster.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -184,14 +345,14 @@ Write a program that takes the left side of an image and displays it both on the
 Mirror Horizontal
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. If you get it working, try to turn this into a function!
+Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. *Hint: you'll need to figure out how far away from the line of symmetry you are...*
 
  .. activecode::  practice_problem_mirror_horizontal
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("berries.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -205,14 +366,14 @@ Write a program that mirrors an image from left to right around a vertical line 
 Mirror Vertical
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. If you get it working, try to turn this into a function!
+Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. *Hint: you'll need to figure out how far away from the line of symmetry you are...*
 
  .. activecode::  practice_problem_mirror_vertical
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("berries.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -226,36 +387,19 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
 Gradient
 ~~~~~~~~~
 
-Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and after each row, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.
+Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and **after each pass of the inner loop**, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.
 
  .. activecode::  practice_problem_gradient
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    width = 255
+    height = 255
 
-    # your code goes here!    
-
-    img.draw(win)
-
-
-Enlarge
-~~~~~~~~
-
-Write a function to uniformly enlarge an image by a factor of 2 (double the size).
-
- .. activecode::  practice_problem_gradient
-    :nocodelens:
-
-    import image
-
-    img = image.Image("luther.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
-    img.draw(win)
+    win = image.ImageWin(width, height)
+    img = image.EmptyImage(width, height)
+    
     img.setDelay(1,15)   # setDelay(0) turns off animation
 
     # your code goes here!    
