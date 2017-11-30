@@ -31,6 +31,13 @@ The Computer Science Implementation Support Team contributed many helpful sugges
 This interactive book uses the `Runestone Interactive tools <http://runestoneinteractive.org>`_, which you can find on `GitHub <https://github.com/RunestoneInteractive>`_. The Runestone Interactive tools allowed me to focus on the content, instead of worrying about how to present the content.
 
 
+Computing and Society
+-----------------------
+
+The sections in the Computing and Society portion of the textbook that deal with the history of the world wide web and the basics of how to create webpages are adapted from the `Fundamentals of Web Programming <https://runestone.academy/runestone/static/webfundamentals/index.html>`_ book by Brad Miller, which is released under a Creative Commons BY-SA license.
+
+The videos on `How the Internet Works are made by code.org <https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7>`_, and are released under a Creative Commons BY-NC-ND license.
+
 Images Used
 ~~~~~~~~~~~~
 
