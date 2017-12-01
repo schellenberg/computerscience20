@@ -134,6 +134,7 @@ Computing and Society
    :caption: Computing and Society
    :maxdepth: 1
 
+   ComputingAndSociety/Internet/HowTheInternetWorks.rst
    ComputingAndSociety/Internet/WorldWideWeb.rst
    ComputingAndSociety/Internet/HTML.rst
    .. ComputingAndSociety/UnderlyingTechnology.rst

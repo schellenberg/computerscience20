@@ -120,16 +120,7 @@ What happens when you put a paragraph inside another paragraph?  What about a he
 Images
 ~~~~~~~~~~~~
 
-Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  Here are a couple of images:
-
-.. figure:: Figures/LutherBellPic.jpg
-
-   Luther Bell:  ``http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg``
-
-.. figure:: Figures/norse-logo.png
-
-   Norse Logo:  ``http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png``
-
+Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  
 
 The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
 
@@ -142,7 +133,8 @@ The image tag has a new component to it called an attribute.  In general tags ca
    of a paragraph without causing extra line breaks.</p>
 
 
-Try modifying the example above so that it includes the norse logo rather than the bell.
+Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.
+
 You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
 
 There are several other attributes of the image tag as well.  You can read about them `here <http://www.w3schools.com/tags/tag_img.asp>`_.
