@@ -398,7 +398,7 @@ Double It
 .. activecode:: double-it
     :nocodelens:
 
-    The parameter the_number needs to be doubled. Return the doubled value of the number that is passed in.
+    The parameter ``the_number`` needs to be doubled. Return the doubled value of the number that is passed in.
 
     ``double_it(5) → 10``
 
@@ -429,7 +429,7 @@ Double It Positive
 .. activecode:: double-it-positive
     :nocodelens:
 
-    The parameter the_number needs to be doubled, but only if the_number is positive. Return the doubled value of the number that is passed in if the_number is positive. If the_number is negative, return -1. If the_number is 0, return 0.
+    The parameter ``the_number`` needs to be doubled, but only if ``the_number`` is positive. Return the doubled value of the number that is passed in if ``the_number`` is positive. If ``the_number`` is negative, return -1. If ``the_number`` is 0, return 0.
 
     ``double_it_positive(5) → 10``
 
@@ -462,7 +462,7 @@ Wear the Right Thing
 .. activecode:: wear-the-right-thing
     :nocodelens:
 
-    Write a function which returns the type of clothing you should wear, based on the parameter temperature. If the temp is below -10, you will wear a parka and toque (return "parka and toque"). If the temp is between -10 and 0, wear a toque (return "toque"). If the temp is greater than 0 but less than 10, wear a sweater (return "sweater"). If the temp is between 10 and 20, wear a t-shirt (return "t-shirt"). If the temp is greater than 20, wear shorts (return "shorts").
+    Write a function which returns the type of clothing you should wear, based on the parameter ``temperature``. If the ``temperature`` is below -10, you will wear a parka and toque (return "parka and toque"). If the ``temperature`` is between -10 and 0, wear a toque (return "toque"). If the ``temperature`` is greater than 0 but less than 10, wear a sweater (return "sweater"). If the ``temperature`` is between 10 and 20, wear a t-shirt (return "t-shirt"). If the ``temperature`` is greater than 20, wear shorts (return "shorts").
 
     ``wear_the_right_thing(25) → "shorts"``
 
