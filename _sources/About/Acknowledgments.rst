@@ -46,3 +46,4 @@ The images that are used for the Python Image Processing sections come from:
 - `Pexels <https://www.pexels.com>`_ (CC0 license)
 - `EmojiOne <https://github.com/emojione/emojione/tree/2.2.7>`_ (CC-BY) - this applies to any emoji used in image processing
 
+The CS20 logo (on the top left of the page) was created by Chrystelle Cayabyab, as part of her Graphic Arts course taught by Stefan Scott at Aden Bowman Collegiate.
