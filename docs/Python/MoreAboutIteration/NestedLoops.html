@@ -277,12 +277,8 @@
 <h2>26.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">thonny-cimage</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">thonny-cimage</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the examples, with something like:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;myfile.gif&quot;</span><span class="p">)</span>
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="s2">&quot;Image Processing&quot;</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
-</pre></div>
-</div>
+<p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
+<p class="last"><strong>Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!</strong></p>
 </div>
 <p>Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
 spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
@@ -360,7 +356,7 @@ no basic color.  On the other hand, “White” has maximum values for all three
 </table>
 </div></blockquote>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
-a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">thonny-cimage</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
+a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
 that allow us to ask for the intensity values.  They are called <code class="docutils literal"><span class="pre">getRed</span></code>, <code class="docutils literal"><span class="pre">getGreen</span></code>, and <code class="docutils literal"><span class="pre">getBlue</span></code>.  In addition, we can ask a
 pixel to change an intensity value using its <code class="docutils literal"><span class="pre">setRed</span></code>, <code class="docutils literal"><span class="pre">setGreen</span></code>, and <code class="docutils literal"><span class="pre">setBlue</span></code> methods.</p>
@@ -425,20 +421,6 @@ print(p.getRed())
 p.setBlue(p.getGreen())
 print(p.getGreen(), p.getBlue())
 </textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Thonny version of the above code:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">())</span>
-<span class="n">p</span><span class="o">.</span><span class="n">setRed</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">())</span>
-<span class="n">p</span><span class="o">.</span><span class="n">setBlue</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">(),</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">())</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="check-your-understanding">
 <h3>26.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
@@ -567,22 +549,6 @@ img = image.EmptyImage(width,height)
 img.draw(win)
 </textarea>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Thonny version of the above code:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-
-
-<span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
-
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="s2">&quot;Window Name&quot;</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">EmptyImage</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">)</span>
-
-<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">setPixel</span></code> function inside of a nested for loop.</p>
 
 <div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
@@ -603,27 +569,6 @@ for row in range(height):
 
 img.draw(win)
 </textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Thonny version of the above code:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-
-
-<span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
-
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="s2">&quot;Window Name&quot;</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">EmptyImage</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
-        <span class="n">this_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">img</span><span class="o">.</span><span class="n">setPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">this_pixel</span><span class="p">)</span>
-
-<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="try-this">
 <h3>26.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
@@ -696,20 +641,6 @@ p = img.getPixel(45, 55)
 print(p.getRed(), p.getGreen(), p.getBlue())
 </textarea>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Thonny version of the above code (<strong>you need to save the Python file and the image file in the same directory on your computer for this to work!</strong>):</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;luther.jpg&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getPixel</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">(),</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">(),</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
 <p>When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
 pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">getPixel</span></code> arguments and rerunning the program.</p>
 </div>
@@ -746,12 +677,13 @@ img.draw(win)
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Thonny version of the above code (<strong>you need to save the Python file and the image file in the same directory on your computer for this to work!</strong>):</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
+<p>Please note that the setDelay() method is not implemented in the cs20-image module, but you can still show image manipulation in an “animated” way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;luther.jpg&quot;</span><span class="p">)</span>
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="s2">&quot;More Green!&quot;</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
 <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">setDelay</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>   <span class="c1"># setDelay(0) turns off animation</span>
 
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">()):</span>
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">()):</span>
@@ -768,8 +700,12 @@ img.draw(win)
     <span class="c1"># redrawing the image after each row allows us to see how the image is being changed</span>
     <span class="c1"># you can move this outside the for loop if you don&#39;t want to watch the process</span>
     <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
+
+<span class="c1"># the following line will save the adjusted version of the file into the save folder as your python script</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;negative.jpg&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p class="last">Notice that the <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
 <p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">getWidth()</span></code> and <code class="docutils literal"><span class="pre">getHeight()</span></code> functions to create a window that is the same size as the image.</p>
 <p>Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
@@ -809,36 +745,6 @@ for row in range(img.getHeight()):
 
 img.draw(win)
 </textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Thonny version of the above code (<strong>you need to save the Python file and the image file in the same directory on your computer for this to work!</strong>):</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cImage</span> <span class="k">as</span> <span class="nn">image</span>
-
-<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;luther.jpg&quot;</span><span class="p">)</span>
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="s2">&quot;Negatives&quot;</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
-<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">()):</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">()):</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-
-        <span class="n">newred</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
-        <span class="n">newgreen</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">()</span>
-        <span class="n">newblue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">()</span>
-
-        <span class="n">newpixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="n">newred</span><span class="p">,</span> <span class="n">newgreen</span><span class="p">,</span> <span class="n">newblue</span><span class="p">)</span>
-
-        <span class="n">img</span><span class="o">.</span><span class="n">setPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">newpixel</span><span class="p">)</span>
-
-    <span class="c1"># redrawing the image after each row allows us to see how the image is being changed</span>
-    <span class="c1"># you can move this outside the for loop if you don&#39;t want to watch the process</span>
-    <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
-
-<span class="c1"># the following line will save the adjusted version of the file into the save folder as your python script</span>
-<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;negative.jpg&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="id2">

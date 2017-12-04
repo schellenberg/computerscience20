@@ -101,12 +101,9 @@ Image Processing Introduction
 
 .. note:: 
 
-    Before starting this section, you will want to install the ``thonny-cimage`` package. To do this, open Thonny and select Tools -> Manage packages..., then type in ``thonny-cimage`` and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the examples, with something like::
+    Before starting this section, you will want to install the ``cs20-image`` package. To do this, open Thonny and select Tools -> Manage packages..., then type in ``cs20-image`` and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below. 
 
-        import cImage as image
-        img = image.Image("myfile.gif")
-        win = image.ImageWin("Image Processing", img.getWidth(), img.getHeight())
-
+    **Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!**
 
 Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
 spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
@@ -153,7 +150,7 @@ no basic color.  On the other hand, "White" has maximum values for all three bas
     =======  =======  =======  =======
 
 In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
-a module called **image**, provided in ActiveCode (or with the ``thonny-cimage`` package). The image module defines two classes: ``Image`` and ``Pixel``.
+a module called **image**, provided in ActiveCode (or with the ``cs20-image`` package). The image module defines two classes: ``Image`` and ``Pixel``.
 
 Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
 that allow us to ask for the intensity values.  They are called ``getRed``, ``getGreen``, and ``getBlue``.  In addition, we can ask a
@@ -187,21 +184,6 @@ the same as the current amount of green.
     print(p.getRed())
     p.setBlue(p.getGreen())
     print(p.getGreen(), p.getBlue())
-
-
-.. note:: 
-
-    Thonny version of the above code::
-
-        import cImage as image
-
-        p = image.Pixel(45, 76, 200)
-        print(p.getRed())
-        p.setRed(66)
-        print(p.getRed())
-        p.setBlue(p.getGreen())
-        print(p.getGreen(), p.getBlue())
-
 
 
 Check Your Understanding
@@ -296,21 +278,6 @@ It is possible to create an Image object that is "empty".  An ``EmptyImage`` has
 
     img.draw(win)
 
-.. note:: 
-
-    Thonny version of the above code::
-
-        import cImage as image
-
-
-        width = 600
-        height = 300
-
-        win = image.ImageWin("Window Name",600,300)
-        img = image.EmptyImage(width,height)
-
-        img.draw(win)
-
 
 After creating an empty image, we can change the color of a specific pixel by using the ``setPixel`` function inside of a nested for loop.
 
@@ -331,27 +298,6 @@ After creating an empty image, we can change the color of a specific pixel by us
             img.setPixel(col,row,this_pixel)
 
     img.draw(win)
-
-
-.. note:: 
-
-    Thonny version of the above code::
-
-        import cImage as image
-
-
-        width = 600
-        height = 300
-
-        win = image.ImageWin("Window Name",600,300)
-        img = image.EmptyImage(width,height)
-
-        for row in range(height):
-            for col in range(width):
-                this_pixel = image.Pixel(255, 0, 0)
-                img.setPixel(col,row,this_pixel)
-
-        img.draw(win)
 
 
 Try This
@@ -407,19 +353,6 @@ on its basic color intensities.
     print(p.getRed(), p.getGreen(), p.getBlue())
 
 
-.. note:: 
-
-    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
-
-        import cImage as image
-        img = image.Image("luther.jpg")
-
-        print(img.getWidth())
-        print(img.getHeight())
-
-        p = img.getPixel(45, 55)
-        print(p.getRed(), p.getGreen(), p.getBlue())
-
 When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
 pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
 
@@ -456,15 +389,17 @@ Let's say that we wanted to increase the amount of green in a particular image. 
 
     img.draw(win)
 
+
 .. note:: 
 
-    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
-
-        import cImage as image
+    Please note that the setDelay() method is not implemented in the cs20-image module, but you can still show image manipulation in an "animated" way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this::
+    
+        import image
 
         img = image.Image("luther.jpg")
-        win = image.ImageWin("More Green!", img.getWidth(), img.getHeight())
+        win = image.ImageWin(img.getWidth(), img.getHeight())
         img.draw(win)
+        img.setDelay(1,15)   # setDelay(0) turns off animation
 
         for row in range(img.getHeight()):
             for col in range(img.getWidth()):
@@ -482,6 +417,10 @@ Let's say that we wanted to increase the amount of green in a particular image. 
             # you can move this outside the for loop if you don't want to watch the process
             img.draw(win)
 
+        # the following line will save the adjusted version of the file into the save folder as your python script
+        img.save("negative.jpg")
+
+    Notice that the ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
 
 Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``getWidth()`` and ``getHeight()`` functions to create a window that is the same size as the image.
 
@@ -530,34 +469,6 @@ The program below implements this algorithm using the previous image (luther.jpg
     img.draw(win)
 
 
-.. note:: 
-
-    Thonny version of the above code (**you need to save the Python file and the image file in the same directory on your computer for this to work!**)::
-
-        import cImage as image
-
-        img = image.Image("luther.jpg")
-        win = image.ImageWin("Negatives", img.getWidth(), img.getHeight())
-        img.draw(win)
-
-        for row in range(img.getHeight()):
-            for col in range(img.getWidth()):
-                p = img.getPixel(col, row)
-
-                newred = 255 - p.getRed()
-                newgreen = 255 - p.getGreen()
-                newblue = 255 - p.getBlue()
-
-                newpixel = image.Pixel(newred, newgreen, newblue)
-
-                img.setPixel(col, row, newpixel)
-
-            # redrawing the image after each row allows us to see how the image is being changed
-            # you can move this outside the for loop if you don't want to watch the process
-            img.draw(win)
-
-        # the following line will save the adjusted version of the file into the save folder as your python script
-        img.save("negative.jpg")
 
 Try This
 ~~~~~~~~~
