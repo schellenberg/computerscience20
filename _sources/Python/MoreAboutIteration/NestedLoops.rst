@@ -281,7 +281,7 @@ It is possible to create an Image object that is "empty".  An ``EmptyImage`` has
 
 After creating an empty image, we can change the color of a specific pixel by using the ``setPixel`` function inside of a nested for loop.
 
-.. activecode:: empty_image_demo
+.. activecode:: change_empty_image_to_red
     :nocodelens:
 
     import image
