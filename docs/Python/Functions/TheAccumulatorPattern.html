@@ -202,6 +202,7 @@
 <li><a class="reference internal" href="#practice-problems">19.4. Practice Problems</a><ul>
 <li><a class="reference internal" href="#estimating-square-roots">19.4.1. Estimating Square Roots</a></li>
 <li><a class="reference internal" href="#approximating-pi">19.4.2. Approximating Pi</a></li>
+<li><a class="reference internal" href="#finding-a-natural-logarithm">19.4.3. Finding A Natural Logarithm</a></li>
 </ul>
 </li>
 </ul>
@@ -502,6 +503,26 @@ def my_sqrt(n, number_of_guesses):
 
 <textarea data-component="activecode" id=my-pi data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 def my_pi():
+    # your code here
+</textarea>
+</div>
+</div>
+<div class="section" id="finding-a-natural-logarithm">
+<h3>19.4.3. Finding A Natural Logarithm<a class="headerlink" href="#finding-a-natural-logarithm" title="Permalink to this headline">¶</a></h3>
+<p>Write a function called <code class="docutils literal"><span class="pre">ln2()</span></code> that will return an approximation of ln(2). You can calculate an approximation of the natural logarithm of 2 with the following series:</p>
+<div class="math">
+\[ln(2)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\]</div>
+
+    <div data-component="reveal" id="reveal_ln2_hint"   data-showtitle="Need a hint?" data-hidetitle="Hide Hint">
+    <p>You might find it helpful to look back at the <a class="reference internal" href="WritingFruitfulFunctionsPractice.html#is-even-fruitful-function"><span class="std std-ref">Is Even</span></a> fruitful function that you created when we started practicing fruitful functions. For this series, depending on whether you are on an odd or even iteration (time through the loop), you will need to either add or subtract…</p>
+<p>Remember that you will need to add 1 to the denominator every time through the loop, whether you were adding or subtracting.</p>
+
+    </div>
+    
+<div data-childcomponent="ln2_practice_problem" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ln2_practice_problem data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def ln2():
     # your code here
 </textarea>
 </div>

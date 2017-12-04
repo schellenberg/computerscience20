@@ -250,4 +250,25 @@ Write a function called ``my_pi()`` that will return an approximation of PI (3.1
     def my_pi():
         # your code here
 
+Finding A Natural Logarithm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function called ``ln2()`` that will return an approximation of ln(2). You can calculate an approximation of the natural logarithm of 2 with the following series:
+
+.. math::
+    ln(2)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots 
+
+.. reveal:: reveal_ln2_hint
+    :showtitle: Need a hint?
+    :hidetitle: Hide Hint
+
+    You might find it helpful to look back at the :ref:`is_even_fruitful_function` fruitful function that you created when we started practicing fruitful functions. For this series, depending on whether you are on an odd or even iteration (time through the loop), you will need to either add or subtract... 
+
+    Remember that you will need to add 1 to the denominator every time through the loop, whether you were adding or subtracting.
+
+.. activecode:: ln2_practice_problem
+
+    def ln2():
+        # your code here
+
 
