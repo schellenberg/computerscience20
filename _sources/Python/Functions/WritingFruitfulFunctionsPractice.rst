@@ -44,75 +44,6 @@ Remember that variables created inside of a function have **local scope** (can o
 
 What will the following programs output? Why?
 
-.. activecode:: wdtpd_functions_1
-    :caption: What will this program print?
-
-    def a():
-        print("A")
-
-    def b():
-        print("B")
-
-    def c():
-        print("C")
-
-    a()
-
-
-.. activecode:: wdtpd_functions_2
-    :caption: What will this program print?
-
-    def a():
-        b()
-        print("A")
-
-    def b():
-        c()
-        print("B")
-
-    def c():
-        print("C")
-
-    a()
-
-
-.. activecode:: wdtpd_functions_3
-    :caption: What will this program print?
-
-    def a():
-        print("A")
-        b()
-         
-    def b():
-        print("B")
-        c()
-         
-    def c():
-        print("C")
-           
-    a()
-
-
-.. activecode:: wdtpd_functions_4
-    :caption: What will this program print?
-
-    def a():
-        print("A start")
-        b()
-        print("A end")
-         
-    def b():
-        print("B start")
-        c()
-        print("B end")
-         
-    def c():
-        print("C start and end")
-         
-    a()
-
-
-
 .. activecode:: wdtpd_functions_5
     :caption: What will this program print?
 
@@ -132,6 +63,44 @@ What will the following programs output? Why?
 
     a = 10
     foo()
+
+
+.. activecode:: wdtpd_functions_7
+    :caption: What will this program print?
+
+    def doubler(some_number):
+        new_value = some_number * 2
+        return new_value
+        
+    initial_value = 15
+    new_value = doubler(15)
+    print(new_value)
+
+
+.. activecode:: wdtpd_functions_8
+    :caption: What will this program print?
+
+    def greeting(first_name, last_name):
+        message = "Hello there, " + first_name + " " + last_name + "!"
+        return message
+        
+    first = "Sherlock"
+    last = "Holmes"
+    print(greeting(first, last))
+
+
+.. activecode:: wdtpd_functions_9
+    :caption: What will this program print?
+
+    def is_big(number):
+        if number > 42:
+            return True
+        else:
+            return False
+        
+    my_number = 50
+    result = is_big(my_number)
+    print(result)
 
 
 

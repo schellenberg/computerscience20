@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="17. More Details About Functions" href="../Functions/MoreFunctionDetails.html" />
+    <link rel="next" title="17. Fruitful Functions and Variable Scope" href="../Functions/MoreFunctionDetails.html" />
     <link rel="prev" title="15. Turtle Drawing Practice" href="DrawingPractice.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -194,7 +194,8 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">16. Assignment Work Period</a><ul>
 <li><a class="reference internal" href="#practice-problem">16.1. Practice Problem</a></li>
-<li><a class="reference internal" href="#turtle-graphics-assignment">16.2. Turtle Graphics Assignment</a></li>
+<li><a class="reference internal" href="#what-does-this-program-do">16.2. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#turtle-graphics-assignment">16.3. Turtle Graphics Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +211,7 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 17. More Details About Functions' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 17. Fruitful Functions and Variable Scope' data-toggle="tooltip" >
     <a href="../Functions/MoreFunctionDetails.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -273,8 +274,88 @@ import turtle
 </textarea>
 </div>
 </div>
+<div class="section" id="what-does-this-program-do">
+<h2>16.2. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>What will the following programs output? Why?</p>
+
+<div data-childcomponent="wdtpd_functions_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a():
+    print("A")
+
+def b():
+    print("B")
+
+def c():
+    print("C")
+
+a()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a():
+    b()
+    print("A")
+
+def b():
+    c()
+    print("B")
+
+def c():
+    print("C")
+
+a()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a():
+    print("A")
+    b()
+
+def b():
+    print("B")
+    c()
+
+def c():
+    print("C")
+
+a()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_functions_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_functions_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+def a():
+    print("A start")
+    b()
+    print("A end")
+
+def b():
+    print("B start")
+    c()
+    print("B end")
+
+def c():
+    print("C start and end")
+
+a()
+</textarea>
+</div>
+</div>
 <div class="section" id="turtle-graphics-assignment">
-<h2>16.2. Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
+<h2>16.3. Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Use the rest of this class time to keep working on your current Python assignment (possibly a turtle graphics drawing, with a focus on looping and conditionals).</p>
 </div>
 </div>
@@ -289,12 +370,12 @@ import turtle
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="DrawingPractice.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 17. More Details About Functions' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 17. Fruitful Functions and Variable Scope' data-toggle="tooltip" >
     <a href="../Functions/MoreFunctionDetails.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../Functions/MoreFunctionDetails.html" >Next Section - 17. More Details About Functions</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../Functions/MoreFunctionDetails.html" >Next Section - 17. Fruitful Functions and Variable Scope</a>
 
 <script type="text/javascript">
 

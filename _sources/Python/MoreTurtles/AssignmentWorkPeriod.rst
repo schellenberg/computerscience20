@@ -37,6 +37,82 @@ Draw the shape above. You can choose to either:
     import turtle
 
 
+What Does This Program Do?
+---------------------------
+
+.. note:: Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code. 
+
+What will the following programs output? Why?
+
+.. activecode:: wdtpd_functions_1
+    :caption: What will this program print?
+
+    def a():
+        print("A")
+
+    def b():
+        print("B")
+
+    def c():
+        print("C")
+
+    a()
+
+
+.. activecode:: wdtpd_functions_2
+    :caption: What will this program print?
+
+    def a():
+        b()
+        print("A")
+
+    def b():
+        c()
+        print("B")
+
+    def c():
+        print("C")
+
+    a()
+
+
+.. activecode:: wdtpd_functions_3
+    :caption: What will this program print?
+
+    def a():
+        print("A")
+        b()
+         
+    def b():
+        print("B")
+        c()
+         
+    def c():
+        print("C")
+           
+    a()
+
+
+.. activecode:: wdtpd_functions_4
+    :caption: What will this program print?
+
+    def a():
+        print("A start")
+        b()
+        print("A end")
+         
+    def b():
+        print("B start")
+        c()
+        print("B end")
+         
+    def c():
+        print("C start and end")
+         
+    a()
+
+
+
 Turtle Graphics Assignment
 ---------------------------
 
