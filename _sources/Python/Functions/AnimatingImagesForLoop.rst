@@ -4,8 +4,8 @@
    :start: 1
 
 
-Animating an Image with a ``for`` Loop
-=================================================
+Animating a Micro:bit LED Image with a ``for`` Loop
+====================================================
 
 .. topic:: Quick Overview of Day
 
