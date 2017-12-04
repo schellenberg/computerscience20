@@ -4,8 +4,8 @@
    :start: 1
 
 
-More Details About Functions
-===============================
+Fruitful Functions and Variable Scope
+======================================
 
 .. topic:: Quick Overview of Day
 
