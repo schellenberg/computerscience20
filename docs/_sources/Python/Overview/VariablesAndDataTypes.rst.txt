@@ -340,6 +340,53 @@ the human readers of the program --- they help the programmer document, or
 remember, what the variable is used for.
 
 
+User Input
+-------------
+
+If you want the user to type something, you can use the ``input()`` function. ``input()`` will **always return a string**. You will need to convert it to an int or a float if you are expecting a number.
+
+
+.. activecode:: input_demo_1
+    :nocodelens:
+    
+    your_school = input("What school do you attend?")
+    print(your_school)
+
+The following example is not going to work when you try to run it. Can you figure out what is wrong and fix it? *Hint: think about data types!*
+
+.. activecode:: input_demo_2
+    :nocodelens:
+    
+    current_year = input("What is the current year?")
+    grad_year = input("What year will you graduate from high school?")
+
+    year_difference = grad_year - current_year
+
+    print("You will graduate in", year_difference, "years.")
+
+
+
+**Do not look** at this sample solution unless you have spent time attempting to create your own solution!
+
+.. reveal:: reveal_solution_input_demo_2
+    :showtitle: Reveal Solution
+    :hidetitle: Hide Solution
+
+    This is one possible solution::
+
+        current_year = input("What is the current year?")
+        grad_year = input("What year will you graduate from high school?")
+
+        # convert user input to be integers, so we can subtract
+        current_year = int(current_year)
+        grad_year = int(grad_year)
+
+        year_difference = grad_year - current_year
+
+        print("You will graduate in", year_difference, "years.")
+
+
+
 Practice Problems
 ------------------
 
