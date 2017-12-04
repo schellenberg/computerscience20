@@ -193,23 +193,22 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">26. Image Processing and Nested Loops</a><ul>
-<li><a class="reference internal" href="#simple-tables">26.1. Simple Tables</a></li>
-<li><a class="reference internal" href="#image-processing-introduction">26.2. Image Processing Introduction</a></li>
-<li><a class="reference internal" href="#the-rgb-color-model">26.3. The RGB Color Model</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">26.3.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#image-processing-introduction">26.1. Image Processing Introduction</a></li>
+<li><a class="reference internal" href="#the-rgb-color-model">26.2. The RGB Color Model</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">26.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#nested-iteration">26.4. Nested Iteration</a></li>
-<li><a class="reference internal" href="#creating-an-empty-image">26.5. Creating an Empty Image</a><ul>
-<li><a class="reference internal" href="#try-this">26.5.1. Try This</a></li>
+<li><a class="reference internal" href="#nested-iteration">26.3. Nested Iteration</a></li>
+<li><a class="reference internal" href="#creating-an-empty-image">26.4. Creating an Empty Image</a><ul>
+<li><a class="reference internal" href="#try-this">26.4.1. Try This</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#image-objects">26.6. Image Objects</a></li>
-<li><a class="reference internal" href="#image-processing-with-an-existing-image">26.7. Image Processing with an Existing Image</a><ul>
-<li><a class="reference internal" href="#increasing-a-color">26.7.1. Increasing a Color</a></li>
-<li><a class="reference internal" href="#negative-images">26.7.2. Negative Images</a></li>
-<li><a class="reference internal" href="#id2">26.7.3. Try This</a></li>
-<li><a class="reference internal" href="#id3">26.7.4. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#image-objects">26.5. Image Objects</a></li>
+<li><a class="reference internal" href="#image-processing-with-an-existing-image">26.6. Image Processing with an Existing Image</a><ul>
+<li><a class="reference internal" href="#increasing-a-color">26.6.1. Increasing a Color</a></li>
+<li><a class="reference internal" href="#negative-images">26.6.2. Negative Images</a></li>
+<li><a class="reference internal" href="#id2">26.6.3. Try This</a></li>
+<li><a class="reference internal" href="#id3">26.6.4. Check Your Understanding</a></li>
 </ul>
 </li>
 </ul>
@@ -274,54 +273,8 @@
 </ul>
 
     </div>
-    <div class="section" id="simple-tables">
-<h2>26.1. Simple Tables<a class="headerlink" href="#simple-tables" title="Permalink to this headline">¶</a></h2>
-<p>One of the things loops are good for is generating tabular data.  Before
-computers were readily available, people had to calculate logarithms, sines and
-cosines, and other mathematical functions by hand. To make that easier,
-mathematics books contained long tables listing the values of these functions.
-Creating the tables was slow and boring, and they tended to be full of errors.</p>
-<p>When computers appeared on the scene, one of the initial reactions was, <em>“This is
-great! We can use the computers to generate the tables, so there will be no
-errors.”</em> That turned out to be true (mostly) but shortsighted. Soon thereafter,
-computers and calculators were so pervasive that the tables became obsolete.</p>
-<p>Well, almost. For some operations, computers use tables of values to get an
-approximate answer and then perform computations to improve the approximation.
-In some cases, there have been errors in the underlying tables, most famously
-in the table the Intel Pentium processor chip used to perform floating-point division.</p>
-<p>Although a power of 2 table is not as useful as it once was, it still makes a good
-example of iteration. The following program outputs a sequence of values in the
-left column and 2 raised to the power of that value in the right column:</p>
-
-<div data-childcomponent="powers_of_two_table" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=powers_of_two_table data-lang="python"    data-timelimit=25000   data-audio=''     >
-#table column headings
-print("n", '\t', "2**n")
-print("---", '\t', "-----")
-
-# generate values for columns
-for counter in range(13):
-    print(counter, '\t', 2 ** counter)
-</textarea>
-</div>
-<p>The string <code class="docutils literal"><span class="pre">'\t'</span></code> represents a <strong>tab character</strong>. The backslash character in
-<code class="docutils literal"><span class="pre">'\t'</span></code> indicates the beginning of an <strong>escape sequence</strong>.  Escape sequences
-are used to represent invisible characters like tabs and newlines. The sequence
-<code class="docutils literal"><span class="pre">\n</span></code> represents a <strong>newline</strong>.</p>
-<p>An escape sequence can appear anywhere in a string.  In this example, the tab
-escape sequence is the only thing in the string. How do you think you represent
-a backslash in a string?</p>
-<p>As characters and strings are displayed on the screen, an invisible marker
-called the <strong>cursor</strong> keeps track of where the next character will go. After a
-<code class="docutils literal"><span class="pre">print</span></code> function is executed, the cursor normally goes to the beginning of the next
-line.</p>
-<p>The tab character shifts the cursor to the right until it reaches one of the
-tab stops. Tabs are useful for making columns of text line up, as in the output
-of the previous program. Because of the tab characters between the columns, the position of the second column does not depend on the number of digits in the first column.</p>
-</div>
-<div class="section" id="image-processing-introduction">
-<h2>26.2. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="image-processing-introduction">
+<h2>26.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">thonny-cimage</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">thonny-cimage</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the examples, with something like:</p>
@@ -342,7 +295,7 @@ that computer scientists like to start counting with 0!  This means that if ther
 <img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
 </div>
 <div class="section" id="the-rgb-color-model">
-<h2>26.3. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<h2>26.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
 The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
@@ -488,7 +441,7 @@ print(p.getGreen(), p.getBlue())
 </div>
 </div>
 <div class="section" id="check-your-understanding">
-<h3>26.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>26.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
@@ -507,7 +460,7 @@ print(p.getGreen(), p.getBlue())
             </div>
 </div>
 <div class="section" id="nested-iteration">
-<h2>26.4. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<h2>26.3. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
@@ -597,7 +550,7 @@ The inner <code class="docutils literal"><span class="pre">for</span></code> loo
 </div>
 </div>
 <div class="section" id="creating-an-empty-image">
-<h2>26.5. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
+<h2>26.4. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only “White” pixels when it is created. We can create and draw an empty image like this:</p>
 
 <div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
@@ -673,12 +626,12 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="try-this">
-<h3>26.5.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<h3>26.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <p>Change the code above to draw an image of a different color. Now, adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?</p>
 </div>
 </div>
 <div class="section" id="image-objects">
-<h2>26.6. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<h2>26.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">getWidth</span></code> and <code class="docutils literal"><span class="pre">getHeight</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">getPixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal"><span class="pre">setPixel</span></code>.</p>
@@ -761,9 +714,9 @@ print(p.getRed(), p.getGreen(), p.getBlue())
 pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">getPixel</span></code> arguments and rerunning the program.</p>
 </div>
 <div class="section" id="image-processing-with-an-existing-image">
-<h2>26.7. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
+<h2>26.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="increasing-a-color">
-<h3>26.7.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
+<h3>26.6.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
 <p>Let’s say that we wanted to increase the amount of green in a particular image. To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
@@ -825,7 +778,7 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
 </div>
 <div class="section" id="negative-images">
-<h3>26.7.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
+<h3>26.6.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
@@ -889,7 +842,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id2">
-<h3>26.7.3. Try This<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>26.6.3. Try This<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Change the name of the file in the <code class="docutils literal"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal"><span class="pre">cy.png</span></code> and <code class="docutils literal"><span class="pre">goldygopher.png</span></code>):</li>
 </ul>
@@ -907,7 +860,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id3">
-<h3>26.7.4. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>26.6.4. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
