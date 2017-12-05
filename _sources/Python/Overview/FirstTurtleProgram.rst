@@ -243,8 +243,9 @@ Check your understanding
 
    Which of the following code would produce the following image? 
 
-   .. image:: ../../_static/parsons/turtleTest1.png 
+   .. image:: images/turtleTest1.png
       :alt: long line to north with shorter line to west on top
+      :width: 150px
 
 More Mixed Up Programs!
 ------------------------
