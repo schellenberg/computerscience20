@@ -252,11 +252,16 @@ For the following problems, use one of the images from the examples above, or on
     <img src="../../_static/berries.jpg" id="berries.jpg">
     <h4 style="text-align: center;">berries.jpg</h4>
 
+
+.. raw:: html
+
+    <img src="../../_static/giraffe.jpg" id="giraffe.jpg">
+    <h4 style="text-align: center;">giraffe.jpg</h4>
+
 .. raw:: html
 
     <img src="../../_static/emoji/no-med.png" id="ban.png">
     <h4 style="text-align: center;">ban.png</h4>
-
 
 
 
