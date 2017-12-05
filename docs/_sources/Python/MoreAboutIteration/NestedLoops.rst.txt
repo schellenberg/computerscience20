@@ -329,28 +329,21 @@ different depending on whether you are using an image file or creating an empty 
     setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
     =================== =============================== ==================================================
 
-Consider the image shown below.  Assume that the image is stored in a file called ``luther.jpg``.  Line 2 opens the
+Consider the image shown below.  Assume that the image is stored in a file called ``skflag.png``.  Line 2 opens the
 file and uses the contents to create an image object that is referred to by ``img``.  Once we have an image object,
 we can use the methods described above to access information about the image or to get a specific pixel and check
 on its basic color intensities.
 
-
-
 .. raw:: html
 
-    <img src="images/saskatchewanflag.gif" id="saskatchewanflag.gif">
-
-
-.. raw:: html
-
-    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
+    <img src="../../_static/skflag.png" id="skflag.png">
 
 
 .. activecode::  pixelex1
     :nocodelens:
 
     import image
-    img = image.Image("luther.jpg")
+    img = image.Image("skflag.png")
 
     print(img.getWidth())
     print(img.getHeight())
@@ -359,8 +352,8 @@ on its basic color intensities.
     print(p.getRed(), p.getGreen(), p.getBlue())
 
 
-When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
+When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
+pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
 
 
 Image Processing with an Existing Image
@@ -369,14 +362,19 @@ Image Processing with an Existing Image
 Increasing a Color
 ~~~~~~~~~~~~~~~~~~~
 
-Let's say that we wanted to increase the amount of green in a particular image. To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:
+.. raw:: html
+
+    <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
+
+
+Let's say that we wanted to increase the amount of green in the image shown above (``sneakers.jpg``). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:
 
 .. activecode::  increase_color_amount
     :nocodelens:
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -402,7 +400,7 @@ Let's say that we wanted to increase the amount of green in a particular image. 
     
         import image
 
-        img = image.Image("luther.jpg")
+        img = image.Image("sneakers.jpg")
         win = image.ImageWin(img.getWidth(), img.getHeight())
         img.draw(win)
         img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -447,7 +445,7 @@ In the RGB color model, we can consider the opposite of the red component as the
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
 ``255-50`` or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.
 
-The program below implements this algorithm using the previous image (luther.jpg).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.
+The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.
 
 
 .. activecode::  acimg_1
@@ -455,7 +453,7 @@ The program below implements this algorithm using the previous image (luther.jpg
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("skflag.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -479,18 +477,18 @@ The program below implements this algorithm using the previous image (luther.jpg
 Try This
 ~~~~~~~~~
 
-- Change the name of the file in the ``image.Image()`` call to see how other images look as negatives. Here are two other images that you can use (``cy.png`` and ``goldygopher.png``):
+- Change the name of the file in the ``image.Image()`` call to see how other images look as negatives. Here are two other images that you can use (``fransaskoisflag.jpg`` and ``pineapples.jpg``):
 
 
 .. raw:: html
 
-    <img src="../../_static/cy.png" id="cy.png">
-    <h4 style="text-align: center;">cy.png</h4>
+    <img src="../../_static/fransaskoisflag.jpg" id="fransaskoisflag.jpg">
+    <h4 style="text-align: center;">fransaskoisflag.jpg</h4>
 
 .. raw:: html
 
-    <img src="../../_static/goldygopher.png" id="goldygopher.png">
-    <h4 style="text-align: center;">goldygopher.png</h4>
+    <img src="../../_static/pineapples.jpg" id="pineapples.jpg">
+    <h4 style="text-align: center;">pineapples.jpg</h4>
 
 - Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.
 
@@ -590,3 +588,8 @@ Check Your Understanding
       newgreen = 0
       newblue = 0
 
+
+Acknowledgments
+~~~~~~~~~~~~~~~~~~
+
+Images are from `Pexels <https://www.pexels.com/>`_, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.

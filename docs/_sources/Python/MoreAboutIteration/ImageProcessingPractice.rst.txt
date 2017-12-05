@@ -51,7 +51,7 @@ Consider the following code, in which the increase green code from a previous le
         return new_image
 
 
-    img = image.Image("luther.jpg")
+    img = image.Image("skflag.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
 
@@ -89,7 +89,7 @@ If you'd like the function to animate while it runs, you can reorganize your cod
         return new_image
 
 
-    img = image.Image("luther.jpg")
+    img = image.Image("skflag.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
 
     converted_img = increase_green(img, win)
@@ -104,18 +104,19 @@ For the following problems, use one of these images:
 
 .. raw:: html
 
-    <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
-    <h4 style="text-align: center;">luther.jpg</h4>
+    <img src="../../_static/moon.jpg" id="moon.jpg">
+    <h4 style="text-align: center;">moon.jpg</h4>
 
 .. raw:: html
 
-    <img src="../../_static/cy.png" id="cy.png">
-    <h4 style="text-align: center;">cy.png</h4>
+    <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
+    <h4 style="text-align: center;">sneakers.jpg</h4>
 
 .. raw:: html
 
-    <img src="../../_static/goldygopher.png" id="goldygopher.png">
-    <h4 style="text-align: center;">goldygopher.png</h4>
+    <img src="../../_static/rooster.jpg" id="rooster.jpg">
+    <h4 style="text-align: center;">rooster.jpg</h4>
+
 
 Red Remover
 ~~~~~~~~~~~~
@@ -261,4 +262,7 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
 
 
 
+Acknowledgments
+~~~~~~~~~~~~~~~~~~
 
+Images are from `Pexels <https://www.pexels.com/>`_, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.
