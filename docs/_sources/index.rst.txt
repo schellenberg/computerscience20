@@ -136,6 +136,7 @@ Computing and Society
    ComputingAndSociety/Internet/HowTheInternetWorks.rst
    ComputingAndSociety/Internet/WorldWideWeb.rst
    ComputingAndSociety/Internet/HTML.rst
+   ComputingAndSociety/Internet/CSS.rst
    .. ComputingAndSociety/UnderlyingTechnology.rst
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
