@@ -335,6 +335,12 @@ we can use the methods described above to access information about the image or 
 on its basic color intensities.
 
 
+
+.. raw:: html
+
+    <img src="images/saskatchewanflag.gif" id="saskatchewanflag.gif">
+
+
 .. raw:: html
 
     <img src="../../_static/LutherBellPic.jpg" id="luther.jpg">
