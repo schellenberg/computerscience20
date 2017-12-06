@@ -115,7 +115,7 @@ black-box diagram with the Python code following.
 The **return** statement is followed by an expression which is evaluated.  Its
 result is returned to the caller as the "fruit" of calling this function.
 Because the return statement can contain any Python expression we could have
-avoided creating the **temporary variable** ``y`` and simply used
+avoided creating the **temporary variable** ``squared_value`` and simply used
 ``return original_number*original_number``.
 Try modifying the square function above to see that this works just the same.
 On the other hand, using **temporary variables** like ``squared_value`` in the program above makes debugging easier.  These temporary variables are examples of **local variables**, which will be explained further in the next section.
