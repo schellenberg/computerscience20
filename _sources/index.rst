@@ -115,7 +115,8 @@ Python
    Python/MoreAboutIteration/ImageProcessingPractice.rst
    Python/MoreAboutIteration/ImageProcessingWithSelection.rst
 
-
+   Python/Strings/StringIntro.rst
+   
 
 Python Practice Quizzes
 :::::::::::::::::::::::
