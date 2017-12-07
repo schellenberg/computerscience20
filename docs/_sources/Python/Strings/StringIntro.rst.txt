@@ -74,24 +74,24 @@ index value.  For example, in the string shown below, the 14 characters are inde
 
 It is also the case that the positions are named from right to left using negative numbers where -1 is the rightmost
 index and so on.
-Note that the character at index 6 (or -8) is the blank character.
+Note that the character at index 9 (or -5) is the blank/space character.
 
 
 .. activecode:: chp08_index1
     
-    school = "Luther College"
-    m = school[2]
+    place = "Saskatoon Sask"
+    m = place[4]
     print(m)
     
-    lastchar = school[-1]
-    print(lastchar)
+    last_char = place[-1]
+    print(last_char)
 
-The expression ``school[2]`` selects the character at index 2 from ``school``, and creates a new
+The expression ``place[4]`` selects the character at index 4 from ``place``, and creates a new
 string containing just this one character. The variable ``m`` refers to the result. 
 
 Remember that computer scientists often start counting
-from zero. The letter at index zero of ``"Luther College"`` is ``L``.  So at
-position ``[2]`` we have the letter ``t``.
+from zero. The letter at index zero of ``"Saskatoon Sask"`` is ``S``.  So at
+position ``[4]`` we have the letter ``a``.
 
 If you want the zero-eth letter of a string, you just put 0, or any expression
 with the value 0, in the brackets.  Give it a try.

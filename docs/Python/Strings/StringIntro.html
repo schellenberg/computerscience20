@@ -309,24 +309,24 @@ index value.  For example, in the string shown below, the 14 characters are inde
 <img alt="index values" src="../../_images/indexvalues1.png" />
 <p>It is also the case that the positions are named from right to left using negative numbers where -1 is the rightmost
 index and so on.
-Note that the character at index 6 (or -8) is the blank character.</p>
+Note that the character at index 9 (or -5) is the blank/space character.</p>
 
 <div data-childcomponent="chp08_index1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=chp08_index1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-school = "Luther College"
-m = school[2]
+place = "Saskatoon Sask"
+m = place[4]
 print(m)
 
-lastchar = school[-1]
-print(lastchar)
+last_char = place[-1]
+print(last_char)
 </textarea>
 </div>
-<p>The expression <code class="docutils literal"><span class="pre">school[2]</span></code> selects the character at index 2 from <code class="docutils literal"><span class="pre">school</span></code>, and creates a new
+<p>The expression <code class="docutils literal"><span class="pre">place[4]</span></code> selects the character at index 4 from <code class="docutils literal"><span class="pre">place</span></code>, and creates a new
 string containing just this one character. The variable <code class="docutils literal"><span class="pre">m</span></code> refers to the result.</p>
 <p>Remember that computer scientists often start counting
-from zero. The letter at index zero of <code class="docutils literal"><span class="pre">&quot;Luther</span> <span class="pre">College&quot;</span></code> is <code class="docutils literal"><span class="pre">L</span></code>.  So at
-position <code class="docutils literal"><span class="pre">[2]</span></code> we have the letter <code class="docutils literal"><span class="pre">t</span></code>.</p>
+from zero. The letter at index zero of <code class="docutils literal"><span class="pre">&quot;Saskatoon</span> <span class="pre">Sask&quot;</span></code> is <code class="docutils literal"><span class="pre">S</span></code>.  So at
+position <code class="docutils literal"><span class="pre">[4]</span></code> we have the letter <code class="docutils literal"><span class="pre">a</span></code>.</p>
 <p>If you want the zero-eth letter of a string, you just put 0, or any expression
 with the value 0, in the brackets.  Give it a try.</p>
 <p>The expression in brackets is called an <strong>index</strong>. An index specifies a member
