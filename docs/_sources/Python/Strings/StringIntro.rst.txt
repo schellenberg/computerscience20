@@ -2,12 +2,12 @@
    :prefix: more-info-about-strings
    :start: 1
 
-More Information About Strings
-==================================
+String Index, Length, Slicing and Traversal
+============================================
 
 .. topic:: Quick Overview of Day
 
-    Explore string operators, index values, length of strings, and string slicing.
+    Explore string operators, index values, length of strings, string slicing, and traversing a string using a for loop (by item).
 
 
 .. reveal:: curriculum_addressed
@@ -51,7 +51,7 @@ Concatenation Reminder
 As we have seen before, you cannot perform mathematical operations on strings, even if the
 strings look like numbers. The one exception to this rule is that the ``+`` operator does work with strings, but for strings, the ``+`` operator represents **concatenation**, not addition.  As we have learned previously, concatenation means joining the two operands by linking them end-to-end. For example:
 
-.. activecode:: ch08_add
+.. activecode:: concatenation_reminder_demo
     :nocanvas:
 
     fruit = "banana"
@@ -77,17 +77,17 @@ index and so on.
 Note that the character at index 9 (or -5) is the blank/space character.
 
 
-.. activecode:: chp08_index1
+.. activecode:: string_index_1
     
     place = "Saskatoon Sask"
-    m = place[4]
-    print(m)
+    some_char = place[4]
+    print(some_char)
     
     last_char = place[-1]
     print(last_char)
 
 The expression ``place[4]`` selects the character at index 4 from ``place``, and creates a new
-string containing just this one character. The variable ``m`` refers to the result. 
+string containing just this one character. The variable ``some_char`` refers to the result. 
 
 Remember that computer scientists often start counting
 from zero. The letter at index zero of ``"Saskatoon Sask"`` is ``S``.  So at
@@ -104,9 +104,10 @@ expression so long as it evaluates to a valid index value.
 Note that indexing returns a *string* --- Python has no special type for a single character.
 It is just a string of length 1.
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. mchoice:: test_question8_2_1
+.. mchoice:: string_index_test_question_1
    :answer_a: t
    :answer_b: h
    :answer_c: c
@@ -114,7 +115,7 @@ It is just a string of length 1.
    :correct: b
    :feedback_a: Index locations do not start with 1, they start with 0.
    :feedback_b: Yes, index locations start with 0.
-   :feedback_c: s[-3] would return c, counting from right to left.
+   :feedback_c: sentence[-3] would return c, counting from right to left.
    :feedback_d: [ ] is the index operator
 
 
@@ -122,13 +123,12 @@ It is just a string of length 1.
       
    .. code-block:: python
    
-      s = "python rocks"
-      print(s[3])
+      sentence = "python rocks"
+      print(sentence[3])
 
 
 
-
-.. mchoice:: test_question8_2_2
+.. mchoice:: string_index_test_question_2
    :answer_a: tr
    :answer_b: ps
    :answer_c: nn
@@ -144,8 +144,8 @@ It is just a string of length 1.
    
    .. code-block:: python
    
-      s = "python rocks"
-      print(s[2] + s[-5])
+      sentence = "python rocks"
+      print(sentence[2] + sentence[-5])
 
 
 
@@ -154,7 +154,7 @@ Length
 
 The ``len`` function, when applied to a string, returns the number of characters in a string.
 
-.. activecode:: chp08_len1
+.. activecode:: string_length_1
     
     fruit = "Banana"
     print(len(fruit))
@@ -163,11 +163,11 @@ The ``len`` function, when applied to a string, returns the number of characters
 To get the last letter of a string, you might be tempted to try something like
 this:
 
-.. activecode:: chp08_len2
+.. activecode:: string_length_1
     
     fruit = "Banana"
-    sz = len(fruit)
-    last = fruit[sz]       # ERROR!
+    size = len(fruit)
+    last = fruit[size]       # ERROR!
     print(last)
 
 That won't work. It causes the runtime error
@@ -177,12 +177,12 @@ Since we started counting at zero, the six indexes are
 numbered 0 to 5. To get the last character, we have to subtract 1 from
 the length.  Give it a try in the example above.
 
-.. activecode:: ch08_len3
+.. activecode:: string_length_2
     
     fruit = "Banana"
-    sz = len(fruit)
-    lastch = fruit[sz-1]
-    print(lastch)
+    size = len(fruit)
+    last_char = fruit[size-1]
+    print(last_char)
 
 Alternatively in Python, we can use **negative indices**, which count backward from the
 end of the string. The expression ``fruit[-1]`` yields the last letter,
@@ -190,9 +190,10 @@ end of the string. The expression ``fruit[-1]`` yields the last letter,
 Most other languages do *not* allow the negative indices, but they are a handy feature of Python!
 
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. mchoice:: test_question8_4_1
+.. mchoice:: string_length_test_question_1
    :answer_a: 11
    :answer_b: 12
    :correct: b
@@ -204,20 +205,20 @@ Most other languages do *not* allow the negative indices, but they are a handy f
    
    .. code-block:: python
    
-      s = "python rocks"
-      print(len(s))
+      sentence = "python rocks"
+      print(len(sentence))
 
 
 
-.. mchoice:: test_question8_4_2
+.. mchoice:: string_length_test_question_2
    :answer_a: o
    :answer_b: r
    :answer_c: s
-   :answer_d: Error, len(s) is 12 and there is no index 12.
+   :answer_d: Error, len(sentence) is 12 and there is no index 12.
    :correct: b
-   :feedback_a: Take a look at the index calculation again, len(s)-5.
-   :feedback_b: Yes, len(s) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
-   :feedback_c: s is at index 11
+   :feedback_a: Take a look at the index calculation again, len(sentence)-5.
+   :feedback_b: Yes, len(sentence) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
+   :feedback_c: sentence is at index 11
    :feedback_d: You subtract 5 before using the index operator so it will work.
 
 
@@ -225,11 +226,11 @@ Most other languages do *not* allow the negative indices, but they are a handy f
    
    .. code-block:: python
    
-      s = "python rocks"
-      print(s[len(s)-5])
+      sentence = "python rocks"
+      print(sentence[len(sentence)-5])
 
 
-.. mchoice:: test_question8_4_3
+.. mchoice:: string_length_test_question_3
    :answer_a: c
    :answer_b: k
    :answer_c: s
@@ -245,8 +246,8 @@ Most other languages do *not* allow the negative indices, but they are a handy f
    
    .. code-block:: python
    
-      s = "python rocks"
-      print(s[-3])
+      sentence = "python rocks"
+      print(sentence[-3])
 
 
 
@@ -256,12 +257,12 @@ The Slice Operator
 A substring of a string is called a **slice**. Selecting a slice is similar to
 selecting a character:
 
-.. activecode:: chp08_slice1
+.. activecode:: string_slice_1
     
-    singers = "Peter, Paul, and Mary"
-    print(singers[0:5])
-    print(singers[7:11])
-    print(singers[17:21])
+    places = "Regina, Estevan, and Melville"
+    print(places[0:6])
+    print(places[8:15])
+    print(places[21:29])
     
 
 The `slice` operator ``[n:m]`` returns the part of the string from the n'th character
@@ -275,10 +276,9 @@ If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
 end of the string.
 
-There is no Index Out Of Range exception for a slice.  
-A slice is forgiving and shifts any offending index to something legal. 
+There is no Index Out Of Range exception for a slice. A slice is forgiving and shifts any offending index to something legal. 
 
-.. activecode:: chp08_slice2
+.. activecode:: string_slice_2
     
     fruit = "banana"
     print(fruit[:3])
@@ -286,18 +286,22 @@ A slice is forgiving and shifts any offending index to something legal.
     print(fruit[3:-10])
     print(fruit[3:99])
 
-What do you think ``fruit[:]`` means?
+.. note:: 
 
-**Check your understanding**
+    What do you think ``fruit[:]`` means?
 
-.. mchoice:: test_question8_5_1
+
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mchoice:: string_length_test_question_1
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
    :answer_d: Error, you cannot have two numbers inside the [ ].
    :correct: c
-   :feedback_a: That would be s[0:6].
-   :feedback_b: That would be s[7:].
+   :feedback_a: That would be sentence[0:6].
+   :feedback_b: That would be sentence[7:].
    :feedback_c: Yes, start with the character at index 3 and go up to but not include the character at index 8.
    :feedback_d: This is called slicing, not indexing.  It requires a start and an end.
 
@@ -306,12 +310,12 @@ What do you think ``fruit[:]`` means?
    
    .. code-block:: python
 
-      s = "python rocks"
-      print(s[3:8])
+      sentence = "python rocks"
+      print(sentence[3:8])
 
 
 
-.. mchoice:: test_question8_5_2
+.. mchoice:: string_length_test_question_2
    :answer_a: rockrockrock
    :answer_b: rock rock rock
    :answer_c: rocksrocksrocks
@@ -327,8 +331,93 @@ What do you think ``fruit[:]`` means?
    
    .. code-block:: python
 
+      sentence = "python rocks"
+      print(sentence[7:11] * 3)
+
+
+
+Traversal and the ``for`` Loop: By Item
+---------------------------------------
+
+A lot of computations involve processing a collection one item at a time.  For strings this means
+that we would like to process one character at a time.
+Often we start at the beginning, select each character in turn, do something
+to it, and continue until the end. This pattern of processing is called a
+**traversal**.
+
+We have previously seen that the ``for`` statement can iterate over the items of a sequence (a list of names in the case below).
+
+.. activecode:: string_for_loop_by_item_1
+    :nocanvas:
+
+    for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+        invitation = "Hi " + a_name + ".  Please come to my party on Saturday!"
+        print(invitation)
+      
+Recall that the loop variable takes on each value in the sequence of names.  The body is performed once for each name.  The same was true for the sequence of integers created by the ``range`` function.
+
+.. activecode:: string_for_loop_by_item_2
+    :nocanvas:
+
+    for a_value in range(10):
+        print(a_value)
+
+
+Since a string is simply a sequence of characters, the ``for`` loop iterates over each character automatically.
+
+.. activecode:: string_for_loop_by_item_3
+    :nocanvas:
+
+    for a_char in "Go Spot Go":
+        print(a_char)
+
+The loop variable ``a_char`` is automatically reassigned each character in the string "Go Spot Go".
+We will refer to this type of sequence iteration as **iteration by item**.  
+Note that it is only possible to process the characters one at a time from left to right.
+
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mchoice:: string_for_loop_by_item_test_question_1
+   :answer_a: 10
+   :answer_b: 11
+   :answer_c: 12
+   :answer_d: Error, the for statement needs to use the range function.
+   :correct: c
+   :feedback_a: Iteration by item will process once for each item in the sequence.
+   :feedback_b: The blank is part of the sequence.
+   :feedback_c: Yes, there are 12 characters, including the blank.
+   :feedback_d: The for statement can iterate over a sequence item by item.
+
+
+   How many times is the word HELLO printed by the following statements?
+   
+   .. code-block:: python
+
       s = "python rocks"
-      print(s[7:11] * 3)
+      for ch in s:
+          print("HELLO")
+
+   
+.. mchoice:: string_for_loop_by_item_test_question_2
+   :answer_a: 4
+   :answer_b: 5
+   :answer_c: 6
+   :answer_d: Error, the for statement cannot use slice.
+   :correct: b
+   :feedback_a: Slice returns a sequence that can be iterated over.
+   :feedback_b: Yes, The blank is part of the sequence returned by slice
+   :feedback_c: Check the result of s[3:8].  It does not include the item at index 8.
+   :feedback_d: Slice returns a sequence.
+
+
+   How many times is the word HELLO printed by the following statements?
+   
+   .. code-block:: python
+
+      s = "python rocks"
+      for ch in s[3:8]:
+          print("HELLO")
 
 
 Practice Problems
@@ -358,11 +447,12 @@ In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings 
     prefixes = "JKLMNOPQ"
     suffix = "ack"
 
-    for p in prefixes:
-        print(p + suffix)
+    for letter in prefixes:
+        # add a conditional statement here...
+        print(letter + suffix)
     
     
-Of course, that's not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the ``prefixes`` or ``suffix`` variables!
+Of course, that's not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the ``prefixes`` or ``suffix`` variables! *You should do this by adding a conditional statement within the for loop.*
 
 
 First Letter of a Word
@@ -449,7 +539,7 @@ Create a program that takes in three inputs from the user:
 - a starting number
 - an ending number
 
-After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was ``saskatchewan``, the starting number was 3 and the ending number was 2, the program should print ``katchew``. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.
+After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was ``Saskatchewan``, the starting number was 3 and the ending number was 2, the program should print ``katchew``. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.
 
 To be sure you understand the challenge, consider the following example:
 

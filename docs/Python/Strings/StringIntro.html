@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>29. More Information About Strings &#8212; Computer Science 20 Saskatchewan</title>
+    <title>29. String Index, Length, Slicing and Traversal &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="next" title="30. More Information About Strings" href="MoreAboutStrings.html" />
     <link rel="prev" title="28. Image Processing With Conditionals" href="../MoreAboutIteration/ImageProcessingWithSelection.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -192,18 +192,31 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">29. More Information About Strings</a><ul>
+<li><a class="reference internal" href="#">29. String Index, Length, Slicing and Traversal</a><ul>
 <li><a class="reference internal" href="#a-collection-data-type">29.1. A Collection Data Type</a></li>
 <li><a class="reference internal" href="#concatenation-reminder">29.2. Concatenation Reminder</a></li>
-<li><a class="reference internal" href="#index-operator-working-with-the-characters-of-a-string">29.3. Index Operator: Working with the Characters of a String</a></li>
-<li><a class="reference internal" href="#length">29.4. Length</a></li>
-<li><a class="reference internal" href="#the-slice-operator">29.5. The Slice Operator</a></li>
-<li><a class="reference internal" href="#practice-problems">29.6. Practice Problems</a><ul>
-<li><a class="reference internal" href="#con-cat">29.6.1. Con Cat</a></li>
-<li><a class="reference internal" href="#duckling-names">29.6.2. Duckling Names</a></li>
-<li><a class="reference internal" href="#first-letter-of-a-word">29.6.3. First Letter of a Word</a></li>
-<li><a class="reference internal" href="#password-length">29.6.4. Password Length</a></li>
-<li><a class="reference internal" href="#removing-the-start-and-end">29.6.5. Removing the Start and End</a></li>
+<li><a class="reference internal" href="#index-operator-working-with-the-characters-of-a-string">29.3. Index Operator: Working with the Characters of a String</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">29.3.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#length">29.4. Length</a><ul>
+<li><a class="reference internal" href="#id2">29.4.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-slice-operator">29.5. The Slice Operator</a><ul>
+<li><a class="reference internal" href="#id3">29.5.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#traversal-and-the-for-loop-by-item">29.6. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Item</a><ul>
+<li><a class="reference internal" href="#id4">29.6.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practice-problems">29.7. Practice Problems</a><ul>
+<li><a class="reference internal" href="#con-cat">29.7.1. Con Cat</a></li>
+<li><a class="reference internal" href="#duckling-names">29.7.2. Duckling Names</a></li>
+<li><a class="reference internal" href="#first-letter-of-a-word">29.7.3. First Letter of a Word</a></li>
+<li><a class="reference internal" href="#password-length">29.7.4. Password Length</a></li>
+<li><a class="reference internal" href="#removing-the-start-and-end">29.7.5. Removing the Start and End</a></li>
 </ul>
 </li>
 </ul>
@@ -221,8 +234,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 30. More Information About Strings' data-toggle="tooltip" >
+    <a href="MoreAboutStrings.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -252,11 +265,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="more-information-about-strings">
-<h1>29. More Information About Strings<a class="headerlink" href="#more-information-about-strings" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="string-index-length-slicing-and-traversal">
+<h1>29. String Index, Length, Slicing and Traversal<a class="headerlink" href="#string-index-length-slicing-and-traversal" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Explore string operators, index values, length of strings, and string slicing.</p>
+<p>Explore string operators, index values, length of strings, string slicing, and traversing a string using a for loop (by item).</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -292,9 +305,9 @@ that make up the string are assumed to be in a particular order from left to rig
 <p>As we have seen before, you cannot perform mathematical operations on strings, even if the
 strings look like numbers. The one exception to this rule is that the <code class="docutils literal"><span class="pre">+</span></code> operator does work with strings, but for strings, the <code class="docutils literal"><span class="pre">+</span></code> operator represents <strong>concatenation</strong>, not addition.  As we have learned previously, concatenation means joining the two operands by linking them end-to-end. For example:</p>
 
-<div data-childcomponent="ch08_add" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="concatenation_reminder_demo" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch08_add data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=concatenation_reminder_demo data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "banana"
 bakedGood = " nut bread"
 print(fruit + bakedGood)
@@ -311,19 +324,19 @@ index value.  For example, in the string shown below, the 14 characters are inde
 index and so on.
 Note that the character at index 9 (or -5) is the blank/space character.</p>
 
-<div data-childcomponent="chp08_index1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_index_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=chp08_index1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_index_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 place = "Saskatoon Sask"
-m = place[4]
-print(m)
+some_char = place[4]
+print(some_char)
 
 last_char = place[-1]
 print(last_char)
 </textarea>
 </div>
 <p>The expression <code class="docutils literal"><span class="pre">place[4]</span></code> selects the character at index 4 from <code class="docutils literal"><span class="pre">place</span></code>, and creates a new
-string containing just this one character. The variable <code class="docutils literal"><span class="pre">m</span></code> refers to the result.</p>
+string containing just this one character. The variable <code class="docutils literal"><span class="pre">some_char</span></code> refers to the result.</p>
 <p>Remember that computer scientists often start counting
 from zero. The letter at index zero of <code class="docutils literal"><span class="pre">&quot;Saskatoon</span> <span class="pre">Sask&quot;</span></code> is <code class="docutils literal"><span class="pre">S</span></code>.  So at
 position <code class="docutils literal"><span class="pre">[4]</span></code> we have the letter <code class="docutils literal"><span class="pre">a</span></code>.</p>
@@ -335,55 +348,57 @@ of an ordered collection.  In this case the collection of characters in the stri
 expression so long as it evaluates to a valid index value.</p>
 <p>Note that indexing returns a <em>string</em> — Python has no special type for a single character.
 It is just a string of length 1.</p>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="check-your-understanding">
+<h3>29.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_2_1">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_index_test_question_1">
             <p>more-info-about-strings1: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question8_2_1_opt_a">t</li><li data-component="feedback" id="test_question8_2_1_opt_a">Index locations do not start with 1, they start with 0.</li>
+            <li data-component="answer"  id="string_index_test_question_1_opt_a">t</li><li data-component="feedback" id="string_index_test_question_1_opt_a">Index locations do not start with 1, they start with 0.</li>
             
-            <li data-component="answer" data-correct id="test_question8_2_1_opt_b">h</li><li data-component="feedback" id="test_question8_2_1_opt_b">Yes, index locations start with 0.</li>
+            <li data-component="answer" data-correct id="string_index_test_question_1_opt_b">h</li><li data-component="feedback" id="string_index_test_question_1_opt_b">Yes, index locations start with 0.</li>
             
-            <li data-component="answer"  id="test_question8_2_1_opt_c">c</li><li data-component="feedback" id="test_question8_2_1_opt_c">s[-3] would return c, counting from right to left.</li>
+            <li data-component="answer"  id="string_index_test_question_1_opt_c">c</li><li data-component="feedback" id="string_index_test_question_1_opt_c">sentence[-3] would return c, counting from right to left.</li>
             
-            <li data-component="answer"  id="test_question8_2_1_opt_d">Error, you cannot use the [ ] operator with a string.</li><li data-component="feedback" id="test_question8_2_1_opt_d">[ ] is the index operator</li>
+            <li data-component="answer"  id="string_index_test_question_1_opt_d">Error, you cannot use the [ ] operator with a string.</li><li data-component="feedback" id="string_index_test_question_1_opt_d">[ ] is the index operator</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_2_2">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_index_test_question_2">
             <p>more-info-about-strings2: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question8_2_2_opt_a">tr</li><li data-component="feedback" id="test_question8_2_2_opt_a">Yes, indexing operator has precedence over concatenation.</li>
+            <li data-component="answer" data-correct id="string_index_test_question_2_opt_a">tr</li><li data-component="feedback" id="string_index_test_question_2_opt_a">Yes, indexing operator has precedence over concatenation.</li>
             
-            <li data-component="answer"  id="test_question8_2_2_opt_b">ps</li><li data-component="feedback" id="test_question8_2_2_opt_b">p is at location 0, not 2.</li>
+            <li data-component="answer"  id="string_index_test_question_2_opt_b">ps</li><li data-component="feedback" id="string_index_test_question_2_opt_b">p is at location 0, not 2.</li>
             
-            <li data-component="answer"  id="test_question8_2_2_opt_c">nn</li><li data-component="feedback" id="test_question8_2_2_opt_c">n is at location 5, not 2.</li>
+            <li data-component="answer"  id="string_index_test_question_2_opt_c">nn</li><li data-component="feedback" id="string_index_test_question_2_opt_c">n is at location 5, not 2.</li>
             
-            <li data-component="answer"  id="test_question8_2_2_opt_d">Error, you cannot use the [ ] operator with the + operator.</li><li data-component="feedback" id="test_question8_2_2_opt_d">[ ] operator returns a string that can be concatenated with another string.</li>
+            <li data-component="answer"  id="string_index_test_question_2_opt_d">Error, you cannot use the [ ] operator with the + operator.</li><li data-component="feedback" id="string_index_test_question_2_opt_d">[ ] operator returns a string that can be concatenated with another string.</li>
             
 
             </ul>
             </div>
             </div>
+</div>
 <div class="section" id="length">
 <h2>29.4. Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">len</span></code> function, when applied to a string, returns the number of characters in a string.</p>
 
-<div data-childcomponent="chp08_len1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_length_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=chp08_len1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_length_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "Banana"
 print(len(fruit))
 </textarea>
@@ -391,12 +406,12 @@ print(len(fruit))
 <p>To get the last letter of a string, you might be tempted to try something like
 this:</p>
 
-<div data-childcomponent="chp08_len2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_length_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=chp08_len2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_length_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "Banana"
-sz = len(fruit)
-last = fruit[sz]       # ERROR!
+size = len(fruit)
+last = fruit[size]       # ERROR!
 print(last)
 </textarea>
 </div>
@@ -407,89 +422,91 @@ Since we started counting at zero, the six indexes are
 numbered 0 to 5. To get the last character, we have to subtract 1 from
 the length.  Give it a try in the example above.</p>
 
-<div data-childcomponent="ch08_len3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_length_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch08_len3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_length_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "Banana"
-sz = len(fruit)
-lastch = fruit[sz-1]
-print(lastch)
+size = len(fruit)
+last_char = fruit[size-1]
+print(last_char)
 </textarea>
 </div>
 <p>Alternatively in Python, we can use <strong>negative indices</strong>, which count backward from the
 end of the string. The expression <code class="docutils literal"><span class="pre">fruit[-1]</span></code> yields the last letter,
 <code class="docutils literal"><span class="pre">fruit[-2]</span></code> yields the second to last, and so on.  Try it!
 Most other languages do <em>not</em> allow the negative indices, but they are a handy feature of Python!</p>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="id2">
+<h3>29.4.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_4_1">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_1">
             <p>more-info-about-strings3: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question8_4_1_opt_a">11</li><li data-component="feedback" id="test_question8_4_1_opt_a">The blank counts as a character.</li>
+            <li data-component="answer"  id="string_length_test_question_1_opt_a">11</li><li data-component="feedback" id="string_length_test_question_1_opt_a">The blank counts as a character.</li>
             
-            <li data-component="answer" data-correct id="test_question8_4_1_opt_b">12</li><li data-component="feedback" id="test_question8_4_1_opt_b">Yes, there are 12 characters in the string.</li>
+            <li data-component="answer" data-correct id="string_length_test_question_1_opt_b">12</li><li data-component="feedback" id="string_length_test_question_1_opt_b">Yes, there are 12 characters in the string.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_4_2">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_2">
             <p>more-info-about-strings4: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question8_4_2_opt_a">o</li><li data-component="feedback" id="test_question8_4_2_opt_a">Take a look at the index calculation again, len(s)-5.</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_a">o</li><li data-component="feedback" id="string_length_test_question_2_opt_a">Take a look at the index calculation again, len(sentence)-5.</li>
             
-            <li data-component="answer" data-correct id="test_question8_4_2_opt_b">r</li><li data-component="feedback" id="test_question8_4_2_opt_b">Yes, len(s) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.</li>
+            <li data-component="answer" data-correct id="string_length_test_question_2_opt_b">r</li><li data-component="feedback" id="string_length_test_question_2_opt_b">Yes, len(sentence) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.</li>
             
-            <li data-component="answer"  id="test_question8_4_2_opt_c">s</li><li data-component="feedback" id="test_question8_4_2_opt_c">s is at index 11</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_c">s</li><li data-component="feedback" id="string_length_test_question_2_opt_c">sentence is at index 11</li>
             
-            <li data-component="answer"  id="test_question8_4_2_opt_d">Error, len(s) is 12 and there is no index 12.</li><li data-component="feedback" id="test_question8_4_2_opt_d">You subtract 5 before using the index operator so it will work.</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_d">Error, len(sentence) is 12 and there is no index 12.</li><li data-component="feedback" id="string_length_test_question_2_opt_d">You subtract 5 before using the index operator so it will work.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_4_3">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_3">
             <p>more-info-about-strings5: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question8_4_3_opt_a">c</li><li data-component="feedback" id="test_question8_4_3_opt_a">Yes, 3 characters from the end.</li>
+            <li data-component="answer" data-correct id="string_length_test_question_3_opt_a">c</li><li data-component="feedback" id="string_length_test_question_3_opt_a">Yes, 3 characters from the end.</li>
             
-            <li data-component="answer"  id="test_question8_4_3_opt_b">k</li><li data-component="feedback" id="test_question8_4_3_opt_b">Count backward 3 characters.</li>
+            <li data-component="answer"  id="string_length_test_question_3_opt_b">k</li><li data-component="feedback" id="string_length_test_question_3_opt_b">Count backward 3 characters.</li>
             
-            <li data-component="answer"  id="test_question8_4_3_opt_c">s</li><li data-component="feedback" id="test_question8_4_3_opt_c">When expressed with a negative index the last character s is at index -1.</li>
+            <li data-component="answer"  id="string_length_test_question_3_opt_c">s</li><li data-component="feedback" id="string_length_test_question_3_opt_c">When expressed with a negative index the last character s is at index -1.</li>
             
-            <li data-component="answer"  id="test_question8_4_3_opt_d">Error, negative indices are illegal.</li><li data-component="feedback" id="test_question8_4_3_opt_d">Python does use negative indices to count backward from the end.</li>
+            <li data-component="answer"  id="string_length_test_question_3_opt_d">Error, negative indices are illegal.</li><li data-component="feedback" id="string_length_test_question_3_opt_d">Python does use negative indices to count backward from the end.</li>
             
 
             </ul>
             </div>
             </div>
+</div>
 <div class="section" id="the-slice-operator">
 <h2>29.5. The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this headline">¶</a></h2>
 <p>A substring of a string is called a <strong>slice</strong>. Selecting a slice is similar to
 selecting a character:</p>
 
-<div data-childcomponent="chp08_slice1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_slice_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=chp08_slice1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-singers = "Peter, Paul, and Mary"
-print(singers[0:5])
-print(singers[7:11])
-print(singers[17:21])
+<textarea data-component="activecode" id=string_slice_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+places = "Regina, Estevan, and Melville"
+print(places[0:6])
+print(places[8:15])
+print(places[21:29])
 </textarea>
 </div>
 <p>The <cite>slice</cite> operator <code class="docutils literal"><span class="pre">[n:m]</span></code> returns the part of the string from the n’th character
@@ -501,12 +518,11 @@ point either.</p>
 <p>If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
 end of the string.</p>
-<p>There is no Index Out Of Range exception for a slice.
-A slice is forgiving and shifts any offending index to something legal.</p>
+<p>There is no Index Out Of Range exception for a slice. A slice is forgiving and shifts any offending index to something legal.</p>
 
-<div data-childcomponent="chp08_slice2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_slice_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=chp08_slice2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_slice_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "banana"
 print(fruit[:3])
 print(fruit[3:])
@@ -514,54 +530,143 @@ print(fruit[3:-10])
 print(fruit[3:99])
 </textarea>
 </div>
-<p>What do you think <code class="docutils literal"><span class="pre">fruit[:]</span></code> means?</p>
-<p><strong>Check your understanding</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">What do you think <code class="docutils literal"><span class="pre">fruit[:]</span></code> means?</p>
+</div>
+<div class="section" id="id3">
+<h3>29.5.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_5_1">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_1">
             <p>more-info-about-strings6: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question8_5_1_opt_a">python</li><li data-component="feedback" id="test_question8_5_1_opt_a">That would be s[0:6].</li>
+            <li data-component="answer"  id="string_length_test_question_1_opt_a">python</li><li data-component="feedback" id="string_length_test_question_1_opt_a">That would be sentence[0:6].</li>
             
-            <li data-component="answer"  id="test_question8_5_1_opt_b">rocks</li><li data-component="feedback" id="test_question8_5_1_opt_b">That would be s[7:].</li>
+            <li data-component="answer"  id="string_length_test_question_1_opt_b">rocks</li><li data-component="feedback" id="string_length_test_question_1_opt_b">That would be sentence[7:].</li>
             
-            <li data-component="answer" data-correct id="test_question8_5_1_opt_c">hon r</li><li data-component="feedback" id="test_question8_5_1_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
+            <li data-component="answer" data-correct id="string_length_test_question_1_opt_c">hon r</li><li data-component="feedback" id="string_length_test_question_1_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
             
-            <li data-component="answer"  id="test_question8_5_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="test_question8_5_1_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
+            <li data-component="answer"  id="string_length_test_question_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="string_length_test_question_1_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question8_5_2">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_2">
             <p>more-info-about-strings7: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question8_5_2_opt_a">rockrockrock</li><li data-component="feedback" id="test_question8_5_2_opt_a">Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.</li>
+            <li data-component="answer" data-correct id="string_length_test_question_2_opt_a">rockrockrock</li><li data-component="feedback" id="string_length_test_question_2_opt_a">Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.</li>
             
-            <li data-component="answer"  id="test_question8_5_2_opt_b">rock rock rock</li><li data-component="feedback" id="test_question8_5_2_opt_b">Repetition does not add a space.</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_b">rock rock rock</li><li data-component="feedback" id="string_length_test_question_2_opt_b">Repetition does not add a space.</li>
             
-            <li data-component="answer"  id="test_question8_5_2_opt_c">rocksrocksrocks</li><li data-component="feedback" id="test_question8_5_2_opt_c">Slicing will not include the character at index 11.  Just up to it (10 in this case).</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_c">rocksrocksrocks</li><li data-component="feedback" id="string_length_test_question_2_opt_c">Slicing will not include the character at index 11.  Just up to it (10 in this case).</li>
             
-            <li data-component="answer"  id="test_question8_5_2_opt_d">Error, you cannot use repetition with slicing.</li><li data-component="feedback" id="test_question8_5_2_opt_d">The slice will happen first, then the repetition.  So it is ok.</li>
+            <li data-component="answer"  id="string_length_test_question_2_opt_d">Error, you cannot use repetition with slicing.</li><li data-component="feedback" id="string_length_test_question_2_opt_d">The slice will happen first, then the repetition.  So it is ok.</li>
             
 
             </ul>
             </div>
             </div>
+</div>
+<div class="section" id="traversal-and-the-for-loop-by-item">
+<h2>29.6. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this headline">¶</a></h2>
+<p>A lot of computations involve processing a collection one item at a time.  For strings this means
+that we would like to process one character at a time.
+Often we start at the beginning, select each character in turn, do something
+to it, and continue until the end. This pattern of processing is called a
+<strong>traversal</strong>.</p>
+<p>We have previously seen that the <code class="docutils literal"><span class="pre">for</span></code> statement can iterate over the items of a sequence (a list of names in the case below).</p>
+
+<div data-childcomponent="string_for_loop_by_item_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_for_loop_by_item_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+    invitation = "Hi " + a_name + ".  Please come to my party on Saturday!"
+    print(invitation)
+</textarea>
+</div>
+<p>Recall that the loop variable takes on each value in the sequence of names.  The body is performed once for each name.  The same was true for the sequence of integers created by the <code class="docutils literal"><span class="pre">range</span></code> function.</p>
+
+<div data-childcomponent="string_for_loop_by_item_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_for_loop_by_item_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for a_value in range(10):
+    print(a_value)
+</textarea>
+</div>
+<p>Since a string is simply a sequence of characters, the <code class="docutils literal"><span class="pre">for</span></code> loop iterates over each character automatically.</p>
+
+<div data-childcomponent="string_for_loop_by_item_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_for_loop_by_item_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for a_char in "Go Spot Go":
+    print(a_char)
+</textarea>
+</div>
+<p>The loop variable <code class="docutils literal"><span class="pre">a_char</span></code> is automatically reassigned each character in the string “Go Spot Go”.
+We will refer to this type of sequence iteration as <strong>iteration by item</strong>.
+Note that it is only possible to process the characters one at a time from left to right.</p>
+<div class="section" id="id4">
+<h3>29.6.1. Check Your Understanding<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_1">
+            <p>more-info-about-strings8: How many times is the word HELLO printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_1_opt_a">10</li><li data-component="feedback" id="string_for_loop_by_item_test_question_1_opt_a">Iteration by item will process once for each item in the sequence.</li>
+            
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_1_opt_b">11</li><li data-component="feedback" id="string_for_loop_by_item_test_question_1_opt_b">The blank is part of the sequence.</li>
+            
+            <li data-component="answer" data-correct id="string_for_loop_by_item_test_question_1_opt_c">12</li><li data-component="feedback" id="string_for_loop_by_item_test_question_1_opt_c">Yes, there are 12 characters, including the blank.</li>
+            
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_1_opt_d">Error, the for statement needs to use the range function.</li><li data-component="feedback" id="string_for_loop_by_item_test_question_1_opt_d">The for statement can iterate over a sequence item by item.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_2">
+            <p>more-info-about-strings9: How many times is the word HELLO printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_2_opt_a">4</li><li data-component="feedback" id="string_for_loop_by_item_test_question_2_opt_a">Slice returns a sequence that can be iterated over.</li>
+            
+            <li data-component="answer" data-correct id="string_for_loop_by_item_test_question_2_opt_b">5</li><li data-component="feedback" id="string_for_loop_by_item_test_question_2_opt_b">Yes, The blank is part of the sequence returned by slice</li>
+            
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_2_opt_c">6</li><li data-component="feedback" id="string_for_loop_by_item_test_question_2_opt_c">Check the result of s[3:8].  It does not include the item at index 8.</li>
+            
+            <li data-component="answer"  id="string_for_loop_by_item_test_question_2_opt_d">Error, the for statement cannot use slice.</li><li data-component="feedback" id="string_for_loop_by_item_test_question_2_opt_d">Slice returns a sequence.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
 <div class="section" id="practice-problems">
-<h2>29.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>29.7. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
 <div class="section" id="con-cat">
-<h3>29.6.1. Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
+<h3>29.7.1. Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in <code class="docutils literal"><span class="pre">Garfield</span></code>, your program could print something like <code class="docutils literal"><span class="pre">Good</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">you,</span> <span class="pre">Garfield!</span></code>. <strong>Be sure to use concatenation in your solution!</strong></p>
 
 <div data-childcomponent="practice_problem_string_into_1" class="runestone explainer ac_section alert alert-warning">
@@ -572,7 +677,7 @@ print(fruit[3:99])
 </div>
 </div>
 <div class="section" id="duckling-names">
-<h3>29.6.2. Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
+<h3>29.7.2. Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
 <p>In Robert McCloskey’s book <em>Make Way for Ducklings</em>, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.</p>
 
 <div data-childcomponent="practice_problem_string_into_2" class="runestone explainer ac_section alert alert-warning">
@@ -581,14 +686,15 @@ print(fruit[3:99])
 prefixes = "JKLMNOPQ"
 suffix = "ack"
 
-for p in prefixes:
-    print(p + suffix)
+for letter in prefixes:
+    # add a conditional statement here...
+    print(letter + suffix)
 </textarea>
 </div>
-<p>Of course, that’s not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the <code class="docutils literal"><span class="pre">prefixes</span></code> or <code class="docutils literal"><span class="pre">suffix</span></code> variables!</p>
+<p>Of course, that’s not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the <code class="docutils literal"><span class="pre">prefixes</span></code> or <code class="docutils literal"><span class="pre">suffix</span></code> variables! <em>You should do this by adding a conditional statement within the for loop.</em></p>
 </div>
 <div class="section" id="first-letter-of-a-word">
-<h3>29.6.3. First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3>29.7.3. First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -623,7 +729,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="password-length">
-<h3>29.6.4. Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
+<h3>29.7.4. Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -658,14 +764,14 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="removing-the-start-and-end">
-<h3>29.6.5. Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
+<h3>29.7.5. Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that takes in three inputs from the user:</p>
 <ul class="simple">
 <li>a word/sentence</li>
 <li>a starting number</li>
 <li>an ending number</li>
 </ul>
-<p>After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was <code class="docutils literal"><span class="pre">saskatchewan</span></code>, the starting number was 3 and the ending number was 2, the program should print <code class="docutils literal"><span class="pre">katchew</span></code>. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.</p>
+<p>After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was <code class="docutils literal"><span class="pre">Saskatchewan</span></code>, the starting number was 3 and the ending number was 2, the program should print <code class="docutils literal"><span class="pre">katchew</span></code>. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.</p>
 <p>To be sure you understand the challenge, consider the following example:</p>
 <ul class="simple">
 <li>word = “unimaginatively”</li>
@@ -694,12 +800,12 @@ myTests().main()
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../MoreAboutIteration/ImageProcessingWithSelection.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 30. More Information About Strings' data-toggle="tooltip" >
+    <a href="MoreAboutStrings.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="MoreAboutStrings.html" >Next Section - 30. More Information About Strings</a>
 
 <script type="text/javascript">
 
