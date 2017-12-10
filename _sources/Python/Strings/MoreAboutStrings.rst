@@ -167,9 +167,9 @@ Remember that the accumulator pattern allows us to keep a "running total".  With
     def remove_vowels(original_string):
         vowels = "aeiouAEIOU"
         string_without_vowels = ""
-        for each_char in original_string:
-            if each_char not in vowels:
-                string_without_vowels = string_without_vowels + each_char
+        for this_char in original_string:
+            if this_char not in vowels:
+                string_without_vowels = string_without_vowels + this_char
         return string_without_vowels 
        
     print(remove_vowels("compsci"))
@@ -214,13 +214,11 @@ Check Your Understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: string_accumulator_pattern_test_question_1
-    :answer_a: Ball
-    :answer_b: BALL
-    :answer_c: LLAB
-    :correct: c
-    :feedback_a: Each item is converted to upper case before concatenation.
-    :feedback_b: Each character is converted to upper case but the order is wrong.
-    :feedback_c: Yes, the order is reversed due to the order of the concatenation.
+    :answer_a: ball
+    :answer_b: llab
+    :correct: b
+    :feedback_a: Look again at the *order* of the concatenation!
+    :feedback_b: Yes, the order is reversed due to the order of the concatenation.
 
     What is printed by the following statements:
 
@@ -229,7 +227,7 @@ Check Your Understanding
         some_string = "ball"
         another_string = ""
         for item in some_string:
-            another_string = item.upper() + another_string
+            another_string = item + another_string
         print(another_string)
 
 
@@ -244,40 +242,36 @@ By combining what we know about moving turtles on the screen, and what we have l
 - turn left by some angle
 - move forward twice in a row 
 
+To turn a string like ``FF+F-FF`` into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.
+
+.. activecode:: string_turtle_movement_1
+    
+    import turtle
+
+    canvas = turtle.Screen()
+    escher = turtle.Turtle()
+    escher.speed(1)
+
+    instructions = "FF+F-FF"
+
+    for task in instructions:
+        if task == "F":
+            escher.forward(25)
+        elif task == "+":
+            escher.right(45)
+        elif task == "-":
+            escher.left(45)
 
 
+.. note:: 
 
+    In the code above, try:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    - changing the instruction string to have the turtle draw a different image
+    - adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
+    - increasing the speed of the turtle
+    
+    After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
 
 
 
@@ -286,56 +280,29 @@ Practice Problems
 
 Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
-Con Cat
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in ``Garfield``, your program could print something like ``Good to see you, Garfield!``. **Be sure to use concatenation in your solution!**
-   
-.. activecode:: practice_problem_string_into_1
-    :nocodelens:
-
-    # Hello message to a cat
+**Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.**
 
 
-Duckling Names
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.
-    
-.. activecode:: practice_problem_string_into_2
-    :nocodelens:
-
-    prefixes = "JKLMNOPQ"
-    suffix = "ack"
-
-    for letter in prefixes:
-        # add a conditional statement here...
-        print(letter + suffix)
-    
-    
-Of course, that's not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the ``prefixes`` or ``suffix`` variables! *You should do this by adding a conditional statement within the for loop.*
-
-
-First Letter of a Word
+Even Letters of a Word
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
-.. activecode:: practice_problem_string_into_3
+.. activecode:: practice_problem_string_more_info_1
     :nocodelens:
 
-    Create a function with a single parameter ``word`` that returns ``True`` if the ``word`` begins with the letter "t" or "c".
+    Create a function with a single parameter ``word`` that returns the even letters of the ``word`` (the first letter is even, since we start counting our index values at 0). For example, given the ``word`` "Saskatoon", the function should return "Ssaon".
 
     **Examples:**
 
-    ``starts_with_tc("thing") → True``
+    ``even_letters("Saskatoon") → "Ssaon"``
 
-    ``starts_with_tc("concatenation") → True``
+    ``even_letters("Saskatchewan") → "Ssacea"``
 
-    ``starts_with_tc("warman") → False``
+    ``even_letters("Roughriders") → "Ruhies"``
     ~~~~
-    def starts_with_tc(word):
-        return False
+    def even_letters(word):
+        return ""
 
     ====
     from unittest.gui import TestCaseGui
@@ -343,36 +310,37 @@ First Letter of a Word
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(starts_with_tc("thing"),True,'starts_with_tc("thing")')
-            self.assertEqual(starts_with_tc("concatenation"),True,'starts_with_tc("concatenation")')
-            self.assertEqual(starts_with_tc("warman"),False,'starts_with_tc("warman")')
-            self.assertEqual(starts_with_tc("Thing"),False,'starts_with_tc("Thing")')
-            self.assertEqual(starts_with_tc("candy"),True,'starts_with_tc("candy")')
-            self.assertEqual(starts_with_tc("saskatoon"),False,'starts_with_tc("saskatoon")')
+            self.assertEqual(even_letters("Saskatoon"),"Ssaon",'even_letters("Saskatoon")')
+            self.assertEqual(even_letters("Saskatchewan"),"Ssacea",'even_letters("Saskatchewan")')
+            self.assertEqual(even_letters("Roughriders"),"Ruhies",'even_letters("Roughriders")')
+            self.assertEqual(even_letters("Tisdale"),"Tsae",'even_letters("Tisdale")')
+            self.assertEqual(even_letters("Hepburn"),"Hpun",'even_letters("Hepburn")')
+            self.assertEqual(even_letters("Neuanlage"),"Nunae",'even_letters("Neuanlage")')
+            self.assertEqual(even_letters("Blumenheim"),"Buehi",'even_letters("Blumenheim")')
 
     myTests().main()
 
 
-Password Length
+Reverse Me
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
-.. activecode:: practice_problem_string_into_4
+.. activecode:: practice_problem_string_more_info_2
     :nocodelens:
 
-    Create a function with a single parameter ``password`` that returns ``True`` if the ``password`` is between 8 and 32 characters (inclusive), and ``False`` otherwise. *Please note there is much more to a strong password than just the length of the string!*
+    Create a function with a single parameter ``word`` that returns the ``word`` spelled backwards. For example, if the ``word`` was "Saskatoon", the function should return "nootaksaS".
 
     **Examples:**
 
-    ``password_length("123456789") → True``
+    ``reverse_me("Saskatoon") → "nootaksaS"``
 
-    ``password_length("qwerty") → False``
+    ``reverse_me("Saskatchewan") → "nawehctaksaS"``
 
-    ``password_length("cray-topnotch-tampa-anthem-trial") → True``
+    ``reverse_me("Roughriders") → "sredirhguoR"``
     ~~~~
-    def password_length(password):
-        return False
+    def reverse_me(word):
+        return ""
 
     ====
     from unittest.gui import TestCaseGui
@@ -380,38 +348,91 @@ Password Length
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(password_length("123456789"),True,'password_length("123456789")')
-            self.assertEqual(password_length("qwerty"),False,'password_length("qwerty")')
-            self.assertEqual(password_length("cray-topnotch-tampa-anthem-trial"),True,'password_length("cray-topnotch-tampa-anthem-trial")')
-            self.assertEqual(password_length("7mvRVNwB9JAeVtdWywB3MfGsU6+Rnz4PyVDNCnUt"),False,'password_length("7mvRVNwB9JAeVtdWywB3MfGsU6+Rnz4PyVDNCnUt")')
-            self.assertEqual(password_length("fixate"),False,'password_length("fixate")')
-            self.assertEqual(password_length("8X?3a739"),True,'password_length("8X?3a739")')
+            self.assertEqual(reverse_me("Saskatoon"),"nootaksaS",'reverse_me("Saskatoon")')
+            self.assertEqual(reverse_me("Saskatchewan"),"nawehctaksaS",'reverse_me("Saskatchewan")')
+            self.assertEqual(reverse_me("Roughriders"),"sredirhguoR",'reverse_me("Roughriders")')
+            self.assertEqual(reverse_me("Oxbow"),"wobxO",'reverse_me("Oxbow")')
+            self.assertEqual(reverse_me("Lumsden"),"nedsmuL",'reverse_me("Lumsden")')
+            self.assertEqual(reverse_me("La Loche"),"ehcoL aL",'reverse_me("La Loche")')
+            self.assertEqual(reverse_me("Waskesiu"),"uiseksaW",'reverse_me("Waskesiu")')
 
     myTests().main()
 
 
 
-Removing the Start and End
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Letter Destroyer
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a program that takes in three inputs from the user:
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
-- a word/sentence
-- a starting number
-- an ending number
-
-After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was ``Saskatchewan``, the starting number was 3 and the ending number was 2, the program should print ``katchew``. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.
-
-To be sure you understand the challenge, consider the following example:
-
-- word = "unimaginatively"
-- starting_number = 3
-- ending_number = 2
-- output should be ``maginative``
-
-
-.. activecode:: practice_problem_string_into_5
+.. activecode:: practice_problem_string_more_info_3
     :nocodelens:
 
-    # Remove the Start and End
+    Create a function with two parameters, ``word`` and ``letter_to_destroy``. The function should return the ``word``, but without any of the occurrences of the ``letter_to_destroy`` in the string. For example, if the ``word`` was "Saskatoon", and the ``letter_to_destroy`` was 'o', the function should return "Saskatn".
+
+    **Examples:**
+
+    ``letter_destroyer("Saskatoon", "o") → "Saskatn"``
+
+    ``letter_destroyer("Saskatchewan", "a") → "Ssktchewn"``
+
+    ``letter_destroyer("roughriders", "r") → "oughides"``
+    ~~~~
+    def letter_destroyer(word):
+        return ""
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(letter_destroyer("Saskatoon", "o"),"Saskatn",'letter_destroyer("Saskatoon", "o")')
+            self.assertEqual(letter_destroyer("Saskatchewan", "a"),"Ssktchewn",'letter_destroyer("Saskatchewan", "a")')
+            self.assertEqual(letter_destroyer("roughriders", "r"),"oughides",'letter_destroyer("roughriders", "r")')
+            self.assertEqual(letter_destroyer("hotshots", "h"),"otsots",'letter_destroyer("hotshots", "h")')
+            self.assertEqual(letter_destroyer("hotshots", "o"),"htshts",'letter_destroyer("hotshots", "o")')
+            self.assertEqual(letter_destroyer("hotshots", "t"),"hoshos",'letter_destroyer("hotshots", "t")')
+            self.assertEqual(letter_destroyer("hotshots", "s"),"hothot",'letter_destroyer("hotshots", "s")')
+
+    myTests().main()
+
+
+
+QWERTY Finder
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+
+.. activecode:: practice_problem_string_more_info_4
+    :nocodelens:
+
+    Create a function that takes in a single parameter ``word`` and returns the location of the first occurrence of one of the following letters: "qwerty". If none of these letters exist in the word, have the function return -1. For example, if the ``word`` was "Saskatoon", the function should return 5 (the index value for the ``t`` in "Saskatoon").
+
+    **Examples:**
+
+    ``qwerty_finder("Saskatoon") → 5``
+
+    ``qwerty_finder("Naomi") → -1``
+
+    ``qwerty_finder("bunnyhug") → 4``
+    ~~~~
+    def qwerty_finder(word):
+        return ""
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(qwerty_finder("Saskatoon"), 5,'qwerty_finder("Saskatoon")')
+            self.assertEqual(qwerty_finder("Naomi"), -1,'qwerty_finder("Naomi")')
+            self.assertEqual(qwerty_finder("bunnyhug"), 4,'qwerty_finder("bunnyhug")')
+            self.assertEqual(qwerty_finder("Schellenberg"), 3,'qwerty_finder("Schellenberg")')
+            self.assertEqual(qwerty_finder("roughriders"), 0,'qwerty_finder("roughriders")')
+            self.assertEqual(qwerty_finder("junk"),-1 ,'qwerty_finder("junk")')
+            self.assertEqual(qwerty_finder("university"), 4,'qwerty_finder("university")')
+
+    myTests().main()
 

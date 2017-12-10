@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
-    <link rel="prev" title="29. More Information About Strings" href="StringIntro.html" />
+    <link rel="prev" title="29. String Index, Length, Slicing and Traversal" href="StringIntro.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -193,16 +193,22 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">30. More Information About Strings</a><ul>
-<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">30.1. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">30.1.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#what-does-this-program-do">30.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">30.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">30.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#practice-problems">30.2. Practice Problems</a><ul>
-<li><a class="reference internal" href="#con-cat">30.2.1. Con Cat</a></li>
-<li><a class="reference internal" href="#duckling-names">30.2.2. Duckling Names</a></li>
-<li><a class="reference internal" href="#first-letter-of-a-word">30.2.3. First Letter of a Word</a></li>
-<li><a class="reference internal" href="#password-length">30.2.4. Password Length</a></li>
-<li><a class="reference internal" href="#removing-the-start-and-end">30.2.5. Removing the Start and End</a></li>
+<li><a class="reference internal" href="#the-in-and-not-in-operators">30.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
+<li><a class="reference internal" href="#the-accumulator-pattern-with-strings">30.4. The Accumulator Pattern with Strings</a><ul>
+<li><a class="reference internal" href="#id3">30.4.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#controlling-a-turtle-with-strings">30.5. Controlling a Turtle With Strings</a></li>
+<li><a class="reference internal" href="#practice-problems">30.6. Practice Problems</a><ul>
+<li><a class="reference internal" href="#even-letters-of-a-word">30.6.1. Even Letters of a Word</a></li>
+<li><a class="reference internal" href="#reverse-me">30.6.2. Reverse Me</a></li>
+<li><a class="reference internal" href="#letter-destroyer">30.6.3. Letter Destroyer</a></li>
+<li><a class="reference internal" href="#qwerty-finder">30.6.4. QWERTY Finder</a></li>
 </ul>
 </li>
 </ul>
@@ -214,7 +220,7 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 29. More Information About Strings" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 29. String Index, Length, Slicing and Traversal" data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -255,7 +261,7 @@
 <h1>30. More Information About Strings<a class="headerlink" href="#more-information-about-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, accumulator pattern with strings, and using strings to control turtle movement.</p>
+<p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, accumulator pattern with strings, and using strings to control turtle movement.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -267,8 +273,49 @@
 </ul>
 
     </div>
-    <div class="section" id="traversal-and-the-for-loop-by-index">
-<h2>30.1. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="what-does-this-program-do">
+<h2>30.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p><strong>What will the following programs output? Why?</strong></p>
+
+<div data-childcomponent="wdtpd_string_manipulation_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_string_manipulation_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+title = "Pirates of the Caribbean"
+print(title[1])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_string_manipulation_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_string_manipulation_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+title = "Pirates of the Caribbean"
+print(title[-3])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_string_manipulation_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_string_manipulation_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+title = "Pirates of the Caribbean"
+print(title[2:6])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_string_manipulation_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_string_manipulation_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+fruit = "pineapple"
+for poorly_named_variable in fruit:
+    print(poorly_named_variable)
+</textarea>
+</div>
+</div>
+<div class="section" id="traversal-and-the-for-loop-by-index">
+<h2>30.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to use the <code class="docutils literal"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
 These positions can be used together with the indexing operator to access the individual
 characters in the string.</p>
@@ -385,15 +432,15 @@ $(window).resize(function() {
 </div>
 <p>Trace the values of <code class="docutils literal"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
 <div class="section" id="check-your-understanding">
-<h3>30.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>30.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1">
             <p>more-info-about-strings1: How many times is the letter o printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">current_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">current_index</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="n">current_index</span><span class="p">])</span>
+  <span class="k">if</span> <span class="n">current_index</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="n">current_index</span><span class="p">])</span>
 </pre></div>
 </div>
 
@@ -410,54 +457,212 @@ $(window).resize(function() {
             </div>
             </div>
 </div>
+<div class="section" id="the-in-and-not-in-operators">
+<h2>30.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
+
+<div data-childcomponent="string_in_not_in_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_in_not_in_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('p' in 'apple')
+print('i' in 'apple')
+print('ap' in 'apple')
+print('pa' in 'apple')
+</textarea>
+</div>
+<p>Note that a string is a substring of itself, and the empty string is a
+substring of any other string. <a href="#id1"><span class="problematic" id="id2">*</span></a>(Also note that computer scientists
+like to think about these edge cases quite carefully!) *</p>
+
+<div data-childcomponent="string_in_not_in_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_in_not_in_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('a' in 'a')
+print('apple' in 'apple')
+print('' in 'a')
+print('' in 'apple')
+</textarea>
+</div>
+<p>The <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operator returns the logical opposite result of <code class="docutils literal"><span class="pre">in</span></code>.</p>
+
+<div data-childcomponent="string_in_not_in_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_in_not_in_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('x' not in 'apple')
+</textarea>
+</div>
+</div>
+<div class="section" id="the-accumulator-pattern-with-strings">
+<h2>30.4. The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
+<p>Combining the <code class="docutils literal"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal"><span class="pre">+</span></code> and the accumulator pattern, we can
+write a function that removes all the vowels from a string.  The idea is to start with a string and iterate over each character, checking to see if the character is a vowel.  As we process the characters, we will build up a new string consisting of only the nonvowel characters.  To do this, we use the accumulator pattern.</p>
+<p>Remember that the accumulator pattern allows us to keep a “running total”.  With strings, we are not accumulating a numeric total.  Instead we are accumulating characters onto a string.</p>
+
+<div data-childcomponent="string_accumulator_pattern_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_accumulator_pattern_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def remove_vowels(original_string):
+    vowels = "aeiouAEIOU"
+    string_without_vowels = ""
+    for this_char in original_string:
+        if this_char not in vowels:
+            string_without_vowels = string_without_vowels + this_char
+    return string_without_vowels
+
+print(remove_vowels("compsci"))
+print(remove_vowels("aAbEefIijOopUus"))
+</textarea>
+</div>
+<p>Line 5 uses the <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operator to check whether the current character is not in the string <code class="docutils literal"><span class="pre">vowels</span></code>. The alternative to using this operator would be to write a very large <code class="docutils literal"><span class="pre">if</span></code> statement that checks each of the individual vowel characters.  Note we would need to use logical <code class="docutils literal"><span class="pre">and</span></code> to be sure that the character is not any of the vowels.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span>  <span class="ow">and</span>
+   <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;o&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;u&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;A&#39;</span>  <span class="ow">and</span>
+   <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;E&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;I&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;O&#39;</span>  <span class="ow">and</span>
+   <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span>
+
+     <span class="n">string_without_vowels</span> <span class="o">=</span> <span class="n">string_without_vowels</span> <span class="o">+</span> <span class="n">each_char</span>
+</pre></div>
+</div>
+<p>Look carefully at line 6 in the above program (<code class="docutils literal"><span class="pre">string_without_vowels</span> <span class="pre">=</span> <span class="pre">string_without_vowels</span> <span class="pre">+</span> <span class="pre">each_char</span></code>).  We will do this for every character that is not a vowel.  This should look
+very familiar.  As we were describing earlier, it is an example of the accumulator pattern, this time using a string to “accumulate” the final result.
+In words it says that the new value of <code class="docutils literal"><span class="pre">string_without_vowels</span></code> will be the old value of <code class="docutils literal"><span class="pre">string_without_vowels</span></code> concatenated with
+the value of <code class="docutils literal"><span class="pre">each_char</span></code>.  We are building the result string character by character.</p>
+<p>Take a close look also at the initialization of <code class="docutils literal"><span class="pre">string_without_vowels</span></code>.  We start with an empty string and then begin adding
+new characters to the end.</p>
+<p>Step through the function using codelens to see the accumulator variable grow.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="string_accumulator_pattern_2"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (string_accumulator_pattern_2)</span> </p>
+</div>
+<script type="text/javascript">
+var string_accumulator_pattern_2_trace = {"code": "def remove_vowels(original_string):\n    vowels = \"aeiouAEIOU\"\n    string_without_vowels = \"\"\n    for each_char in original_string:\n        if each_char not in vowels:\n            string_without_vowels = string_without_vowels + each_char\n    return string_without_vowels\n\nprint(remove_vowels(\"compsci\"))", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU"}, "ordered_varnames": ["original_string", "vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": ""}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i", "__return__": "cmpsc"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": "cmpsc\n"}]};
+var string_accumulator_pattern_2_vis;
+
+$(document).ready(function() {
+    try {
+        string_accumulator_pattern_2_vis = new ExecutionVisualizer('string_accumulator_pattern_2',string_accumulator_pattern_2_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(string_accumulator_pattern_2_vis,'string_accumulator_pattern_2');
+        styleButtons('string_accumulator_pattern_2');
+        allVisualizers.push(string_accumulator_pattern_2_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component string_accumulator_pattern_2_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#string_accumulator_pattern_2_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'string_accumulator_pattern_2'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (string_accumulator_pattern_2_vis) {
+        string_accumulator_pattern_2_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<div class="section" id="id3">
+<h3>30.4.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1">
+            <p>more-info-about-strings2: What is printed by the following statements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
+    <span class="n">another_string</span> <span class="o">=</span> <span class="n">item</span> <span class="o">+</span> <span class="n">another_string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_a">Look again at the *order* of the concatenation!</li>
+            
+            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_b">Yes, the order is reversed due to the order of the concatenation.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="controlling-a-turtle-with-strings">
+<h2>30.5. Controlling a Turtle With Strings<a class="headerlink" href="#controlling-a-turtle-with-strings" title="Permalink to this headline">¶</a></h2>
+<p>By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string <code class="docutils literal"><span class="pre">FF+F-FF</span></code> might make a turtle:</p>
+<ul class="simple">
+<li>move forward by some distance twice in a row</li>
+<li>turn right by some angle</li>
+<li>move forward again</li>
+<li>turn left by some angle</li>
+<li>move forward twice in a row</li>
+</ul>
+<p>To turn a string like <code class="docutils literal"><span class="pre">FF+F-FF</span></code> into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.</p>
+
+<div data-childcomponent="string_turtle_movement_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=string_turtle_movement_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+canvas = turtle.Screen()
+escher = turtle.Turtle()
+escher.speed(1)
+
+instructions = "FF+F-FF"
+
+for task in instructions:
+    if task == "F":
+        escher.forward(25)
+    elif task == "+":
+        escher.right(45)
+    elif task == "-":
+        escher.left(45)
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the code above, try:</p>
+<ul class="simple">
+<li>changing the instruction string to have the turtle draw a different image</li>
+<li>adding three additional possible instruction for the turtle. Any <code class="docutils literal"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal"><span class="pre">F</span></code> moves forward). A <code class="docutils literal"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
+<li>increasing the speed of the turtle</li>
+</ul>
+<p class="last">After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
+</div>
+</div>
 <div class="section" id="practice-problems">
-<h2>30.2. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>30.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
-<div class="section" id="con-cat">
-<h3>30.2.1. Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
-<p>Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in <code class="docutils literal"><span class="pre">Garfield</span></code>, your program could print something like <code class="docutils literal"><span class="pre">Good</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">you,</span> <span class="pre">Garfield!</span></code>. <strong>Be sure to use concatenation in your solution!</strong></p>
-
-<div data-childcomponent="practice_problem_string_into_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_string_into_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Hello message to a cat
-</textarea>
-</div>
-</div>
-<div class="section" id="duckling-names">
-<h3>30.2.2. Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
-<p>In Robert McCloskey’s book <em>Make Way for Ducklings</em>, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.</p>
-
-<div data-childcomponent="practice_problem_string_into_2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=practice_problem_string_into_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
-prefixes = "JKLMNOPQ"
-suffix = "ack"
-
-for letter in prefixes:
-    # add a conditional statement here...
-    print(letter + suffix)
-</textarea>
-</div>
-<p>Of course, that’s not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the <code class="docutils literal"><span class="pre">prefixes</span></code> or <code class="docutils literal"><span class="pre">suffix</span></code> variables! <em>You should do this by adding a conditional statement within the for loop.</em></p>
-</div>
-<div class="section" id="first-letter-of-a-word">
-<h3>30.2.3. First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
+<p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
+<div class="section" id="even-letters-of-a-word">
+<h3>30.6.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_into_3" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns <code class="docutils literal"><span class="pre">True</span></code> if the <code class="docutils literal"><span class="pre">word</span></code> begins with the letter “t” or “c”.</p>
+<div data-childcomponent="practice_problem_string_more_info_1" class="runestone explainer ac_section alert alert-warning">
+<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">starts_with_tc(&quot;thing&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">starts_with_tc(&quot;concatenation&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">starts_with_tc(&quot;warman&quot;)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
+<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssaon&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssacea&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">even_letters(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ruhies&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_into_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def starts_with_tc(word):
-    return False
+<textarea data-component="activecode" id=practice_problem_string_more_info_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def even_letters(word):
+    return ""
 
 ====
 from unittest.gui import TestCaseGui
@@ -465,34 +670,35 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(starts_with_tc("thing"),True,'starts_with_tc("thing")')
-        self.assertEqual(starts_with_tc("concatenation"),True,'starts_with_tc("concatenation")')
-        self.assertEqual(starts_with_tc("warman"),False,'starts_with_tc("warman")')
-        self.assertEqual(starts_with_tc("Thing"),False,'starts_with_tc("Thing")')
-        self.assertEqual(starts_with_tc("candy"),True,'starts_with_tc("candy")')
-        self.assertEqual(starts_with_tc("saskatoon"),False,'starts_with_tc("saskatoon")')
+        self.assertEqual(even_letters("Saskatoon"),"Ssaon",'even_letters("Saskatoon")')
+        self.assertEqual(even_letters("Saskatchewan"),"Ssacea",'even_letters("Saskatchewan")')
+        self.assertEqual(even_letters("Roughriders"),"Ruhies",'even_letters("Roughriders")')
+        self.assertEqual(even_letters("Tisdale"),"Tsae",'even_letters("Tisdale")')
+        self.assertEqual(even_letters("Hepburn"),"Hpun",'even_letters("Hepburn")')
+        self.assertEqual(even_letters("Neuanlage"),"Nunae",'even_letters("Neuanlage")')
+        self.assertEqual(even_letters("Blumenheim"),"Buehi",'even_letters("Blumenheim")')
 
 myTests().main()
 </textarea>
 </div>
 </div>
-<div class="section" id="password-length">
-<h3>30.2.4. Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="reverse-me">
+<h3>30.6.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_into_4" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">password</span></code> that returns <code class="docutils literal"><span class="pre">True</span></code> if the <code class="docutils literal"><span class="pre">password</span></code> is between 8 and 32 characters (inclusive), and <code class="docutils literal"><span class="pre">False</span></code> otherwise. <em>Please note there is much more to a strong password than just the length of the string!</em></p>
+<div data-childcomponent="practice_problem_string_more_info_2" class="runestone explainer ac_section alert alert-warning">
+<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the <code class="docutils literal"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">password_length(&quot;123456789&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">password_length(&quot;qwerty&quot;)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
-<p><code class="docutils literal"><span class="pre">password_length(&quot;cray-topnotch-tampa-anthem-trial&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
+<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nootaksaS&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nawehctaksaS&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;sredirhguoR&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_into_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def password_length(password):
-    return False
+<textarea data-component="activecode" id=practice_problem_string_more_info_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def reverse_me(word):
+    return ""
 
 ====
 from unittest.gui import TestCaseGui
@@ -500,38 +706,87 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(password_length("123456789"),True,'password_length("123456789")')
-        self.assertEqual(password_length("qwerty"),False,'password_length("qwerty")')
-        self.assertEqual(password_length("cray-topnotch-tampa-anthem-trial"),True,'password_length("cray-topnotch-tampa-anthem-trial")')
-        self.assertEqual(password_length("7mvRVNwB9JAeVtdWywB3MfGsU6+Rnz4PyVDNCnUt"),False,'password_length("7mvRVNwB9JAeVtdWywB3MfGsU6+Rnz4PyVDNCnUt")')
-        self.assertEqual(password_length("fixate"),False,'password_length("fixate")')
-        self.assertEqual(password_length("8X?3a739"),True,'password_length("8X?3a739")')
+        self.assertEqual(reverse_me("Saskatoon"),"nootaksaS",'reverse_me("Saskatoon")')
+        self.assertEqual(reverse_me("Saskatchewan"),"nawehctaksaS",'reverse_me("Saskatchewan")')
+        self.assertEqual(reverse_me("Roughriders"),"sredirhguoR",'reverse_me("Roughriders")')
+        self.assertEqual(reverse_me("Oxbow"),"wobxO",'reverse_me("Oxbow")')
+        self.assertEqual(reverse_me("Lumsden"),"nedsmuL",'reverse_me("Lumsden")')
+        self.assertEqual(reverse_me("La Loche"),"ehcoL aL",'reverse_me("La Loche")')
+        self.assertEqual(reverse_me("Waskesiu"),"uiseksaW",'reverse_me("Waskesiu")')
 
 myTests().main()
 </textarea>
 </div>
 </div>
-<div class="section" id="removing-the-start-and-end">
-<h3>30.2.5. Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
-<p>Create a program that takes in three inputs from the user:</p>
-<ul class="simple">
-<li>a word/sentence</li>
-<li>a starting number</li>
-<li>an ending number</li>
-</ul>
-<p>After taking in the input, the program should print out a portion of the word/sentence that was entered. For example, if the word the user entered was <code class="docutils literal"><span class="pre">Saskatchewan</span></code>, the starting number was 3 and the ending number was 2, the program should print <code class="docutils literal"><span class="pre">katchew</span></code>. Notice that in the output, it is the same as the word, except that the first 3 characters and last 2 characters have been removed.</p>
-<p>To be sure you understand the challenge, consider the following example:</p>
-<ul class="simple">
-<li>word = “unimaginatively”</li>
-<li>starting_number = 3</li>
-<li>ending_number = 2</li>
-<li>output should be <code class="docutils literal"><span class="pre">maginative</span></code></li>
-</ul>
+<div class="section" id="letter-destroyer">
+<h3>30.6.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
 
-<div data-childcomponent="practice_problem_string_into_5" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="practice_problem_string_more_info_3" class="runestone explainer ac_section alert alert-warning">
+<p>Create a function with two parameters, <code class="docutils literal"><span class="pre">word</span></code> and <code class="docutils literal"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatoon&quot;,</span> <span class="pre">&quot;o&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Saskatn&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatchewan&quot;,</span> <span class="pre">&quot;a&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssktchewn&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;roughriders&quot;,</span> <span class="pre">&quot;r&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;oughides&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_into_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Remove the Start and End
+<textarea data-component="activecode" id=practice_problem_string_more_info_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def letter_destroyer(word):
+    return ""
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(letter_destroyer("Saskatoon", "o"),"Saskatn",'letter_destroyer("Saskatoon", "o")')
+        self.assertEqual(letter_destroyer("Saskatchewan", "a"),"Ssktchewn",'letter_destroyer("Saskatchewan", "a")')
+        self.assertEqual(letter_destroyer("roughriders", "r"),"oughides",'letter_destroyer("roughriders", "r")')
+        self.assertEqual(letter_destroyer("hotshots", "h"),"otsots",'letter_destroyer("hotshots", "h")')
+        self.assertEqual(letter_destroyer("hotshots", "o"),"htshts",'letter_destroyer("hotshots", "o")')
+        self.assertEqual(letter_destroyer("hotshots", "t"),"hoshos",'letter_destroyer("hotshots", "t")')
+        self.assertEqual(letter_destroyer("hotshots", "s"),"hothot",'letter_destroyer("hotshots", "s")')
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="qwerty-finder">
+<h3>30.6.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+
+<div data-childcomponent="practice_problem_string_more_info_4" class="runestone explainer ac_section alert alert-warning">
+<p>Create a function that takes in a single parameter <code class="docutils literal"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal"><span class="pre">t</span></code> in “Saskatoon”).</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
+<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Naomi&quot;)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
+<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;bunnyhug&quot;)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+
+<textarea data-component="activecode" id=practice_problem_string_more_info_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def qwerty_finder(word):
+    return ""
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(qwerty_finder("Saskatoon"), 5,'qwerty_finder("Saskatoon")')
+        self.assertEqual(qwerty_finder("Naomi"), -1,'qwerty_finder("Naomi")')
+        self.assertEqual(qwerty_finder("bunnyhug"), 4,'qwerty_finder("bunnyhug")')
+        self.assertEqual(qwerty_finder("Schellenberg"), 3,'qwerty_finder("Schellenberg")')
+        self.assertEqual(qwerty_finder("roughriders"), 0,'qwerty_finder("roughriders")')
+        self.assertEqual(qwerty_finder("junk"),-1 ,'qwerty_finder("junk")')
+        self.assertEqual(qwerty_finder("university"), 4,'qwerty_finder("university")')
+
+myTests().main()
 </textarea>
 </div>
 </div>
@@ -541,7 +796,7 @@ myTests().main()
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 29. More Information About Strings' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 29. String Index, Length, Slicing and Traversal' data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
