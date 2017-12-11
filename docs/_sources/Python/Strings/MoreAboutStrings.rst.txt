@@ -248,6 +248,20 @@ Check Your Understanding
             another_string = item + another_string
         print(another_string)
 
+.. reveal:: reveal_string_manipulation_reversed_order_of_concatenation
+    :showtitle: Need Help?
+    :hidetitle: Hide Help
+
+    Consider the following table, which shows the values of the variables as the code iterates:
+
+    ==========  =============   ==============  ======================
+    iteration   item            another_string  item + another_string
+    ==========  =============   ==============  ======================
+    1           ``"b"``         ``""``          ``"b"``
+    2           ``"a"``         ``"b"``         ``"ab"``
+    3           ``"l"``         ``"ab"``        ``"lab"``
+    4           ``"l"``         ``"lab"``       ``"llab"``
+    ==========  =============   ==============  ======================
 
 .. parsonsprob:: string_accumulator_patten_parsons_1
 
@@ -305,6 +319,18 @@ Even Letters of a Word
 
     myTests().main()
 
+.. reveal:: reveal_string_manipulation_even_letters_hint
+    :showtitle: Need a Hint?
+    :hidetitle: Hide Hint
+
+    Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a ``for counter in range()`` style loop. The accumulator pattern will look something like this::
+
+        def even_letters(word):
+            new_word = ""
+            for counter in range(len(word)):
+                # add a question here...
+                new_word = new_word + word[counter]
+            return new_word
 
 Reverse Me
 ~~~~~~~~~~~~~~~~~~~~~~~

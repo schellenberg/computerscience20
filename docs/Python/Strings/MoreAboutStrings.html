@@ -616,6 +616,48 @@ $(window).resize(function() {
             </ul>
             </div>
             
+    <div data-component="reveal" id="reveal_string_manipulation_reversed_order_of_concatenation"   data-showtitle="Need Help?" data-hidetitle="Hide Help">
+    <p>Consider the following table, which shows the values of the variables as the code iterates:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">iteration</th>
+<th class="head">item</th>
+<th class="head">another_string</th>
+<th class="head">item + another_string</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td><code class="docutils literal"><span class="pre">&quot;a&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;ab&quot;</span></code></td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td><code class="docutils literal"><span class="pre">&quot;l&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;ab&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;lab&quot;</span></code></td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td><code class="docutils literal"><span class="pre">&quot;l&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;lab&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">&quot;llab&quot;</span></code></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="string_accumulator_patten_parsons_1">
         <span data-question>more-info-about-strings4: Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, ``new_word`` is printed, and will have the same value as ``original_word``.</span>original_word = "clockwork"
@@ -666,7 +708,20 @@ class myTests(TestCaseGui):
 myTests().main()
 </textarea>
 </div>
+
+    <div data-component="reveal" id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint">
+    <p>Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a <code class="docutils literal"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">range()</span></code> style loop. The accumulator pattern will look something like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_letters</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">new_word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
+        <span class="c1"># add a question here...</span>
+        <span class="n">new_word</span> <span class="o">=</span> <span class="n">new_word</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="n">counter</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">new_word</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 <div class="section" id="reverse-me">
 <h3>30.5.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
