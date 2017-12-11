@@ -248,6 +248,19 @@ Check Your Understanding
             another_string = item + another_string
         print(another_string)
 
+.. reveal:: reveal_string_manipulation_reversed_order_of_concatenation
+    :showtitle: Need Help?
+    :hidetitle: Hide Help
+
+    Consider the following table:
+
+    ==========  =============   ==============  ======================
+    iteration   item            another_string  item + another_string
+    ==========  =============   ==============  ======================
+    1           ``"b"``         ``""``          ``"b"``
+    2           "a"             "b"             "ab"
+    3           "l"             "ab"            "lab"
+    4           "l"             "lab"           "llab"
 
 .. parsonsprob:: string_accumulator_patten_parsons_1
 
