@@ -65,49 +65,165 @@ What Does This Program Do?
     
     # print(foo("orange"))
 
+.. Controlling a Turtle With Strings
+.. -----------------------------------
 
-Controlling a Turtle With Strings
------------------------------------
+.. By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string ``FF+F-FF`` might make a turtle:
 
-By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string ``FF+F-FF`` might make a turtle:
+.. - move forward by some distance twice in a row
+.. - turn right by some angle
+.. - move forward again
+.. - turn left by some angle
+.. - move forward twice in a row 
 
-- move forward by some distance twice in a row
-- turn right by some angle
-- move forward again
-- turn left by some angle
-- move forward twice in a row 
+.. To turn a string like ``FF+F-FF`` into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.
 
-To turn a string like ``FF+F-FF`` into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.
-
-.. activecode:: string_turtle_movement_1
+.. .. activecode:: string_turtle_movement_1
     
-    import turtle
+..     import turtle
 
-    canvas = turtle.Screen()
-    escher = turtle.Turtle()
-    escher.speed(1)
+..     canvas = turtle.Screen()
+..     escher = turtle.Turtle()
+..     escher.speed(1)
 
-    instructions = "FF+F-FF"
+..     instructions = "FF+F-FF"
 
-    for task in instructions:
-        if task == "F":
-            escher.forward(25)
-        elif task == "+":
-            escher.right(45)
-        elif task == "-":
-            escher.left(45)
+..     for task in instructions:
+..         if task == "F":
+..             escher.forward(25)
+..         elif task == "+":
+..             escher.right(45)
+..         elif task == "-":
+..             escher.left(45)
 
 
-.. note:: 
+.. .. note:: 
 
-    In the code above, try:
+..     In the code above, try:
 
-    - changing the instruction string to have the turtle draw a different image
-    - adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
-    - increasing the speed of the turtle
+..     - changing the instruction string to have the turtle draw a different image
+..     - adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
+..     - increasing the speed of the turtle
     
-    After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
+..     After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
 
+Letter Counting
+----------------
+
+Assign to a variable in your program a triple-quoted string that contains
+your favorite paragraph of text - perhaps a poem, a speech, instructions
+to bake a cake, some inspirational verses, etc.
+
+Write a function that counts the number of alphabetic characters (a through z, or A through Z) in your text and then keeps track of how many are the letter 'e'.  Your function should print an analysis of the text like this::
+
+    Your text contains 243 alphabetic characters, of which 109 (44.8%) are 'e'.
+
+
+.. activecode:: letter_counting_demo
+
+    def count(p):
+        lows = "abcdefghijklmnopqrstuvwxyz"
+        ups =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+        numberOfe = 0
+        totalChars = 0
+        for achar in p:
+            if achar in lows or achar in ups:
+                totalChars = totalChars + 1
+                if achar == 'e':
+                    numberOfe = numberOfe + 1
+
+        percent_with_e = (numberOfe / totalChars) * 100
+        print("Your text contains", totalChars, "alphabetic characters of which", numberOfe, "(", percent_with_e, "%)", "are 'e'.")
+
+
+    p = '''
+    "If the automobile had followed the same development cycle as the computer, a
+    Rolls-Royce would today cost $100, get a million miles per gallon, and explode
+    once a year, killing everyone inside."
+    -Robert Cringely
+    '''
+
+    count(p)
+
+Substitution Cipher
+--------------------
+
+Write a function that implements a substitution cipher.  In a substitution
+cipher one letter is substituted for another to garble the message.  For
+example A -> Q, B -> T, C -> G etc.  your function should take two
+parameters, the message you want to encrypt, and a string that represents
+the mapping of the 26 letters in the alphabet.  Your function should
+return a string that is the encrypted version of the message.
+
+.. activecode:: cipher_encryption_message
+
+    def encrypt(message, cipher):
+        # delete the line below and replace with your code
+        return "an encrypted message"
+
+
+    cipher = "badcfehgjilknmporqtsvuxwzy"
+
+    encrypted = encrypt('hello world', cipher)
+    print(encrypted)
+
+
+Write a function that decrypts the message from the previous exercise.  It
+should also take two parameters.  The encrypted message,
+and the mixed up alphabet.  The function should return a string that is
+the same as the original unencrypted message.
+
+
+.. activecode:: cipher_decryption_message
+
+    def decrypt(encrypted, cipher):
+        # delete the line below and replace with your code
+        return "a decrypted message"
+
+    def encrypt(message, cipher):
+        # replace this with your encrypt function from the last exercise
+        return "an encrypted message"
+
+    cipher = "badcfehgjilknmporqtsvuxwzy"
+
+    encrypted = encrypt('hello world', cipher)
+    print(encrypted)
+
+    decrypted = decrypt(encrypted, cipher)
+    print(decrypted)
+
+
+.. def encrypt(message, cipher):
+..     alphabet = "abcdefghijklmnopqrstuvwxyz"
+..     encrypted = ''
+..     for char in message:
+..         if char == ' ':
+..             encrypted = encrypted + ' '
+..         else:
+..             pos = alphabet.index(char)
+..             encrypted = encrypted + cipher[pos]
+..     return encrypted
+
+.. def decrypt(encrypted, cipher):
+..     alphabet = "abcdefghijklmnopqrstuvwxyz"
+..     decrypted = ''
+..     for char in encrypted:
+..         if char == ' ':
+..             decrypted = decrypted + ' '
+..         else:
+..             pos = cipher.index(char)
+..             decrypted = decrypted + alphabet[pos]
+..     return decrypted
+
+
+.. cipher = "badcfehgjilknmporqtsvuxwzy"
+
+.. encrypted = encrypt('hello world', cipher)
+.. print(encrypted)
+
+.. decrypted = decrypt(encrypted, cipher)
+.. print(decrypted)
 
 
 Practice Problems
@@ -115,159 +231,4 @@ Practice Problems
 
 Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
 
-**Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.**
-
-
-Even Letters of a Word
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-.. activecode:: practice_problem_string_more_info_1
-    :nocodelens:
-
-    Create a function with a single parameter ``word`` that returns the even letters of the ``word`` (the first letter is even, since we start counting our index values at 0). For example, given the ``word`` "Saskatoon", the function should return "Ssaon".
-
-    **Examples:**
-
-    ``even_letters("Saskatoon") → "Ssaon"``
-
-    ``even_letters("Saskatchewan") → "Ssacea"``
-
-    ``even_letters("Roughriders") → "Ruhies"``
-    ~~~~
-    def even_letters(word):
-        return ""
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(even_letters("Saskatoon"),"Ssaon",'even_letters("Saskatoon")')
-            self.assertEqual(even_letters("Saskatchewan"),"Ssacea",'even_letters("Saskatchewan")')
-            self.assertEqual(even_letters("Roughriders"),"Ruhies",'even_letters("Roughriders")')
-            self.assertEqual(even_letters("Tisdale"),"Tsae",'even_letters("Tisdale")')
-            self.assertEqual(even_letters("Hepburn"),"Hpun",'even_letters("Hepburn")')
-            self.assertEqual(even_letters("Neuanlage"),"Nunae",'even_letters("Neuanlage")')
-            self.assertEqual(even_letters("Blumenheim"),"Buehi",'even_letters("Blumenheim")')
-
-    myTests().main()
-
-
-Reverse Me
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-.. activecode:: practice_problem_string_more_info_2
-    :nocodelens:
-
-    Create a function with a single parameter ``word`` that returns the ``word`` spelled backwards. For example, if the ``word`` was "Saskatoon", the function should return "nootaksaS".
-
-    **Examples:**
-
-    ``reverse_me("Saskatoon") → "nootaksaS"``
-
-    ``reverse_me("Saskatchewan") → "nawehctaksaS"``
-
-    ``reverse_me("Roughriders") → "sredirhguoR"``
-    ~~~~
-    def reverse_me(word):
-        return ""
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(reverse_me("Saskatoon"),"nootaksaS",'reverse_me("Saskatoon")')
-            self.assertEqual(reverse_me("Saskatchewan"),"nawehctaksaS",'reverse_me("Saskatchewan")')
-            self.assertEqual(reverse_me("Roughriders"),"sredirhguoR",'reverse_me("Roughriders")')
-            self.assertEqual(reverse_me("Oxbow"),"wobxO",'reverse_me("Oxbow")')
-            self.assertEqual(reverse_me("Lumsden"),"nedsmuL",'reverse_me("Lumsden")')
-            self.assertEqual(reverse_me("La Loche"),"ehcoL aL",'reverse_me("La Loche")')
-            self.assertEqual(reverse_me("Waskesiu"),"uiseksaW",'reverse_me("Waskesiu")')
-
-    myTests().main()
-
-
-
-Letter Destroyer
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-.. activecode:: practice_problem_string_more_info_3
-    :nocodelens:
-
-    Create a function with two parameters, ``word`` and ``letter_to_destroy``. The function should return the ``word``, but without any of the occurrences of the ``letter_to_destroy`` in the string. For example, if the ``word`` was "Saskatoon", and the ``letter_to_destroy`` was 'o', the function should return "Saskatn".
-
-    **Examples:**
-
-    ``letter_destroyer("Saskatoon", "o") → "Saskatn"``
-
-    ``letter_destroyer("Saskatchewan", "a") → "Ssktchewn"``
-
-    ``letter_destroyer("roughriders", "r") → "oughides"``
-    ~~~~
-    def letter_destroyer(word):
-        return ""
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(letter_destroyer("Saskatoon", "o"),"Saskatn",'letter_destroyer("Saskatoon", "o")')
-            self.assertEqual(letter_destroyer("Saskatchewan", "a"),"Ssktchewn",'letter_destroyer("Saskatchewan", "a")')
-            self.assertEqual(letter_destroyer("roughriders", "r"),"oughides",'letter_destroyer("roughriders", "r")')
-            self.assertEqual(letter_destroyer("hotshots", "h"),"otsots",'letter_destroyer("hotshots", "h")')
-            self.assertEqual(letter_destroyer("hotshots", "o"),"htshts",'letter_destroyer("hotshots", "o")')
-            self.assertEqual(letter_destroyer("hotshots", "t"),"hoshos",'letter_destroyer("hotshots", "t")')
-            self.assertEqual(letter_destroyer("hotshots", "s"),"hothot",'letter_destroyer("hotshots", "s")')
-
-    myTests().main()
-
-
-
-QWERTY Finder
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-.. activecode:: practice_problem_string_more_info_4
-    :nocodelens:
-
-    Create a function that takes in a single parameter ``word`` and returns the location of the first occurrence of one of the following letters: "qwerty". If none of these letters exist in the word, have the function return -1. For example, if the ``word`` was "Saskatoon", the function should return 5 (the index value for the ``t`` in "Saskatoon").
-
-    **Examples:**
-
-    ``qwerty_finder("Saskatoon") → 5``
-
-    ``qwerty_finder("Naomi") → -1``
-
-    ``qwerty_finder("bunnyhug") → 4``
-    ~~~~
-    def qwerty_finder(word):
-        return ""
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(qwerty_finder("Saskatoon"), 5,'qwerty_finder("Saskatoon")')
-            self.assertEqual(qwerty_finder("Naomi"), -1,'qwerty_finder("Naomi")')
-            self.assertEqual(qwerty_finder("bunnyhug"), 4,'qwerty_finder("bunnyhug")')
-            self.assertEqual(qwerty_finder("Schellenberg"), 3,'qwerty_finder("Schellenberg")')
-            self.assertEqual(qwerty_finder("roughriders"), 0,'qwerty_finder("roughriders")')
-            self.assertEqual(qwerty_finder("junk"),-1 ,'qwerty_finder("junk")')
-            self.assertEqual(qwerty_finder("university"), 4,'qwerty_finder("university")')
-
-    myTests().main()
-
+Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.

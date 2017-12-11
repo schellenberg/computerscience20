@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>String Manipulation Practice &#8212; Computer Science 20 Saskatchewan</title>
+    <title>31. String Manipulation Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="30. String Traversal (by index), and the Accumulator Pattern with Strings" href="MoreAboutStrings.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -190,16 +192,11 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">String Manipulation Practice</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#controlling-a-turtle-with-strings">Controlling a Turtle With Strings</a></li>
-<li><a class="reference internal" href="#practice-problems">Practice Problems</a><ul>
-<li><a class="reference internal" href="#even-letters-of-a-word">Even Letters of a Word</a></li>
-<li><a class="reference internal" href="#reverse-me">Reverse Me</a></li>
-<li><a class="reference internal" href="#letter-destroyer">Letter Destroyer</a></li>
-<li><a class="reference internal" href="#qwerty-finder">QWERTY Finder</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">31. String Manipulation Practice</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">31.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#letter-counting">31.2. Letter Counting</a></li>
+<li><a class="reference internal" href="#substitution-cipher">31.3. Substitution Cipher</a></li>
+<li><a class="reference internal" href="#practice-problems">31.4. Practice Problems</a></li>
 </ul>
 </li>
 </ul>
@@ -209,6 +206,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 30. String Traversal (by index), and the Accumulator Pattern with Strings" data-toggle="tooltip">
+    <a href="MoreAboutStrings.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -235,7 +244,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="string-manipulation-practice">
-<h1>String Manipulation Practice<a class="headerlink" href="#string-manipulation-practice" title="Permalink to this headline">¶</a></h1>
+<h1>31. String Manipulation Practice<a class="headerlink" href="#string-manipulation-practice" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>WDTPD string questions. Practice problems with string manipulation. Time to catch up on any string practice problems not completed on previous days.</p>
@@ -251,7 +260,7 @@
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2>31.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
@@ -304,203 +313,118 @@ print(foo("banana"))
 </textarea>
 </div>
 </div>
-<div class="section" id="controlling-a-turtle-with-strings">
-<h2>Controlling a Turtle With Strings<a class="headerlink" href="#controlling-a-turtle-with-strings" title="Permalink to this headline">¶</a></h2>
-<p>By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string <code class="docutils literal"><span class="pre">FF+F-FF</span></code> might make a turtle:</p>
-<ul class="simple">
-<li>move forward by some distance twice in a row</li>
-<li>turn right by some angle</li>
-<li>move forward again</li>
-<li>turn left by some angle</li>
-<li>move forward twice in a row</li>
-</ul>
-<p>To turn a string like <code class="docutils literal"><span class="pre">FF+F-FF</span></code> into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.</p>
+<div class="section" id="letter-counting">
+<h2>31.2. Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this headline">¶</a></h2>
+<p>Assign to a variable in your program a triple-quoted string that contains
+your favorite paragraph of text - perhaps a poem, a speech, instructions
+to bake a cake, some inspirational verses, etc.</p>
+<p>Write a function that counts the number of alphabetic characters (a through z, or A through Z) in your text and then keeps track of how many are the letter ‘e’.  Your function should print an analysis of the text like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
+</pre></div>
+</div>
 
-<div data-childcomponent="string_turtle_movement_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="letter_counting_demo" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_turtle_movement_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-import turtle
+<textarea data-component="activecode" id=letter_counting_demo data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def count(p):
+    lows = "abcdefghijklmnopqrstuvwxyz"
+    ups =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-canvas = turtle.Screen()
-escher = turtle.Turtle()
-escher.speed(1)
+    numberOfe = 0
+    totalChars = 0
+    for achar in p:
+        if achar in lows or achar in ups:
+            totalChars = totalChars + 1
+            if achar == 'e':
+                numberOfe = numberOfe + 1
 
-instructions = "FF+F-FF"
+    percent_with_e = (numberOfe / totalChars) * 100
+    print("Your text contains", totalChars, "alphabetic characters of which", numberOfe, "(", percent_with_e, "%)", "are 'e'.")
 
-for task in instructions:
-    if task == "F":
-        escher.forward(25)
-    elif task == "+":
-        escher.right(45)
-    elif task == "-":
-        escher.left(45)
+
+p = '''
+"If the automobile had followed the same development cycle as the computer, a
+Rolls-Royce would today cost $100, get a million miles per gallon, and explode
+once a year, killing everyone inside."
+-Robert Cringely
+'''
+
+count(p)
 </textarea>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>In the code above, try:</p>
-<ul class="simple">
-<li>changing the instruction string to have the turtle draw a different image</li>
-<li>adding three additional possible instruction for the turtle. Any <code class="docutils literal"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal"><span class="pre">F</span></code> moves forward). A <code class="docutils literal"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
-<li>increasing the speed of the turtle</li>
-</ul>
-<p class="last">After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
+</div>
+<div class="section" id="substitution-cipher">
+<h2>31.3. Substitution Cipher<a class="headerlink" href="#substitution-cipher" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that implements a substitution cipher.  In a substitution
+cipher one letter is substituted for another to garble the message.  For
+example A -&gt; Q, B -&gt; T, C -&gt; G etc.  your function should take two
+parameters, the message you want to encrypt, and a string that represents
+the mapping of the 26 letters in the alphabet.  Your function should
+return a string that is the encrypted version of the message.</p>
+
+<div data-childcomponent="cipher_encryption_message" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=cipher_encryption_message data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def encrypt(message, cipher):
+    # delete the line below and replace with your code
+    return "an encrypted message"
+
+
+cipher = "badcfehgjilknmporqtsvuxwzy"
+
+encrypted = encrypt('hello world', cipher)
+print(encrypted)
+</textarea>
+</div>
+<p>Write a function that decrypts the message from the previous exercise.  It
+should also take two parameters.  The encrypted message,
+and the mixed up alphabet.  The function should return a string that is
+the same as the original unencrypted message.</p>
+
+<div data-childcomponent="cipher_decryption_message" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=cipher_decryption_message data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def decrypt(encrypted, cipher):
+    # delete the line below and replace with your code
+    return "a decrypted message"
+
+def encrypt(message, cipher):
+    # replace this with your encrypt function from the last exercise
+    return "an encrypted message"
+
+cipher = "badcfehgjilknmporqtsvuxwzy"
+
+encrypted = encrypt('hello world', cipher)
+print(encrypted)
+
+decrypted = decrypt(encrypted, cipher)
+print(decrypted)
+</textarea>
 </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>31.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
-<p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
-<div class="section" id="even-letters-of-a-word">
-<h3>Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-
-<div data-childcomponent="practice_problem_string_more_info_1" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssaon&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssacea&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ruhies&quot;</span></code></p>
-
-<textarea data-component="activecode" id=practice_problem_string_more_info_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def even_letters(word):
-    return ""
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(even_letters("Saskatoon"),"Ssaon",'even_letters("Saskatoon")')
-        self.assertEqual(even_letters("Saskatchewan"),"Ssacea",'even_letters("Saskatchewan")')
-        self.assertEqual(even_letters("Roughriders"),"Ruhies",'even_letters("Roughriders")')
-        self.assertEqual(even_letters("Tisdale"),"Tsae",'even_letters("Tisdale")')
-        self.assertEqual(even_letters("Hepburn"),"Hpun",'even_letters("Hepburn")')
-        self.assertEqual(even_letters("Neuanlage"),"Nunae",'even_letters("Neuanlage")')
-        self.assertEqual(even_letters("Blumenheim"),"Buehi",'even_letters("Blumenheim")')
-
-myTests().main()
-</textarea>
-</div>
-</div>
-<div class="section" id="reverse-me">
-<h3>Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-
-<div data-childcomponent="practice_problem_string_more_info_2" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the <code class="docutils literal"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nootaksaS&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nawehctaksaS&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;sredirhguoR&quot;</span></code></p>
-
-<textarea data-component="activecode" id=practice_problem_string_more_info_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def reverse_me(word):
-    return ""
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(reverse_me("Saskatoon"),"nootaksaS",'reverse_me("Saskatoon")')
-        self.assertEqual(reverse_me("Saskatchewan"),"nawehctaksaS",'reverse_me("Saskatchewan")')
-        self.assertEqual(reverse_me("Roughriders"),"sredirhguoR",'reverse_me("Roughriders")')
-        self.assertEqual(reverse_me("Oxbow"),"wobxO",'reverse_me("Oxbow")')
-        self.assertEqual(reverse_me("Lumsden"),"nedsmuL",'reverse_me("Lumsden")')
-        self.assertEqual(reverse_me("La Loche"),"ehcoL aL",'reverse_me("La Loche")')
-        self.assertEqual(reverse_me("Waskesiu"),"uiseksaW",'reverse_me("Waskesiu")')
-
-myTests().main()
-</textarea>
-</div>
-</div>
-<div class="section" id="letter-destroyer">
-<h3>Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-
-<div data-childcomponent="practice_problem_string_more_info_3" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with two parameters, <code class="docutils literal"><span class="pre">word</span></code> and <code class="docutils literal"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatoon&quot;,</span> <span class="pre">&quot;o&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Saskatn&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatchewan&quot;,</span> <span class="pre">&quot;a&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssktchewn&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;roughriders&quot;,</span> <span class="pre">&quot;r&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;oughides&quot;</span></code></p>
-
-<textarea data-component="activecode" id=practice_problem_string_more_info_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def letter_destroyer(word):
-    return ""
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(letter_destroyer("Saskatoon", "o"),"Saskatn",'letter_destroyer("Saskatoon", "o")')
-        self.assertEqual(letter_destroyer("Saskatchewan", "a"),"Ssktchewn",'letter_destroyer("Saskatchewan", "a")')
-        self.assertEqual(letter_destroyer("roughriders", "r"),"oughides",'letter_destroyer("roughriders", "r")')
-        self.assertEqual(letter_destroyer("hotshots", "h"),"otsots",'letter_destroyer("hotshots", "h")')
-        self.assertEqual(letter_destroyer("hotshots", "o"),"htshts",'letter_destroyer("hotshots", "o")')
-        self.assertEqual(letter_destroyer("hotshots", "t"),"hoshos",'letter_destroyer("hotshots", "t")')
-        self.assertEqual(letter_destroyer("hotshots", "s"),"hothot",'letter_destroyer("hotshots", "s")')
-
-myTests().main()
-</textarea>
-</div>
-</div>
-<div class="section" id="qwerty-finder">
-<h3>QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-
-<div data-childcomponent="practice_problem_string_more_info_4" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function that takes in a single parameter <code class="docutils literal"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal"><span class="pre">t</span></code> in “Saskatoon”).</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Naomi&quot;)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;bunnyhug&quot;)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
-
-<textarea data-component="activecode" id=practice_problem_string_more_info_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def qwerty_finder(word):
-    return ""
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(qwerty_finder("Saskatoon"), 5,'qwerty_finder("Saskatoon")')
-        self.assertEqual(qwerty_finder("Naomi"), -1,'qwerty_finder("Naomi")')
-        self.assertEqual(qwerty_finder("bunnyhug"), 4,'qwerty_finder("bunnyhug")')
-        self.assertEqual(qwerty_finder("Schellenberg"), 3,'qwerty_finder("Schellenberg")')
-        self.assertEqual(qwerty_finder("roughriders"), 0,'qwerty_finder("roughriders")')
-        self.assertEqual(qwerty_finder("junk"),-1 ,'qwerty_finder("junk")')
-        self.assertEqual(qwerty_finder("university"), 4,'qwerty_finder("university")')
-
-myTests().main()
-</textarea>
-</div>
-</div>
+<p>Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.</p>
 </div>
 </div>
 
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 30. String Traversal (by index), and the Accumulator Pattern with Strings' data-toggle="tooltip">
+    <a href="MoreAboutStrings.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="MoreAboutStrings.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
 
 <script type="text/javascript">
 

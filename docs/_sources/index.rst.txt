@@ -117,6 +117,7 @@ Python
 
    Python/Strings/StringIntro.rst
    Python/Strings/MoreAboutStrings.rst
+   Python/Strings/StringManipulationPractice.rst
 
    
    
