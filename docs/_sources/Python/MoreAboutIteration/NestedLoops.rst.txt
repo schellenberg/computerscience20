@@ -105,15 +105,14 @@ Image Processing Introduction
 
     **Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!**
 
-.. Uncomment the following, if Code.org grants permission to use this video (under a CC-BY-NC-ND license, probably...)
 
-.. The following video describes how images are represented using binary digits, as well as an overview of how image filters work. It is a great introduction to the image filtering that follows.
+The following video (created by Code.org) describes how images are represented using binary digits, as well as an overview of how image filters work. It is a great introduction to the image filtering that follows.
 
-.. .. youtube:: 15aqFQQVBWU
-..     :height: 315
-..     :width: 560
-..     :align: left
-..     :http: https
+.. youtube:: 15aqFQQVBWU
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
 
 Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
 spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
