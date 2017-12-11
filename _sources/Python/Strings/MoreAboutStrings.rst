@@ -2,12 +2,12 @@
    :prefix: more-info-about-strings
    :start: 1
 
-More Information About Strings
-==================================
+String Traversal (by index), and the Accumulator Pattern with Strings
+=====================================================================================
 
 .. topic:: Quick Overview of Day
 
-    WDTPD string questions. Explore string traversal (for loop by index), ``in`` and ``not in`` operators, accumulator pattern with strings, and using strings to control turtle movement.
+    WDTPD string questions. Explore string traversal (for loop by index), ``in`` and ``not in`` operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.
 
 
 .. reveal:: curriculum_addressed
@@ -216,6 +216,24 @@ Check Your Understanding
 .. mchoice:: string_accumulator_pattern_test_question_1
     :answer_a: ball
     :answer_b: llab
+    :correct: a
+    :feedback_a: Yes, the repeated concatenation will cause another_string to become the same as some_string.
+    :feedback_b: Look again at the *order* of the concatenation!
+
+    What is printed by the following statements:
+
+    .. code-block:: python
+
+        some_string = "ball"
+        another_string = ""
+        for item in some_string:
+            another_string = another_string + item
+        print(another_string)
+
+
+.. mchoice:: string_accumulator_pattern_test_question_2
+    :answer_a: ball
+    :answer_b: llab
     :correct: b
     :feedback_a: Look again at the *order* of the concatenation!
     :feedback_b: Yes, the order is reversed due to the order of the concatenation.
@@ -231,48 +249,15 @@ Check Your Understanding
         print(another_string)
 
 
-Controlling a Turtle With Strings
------------------------------------
+.. parsonsprob:: string_accumulator_patten_parsons_1
 
-By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string ``FF+F-FF`` might make a turtle:
-
-- move forward by some distance twice in a row
-- turn right by some angle
-- move forward again
-- turn left by some angle
-- move forward twice in a row 
-
-To turn a string like ``FF+F-FF`` into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.
-
-.. activecode:: string_turtle_movement_1
-    
-    import turtle
-
-    canvas = turtle.Screen()
-    escher = turtle.Turtle()
-    escher.speed(1)
-
-    instructions = "FF+F-FF"
-
-    for task in instructions:
-        if task == "F":
-            escher.forward(25)
-        elif task == "+":
-            escher.right(45)
-        elif task == "-":
-            escher.left(45)
-
-
-.. note:: 
-
-    In the code above, try:
-
-    - changing the instruction string to have the turtle draw a different image
-    - adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
-    - increasing the speed of the turtle
-    
-    After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
-
+    Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, ``new_word`` is printed, and will have the same value as ``original_word``.
+    -----
+    original_word = "clockwork"
+    new_word = ""
+    for letter in original_word:
+        new_word = new_word + letter
+    print(new_word)
 
 
 Practice Problems

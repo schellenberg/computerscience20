@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>30. More Information About Strings &#8212; Computer Science 20 Saskatchewan</title>
+    <title>30. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,7 +192,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">30. More Information About Strings</a><ul>
+<li><a class="reference internal" href="#">30. String Traversal (by index), and the Accumulator Pattern with Strings</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">30.1. What Does This Program Do?</a></li>
 <li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">30.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
 <li><a class="reference internal" href="#check-your-understanding">30.2.1. Check Your Understanding</a></li>
@@ -203,12 +203,11 @@
 <li><a class="reference internal" href="#id3">30.4.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#controlling-a-turtle-with-strings">30.5. Controlling a Turtle With Strings</a></li>
-<li><a class="reference internal" href="#practice-problems">30.6. Practice Problems</a><ul>
-<li><a class="reference internal" href="#even-letters-of-a-word">30.6.1. Even Letters of a Word</a></li>
-<li><a class="reference internal" href="#reverse-me">30.6.2. Reverse Me</a></li>
-<li><a class="reference internal" href="#letter-destroyer">30.6.3. Letter Destroyer</a></li>
-<li><a class="reference internal" href="#qwerty-finder">30.6.4. QWERTY Finder</a></li>
+<li><a class="reference internal" href="#practice-problems">30.5. Practice Problems</a><ul>
+<li><a class="reference internal" href="#even-letters-of-a-word">30.5.1. Even Letters of a Word</a></li>
+<li><a class="reference internal" href="#reverse-me">30.5.2. Reverse Me</a></li>
+<li><a class="reference internal" href="#letter-destroyer">30.5.3. Letter Destroyer</a></li>
+<li><a class="reference internal" href="#qwerty-finder">30.5.4. QWERTY Finder</a></li>
 </ul>
 </li>
 </ul>
@@ -257,11 +256,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="more-information-about-strings">
-<h1>30. More Information About Strings<a class="headerlink" href="#more-information-about-strings" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="string-traversal-by-index-and-the-accumulator-pattern-with-strings">
+<h1>30. String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, accumulator pattern with strings, and using strings to control turtle movement.</p>
+<p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
@@ -585,69 +584,55 @@ $(window).resize(function() {
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
+    <span class="n">another_string</span> <span class="o">=</span> <span class="n">another_string</span> <span class="o">+</span> <span class="n">item</span>
+<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_a">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
+            
+            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_b">Look again at the *order* of the concatenation!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2">
+            <p>more-info-about-strings3: What is printed by the following statements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
     <span class="n">another_string</span> <span class="o">=</span> <span class="n">item</span> <span class="o">+</span> <span class="n">another_string</span>
 <span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_a">Look again at the *order* of the concatenation!</li>
+            <li data-component="answer"  id="string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_2_opt_a">Look again at the *order* of the concatenation!</li>
             
-            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_b">Yes, the order is reversed due to the order of the concatenation.</li>
+            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_2_opt_b">Yes, the order is reversed due to the order of the concatenation.</li>
             
 
             </ul>
             </div>
-            </div>
-</div>
-<div class="section" id="controlling-a-turtle-with-strings">
-<h2>30.5. Controlling a Turtle With Strings<a class="headerlink" href="#controlling-a-turtle-with-strings" title="Permalink to this headline">¶</a></h2>
-<p>By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string <code class="docutils literal"><span class="pre">FF+F-FF</span></code> might make a turtle:</p>
-<ul class="simple">
-<li>move forward by some distance twice in a row</li>
-<li>turn right by some angle</li>
-<li>move forward again</li>
-<li>turn left by some angle</li>
-<li>move forward twice in a row</li>
-</ul>
-<p>To turn a string like <code class="docutils literal"><span class="pre">FF+F-FF</span></code> into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.</p>
-
-<div data-childcomponent="string_turtle_movement_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=string_turtle_movement_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-import turtle
-
-canvas = turtle.Screen()
-escher = turtle.Turtle()
-escher.speed(1)
-
-instructions = "FF+F-FF"
-
-for task in instructions:
-    if task == "F":
-        escher.forward(25)
-    elif task == "+":
-        escher.right(45)
-    elif task == "-":
-        escher.left(45)
-</textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>In the code above, try:</p>
-<ul class="simple">
-<li>changing the instruction string to have the turtle draw a different image</li>
-<li>adding three additional possible instruction for the turtle. Any <code class="docutils literal"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal"><span class="pre">F</span></code> moves forward). A <code class="docutils literal"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
-<li>increasing the speed of the turtle</li>
-</ul>
-<p class="last">After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
-</div>
+            
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" id="string_accumulator_patten_parsons_1">
+        <span data-question>more-info-about-strings4: Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, ``new_word`` is printed, and will have the same value as ``original_word``.</span>original_word = "clockwork"
+new_word = ""
+for letter in original_word:
+    new_word = new_word + letter
+print(new_word)
+        </pre>
+        </div>
+    </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>30.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>30.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
 <p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
 <div class="section" id="even-letters-of-a-word">
-<h3>30.6.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3>30.5.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -683,7 +668,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="reverse-me">
-<h3>30.6.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
+<h3>30.5.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -719,7 +704,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="letter-destroyer">
-<h3>30.6.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
+<h3>30.5.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -755,7 +740,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="qwerty-finder">
-<h3>30.6.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
+<h3>30.5.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
