@@ -439,7 +439,7 @@ Create a program that takes in the name of a cat, then prints out a hello messag
 Duckling Names
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.
+In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This code below attempts to output these names in order. Unfortunately, the output is not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the ``prefixes`` or ``suffix`` variables! *You should do this by adding a conditional statement within the for loop.*
     
 .. activecode:: practice_problem_string_into_2
     :nocodelens:
@@ -450,9 +450,7 @@ In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings 
     for letter in prefixes:
         # add a conditional statement here...
         print(letter + suffix)
-    
-    
-Of course, that's not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the ``prefixes`` or ``suffix`` variables! *You should do this by adding a conditional statement within the for loop.*
+
 
 
 First Letter of a Word
