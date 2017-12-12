@@ -389,7 +389,7 @@ Letter Destroyer
 
     ``letter_destroyer("roughriders", "r") → "oughides"``
     ~~~~
-    def letter_destroyer(word):
+    def letter_destroyer(word, letter_to_destroy):
         return ""
 
     ====
