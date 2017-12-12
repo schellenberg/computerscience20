@@ -110,44 +110,53 @@ What Does This Program Do?
 Letter Counting
 ----------------
 
-Assign to a variable in your program a triple-quoted string that contains
-your favorite paragraph of text - perhaps a poem, a speech, instructions
-to bake a cake, some inspirational verses, etc.
+.. note:: This example is intended to be done together as a class, with the teacher leading the students through a possible solution.
 
-Write a function that counts the number of alphabetic characters (a through z, or A through Z) in your text and then keeps track of how many are the letter 'e'.  Your function should print an analysis of the text like this::
+By traversing through a string, we are able to analyze text for patterns. For example, the code below assigns a variable ``p`` in the program a triple-quoted string that contains a paragraph of text. The function ``count`` determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter 'e'.  Finally, the function prints an analysis of the text like this::
 
     Your text contains 243 alphabetic characters, of which 109 (44.8%) are 'e'.
 
 
 .. activecode:: letter_counting_demo
 
-    def count(p):
+    def count(paragraph):
         lows = "abcdefghijklmnopqrstuvwxyz"
         ups =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-        numberOfe = 0
-        totalChars = 0
-        for achar in p:
-            if achar in lows or achar in ups:
-                totalChars = totalChars + 1
-                if achar == 'e':
-                    numberOfe = numberOfe + 1
+        number_of_e = 0
+        total_chars = 0
+        for this_char in paragraph:
+            if this_char in lows or this_char in ups:
+                total_chars = total_chars + 1
+                if this_char == 'e':
+                    number_of_e = number_of_e + 1
 
-        percent_with_e = (numberOfe / totalChars) * 100
-        print("Your text contains", totalChars, "alphabetic characters of which", numberOfe, "(", percent_with_e, "%)", "are 'e'.")
+        percent_with_e = (number_of_e / total_chars) * 100
+        print("Your text contains", total_chars, "alphabetic characters of which", number_of_e, "(", percent_with_e, "%)", "are 'e'.")
 
 
-    p = '''
+    paragraph = '''
     "If the automobile had followed the same development cycle as the computer, a
     Rolls-Royce would today cost $100, get a million miles per gallon, and explode
     once a year, killing everyone inside."
     -Robert Cringely
     '''
 
-    count(p)
+    count(paragraph)
+
+.. note:: 
+
+    Adapt the code above so that it:
+
+    - analyses a different paragraph of text (perhaps your favorite poem, saying, etc.)
+    - improve the print statement to not have extra spaces (you will need to use concatenation)
+    - change the function so that you can pass in (as an argument) which character you want to count
+
 
 Substitution Cipher
 --------------------
+
+.. note:: This example is intended to be done together as a class, with the teacher leading the students through a possible solution.
 
 Write a function that implements a substitution cipher.  In a substitution
 cipher one letter is substituted for another to garble the message.  For

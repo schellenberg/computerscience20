@@ -315,10 +315,11 @@ print(foo("banana"))
 </div>
 <div class="section" id="letter-counting">
 <h2>31.2. Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this headline">¶</a></h2>
-<p>Assign to a variable in your program a triple-quoted string that contains
-your favorite paragraph of text - perhaps a poem, a speech, instructions
-to bake a cake, some inspirational verses, etc.</p>
-<p>Write a function that counts the number of alphabetic characters (a through z, or A through Z) in your text and then keeps track of how many are the letter ‘e’.  Your function should print an analysis of the text like this:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This example is intended to be done together as a class, with the teacher leading the students through a possible solution.</p>
+</div>
+<p>By traversing through a string, we are able to analyze text for patterns. For example, the code below assigns a variable <code class="docutils literal"><span class="pre">p</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
@@ -326,35 +327,48 @@ to bake a cake, some inspirational verses, etc.</p>
 <div data-childcomponent="letter_counting_demo" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=letter_counting_demo data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-def count(p):
+def count(paragraph):
     lows = "abcdefghijklmnopqrstuvwxyz"
     ups =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    numberOfe = 0
-    totalChars = 0
-    for achar in p:
-        if achar in lows or achar in ups:
-            totalChars = totalChars + 1
-            if achar == 'e':
-                numberOfe = numberOfe + 1
+    number_of_e = 0
+    total_chars = 0
+    for this_char in paragraph:
+        if this_char in lows or this_char in ups:
+            total_chars = total_chars + 1
+            if this_char == 'e':
+                number_of_e = number_of_e + 1
 
-    percent_with_e = (numberOfe / totalChars) * 100
-    print("Your text contains", totalChars, "alphabetic characters of which", numberOfe, "(", percent_with_e, "%)", "are 'e'.")
+    percent_with_e = (number_of_e / total_chars) * 100
+    print("Your text contains", total_chars, "alphabetic characters of which", number_of_e, "(", percent_with_e, "%)", "are 'e'.")
 
 
-p = '''
+paragraph = '''
 "If the automobile had followed the same development cycle as the computer, a
 Rolls-Royce would today cost $100, get a million miles per gallon, and explode
 once a year, killing everyone inside."
 -Robert Cringely
 '''
 
-count(p)
+count(paragraph)
 </textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Adapt the code above so that it:</p>
+<ul class="last simple">
+<li>analyses a different paragraph of text (perhaps your favorite poem, saying, etc.)</li>
+<li>improve the print statement to not have extra spaces (you will need to use concatenation)</li>
+<li>change the function so that you can pass in (as an argument) which character you want to count</li>
+</ul>
 </div>
 </div>
 <div class="section" id="substitution-cipher">
 <h2>31.3. Substitution Cipher<a class="headerlink" href="#substitution-cipher" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This example is intended to be done together as a class, with the teacher leading the students through a possible solution.</p>
+</div>
 <p>Write a function that implements a substitution cipher.  In a substitution
 cipher one letter is substituted for another to garble the message.  For
 example A -&gt; Q, B -&gt; T, C -&gt; G etc.  your function should take two
