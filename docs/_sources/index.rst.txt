@@ -120,7 +120,9 @@ Python
    Python/Strings/StringManipulationPractice.rst
    Python/Strings/LSystems.rst
    
-   
+   Python/Lists/ListOverview.rst
+
+
 
 Python Practice Quizzes
 :::::::::::::::::::::::
