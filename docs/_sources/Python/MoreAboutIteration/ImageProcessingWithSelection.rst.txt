@@ -394,7 +394,11 @@ Gradient
 
 Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and **after each pass of the inner loop**, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.
 
- .. activecode::  practice_problem_gradient
+Your program should create an image that looks similar to the following:
+
+.. image:: images/gradient.png
+
+.. activecode::  practice_problem_gradient
     :nocodelens:
 
     import image
@@ -412,6 +416,34 @@ Write a program that creates a gradient effect (slowly transitioning from one co
     img.draw(win)
 
 
+
+Radial Gradient
+~~~~~~~~~~~~~~~~
+
+**Extra for Experts Challenge**
+
+If you want to try something even more challenging, see if you can create a radial gradient. Radial gradients look like this:
+
+.. image:: images/radial-gradient.png
+
+To make a radial gradient, you need to set a centre point, then for each pixel, calculate the distance between the current pixel and the centre point. You might find it helpful to create a ``distance`` function that takes in the coordinates of two points ``x1``, ``y1``, ``x2``, ``y2``, and returns the distance between the two points (think Pythagorean theorem). Use the distance from the centre point as one of the RGB values when looping through each pixel. To create the image above, each pixel used an R value of 150, a G value of 50, and the distance from the centre point as the B value.
+
+ .. activecode::  practice_problem_radial_gradient
+    :nocodelens:
+
+    import image
+
+    width = 255
+    height = 255
+
+    win = image.ImageWin(width, height)
+    img = image.EmptyImage(width, height)
+    
+    img.setDelay(1,15)   # setDelay(0) turns off animation
+
+    # your code goes here!    
+
+    img.draw(win)
 
 Acknowledgments
 ~~~~~~~~~~~~~~~~~~

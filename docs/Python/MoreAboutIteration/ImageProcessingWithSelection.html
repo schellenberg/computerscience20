@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="next" title="29. String Index, Length, Slicing and Traversal" href="../Strings/StringIntro.html" />
     <link rel="prev" title="27. Image Processing Practice" href="ImageProcessingPractice.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -213,7 +213,8 @@
 <li><a class="reference internal" href="#mirror-horizontal">28.4.5. Mirror Horizontal</a></li>
 <li><a class="reference internal" href="#mirror-vertical">28.4.6. Mirror Vertical</a></li>
 <li><a class="reference internal" href="#gradient">28.4.7. Gradient</a></li>
-<li><a class="reference internal" href="#acknowledgments">28.4.8. Acknowledgments</a></li>
+<li><a class="reference internal" href="#radial-gradient">28.4.8. Radial Gradient</a></li>
+<li><a class="reference internal" href="#acknowledgments">28.4.9. Acknowledgments</a></li>
 </ul>
 </li>
 </ul>
@@ -231,8 +232,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 29. String Index, Length, Slicing and Traversal' data-toggle="tooltip" >
+    <a href="../Strings/StringIntro.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -615,8 +616,9 @@ img.draw(win)
 <div class="section" id="gradient">
 <h3>28.4.7. Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and <strong>after each pass of the inner loop</strong>, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.</p>
-<blockquote>
-<div>
+<p>Your program should create an image that looks similar to the following:</p>
+<img alt="../../_images/gradient.png" src="../../_images/gradient.png" />
+
 <div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
@@ -635,10 +637,37 @@ img.setDelay(1,15)   # setDelay(0) turns off animation
 img.draw(win)
 </textarea>
 </div>
+</div>
+<div class="section" id="radial-gradient">
+<h3>28.4.8. Radial Gradient<a class="headerlink" href="#radial-gradient" title="Permalink to this headline">¶</a></h3>
+<p><strong>Extra for Experts Challenge</strong></p>
+<p>If you want to try something even more challenging, see if you can create a radial gradient. Radial gradients look like this:</p>
+<img alt="../../_images/radial-gradient.png" src="../../_images/radial-gradient.png" />
+<p>To make a radial gradient, you need to set a centre point, then for each pixel, calculate the distance between the current pixel and the centre point. You might find it helpful to create a <code class="docutils literal"><span class="pre">distance</span></code> function that takes in the coordinates of two points <code class="docutils literal"><span class="pre">x1</span></code>, <code class="docutils literal"><span class="pre">y1</span></code>, <code class="docutils literal"><span class="pre">x2</span></code>, <code class="docutils literal"><span class="pre">y2</span></code>, and returns the distance between the two points (think Pythagorean theorem). Use the distance from the centre point as one of the RGB values when looping through each pixel. To create the image above, each pixel used an R value of 150, a G value of 50, and the distance from the centre point as the B value.</p>
+<blockquote>
+<div>
+<div data-childcomponent="practice_problem_radial_gradient" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_radial_gradient data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+width = 255
+height = 255
+
+win = image.ImageWin(width, height)
+img = image.EmptyImage(width, height)
+
+img.setDelay(1,15)   # setDelay(0) turns off animation
+
+# your code goes here!
+
+img.draw(win)
+</textarea>
+</div>
 </div></blockquote>
 </div>
 <div class="section" id="acknowledgments">
-<h3>28.4.8. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3>28.4.9. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Emoji artwork is provided by <a class="reference external" href="https://www.emojione.com/">EmojiOne</a> EmojiOne and is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY 4.0</a>.</p>
 </div>
 </div>
@@ -654,12 +683,12 @@ img.draw(win)
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="ImageProcessingPractice.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 29. String Index, Length, Slicing and Traversal' data-toggle="tooltip" >
+    <a href="../Strings/StringIntro.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../Strings/StringIntro.html" >Next Section - 29. String Index, Length, Slicing and Traversal</a>
 
 <script type="text/javascript">
 

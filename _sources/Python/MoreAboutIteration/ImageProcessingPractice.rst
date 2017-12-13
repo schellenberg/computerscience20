@@ -51,7 +51,7 @@ Consider the following code, in which the increase green code from a previous le
         return new_image
 
 
-    img = image.Image("skflag.png")
+    img = image.Image("rooster.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
 
@@ -89,7 +89,7 @@ If you'd like the function to animate while it runs, you can reorganize your cod
         return new_image
 
 
-    img = image.Image("skflag.png")
+    img = image.Image("rooster.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
 
     converted_img = increase_green(img, win)
@@ -101,6 +101,10 @@ Practice Problems
 
 For the following problems, use one of these images:
 
+.. raw:: html
+
+    <img src="../../_static/skflag.png" id="skflag.png">
+    <h4 style="text-align: center;">skflag.png</h4>
 
 .. raw:: html
 
@@ -129,7 +133,7 @@ Write a program that opens an image and uses a nested loop to look at all of the
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -154,7 +158,7 @@ Turn the code you wrote above into a function called ``red_remover(original_imag
         return new_image
 
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
 
     converted_img = red_remover(img, win)
@@ -171,7 +175,7 @@ Write a program that sets the red value to the original green value, the green v
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -191,7 +195,7 @@ Write a program that keeps only the green values of all pixels in the image. Onc
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -211,7 +215,7 @@ Write a program that sets each pixel's red intensity to be half of the original 
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -231,7 +235,7 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -251,7 +255,7 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
