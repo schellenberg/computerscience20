@@ -244,8 +244,7 @@ To create a Python function to draw a string we will write a function called
                 some_turtle.left(angle)
 
 
-Here is the complete program in activecode.  The ``main`` function first creates the
-L-system string and then it creates a turtle and passes it and the string to the drawing function.
+Here is the complete program, which combines generating the L-System string, and then using it to draw with the turtle.
 
 .. activecode:: string_l_systems_2
     :nocodelens:
@@ -304,8 +303,8 @@ L-system string and then it creates a turtle and passes it and the string to the
     jill = turtle.Turtle()
     jill.speed(0)
 
-    # this speeds up your drawing (by skipping some frames when drawing)
-    window.tracer(10)
+    # using screen.tracer() speeds up your drawing (by skipping some frames when drawing)
+    #window.tracer(10)
 
     # move turtle to left side of screen
     jill.up()
@@ -329,11 +328,11 @@ Hilbert Curve
 
 Use the following axiom and rules to create the Hilbert curve. Use an angle of 90 degrees.
 
-==================  =====================
-L                   Axiom
-L -> +RF-LFL-FR+    Rule 1
-R -> -LF+RFR+FL-    Rule 2
-==================  =====================
+=====================   =====================
+``L``                   Axiom
+``L -> +RF-LFL-FR+``    Rule 1
+``R -> -LF+RFR+FL-``    Rule 2
+=====================   =====================
 
 
 .. activecode:: strings_l_systems_practice_1
@@ -348,9 +347,9 @@ Dragon Curve
 Use the following axiom and rules to create the dragon curve. Use an angle of 90 degrees.
 
 ==================  =====================
-FX                  Axiom
-X -> X+YF+          Rule 1
-Y -> -FX-Y          Rule 2
+``FX``              Axiom
+``X -> X+YF+``      Rule 1
+``Y -> -FX-Y``      Rule 2
 ==================  =====================
 
 
@@ -366,9 +365,9 @@ Arrowhead Curve
 Use the following axiom and rules to create the arrowhead curve. Use an angle of 60 degrees.
 
 ==================  =====================
-FX                  Axiom
-X -> YF+XF+Y        Rule 1
-Y -> XF-YF-X        Rule 2
+``FX``              Axiom
+``X -> YF+XF+Y``    Rule 1
+``Y -> XF-YF-X``    Rule 2
 ==================  =====================
 
 
@@ -383,11 +382,11 @@ Peano-Gosper Curve
 
 Use the following axiom and rules to create the Peano-Gosper curve. Use an angle of 60 degrees.
 
-===========================     =====================
-FX                              Axiom
-X -> X+YF++YF-FX--FXFX-YF+      Rule 1
-Y -> -FX+YFYF++YF+FX--FX-Y      Rule 2
-===========================     =====================
+===============================     =====================
+``FX``                              Axiom
+``X -> X+YF++YF-FX--FXFX-YF+``      Rule 1
+``Y -> -FX+YFYF++YF+FX--FX-Y``      Rule 2
+===============================     =====================
 
 
 .. activecode:: strings_l_systems_practice_4
@@ -402,9 +401,9 @@ Sierpinski Triangle
 Use the following axiom and rules to create the Sierpinski Triangle. Use an angle of 60 degrees.
 
 ===========================     =====================
-FXF--FF--FF                     Axiom
-F -> FF                         Rule 1
-X -> --FXF++FXF++FXF--          Rule 2
+``FXF--FF--FF``                 Axiom
+``F -> FF``                     Rule 1
+``X -> --FXF++FXF++FXF--``      Rule 2
 ===========================     =====================
 
 
@@ -421,8 +420,8 @@ Snowflake
 Use the following axiom and rules to create a snowflake shape. Use an angle of 72 degrees.
 
 ===========================     =====================
-F-F-F-F-F                       Axiom
-F -> F-F++F+F-F-F               Rule 1
+``F-F-F-F-F``                   Axiom
+``F -> F-F++F+F-F-F``           Rule 1
 ===========================     =====================
 
 
@@ -440,9 +439,9 @@ Unnamed Shape
 Use the following axiom and rules to create an interesting shape. Use an angle of 45 degrees.
 
 ===========================     =====================
-L--F--L--F                      Axiom
-L -> +R-F-R+                    Rule 1
-R -> -L+F+L-                    Rule 2
+``L--F--L--F``                  Axiom
+``L -> +R-F-R+``                Rule 1
+``R -> -L+F+L-``                Rule 2
 ===========================     =====================
 
 

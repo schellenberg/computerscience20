@@ -517,8 +517,7 @@ drawing, but once we expand it a few times it will get a lot more interesting.</
             <span class="n">some_turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Here is the complete program in activecode.  The <code class="docutils literal"><span class="pre">main</span></code> function first creates the
-L-system string and then it creates a turtle and passes it and the string to the drawing function.</p>
+<p>Here is the complete program, which combines generating the L-System string, and then using it to draw with the turtle.</p>
 
 <div data-childcomponent="string_l_systems_2" class="runestone explainer ac_section alert alert-warning">
 
@@ -577,8 +576,8 @@ window = turtle.Screen()
 jill = turtle.Turtle()
 jill.speed(0)
 
-# this speeds up your drawing (by skipping some frames when drawing)
-window.tracer(10)
+# using screen.tracer() speeds up your drawing (by skipping some frames when drawing)
+#window.tracer(10)
 
 # move turtle to left side of screen
 jill.up()
@@ -602,17 +601,17 @@ draw_l_system(jill, instruction_string, 60, 5)
 <p>Use the following axiom and rules to create the Hilbert curve. Use an angle of 90 degrees.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="46%" />
-<col width="54%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>L</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">L</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>L -&gt; +RF-LFL-FR+</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>R -&gt; -LF+RFR+FL-</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -634,13 +633,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="54%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>FX</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>X -&gt; X+YF+</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>Y -&gt; -FX-Y</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -662,13 +661,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="54%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>FX</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>X -&gt; YF+XF+Y</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>Y -&gt; XF-YF-X</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -686,17 +685,17 @@ draw_l_system(jill, instruction_string, 60, 5)
 <p>Use the following axiom and rules to create the Peano-Gosper curve. Use an angle of 60 degrees.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="56%" />
-<col width="44%" />
+<col width="60%" />
+<col width="40%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>FX</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>X -&gt; X+YF++YF-FX–FXFX-YF+</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>Y -&gt; -FX+YFYF++YF+FX–FX-Y</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -718,13 +717,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>FXF–FF–FF</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FXF--FF--FF</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>F -&gt; FF</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>X -&gt; –FXF++FXF++FXF–</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -746,10 +745,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>F-F-F-F-F</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">F-F-F-F-F</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>F -&gt; F-F++F+F-F-F</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></td>
 <td>Rule 1</td>
 </tr>
 </tbody>
@@ -772,13 +771,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>L–F–L–F</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">L--F--L--F</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td>L -&gt; +R-F-R+</td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td>R -&gt; -L+F+L-</td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
