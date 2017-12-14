@@ -141,6 +141,7 @@ Computing and Society
    :maxdepth: 1
 
    ComputingAndSociety/Internet/HowTheInternetWorks.rst
+   ComputingAndSociety/Internet/HowTheInternetWorksPracticeQuiz.rst
    ComputingAndSociety/Internet/WorldWideWeb.rst
    ComputingAndSociety/Internet/HTML.rst
    ComputingAndSociety/Internet/CSS.rst
