@@ -208,12 +208,14 @@
 <li><a class="reference internal" href="#strings-are-immutable">33.7. Strings are Immutable</a></li>
 <li><a class="reference internal" href="#lists-are-mutable">33.8. Lists are Mutable</a></li>
 <li><a class="reference internal" href="#list-deletion">33.9. List Deletion</a></li>
-<li><a class="reference internal" href="#practice-problems">33.10. Practice Problems</a><ul>
-<li><a class="reference internal" href="#warmup">33.10.1. Warmup</a></li>
-<li><a class="reference internal" href="#sum-of-squares">33.10.2. Sum of Squares</a></li>
-<li><a class="reference internal" href="#count-odd-numbers">33.10.3. Count Odd Numbers</a></li>
-<li><a class="reference internal" href="#count-words-with-length-5">33.10.4. Count Words with Length 5</a></li>
-<li><a class="reference internal" href="#count-hats">33.10.5. Count “hats”</a></li>
+<li><a class="reference internal" href="#lists-and-for-loops">33.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+<li><a class="reference internal" href="#practice-problems">33.11. Practice Problems</a><ul>
+<li><a class="reference internal" href="#warmup">33.11.1. Warmup</a></li>
+<li><a class="reference internal" href="#sum-of-squares">33.11.2. Sum of Squares</a></li>
+<li><a class="reference internal" href="#count-odd-numbers">33.11.3. Count Odd Numbers</a></li>
+<li><a class="reference internal" href="#count-words-with-length-5">33.11.4. Count Words with Length 5</a></li>
+<li><a class="reference internal" href="#look-for-sask">33.11.5. Look For “sask”</a></li>
+<li><a class="reference internal" href="#make-it-fun">33.11.6. Make it Fun</a></li>
 </ul>
 </li>
 </ul>
@@ -587,57 +589,8 @@ fruit[-1] = "orange"
 print(fruit)
 </textarea>
 </div>
-<p>An
-assignment to an element of a list is called <strong>item assignment</strong>. Item
+<p>An assignment to an element of a list is called <strong>item assignment</strong>. Item
 assignment does not work for strings.  Recall that strings are immutable.</p>
-<p>Here is the same example in codelens so that you can step through the statements and see the changes to the list elements.</p>
-
-<div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="item_assign"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (item_assign)</span> </p>
-</div>
-<script type="text/javascript">
-var item_assign_trace = {"code": "fruit = [\"banana\", \"apple\", \"cherry\"]\n\nfruit[0] = \"pear\"\nfruit[-1] = \"orange\"", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": ["REF", 1]}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {"1": ["LIST", "banana", "apple", "cherry"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": ["REF", 1]}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {"1": ["LIST", "pear", "apple", "cherry"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"fruit": ["REF", 1]}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {"1": ["LIST", "pear", "apple", "orange"]}, "stdout": ""}]};
-var item_assign_vis;
-
-$(document).ready(function() {
-    try {
-        item_assign_vis = new ExecutionVisualizer('item_assign',item_assign_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(item_assign_vis,'item_assign');
-        styleButtons('item_assign');
-        allVisualizers.push(item_assign_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component item_assign_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#item_assign_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'item_assign'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
-}
-
-
-$(window).resize(function() {
-    if (item_assign_vis) {
-        item_assign_vis.redrawConnectors();
-    }
-});
-</script>
-</div>
 <p><strong>Check your understanding</strong></p>
 
             <div class="runestone">
@@ -683,10 +636,61 @@ In addition, you can use a slice as an index for <code class="docutils literal">
 As usual, slices select all the elements up to, but not including, the second
 index, but do not cause runtime errors if the index limits go too far.</p>
 </div>
+<div class="section" id="lists-and-for-loops">
+<h2>33.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops<a class="headerlink" href="#lists-and-for-loops" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to perform <strong>list traversal</strong> using iteration by item as well as iteration by index.</p>
+
+<div data-childcomponent="chp09_03a" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp09_03a data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+fruits = ["apple", "orange", "banana", "cherry"]
+
+# looping by item
+for afruit in fruits:
+    print(afruit)
+</textarea>
+</div>
+<p>It almost reads like natural language: For (every) fruit in (the list of) fruits,
+print (the name of the) fruit.</p>
+<p>We can also use the indices to access the items in an iterative fashion.</p>
+
+<div data-childcomponent="chp09_03b" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp09_03b data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+fruits = ["apple", "orange", "banana", "cherry"]
+
+# looping by index
+for position in range(len(fruits)):
+    print(fruits[position])
+</textarea>
+</div>
+<p>In this example, each time through the loop, the variable <code class="docutils literal"><span class="pre">position</span></code> is used as an index into the
+list, printing the <code class="docutils literal"><span class="pre">position</span></code>-eth element. Note that we used <code class="docutils literal"><span class="pre">len</span></code> as the upper bound on the range
+so that we can iterate correctly no matter how many items are in the list.</p>
+<p>Since lists are mutable, it is often desirable to traverse a list, modifying
+each of its elements as you go. The following code squares all the numbers from <code class="docutils literal"><span class="pre">1</span></code> to
+<code class="docutils literal"><span class="pre">5</span></code> using iteration by position.</p>
+
+<div data-childcomponent="chp09_for4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp09_for4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+
+for i in range(len(numbers)):
+    numbers[i] = numbers[i] ** 2
+
+print(numbers)
+</textarea>
+</div>
+<p>Take a moment to think about <code class="docutils literal"><span class="pre">range(len(numbers))</span></code> until you understand how
+it works. We are interested here in both the <em>value</em> and its <em>index</em> within the
+list, so that we can assign a new value to it.</p>
+</div>
 <div class="section" id="practice-problems">
-<h2>33.10. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>33.11. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="warmup">
-<h3>33.10.1. Warmup<a class="headerlink" href="#warmup" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.1. Warmup<a class="headerlink" href="#warmup" title="Permalink to this headline">¶</a></h3>
 <p>Create a list called <code class="docutils literal"><span class="pre">my_list</span></code> with the following six items: 76, 92.3, “hello”, True, 4, 76. Print out the list to make sure it is doing what you intend.</p>
 
 <div data-childcomponent="list_overview_practice_problem_1" class="runestone explainer ac_section alert alert-warning">
@@ -697,7 +701,7 @@ index, but do not cause runtime errors if the index limits go too far.</p>
 </div>
 </div>
 <div class="section" id="sum-of-squares">
-<h3>33.10.2. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.2. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -708,11 +712,11 @@ index, but do not cause runtime errors if the index limits go too far.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal"><span class="pre">sum_of_squares([2,3,4])</span> <span class="pre">→</span> <span class="pre">29</span></code></p>
 <p><code class="docutils literal"><span class="pre">sum_of_squares([0,1,-1])</span> <span class="pre">→</span> <span class="pre">2</span></code></p>
-<p><code class="docutils literal"><span class="pre">sum_of_squares([5,12,14])</span> <span class="pre">→</span> <span class="pre">365</span></code></p>
+<p><code class="docutils literal"><span class="pre">sum_of_squares([5,12])</span> <span class="pre">→</span> <span class="pre">169</span></code></p>
 
 <textarea data-component="activecode" id=list_overview_practice_problem_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def sum_of_squares(a_list):
-  # your code here
+    # your code here
 
 ====
 from unittest.gui import TestCaseGui
@@ -722,14 +726,16 @@ class myTests(TestCaseGui):
   def testOne(self):
       self.assertEqual(sum_of_squares([2,3,4]),29,"sum_of_squares([2,3,4])")
       self.assertEqual(sum_of_squares([0,1,-1]),2,"sum_of_squares([0,1,-1])")
+      self.assertEqual(sum_of_squares([5,12]),169,"sum_of_squares([5,12])")
       self.assertEqual(sum_of_squares([5,12,14]),365,"sum_of_squares([5,12,14])")
+      self.assertEqual(sum_of_squares([5]),25,"sum_of_squares([5])")
 
 myTests().main()
 </textarea>
 </div>
 </div>
 <div class="section" id="count-odd-numbers">
-<h3>33.10.3. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.3. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -744,7 +750,7 @@ myTests().main()
 
 <textarea data-component="activecode" id=list_overview_practice_problem_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def count_odds(a_list):
-  # your code here
+    # your code here
 
 ====
 from unittest.gui import TestCaseGui
@@ -762,22 +768,22 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="count-words-with-length-5">
-<h3>33.10.4. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.4. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
 <div data-childcomponent="list_overview_practice_problem_4" class="runestone explainer ac_section alert alert-warning">
-<p>Write a function to count how many odd numbers are in a list.</p>
+<p>Write a function to count how many words in a list have a length of 5.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">count_words([1,3,5,7,9])</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
-<p><code class="docutils literal"><span class="pre">count_words([0,1,-1])</span> <span class="pre">→</span> <span class="pre">2</span></code></p>
-<p><code class="docutils literal"><span class="pre">count_words([5,12,14])</span> <span class="pre">→</span> <span class="pre">365</span></code></p>
+<p><code class="docutils literal"><span class="pre">count_words([&quot;computer&quot;,</span> <span class="pre">&quot;science&quot;])</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
+<p><code class="docutils literal"><span class="pre">count_words([&quot;nobody&quot;,</span> <span class="pre">&quot;knows&quot;])</span> <span class="pre">→</span> <span class="pre">1</span></code></p>
+<p><code class="docutils literal"><span class="pre">count_words([&quot;think&quot;,</span> <span class="pre">&quot;pizza&quot;,</span> <span class="pre">&quot;quick&quot;])</span> <span class="pre">→</span> <span class="pre">3</span></code></p>
 
 <textarea data-component="activecode" id=list_overview_practice_problem_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def count_words(a_list):
-  # your code here
+    # your code here
 
 ====
 from unittest.gui import TestCaseGui
@@ -785,24 +791,75 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
   def testOne(self):
-      self.assertEqual(count_odds([1,3,5,7,9]),5,"count_odds([1,3,5,7,9])")
-      self.assertEqual(count_odds([1,2,3,4,5]),3,"count_odds([-1,-2,-3,-4,-5])")
-      self.assertEqual(count_odds([2,4,6,8,10]),0,"count_odds([2,4,6,8,10])")
-      self.assertEqual(count_odds([0,-1,12,-33]),2,"count_odds([0,-1,12,-33])")
+      self.assertEqual(count_words(["computer", "science"]),0,'count_words(["computer", "science"])')
+      self.assertEqual(count_words(["nobody", "knows"]),1,'count_words(["nobody", "knows"])')
+      self.assertEqual(count_words(["think", "pizza", "quick"]),3,'count_words(["think", "pizza", "quick"])')
 
 myTests().main()
 </textarea>
 </div>
 </div>
-<div class="section" id="count-hats">
-<h3>33.10.5. Count “hats”<a class="headerlink" href="#count-hats" title="Permalink to this headline">¶</a></h3>
-<p>Write a function to count how many times the word “hat” shows up in a list. Test it out on some lists, like this one:</p>
-<p><code class="docutils literal"><span class="pre">word_list</span> <span class="pre">=</span> <span class="pre">[&quot;hat&quot;,</span> <span class="pre">&quot;cat&quot;,</span> <span class="pre">&quot;mat&quot;,</span> <span class="pre">&quot;sat&quot;,</span> <span class="pre">&quot;hat&quot;,</span> <span class="pre">&quot;pat&quot;,</span> <span class="pre">&quot;tat&quot;,</span> <span class="pre">&quot;fat&quot;,</span> <span class="pre">&quot;hat&quot;,</span> <span class="pre">&quot;rat&quot;]</span></code></p>
+<div class="section" id="look-for-sask">
+<h3>33.11.5. Look For “sask”<a class="headerlink" href="#look-for-sask" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
 
 <div data-childcomponent="list_overview_practice_problem_5" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function to check if the word “sask” shows up somewhere in a list. If it does, return <code class="docutils literal"><span class="pre">True</span></code>. If it doesn’t, return <code class="docutils literal"><span class="pre">False</span></code>.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">has_sask([&quot;computer&quot;,</span> <span class="pre">&quot;science&quot;])</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
+<p><code class="docutils literal"><span class="pre">has_sask([&quot;sask&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;])</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
+<p><code class="docutils literal"><span class="pre">has_sask([&quot;we&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;])</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
 
 <textarea data-component="activecode" id=list_overview_practice_problem_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
-# your code goes here...
+def has_sask(a_list):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def testOne(self):
+      self.assertEqual(has_sask(["computer", "science"]),False,'has_sask(["computer", "science"])')
+      self.assertEqual(has_sask(["sask", "is", "nice"]),True,'has_sask(["sask", "is", "nice"])')
+      self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),False,'has_sask(["we", "live", "in", "saskatchewan"])')
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="make-it-fun">
+<h3>33.11.6. Make it Fun<a class="headerlink" href="#make-it-fun" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+
+<div data-childcomponent="list_overview_practice_problem_6" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function to replace the first element of a list with the word <code class="docutils literal"><span class="pre">&quot;fun&quot;</span></code>, and then return the altered list. You can assume that the list will always have at least one element.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;computer&quot;,</span> <span class="pre">&quot;science&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;science&quot;]</span></code></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;sask&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;]</span></code></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;we&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;]</span></code></p>
+
+<textarea data-component="activecode" id=list_overview_practice_problem_6 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def make_fun(a_list):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def testOne(self):
+      self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
+      self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
+      self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
+
+myTests().main()
 </textarea>
 </div>
 </div>

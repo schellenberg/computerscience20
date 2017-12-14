@@ -326,19 +326,8 @@ update one of the list items.
     print(fruit)
 
 
-An
-assignment to an element of a list is called **item assignment**. Item
+An assignment to an element of a list is called **item assignment**. Item
 assignment does not work for strings.  Recall that strings are immutable.
-
-Here is the same example in codelens so that you can step through the statements and see the changes to the list elements.
-
-.. codelens:: item_assign
-    
-    fruit = ["banana", "apple", "cherry"]
-
-    fruit[0] = "pear"
-    fruit[-1] = "orange"
-
 
 
 **Check your understanding**
@@ -385,6 +374,59 @@ As usual, slices select all the elements up to, but not including, the second
 index, but do not cause runtime errors if the index limits go too far.
 
 
+Lists and ``for`` loops
+-----------------------
+
+It is also possible to perform **list traversal** using iteration by item as well as iteration by index.
+
+
+.. activecode:: chp09_03a
+
+    fruits = ["apple", "orange", "banana", "cherry"]
+
+    # looping by item
+    for afruit in fruits:     
+        print(afruit)
+
+It almost reads like natural language: For (every) fruit in (the list of) fruits,
+print (the name of the) fruit.
+
+We can also use the indices to access the items in an iterative fashion.
+
+.. activecode:: chp09_03b
+
+    fruits = ["apple", "orange", "banana", "cherry"]
+
+    # looping by index
+    for position in range(len(fruits)):     
+        print(fruits[position])
+
+
+In this example, each time through the loop, the variable ``position`` is used as an index into the
+list, printing the ``position``-eth element. Note that we used ``len`` as the upper bound on the range
+so that we can iterate correctly no matter how many items are in the list.
+
+
+Since lists are mutable, it is often desirable to traverse a list, modifying
+each of its elements as you go. The following code squares all the numbers from ``1`` to
+``5`` using iteration by position.
+
+.. activecode:: chp09_for4
+
+    numbers = [1, 2, 3, 4, 5]
+    print(numbers)
+
+    for i in range(len(numbers)):
+        numbers[i] = numbers[i] ** 2
+
+    print(numbers)
+
+
+Take a moment to think about ``range(len(numbers))`` until you understand how
+it works. We are interested here in both the *value* and its *index* within the
+list, so that we can assign a new value to it.
+
+
 Practice Problems
 -------------------
 
@@ -415,10 +457,10 @@ Sum of Squares
 
     ``sum_of_squares([0,1,-1]) → 2``
 
-    ``sum_of_squares([5,12,14]) → 365``
+    ``sum_of_squares([5,12]) → 169``
     ~~~~   
     def sum_of_squares(a_list):
-      # your code here
+        # your code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -428,11 +470,11 @@ Sum of Squares
       def testOne(self):
           self.assertEqual(sum_of_squares([2,3,4]),29,"sum_of_squares([2,3,4])")
           self.assertEqual(sum_of_squares([0,1,-1]),2,"sum_of_squares([0,1,-1])")
+          self.assertEqual(sum_of_squares([5,12]),169,"sum_of_squares([5,12])")
           self.assertEqual(sum_of_squares([5,12,14]),365,"sum_of_squares([5,12,14])")
+          self.assertEqual(sum_of_squares([5]),25,"sum_of_squares([5])")
 
     myTests().main()
-
-
 
 
 Count Odd Numbers 
@@ -454,7 +496,7 @@ Count Odd Numbers
     ``count_odds([2,4,6,8,10]) → 0``
     ~~~~   
     def count_odds(a_list):
-      # your code here
+        # your code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -479,18 +521,18 @@ Count Words with Length 5
 .. activecode:: list_overview_practice_problem_4
     :nocodelens:
 
-    Write a function to count how many odd numbers are in a list.
+    Write a function to count how many words in a list have a length of 5.
 
     **Examples:**
 
-    ``count_words([1,3,5,7,9]) → 5``
+    ``count_words(["computer", "science"]) → 0``
 
-    ``count_words([0,1,-1]) → 2``
+    ``count_words(["nobody", "knows"]) → 1``
 
-    ``count_words([5,12,14]) → 365``
+    ``count_words(["think", "pizza", "quick"]) → 3``
     ~~~~   
     def count_words(a_list):
-      # your code here
+        # your code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -498,23 +540,77 @@ Count Words with Length 5
     class myTests(TestCaseGui):
 
       def testOne(self):
-          self.assertEqual(count_odds([1,3,5,7,9]),5,"count_odds([1,3,5,7,9])")
-          self.assertEqual(count_odds([1,2,3,4,5]),3,"count_odds([-1,-2,-3,-4,-5])")
-          self.assertEqual(count_odds([2,4,6,8,10]),0,"count_odds([2,4,6,8,10])")
-          self.assertEqual(count_odds([0,-1,12,-33]),2,"count_odds([0,-1,12,-33])")
+          self.assertEqual(count_words(["computer", "science"]),0,'count_words(["computer", "science"])')
+          self.assertEqual(count_words(["nobody", "knows"]),1,'count_words(["nobody", "knows"])')
+          self.assertEqual(count_words(["think", "pizza", "quick"]),3,'count_words(["think", "pizza", "quick"])')
 
     myTests().main()
 
 
-Count "hats"
+Look For "sask"
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Write a function to count how many times the word "hat" shows up in a list. Test it out on some lists, like this one:
-
-``word_list = ["hat", "cat", "mat", "sat", "hat", "pat", "tat", "fat", "hat", "rat"]``
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
 .. activecode:: list_overview_practice_problem_5
     :nocodelens:
 
-    # your code goes here...
+    Write a function to check if the word "sask" shows up somewhere in a list. If it does, return ``True``. If it doesn't, return ``False``.
+
+    **Examples:**
+
+    ``has_sask(["computer", "science"]) → False``
+
+    ``has_sask(["sask", "is", "nice"]) → True``
+
+    ``has_sask(["we", "live", "in", "saskatchewan"]) → False``
+    ~~~~   
+    def has_sask(a_list):
+        # your code here
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(has_sask(["computer", "science"]),False,'has_sask(["computer", "science"])')
+          self.assertEqual(has_sask(["sask", "is", "nice"]),True,'has_sask(["sask", "is", "nice"])')
+          self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),False,'has_sask(["we", "live", "in", "saskatchewan"])')
+
+    myTests().main()
+
+
+Make it Fun
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+
+.. activecode:: list_overview_practice_problem_6
+    :nocodelens:
+
+    Write a function to replace the first element of a list with the word ``"fun"``, and then return the altered list. You can assume that the list will always have at least one element.
+
+    **Examples:**
+
+    ``make_fun(["computer", "science"]) → ["fun", "science"]``
+
+    ``make_fun(["sask", "is", "nice"]) → ["fun", "is", "nice"]``
+
+    ``make_fun(["we", "live", "in", "saskatchewan"]) → ["fun", "live", "in", "saskatchewan"]``
+    ~~~~   
+    def make_fun(a_list):
+        # your code here
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
+          self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
+          self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
+
+    myTests().main()
 
