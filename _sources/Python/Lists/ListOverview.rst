@@ -436,7 +436,7 @@ Practice Problems
 Warmup
 ~~~~~~~
 
-Create a list called ``my_list`` with the following six items: 76, 92.3, "hello", True, 4, 76. Print out the list to make sure it is doing what you intend.
+Create a list called ``my_list`` with the following six items: ``76, 92.3, "hello", True, 4, 76``. Print out the list to make sure it is doing what you intend.
 
 .. activecode:: list_overview_practice_problem_1
     
