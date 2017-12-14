@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="next" title="34. List Methods" href="ListMethods.html" />
     <link rel="prev" title="32. Turtle Drawing and Strings (L-Systems)" href="../Strings/LSystems.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -203,10 +203,19 @@
 <li><a class="reference internal" href="#id1">33.4.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#list-membership">33.5. List Membership</a></li>
-<li><a class="reference internal" href="#list-slices">33.6. List Slices</a></li>
+<li><a class="reference internal" href="#list-membership">33.5. List Membership</a><ul>
+<li><a class="reference internal" href="#id2">33.5.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#list-slices">33.6. List Slices</a><ul>
+<li><a class="reference internal" href="#id3">33.6.1. Check Your Understanding</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#strings-are-immutable">33.7. Strings are Immutable</a></li>
-<li><a class="reference internal" href="#lists-are-mutable">33.8. Lists are Mutable</a></li>
+<li><a class="reference internal" href="#lists-are-mutable">33.8. Lists are Mutable</a><ul>
+<li><a class="reference internal" href="#id4">33.8.1. Check Your Understanding</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#list-deletion">33.9. List Deletion</a></li>
 <li><a class="reference internal" href="#lists-and-for-loops">33.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
 <li><a class="reference internal" href="#practice-problems">33.11. Practice Problems</a><ul>
@@ -233,8 +242,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" title='Next Chapter - 34. List Methods' data-toggle="tooltip" >
+    <a href="ListMethods.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -470,7 +479,8 @@ print("apple" in fruit)
 print("pear" in fruit)
 </textarea>
 </div>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="id2">
+<h3>33.5.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_4_1">
@@ -504,6 +514,7 @@ print("pear" in fruit)
             </ul>
             </div>
             </div>
+</div>
 <div class="section" id="list-slices">
 <h2>33.6. List Slices<a class="headerlink" href="#list-slices" title="Permalink to this headline">¶</a></h2>
 <p>The slice operation we saw with strings also work on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
@@ -521,7 +532,8 @@ print(a_list[3:])
 print(a_list[:])
 </textarea>
 </div>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="id3">
+<h3>33.6.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_6_1">
@@ -541,6 +553,7 @@ print(a_list[:])
             </ul>
             </div>
             </div>
+</div>
 <div class="section" id="strings-are-immutable">
 <h2>33.7. Strings are Immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this headline">¶</a></h2>
 <p>One thing that makes strings different from Python lists is that
@@ -591,7 +604,8 @@ print(fruit)
 </div>
 <p>An assignment to an element of a list is called <strong>item assignment</strong>. Item
 assignment does not work for strings.  Recall that strings are immutable.</p>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="id4">
+<h3>33.8.1. Check Your Understanding<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_7_1">
@@ -612,6 +626,7 @@ assignment does not work for strings.  Recall that strings are immutable.</p>
             </ul>
             </div>
             </div>
+</div>
 <div class="section" id="list-deletion">
 <h2>33.9. List Deletion<a class="headerlink" href="#list-deletion" title="Permalink to this headline">¶</a></h2>
 <p>Using slices to delete list elements can be awkward and therefore error-prone.
@@ -876,12 +891,12 @@ myTests().main()
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../Strings/LSystems.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 34. List Methods' data-toggle="tooltip" >
+    <a href="ListMethods.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ListMethods.html" >Next Section - 34. List Methods</a>
 
 <script type="text/javascript">
 

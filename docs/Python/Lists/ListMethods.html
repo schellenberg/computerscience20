@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>7.14. List Methods &#8212; Computer Science 20 Saskatchewan</title>
+    <title>34. List Methods &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="33. Using Lists" href="ListOverview.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -190,7 +192,19 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">7.14. List Methods</a></li>
+<li><a class="reference internal" href="#">34. List Methods</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">34.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#id1">34.2. List Methods</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">34.2.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inventory-example">34.3. Inventory Example</a><ul>
+<li><a class="reference internal" href="#id2">34.3.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#turtle-coordinate-list">34.4. Turtle Coordinate List</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -198,6 +212,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 33. Using Lists" data-toggle="tooltip">
+    <a href="ListOverview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -224,7 +250,88 @@
 <div class="container" id="main-content">
   
   <div class="section" id="list-methods">
-<h1>7.14. List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
+<h1>34. List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Use lists while moving turtles.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="what-does-this-program-do">
+<h2>34.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>What will the following programs output? Why?</p>
+
+<div data-childcomponent="wdtpd_lists_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", 3.14, False]
+print(len(alist))
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(len(alist))
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[5])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[2][0])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_5 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [4, 2, 8, 6, 5]
+alist[2] = True
+print(alist)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_6 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[3][2])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_7 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[3][2][2])
+</textarea>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>34.2. List Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>The dot operator can also be used to access built-in methods of list objects.
 <code class="docutils literal"><span class="pre">append</span></code> is a list method which adds the argument passed to it to the end of
 the list. Continuing with this example, we show several other list methods.  Many of them are
@@ -233,32 +340,32 @@ easy to understand.</p>
 <div data-childcomponent="chp09_meth1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=chp09_meth1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-mylist = []
-mylist.append(5)
-mylist.append(27)
-mylist.append(3)
-mylist.append(12)
-print(mylist)
+my_list = []
+my_list.append(5)
+my_list.append(27)
+my_list.append(3)
+my_list.append(12)
+print(my_list)
 
-mylist.insert(1, 12)
-print(mylist)
-print(mylist.count(12))
+my_list.insert(1, 12)
+print(my_list)
+print(my_list.count(12))
 
-print(mylist.index(3))
-print(mylist.count(5))
+print(my_list.index(3))
+print(my_list.count(5))
 
-mylist.reverse()
-print(mylist)
+my_list.reverse()
+print(my_list)
 
-mylist.sort()
-print(mylist)
+my_list.sort()
+print(my_list)
 
-mylist.remove(5)
-print(mylist)
+my_list.remove(5)
+print(my_list)
 
-lastitem = mylist.pop()
+lastitem = my_list.pop()
 print(lastitem)
-print(mylist)
+print(my_list)
 </textarea>
 </div>
 <p>There are two ways to use the <code class="docutils literal"><span class="pre">pop</span></code> method.  The first, with no parameter, will remove and return the
@@ -268,8 +375,7 @@ item at that position.  Either way the list is changed.</p>
 <cite>result</cite> gives an explanation as to what the return value is as it relates to the new value of the list.  The word
 <strong>mutator</strong> means that the list is changed by the method but nothing is returned (actually <code class="docutils literal"><span class="pre">None</span></code> is returned).  A <strong>hybrid</strong> method is one that not only changes the list but also returns a value as its result.  Finally, if the result is simply a return, then the list
 is unchanged by the method.</p>
-<p>Be sure
-to experiment with these methods to gain a better understanding of what they do.</p>
+<p>Be sure to experiment with these methods to gain a better understanding of what they do.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="12%" />
@@ -335,27 +441,28 @@ to experiment with these methods to gain a better understanding of what they do.
 <p>Details for these and others
 can be found in the <a class="reference external" href="http://docs.python.org/py3k/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range">Python Documentation</a>.</p>
 <p>It is important to remember that methods like <code class="docutils literal"><span class="pre">append</span></code>, <code class="docutils literal"><span class="pre">sort</span></code>,
-and <code class="docutils literal"><span class="pre">reverse</span></code> all return <code class="docutils literal"><span class="pre">None</span></code>.  This means that re-assigning <code class="docutils literal"><span class="pre">mylist</span></code> to the result of sorting <code class="docutils literal"><span class="pre">mylist</span></code> will result in losing the entire list.  Calls like these will likely never appear as part of an assignment statement (see line 8 below).</p>
+and <code class="docutils literal"><span class="pre">reverse</span></code> all return <code class="docutils literal"><span class="pre">None</span></code>.  This means that re-assigning <code class="docutils literal"><span class="pre">my_list</span></code> to the result of sorting <code class="docutils literal"><span class="pre">my_list</span></code> will result in losing the entire list.  Calls like these will likely never appear as part of an assignment statement (see line 8 below).</p>
 
 <div data-childcomponent="chp09_meth2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=chp09_meth2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-mylist = []
-mylist.append(5)
-mylist.append(27)
-mylist.append(3)
-mylist.append(12)
-print(mylist)
+my_list = []
+my_list.append(5)
+my_list.append(27)
+my_list.append(3)
+my_list.append(12)
+print(my_list)
 
-mylist = mylist.sort()   #probably an error
-print(mylist)
+my_list = my_list.sort()   #probably an error
+print(my_list)
 </textarea>
 </div>
-<p><strong>Check your understanding</strong></p>
+<div class="section" id="check-your-understanding">
+<h3>34.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_1">
-            <p>list-14-1: What is printed by the following statements?</p>
+            <p>using-lists1: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
@@ -375,7 +482,7 @@ print(mylist)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_2">
-            <p>list-14-2: What is printed by the following statements?</p>
+            <p>using-lists2: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">alist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
 <span class="n">alist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
@@ -395,7 +502,7 @@ print(mylist)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_3">
-            <p>list-14-3: What is printed by the following statements?</p>
+            <p>using-lists3: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -415,7 +522,7 @@ print(mylist)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_4">
-            <p>list-14-4: What is printed by the following statements?</p>
+            <p>using-lists4: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">alist</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
@@ -433,23 +540,212 @@ print(mylist)
 
             </ul>
             </div>
-            <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.</p>
+            </div>
+</div>
+<div class="section" id="inventory-example">
+<h2>34.3. Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this headline">¶</a></h2>
+<p>If you were making a computer game, and you needed to keep track of what items the player was currently holding, using a list would be a good choice. At the beginning of the game, you might create an empty list, if the player begins the game without any items.</p>
 
-<div data-childcomponent="scratch_09_03" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="inventory_example_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=scratch_09_03 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-
-
+<textarea data-component="activecode" id=inventory_example_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+print(inventory)
 </textarea>
 </div>
+<p>If the player obtains a new item, the new item should be added to the list. The easiest way to do this is to use the built-in <code class="docutils literal"><span class="pre">.append()</span></code> method.</p>
+
+<div data-childcomponent="inventory_example_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+inventory.append("room 1 key")
+print(inventory)
+</textarea>
+</div>
+<p>When you need to check if the player is currently able to perform a certain action, such as opening a locked door, you simply need to check if an item is in the inventory list.</p>
+
+<div data-childcomponent="inventory_example_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+
+# after the player does something to find the key
+# try commenting out the line below and running the code again
+inventory.append("room 1 key")
+
+# player now attempts to open a door
+if "room 1 key" in inventory:
+    print("Door opened.")
+else:
+    print("Sorry. The door is locked. You need a key.")
+
+print(inventory)
+</textarea>
+</div>
+<p>Sometimes, the item the players uses might be something they can only use once. For example, after they used the “rooom 1 key”, we might want the “room 1 key” to no longer be in the player’s inventory. The following code does just that.</p>
+
+<div data-childcomponent="inventory_example_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+
+# after the player does something to find the key
+# try commenting out the line below and running the code again
+inventory.append("room 1 key")
+
+# player now attempts to open a door
+if "room 1 key" in inventory:
+    print("Door opened.")
+
+    # now remove the room 1 key from the inventory
+    inventory.remove("room 1 key")
+
+else:
+    print("Sorry. The door is locked. You need a key.")
+
+print(inventory)
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Change the code above so you append a <code class="docutils literal"><span class="pre">book</span></code> instead of a room 1 key, then run the code again.</p>
+</div>
+<div class="section" id="id2">
+<h3>34.3.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
+            <p>using-lists5: What will be the result of the following code being executed?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">stamp</span><span class="p">()</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">draw_thing</span><span class="p">(</span><span class="n">bob</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
+
+            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_a">Nice!</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_b">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_c">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_d">Try again.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
+            <p>using-lists6: What will be the result of the following code being executed?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">stamp</span><span class="p">()</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">draw_thing</span><span class="p">(</span><span class="n">bob</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
+
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_a">Try again.</li>
+            
+            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_b">Nice!</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_c">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_d">Try again.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="turtle-coordinate-list">
+<h2>34.4. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following:</p>
+
+<div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+window = turtle.Screen()
+jane = turtle.Turtle()
+
+turtle_coordinate_list = [[0, 50], [50, 50], [50, 100]]
+
+for coordinate in turtle_coordinate_list:
+    x = coordinate[0]
+    y = coordinate[1]
+
+    jane.goto(x, y)
+</textarea>
+</div>
+<p>Create a program that:</p>
+<ul>
+<li><p class="first">repeat the following in a <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> loop (forever)</p>
+<blockquote>
+<div><ul class="simple">
+<li>makes a turtle move 10 steps forward</li>
+<li>randomly turn left or right by 90 degrees</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+<div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+window = turtle.Screen()
+jane = turtle.Turtle()
+</textarea>
+</div>
+<p>Now, adapt the code above so that the program:</p>
+<ul class="simple">
+<li>adds the current coordinates to a list of places the turtle has been before. Remember that you can get the current x position with something like <code class="docutils literal"><span class="pre">jane.xcor()</span></code>.</li>
+<li>change the program so that it stops when the turtle touches a location that it has been before.</li>
+</ul>
 </div>
 </div>
 
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 33. Using Lists' data-toggle="tooltip">
+    <a href="ListOverview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="ListOverview.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Loops Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Loops.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Loops.html" >Next Section - Loops Practice Quiz</a>
 
 <script type="text/javascript">
 

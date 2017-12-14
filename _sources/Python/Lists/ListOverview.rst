@@ -210,7 +210,8 @@ used them previously with strings and they also work here.
     print("apple" in fruit)
     print("pear" in fruit)
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: test_question9_4_1
    :answer_a: True
@@ -259,7 +260,8 @@ end of the sequence.
     print(a_list[3:])
     print(a_list[:])
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: test_question9_6_1
    :answer_a: [ [ ], 3.14, False]
@@ -330,7 +332,8 @@ An assignment to an element of a list is called **item assignment**. Item
 assignment does not work for strings.  Recall that strings are immutable.
 
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: test_question9_7_1
    :answer_a: [4, 2, True, 8, 6, 5]

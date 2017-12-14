@@ -121,6 +121,7 @@ Python
    Python/Strings/LSystems.rst
    
    Python/Lists/ListOverview.rst
+   Python/Lists/ListMethods.rst
 
 
 
