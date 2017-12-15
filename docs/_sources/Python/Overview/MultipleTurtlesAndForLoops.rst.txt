@@ -186,6 +186,18 @@ the buttons.  You can see the value of ``name`` change as the loop iterates thro
         print("Hi ", name, "  Please come to my party on Saturday!")
 
 
+.. note:: 
+
+    Although you might not want to worry about this yet, it is **really** useful to know that you can access any specific part of list by providing it's index value in square brackets, such as ``some_list[2]`` (the first element has an index of 0, the second has an index of 1, etc). Consider the following:
+
+    .. code-block:: python
+
+        names = ["James", "Malindu", "Michelle", "Zoe", "Eli", "Bree"]
+        
+        print(names[0])  # prints James
+        print(names[3])  # prints Zoe
+
+
 Iteration Simplifies our Turtle Program
 ---------------------------------------
 
@@ -257,8 +269,8 @@ Thinking back to the for loop version we saw above, the values [0,1,2,3] were pr
     wn.exitonclick()
 
 
-In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  ``aColor`` will
-take on each color in the list.  We can even take this one step further and use the value of ``aColor`` as part of the computation.
+In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  ``some_color`` will
+take on each color in the list.  We can even take this one step further and use the value of ``some_color`` as part of the computation.
 
 .. activecode:: colorlist
     :nocodelens:
@@ -269,15 +281,15 @@ take on each color in the list.  We can even take this one step further and use 
     wn = turtle.Screen()
     alex = turtle.Turtle()
 
-    for aColor in ["yellow", "red", "purple", "blue"]:
-       alex.color(aColor)
+    for some_color in ["yellow", "red", "purple", "blue"]:
+       alex.color(some_color)
        alex.forward(50)
        alex.left(90)
 
     wn.exitonclick()
 
 
-In this case, the value of ``aColor`` is used to change the color attribute of ``alex``.  Each iteration causes ``aColor`` to change to the next value in the list.
+In this case, the value of ``some_color`` is used to change the color attribute of ``alex``.  Each iteration causes ``some_color`` to change to the next value in the list.
 
 
 Mixed Up Programs

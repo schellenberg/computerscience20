@@ -473,6 +473,16 @@ $(window).resize(function() {
 });
 </script>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Although you might not want to worry about this yet, it is <strong>really</strong> useful to know that you can access any specific part of list by providing it’s index value in square brackets, such as <code class="docutils literal"><span class="pre">some_list[2]</span></code> (the first element has an index of 0, the second has an index of 1, etc). Consider the following:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Malindu&quot;</span><span class="p">,</span> <span class="s2">&quot;Michelle&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Eli&quot;</span><span class="p">,</span> <span class="s2">&quot;Bree&quot;</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># prints James</span>
+<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># prints Zoe</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="iteration-simplifies-our-turtle-program">
 <h2>10.3. Iteration Simplifies our Turtle Program<a class="headerlink" href="#iteration-simplifies-our-turtle-program" title="Permalink to this headline">¶</a></h2>
@@ -542,8 +552,8 @@ for i in [0, 1, 2, 3]:
 wn.exitonclick()
 </textarea>
 </div>
-<p>In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  <code class="docutils literal"><span class="pre">aColor</span></code> will
-take on each color in the list.  We can even take this one step further and use the value of <code class="docutils literal"><span class="pre">aColor</span></code> as part of the computation.</p>
+<p>In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  <code class="docutils literal"><span class="pre">some_color</span></code> will
+take on each color in the list.  We can even take this one step further and use the value of <code class="docutils literal"><span class="pre">some_color</span></code> as part of the computation.</p>
 
 <div data-childcomponent="colorlist" class="runestone explainer ac_section alert alert-warning">
 
@@ -554,15 +564,15 @@ import turtle
 wn = turtle.Screen()
 alex = turtle.Turtle()
 
-for aColor in ["yellow", "red", "purple", "blue"]:
-   alex.color(aColor)
+for some_color in ["yellow", "red", "purple", "blue"]:
+   alex.color(some_color)
    alex.forward(50)
    alex.left(90)
 
 wn.exitonclick()
 </textarea>
 </div>
-<p>In this case, the value of <code class="docutils literal"><span class="pre">aColor</span></code> is used to change the color attribute of <code class="docutils literal"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal"><span class="pre">aColor</span></code> to change to the next value in the list.</p>
+<p>In this case, the value of <code class="docutils literal"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
 <div class="section" id="id3">
 <h3>10.3.1. Mixed Up Programs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
