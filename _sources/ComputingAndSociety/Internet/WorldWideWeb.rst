@@ -3,13 +3,14 @@
    :prefix: string-operators-1
    :start: 1
 
+.. _www_technology:
 
 The World Wide Web 
 ===================
 
 .. topic:: Quick Overview of Day
 
-    Learn about how the web works.
+    Learn about how the web works. Covers many of the same ideas as the How The Internet Works videos (intended to be used for reference, not explicitly taught).
 
 
 .. reveal:: curriculum_addressed

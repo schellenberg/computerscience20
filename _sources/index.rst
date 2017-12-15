@@ -94,6 +94,8 @@ Python
    Python/Overview/MultipleTurtlesAndForLoops.rst
    Python/Overview/Microbit.rst
    
+
+
    Python/MoreTurtles/TurtleAssignment.rst
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
@@ -143,7 +145,6 @@ Computing and Society
 
    ComputingAndSociety/Internet/HowTheInternetWorks.rst
    ComputingAndSociety/Internet/HowTheInternetWorksPracticeQuiz.rst
-   ComputingAndSociety/Internet/WorldWideWeb.rst
    ComputingAndSociety/Internet/HTML.rst
    ComputingAndSociety/Internet/CSS.rst
    .. ComputingAndSociety/UnderlyingTechnology.rst
@@ -178,9 +179,10 @@ Appendices
    Python/TurtleConfusion/Challenges.rst
    Python/Microbit/QuickStartExamples.rst
 
-Helpful Links
-::::::::::::::
 
-- `List of Turtle Color Names <https://www.w3schools.com/colors/colors_names.asp>`_
-- `Python Turtle Docs <https://docs.python.org/3/library/turtle.html>`_
-- `Python Visualizer Tool <http://www.pythontutor.com/visualize.html#py=3>`_
+.. Helpful Links
+.. ::::::::::::::
+
+.. - `List of Turtle Color Names <https://www.w3schools.com/colors/colors_names.asp>`_
+.. - `Python Turtle Docs <https://docs.python.org/3/library/turtle.html>`_
+.. - `Python Visualizer Tool <http://www.pythontutor.com/visualize.html#py=3>`_
