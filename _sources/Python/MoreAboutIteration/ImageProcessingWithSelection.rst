@@ -174,7 +174,7 @@ If you want to combine two images together, you need to copy the pixel informati
 
 .. raw:: html
 
-    <img src="../../_static/emoji/smile-med.png" id="smile.png">
+    <img src="../../_static/emoji/smile.png" id="smile.png">
     <h4 style="text-align: center;">smile.png</h4>
 
 .. raw:: html

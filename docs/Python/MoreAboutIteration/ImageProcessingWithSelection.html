@@ -417,7 +417,7 @@ img.draw(win)
 <div class="section" id="combining-images">
 <h2>28.3. Combining Images<a class="headerlink" href="#combining-images" title="Permalink to this headline">¶</a></h2>
 <p>If you want to combine two images together, you need to copy the pixel information from one image onto the pixel information of the other image. For example, if we want to have the smile emoji below show up in the image of the rooster, we need to look through each of the pixels in the smile image to see if we are looking at a white background pixel, or part of the image that we should be copying over to the rooster image. <em>Note that to make this example simpler, the teeth in the smile emoji have been turned slightly off-white, and the color of the emoji has been changed so that the yellow value of the emoji is (248, 216, 102).</em></p>
-<img src="../../_static/emoji/smile-med.png" id="smile.png">
+<img src="../../_static/emoji/smile.png" id="smile.png">
 <h4 style="text-align: center;">smile.png</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
 <h4 style="text-align: center;">rooster.jpg</h4><p>When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call <code class="docutils literal"><span class="pre">original_image.setPixel()</span></code> on line 36.</p>
 
