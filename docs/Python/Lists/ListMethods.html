@@ -202,7 +202,18 @@
 <li><a class="reference internal" href="#id2">34.3.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#turtle-coordinate-list">34.4. Turtle Coordinate List</a></li>
+<li><a class="reference internal" href="#shopping-list">34.4. Shopping List</a></li>
+<li><a class="reference internal" href="#shakespearean-insult-generator">34.5. Shakespearean Insult Generator</a></li>
+<li><a class="reference internal" href="#strings-and-lists">34.6. Strings and Lists</a><ul>
+<li><a class="reference internal" href="#id3">34.6.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#turtle-coordinate-list-extra-for-experts-example">34.7. Turtle Coordinate List (Extra for Experts Example)</a></li>
+<li><a class="reference internal" href="#practice-problems">34.8. Practice Problems</a><ul>
+<li><a class="reference internal" href="#compliment-generator">34.8.1. Compliment Generator</a></li>
+<li><a class="reference internal" href="#averaging-random-integer-list">34.8.2. Averaging Random Integer List</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -481,28 +492,8 @@ print(my_list)
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_2">
-            <p>using-lists2: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">alist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">alist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-</pre></div>
-</div>
-
-            <li data-component="answer" data-correct id="test_question9_13_2_opt_a">[False, 4, 2, True, 8, 6, 5]</li><li data-component="feedback" id="test_question9_13_2_opt_a">Yes, first True was added at index 2, then False was added at index 0.</li>
-            
-            <li data-component="answer"  id="test_question9_13_2_opt_b">[4, False, True, 2, 8, 6, 5]</li><li data-component="feedback" id="test_question9_13_2_opt_b">insert will place items at the index position specified and move everything down to the right.</li>
-            
-            <li data-component="answer"  id="test_question9_13_2_opt_c">[False, 2, True, 6, 5]</li><li data-component="feedback" id="test_question9_13_2_opt_c">insert does not remove anything or replace anything.</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_3">
-            <p>using-lists3: What is printed by the following statements?</p>
+            <p>using-lists2: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -522,7 +513,7 @@ print(my_list)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_4">
-            <p>using-lists4: What is printed by the following statements?</p>
+            <p>using-lists3: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">alist</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
@@ -616,7 +607,7 @@ print(inventory)
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
-            <p>using-lists5: What will be the result of the following code being executed?</p>
+            <p>using-lists4: What will be the result of the following code being executed?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
 <span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
@@ -649,7 +640,7 @@ print(inventory)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
-            <p>using-lists6: What will be the result of the following code being executed?</p>
+            <p>using-lists5: What will be the result of the following code being executed?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
 <span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
@@ -680,53 +671,216 @@ print(inventory)
             </div>
             </div>
 </div>
-<div class="section" id="turtle-coordinate-list">
-<h2>34.4. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shopping-list">
+<h2>34.4. Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this headline">¶</a></h2>
+<p>Say you want to make a list of things to buy when you go to the store. You could do something like this:</p>
+
+<div data-childcomponent="shopping_list_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shopping_list_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+shopping_list = []
+item = input("Please enter an item to add to your shopping list:")
+shopping_list.append(item)
+print(shopping_list)
+</textarea>
+</div>
+<p>The obvious problem here is that we can only add one item to our list. Let’s put that logic into an infinite loop, so that we can continue to add items until we enter the word <code class="docutils literal"><span class="pre">quit</span></code>:</p>
+
+<div data-childcomponent="shopping_list_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shopping_list_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+shopping_list = []
+
+while True:
+    item = input("Please enter an item to add to your shopping list:")
+
+    if item == "quit":
+        break
+
+    else:
+        shopping_list.append(item)
+
+
+print()
+print("Don't Forget To Buy:")
+print()
+
+for thing_to_get in shopping_list:
+    print(thing_to_get)
+</textarea>
+</div>
+</div>
+<div class="section" id="shakespearean-insult-generator">
+<h2>34.5. Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this headline">¶</a></h2>
+<p>The following is a simple insult generator, using words found in the works of the great bard.</p>
+
+<div data-childcomponent="shakespeare_insult_example" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shakespeare_insult_example data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# Shakespeare Insult Kit
+# Idea from http://www.pangloss.com/seidel/shake_rule.html
+# Original concept attributed to Jerry Maguire, an English teacher at Center Grove High School in Greenwood, Indiana
+
+import random
+
+first_word_list = ["artless", "bawdy", "beslubbering", "bootless", "churlish", "cockered", "clouted", "craven", "currish", "dankish", "dissembling", "droning", "errant", "fawning", "fobbing", "froward", "frothy", "gleeking", "goatish", "gorbellied", "impertinent", "infectious", "jarring", "loggerheaded", "lumpish", "mammering", "mangled", "mewling", "paunchy", "pribbling", "puking", "puny", "qualling", "rank", "reeky", "roguish", "ruttish", "saucy", "spleeny", "spongy", "surly", "tottering", "unmuzzled", "vain", "venomed", "villainous", "warped", "wayward", "weedy", "yeasty"]
+
+second_word_list = ["base-court", "bat-fowling", "beef-witted", "beetle-headed", "boil-brained", "clapper-clawed", "clay-brained", "common-kissing", "crook-pated", "dismal-dreaming", "dizzy-eyed", "doghearted, ""dread-bolted", "earth-vexing", "elf-skinned", "fat-kidneyed", "fen-sucked", "flap-mouthed", "fly-bitten", "folly-fallen", "fool-born", "full-gorged", "guts-griping", "half-faced", "hasty-witted", "hedge-born", "hell-hated", "idle-headed", "ill-breeding", "ill-nurtured", "knotty-pated", "milk-livered", "motley-minded", "onion-eyed", "plume-plucked", "pottle-deep", "pox-marked", "reeling-ripe", "rough-hewn", "rude-growing", "rump-fed", "shard-borne", "sheep-biting", "spur-galled", "swag-bellied", "tardy-gaited", "tickle-brained", "toad-spotted", "unchin-snouted", "weather-bitten"]
+
+third_word_list = ["apple-john", "baggage", "barnacle", "bladder", "boar-pig", "bugbear", "bum-bailey", "canker-blossom", "clack-dish", "clotpole", "coxcomb", "codpiece", "death-token", "dewberry", "flap-dragon", "flax-wench", "flirt-gill", "foot-licker", "fustilarian", "giglet", "gudgeon", "haggard", "harpy", "hedge-pig", "horn-beast", "hugger-mugger", "joithead", "lewdster", "lout", "maggot-pie", "malt-worm", "mammet", "measle", "minnow", "miscreant", "moldwarp", "mumble-news", "nut-hook", "pigeon-egg", "pignut", "puttock", "pumpion", "ratsbane", "scut", "skainsmate", "strumpet", "varlot", "vassal", "whey-face", "wagtail"]
+
+
+first_word = first_word_list[ random.randrange(0, len(first_word_list)) ]
+second_word = second_word_list[ random.randrange(0, len(second_word_list)) ]
+third_word = third_word_list[ random.randrange(0, len(third_word_list)) ]
+
+the_insult = "Thou " + first_word + " " + second_word + " " + third_word + "!"
+
+print(the_insult)
+</textarea>
+</div>
+</div>
+<div class="section" id="strings-and-lists">
+<h2>34.6. Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this headline">¶</a></h2>
+<p>Two of the most useful methods on strings involve lists of
+strings. The <code class="docutils literal"><span class="pre">split</span></code> method
+breaks a string into a list of words.  By
+default, any number of whitespace characters is considered a word boundary.</p>
+
+<div data-childcomponent="ch09_split1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_split1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+song = "The rain in Spain..."
+wds = song.split()
+print(wds)
+</textarea>
+</div>
+<p>An optional argument called a <strong>delimiter</strong> can be used to specify which
+characters to use as word boundaries. The following example uses the string
+<code class="docutils literal"><span class="pre">ai</span></code> as the delimiter:</p>
+
+<div data-childcomponent="ch09_split2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_split2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+song = "The rain in Spain..."
+wds = song.split('ai')
+print(wds)
+</textarea>
+</div>
+<p>Notice that the delimiter doesn’t appear in the result.</p>
+<p>The inverse of the <code class="docutils literal"><span class="pre">split</span></code> method is <code class="docutils literal"><span class="pre">join</span></code>.  You choose a
+desired <strong>separator</strong> string, (often called the <em>glue</em>)
+and join the list with the glue between each of the elements.</p>
+
+<div data-childcomponent="ch09_join" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_join data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds)
+print(s)
+print(wds)
+
+print("***".join(wds))
+print("".join(wds))
+</textarea>
+</div>
+<p>The list that you glue together (<code class="docutils literal"><span class="pre">wds</span></code> in this example) is not modified.  Also,
+you can use empty glue or multi-character strings as glue.</p>
+<div class="section" id="id3">
+<h3>34.6.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_22_1">
+            <p>using-lists6: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">myname</span> <span class="o">=</span> <span class="s2">&quot;Edgar Allan Poe&quot;</span>
+<span class="n">namelist</span> <span class="o">=</span> <span class="n">myname</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">init</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">aname</span> <span class="ow">in</span> <span class="n">namelist</span><span class="p">:</span>
+    <span class="n">init</span> <span class="o">=</span> <span class="n">init</span> <span class="o">+</span> <span class="n">aname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question9_22_1_opt_a">Poe</li><li data-component="feedback" id="test_question9_22_1_opt_a">Three characters but not the right ones.  namelist is the list of names.</li>
+            
+            <li data-component="answer"  id="test_question9_22_1_opt_b">EdgarAllanPoe</li><li data-component="feedback" id="test_question9_22_1_opt_b">Too many characters in this case.  There should be a single letter from each name.</li>
+            
+            <li data-component="answer" data-correct id="test_question9_22_1_opt_c">EAP</li><li data-component="feedback" id="test_question9_22_1_opt_c">Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.</li>
+            
+            <li data-component="answer"  id="test_question9_22_1_opt_d">William Shakespeare</li><li data-component="feedback" id="test_question9_22_1_opt_d">That does not make any sense.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="turtle-coordinate-list-extra-for-experts-example">
+<h2>34.7. Turtle Coordinate List (Extra for Experts Example)<a class="headerlink" href="#turtle-coordinate-list-extra-for-experts-example" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following:</p>
 
 <div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 import turtle
+import random
 
 window = turtle.Screen()
 jane = turtle.Turtle()
 
-turtle_coordinate_list = [[0, 50], [50, 50], [50, 100]]
+history = [[0, 0]]
 
-for coordinate in turtle_coordinate_list:
-    x = coordinate[0]
-    y = coordinate[1]
+while True:
+    number = random.randrange(1, 101)
+    if number < 50:
+        jane.left(90)
+    else:
+        jane.right(90)
 
-    jane.goto(x, y)
+    jane.forward(10)
+
+    # check if been here before
+    #current_spot = [jane.xcor(), jane.ycor()]
+    x = int(round(jane.xcor()))
+    y = int(round(jane.ycor()))
+
+    current_spot = [x, y]
+
+    if current_spot in history:
+        # break forces the current loop to stop (ends the while True loop)
+        break
+    else:
+        history.append(current_spot)
+
+print("Done. Places jane walked are:")
+print(history)
 </textarea>
 </div>
-<p>Create a program that:</p>
-<ul>
-<li><p class="first">repeat the following in a <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> loop (forever)</p>
-<blockquote>
-<div><ul class="simple">
-<li>makes a turtle move 10 steps forward</li>
-<li>randomly turn left or right by 90 degrees</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
+</div>
+<div class="section" id="practice-problems">
+<h2>34.8. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compliment-generator">
+<h3>34.8.1. Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
+<p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal"><span class="pre">great</span></code> <code class="docutils literal"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal"><span class="pre">great</span></code> into a list called <code class="docutils literal"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal"><span class="pre">friend``into</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">called</span> <span class="pre">``second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
 
-<div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="list_methods_practice_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-import turtle
-
-window = turtle.Screen()
-jane = turtle.Turtle()
+<textarea data-component="activecode" id=list_methods_practice_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# your code goes here!
 </textarea>
 </div>
-<p>Now, adapt the code above so that the program:</p>
-<ul class="simple">
-<li>adds the current coordinates to a list of places the turtle has been before. Remember that you can get the current x position with something like <code class="docutils literal"><span class="pre">jane.xcor()</span></code>.</li>
-<li>change the program so that it stops when the turtle touches a location that it has been before.</li>
-</ul>
+</div>
+<div class="section" id="averaging-random-integer-list">
+<h3>34.8.2. Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
+<p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
+
+<div data-childcomponent="list_methods_practice_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
 </div>
 </div>
 

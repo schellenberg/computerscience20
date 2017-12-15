@@ -436,12 +436,46 @@ Practice Problems
 Warmup
 ~~~~~~~
 
-Create a list called ``my_list`` with the following six items: 76, 92.3, "hello", True, 4, 76. Print out the list to make sure it is doing what you intend.
+Create a list called ``my_list`` with the following six items: ``76, 92.3, "hello", True, 4, 76``. Print out the list to make sure it is doing what you intend.
 
 .. activecode:: list_overview_practice_problem_1
     
     # your code goes here!
 
+
+
+Make it Fun
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+
+.. activecode:: list_overview_practice_problem_6
+    :nocodelens:
+
+    Write a function to replace the first element of a list with the word ``"fun"``, and then return the altered list. You can assume that the list will always have at least one element.
+
+    **Examples:**
+
+    ``make_fun(["computer", "science"]) → ["fun", "science"]``
+
+    ``make_fun(["sask", "is", "nice"]) → ["fun", "is", "nice"]``
+
+    ``make_fun(["we", "live", "in", "saskatchewan"]) → ["fun", "live", "in", "saskatchewan"]``
+    ~~~~   
+    def make_fun(a_list):
+        # your code here
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
+          self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
+          self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
+
+    myTests().main()
 
 
 Sum of Squares
@@ -580,40 +614,6 @@ Look For "sask"
           self.assertEqual(has_sask(["computer", "science"]),False,'has_sask(["computer", "science"])')
           self.assertEqual(has_sask(["sask", "is", "nice"]),True,'has_sask(["sask", "is", "nice"])')
           self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),False,'has_sask(["we", "live", "in", "saskatchewan"])')
-
-    myTests().main()
-
-
-Make it Fun
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-.. activecode:: list_overview_practice_problem_6
-    :nocodelens:
-
-    Write a function to replace the first element of a list with the word ``"fun"``, and then return the altered list. You can assume that the list will always have at least one element.
-
-    **Examples:**
-
-    ``make_fun(["computer", "science"]) → ["fun", "science"]``
-
-    ``make_fun(["sask", "is", "nice"]) → ["fun", "is", "nice"]``
-
-    ``make_fun(["we", "live", "in", "saskatchewan"]) → ["fun", "live", "in", "saskatchewan"]``
-    ~~~~   
-    def make_fun(a_list):
-        # your code here
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-      def testOne(self):
-          self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
-          self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
-          self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
 
     myTests().main()
 

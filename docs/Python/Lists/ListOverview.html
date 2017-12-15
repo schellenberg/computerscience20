@@ -220,11 +220,11 @@
 <li><a class="reference internal" href="#lists-and-for-loops">33.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
 <li><a class="reference internal" href="#practice-problems">33.11. Practice Problems</a><ul>
 <li><a class="reference internal" href="#warmup">33.11.1. Warmup</a></li>
-<li><a class="reference internal" href="#sum-of-squares">33.11.2. Sum of Squares</a></li>
-<li><a class="reference internal" href="#count-odd-numbers">33.11.3. Count Odd Numbers</a></li>
-<li><a class="reference internal" href="#count-words-with-length-5">33.11.4. Count Words with Length 5</a></li>
-<li><a class="reference internal" href="#look-for-sask">33.11.5. Look For “sask”</a></li>
-<li><a class="reference internal" href="#make-it-fun">33.11.6. Make it Fun</a></li>
+<li><a class="reference internal" href="#make-it-fun">33.11.2. Make it Fun</a></li>
+<li><a class="reference internal" href="#sum-of-squares">33.11.3. Sum of Squares</a></li>
+<li><a class="reference internal" href="#count-odd-numbers">33.11.4. Count Odd Numbers</a></li>
+<li><a class="reference internal" href="#count-words-with-length-5">33.11.5. Count Words with Length 5</a></li>
+<li><a class="reference internal" href="#look-for-sask">33.11.6. Look For “sask”</a></li>
 </ul>
 </li>
 </ul>
@@ -706,7 +706,7 @@ list, so that we can assign a new value to it.</p>
 <h2>33.11. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="warmup">
 <h3>33.11.1. Warmup<a class="headerlink" href="#warmup" title="Permalink to this headline">¶</a></h3>
-<p>Create a list called <code class="docutils literal"><span class="pre">my_list</span></code> with the following six items: 76, 92.3, “hello”, True, 4, 76. Print out the list to make sure it is doing what you intend.</p>
+<p>Create a list called <code class="docutils literal"><span class="pre">my_list</span></code> with the following six items: <code class="docutils literal"><span class="pre">76,</span> <span class="pre">92.3,</span> <span class="pre">&quot;hello&quot;,</span> <span class="pre">True,</span> <span class="pre">4,</span> <span class="pre">76</span></code>. Print out the list to make sure it is doing what you intend.</p>
 
 <div data-childcomponent="list_overview_practice_problem_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -715,8 +715,40 @@ list, so that we can assign a new value to it.</p>
 </textarea>
 </div>
 </div>
+<div class="section" id="make-it-fun">
+<h3>33.11.2. Make it Fun<a class="headerlink" href="#make-it-fun" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+
+<div data-childcomponent="list_overview_practice_problem_6" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function to replace the first element of a list with the word <code class="docutils literal"><span class="pre">&quot;fun&quot;</span></code>, and then return the altered list. You can assume that the list will always have at least one element.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;computer&quot;,</span> <span class="pre">&quot;science&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;science&quot;]</span></code></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;sask&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;]</span></code></p>
+<p><code class="docutils literal"><span class="pre">make_fun([&quot;we&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;]</span></code></p>
+
+<textarea data-component="activecode" id=list_overview_practice_problem_6 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def make_fun(a_list):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def testOne(self):
+      self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
+      self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
+      self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
+
+myTests().main()
+</textarea>
+</div>
+</div>
 <div class="section" id="sum-of-squares">
-<h3>33.11.2. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.3. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -750,7 +782,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="count-odd-numbers">
-<h3>33.11.3. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.4. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -783,7 +815,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="count-words-with-length-5">
-<h3>33.11.4. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.5. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -815,7 +847,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="look-for-sask">
-<h3>33.11.5. Look For “sask”<a class="headerlink" href="#look-for-sask" title="Permalink to this headline">¶</a></h3>
+<h3>33.11.6. Look For “sask”<a class="headerlink" href="#look-for-sask" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -841,38 +873,6 @@ class myTests(TestCaseGui):
       self.assertEqual(has_sask(["computer", "science"]),False,'has_sask(["computer", "science"])')
       self.assertEqual(has_sask(["sask", "is", "nice"]),True,'has_sask(["sask", "is", "nice"])')
       self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),False,'has_sask(["we", "live", "in", "saskatchewan"])')
-
-myTests().main()
-</textarea>
-</div>
-</div>
-<div class="section" id="make-it-fun">
-<h3>33.11.6. Make it Fun<a class="headerlink" href="#make-it-fun" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-
-<div data-childcomponent="list_overview_practice_problem_6" class="runestone explainer ac_section alert alert-warning">
-<p>Write a function to replace the first element of a list with the word <code class="docutils literal"><span class="pre">&quot;fun&quot;</span></code>, and then return the altered list. You can assume that the list will always have at least one element.</p>
-<p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">make_fun([&quot;computer&quot;,</span> <span class="pre">&quot;science&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;science&quot;]</span></code></p>
-<p><code class="docutils literal"><span class="pre">make_fun([&quot;sask&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;nice&quot;]</span></code></p>
-<p><code class="docutils literal"><span class="pre">make_fun([&quot;we&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;])</span> <span class="pre">→</span> <span class="pre">[&quot;fun&quot;,</span> <span class="pre">&quot;live&quot;,</span> <span class="pre">&quot;in&quot;,</span> <span class="pre">&quot;saskatchewan&quot;]</span></code></p>
-
-<textarea data-component="activecode" id=list_overview_practice_problem_6 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def make_fun(a_list):
-    # your code here
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-  def testOne(self):
-      self.assertEqual(make_fun(["computer", "science"]),["fun", "science"],'make_fun(["computer", "science"])')
-      self.assertEqual(make_fun(["sask", "is", "nice"]),["fun", "is", "nice"],'make_fun(["sask", "is", "nice"])')
-      self.assertEqual(make_fun(["we", "live", "in", "saskatchewan"]),["fun", "live", "in", "saskatchewan"],'make_fun(["we", "live", "in", "saskatchewan"])')
 
 myTests().main()
 </textarea>

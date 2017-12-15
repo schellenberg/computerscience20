@@ -189,26 +189,6 @@ Check Your Understanding
         print(alist)
 
 
-
-.. mchoice:: test_question9_13_2
-    :answer_a: [False, 4, 2, True, 8, 6, 5]
-    :answer_b: [4, False, True, 2, 8, 6, 5]
-    :answer_c: [False, 2, True, 6, 5]
-    :correct: a
-    :feedback_a: Yes, first True was added at index 2, then False was added at index 0.
-    :feedback_b: insert will place items at the index position specified and move everything down to the right.
-    :feedback_c: insert does not remove anything or replace anything.
-   
-    What is printed by the following statements?
-   
-    .. code-block:: python
-
-        alist = [4, 2, 8, 6, 5]
-        alist.insert(2, True)
-        alist.insert(0, False)
-        print(alist)
-
-
 .. mchoice:: test_question9_13_3
     :answer_a: [4, 8, 6]
     :answer_b: [2, 6, 5]
@@ -385,51 +365,217 @@ Check Your Understanding
 
 
     .. image:: images/turtle-list-options.png
+
+
+Shopping List
+-----------------
+
+Say you want to make a list of things to buy when you go to the store. You could do something like this:
+
+.. activecode:: shopping_list_1
+
+    shopping_list = []
+    item = input("Please enter an item to add to your shopping list:")
+    shopping_list.append(item)
+    print(shopping_list)
+
+
+The obvious problem here is that we can only add one item to our list. Let's put that logic into an infinite loop, so that we can continue to add items until we enter the word ``quit``:
+
+.. activecode:: shopping_list_2
+
+    shopping_list = []
+
+    while True:
+        item = input("Please enter an item to add to your shopping list:")
+        
+        if item == "quit":
+            break
+        
+        else:
+            shopping_list.append(item)
+
     
+    print()
+    print("Don't Forget To Buy:")
+    print()
+
+    for thing_to_get in shopping_list:
+        print(thing_to_get)
+
+
+
+Shakespearean Insult Generator
+-------------------------------
+
+The following is a simple insult generator, using words found in the works of the great bard.
+
+.. activecode:: shakespeare_insult_example
+
+    # Shakespeare Insult Kit
+    # Idea from http://www.pangloss.com/seidel/shake_rule.html
+    # Original concept attributed to Jerry Maguire, an English teacher at Center Grove High School in Greenwood, Indiana
+
+    import random
+
+    first_word_list = ["artless", "bawdy", "beslubbering", "bootless", "churlish", "cockered", "clouted", "craven", "currish", "dankish", "dissembling", "droning", "errant", "fawning", "fobbing", "froward", "frothy", "gleeking", "goatish", "gorbellied", "impertinent", "infectious", "jarring", "loggerheaded", "lumpish", "mammering", "mangled", "mewling", "paunchy", "pribbling", "puking", "puny", "qualling", "rank", "reeky", "roguish", "ruttish", "saucy", "spleeny", "spongy", "surly", "tottering", "unmuzzled", "vain", "venomed", "villainous", "warped", "wayward", "weedy", "yeasty"]
+
+    second_word_list = ["base-court", "bat-fowling", "beef-witted", "beetle-headed", "boil-brained", "clapper-clawed", "clay-brained", "common-kissing", "crook-pated", "dismal-dreaming", "dizzy-eyed", "doghearted, ""dread-bolted", "earth-vexing", "elf-skinned", "fat-kidneyed", "fen-sucked", "flap-mouthed", "fly-bitten", "folly-fallen", "fool-born", "full-gorged", "guts-griping", "half-faced", "hasty-witted", "hedge-born", "hell-hated", "idle-headed", "ill-breeding", "ill-nurtured", "knotty-pated", "milk-livered", "motley-minded", "onion-eyed", "plume-plucked", "pottle-deep", "pox-marked", "reeling-ripe", "rough-hewn", "rude-growing", "rump-fed", "shard-borne", "sheep-biting", "spur-galled", "swag-bellied", "tardy-gaited", "tickle-brained", "toad-spotted", "unchin-snouted", "weather-bitten"]
+
+    third_word_list = ["apple-john", "baggage", "barnacle", "bladder", "boar-pig", "bugbear", "bum-bailey", "canker-blossom", "clack-dish", "clotpole", "coxcomb", "codpiece", "death-token", "dewberry", "flap-dragon", "flax-wench", "flirt-gill", "foot-licker", "fustilarian", "giglet", "gudgeon", "haggard", "harpy", "hedge-pig", "horn-beast", "hugger-mugger", "joithead", "lewdster", "lout", "maggot-pie", "malt-worm", "mammet", "measle", "minnow", "miscreant", "moldwarp", "mumble-news", "nut-hook", "pigeon-egg", "pignut", "puttock", "pumpion", "ratsbane", "scut", "skainsmate", "strumpet", "varlot", "vassal", "whey-face", "wagtail"]
+
+
+    first_word = first_word_list[ random.randrange(0, len(first_word_list)) ]
+    second_word = second_word_list[ random.randrange(0, len(second_word_list)) ]
+    third_word = third_word_list[ random.randrange(0, len(third_word_list)) ]
+
+    the_insult = "Thou " + first_word + " " + second_word + " " + third_word + "!"
+
+    print(the_insult)
+
+
+
+Strings and Lists
+-----------------
+
+Two of the most useful methods on strings involve lists of
+strings. The ``split`` method
+breaks a string into a list of words.  By
+default, any number of whitespace characters is considered a word boundary.
+
+.. activecode:: ch09_split1
     
-Turtle Coordinate List
------------------------
+    song = "The rain in Spain..."
+    wds = song.split()
+    print(wds)
+
+An optional argument called a **delimiter** can be used to specify which
+characters to use as word boundaries. The following example uses the string
+``ai`` as the delimiter:
+
+.. activecode:: ch09_split2
+    
+    song = "The rain in Spain..."
+    wds = song.split('ai')
+    print(wds)
+
+Notice that the delimiter doesn't appear in the result.
+
+The inverse of the ``split`` method is ``join``.  You choose a
+desired **separator** string, (often called the *glue*) 
+and join the list with the glue between each of the elements.
+
+.. activecode:: ch09_join
+
+    wds = ["red", "blue", "green"]
+    glue = ';'
+    s = glue.join(wds)
+    print(s)
+    print(wds)
+
+    print("***".join(wds))
+    print("".join(wds))
+
+
+The list that you glue together (``wds`` in this example) is not modified.  Also, 
+you can use empty glue or multi-character strings as glue.
+
+
+
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mchoice:: test_question9_22_1
+   :answer_a: Poe
+   :answer_b: EdgarAllanPoe
+   :answer_c: EAP
+   :answer_d: William Shakespeare
+   :correct: c
+   :feedback_a: Three characters but not the right ones.  namelist is the list of names.
+   :feedback_b: Too many characters in this case.  There should be a single letter from each name.
+   :feedback_c: Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.
+   :feedback_d: That does not make any sense.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     myname = "Edgar Allan Poe"
+     namelist = myname.split()
+     init = ""
+     for aname in namelist:
+         init = init + aname[0]
+     print(init)
+
+
+
+    
+Turtle Coordinate List (Extra for Experts Example)
+----------------------------------------------------
 
 Consider the following:
 
 .. activecode:: turtle_coordinates_1
 
     import turtle
+    import random
 
     window = turtle.Screen()
     jane = turtle.Turtle()
 
-    turtle_coordinate_list = [[0, 50], [50, 50], [50, 100]]
-    
-    for coordinate in turtle_coordinate_list:
-        x = coordinate[0]
-        y = coordinate[1]
+    history = [[0, 0]]
 
-        jane.goto(x, y)
+    while True:
+        number = random.randrange(1, 101)
+        if number < 50:
+            jane.left(90)
+        else:
+            jane.right(90)
+
+        jane.forward(10)
+
+        # check if been here before
+        #current_spot = [jane.xcor(), jane.ycor()]
+        x = int(round(jane.xcor()))
+        y = int(round(jane.ycor()))
+        
+        current_spot = [x, y]
+        
+        if current_spot in history:
+            # break forces the current loop to stop (ends the while True loop)
+            break
+        else:
+            history.append(current_spot)
+            
+    print("Done. Places jane walked are:")
+    print(history)
 
 
 
 
-Create a program that:
-
-- repeat the following in a ``while True`` loop (forever)
-
-    - makes a turtle move 10 steps forward
-    - randomly turn left or right by 90 degrees 
 
 
-.. activecode:: turtle_coordinates_1
+Practice Problems
+-------------------
 
-    import turtle
+Compliment Generator
+~~~~~~~~~~~~~~~~~~~~~
 
-    window = turtle.Screen()
-    jane = turtle.Turtle()
+Those Shakespearean insults sting a bit. Let's cheer everyone up by creating a random compliment generator. Your compliments should be in the style of "You are a ``great`` ``friend``!". Store any number of words similar to ``great`` into a list called ``first_word_list``, and any number of words similar to ``friend``into a list called ``second_word_list``. Then pick one word from each of the lists at random, and print out a random compliment!
 
 
+.. activecode:: list_methods_practice_1
 
-Now, adapt the code above so that the program:
+    # your code goes here!
 
-- adds the current coordinates to a list of places the turtle has been before. Remember that you can get the current x position with something like ``jane.xcor()``.
-- change the program so that it stops when the turtle touches a location that it has been before.
+
+Averaging Random Integer List
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.
+
+.. activecode:: list_methods_practice_2
+
+    # your code goes here!
 
 
