@@ -75,14 +75,13 @@ Reeborg
    ConstrainedLanguage/MoreChallenges.rst
    ConstrainedLanguage/PracticeQuiz.rst
 
-Python
-::::::
+Python - Getting Started
+::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :numbered:
    :maxdepth: 1
 
-   .. Getting Started
    Python/Overview/QuickOverview.rst
    Python/Overview/VariablesAndDataTypes.rst
    Python/Overview/Conditionals.rst
@@ -94,39 +93,81 @@ Python
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst
    Python/Overview/Microbit.rst
+
+
+Python - Turtle Drawings
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
    
-   .. Turtle Drawings (Looping and Non-Fruitful Functions)
    Python/MoreTurtles/TurtleAssignment.rst
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst
    Python/MoreTurtles/AssignmentWorkPeriod.rst
 
-   .. Functions
+
+Python - Functions
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
    Python/Functions/MoreFunctionDetails.rst
    Python/Functions/WritingFruitfulFunctionsPractice.rst
    Python/Functions/TheAccumulatorPattern.rst
    Python/Functions/BooleanFunctionsWithTurtles.rst
 
-   .. Microbit
+
+Python - Micro:bit as an I/O Device
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
    Python/Functions/UserControlledTurtleRace.rst
    Python/Functions/MicrobitReactionGame.rst
    Python/Functions/MicrobitFunctions.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
    
-   .. Image Processing
+
+Python - Image Processing
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
    Python/MoreAboutIteration/NestedLoops.rst
    Python/MoreAboutIteration/ImageProcessingPractice.rst
    Python/MoreAboutIteration/ImageProcessingWithSelection.rst
 
-   .. Strings
+
+Python - Strings
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
    Python/Strings/StringIntro.rst
    Python/Strings/MoreAboutStrings.rst
    Python/Strings/StringManipulationPractice.rst
    Python/Strings/LSystems.rst
    
-   .. Lists
+
+Python - Lists
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
    Python/Lists/ListOverview.rst
    Python/Lists/ListMethods.rst
 
