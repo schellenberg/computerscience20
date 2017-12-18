@@ -82,6 +82,7 @@ Python
    :numbered:
    :maxdepth: 1
 
+   .. Getting Started
    Python/Overview/QuickOverview.rst
    Python/Overview/VariablesAndDataTypes.rst
    Python/Overview/Conditionals.rst
@@ -94,34 +95,38 @@ Python
    Python/Overview/MultipleTurtlesAndForLoops.rst
    Python/Overview/Microbit.rst
    
-
-
+   .. Turtle Drawings (Looping and Non-Fruitful Functions)
    Python/MoreTurtles/TurtleAssignment.rst
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst
    Python/MoreTurtles/AssignmentWorkPeriod.rst
 
+   .. Functions
    Python/Functions/MoreFunctionDetails.rst
    Python/Functions/WritingFruitfulFunctionsPractice.rst
    Python/Functions/TheAccumulatorPattern.rst
+   Python/Functions/BooleanFunctionsWithTurtles.rst
 
+   .. Microbit
+   Python/Functions/UserControlledTurtleRace.rst
    Python/Functions/MicrobitReactionGame.rst
    Python/Functions/MicrobitFunctions.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
-   Python/Functions/UserControlledTurtleRace.rst
-   Python/Functions/BooleanFunctionsWithTurtles.rst
-
+   
+   .. Image Processing
    Python/MoreAboutIteration/NestedLoops.rst
    Python/MoreAboutIteration/ImageProcessingPractice.rst
    Python/MoreAboutIteration/ImageProcessingWithSelection.rst
 
+   .. Strings
    Python/Strings/StringIntro.rst
    Python/Strings/MoreAboutStrings.rst
    Python/Strings/StringManipulationPractice.rst
    Python/Strings/LSystems.rst
    
+   .. Lists
    Python/Lists/ListOverview.rst
    Python/Lists/ListMethods.rst
 

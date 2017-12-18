@@ -54,7 +54,7 @@ Displaying numbers
 
 
 Displaying numbers using a 2-digit font
----------------------------------
+------------------------------------------
 
 .. sourcecode:: python
     
