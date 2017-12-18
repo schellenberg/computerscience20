@@ -92,11 +92,13 @@ Python - Getting Started
    Python/Overview/WhileLoopsIntro.rst
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst
+   Python/Overview/LogicalOperators.rst
    Python/Overview/Microbit.rst
+   Python/PracticeQuizzes/Booleans.rst
 
 
-Python - Turtle Drawings
-::::::::::::::::::::::::::::::::::::
+Python - Turtle Drawings (Loops and Functions)
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :numbered:
@@ -107,9 +109,10 @@ Python - Turtle Drawings
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst
    Python/MoreTurtles/AssignmentWorkPeriod.rst
+   Python/PracticeQuizzes/Loops.rst
 
 
-Python - Functions
+Python - Functions in Detail
 ::::::::::::::::::::::::::::::::::::
 
 .. toctree::
@@ -122,8 +125,8 @@ Python - Functions
    Python/Functions/BooleanFunctionsWithTurtles.rst
 
 
-Python - Micro:bit as an I/O Device
-::::::::::::::::::::::::::::::::::::
+Python - Micro:bit and More Functions
+::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :numbered:
@@ -171,16 +174,6 @@ Python - Lists
    Python/Lists/ListOverview.rst
    Python/Lists/ListMethods.rst
 
-
-
-Python Practice Quizzes
-:::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   Python/PracticeQuizzes/Loops.rst
-   Python/PracticeQuizzes/Booleans.rst
 
 Computing and Society
 :::::::::::::::::::::

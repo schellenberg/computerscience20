@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>26. Image Processing and Nested Loops &#8212; Computer Science 20 Saskatchewan</title>
+    <title>1. Image Processing and Nested Loops &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="27. Image Processing Practice" href="ImageProcessingPractice.html" />
-    <link rel="prev" title="25. Boolean Functions and Randomly Walking Turtles" href="../Functions/BooleanFunctionsWithTurtles.html" />
+    <link rel="next" title="2. Image Processing Practice" href="ImageProcessingPractice.html" />
+    <link rel="prev" title="5. Animating a Micro:bit LED Image with a for Loop" href="../Functions/AnimatingImagesForLoop.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,24 +192,24 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">26. Image Processing and Nested Loops</a><ul>
-<li><a class="reference internal" href="#image-processing-introduction">26.1. Image Processing Introduction</a></li>
-<li><a class="reference internal" href="#the-rgb-color-model">26.2. The RGB Color Model</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">26.2.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#">1. Image Processing and Nested Loops</a><ul>
+<li><a class="reference internal" href="#image-processing-introduction">1.1. Image Processing Introduction</a></li>
+<li><a class="reference internal" href="#the-rgb-color-model">1.2. The RGB Color Model</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">1.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#nested-iteration">26.3. Nested Iteration</a></li>
-<li><a class="reference internal" href="#creating-an-empty-image">26.4. Creating an Empty Image</a><ul>
-<li><a class="reference internal" href="#try-this">26.4.1. Try This</a></li>
+<li><a class="reference internal" href="#nested-iteration">1.3. Nested Iteration</a></li>
+<li><a class="reference internal" href="#creating-an-empty-image">1.4. Creating an Empty Image</a><ul>
+<li><a class="reference internal" href="#try-this">1.4.1. Try This</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#image-objects">26.5. Image Objects</a></li>
-<li><a class="reference internal" href="#image-processing-with-an-existing-image">26.6. Image Processing with an Existing Image</a><ul>
-<li><a class="reference internal" href="#increasing-a-color">26.6.1. Increasing a Color</a></li>
-<li><a class="reference internal" href="#negative-images">26.6.2. Negative Images</a></li>
-<li><a class="reference internal" href="#id1">26.6.3. Try This</a></li>
-<li><a class="reference internal" href="#id2">26.6.4. Check Your Understanding</a></li>
-<li><a class="reference internal" href="#acknowledgments">26.6.5. Acknowledgments</a></li>
+<li><a class="reference internal" href="#image-objects">1.5. Image Objects</a></li>
+<li><a class="reference internal" href="#image-processing-with-an-existing-image">1.6. Image Processing with an Existing Image</a><ul>
+<li><a class="reference internal" href="#increasing-a-color">1.6.1. Increasing a Color</a></li>
+<li><a class="reference internal" href="#negative-images">1.6.2. Negative Images</a></li>
+<li><a class="reference internal" href="#id1">1.6.3. Try This</a></li>
+<li><a class="reference internal" href="#id2">1.6.4. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#acknowledgments">1.6.5. Acknowledgments</a></li>
 </ul>
 </li>
 </ul>
@@ -221,13 +221,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 25. Boolean Functions and Randomly Walking Turtles" data-toggle="tooltip">
-    <a href="../Functions/BooleanFunctionsWithTurtles.html" >
+  <li id="relations-prev" title="Previous Chapter - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop" data-toggle="tooltip">
+    <a href="../Functions/AnimatingImagesForLoop.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 27. Image Processing Practice' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 2. Image Processing Practice' data-toggle="tooltip" >
     <a href="ImageProcessingPractice.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -259,7 +259,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="image-processing-and-nested-loops">
-<h1>26. Image Processing and Nested Loops<a class="headerlink" href="#image-processing-and-nested-loops" title="Permalink to this headline">¶</a></h1>
+<h1>1. Image Processing and Nested Loops<a class="headerlink" href="#image-processing-and-nested-loops" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
@@ -275,7 +275,7 @@
 
     </div>
     <div class="section" id="image-processing-introduction">
-<h2>26.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
@@ -293,7 +293,7 @@ that computer scientists like to start counting with 0!  This means that if ther
 <img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
 </div>
 <div class="section" id="the-rgb-color-model">
-<h2>26.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
 The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
@@ -425,7 +425,7 @@ print(p.getGreen(), p.getBlue())
 </textarea>
 </div>
 <div class="section" id="check-your-understanding">
-<h3>26.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
@@ -444,7 +444,7 @@ print(p.getGreen(), p.getBlue())
             </div>
 </div>
 <div class="section" id="nested-iteration">
-<h2>26.3. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
@@ -534,7 +534,7 @@ The inner <code class="docutils literal"><span class="pre">for</span></code> loo
 </div>
 </div>
 <div class="section" id="creating-an-empty-image">
-<h2>26.4. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only “White” pixels when it is created. We can create and draw an empty image like this:</p>
 
 <div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
@@ -573,12 +573,12 @@ img.draw(win)
 </textarea>
 </div>
 <div class="section" id="try-this">
-<h3>26.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <p>Change the code above to draw an image of a different color. Now, adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?</p>
 </div>
 </div>
 <div class="section" id="image-objects">
-<h2>26.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">getWidth</span></code> and <code class="docutils literal"><span class="pre">getHeight</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">getPixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal"><span class="pre">setPixel</span></code>.</p>
@@ -647,9 +647,9 @@ print(p.getRed(), p.getGreen(), p.getBlue())
 pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">getPixel</span></code> arguments and rerunning the program.</p>
 </div>
 <div class="section" id="image-processing-with-an-existing-image">
-<h2>26.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="increasing-a-color">
-<h3>26.6.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
@@ -716,7 +716,7 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
 </div>
 <div class="section" id="negative-images">
-<h3>26.6.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
@@ -750,7 +750,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id1">
-<h3>26.6.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Change the name of the file in the <code class="docutils literal"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal"><span class="pre">pineapples.jpg</span></code>):</li>
 </ul>
@@ -768,7 +768,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id2">
-<h3>26.6.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
@@ -853,7 +853,7 @@ img.draw(win)
             </div>
             </div>
 <div class="section" id="acknowledgments">
-<h3>26.6.5. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.5. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
 </div>
 </div>
@@ -862,19 +862,19 @@ img.draw(win)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 25. Boolean Functions and Randomly Walking Turtles' data-toggle="tooltip">
-    <a href="../Functions/BooleanFunctionsWithTurtles.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip">
+    <a href="../Functions/AnimatingImagesForLoop.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../Functions/BooleanFunctionsWithTurtles.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../Functions/AnimatingImagesForLoop.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 27. Image Processing Practice' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 2. Image Processing Practice' data-toggle="tooltip" >
     <a href="ImageProcessingPractice.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingPractice.html" >Next Section - 27. Image Processing Practice</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingPractice.html" >Next Section - 2. Image Processing Practice</a>
 
 <script type="text/javascript">
 

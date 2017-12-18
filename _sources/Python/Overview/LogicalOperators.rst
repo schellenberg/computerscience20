@@ -86,13 +86,6 @@ Level     Category        Operators
 =======   ==============  ===============
 
 
-.. note::
-
-  This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
-
-  .. activecode:: scratch_06_01
-
-
 Check Your Understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -129,8 +122,10 @@ Practice Problems
 
 Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have** to return the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
 
-.. note:: The only thing you need to do for the following is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+.. caution:: These practice problems need to be replaced/rewritten with versions that do not require knowledge of fruitful functions. (This is due to reordering where this page appears)
 
+
+.. note:: The only thing you need to do for the following is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
 Day Name
 ~~~~~~~~~~~~~~~~~~~~~

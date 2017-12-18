@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>30. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
+    <title>2. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="31. String Manipulation Practice" href="StringManipulationPractice.html" />
-    <link rel="prev" title="29. String Index, Length, Slicing and Traversal" href="StringIntro.html" />
+    <link rel="next" title="3. String Manipulation Practice" href="StringManipulationPractice.html" />
+    <link rel="prev" title="1. String Index, Length, Slicing and Traversal" href="StringIntro.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,22 +192,22 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">30. String Traversal (by index), and the Accumulator Pattern with Strings</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">30.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">30.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">30.2.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#">2. String Traversal (by index), and the Accumulator Pattern with Strings</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">2.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">2.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">2.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-in-and-not-in-operators">30.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
-<li><a class="reference internal" href="#the-accumulator-pattern-with-strings">30.4. The Accumulator Pattern with Strings</a><ul>
-<li><a class="reference internal" href="#id3">30.4.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#the-in-and-not-in-operators">2.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
+<li><a class="reference internal" href="#the-accumulator-pattern-with-strings">2.4. The Accumulator Pattern with Strings</a><ul>
+<li><a class="reference internal" href="#id3">2.4.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#practice-problems">30.5. Practice Problems</a><ul>
-<li><a class="reference internal" href="#even-letters-of-a-word">30.5.1. Even Letters of a Word</a></li>
-<li><a class="reference internal" href="#reverse-me">30.5.2. Reverse Me</a></li>
-<li><a class="reference internal" href="#letter-destroyer">30.5.3. Letter Destroyer</a></li>
-<li><a class="reference internal" href="#qwerty-finder">30.5.4. QWERTY Finder</a></li>
+<li><a class="reference internal" href="#practice-problems">2.5. Practice Problems</a><ul>
+<li><a class="reference internal" href="#even-letters-of-a-word">2.5.1. Even Letters of a Word</a></li>
+<li><a class="reference internal" href="#reverse-me">2.5.2. Reverse Me</a></li>
+<li><a class="reference internal" href="#letter-destroyer">2.5.3. Letter Destroyer</a></li>
+<li><a class="reference internal" href="#qwerty-finder">2.5.4. QWERTY Finder</a></li>
 </ul>
 </li>
 </ul>
@@ -219,13 +219,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 29. String Index, Length, Slicing and Traversal" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 1. String Index, Length, Slicing and Traversal" data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 31. String Manipulation Practice' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 3. String Manipulation Practice' data-toggle="tooltip" >
     <a href="StringManipulationPractice.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -257,7 +257,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="string-traversal-by-index-and-the-accumulator-pattern-with-strings">
-<h1>30. String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
+<h1>2. String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
@@ -273,7 +273,7 @@
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>30.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
@@ -314,7 +314,7 @@ for poorly_named_variable in fruit:
 </div>
 </div>
 <div class="section" id="traversal-and-the-for-loop-by-index">
-<h2>30.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to use the <code class="docutils literal"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
 These positions can be used together with the indexing operator to access the individual
 characters in the string.</p>
@@ -431,7 +431,7 @@ $(window).resize(function() {
 </div>
 <p>Trace the values of <code class="docutils literal"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
 <div class="section" id="check-your-understanding">
-<h3>30.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1">
@@ -457,7 +457,7 @@ $(window).resize(function() {
             </div>
 </div>
 <div class="section" id="the-in-and-not-in-operators">
-<h2>30.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
 
 <div data-childcomponent="string_in_not_in_1" class="runestone explainer ac_section alert alert-warning">
@@ -492,7 +492,7 @@ print('x' not in 'apple')
 </div>
 </div>
 <div class="section" id="the-accumulator-pattern-with-strings">
-<h2>30.4. The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
 <p>Combining the <code class="docutils literal"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal"><span class="pre">+</span></code> and the accumulator pattern, we can
 write a function that removes all the vowels from a string.  The idea is to start with a string and iterate over each character, checking to see if the character is a vowel.  As we process the characters, we will build up a new string consisting of only the nonvowel characters.  To do this, we use the accumulator pattern.</p>
 <p>Remember that the accumulator pattern allows us to keep a “running total”.  With strings, we are not accumulating a numeric total.  Instead we are accumulating characters onto a string.</p>
@@ -576,7 +576,7 @@ $(window).resize(function() {
 </script>
 </div>
 <div class="section" id="id3">
-<h3>30.4.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1">
@@ -670,11 +670,11 @@ print(new_word)
     </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>30.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
 <p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
 <div class="section" id="even-letters-of-a-word">
-<h3>30.5.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -723,7 +723,7 @@ myTests().main()
     </div>
     </div>
 <div class="section" id="reverse-me">
-<h3>30.5.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -759,7 +759,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="letter-destroyer">
-<h3>30.5.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -795,7 +795,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="qwerty-finder">
-<h3>30.5.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -836,19 +836,19 @@ myTests().main()
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 29. String Index, Length, Slicing and Traversal' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. String Index, Length, Slicing and Traversal' data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="StringIntro.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 31. String Manipulation Practice' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 3. String Manipulation Practice' data-toggle="tooltip" >
     <a href="StringManipulationPractice.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="StringManipulationPractice.html" >Next Section - 31. String Manipulation Practice</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="StringManipulationPractice.html" >Next Section - 3. String Manipulation Practice</a>
 
 <script type="text/javascript">
 

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>19. The Accumulator Pattern &#8212; Computer Science 20 Saskatchewan</title>
+    <title>3. The Accumulator Pattern &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="20. Reaction Game with Micro:bit" href="MicrobitReactionGame.html" />
-    <link rel="prev" title="18. Writing Fruitful Functions Practice" href="WritingFruitfulFunctionsPractice.html" />
+    <link rel="next" title="4. Boolean Functions and Randomly Walking Turtles" href="BooleanFunctionsWithTurtles.html" />
+    <link rel="prev" title="2. Writing Fruitful Functions Practice" href="WritingFruitfulFunctionsPractice.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,17 +192,17 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">19. The Accumulator Pattern</a><ul>
-<li><a class="reference internal" href="#squaring-a-number-with-the-accumulator-pattern">19.1. Squaring a Number with the Accumulator Pattern</a></li>
-<li><a class="reference internal" href="#the-general-accumulator-pattern">19.2. The General Accumulator Pattern</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">19.2.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#">3. The Accumulator Pattern</a><ul>
+<li><a class="reference internal" href="#squaring-a-number-with-the-accumulator-pattern">3.1. Squaring a Number with the Accumulator Pattern</a></li>
+<li><a class="reference internal" href="#the-general-accumulator-pattern">3.2. The General Accumulator Pattern</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">3.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#applying-the-accumulator-pattern">19.3. Applying the Accumulator Pattern</a></li>
-<li><a class="reference internal" href="#practice-problems">19.4. Practice Problems</a><ul>
-<li><a class="reference internal" href="#estimating-square-roots">19.4.1. Estimating Square Roots</a></li>
-<li><a class="reference internal" href="#approximating-pi">19.4.2. Approximating Pi</a></li>
-<li><a class="reference internal" href="#finding-a-natural-logarithm">19.4.3. Finding A Natural Logarithm</a></li>
+<li><a class="reference internal" href="#applying-the-accumulator-pattern">3.3. Applying the Accumulator Pattern</a></li>
+<li><a class="reference internal" href="#practice-problems">3.4. Practice Problems</a><ul>
+<li><a class="reference internal" href="#estimating-square-roots">3.4.1. Estimating Square Roots</a></li>
+<li><a class="reference internal" href="#approximating-pi">3.4.2. Approximating Pi</a></li>
+<li><a class="reference internal" href="#finding-a-natural-logarithm">3.4.3. Finding A Natural Logarithm</a></li>
 </ul>
 </li>
 </ul>
@@ -214,14 +214,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 18. Writing Fruitful Functions Practice" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 2. Writing Fruitful Functions Practice" data-toggle="tooltip">
     <a href="WritingFruitfulFunctionsPractice.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 20. Reaction Game with Micro:bit' data-toggle="tooltip" >
-    <a href="MicrobitReactionGame.html" >
+  <li id="relations-next" title='Next Chapter - 4. Boolean Functions and Randomly Walking Turtles' data-toggle="tooltip" >
+    <a href="BooleanFunctionsWithTurtles.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -252,7 +252,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="the-accumulator-pattern">
-<h1>19. The Accumulator Pattern<a class="headerlink" href="#the-accumulator-pattern" title="Permalink to this headline">¶</a></h1>
+<h1>3. The Accumulator Pattern<a class="headerlink" href="#the-accumulator-pattern" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Introduce the accumulator pattern with numbers.</p>
@@ -268,7 +268,7 @@
 
     </div>
     <div class="section" id="squaring-a-number-with-the-accumulator-pattern">
-<h2>19.1. Squaring a Number with the Accumulator Pattern<a class="headerlink" href="#squaring-a-number-with-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Squaring a Number with the Accumulator Pattern<a class="headerlink" href="#squaring-a-number-with-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
 <p>In a previous example, we wrote a function that computes the square of a number.  The algorithm we used
 in the function was simple: multiply the number by itself.
 In this section we will re-implement the square function and use a different algorithm, one that relies on addition instead
@@ -363,7 +363,7 @@ $(window).resize(function() {
 </div>
 </div>
 <div class="section" id="the-general-accumulator-pattern">
-<h2>19.2. The General Accumulator Pattern<a class="headerlink" href="#the-general-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. The General Accumulator Pattern<a class="headerlink" href="#the-general-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">initialize</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
 <span class="n">repeat</span><span class="p">:</span>
     <span class="n">modify</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
@@ -372,7 +372,7 @@ $(window).resize(function() {
 </pre></div>
 </div>
 <div class="section" id="check-your-understanding">
-<h3>19.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>3.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_4_1">
@@ -418,7 +418,7 @@ print(the_sum)
     </div>
 </div>
 <div class="section" id="applying-the-accumulator-pattern">
-<h2>19.3. Applying the Accumulator Pattern<a class="headerlink" href="#applying-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Applying the Accumulator Pattern<a class="headerlink" href="#applying-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
 <p>Use the accumulator pattern to write a fruitful function <code class="docutils literal"><span class="pre">sum_to(n)</span></code> that returns the sum of all integer numbers up to and including n. So <code class="docutils literal"><span class="pre">sum_to(10)</span></code> would be <code class="docutils literal"><span class="pre">1+2+3...+10</span></code> which would return the value 55.</p>
 
 <div data-childcomponent="sum_to_accumulator" class="runestone explainer ac_section alert alert-warning">
@@ -468,9 +468,9 @@ print(the_sum)
 <p>To be sure you understand why we bothered to learn another way to create the <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function, test out the function with ridiculously large numbers. Notice that with this version of the function, the solution can be calculated dramatically faster. This is another example of why black-box function design is helpful: if an optimized version of the function is found, it can be implemented without affecting any of the code that calls that function.</p>
 </div>
 <div class="section" id="practice-problems">
-<h2>19.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="estimating-square-roots">
-<h3>19.4.1. Estimating Square Roots<a class="headerlink" href="#estimating-square-roots" title="Permalink to this headline">¶</a></h3>
+<h3>3.4.1. Estimating Square Roots<a class="headerlink" href="#estimating-square-roots" title="Permalink to this headline">¶</a></h3>
 <p>Write a function called <code class="docutils literal"><span class="pre">my_sqrt</span></code> that will approximate the square root of a number, call it n, by using Newton’s algorithm. Newton’s approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: new_guess = (1/2) * (old_guess + (n/old_guess)).</p>
 <p>To be sure you understand how this works, it is a good idea to try out Newton’s algorithm by hand at least once! Try estimating the square root of 9 by hand. You will see that it only takes a couple iterations to get really close to the actual value of the square root.</p>
 <p>Be sure to test your square root function with a variety of numbers, and check with a calculator to see how well your function is performing!</p>
@@ -488,7 +488,7 @@ def my_sqrt(n, number_of_guesses):
     </div>
     </div>
 <div class="section" id="approximating-pi">
-<h3>19.4.2. Approximating Pi<a class="headerlink" href="#approximating-pi" title="Permalink to this headline">¶</a></h3>
+<h3>3.4.2. Approximating Pi<a class="headerlink" href="#approximating-pi" title="Permalink to this headline">¶</a></h3>
 <p>Write a function called <code class="docutils literal"><span class="pre">my_pi()</span></code> that will return an approximation of PI (3.14159…). Use the <a class="reference external" href="http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80">Leibniz approximation</a>, which shows that you can approximate 1/4 of PI with the following series:</p>
 <div class="math">
 \[1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\cdots =\frac{\pi}{4}\]</div>
@@ -508,7 +508,7 @@ def my_pi():
 </div>
 </div>
 <div class="section" id="finding-a-natural-logarithm">
-<h3>19.4.3. Finding A Natural Logarithm<a class="headerlink" href="#finding-a-natural-logarithm" title="Permalink to this headline">¶</a></h3>
+<h3>3.4.3. Finding A Natural Logarithm<a class="headerlink" href="#finding-a-natural-logarithm" title="Permalink to this headline">¶</a></h3>
 <p>Write a function called <code class="docutils literal"><span class="pre">ln2()</span></code> that will return an approximation of ln(2). You can calculate an approximation of the natural logarithm of 2 with the following series:</p>
 <div class="math">
 \[ln(2)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\]</div>
@@ -533,19 +533,19 @@ def ln2():
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 18. Writing Fruitful Functions Practice' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. Writing Fruitful Functions Practice' data-toggle="tooltip">
     <a href="WritingFruitfulFunctionsPractice.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="WritingFruitfulFunctionsPractice.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 20. Reaction Game with Micro:bit' data-toggle="tooltip" >
-    <a href="MicrobitReactionGame.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 4. Boolean Functions and Randomly Walking Turtles' data-toggle="tooltip" >
+    <a href="BooleanFunctionsWithTurtles.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="MicrobitReactionGame.html" >Next Section - 20. Reaction Game with Micro:bit</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="BooleanFunctionsWithTurtles.html" >Next Section - 4. Boolean Functions and Randomly Walking Turtles</a>
 
 <script type="text/javascript">
 

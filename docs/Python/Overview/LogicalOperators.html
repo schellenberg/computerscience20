@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>11. Logical Operators &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="12. The Time Module and Using a Micro:bit" href="Microbit.html" />
+    <link rel="prev" title="10. Multiple Turtles and for Loops" href="MultipleTurtlesAndForLoops.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">11. Logical Operators</a><ul>
+<li><a class="reference internal" href="#and-or-not">11.1. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code></a><ul>
+<li><a class="reference internal" href="#check-your-understanding">11.1.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#precedence-of-operators">11.2. Precedence of Operators</a><ul>
+<li><a class="reference internal" href="#id1">11.2.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practice-problems">11.3. Practice Problems</a><ul>
+<li><a class="reference internal" href="#day-name">11.3.1. Day Name</a></li>
+<li><a class="reference internal" href="#day-number">11.3.2. Day Number</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops" data-toggle="tooltip">
+    <a href="MultipleTurtlesAndForLoops.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 12. The Time Module and Using a Micro:bit' data-toggle="tooltip" >
+    <a href="Microbit.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="logical-operators">
+<h1>11. Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Go over Micro:bit program from last day. Introduce the logical operators <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code>. Work on more practice problems, in which students create functions that return values.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Objectives Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="and-or-not">
+<h2>11.1. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
+<p>There are three <strong>logical operators</strong>: <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, and <code class="docutils literal"><span class="pre">not</span></code>. The
+semantics (meaning) of these operators is similar to their meaning in English.
+For example, <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is true only if <code class="docutils literal"><span class="pre">x</span></code> is greater than 0 <em>and</em>
+at the same time, x is less than 10.  How would you describe this in words?  You would say that x is between 0 and 10, not including the endpoints.</p>
+<p><code class="docutils literal"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <em>either</em> of the conditions is true,
+that is, if the number is divisible by 2 <em>or</em> divisible by 3.  In this case, one, or the other, or both of the parts has to be true for the result to be true.</p>
+<p>Finally, the <code class="docutils literal"><span class="pre">not</span></code> operator negates a boolean expression, so <code class="docutils literal"><span class="pre">not</span>&#160; <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code>
+is true if <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> is false, that is, if <code class="docutils literal"><span class="pre">x</span></code> is less than or equal to
+<code class="docutils literal"><span class="pre">y</span></code>.</p>
+
+<div data-childcomponent="local_operators_example_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=local_operators_example_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+x = 5
+print(x > 0 and x < 10)
+
+n = 25
+print(n % 2 == 0 or n % 3 == 0)
+</textarea>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p>Common Mistake!</p>
+<p class="last">There is a very common mistake that occurs when programmers try to write boolean expressions.  For example, what if we have a variable <code class="docutils literal"><span class="pre">number</span></code> and we want to check to see if its value is 5,6, or 7.  In words we might say: “number equal to 5 or 6 or 7”.  However, if we translate this into Python, <code class="docutils literal"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">7</span></code>, it will not be correct.  The <code class="docutils literal"><span class="pre">or</span></code> operator must join the results of three equality checks.  The correct way to write this is <code class="docutils literal"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">7</span></code>.  This may seem like a lot of typing but it is absolutely necessary.  You cannot take a shortcut.</p>
+</div>
+<div class="section" id="check-your-understanding">
+<h3>11.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_2_1">
+            logical-operators1: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?
+            <li data-component="answer"  id="test_question6_2_1_opt_a">x &gt; 0 and &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_a">Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</li>
+            
+            <li data-component="answer"  id="test_question6_2_1_opt_b">x &gt; 0 or x &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_b">Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be True.</li>
+            
+            <li data-component="answer" data-correct id="test_question6_2_1_opt_c">x &gt; 0 and x &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_c">Yes, with an and keyword both expressions must be true so the number must be greater than 0 an less than 5 for this expression to be true. Although most other programming languages do not allow this mathematical syntax, in Python, you could also write 0 &lt; x &lt; 5.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="precedence-of-operators">
+<h2>11.2. Precedence of Operators<a class="headerlink" href="#precedence-of-operators" title="Permalink to this headline">¶</a></h2>
+<p>We have now added a number of additional operators to those we learned in the previous chapters.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
+<p>The following table summarizes the precedence discussed so far from highest to lowest.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="39%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Level</th>
+<th class="head">Category</th>
+<th class="head">Operators</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>7(high)</td>
+<td>exponent</td>
+<td>**</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>multiplication</td>
+<td>*,/,//,%</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>addition</td>
+<td>+,-</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>relational</td>
+<td>==,!=,&lt;=,&gt;=,&gt;,&lt;</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>logical</td>
+<td>not</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>logical</td>
+<td>and</td>
+</tr>
+<tr class="row-even"><td>1(low)</td>
+<td>logical</td>
+<td>or</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>11.2.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_3_1">
+            logical-operators2: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: 5*3 &gt; 10 and 4+6==11
+            <li data-component="answer" data-correct id="test_question6_3_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback" id="test_question6_3_1_opt_a">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
+            
+            <li data-component="answer"  id="test_question6_3_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback" id="test_question6_3_1_opt_b">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
+            
+            <li data-component="answer"  id="test_question6_3_1_opt_c">((((5*3) &gt; 10) and 4)+6) == 11</li><li data-component="feedback" id="test_question6_3_1_opt_c">This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.</li>
+            
+            <li data-component="answer"  id="test_question6_3_1_opt_d">((5*3) &gt; (10 and (4+6))) == 11</li><li data-component="feedback" id="test_question6_3_1_opt_d">This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.</li>
+            
+
+            </ul>
+            </div>
+            <p>Here is an animation for the above expression:</p>
+<div data-childcomponent="showeval" class="runestone explainer alert alert-warning">
+    <button class="btn btn-success" id="se_tq631_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_tq631_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">5 * 3 > 10 and 4 + 6 == 11<br />
+</div>
+    <div class="evalCont" id="se_tq631"></div>
+</div>
+<script>
+    $(document).ready(function() {
+      steps = ['{{5 * 3}}{{15}} > 10 and 4 + 6 == 11', '{{15 > 10}}{{True}} and 4 + 6 == 11', 'True and {{4 + 6}}{{10}} == 11', 'True and {{10 == 11}}{{False}}', '{{True and False}}{{False}}'];
+      se_tq631_object = new SHOWEVAL.ShowEval($('#se_tq631'), steps, true);
+      se_tq631_object.setNextButton('#se_tq631_nextStep');
+      se_tq631_object.setResetButton('#se_tq631_reset');
+    });
+</script>
+</div>
+</div>
+<div class="section" id="practice-problems">
+<h2>11.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">These practice problems need to be replaced/rewritten with versions that do not require knowledge of fruitful functions. (This is due to reordering where this page appears)</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+<div class="section" id="day-name">
+<h3>11.3.1. Day Name<a class="headerlink" href="#day-name" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="day-name" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function that takes in a number from 0 to 6 as a parameter, and returns the name associated with that number. If something other than a number from 0 to 6 is passed in, the function should return None.</p>
+<p><code class="docutils literal"><span class="pre">day_name(0)</span> <span class="pre">→</span> <span class="pre">&quot;Sunday&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">day_name(4)</span> <span class="pre">→</span> <span class="pre">&quot;Thursday&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">day_name(6)</span> <span class="pre">→</span> <span class="pre">&quot;Saturday&quot;</span></code></p>
+
+<textarea data-component="activecode" id=day-name data-lang="python"    data-timelimit=25000   data-audio=''     >
+def day_name(day_number):
+    return "Wednesday"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(day_name(0),"Sunday","day_name(0)")
+        self.assertEqual(day_name(1),"Monday","day_name(1)")
+        self.assertEqual(day_name(2),"Tuesday","day_name(2)")
+        self.assertEqual(day_name(3),"Wednesday","day_name(3)")
+        self.assertEqual(day_name(4),"Thursday","day_name(4)")
+        self.assertEqual(day_name(5),"Friday","day_name(5)")
+        self.assertEqual(day_name(6),"Saturday","day_name(6)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<div class="section" id="day-number">
+<h3>11.3.2. Day Number<a class="headerlink" href="#day-number" title="Permalink to this headline">¶</a></h3>
+
+<div data-childcomponent="day-number" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function that takes in the name of a day as a parameter, and returns the day number associated with that day. If something other than a number from 0 to 6 is passed in, the function should return None.</p>
+<p><code class="docutils literal"><span class="pre">day_name(0)</span> <span class="pre">→</span> <span class="pre">&quot;Sunday&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">day_name(4)</span> <span class="pre">→</span> <span class="pre">&quot;Thursday&quot;</span></code></p>
+<p><code class="docutils literal"><span class="pre">day_name(6)</span> <span class="pre">→</span> <span class="pre">&quot;Saturday&quot;</span></code></p>
+
+<textarea data-component="activecode" id=day-number data-lang="python"    data-timelimit=25000   data-audio=''     >
+def day_name(day_number):
+    return "Wednesday"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(day_name(0),"Sunday","day_name(0)")
+        self.assertEqual(day_name(1),"Monday","day_name(1)")
+        self.assertEqual(day_name(2),"Tuesday","day_name(2)")
+        self.assertEqual(day_name(3),"Wednesday","day_name(3)")
+        self.assertEqual(day_name(4),"Thursday","day_name(4)")
+        self.assertEqual(day_name(5),"Friday","day_name(5)")
+        self.assertEqual(day_name(6),"Saturday","day_name(6)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops' data-toggle="tooltip">
+    <a href="MultipleTurtlesAndForLoops.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="MultipleTurtlesAndForLoops.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 12. The Time Module and Using a Micro:bit' data-toggle="tooltip" >
+    <a href="Microbit.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Microbit.html" >Next Section - 12. The Time Module and Using a Micro:bit</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

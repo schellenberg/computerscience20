@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>11. The Time Module and Using a Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
+    <title>12. The Time Module and Using a Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="12. Looping with Turtles Assignment" href="../MoreTurtles/TurtleAssignment.html" />
-    <link rel="prev" title="10. Multiple Turtles and for Loops" href="MultipleTurtlesAndForLoops.html" />
+    <link rel="next" title="13. Booleans Practice Quiz" href="../PracticeQuizzes/Booleans.html" />
+    <link rel="prev" title="11. Logical Operators" href="LogicalOperators.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,16 +192,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">11. The Time Module and Using a Micro:bit</a><ul>
-<li><a class="reference internal" href="#time-module">11.1. Time Module</a></li>
-<li><a class="reference internal" href="#micro-bit-setup">11.2. Micro:bit Setup</a><ul>
-<li><a class="reference internal" href="#installing-a-driver-if-using-legacy-windows-os">11.2.1. Installing a Driver If Using Legacy Windows OS</a></li>
-<li><a class="reference internal" href="#micro-bit-modes">11.2.2. Micro:bit Modes</a></li>
-<li><a class="reference internal" href="#flashing-the-micro-bit">11.2.3. Flashing the Micro:bit</a></li>
-<li><a class="reference internal" href="#installing-the-micro-bit-module-in-thonny">11.2.4. Installing the Micro:bit Module in Thonny</a></li>
+<li><a class="reference internal" href="#">12. The Time Module and Using a Micro:bit</a><ul>
+<li><a class="reference internal" href="#time-module">12.1. Time Module</a></li>
+<li><a class="reference internal" href="#micro-bit-setup">12.2. Micro:bit Setup</a><ul>
+<li><a class="reference internal" href="#installing-a-driver-if-using-legacy-windows-os">12.2.1. Installing a Driver If Using Legacy Windows OS</a></li>
+<li><a class="reference internal" href="#micro-bit-modes">12.2.2. Micro:bit Modes</a></li>
+<li><a class="reference internal" href="#flashing-the-micro-bit">12.2.3. Flashing the Micro:bit</a></li>
+<li><a class="reference internal" href="#installing-the-micro-bit-module-in-thonny">12.2.4. Installing the Micro:bit Module in Thonny</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-micro-bit">11.3. Using the Micro:bit</a></li>
+<li><a class="reference internal" href="#using-the-micro-bit">12.3. Using the Micro:bit</a></li>
 </ul>
 </li>
 </ul>
@@ -211,14 +211,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops" data-toggle="tooltip">
-    <a href="MultipleTurtlesAndForLoops.html" >
+  <li id="relations-prev" title="Previous Chapter - 11. Logical Operators" data-toggle="tooltip">
+    <a href="LogicalOperators.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 12. Looping with Turtles Assignment' data-toggle="tooltip" >
-    <a href="../MoreTurtles/TurtleAssignment.html" >
+  <li id="relations-next" title='Next Chapter - 13. Booleans Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Booleans.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -249,7 +249,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="the-time-module-and-using-a-micro-bit">
-<h1>11. The Time Module and Using a Micro:bit<a class="headerlink" href="#the-time-module-and-using-a-micro-bit" title="Permalink to this headline">¶</a></h1>
+<h1>12. The Time Module and Using a Micro:bit<a class="headerlink" href="#the-time-module-and-using-a-micro-bit" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Learn about the time module. Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.</p>
@@ -268,7 +268,7 @@
 <p class="last">This is just a stub, to show what should go here. It will be written up properly later. The install process for bitio is also really awkward right now. It will be improved to use the “Manage Packages…” menu soon.</p>
 </div>
 <div class="section" id="time-module">
-<h2>11.1. Time Module<a class="headerlink" href="#time-module" title="Permalink to this headline">¶</a></h2>
+<h2>12.1. Time Module<a class="headerlink" href="#time-module" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes, we’d like to wait a bit before running the next command in a Python program. To do this, we can <code class="docutils literal"><span class="pre">import</span> <span class="pre">time</span></code>, then use the <code class="docutils literal"><span class="pre">.sleep()</span></code> function. An example is below:</p>
 
 <div data-childcomponent="time-sleep-1" class="runestone explainer ac_section alert alert-warning">
@@ -299,14 +299,14 @@ print("All done!")
 </div>
 </div>
 <div class="section" id="micro-bit-setup">
-<h2>11.2. Micro:bit Setup<a class="headerlink" href="#micro-bit-setup" title="Permalink to this headline">¶</a></h2>
+<h2>12.2. Micro:bit Setup<a class="headerlink" href="#micro-bit-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installing-a-driver-if-using-legacy-windows-os">
-<h3>11.2.1. Installing a Driver If Using Legacy Windows OS<a class="headerlink" href="#installing-a-driver-if-using-legacy-windows-os" title="Permalink to this headline">¶</a></h3>
+<h3>12.2.1. Installing a Driver If Using Legacy Windows OS<a class="headerlink" href="#installing-a-driver-if-using-legacy-windows-os" title="Permalink to this headline">¶</a></h3>
 <p><strong>The following only applies to users of Windows that are on a version earlier than Windows 10. If you are using Windows 10, Mac, or Linux, you can skip this step.</strong></p>
 <p>If you are on a Windows machine (<em>&lt; Windows 10</em>), you will need to download the <a class="reference external" href="https://os.mbed.com/handbook/Windows-serial-configuration">mbed driver</a> if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done, and none of the examples in the textbook will work).</p>
 </div>
 <div class="section" id="micro-bit-modes">
-<h3>11.2.2. Micro:bit Modes<a class="headerlink" href="#micro-bit-modes" title="Permalink to this headline">¶</a></h3>
+<h3>12.2.2. Micro:bit Modes<a class="headerlink" href="#micro-bit-modes" title="Permalink to this headline">¶</a></h3>
 <p>Your Micro:bit can be used in two modes:</p>
 <ul class="simple">
 <li>running “flashed” code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)</li>
@@ -319,7 +319,7 @@ print("All done!")
 </div>
 </div>
 <div class="section" id="flashing-the-micro-bit">
-<h3>11.2.3. Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
+<h3>12.2.3. Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
 <p>To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -&gt; Manage plug-ins…, then type <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the “Flash I/O .hex to BBC Microbit” icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).</p>
 <img alt="../../_images/bitio.png" src="../../_images/bitio.png" />
 <div class="admonition note">
@@ -328,12 +328,12 @@ print("All done!")
 </div>
 </div>
 <div class="section" id="installing-the-micro-bit-module-in-thonny">
-<h3>11.2.4. Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
+<h3>12.2.4. Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
 <p>In order to communicate with the microbit in Python, you need to install the package <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> in Thonny. To do that, go to Tools -&gt; Manage packages…, type in cs20-microbitio into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
 </div>
 </div>
 <div class="section" id="using-the-micro-bit">
-<h2>11.3. Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this headline">¶</a></h2>
+<h2>12.3. Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this headline">¶</a></h2>
 <p>Once you have done that, try running the code below:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -371,19 +371,19 @@ print("All done!")
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops' data-toggle="tooltip">
-    <a href="MultipleTurtlesAndForLoops.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 11. Logical Operators' data-toggle="tooltip">
+    <a href="LogicalOperators.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="MultipleTurtlesAndForLoops.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="LogicalOperators.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 12. Looping with Turtles Assignment' data-toggle="tooltip" >
-    <a href="../MoreTurtles/TurtleAssignment.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 13. Booleans Practice Quiz' data-toggle="tooltip" >
+    <a href="../PracticeQuizzes/Booleans.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../MoreTurtles/TurtleAssignment.html" >Next Section - 12. Looping with Turtles Assignment</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Booleans.html" >Next Section - 13. Booleans Practice Quiz</a>
 
 <script type="text/javascript">
 
