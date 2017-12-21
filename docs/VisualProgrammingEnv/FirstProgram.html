@@ -301,6 +301,8 @@
 <div class="section" id="broadcasts">
 <h2>1.3. Broadcasts<a class="headerlink" href="#broadcasts" title="Permalink to this headline">¶</a></h2>
 <p>What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something <strong>once an action performed by another sprite was completed</strong>. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we’d like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.</p>
+<p>To have another sprite listen for a broadcast, click on the sprite that you would like to react to the broadcast, then drag a <em>when I receive</em> block from the <strong>Events</strong> tab of the blocks palette to the scripts area. We could have the character do anything we want, but for this example, let’s make our characters have a simple conversation. Recreate the following, and click the Green flag.</p>
+<img alt="../_images/scratch_when_i_receive.png" src="../_images/scratch_when_i_receive.png" />
 </div>
 </div>
 

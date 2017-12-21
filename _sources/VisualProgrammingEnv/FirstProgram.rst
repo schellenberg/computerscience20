@@ -81,4 +81,8 @@ Broadcasts
 
 What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something **once an action performed by another sprite was completed**. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we'd like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.
 
+To have another sprite listen for a broadcast, click on the sprite that you would like to react to the broadcast, then drag a *when I receive* block from the **Events** tab of the blocks palette to the scripts area. We could have the character do anything we want, but for this example, let's make our characters have a simple conversation. Recreate the following, and click the Green flag.
+
+.. image:: images/scratch_when_i_receive.png
+
 
