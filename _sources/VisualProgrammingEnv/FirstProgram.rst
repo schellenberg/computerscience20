@@ -50,17 +50,23 @@ In the project view, the screen is divided into a number of panes, including the
 
     You may want to spend some time exploring the environment with the students before you actually create the first program.
 
-For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage. 
+For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage. For this example, I included the Giga sprite, so my stage looks like this:
+
+.. image:: images/scratch_initial_characters.png
 
 .. note:: Once you have more than one sprite in the sprite list pane, you will be able to see that the scripts area pane shows the script for the currently selected sprite. To be sure you understand this, drag a block from the block palette onto the scripts area. Now select a different sprite in the sprite list by clicking on it. Notice how the blocks in the scripts area change when you select a different sprite.
 
-Now that you have two sprites in the sprite list pane, let's get them to have a simple conversation. Select the **Looks** tab in the blocks palette, then drag a **say "Hello" for 2 secs** block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now!
+Now that you have two sprites in the sprite list pane, let's get them to have a simple conversation. Select the **Looks** tab in the block palette, then drag a **say "Hello" for 2 secs** block to the scripts area. A quick way to see the result of this block is by double clicking it. Try it now! *Note that the small image of the cat is intended to show which sprite is selected in the Sprite List when dragging the block from the Block Palette to the Scripts Area.*
 
 .. image:: images/scratch_say_block.png
 
-Of course, we don't want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the **Events** tab in the blocks palette, then drag a **when flag clicked** block into the scripts area. Now, drag the **say "Hello" for 2 secs** block until it snaps onto the **when flag clicked** block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.
+Of course, we don't want to have to double click the block to make the conversation happen, so we need to have an event trigger the say block. Select the **Events** tab in the block palette, then drag a **when flag clicked** block into the scripts area. Now, drag the **say "Hello" for 2 secs** block until it snaps onto the **when flag clicked** block. At this point, you should be able to make your sprite say Hello when you click the flag above the stage.
 
 .. image:: images/scratch_blocks_connected.png
+
+Before we move on with the conversation, we should know how to delete things. If you have a block in your Scripts Area that you no longer want, simply drag it back to the Block Palette and release the mouse.
+
+.. image:: images/scratch_deleting_a_block.gif
 
 To get our conversation going, drag one sprite to the left side of the stage, and the other to the right side of the stage. Now, let's set their starting locations. Hook up the character on the left side of the stage to a block, as follows:
 
@@ -72,7 +78,7 @@ The character on the right side of the stage should have the a script similar to
 
 .. note:: Notice that Scratch uses the Cartesian plane (the xy grid system you learned in math class), and that the origin is directly in the centre of the stage.
 
-Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the *Go to* block in the blocks palette updates with the x and y locations of the sprite when you release the mouse. Now hook a **glide 1 secs to x: y:** block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a **say Hello! for 2 secs** block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a **broadcast** block from the Events tab and hook it onto the bottom of the script. It should now look something like this:
+Drag both sprites to the locations you would like them to be when they are going to have the conversation. Notice that the x and y values in the *Go to* block in the block palette updates with the x and y locations of the sprite when you release the mouse. Now hook a **glide 1 secs to x: y:** block to the bottom of the script of the character coming in from the left hand side of the stage. Then drag a **say Hello! for 2 secs** block from the Looks tab onto the bottom of that, to have the character start the conversation. Finally, drag a **broadcast** block from the Events tab and hook it onto the bottom of the script. It should now look something like this:
 
 .. image:: images/scratch_goTo_andGlide.png
 
@@ -81,8 +87,26 @@ Broadcasts
 
 What is the point of that broadcast block that we added to the script? In this situation, we wanted the second sprite (the one entering from the right side of the screen) to do something **once an action performed by another sprite was completed**. Broadcasts let us send messages, and any sprite (including the sprite that sent the message) within our project can listen for that message, and respond accordingly. This time, what we'd like to have happen is for the second sprite to enter the screen after the first sprite has moved to the middle of the screen and said something.
 
-To have another sprite listen for a broadcast, click on the sprite that you would like to react to the broadcast, then drag a *when I receive* block from the **Events** tab of the blocks palette to the scripts area. We could have the character do anything we want, but for this example, let's make our characters have a simple conversation. Recreate the following, and click the Green flag.
+.. note:: Broadcasts are a simple way to introduce the idea of the event-driven programming paradigm. Although much of this course will be using the procedural programming paradigm, it is really helpful to be understand the basic concept of responding to user events!
+
+To have another sprite listen for a broadcast, click on the sprite that you would like to react to the broadcast, then drag a *when I receive* block from the **Events** tab of the block palette to the scripts area. We could have the character do anything we want, but for this example, let's make our characters have a simple conversation. Recreate the following, and click the Green flag.
 
 .. image:: images/scratch_when_i_receive.png
 
+We can hook up as many chained broadcasts as we like. For example, in the example shown below, both characters react to the flag being clicked by going to their starting locations. After that, the chain of events is controlled by the following broadcasts:
 
+- Giga Enters
+- Cat Replies
+- Goodbye
+
+.. image:: images/scratch_conversation_complete.png
+
+Notice as well that any number of sprites can react to the same broadcast. In the above example, only one sprite reacts to the Giga Enters and Cat Replies broadcasts. For the Goodbye broadcast, however, both the Cat and Giga react by hiding.
+
+
+Practice Problem
+-----------------
+
+Make a new Scratch project. Save it as ``Conversation``. Pick at least two sprites, and make them have a little conversation. Be sure to use **broadcasts** to control the flow of your program!
+
+If you want a bit more of a challenge, explore the blocks palette and incorporate some other blocks that haven't been discussed yet!
