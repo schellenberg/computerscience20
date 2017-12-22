@@ -195,7 +195,10 @@
 <li><a class="reference internal" href="#">1. Introduction to Scratch (Broadcasts)</a><ul>
 <li><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
 <li><a class="reference internal" href="#your-first-computer-program">1.2. Your First Computer Program!</a></li>
-<li><a class="reference internal" href="#broadcasts">1.3. Broadcasts</a></li>
+<li><a class="reference internal" href="#broadcasts">1.3. Broadcasts</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">1.3.1. Check Your Understanding</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#practice-problem">1.4. Practice Problem</a></li>
 </ul>
 </li>
@@ -319,6 +322,56 @@
 </ul>
 <img alt="../_images/scratch_conversation_complete.png" src="../_images/scratch_conversation_complete.png" />
 <p>Notice as well that any number of sprites can react to the same broadcast. In the above example, only one sprite reacts to the Giga Enters and Cat Replies broadcasts. For the Goodbye broadcast, however, both the Cat and Giga react by hiding.</p>
+<div class="section" id="check-your-understanding">
+<h3>1.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="scratch_broadcast_check_1">
+            <p>logical-operators7: What would happen when you click the green flag, given the code below?</p>
+<img alt="../_images/scratch_broadcast_check_1.png" src="../_images/scratch_broadcast_check_1.png" />
+
+            <li data-component="answer"  id="scratch_broadcast_check_1_opt_a">The current sprite would say "Go"</li><li data-component="feedback" id="scratch_broadcast_check_1_opt_a">Although this would happen, it is not the only thing! Consider what happens when the broadcast is sent.</li>
+            
+            <li data-component="answer" data-correct id="scratch_broadcast_check_1_opt_b">The current sprite would say "Go", then say "Green!"</li><li data-component="feedback" id="scratch_broadcast_check_1_opt_b">Yes! The sprite would say "Go" for 1 second, then broadcast <em>first</em>, which it would respond to by saying "Green!" for 1 second.</li>
+            
+            <li data-component="answer"  id="scratch_broadcast_check_1_opt_c">The current sprite would say "Green!", then say "Go"</li><li data-component="feedback" id="scratch_broadcast_check_1_opt_c">No, it will say "Go" first (since that is the first thing in the chunk of code that executes when the flag is clicked).</li>
+            
+            <li data-component="answer"  id="scratch_broadcast_check_1_opt_d">The current sprite would say "Green!"</li><li data-component="feedback" id="scratch_broadcast_check_1_opt_d">It will do this, but it will say "Go" first (since that is the first thing in the chunk of code that executes when the flag is clicked).</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="scratch_broadcast_check_2">
+            <p>logical-operators8: What would happen when you click the green flag, given the code below?</p>
+<img alt="../_images/scratch_broadcast_check_2.png" src="../_images/scratch_broadcast_check_2.png" />
+
+            <li data-component="answer"  id="scratch_broadcast_check_2_opt_a">The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.</li><li data-component="feedback" id="scratch_broadcast_check_2_opt_a">No, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute. In other words, Scratch will not wait for the broadcast to be resolved before completing the rest of the chunk of code (in this case, the move 10 steps block).</li>
+            
+            <li data-component="answer"  id="scratch_broadcast_check_2_opt_b">The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.</li><li data-component="feedback" id="scratch_broadcast_check_2_opt_b">No, both the say "Green" block and the move 10 steps block will happen simultaneously.</li>
+            
+            <li data-component="answer" data-correct id="scratch_broadcast_check_2_opt_c">The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.</li><li data-component="feedback" id="scratch_broadcast_check_2_opt_c">Yes, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="scratch_broadcast_check_3">
+            <p>logical-operators9: What would happen when you click the green flag, given the code below?</p>
+<img alt="../_images/scratch_broadcast_check_3.png" src="../_images/scratch_broadcast_check_3.png" />
+
+            <li data-component="answer" data-correct id="scratch_broadcast_check_3_opt_a">The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.</li><li data-component="feedback" id="scratch_broadcast_check_3_opt_a">Yes! Since we are now using a broadcast and wait block, Scratch will pause the execution of the chunk of code that sent the broadcast until all scripts that reacted to the broadcast being sent have finished executing.</li>
+            
+            <li data-component="answer"  id="scratch_broadcast_check_3_opt_b">The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.</li><li data-component="feedback" id="scratch_broadcast_check_3_opt_b">No, the broadcast happens before the move, so the sprite will say "Green" before it moves.</li>
+            
+            <li data-component="answer"  id="scratch_broadcast_check_3_opt_c">The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.</li><li data-component="feedback" id="scratch_broadcast_check_3_opt_c">No, since we are using a broadcast and wait block, the two scripts will not run simultaneously this time.</li>
+            
+
+            </ul>
+            </div>
+            </div>
 </div>
 <div class="section" id="practice-problem">
 <h2>1.4. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>

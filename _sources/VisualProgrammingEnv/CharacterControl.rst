@@ -23,19 +23,19 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
 
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
-Adapting Project From Yesterday
+Repetition
 -------------------------------
 
 Adapt previous project to have the characters shrink before they disappear. 
 
 
-Control a Character Using WASD - Version 1
+Movement Using WASD - Version 1
 ------------------------------------------
 
 Then control character with WASD. Do this in multiple versions -- first with jittery motion (When Key is Pressed), then...
 
 
-Control a Character Using WASD - Version 2
+Movement Using WASD - Version 2
 ------------------------------------------
 WASD smoothly (FOREVER block, using if statements)
 

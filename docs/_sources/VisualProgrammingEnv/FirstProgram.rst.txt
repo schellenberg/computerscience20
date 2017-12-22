@@ -103,6 +103,57 @@ We can hook up as many chained broadcasts as we like. For example, in the exampl
 
 Notice as well that any number of sprites can react to the same broadcast. In the above example, only one sprite reacts to the Giga Enters and Cat Replies broadcasts. For the Goodbye broadcast, however, both the Cat and Giga react by hiding.
 
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mchoice:: scratch_broadcast_check_1
+   :answer_a: The current sprite would say "Go"
+   :answer_b: The current sprite would say "Go", then say "Green!"
+   :answer_c: The current sprite would say "Green!", then say "Go"
+   :answer_d: The current sprite would say "Green!"
+   :correct: b
+   :feedback_a: Although this would happen, it is not the only thing! Consider what happens when the broadcast is sent.
+   :feedback_b: Yes! The sprite would say "Go" for 1 second, then broadcast <em>first</em>, which it would respond to by saying "Green!" for 1 second.
+   :feedback_c: No, it will say "Go" first (since that is the first thing in the chunk of code that executes when the flag is clicked).
+   :feedback_d: It will do this, but it will say "Go" first (since that is the first thing in the chunk of code that executes when the flag is clicked).
+
+   What would happen when you click the green flag, given the code below?
+
+   .. image:: images/scratch_broadcast_check_1.png
+   
+   
+.. mchoice:: scratch_broadcast_check_2
+   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.
+   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.
+   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.
+   :correct: c
+   :feedback_a: No, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute. In other words, Scratch will not wait for the broadcast to be resolved before completing the rest of the chunk of code (in this case, the move 10 steps block). 
+   :feedback_b: No, both the say "Green" block and the move 10 steps block will happen simultaneously.
+   :feedback_c: Yes, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute.
+
+   What would happen when you click the green flag, given the code below?
+
+   .. image:: images/scratch_broadcast_check_2.png
+   
+
+
+.. mchoice:: scratch_broadcast_check_3
+   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.
+   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.
+   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.
+   :correct: a
+   :feedback_a: Yes! Since we are now using a broadcast and wait block, Scratch will pause the execution of the chunk of code that sent the broadcast until all scripts that reacted to the broadcast being sent have finished executing. 
+   :feedback_b: No, the broadcast happens before the move, so the sprite will say "Green" before it moves.
+   :feedback_c: No, since we are using a broadcast and wait block, the two scripts will not run simultaneously this time.
+
+   What would happen when you click the green flag, given the code below?
+
+   .. image:: images/scratch_broadcast_check_3.png
+   
+
+
+
+
 
 Practice Problem
 -----------------
