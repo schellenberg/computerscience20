@@ -50,7 +50,11 @@ In the project view, the screen is divided into a number of panes, including the
 
     You may want to spend some time exploring the environment with the students before you actually create the first program.
 
-For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage. For this example, I included the Giga sprite, so my stage looks like this:
+For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage. 
+
+.. image:: images/scratch_add_new_sprite_from_library.png
+
+For this example, I included the Giga sprite, so my stage looks like this:
 
 .. image:: images/scratch_initial_characters.png
 
