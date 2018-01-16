@@ -175,6 +175,16 @@ Python - Lists
    Python/Lists/ListMethods.rst
 
 
+End of Semester Review
+::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+
+   Review/Reeborg.rst
+
+
 Computing and Society
 :::::::::::::::::::::
 

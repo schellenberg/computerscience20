@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Reeborg Review &#8212; Computer Science 20 Saskatchewan</title>
+    <title>1. Reeborg Review &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How the Internet Works Videos" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" />
+    <link rel="prev" title="2. List Methods" href="../Python/Lists/ListMethods.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -190,10 +192,11 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Reeborg Review</a><ul>
-<li><a class="reference internal" href="#step-16">Step 16</a></li>
-<li><a class="reference internal" href="#question-1-mirror-image">Question 1 - Mirror Image</a></li>
-<li><a class="reference internal" href="#question-2-mirror-image-part-2">Question 2 - Mirror Image - Part 2</a></li>
+<li><a class="reference internal" href="#">1. Reeborg Review</a><ul>
+<li><a class="reference internal" href="#question-1-step-16">1.1. Question 1 - Step 16</a></li>
+<li><a class="reference internal" href="#question-2-review-a-previous-quiz">1.2. Question 2 - Review a Previous Quiz</a></li>
+<li><a class="reference internal" href="#question-3-go-to-origin">1.3. Question 3 - Go To Origin</a></li>
+<li><a class="reference internal" href="#question-4-hurdle-jumping">1.4. Question 4 - Hurdle Jumping</a></li>
 </ul>
 </li>
 </ul>
@@ -203,6 +206,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 2. List Methods" data-toggle="tooltip">
+    <a href="../Python/Lists/ListMethods.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -229,7 +244,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="reeborg-review">
-<h1>Reeborg Review<a class="headerlink" href="#reeborg-review" title="Permalink to this headline">¶</a></h1>
+<h1>1. Reeborg Review<a class="headerlink" href="#reeborg-review" title="Permalink to this headline">¶</a></h1>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
     <ul class="simple">
@@ -241,115 +256,49 @@
 
     </div>
     <p>To confirm that you understand the major concepts we learned from our Reeborg unit, try the following <em>without looking back at any previous code</em>!</p>
-<div class="section" id="step-16">
-<h2>Step 16<a class="headerlink" href="#step-16" title="Permalink to this headline">¶</a></h2>
-<p>See if you can recreate a solution for Step 16 (without looking back at how you did it previously).</p>
+<div class="section" id="question-1-step-16">
+<h2>1.1. Question 1 - Step 16<a class="headerlink" href="#question-1-step-16" title="Permalink to this headline">¶</a></h2>
+<p>See if you can recreate a solution for the <a class="reference internal" href="../ConstrainedLanguage/Step16.html#reeborg-step-16-your-turn"><span class="std std-ref">Your Turn</span></a> on Step 16 (without looking back at how you did it previously).</p>
 </div>
-<div class="section" id="question-1-mirror-image">
-<h2>Question 1 - Mirror Image<a class="headerlink" href="#question-1-mirror-image" title="Permalink to this headline">¶</a></h2>
-<p>The room (shown below) has alcoves on the left and the right. Some of the alcoves contain daisies. For each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:</p>
-<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove.json&name=PracticeQuizAlcove" target="_blank">Mirror Image Practice Quiz world</a> and create a solution to this problem!</p>
-<img alt="Review/images/practice_quiz_alcove_start.png" src="Review/images/practice_quiz_alcove_start.png" />
-<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
-
-    <div data-component="reveal" id="reveal_practice_quiz_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
-    <p>Since all of the distances in the world stay exactly the same each time, this problem can be solved using only <cite>repeat</cite> loops. Please note that there are many possible solutions to this problem. This is one:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">think</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">turn_around</span><span class="p">():</span>
-    <span class="n">repeat</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
-    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">move_daisy</span><span class="p">():</span>
-    <span class="n">take</span><span class="p">()</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-    <span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="n">move</span><span class="p">()</span>
-    <span class="n">put</span><span class="p">()</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-    <span class="n">repeat</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="n">move</span><span class="p">()</span>
-    <span class="n">turn_right</span><span class="p">()</span>
-
-<span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
-        <span class="n">move_daisy</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">turn_around</span><span class="p">()</span>
-        <span class="n">move</span><span class="p">()</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="n">move</span><span class="p">()</span>
-</pre></div>
+<div class="section" id="question-2-review-a-previous-quiz">
+<h2>1.2. Question 2 - Review a Previous Quiz<a class="headerlink" href="#question-2-review-a-previous-quiz" title="Permalink to this headline">¶</a></h2>
+<p>Earlier in the course, you showed your understanding of Reeborg by doing a quiz. Let’s review that quiz to be sure you recall the important concepts we studied.</p>
 </div>
-
-    </div>
-    </div>
-<div class="section" id="question-2-mirror-image-part-2">
-<h2>Question 2 - Mirror Image - Part 2<a class="headerlink" href="#question-2-mirror-image-part-2" title="Permalink to this headline">¶</a></h2>
-<p>This time, the distance between the alcove on the right and left is not consistent (in other words, the alcoves can be different distances apart). Once again, for each alcove on the left side that contains a daisy, make Reeborg move the daisy to the opposite alcove on the right hand side. One possible starting world could look like the following:</p>
-<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove2.json&name=PracticeQuizAlcove2" target="_blank">Mirror Image Practice Quiz world</a> and create a solution to this problem!</p>
-<img alt="Review/images/practice_quiz_alcove2_start.png" src="Review/images/practice_quiz_alcove2_start.png" />
-<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
-
-    <div data-component="reveal" id="reveal_practice_quiz_solution2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
-    <p>Since there is an unknown distance to travel, you will need to use a <cite>while</cite> loop, instead of just a <cite>repeat</cite> loop. This is one possible solution:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">think</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">turn_around</span><span class="p">():</span>
-    <span class="n">repeat</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
-    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">backup</span><span class="p">():</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">move_daisy</span><span class="p">():</span>
-    <span class="n">take</span><span class="p">()</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="n">move</span><span class="p">()</span>
-    <span class="n">put</span><span class="p">()</span>
-    <span class="n">turn_around</span><span class="p">()</span>
-    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="n">move</span><span class="p">()</span>
-    <span class="n">backup</span><span class="p">()</span>
-    <span class="n">turn_right</span><span class="p">()</span>
-
-<span class="n">repeat</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
-        <span class="n">move_daisy</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">turn_around</span><span class="p">()</span>
-        <span class="n">move</span><span class="p">()</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="n">move</span><span class="p">()</span>
-</pre></div>
+<div class="section" id="question-3-go-to-origin">
+<h2>1.3. Question 3 - Go To Origin<a class="headerlink" href="#question-3-go-to-origin" title="Permalink to this headline">¶</a></h2>
+<p>Define a new function called <code class="docutils literal"><span class="pre">go_to_origin</span></code> that sends Reeborg to the bottom left corner of the screen (south-west corner), regardless of its initial location or the direction it is initially facing. Assume that there are no wall sections present.</p>
+<p><em>Hint: Use the south and west boundary walls as guides.</em></p>
+<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a> and create a solution to this problem!</p>
+<img alt="../_images/reeborg_goToOrigin.png" src="../_images/reeborg_goToOrigin.png" />
 </div>
-
-    </div>
-    </div>
+<div class="section" id="question-4-hurdle-jumping">
+<h2>1.4. Question 4 - Hurdle Jumping<a class="headerlink" href="#question-4-hurdle-jumping" title="Permalink to this headline">¶</a></h2>
+<p>Reeborg is jumping hurdles again. This time, the hurdles can be of any height, and of any width. Reeborg needs to keep jumping over them until it gets to the end of the world, which will always be at (12, 1).</p>
+<p>Open the <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdleJump1.json&name=HurdleJump1" target="_blank">Hurdle Jump First World</a> and create a solution to this problem! Your solution needs to work on <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdleJump2.json&name=HurdleJump2" target="_blank">Hurdle Jump Second World</a> as well.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Due to time constraints, the hurdle worlds above are hard coded. I will come back to this section and make randomly generated worlds when time permits.</p>
+</div>
+<img alt="../_images/reeborg_hurdle_jump.png" src="../_images/reeborg_hurdle_jump.png" />
+</div>
 </div>
 
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. List Methods' data-toggle="tooltip">
+    <a href="../Python/Lists/ListMethods.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../Python/Lists/ListMethods.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >Next Section - How the Internet Works Videos</a>
 
 <script type="text/javascript">
 

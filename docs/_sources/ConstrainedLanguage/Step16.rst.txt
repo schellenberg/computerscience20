@@ -20,6 +20,7 @@ When coming up with the solution to a problem, write the steps down in your own 
 
 Be sure to think the following situation through before you start coding. First, press the play button on the world a number of times to be sure you understand what the possible worlds look like. Now figure out the algorithm, or sequence of steps, required.  Then simulate in your mind the execution of the program you are going to write. If it does what you expect, then and only then should you start coding.
 
+.. _reeborg_step_16_your_turn:
 
 Your Turn
 ----------
