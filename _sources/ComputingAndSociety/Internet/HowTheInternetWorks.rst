@@ -7,7 +7,7 @@ The following videos were created by Code.org, and are released under a Creative
 If you would like to look at a written description of the technology that powers the world wide web, you can read a description of the :ref:`www_technology`.
 
 .. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
+    :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.
 

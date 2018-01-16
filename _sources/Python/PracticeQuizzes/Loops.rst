@@ -2,7 +2,7 @@ Loops Practice Quiz
 ================================
 
 .. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
+    :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-FP2** Investigate how control structures affect program flow.
 
