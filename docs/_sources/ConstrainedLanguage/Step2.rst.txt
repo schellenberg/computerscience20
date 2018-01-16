@@ -2,7 +2,7 @@ Step 2: Taking and Putting Down Objects
 =======================================
 
 .. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
+    :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
 

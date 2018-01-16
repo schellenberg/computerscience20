@@ -6,7 +6,7 @@ Project Work Period
     Work period to put the concepts learned so far into practice. Your teacher will have you create a project that uses most of the ideas seen so far -- a Rock Paper Scissors game is a nice option.
 
 .. reveal:: curriculum_addressed
-    :showtitle: Curriculum Objectives Addressed In This Section
+    :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
