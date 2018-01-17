@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Quick Python Overview &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Python Review &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -190,11 +190,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Quick Python Overview</a><ul>
-<li><a class="reference internal" href="#what-is-python">What is Python?</a></li>
-<li><a class="reference internal" href="#running-python-on-your-computer">Running Python on Your Computer</a></li>
-<li><a class="reference internal" href="#whitespace">Whitespace</a></li>
-<li><a class="reference internal" href="#printing-output">Printing Output</a></li>
+<li><a class="reference internal" href="#">Python Review</a><ul>
 <li><a class="reference internal" href="#variables-and-data-types">Variables and Data Types</a></li>
 <li><a class="reference internal" href="#checking-data-types">Checking Data Types</a></li>
 <li><a class="reference internal" href="#converting-between-data-types">Converting Between Data Types</a></li>
@@ -241,45 +237,8 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="quick-python-overview">
-<h1>Quick Python Overview<a class="headerlink" href="#quick-python-overview" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">In today’s quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.</p>
-</div>
-<p>If you’d prefer to watch a video describing some important features of Python, <a class="reference external" href="https://www.youtube.com/watch?v=d97kS830e-c">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
-<iframe src="https://www.youtube.com/embed/d97kS830e-c"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="what-is-python">
-<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
-<p>Python is a programming language that lets you teach the computer to do what you want. You’ve already been writing Python programs using Reeborg. Everything you have already learned (with the exception of <cite>repeat</cite>), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.</p>
-</div>
-<div class="section" id="running-python-on-your-computer">
-<h2>Running Python on Your Computer<a class="headerlink" href="#running-python-on-your-computer" title="Permalink to this headline">¶</a></h2>
-<p>There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to <a class="reference external" href="http://thonny.org/">download Thonny</a>. Go download Thonny now. It doesn’t require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well.</p>
-<p>For each of the code segments that you see on this page, you can either run them directly in your web browser <strong>OR</strong> you can copy/paste the code into Thonny to run it.</p>
-<p>When using Thonny, you need to understand the difference between the <strong>text editor</strong> and the <strong>shell</strong> (also known as the interpreter). If you want to save your code to use again later, you should type your code into the text editor, which will prompt you to save your file somewhere on disk when you press the Run Current Script button (or press F5). The output of your code will show up in the shell (underneath the text editor). You can also type in any Python code you’d like into the shell, which is a handy way to try out new things in Python.</p>
-<img alt="Review/images/thonny_window.png" src="Review/images/thonny_window.png" />
-</div>
-<div class="section" id="whitespace">
-<h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
-<p>Just like when you were programming Reeborg, it is <strong>really important to indent your code correctly</strong> in Python. For example, the code given below will cause a <strong>syntax error</strong> when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you’ve fixed it!</p>
-
-<div data-childcomponent="syntax_error_indentation" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=syntax_error_indentation data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Fix the syntax error by indenting the code properly.'>
-some_number = 5
-if some_number > 3:
-print("Yeah, the number is bigger.")
-</textarea>
-</div>
-</div>
-<div class="section" id="printing-output">
-<h2>Printing Output<a class="headerlink" href="#printing-output" title="Permalink to this headline">¶</a></h2>
-<p>As you saw in the example above, you can <code class="docutils literal"><span class="pre">print()</span></code> things to standard output (usually the Python console/interpreter). The <code class="docutils literal"><span class="pre">print()</span></code> function will be used in many of the examples that follow. Note that <code class="docutils literal"><span class="pre">print()</span></code> can take any number of arguments, separated by commas. So you could print something like this: <code class="docutils literal"><span class="pre">print(&quot;Monday&quot;,</span> <span class="pre">&quot;Tuesday&quot;,</span> <span class="pre">&quot;Wednesday&quot;)</span></code>, which would print <code class="docutils literal"><span class="pre">Monday</span> <span class="pre">Tuesday</span> <span class="pre">Wednesday</span></code>, with each argument separated by a space.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.</p>
-</div>
-</div>
+  <div class="section" id="python-review">
+<h1>Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="variables-and-data-types">
 <h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
@@ -295,7 +254,7 @@ print("Yeah, the number is bigger.")
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
-            string-manipulation-practice12: What is the data type of <code class="docutils literal"><span class="pre">'this</span> <span class="pre">is</span> <span class="pre">what</span> <span class="pre">kind</span> <span class="pre">of</span> <span class="pre">data'</span></code>?
+            string-manipulation-practice16: What is the data type of <code class="docutils literal"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?
             <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
@@ -310,7 +269,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
-            string-manipulation-practice13: What is the data type of <code class="docutils literal"><span class="pre">3</span></code>?
+            string-manipulation-practice17: What is the data type of <code class="docutils literal"><span class="pre">42</span></code>?
             <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
             
             <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
@@ -325,7 +284,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
-            string-manipulation-practice14: What is the data type of <code class="docutils literal"><span class="pre">True</span></code>?
+            string-manipulation-practice18: What is the data type of <code class="docutils literal"><span class="pre">False</span></code>?
             <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
             
             <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
@@ -340,7 +299,7 @@ print("Yeah, the number is bigger.")
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
-            string-manipulation-practice15: What is the data type of <code class="docutils literal"><span class="pre">1.5</span></code>?
+            string-manipulation-practice19: What is the data type of <code class="docutils literal"><span class="pre">4.5</span></code>?
             <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
@@ -455,12 +414,13 @@ print( type(c) )
 
 <textarea data-component="activecode" id=if_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 number = 42
+number = number // 4
 
-if number == 42:
+if number == 10:
     print("So long and thanks for all the fish.")
 
-if number == 23:
-    print("Michael Jordan is the GOAT (Greatest of All Time)")
+else:
+    print("And now for something completely different...")
 </textarea>
 </div>
 </div>

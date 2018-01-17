@@ -1,55 +1,5 @@
-Quick Python Overview
+Python Review
 ==========================
-
-.. note:: In today's quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
-
-If you'd prefer to watch a video describing some important features of Python, `the following video <https://www.youtube.com/watch?v=d97kS830e-c>`_ demonstrates the same ideas as what I've described in text below.
-
-.. youtube:: d97kS830e-c
-    :height: 315
-    :width: 560
-    :align: left
-    :http: https
-
-
-What is Python?
----------------
-
-Python is a programming language that lets you teach the computer to do what you want. You've already been writing Python programs using Reeborg. Everything you have already learned (with the exception of `repeat`), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.
-
-
-Running Python on Your Computer
--------------------------------
-
-There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to `download Thonny <http://thonny.org/>`_. Go download Thonny now. It doesn't require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well. 
-
-For each of the code segments that you see on this page, you can either run them directly in your web browser **OR** you can copy/paste the code into Thonny to run it. 
-
-When using Thonny, you need to understand the difference between the **text editor** and the **shell** (also known as the interpreter). If you want to save your code to use again later, you should type your code into the text editor, which will prompt you to save your file somewhere on disk when you press the Run Current Script button (or press F5). The output of your code will show up in the shell (underneath the text editor). You can also type in any Python code you'd like into the shell, which is a handy way to try out new things in Python.
-
-.. image:: images/thonny_window.png
-
-
-Whitespace
------------
-
-Just like when you were programming Reeborg, it is **really important to indent your code correctly** in Python. For example, the code given below will cause a **syntax error** when you click the Run button. Click the Run button to see the error. Now, can you figure out how to fix it? Edit the code, then click Run again to see if you've fixed it!
-
-.. activecode:: syntax_error_indentation
-    :caption: Fix the syntax error by indenting the code properly.
-    :nocodelens:
-
-    some_number = 5
-    if some_number > 3:
-    print("Yeah, the number is bigger.")
-
-
-Printing Output
----------------
-
-As you saw in the example above, you can ``print()`` things to standard output (usually the Python console/interpreter). The ``print()`` function will be used in many of the examples that follow. Note that ``print()`` can take any number of arguments, separated by commas. So you could print something like this: ``print("Monday", "Tuesday", "Wednesday")``, which would print ``Monday Tuesday Wednesday``, with each argument separated by a space.
-
-.. note:: There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.
 
 
 Variables and Data Types
@@ -79,7 +29,7 @@ We will use each of the data types given above throughout the course, and it is 
     :feedback_c: The value is not numeric with a decimal point.
     :feedback_d: Great! Strings are enclosed in quotes.
 
-    What is the data type of ``'this is what kind of data'``?
+    What is the data type of ``'what is your name?'``?
 
 .. mchoice:: data_types_1_2
     :answer_a: boolean
@@ -92,7 +42,7 @@ We will use each of the data types given above throughout the course, and it is 
     :feedback_c: The value is not numeric with a decimal point.
     :feedback_d: Strings are enclosed in quotes.
 
-    What is the data type of ``3``?
+    What is the data type of ``42``?
 
 .. mchoice:: data_types_1_3
     :answer_a: boolean
@@ -105,7 +55,7 @@ We will use each of the data types given above throughout the course, and it is 
     :feedback_c: The value is not numeric with a decimal point.
     :feedback_d: Strings are enclosed in quotes.
 
-    What is the data type of ``True``?
+    What is the data type of ``False``?
    
 .. mchoice:: data_types_1_4
     :answer_a: boolean
@@ -118,7 +68,7 @@ We will use each of the data types given above throughout the course, and it is 
     :feedback_c: Great! The value is numeric with a decimal point.
     :feedback_d: Strings are enclosed in quotes.
 
-    What is the data type of ``1.5``?
+    What is the data type of ``4.5``?
 
 
 Checking Data Types
@@ -188,12 +138,13 @@ The ``if`` control structure works the same way it did with Reeborg. Run the exa
     :nocodelens:
     
     number = 42
+    number = number // 4
 
-    if number == 42:
+    if number == 10:
         print("So long and thanks for all the fish.")
 
-    if number == 23:
-        print("Michael Jordan is the GOAT (Greatest of All Time)")
+    else:
+        print("And now for something completely different...")
 
 
 
