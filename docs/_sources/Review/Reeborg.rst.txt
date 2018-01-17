@@ -15,8 +15,12 @@ To confirm that you understand the major concepts we learned from our Reeborg un
 Question 1 - Step 16
 ---------------------
 
-See if you can recreate a solution for the :ref:`reeborg_step_16_your_turn` on Step 16 (without looking back at how you did it previously).
+See if you can recreate a solution for |step_16| (without looking back at how you did it previously).
 
+
+.. |step_16| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&collection=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Step 16</a>
 
 Question 2 - Review a Previous Quiz
 ------------------------------------
@@ -64,7 +68,7 @@ Open the |origin_world| and create a solution to this problem!
 
 .. |origin_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a>
 
 
 Question 4 - Hurdle Jumping
@@ -80,4 +84,4 @@ Open the |hurdle1| and create a solution to this problem!
 
 .. |hurdle1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
