@@ -72,18 +72,12 @@ Question 4 - Hurdle Jumping
 
 Reeborg is jumping hurdles again. This time, the hurdles can be of any height, and of any width. Reeborg needs to keep jumping over them until it gets to the end of the world, which will always be at (12, 1).
 
-Open the |hurdle1| and create a solution to this problem! Your solution needs to work on |hurdle2| as well.
+Open the |hurdle1| and create a solution to this problem!
 
-.. caution:: Due to time constraints, the hurdle worlds above are hard coded. I will come back to this section and make randomly generated worlds when time permits.
+.. caution:: Due to time constraints, the hurdle worlds above do not test the path followed automatically. I will come back to this section and add path following logic when time permits.
 
 .. image:: images/reeborg_hurdle_jump.png
 
-
 .. |hurdle1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdleJump1.json&name=HurdleJump1" target="_blank">Hurdle Jump First World</a>
-
-
-.. |hurdle2| raw:: html
-
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdleJump2.json&name=HurdleJump2" target="_blank">Hurdle Jump Second World</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
