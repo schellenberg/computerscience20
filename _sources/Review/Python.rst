@@ -126,6 +126,49 @@ Symbols   Operations                        Example               Output
 =======   ==============================    ===============       ======
 
 
+.. fillintheblank:: python_math_operators_review_1
+
+    What would the following code print?::
+
+        number = 12
+        print( number / 4)
+
+    - :3: Great!
+      :.*: Try again!
+
+.. fillintheblank:: python_math_operators_review_2
+
+    What would the following code print?::
+
+        number = 12
+        print( number % 5)
+
+    - :2: Great!
+      :.*: Try again!
+
+
+.. fillintheblank:: python_math_operators_review_3
+
+    What would the following code print?::
+
+        number = 42
+        print( number // 5)
+
+    - :8: Great!
+      :8.4: Remember that // returns only an integer!
+      :.*: Try again!
+
+.. fillintheblank:: python_math_operators_review_4
+
+    What would the following code print?::
+
+        number = 2
+        print( number ** 4)
+
+    - :16: Great!
+      :8: Remember that ** means "to the power of".
+      :.*: Try again!
+
 
 ``if``
 ----------------
@@ -303,6 +346,26 @@ One of the great things about Python is that there are a lot of modules that ext
     import random
 
     print( random.randrange(1, 10) )
+
+
+Drawing Images Practice
+-------------------------
+
+Draw the following image. Be sure to define and use at least one function as part of your solution.
+
+.. image:: images/confusion-19.png
+
+.. activecode:: drawing_images_review_1
+    
+    # first review shape
+
+Once you have completed the shape above, try the following. *Use the code you made above as a starting point.*
+
+.. image:: images/confusion-27.png
+
+.. activecode:: drawing_images_review_2
+    
+    # second review shape
 
 
 Number Guessing Game

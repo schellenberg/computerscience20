@@ -183,6 +183,7 @@ End of Semester Review
    :maxdepth: 1
 
    Review/Reeborg.rst
+   Review/Python.rst
 
 
 Computing and Society

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Python Review &#8212; Computer Science 20 Saskatchewan</title>
+    <title>2. Python Review &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How the Internet Works Videos" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" />
+    <link rel="prev" title="1. Reeborg Review" href="Reeborg.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -190,19 +192,20 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Python Review</a><ul>
-<li><a class="reference internal" href="#variables-and-data-types">Variables and Data Types</a></li>
-<li><a class="reference internal" href="#checking-data-types">Checking Data Types</a></li>
-<li><a class="reference internal" href="#converting-between-data-types">Converting Between Data Types</a></li>
-<li><a class="reference internal" href="#math-operators">Math Operators</a></li>
-<li><a class="reference internal" href="#if"><code class="docutils literal"><span class="pre">if</span></code></a></li>
-<li><a class="reference internal" href="#if-elif-else"><code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
-<li><a class="reference internal" href="#while-loop"><code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
-<li><a class="reference internal" href="#for-loop"><code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
-<li><a class="reference internal" href="#functions">Functions</a></li>
-<li><a class="reference internal" href="#taking-input-from-user">Taking Input from User</a></li>
-<li><a class="reference internal" href="#python-modules">Python Modules</a></li>
-<li><a class="reference internal" href="#number-guessing-game">Number Guessing Game</a></li>
+<li><a class="reference internal" href="#">2. Python Review</a><ul>
+<li><a class="reference internal" href="#variables-and-data-types">2.1. Variables and Data Types</a></li>
+<li><a class="reference internal" href="#checking-data-types">2.2. Checking Data Types</a></li>
+<li><a class="reference internal" href="#converting-between-data-types">2.3. Converting Between Data Types</a></li>
+<li><a class="reference internal" href="#math-operators">2.4. Math Operators</a></li>
+<li><a class="reference internal" href="#if">2.5. <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li><a class="reference internal" href="#if-elif-else">2.6. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
+<li><a class="reference internal" href="#while-loop">2.7. <code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
+<li><a class="reference internal" href="#for-loop">2.8. <code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
+<li><a class="reference internal" href="#functions">2.9. Functions</a></li>
+<li><a class="reference internal" href="#taking-input-from-user">2.10. Taking Input from User</a></li>
+<li><a class="reference internal" href="#python-modules">2.11. Python Modules</a></li>
+<li><a class="reference internal" href="#drawing-images-practice">2.12. Drawing Images Practice</a></li>
+<li><a class="reference internal" href="#number-guessing-game">2.13. Number Guessing Game</a></li>
 </ul>
 </li>
 </ul>
@@ -212,6 +215,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 1. Reeborg Review" data-toggle="tooltip">
+    <a href="Reeborg.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -238,9 +253,9 @@
 <div class="container" id="main-content">
   
   <div class="section" id="python-review">
-<h1>Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
+<h1>2. Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="variables-and-data-types">
-<h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
 <p>The fundamental data types that we are concerned about in Python include:</p>
 <ul class="simple">
@@ -254,7 +269,7 @@
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
-            string-manipulation-practice16: What is the data type of <code class="docutils literal"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?
+            string-manipulation-practice20: What is the data type of <code class="docutils literal"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?
             <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
@@ -269,7 +284,7 @@
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
-            string-manipulation-practice17: What is the data type of <code class="docutils literal"><span class="pre">42</span></code>?
+            string-manipulation-practice21: What is the data type of <code class="docutils literal"><span class="pre">42</span></code>?
             <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
             
             <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
@@ -284,7 +299,7 @@
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
-            string-manipulation-practice18: What is the data type of <code class="docutils literal"><span class="pre">False</span></code>?
+            string-manipulation-practice22: What is the data type of <code class="docutils literal"><span class="pre">False</span></code>?
             <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
             
             <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
@@ -299,7 +314,7 @@
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
-            string-manipulation-practice19: What is the data type of <code class="docutils literal"><span class="pre">4.5</span></code>?
+            string-manipulation-practice23: What is the data type of <code class="docutils literal"><span class="pre">4.5</span></code>?
             <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
             
             <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
@@ -313,7 +328,7 @@
             </div>
             </div>
 <div class="section" id="checking-data-types">
-<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal"><span class="pre">5</span></code> with <code class="docutils literal"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal"><span class="pre">&quot;5.3&quot;</span></code>?</p>
 
 <div data-childcomponent="checking_data_types" class="runestone explainer ac_section alert alert-warning">
@@ -324,7 +339,7 @@ print( type(5) )
 </div>
 </div>
 <div class="section" id="converting-between-data-types">
-<span id="type-casting-functions"></span><h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<span id="type-casting-functions"></span><h2>2.3. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">str(x)</span></code> to convert <em>x</em> to a string</li>
@@ -347,7 +362,7 @@ print( type(c) )
 </div>
 </div>
 <div class="section" id="math-operators">
-<span id="math-operator-list"></span><h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
+<span id="math-operator-list"></span><h2>2.4. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can do math with Python, but we need to know the operators to use. The following table shows the most frequently used math operators in Python.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -401,9 +416,69 @@ print( type(c) )
 </tr>
 </tbody>
 </table>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="python_math_operators_review_1">
+            <p>What would the following code print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
 </div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [3, 3], "feedback": "Great!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="python_math_operators_review_2">
+            <p>What would the following code print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [2, 2], "feedback": "Great!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="python_math_operators_review_3">
+            <p>What would the following code print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">//</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [8, 8], "feedback": "Great!"}, {"number": [8.4, 8.4], "feedback": "Remember that // returns only an integer!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="python_math_operators_review_4">
+            <p>What would the following code print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [16, 16], "feedback": "Great!"}, {"number": [8, 8], "feedback": "Remember that ** means \u201cto the power of\u201d."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
 <div class="section" id="if">
-<h2><code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -425,7 +500,7 @@ else:
 </div>
 </div>
 <div class="section" id="if-elif-else">
-<h2><code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
 
 <div data-childcomponent="if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
@@ -443,7 +518,7 @@ else:
 </div>
 </div>
 <div class="section" id="while-loop">
-<h2><code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
 <p>Recall that we used a <code class="docutils literal"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
 <div data-childcomponent="while_loop_intro" class="runestone explainer ac_section alert alert-warning">
@@ -460,7 +535,7 @@ print("Blastoff!")
 </div>
 </div>
 <div class="section" id="for-loop">
-<h2><code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal"><span class="pre">10</span></code> to some other number and try it again)</p>
 
 <div data-childcomponent="for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
@@ -491,7 +566,7 @@ for item in grocery_list:
 </div>
 </div>
 <div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>2.9. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
 
 <div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
@@ -515,7 +590,7 @@ say_hello("Eli")
 </div>
 </div>
 <div class="section" id="taking-input-from-user">
-<h2>Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
+<h2>2.10. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
 <p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -555,7 +630,7 @@ elif age == 15:
 </div>
 </div>
 <div class="section" id="python-modules">
-<h2>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
+<h2>2.11. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
 
 <div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
@@ -587,8 +662,29 @@ print( random.randrange(1, 10) )
 </textarea>
 </div>
 </div>
+<div class="section" id="drawing-images-practice">
+<h2>2.12. Drawing Images Practice<a class="headerlink" href="#drawing-images-practice" title="Permalink to this headline">¶</a></h2>
+<p>Draw the following image. Be sure to define and use at least one function as part of your solution.</p>
+<img alt="../_images/confusion-191.png" src="../_images/confusion-191.png" />
+
+<div data-childcomponent="drawing_images_review_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=drawing_images_review_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# first review shape
+</textarea>
+</div>
+<p>Once you have completed the shape above, try the following. <em>Use the code you made above as a starting point.</em></p>
+<img alt="../_images/confusion-271.png" src="../_images/confusion-271.png" />
+
+<div data-childcomponent="drawing_images_review_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=drawing_images_review_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# second review shape
+</textarea>
+</div>
+</div>
 <div class="section" id="number-guessing-game">
-<h2>Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
+<h2>2.13. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
 <p>Remember the number guessing game we created in Scratch? The basic premise was as follows:</p>
 <ul class="simple">
 <li>generates a random number from 1 to 100 and stores it in a variable</li>
@@ -637,6 +733,19 @@ user_guess = -1
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. Reeborg Review' data-toggle="tooltip">
+    <a href="Reeborg.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Reeborg.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >Next Section - How the Internet Works Videos</a>
 
 <script type="text/javascript">
 
