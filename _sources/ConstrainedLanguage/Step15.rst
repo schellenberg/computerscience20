@@ -27,11 +27,11 @@ Extra for Experts
 
 **Only attempt the following step if you are either: ahead of the rest of your peers, or finished off the rest of the steps. If you've been having any trouble with these Reeborg steps, just skip this Extra for Experts for now. You can always come back and try it later!**
 
-The program you write to solve the problem above must also be able work on the second test world, which is Step 15b on the `Reeborg website <https://sk-opentexts.github.io/reeborg>`_ . 
+The program you write to solve the problem above must also be able work on the second test world, which is Step 15b on the `Reeborg website <https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2015b>`_ . 
 
 .. image:: images/step15b.png
 
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2015a" target="_blank">Reeborg environment</a>

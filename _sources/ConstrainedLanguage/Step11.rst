@@ -64,7 +64,7 @@ Create a program to have Reeborg walk around the outside of the garden, picking 
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2011" target="_blank">Reeborg environment</a>
 
 
 If You're Having Trouble (a more detailed explanation)

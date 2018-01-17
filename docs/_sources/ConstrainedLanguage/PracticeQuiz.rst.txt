@@ -160,7 +160,7 @@ Open the |alcove1| and create a solution to this problem!
 
 .. |alcove1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove.json&name=PracticeQuizAlcove" target="_blank">Mirror Image Practice Quiz world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/practice-quiz-alcove.json&name=PracticeQuizAlcove" target="_blank">Mirror Image Practice Quiz world</a>
 
 
 
@@ -224,4 +224,4 @@ Open the |alcove2| and create a solution to this problem!
 
 .. |alcove2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/practice-quiz-alcove2.json&name=PracticeQuizAlcove2" target="_blank">Mirror Image Practice Quiz world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/practice-quiz-alcove2.json&name=PracticeQuizAlcove2" target="_blank">Mirror Image Practice Quiz world</a>

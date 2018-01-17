@@ -20,7 +20,7 @@ See if you can recreate a solution for |step_16| (without looking back at how yo
 
 .. |step_16| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&collection=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Step 16</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Step 16</a>
 
 Question 2 - Review a Previous Quiz
 ------------------------------------

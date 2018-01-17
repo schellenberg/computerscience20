@@ -21,7 +21,7 @@ Open the |star_tower1| to implement your solution!
 
 .. |star_tower1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower1.json&name=StarTower1" target="_blank">Star Tower 1 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/star-tower1.json&name=StarTower1" target="_blank">Star Tower 1 world</a>
 
 The world will look something like this at the start:
 
@@ -41,7 +41,7 @@ Open the |star_tower2| to implement your solution!
 
 .. |star_tower2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/star-tower2.json&name=StarTower2" target="_blank">Star Tower 2 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/star-tower2.json&name=StarTower2" target="_blank">Star Tower 2 world</a>
 
 The world will look something like this at the start:
 
@@ -58,7 +58,7 @@ Open the |target_practice| to implement your solution!
 
 .. |target_practice| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/target-practice.json&name=TargetPractice" target="_blank">Target Practice world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/target-practice.json&name=TargetPractice" target="_blank">Target Practice world</a>
 
 The world will look something like this at the start:
 
@@ -74,7 +74,7 @@ Open the |line_follower| to implement your solution!
 
 .. |line_follower| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/line-follower.json&name=LineFollower" target="_blank">Line Follower world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/line-follower.json&name=LineFollower" target="_blank">Line Follower world</a>
 
 The world will look something like this at the start:
 
@@ -90,7 +90,7 @@ Open the |doubler| to implement your solution!
 
 .. |doubler| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/doubler.json&name=Doubler" target="_blank">Double the Pile world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/doubler.json&name=Doubler" target="_blank">Double the Pile world</a>
 
 The world will look something like this at the start:
 
@@ -107,7 +107,7 @@ Open the |find_center_1| to implement your solution!
 
 .. |find_center_1| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/center1.json&name=FindCenter1" target="_blank">Find Center 1 world</a>
 
 The world will look something like this at the start:
 
@@ -123,7 +123,7 @@ Open the |find_center_2| to implement your solution!
 
 .. |find_center_2| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=src/worlds/steps/center2.json&name=FindCenter2" target="_blank">Find Center 2 world</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/center2.json&name=FindCenter2" target="_blank">Find Center 2 world</a>
 
 The world will look something like this at the start:
 

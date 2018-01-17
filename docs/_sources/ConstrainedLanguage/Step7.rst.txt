@@ -50,4 +50,4 @@ Use the functions you have created to plant Reeborg's birthday message. Each ins
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg" target="_blank">Reeborg environment</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%207" target="_blank">Reeborg environment</a>
