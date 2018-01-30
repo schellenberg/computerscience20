@@ -197,6 +197,7 @@
 <li><a class="reference internal" href="#repetition">2.2. Repetition</a></li>
 <li><a class="reference internal" href="#movement-using-wasd-version-1">2.3. Movement Using WASD - Version 1</a></li>
 <li><a class="reference internal" href="#movement-using-wasd-version-2">2.4. Movement Using WASD - Version 2</a></li>
+<li><a class="reference internal" href="#practice-problem">2.5. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -291,12 +292,30 @@
 <img alt="../_images/scratch_coordinate_plane.png" src="../_images/scratch_coordinate_plane.png" />
 <p>In order for a sprite to move up on the screen, we need to increase the y value of coordinate. To move it down, we need to decrease the y value. To move right, we would increase the x value. Finally, to move left, we would decrease the x value. To make this happen, we can use the <strong>change x by</strong> and <strong>change y by</strong> blocks found in the <strong>Motion</strong> tab. To move in the correct direction, we just need to put in positive/negative <em>change by</em> values for x and y, depending on which direction we want the sprite to move. Recreate the following:</p>
 <img alt="../_images/scratch_wasd_basic.png" src="../_images/scratch_wasd_basic.png" />
-<p>Take a minute to experiment with this first attempt at WASD motion. You will quickly notice that there are a few issues with the way the motion is happening.</p>
+<p>Take a minute to experiment with this first attempt at WASD motion. You will quickly notice that there are a few issues with the way the motion is happening. The most obvious problem is that the motion is quite jittery. To see this, hold down one of the WASD keys. The sprite begins to move, hesitates for a moment, then continues to move.</p>
+<p>The hesitation in the sprite movement happens because the operating system on your computer has a built in delay  before it accepts multiples of the same character being sent from your keyboard. This is a very important feature of the operating system, and is not something we can (or would want to) override. If the delay did not exist, when you were typing anything on your computer, you would need to be incredibly careful about how long you held down each key, or multiple copies of the current letter would show up.</p>
+<p>If we cannot override this feature of your operating system, how can we improve the WASD movement that we created above? The answer is to use some new blocks that allow us to repeatedly ask the computer whether a particular key is pressed, as described below.</p>
 </div>
 <div class="section" id="movement-using-wasd-version-2">
 <h2>2.4. Movement Using WASD - Version 2<a class="headerlink" href="#movement-using-wasd-version-2" title="Permalink to this headline">¶</a></h2>
-<p>WASD smoothly (FOREVER block, using if statements)</p>
-<p>Work time on first assignment [short story], for any remaining time.</p>
+<p>When we made a character shrink in the code above, we used a <strong>repeat 50</strong> block to have the computer do a particular instruction (change size) multiple times. Another block that allows us to repeat something multiple times is the forever block:</p>
+<img alt="../_images/scratch_forever_block.png" src="../_images/scratch_forever_block.png" />
+<p>As you have guessed, anything inside the forever block will continue to be repeated over and over, until the program ends (or you tell the computer to stop the loop). In this case, the thing that we want to have repeated over and over is asking the computer whether a specific key is currently being pressed.</p>
+<p>Whenever we want to ask the computer a question, we use an <strong>if-then</strong> block:</p>
+<img alt="../_images/scratch_if_block.png" src="../_images/scratch_if_block.png" />
+<p>The blank inside the if-then block can be filled in by any question that gives a True or False answer. Consider the following question (the question <em>key space pressed</em> is from the Sensing tab):</p>
+<img alt="../_images/scratch_if_space_pressed.png" src="../_images/scratch_if_space_pressed.png" />
+<p>This question will be True if the spacebar is pressed when the question is asked, and False if the spacebar is not pressed when the question is asked. Any code that you put inside the if-then block will only be executed if the question evaluates to True.</p>
+<p>If we put a number of these questions inside a forever block, we can ask the questions many times each second. This allows us to create a much smoother version of WASD motion, as shown below.</p>
+<img alt="../_images/scratch_better_wasd.png" src="../_images/scratch_better_wasd.png" />
+</div>
+<div class="section" id="practice-problem">
+<h2>2.5. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>Work on your first Scratch assignment, for any remaining time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.</p>
+</div>
 </div>
 </div>
 

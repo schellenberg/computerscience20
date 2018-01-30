@@ -77,15 +77,41 @@ In order for a sprite to move up on the screen, we need to increase the y value 
 
 .. image:: images/scratch_wasd_basic.png
 
-Take a minute to experiment with this first attempt at WASD motion. You will quickly notice that there are a few issues with the way the motion is happening. 
+Take a minute to experiment with this first attempt at WASD motion. You will quickly notice that there are a few issues with the way the motion is happening. The most obvious problem is that the motion is quite jittery. To see this, hold down one of the WASD keys. The sprite begins to move, hesitates for a moment, then continues to move. 
+
+The hesitation in the sprite movement happens because the operating system on your computer has a built in delay  before it accepts multiples of the same character being sent from your keyboard. This is a very important feature of the operating system, and is not something we can (or would want to) override. If the delay did not exist, when you were typing anything on your computer, you would need to be incredibly careful about how long you held down each key, or multiple copies of the current letter would show up. 
+
+If we cannot override this feature of your operating system, how can we improve the WASD movement that we created above? The answer is to use some new blocks that allow us to repeatedly ask the computer whether a particular key is pressed, as described below.
 
 
 Movement Using WASD - Version 2
 ------------------------------------------
-WASD smoothly (FOREVER block, using if statements)
+
+When we made a character shrink in the code above, we used a **repeat 50** block to have the computer do a particular instruction (change size) multiple times. Another block that allows us to repeat something multiple times is the forever block:
+
+.. image:: images/scratch_forever_block.png
+
+As you have guessed, anything inside the forever block will continue to be repeated over and over, until the program ends (or you tell the computer to stop the loop). In this case, the thing that we want to have repeated over and over is asking the computer whether a specific key is currently being pressed. 
+
+Whenever we want to ask the computer a question, we use an **if-then** block:
+
+.. image:: images/scratch_if_block.png
+
+The blank inside the if-then block can be filled in by any question that gives a True or False answer. Consider the following question (the question *key space pressed* is from the Sensing tab):
+
+.. image:: images/scratch_if_space_pressed.png
+
+This question will be True if the spacebar is pressed when the question is asked, and False if the spacebar is not pressed when the question is asked. Any code that you put inside the if-then block will only be executed if the question evaluates to True.
+
+If we put a number of these questions inside a forever block, we can ask the questions many times each second. This allows us to create a much smoother version of WASD motion, as shown below.
+
+.. image:: images/scratch_better_wasd.png
 
 
-Work time on first assignment [short story], for any remaining time.
+Practice Problem
+------------------
 
+Work on your first Scratch assignment, for any remaining time. 
 
+.. note:: If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.
 
