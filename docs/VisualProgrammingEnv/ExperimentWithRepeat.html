@@ -256,11 +256,7 @@
 
     </div>
     <p>If you’d prefer to watch a video describing how to create your first Scratch program, <a class="reference external" href="https://www.youtube.com/watch?v=AJ1elMM7CwY">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
-<iframe src="https://www.youtube.com/embed/AJ1elMM7CwY"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This is just a stub, to give a sense of what should go here. It will be written up properly soon…</p>
-</div>
-<div class="section" id="character-following-the-mouse">
+<iframe src="https://www.youtube.com/embed/AJ1elMM7CwY"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="character-following-the-mouse">
 <h2>3.1. Character Following the Mouse<a class="headerlink" href="#character-following-the-mouse" title="Permalink to this headline">¶</a></h2>
 <p>Let’s make a program that has a cat following the mouse cursor around the stage, then meowing when it touches the mouse cursor. To start, hook up a <strong>forever</strong> block to a <strong>when key is pressed</strong> event block. Now put a <strong>point towards mouse-pointer</strong> block inside the forever block. Your program should look like this:</p>
 <img alt="../_images/scratch_point_to_mouse.png" src="../_images/scratch_point_to_mouse.png" />
@@ -269,7 +265,10 @@
 <p>When you press the space key now, the cat should be following your mouse cursor around the screen. There is an obvious problem, however, when the cat actually <em>catches</em> the mouse. The cat overshoots the mouse, gets to the other side of it, turns around, then does the same thing all over again. Let’s fix this situation by having the cat stop moving when it gets close to the mouse, and make a meowing sound instead.</p>
 <p>We learned in the previous lesson that anytime you want to ask the computer a question, you can do it using an <strong>if-then</strong> block. Although we could use an <strong>if-then</strong> block to ask whether the cat is close to the mouse, in this situation we want to do one thing if the cat is far away, and a different thing when the cat is close. For situations like this, we can use a <strong>if/else</strong> block. The question we want to ask the computer is whether or not the cat is currently touching the mouse pointer. If it is, we want to have the cat make a meow sound. If it isn’t, the cat should move closer to the mouse. To do this in Scratch, hook up an <strong>if/else</strong> block inside your forever block as follows:</p>
 <img alt="../_images/scratch_if_else.png" src="../_images/scratch_if_else.png" />
-<p>Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn’t the behaviour you want, you can use the <strong>play sound</strong> block instead of the <strong>play sound until done</strong> block.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn’t the behaviour you want, you can use the <strong>play sound</strong> block instead of the <strong>play sound until done</strong> block.</p>
+</div>
 </div>
 <div class="section" id="drawing-regular-polygons">
 <h2>3.2. Drawing Regular Polygons<a class="headerlink" href="#drawing-regular-polygons" title="Permalink to this headline">¶</a></h2>
@@ -282,11 +281,11 @@
 </div>
 <p>For many students, the first square they draw would be with code that looks like this:</p>
 <img alt="../_images/scratch_first_square.png" src="../_images/scratch_first_square.png" />
-<p>Although this does create a square, notice that there is code that is repeated multiple times. Any time you notice identical code being repeated, it should trigger a warning bell in your head saying “There’s got to be a better way!”. Think back to when we made a sprite shrink. We used a <strong>repeat</strong> block. We can improve the drawing a square code above by making putting the code that shows up over and over into a <strong>repeat</strong> block, as follows:</p>
+<p>Although this does create a square, notice that there is code that is repeated multiple times. Any time you notice identical code being repeated, it should trigger a warning bell in your head saying “There’s got to be a better way!”. Think back to when we made a sprite shrink. We used a <strong>repeat</strong> block. We can improve the drawing a square code above by putting the code that shows up over and over into a <strong>repeat</strong> block, as follows:</p>
 <img alt="../_images/scratch_better_square.png" src="../_images/scratch_better_square.png" />
 <div class="topic">
 <p class="topic-title first">Your Turn 2</p>
-<p>Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the <em>t</em> key draws a triangle, <em>p</em> draws a pentagon, etc.</p>
+<p>Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the <em>t</em> key draws a triangle, <em>s</em> draws a square, <em>p</em> draws a pentagon, etc.</p>
 <p><img alt="regularPolygonImages" src="../_images/scratch_regular_polygons.png" /></p>
 <p>If you complete the regular polygons before the rest of your classmates, try to draw a circle and a five sided star.</p>
 <p><img alt="extraShapes" src="../_images/scratch_extra_shapes.png" /></p>
@@ -324,6 +323,10 @@
 <tr class="row-even"><td>octagon</td>
 <td>8</td>
 <td>45</td>
+</tr>
+<tr class="row-odd"><td>polygon</td>
+<td>n</td>
+<td>360/n</td>
 </tr>
 </tbody>
 </table>

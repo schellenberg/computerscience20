@@ -21,8 +21,6 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :align: left
     :http: https
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
-
 Character Following the Mouse
 -----------------------------
 
@@ -40,7 +38,7 @@ We learned in the previous lesson that anytime you want to ask the computer a qu
 
 .. image:: images/scratch_if_else.png
 
-Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn't the behaviour you want, you can use the **play sound** block instead of the **play sound until done** block.
+.. note:: Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn't the behaviour you want, you can use the **play sound** block instead of the **play sound until done** block.
 
 Drawing Regular Polygons
 ------------------------
@@ -59,13 +57,13 @@ For many students, the first square they draw would be with code that looks like
 
 .. image:: images/scratch_first_square.png
 
-Although this does create a square, notice that there is code that is repeated multiple times. Any time you notice identical code being repeated, it should trigger a warning bell in your head saying "There's got to be a better way!". Think back to when we made a sprite shrink. We used a **repeat** block. We can improve the drawing a square code above by making putting the code that shows up over and over into a **repeat** block, as follows:
+Although this does create a square, notice that there is code that is repeated multiple times. Any time you notice identical code being repeated, it should trigger a warning bell in your head saying "There's got to be a better way!". Think back to when we made a sprite shrink. We used a **repeat** block. We can improve the drawing a square code above by putting the code that shows up over and over into a **repeat** block, as follows:
 
 .. image:: images/scratch_better_square.png
 
 .. topic:: Your Turn 2
 
-    Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the *t* key draws a triangle, *p* draws a pentagon, etc.
+    Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the *t* key draws a triangle, *s* draws a square, *p* draws a pentagon, etc.
     
     |regularPolygonImages| 
 
@@ -91,6 +89,8 @@ Although you may have used a guess and check method to determine the angles used
 | hexagon    | 6       | 60          |
 +------------+---------+-------------+
 | octagon    | 8       | 45          |
++------------+---------+-------------+
+| polygon    | n       | 360/n       |
 +------------+---------+-------------+
 
 .. note:: This lesson draws on ideas from the `Beauty and Joy of Computing Curriculum <http://bjc.edc.org/>`_ .
