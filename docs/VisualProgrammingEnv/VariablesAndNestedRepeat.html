@@ -194,7 +194,8 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">4. Drawing Polygons - Part 2 (Variables and Nested Repeat)</a><ul>
 <li><a class="reference internal" href="#variables">4.1. Variables</a></li>
-<li><a class="reference internal" href="#nested-repeat-blocks">4.2. Nested Repeat blocks</a></li>
+<li><a class="reference internal" href="#nested-repeat-blocks">4.2. Nested Repeat Blocks</a></li>
+<li><a class="reference internal" href="#practice-problem">4.3. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -264,12 +265,48 @@
 </div>
 <div class="section" id="variables">
 <h2>4.1. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-<p>Variables (to improve code from yesterday).</p>
+<p>When we drew a variety of regular polygons in the last section, we found that there was a pattern we could use, as shown in the image below:</p>
+<img alt="../_images/scratch_polygon_repeat.png" src="../_images/scratch_polygon_repeat.png" />
+<p>The code above will draw a triangle, and as we discovered previously, if we were to change the two circled 3’s into 4’s, the code would draw a square (4-sided polygon) instead. In this situation, it would be really nice to have some way to easily set the value of both circled numbers to be the same thing. In other words, it would be great to be able to change the value of one to be a 5, and have the other automatically be a 5 as well. If we could do this, we would be able to draw any regular polygon by simply changing one number.</p>
+<p>In order to create code that behaves in the manner described above, we need to introduce the idea of a <strong>variable</strong>. You have learned about variables in math class. In mathematics, they are just a symbol that can hold any number. In computer science, a variable is a container that can hold any number, but can also hold any other type of information (words, lists of numbers, video, sound, etc). In this situation, all we need a variable to hold is a number.</p>
+<p>To create a variable in Scratch, click on the Data tab, then click Make a Variable. Be sure to use useful names for your variables. For example, <em>Number of Sides</em> would be a useful, descriptive variable name for this example.</p>
+<img alt="../_images/scratch_make_a_variable.png" src="../_images/scratch_make_a_variable.png" />
+<p>After creating a variable, you will now see a number of blocks appear in the Data tab. To make use of the variable, simply drag and drop the variable name into the locations you want to use it (in this case, the two circled locations from above).</p>
+<img alt="../_images/scratch_use_variable.gif" src="../_images/scratch_use_variable.gif" />
+<p>If you press the space key, nothing will happen. This is because the default value of the variable you created is 0 (which you can see in the upper left corner of the stage). We need to set the value of the variable to something useful, as shown below:</p>
+<img alt="../_images/scratch_set_variable.png" src="../_images/scratch_set_variable.png" />
+<p>Now click the flag, then press the space key. You should see the sprite draw a square. Although we have successfully made our script use variables, it might not yet seem like this is much better than our previous version of the code.</p>
+<p>To demonstrate how using variables really does improve our code, let’s add two more events to our program, as shown below:</p>
+<img alt="../_images/scratch_up_down_variables.png" src="../_images/scratch_up_down_variables.png" />
+<p>Notice that we are using the <strong>change variable by ** block, instead of the **set variable to</strong> block. This allows us to increase or decrease the value of the variable by some amount, regardless of what the value was before. You should now be able to press the space key to draw a polygon, press the up/down arrows a number of times, then press the space key to draw a different polygon.</p>
 </div>
 <div class="section" id="nested-repeat-blocks">
-<h2>4.2. Nested Repeat blocks<a class="headerlink" href="#nested-repeat-blocks" title="Permalink to this headline">¶</a></h2>
-<p>Nested Repeat blocks – polygons, with rotation.</p>
-<p>Work time on short story.</p>
+<h2>4.2. Nested Repeat Blocks<a class="headerlink" href="#nested-repeat-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Let’s add one more thing to our program. Say we wanted to repeat drawing the polygon multiple times. We can simply enclose the portion of our code that draws the polygon in <em>another</em> repeat block. The following code would draw the same polygon 10 times:</p>
+<img alt="../_images/scratch_nested_repeat.png" src="../_images/scratch_nested_repeat.png" />
+<p>Although this does repeat the polygon drawing, it is really boring. The polygon is simply drawn on top of it’s previous location, so it looks just like it did before!</p>
+<p>By adding one block, however, we can make this drawing a lot more interesting. Let’s add another turn block, <em>inside</em> the repeat 10, but <em>outside</em> the polygon drawing code.</p>
+<img alt="../_images/scratch_nested_repeat_with_turn.png" src="../_images/scratch_nested_repeat_with_turn.png" />
+<p>The code above will draw something like the following (assuming that the Number of Sides variable is set to 4):</p>
+<img alt="../_images/scratch_nested_loops_image.png" src="../_images/scratch_nested_loops_image.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Experiment with the numbers in the outer repeat (shown as a 10), and the outer turn (shown as a 36). What combinations of numbers allow the sprite to end facing the same direction it was facing when it started drawing? Why?</p>
+</div>
+<p>You might find it interesting to make one more variable in your sketch (perhaps named <em>Number of Shapes</em>), and change the pen color at different places in your drawing. Adapt your code to look like the following:</p>
+<img alt="../_images/scratch_nested_loops_multiple_variables.png" src="../_images/scratch_nested_loops_multiple_variables.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Try moving the <strong>change pen color</strong> block so that it is right after the <strong>move 100 steps</strong> block. What do you expect the resulting image to look like?</p>
+</div>
+</div>
+<div class="section" id="practice-problem">
+<h2>4.3. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>Work on your first Scratch assignment, for any remaining time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.</p>
+</div>
 </div>
 </div>
 

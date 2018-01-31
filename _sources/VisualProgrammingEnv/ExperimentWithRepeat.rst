@@ -96,5 +96,11 @@ Although you may have used a guess and check method to determine the angles used
 .. note:: This lesson draws on ideas from the `Beauty and Joy of Computing Curriculum <http://bjc.edc.org/>`_ .
 
 
+Practice Problem
+------------------
+
+Work on your first Scratch assignment, for any remaining time. 
+
+.. note:: If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.
 
 
