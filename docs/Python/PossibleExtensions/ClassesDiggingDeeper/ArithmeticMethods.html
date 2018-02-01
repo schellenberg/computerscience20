@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Arithmetic Methods &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Arithmetic Methods</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="arithmetic-methods">
+<h1>Arithmetic Methods<a class="headerlink" href="#arithmetic-methods" title="Permalink to this headline">¶</a></h1>
+<p>We will conclude this chapter by adding a few more methods to our <code class="docutils literal"><span class="pre">Fraction</span></code> class.  In particular, we will implement
+arithmetic.  To begin, consider what it means to add two fractions together.
+Remember that you can only add fractions if they have the same denominator.  The easiest way to find a common denominator is
+to multiply the two individual denominators together.  Anything we do to the denominator needs to the done to the numerator.  This gives us the following equation for fraction addition:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">/</span><span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="o">/</span><span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">ad</span> <span class="o">+</span> <span class="n">cb</span><span class="p">)</span><span class="o">/</span><span class="n">bd</span>
+</pre></div>
+</div>
+<p>Our <code class="docutils literal"><span class="pre">add</span></code> method will take a <code class="docutils literal"><span class="pre">Fraction</span></code> as a parameter.  It will return a new <code class="docutils literal"><span class="pre">Fraction</span></code> representing the sum.  We
+will use the equation shown above to compute the new numerator and the new denominator.  Since this equation will not
+give us lowest terms, we will utilize a similar technique as was used in the <code class="docutils literal"><span class="pre">simplify</span></code> method to find the
+greatest common divisor and then divide each part of the new fraction.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">otherfraction</span><span class="p">):</span>
+
+    <span class="n">newnum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="o">*</span><span class="n">otherfraction</span><span class="o">.</span><span class="n">den</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">den</span><span class="o">*</span><span class="n">otherfraction</span><span class="o">.</span><span class="n">num</span>
+    <span class="n">newden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">den</span> <span class="o">*</span> <span class="n">otherfraction</span><span class="o">.</span><span class="n">den</span>
+
+    <span class="n">common</span> <span class="o">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">newnum</span><span class="p">,</span><span class="n">newden</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Fraction</span><span class="p">(</span><span class="n">newnum</span><span class="o">//</span><span class="n">common</span><span class="p">,</span><span class="n">newden</span><span class="o">//</span><span class="n">common</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can try the addition method and then modify the fractions and retry.</p>
+
+<div data-childcomponent="fractions_add1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=fractions_add1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def gcd(m, n):
+    while m % n != 0:
+        oldm = m
+        oldn = n
+
+        m = oldn
+        n = oldm % oldn
+
+    return n
+
+class Fraction:
+
+    def __init__(self, top, bottom):
+
+        self.num = top        # the numerator is on top
+        self.den = bottom     # the denominator is on the bottom
+
+    def __str__(self):
+        return str(self.num) + "/" + str(self.den)
+
+    def simplify(self):
+        common = gcd(self.num, self.den)
+
+        self.num = self.num // common
+        self.den = self.den // common
+
+    def add(self,otherfraction):
+
+        newnum = self.num*otherfraction.den + self.den*otherfraction.num
+        newden = self.den * otherfraction.den
+
+        common = gcd(newnum, newden)
+
+        return Fraction(newnum // common, newden // common)
+
+f1 = Fraction(1, 2)
+f2 = Fraction(1, 4)
+
+f3 = f1.add(f2)
+print(f3)
+</textarea>
+</div>
+<p>One final modification to this method will be quite useful.  Instead invoking the <code class="docutils literal"><span class="pre">add</span></code> method, we can use the
+addition operator “+”.  This requires that we implement another special method, this time called <code class="docutils literal"><span class="pre">__add__</span></code>.
+The details of the method are the same.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherfraction</span><span class="p">):</span>
+
+    <span class="n">newnum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="o">*</span><span class="n">otherfraction</span><span class="o">.</span><span class="n">den</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">den</span><span class="o">*</span><span class="n">otherfraction</span><span class="o">.</span><span class="n">num</span>
+    <span class="n">newden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">den</span> <span class="o">*</span> <span class="n">otherfraction</span><span class="o">.</span><span class="n">den</span>
+
+    <span class="n">common</span> <span class="o">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">newnum</span><span class="p">,</span> <span class="n">newden</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Fraction</span><span class="p">(</span><span class="n">newnum</span> <span class="o">//</span> <span class="n">common</span><span class="p">,</span> <span class="n">newden</span> <span class="o">//</span> <span class="n">common</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>However, now we can perform addition in the same manner that we are used to with other numeric data.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">f1</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">f3</span> <span class="o">=</span> <span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span>    <span class="c1"># calls the __add__ method of f1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.</p>
+
+<div data-childcomponent="scratch_cl_02" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=scratch_cl_02 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

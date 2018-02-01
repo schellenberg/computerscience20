@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>What is an exception? &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">What is an exception?</a></li>
+<li><a class="reference internal" href="#exception-handling-flow-of-control">Exception Handling Flow-of-control</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="what-is-an-exception">
+<h1>What is an exception?<a class="headerlink" href="#what-is-an-exception" title="Permalink to this headline">¶</a></h1>
+<p>An <em>exception</em> is a signal that a condition has occurred that can’t be easily
+handled using the normal flow-of-control of a Python program. <em>Exceptions</em>
+are often defined as being “errors” but this is not always the case. All
+errors in Python are dealt with using <em>exceptions</em>, but not all
+<em>exceptions</em> are errors.</p>
+</div>
+<div class="section" id="exception-handling-flow-of-control">
+<h1>Exception Handling Flow-of-control<a class="headerlink" href="#exception-handling-flow-of-control" title="Permalink to this headline">¶</a></h1>
+<p>To explain what an <em>exception</em> does, let’s review the normal “flow of control”
+in a Python program. In normal operation Python executes statements sequentially,
+one after the other. For three constructs, if-statements, loops and function
+invocations, this sequential execution is interrupted.</p>
+<ul class="simple">
+<li>For <em>if-statements</em>, only one of several statement blocks is executed and
+then flow-of-control jumps to the first statement after the if-statement.</li>
+<li>For <em>loops</em>, when the end of the loop is reached, flow-of-control jumps back
+to the start of the loop and a test is used to determine if the loop needs
+to execute again. If the loop is finished, flow-of-control jumps to the
+first statement after the loop.</li>
+<li>For <em>function invocations</em>, flow-of-control jumps to the first statement in
+the called function, the function is executed, and the flow-of-control
+jumps back to the next statement after the function call.</li>
+</ul>
+<p>Do you see the pattern? If the flow-of-control is not purely sequential, it
+always executes the first statement immediately following the altered
+flow-of-control. That is why we can say that Python flow-of-control is
+sequential. But there are cases where this sequential flow-of-control does
+not work well. An example will best explain this.</p>
+<p>Let’s suppose that a program contains complex logic that is appropriately
+subdivided into functions. The program is running and it currently is executing
+function D, which was called by function C, which was called by function B,
+which was called by function A, which was called from the main function. This
+is illustrated by the following simplistic code example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="n">A</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+  <span class="n">B</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">B</span><span class="p">():</span>
+  <span class="n">C</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">C</span><span class="p">():</span>
+  <span class="n">D</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">()</span>
+  <span class="c1"># processing</span>
+</pre></div>
+</div>
+<p>Function D determines that the current processing won’t work for some reason
+and needs to send a message to the main function to try something different.
+However, all that function D can do using normal flow-of-control is to return
+a value to function C. So function D returns a special value to function C
+that means “try something else”. Function C has to recognize this value,
+quit its processing, and return the special value to function B. And so forth
+and so on. It would be very helpful if function D could communicate directly
+with the main function (or functions A and B) without sending a special value
+through the intermediate calling functions. Well, that is exactly what an
+<em>exception</em> does. An <em>exception</em> is a message to any function currently on the
+executing program’s “run-time-stack”. (The “run-time-stack” is what keeps track
+of the active function calls while a program is executing.)</p>
+<p>In Python, your create an <em>exception</em> message using the <code class="docutils literal"><span class="pre">raise</span></code> command. The
+simplest format for a <code class="docutils literal"><span class="pre">raise</span></code> command is the keyword <code class="docutils literal"><span class="pre">raise</span></code> followed by
+the name of an exception. For example:</p>
+<div class="highlight-Python"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">ExceptionName</span>
+</pre></div>
+</div>
+<p>So what happens to an <em>exception</em> message after it is created? The normal
+flow-of-control of a Python program is interrupted and Python starts looking
+for any code in its run-time-stack that is interested in dealing with the
+message. It always searches from its current location at the bottom of the
+run-time-stack, up the stack, in the order the functions were originally
+called. A <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block is used to say “hey,
+I can deal with that message.” The first <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block that Python
+finds on its search back up the run-time-stack will be executed. If there
+is no <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block found, the program “crashes” and prints its
+run-time-stack to the console.</p>
+<p>Let’s take a look at several code examples to illustrate this process. If
+function D had a <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block around the code that <code class="docutils literal"><span class="pre">raised</span></code> a
+<code class="docutils literal"><span class="pre">MyException</span></code> message, then the flow-of-control would be passed to the
+local <code class="docutils literal"><span class="pre">except</span></code> block. That is, function D would handle it’s own issues.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="n">A</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+  <span class="n">B</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">B</span><span class="p">():</span>
+  <span class="n">C</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">C</span><span class="p">():</span>
+  <span class="n">D</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">()</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="c1"># processing code</span>
+    <span class="k">if</span> <span class="n">something_special_happened</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="n">MyException</span>
+  <span class="k">except</span> <span class="n">MyException</span><span class="p">:</span>
+    <span class="c1"># execute if the MyException message happened</span>
+</pre></div>
+</div>
+<p>But perhaps function C is better able to handle the issue, so you could put
+the <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block in function C:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="n">A</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+  <span class="n">B</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">B</span><span class="p">():</span>
+  <span class="n">C</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">C</span><span class="p">():</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">D</span><span class="p">()</span>
+  <span class="k">except</span> <span class="n">MyException</span><span class="p">:</span>
+    <span class="c1"># execute if the MyException message happened</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">()</span>
+  <span class="c1"># processing code</span>
+  <span class="k">if</span> <span class="n">something_special_happened</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">MyException</span>
+</pre></div>
+</div>
+<p>But perhaps the main function is better able to handle the issue, so you
+could put the <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block in the main function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">A</span><span class="p">()</span>
+  <span class="k">except</span> <span class="n">MyException</span><span class="p">:</span>
+    <span class="c1"># execute if the MyException message happened</span>
+
+<span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+  <span class="n">B</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">B</span><span class="p">():</span>
+  <span class="n">C</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">C</span><span class="p">():</span>
+  <span class="n">D</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">()</span>
+  <span class="c1"># processing code</span>
+  <span class="k">if</span> <span class="n">something_special_happened</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">MyException</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>Let’s summarize our discussion. An <em>exception</em> is a message that something
+“out-of-the-ordinary” has happened and the normal flow-of-control needs to
+be abandoned. When an <em>exception</em> is <code class="docutils literal"><span class="pre">raised</span></code>, Python searches its run-time-stack
+for a <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block that can appropriately deal with the condition.
+The first <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block that knows how to deal with the issue is
+executed and then flow-of-control is returned to its normal sequential execution.
+If no appropriate <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block is found, the program “crashes” and
+prints its run-time-stack to the console.</p>
+<p>As our final example, here is a program that crashes because no valid
+<code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block was found to process the <code class="docutils literal"><span class="pre">MyException</span></code> message.
+Notice that the <code class="docutils literal"><span class="pre">try:</span> <span class="pre">except:</span></code> block in the main function only knows how
+to deal with <code class="docutils literal"><span class="pre">ZeroDivisonError</span></code> messages, not <code class="docutils literal"><span class="pre">MyException</span></code> messages.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">A</span><span class="p">()</span>
+  <span class="k">except</span> <span class="n">ZeroDivisonError</span><span class="p">:</span>
+    <span class="c1"># execute if a ZeroDivisonError message happened</span>
+
+<span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+  <span class="n">B</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">B</span><span class="p">():</span>
+  <span class="n">C</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">C</span><span class="p">():</span>
+  <span class="n">D</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">D</span><span class="p">()</span>
+  <span class="c1"># processing code</span>
+  <span class="k">if</span> <span class="n">something_special_happened</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">MyException</span>
+</pre></div>
+</div>
+<span class="target" id="index-0"></span></div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

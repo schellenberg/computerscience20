@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>6.10. Exercises &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">6.10. Exercises</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="exercises">
+<h1>6.10. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+
+    <div data-component="question" class="full-width container question" id="selection_ex_1" >
+    <ol start=1 class=arabic><li class="alert alert-warning">
+
+    <div id='q1' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_1" class="runestone explainer ac_section alert alert-warning">
+<p>What do these expressions evaluate to?</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">3</span> <span class="pre">==</span> <span class="pre">3</span></code></li>
+<li><code class="docutils literal"><span class="pre">3</span> <span class="pre">!=</span> <span class="pre">3</span></code></li>
+<li><code class="docutils literal"><span class="pre">3</span> <span class="pre">&gt;=</span> <span class="pre">4</span></code></li>
+<li><code class="docutils literal"><span class="pre">not</span> <span class="pre">(3</span> <span class="pre">&lt;</span> <span class="pre">4)</span></code></li>
+</ol>
+
+<textarea data-component="activecode" id=ex_6_1 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<ol class="arabic simple">
+<li>True</li>
+<li>False</li>
+<li>False</li>
+<li>False</li>
+</ol>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_eb4a097382404ffe81300aac5744e3fe_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_eb4a097382404ffe81300aac5744e3fe_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_eb4a097382404ffe81300aac5744e3fe_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_eb4a097382404ffe81300aac5744e3fe_' + eBookConfig.course;
+            disqus_url = 'http://disqus_eb4a097382404ffe81300aac5744e3fe_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_eb4a097382404ffe81300aac5744e3fe" onclick="disqus_eb4a097382404ffe81300aac5744e3fe_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_eb4a097382404ffe81300aac5744e3fe']").attr('data-disqus-identifier', 'disqus_eb4a097382404ffe81300aac5744e3fe_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_2" >
+    <ol start=2 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_2" class="runestone explainer ac_section alert alert-warning">
+<p>Give the <strong>logical opposites</strong> of these conditions.  You are not allowed to use the <code class="docutils literal"><span class="pre">not</span></code> operator.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></li>
+<li><code class="docutils literal"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">b</span></code></li>
+<li><code class="docutils literal"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">18</span>&#160; <span class="pre">and</span>&#160; <span class="pre">day</span> <span class="pre">==</span> <span class="pre">3</span></code></li>
+<li><code class="docutils literal"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">18</span>&#160; <span class="pre">or</span>&#160; <span class="pre">day</span> <span class="pre">!=</span> <span class="pre">3</span></code></li>
+</ol>
+
+<textarea data-component="activecode" id=ex_6_2 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_3" >
+    <ol start=3 class=arabic><li class="alert alert-warning">
+
+    <div id='q3' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_3" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function which is given an exam mark, and it returns a string — the grade for that mark — according to this
+scheme:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="58%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Mark</th>
+<th class="head">Grade</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&gt;= 90</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>[80-90)</td>
+<td>B</td>
+</tr>
+<tr class="row-even"><td>[70-80)</td>
+<td>C</td>
+</tr>
+<tr class="row-odd"><td>[60-70)</td>
+<td>D</td>
+</tr>
+<tr class="row-even"><td>&lt; 60</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>The square and round brackets denote closed and open intervals.
+A closed interval includes the number, and open interval excludes it.   So 79.99999 gets grade C , but 80 gets grade B.</p>
+<p>Test your function by printing the mark and the grade for a number of different marks.</p>
+
+<textarea data-component="activecode" id=ex_6_3 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+def getGrade(grade):
+      #your code here
+
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(getGrade(95),'A','Tested getGrade on input of 95')
+        self.assertEqual(getGrade(85),'B','Tested getGrade on input of 85')
+        self.assertEqual(getGrade(65),'D','Tested getGrade on input of 65')
+        self.assertEqual(getGrade(79.99999),'C','Tested getGrade on input of 79.9999')
+        self.assertEqual(getGrade(80),'B','Tested getGrade on input of 80')
+
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q3_question" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q3_question data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def grade(mark):
+    if mark >= 90:
+        return "A"
+    else:
+        if mark >= 80:
+            return "B"
+        else:
+            if mark >= 70:
+                return "C"
+            else:
+                if mark >= 60:
+                    return "D"
+                else:
+                    return "F"
+
+mark = 83
+print( "Mark:", str(mark), "Grade:", grade(mark))
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_b9e6fd14629949e59da1a4ae827c0032_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_b9e6fd14629949e59da1a4ae827c0032_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_b9e6fd14629949e59da1a4ae827c0032_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_b9e6fd14629949e59da1a4ae827c0032_' + eBookConfig.course;
+            disqus_url = 'http://disqus_b9e6fd14629949e59da1a4ae827c0032_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_b9e6fd14629949e59da1a4ae827c0032" onclick="disqus_b9e6fd14629949e59da1a4ae827c0032_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_b9e6fd14629949e59da1a4ae827c0032']").attr('data-disqus-identifier', 'disqus_b9e6fd14629949e59da1a4ae827c0032_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_4" >
+    <ol start=4 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_4" class="runestone explainer ac_section alert alert-warning">
+Modify the turtle bar chart program from the previous chapter so that the bar for any value
+of 200 or more is filled with red, values between [100 and 200) are filled yellow,
+and bars representing values less than 100 are filled green.
+<textarea data-component="activecode" id=ex_6_4 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_5" >
+    <ol start=5 class=arabic><li class="alert alert-warning">
+
+    <div id='q5' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_5" class="runestone explainer ac_section alert alert-warning">
+In the turtle bar chart program, what do you expect to happen if one or more
+of the data values in the list is negative?   Go back and try it out.  Change the
+program so that when it prints the text value for the negative bars, it puts
+the text above the base of the bar (on the 0 axis).
+<textarea data-component="activecode" id=ex_6_5 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="answer_ex_6_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=answer_ex_6_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def drawBar(t, height):
+    """ Get turtle t to draw one bar, of height. """
+    t.begin_fill()               # start filling this shape
+    if height < 0:
+        t.write(str(height))
+    t.left(90)
+    t.forward(height)
+    if height >= 0:
+        t.write(str(height))
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()                 # stop filling this shape
+
+
+
+xs = [48, -50, 200, 240, 160, 260, 220]  # here is the data
+maxheight = max(xs)
+minheight = min(xs)
+numbars = len(xs)
+border = 10
+
+tess = turtle.Turtle()           # create tess and set some attributes
+tess.color("blue")
+tess.fillcolor("red")
+tess.pensize(3)
+
+wn = turtle.Screen()             # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+if minheight > 0:
+    lly = 0
+else:
+    lly = minheight - border
+
+wn.setworldcoordinates(0-border, lly, 40*numbars+border, maxheight+border)
+
+
+for a in xs:
+    drawBar(tess, a)
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_0118bd02de23462bafdb51beb4c85e44_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_0118bd02de23462bafdb51beb4c85e44_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_0118bd02de23462bafdb51beb4c85e44_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_0118bd02de23462bafdb51beb4c85e44_' + eBookConfig.course;
+            disqus_url = 'http://disqus_0118bd02de23462bafdb51beb4c85e44_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_0118bd02de23462bafdb51beb4c85e44" onclick="disqus_0118bd02de23462bafdb51beb4c85e44_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_0118bd02de23462bafdb51beb4c85e44']").attr('data-disqus-identifier', 'disqus_0118bd02de23462bafdb51beb4c85e44_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_6" >
+    <ol start=6 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_6" class="runestone explainer ac_section alert alert-warning">
+Write a function <code class="docutils literal"><span class="pre">findHypot</span></code>.  The function will be given the length of two sides of a right-angled triangle and it should return
+the length of the hypotenuse.  (Hint:  <code class="docutils literal"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">0.5</span></code> will return the square root, or use <code class="docutils literal"><span class="pre">sqrt</span></code> from the math module)
+<textarea data-component="activecode" id=ex_6_6 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+def findHypot(a,b):
+    # your code here
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(findHypot(12.0,5.0),13.0,"Tested findHypot on inputs of 12.0 and 5.0")
+        self.assertEqual(findHypot(14.0,48.0),50.0,"Tested findHypot on inputs of 14.0 and 48.0")
+        self.assertEqual(findHypot(21.0,72.0),75.0,"Tested findHypot on inputs of 21.0 and 72.0")
+        self.assertAlmostEqual(findHypot(1,1.73205),1.999999,2,"Tested findHypot on inputs of 1 and 1.73205")
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_7" >
+    <ol start=7 class=arabic><li class="alert alert-warning">
+
+    <div id='q7' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_7" class="runestone explainer ac_section alert alert-warning">
+Write a function called <code class="docutils literal"><span class="pre">is_even(n)</span></code> that takes an integer as an argument
+and returns <code class="docutils literal"><span class="pre">True</span></code> if the argument is an <strong>even number</strong> and <code class="docutils literal"><span class="pre">False</span></code> if
+it is <strong>odd</strong>.
+<textarea data-component="activecode" id=ex_6_7 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+def is_even(n):
+    # your code here
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+     def testOne(self):
+         self.assertEqual(is_even(10),True,"Tested is_even on input of 10")
+         self.assertEqual(is_even(5),False,"Tested is_even on input of 5")
+         self.assertEqual(is_even(1),False,"Tested is_even on input of 1")
+         self.assertEqual(is_even(0),True,"Tested is_even on input of 0")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q7_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q7_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+from test import testEqual
+
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+testEqual(is_even(10), True)
+testEqual(is_even(5), False)
+testEqual(is_even(1), False)
+testEqual(is_even(0), True)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_7ae92646976d4953ac8a163f338b4358_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_7ae92646976d4953ac8a163f338b4358_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_7ae92646976d4953ac8a163f338b4358_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_7ae92646976d4953ac8a163f338b4358_' + eBookConfig.course;
+            disqus_url = 'http://disqus_7ae92646976d4953ac8a163f338b4358_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_7ae92646976d4953ac8a163f338b4358" onclick="disqus_7ae92646976d4953ac8a163f338b4358_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_7ae92646976d4953ac8a163f338b4358']").attr('data-disqus-identifier', 'disqus_7ae92646976d4953ac8a163f338b4358_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_8" >
+    <ol start=8 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_8" class="runestone explainer ac_section alert alert-warning">
+Now write the function <code class="docutils literal"><span class="pre">is_odd(n)</span></code> that returns <code class="docutils literal"><span class="pre">True</span></code> when <code class="docutils literal"><span class="pre">n</span></code> is odd
+and <code class="docutils literal"><span class="pre">False</span></code> otherwise.
+<textarea data-component="activecode" id=ex_6_8 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+def is_odd(n):
+    # your code here
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+     def testOne(self):
+         self.assertEqual(is_odd(10),False,"Tested is_odd on input of 10")
+         self.assertEqual(is_odd(5),True,"Tested is_odd on input of 5")
+         self.assertEqual(is_odd(1),True,"Tested is_odd on input of 1")
+         self.assertEqual(is_odd(0),False,"Tested is_odd on input of 0")
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_9" >
+    <ol start=9 class=arabic><li class="alert alert-warning">
+
+    <div id='q9' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_9" class="runestone explainer ac_section alert alert-warning">
+Modify <code class="docutils literal"><span class="pre">is_odd</span></code> so that it uses a call to <code class="docutils literal"><span class="pre">is_even</span></code> to determine if its
+argument is an odd integer.
+<textarea data-component="activecode" id=ex_6_9 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+def is_odd(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+     def testOne(self):
+         self.assertEqual(is_odd(10),False,"Tested is_odd on input of 10")
+         self.assertEqual(is_odd(5),True,"Tested is_odd on input of 5")
+         self.assertEqual(is_odd(1),True,"Tested is_odd on input of 1")
+         self.assertEqual(is_odd(0),False,"Tested is_odd on input of 0")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q9_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q9_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+from test import testEqual
+
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+def is_odd(n):
+    if is_even(n):
+        return False
+    else:
+        return True
+
+testEqual(is_odd(10), False)
+testEqual(is_odd(5), True)
+testEqual(is_odd(1), True)
+testEqual(is_odd(0), False)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_9125792d0c264b65b4d9d72d25485ceb_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_9125792d0c264b65b4d9d72d25485ceb_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_9125792d0c264b65b4d9d72d25485ceb_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_9125792d0c264b65b4d9d72d25485ceb_' + eBookConfig.course;
+            disqus_url = 'http://disqus_9125792d0c264b65b4d9d72d25485ceb_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_9125792d0c264b65b4d9d72d25485ceb" onclick="disqus_9125792d0c264b65b4d9d72d25485ceb_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_9125792d0c264b65b4d9d72d25485ceb']").attr('data-disqus-identifier', 'disqus_9125792d0c264b65b4d9d72d25485ceb_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_10" >
+    <ol start=10 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_10" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function <code class="docutils literal"><span class="pre">is_rightangled</span></code> which, given the length of three sides of a triangle,
+will determine whether the triangle is right-angled.  Assume that the third argument to the
+function is always the longest side.  It will return <code class="docutils literal"><span class="pre">True</span></code> if the triangle
+is right-angled, or <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+<p>Hint: floating point arithmetic is not always exactly accurate,
+so it is not safe to test floating point numbers for equality.
+If a good programmer wants to know whether
+<code class="docutils literal"><span class="pre">x</span></code> is equal or close enough to <code class="docutils literal"><span class="pre">y</span></code>, they would probably code it up as</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span>  <span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">:</span>      <span class="c1"># if x is approximately equal to y</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+
+<textarea data-component="activecode" id=ex_6_10 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+def is_rightangled(a, b, c):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(is_rightangled(1.5,2.0,2.5),True,"Tested is_rightangled on inputs of 1.5, 2.0 and 2.5")
+        self.assertEqual(is_rightangled(4.0,8.0,16.0),False,"Tested is_rightangled on inputs of 4.0, 8.0 and 16.0")
+        self.assertEqual(is_rightangled(4.1,8.2,9.1678787077),True,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.1678787077")
+        self.assertEqual(is_rightangled(4.1,8.2,9.16787),True,"Tested is_rightangled on inputs of 4.1, 8.2, and 9.16787")
+        self.assertEqual(is_rightangled(4.1,8.2,9.168),False,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.168")
+        self.assertEqual(is_rightangled(0.5,0.4,0.64031),True,"Tested is_rightangled on inputs of 0.5, 0.4 and 0.64031")
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_11" >
+    <ol start=11 class=arabic><li class="alert alert-warning">
+
+    <div id='q11' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_11" class="runestone explainer ac_section alert alert-warning">
+Extend the above program so that the sides can be given to the function in any order.
+<textarea data-component="activecode" id=ex_6_11 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+
+def is_rightangled(a, b, c):
+    # your code here
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(is_rightangled(1.5,2.5,2.0),True,"Tested is_rightangled on inputs of 1.5, 2.5 and 2.0")
+        self.assertEqual(is_rightangled(16.0,4.0,8.0),False,"Tested is_rightangled on inputs of 16.0, 4.0 and 8.0")
+        self.assertEqual(is_rightangled(4.1,8.2,9.1678787077),True,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.1678787077")
+        self.assertEqual(is_rightangled(4.1,9.16787,8.2),True,"Tested is_rightangled on inputs of 4.1, 9.16787 and 8.2")
+        self.assertEqual(is_rightangled(4.1,8.2,9.168),False,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.168")
+        self.assertEqual(is_rightangled(0.5,0.64031,0.4),True,"Tested is_rightangled on inputs of 0.5, 0.64031 and 0.4")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q11_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q11_answer data-lang="python"    data-timelimit=25000   data-audio=''     >
+from test import testEqual
+
+def is_rightangled(a, b, c):
+    is_rightangled = False
+
+    if a > b and a > c:
+        is_rightangled = abs(b**2 + c**2 - a**2) < 0.001
+    elif b > a and b > c:
+        is_rightangled = abs(a**2 + c**2 - b**2) < 0.001
+    else:
+        is_rightangled = abs(a**2 + b**2 - c**2) < 0.001
+    return is_rightangled
+
+testEqual(is_rightangled(1.5, 2.0, 2.5), True)
+testEqual(is_rightangled(4.0, 8.0, 16.0), False)
+testEqual(is_rightangled(4.1, 8.2, 9.1678787077), True)
+testEqual(is_rightangled(4.1, 8.2, 9.16787), True)
+testEqual(is_rightangled(4.1, 8.2, 9.168), False)
+testEqual(is_rightangled(0.5, 0.4, 0.64031), True)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_b25992fa70fc4e7581d84315df38d796_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_b25992fa70fc4e7581d84315df38d796_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_b25992fa70fc4e7581d84315df38d796_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_b25992fa70fc4e7581d84315df38d796_' + eBookConfig.course;
+            disqus_url = 'http://disqus_b25992fa70fc4e7581d84315df38d796_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_b25992fa70fc4e7581d84315df38d796" onclick="disqus_b25992fa70fc4e7581d84315df38d796_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_b25992fa70fc4e7581d84315df38d796']").attr('data-disqus-identifier', 'disqus_b25992fa70fc4e7581d84315df38d796_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_12" >
+    <ol start=12 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_6_12" class="runestone explainer ac_section alert alert-warning">
+<p>3 criteria must be taken into account to identify leap years:</p>
+<p>The year is evenly divisible by 4;</p>
+<p>If the year can be evenly divided by 100, it is NOT a leap year, unless;</p>
+<p>The year is also evenly divisible by 400. Then it is a leap year.</p>
+<p>Write a function that takes a year as a parameter and returns <code class="docutils literal"><span class="pre">True</span></code> if the year is a leap year, <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+
+<textarea data-component="activecode" id=ex_6_12 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true"  data-audio=''    data-gradebutton=true >
+def isLeap(year):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(isLeap(1944),True,"Tested isLeap on an input of 1944")
+        self.assertEqual(isLeap(2011),False,"Tested isLeap on an input of 2011")
+        self.assertEqual(isLeap(1986),False,"Tested isLeap on an input of 1986")
+        self.assertEqual(isLeap(1800),False,"Tested isLeap on an input of 1800")
+        self.assertEqual(isLeap(1900),False,"Tested isLeap on an input of 1900")
+        self.assertEqual(isLeap(2000),True,"Tested isLeap on an input of 2000")
+        self.assertEqual(isLeap(2056),True,"Tested isLeap on an input of 2056")
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="selection_ex_13#." >
+    <ol start=13 class=arabic><li class="alert alert-warning">
+
+    <div id='q13' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_6_13" class="runestone explainer ac_section alert alert-warning">
+<p>Implement the calculator for the date of Easter.</p>
+<p>The following algorithm computes the date for Easter Sunday for any year between 1900 to 2099.</p>
+<p>Ask the user to enter a year.
+Compute the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>a = year % 19</li>
+<li>b = year % 4</li>
+<li>c = year % 7</li>
+<li>d = (19 * a + 24) % 30</li>
+<li>e = (2 * b + 4 * c + 6 * d + 5) % 7</li>
+<li>dateofeaster = 22 + d + e</li>
+</ol>
+</div></blockquote>
+<p>Special note: The algorithm can give a date in April.  Also, if the year is one of four special
+years (1954, 1981, 2049, or 2076) then subtract 7 from the date.</p>
+<p>Your program should print an error message if the user provides a date that is out of range.</p>
+
+<textarea data-component="activecode" id=ex_6_13 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="answer_ex_6_13" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=answer_ex_6_13 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+year = int(input("Please enter a year"))
+if year >= 1900 and year <= 2099:
+    a = year % 19
+    b = year % 4
+    c = year % 7
+    d = (19*a + 24) % 30
+    e = (2*b + 4*c + 6*d + 5) % 7
+    dateofeaster = 22 + d + e
+
+    if year == 1954 or year == 2981 or year == 2049 or year == 2076:
+        dateofeaster = dateofeaster - 7
+
+    if dateofeaster > 31:
+        print("April", dateofeaster - 31)
+    else:
+        print("March", dateofeaster)
+else:
+    print("ERROR...year out of range")
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function disqus_2dfd6acf1ca849c2853dad606d1ba255_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'disqus_2dfd6acf1ca849c2853dad606d1ba255_' + eBookConfig.course;
+                    this.page.url = 'http://disqus_2dfd6acf1ca849c2853dad606d1ba255_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'disqus_2dfd6acf1ca849c2853dad606d1ba255_' + eBookConfig.course;
+            disqus_url = 'http://disqus_2dfd6acf1ca849c2853dad606d1ba255_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="disqus_2dfd6acf1ca849c2853dad606d1ba255" onclick="disqus_2dfd6acf1ca849c2853dad606d1ba255_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='disqus_2dfd6acf1ca849c2853dad606d1ba255']").attr('data-disqus-identifier', 'disqus_2dfd6acf1ca849c2853dad606d1ba255_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    </div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

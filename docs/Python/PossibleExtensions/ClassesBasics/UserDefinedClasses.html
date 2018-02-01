@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>User Defined Classes &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">User Defined Classes</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="user-defined-classes">
+<span id="index-0"></span><h1>User Defined Classes<a class="headerlink" href="#user-defined-classes" title="Permalink to this headline">¶</a></h1>
+<p>We’ve already seen classes like <code class="docutils literal"><span class="pre">str</span></code>, <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">Turtle</span></code>.  These were defined by Python and
+made available for us to use.  However, in many cases when we are solving problems we need to create data objects
+that are related to the problem we are trying to solve.  We need to create our own classes.</p>
+<p>As an example, consider the concept of a mathematical point. In two dimensions, a point is two
+numbers (coordinates) that are treated collectively as a single object.
+Points are often written in parentheses with a comma
+separating the coordinates. For example, <code class="docutils literal"><span class="pre">(0,</span> <span class="pre">0)</span></code> represents the origin, and
+<code class="docutils literal"><span class="pre">(x,</span> <span class="pre">y)</span></code> represents the point <code class="docutils literal"><span class="pre">x</span></code> units to the right and <code class="docutils literal"><span class="pre">y</span></code> units up
+from the origin.  This <code class="docutils literal"><span class="pre">(x,y)</span></code> is the state of the point.</p>
+<p>Thinking about our diagram above, we could draw a <code class="docutils literal"><span class="pre">point</span></code> object as shown here.</p>
+<img alt="A point has an x and a y" src="../../../_images/objectpic2.png" />
+<p>Some of the typical operations that one associates with points might be to ask
+the point for its x coordinate, <code class="docutils literal"><span class="pre">getX</span></code>, or to ask for its y coordinate, <code class="docutils literal"><span class="pre">getY</span></code>.  You may also
+wish to calculate the distance of a point from the origin, or the distance of a point from another point,
+or find the midpoint between two points, or answer the question as to whether a point falls within a
+given rectangle or circle.  We’ll shortly see how we can organize these
+together with the data.</p>
+<img alt="A point also has methods" src="../../../_images/objectpic3.png" />
+<p>Now that we understand what a <code class="docutils literal"><span class="pre">point</span></code> object might look like, we can define a new <strong>class</strong>.
+We’ll want our points to each have an <code class="docutils literal"><span class="pre">x</span></code> and a <code class="docutils literal"><span class="pre">y</span></code> attribute,
+so our first class definition looks like this.</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Point class for representing and manipulating x,y coordinates. &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Create a new point at the origin &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</td></tr></table></div>
+<p>Class definitions can appear anywhere in a program, but they are usually near
+the beginning (after the <code class="docutils literal"><span class="pre">import</span></code> statements). The syntax rules for a class
+definition are the same as for other compound statements. There is a header
+which begins with the keyword, <code class="docutils literal"><span class="pre">class</span></code>, followed by the name of the class,
+and ending with a colon.</p>
+<p>If the first line after the class header is a string, it becomes
+the docstring of the class, and will be recognized by various tools.  (This
+is also the way docstrings work in functions.)</p>
+<p>Every class should have a method with the special name <code class="docutils literal"><span class="pre">__init__</span></code>.
+This <strong>initializer method</strong>, often referred to as the <strong>constructor</strong>, is automatically called whenever a new
+instance of <code class="docutils literal"><span class="pre">Point</span></code> is created.  It gives the programmer the opportunity
+to set up the attributes required within the new instance by giving them
+their initial state values.  The <code class="docutils literal"><span class="pre">self</span></code> parameter (you could choose any
+other name, but nobody ever does!) is automatically set to reference
+the newly-created object that needs to be initialized.</p>
+<p>So let’s use our new Point class now.</p>
+
+<div data-childcomponent="chp13_classes1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp13_classes1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+        """ Create a new point at the origin """
+        self.x = 0
+        self.y = 0
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # and make a second point
+
+print("Nothing seems to have happened with the points")
+</textarea>
+</div>
+<p>During the initialization of the objects, we created two
+attributes called <cite>x</cite> and <cite>y</cite> for each, and gave them both the value 0.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The asignments are not to <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>, but to <code class="docutils literal"><span class="pre">self.x</span></code> and <code class="docutils literal"><span class="pre">self.y</span></code>.
+The attributes <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are <em>always</em> attached to a particular instance.
+The instance is always explicitly referenced with dot notation.</p>
+</div>
+<p>You will note that when you run the
+program, nothing happens.  It turns out that this is not quite the case.  In fact, two <code class="docutils literal"><span class="pre">Points</span></code> have been created, each
+having an x and y coordinate with value 0.  However, because we have not asked the point to do anything, we don’t see any other result.</p>
+<img alt="Simple object has state and methods" src="../../../_images/objectpic4.png" />
+<p>You can see this for yourself, via codelens:</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="chp13_points"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (chp13_points)</span> </p>
+</div>
+<script type="text/javascript">
+var chp13_points_trace = {"code": "class Point:\n    \"\"\" Point class for representing and manipulating x,y coordinates. \"\"\"\n\n    def __init__(self):\n        \"\"\" Create a new point at the origin \"\"\"\n        self.x = 0\n        self.y = 0\n\np = Point()         # Instantiate an object of type Point\nq = Point()         # and make a second point\n\nprint(\"Nothing seems to have happened with the points\")", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"Point": ["REF", 1]}, "ordered_globals": ["Point"], "stack_to_render": [], "heap": {"1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "__init__", "globals": {"Point": ["REF", 1]}, "ordered_globals": ["Point"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 3]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f1"}], "heap": {"3": ["INSTANCE", "Point"], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "__init__", "globals": {"Point": ["REF", 1]}, "ordered_globals": ["Point"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 3]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f1"}], "heap": {"3": ["INSTANCE", "Point"], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "__init__", "globals": {"Point": ["REF", 1]}, "ordered_globals": ["Point"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 3]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f1"}], "heap": {"3": ["INSTANCE", "Point", ["x", 0]], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "__init__", "globals": {"Point": ["REF", 1]}, "ordered_globals": ["Point"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 3], "__return__": null}, "ordered_varnames": ["self", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f1"}], "heap": {"3": ["INSTANCE", "Point", ["x", 0], ["y", 0]], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"Point": ["REF", 1], "p": ["REF", 3]}, "ordered_globals": ["Point", "p"], "stack_to_render": [], "heap": {"1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "__init__", "globals": {"Point": ["REF", 1], "p": ["REF", 3]}, "ordered_globals": ["Point", "p"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 4]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f2"}], "heap": {"4": ["INSTANCE", "Point"], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "__init__", "globals": {"Point": ["REF", 1], "p": ["REF", 3]}, "ordered_globals": ["Point", "p"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 4]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f2"}], "heap": {"4": ["INSTANCE", "Point"], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "__init__", "globals": {"Point": ["REF", 1], "p": ["REF", 3]}, "ordered_globals": ["Point", "p"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 4]}, "ordered_varnames": ["self"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f2"}], "heap": {"4": ["INSTANCE", "Point", ["x", 0]], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "__init__", "globals": {"Point": ["REF", 1], "p": ["REF", 3]}, "ordered_globals": ["Point", "p"], "stack_to_render": [{"func_name": "__init__", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"self": ["REF", 4], "__return__": null}, "ordered_varnames": ["self", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "__init___f2"}], "heap": {"4": ["INSTANCE", "Point", ["x", 0], ["y", 0]], "1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"Point": ["REF", 1], "p": ["REF", 3], "q": ["REF", 4]}, "ordered_globals": ["Point", "p", "q"], "stack_to_render": [], "heap": {"1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]], "4": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"Point": ["REF", 1], "p": ["REF", 3], "q": ["REF", 4]}, "ordered_globals": ["Point", "p", "q"], "stack_to_render": [], "heap": {"1": ["CLASS", "Point", [], ["__init__", ["REF", 2]]], "2": ["FUNCTION", "__init__(self)", null], "3": ["INSTANCE", "Point", ["x", 0], ["y", 0]], "4": ["INSTANCE", "Point", ["x", 0], ["y", 0]]}, "stdout": "Nothing seems to have happened with the points\n"}]};
+var chp13_points_vis;
+
+$(document).ready(function() {
+    try {
+        chp13_points_vis = new ExecutionVisualizer('chp13_points',chp13_points_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(chp13_points_vis,'chp13_points');
+        styleButtons('chp13_points');
+        allVisualizers.push(chp13_points_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component chp13_points_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#chp13_points_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'chp13_points'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (chp13_points_vis) {
+        chp13_points_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>The following program adds a few print statements. You can see that the output suggests that each one is a <code class="docutils literal"><span class="pre">Point</span> <span class="pre">object</span></code>.
+However, notice that the <code class="docutils literal"><span class="pre">is</span></code> operator returns <code class="docutils literal"><span class="pre">False</span></code> meaning that they are different objects (we will have more to say about this in a later chapter).</p>
+
+<div data-childcomponent="chp13_classes2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp13_classes2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+        """ Create a new point at the origin """
+        self.x = 0
+        self.y = 0
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # and make a second point
+
+print(p)
+print(q)
+
+print(p is q)
+</textarea>
+</div>
+<p>This should look familiar — we’ve used classes before to create
+more than one object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+
+<span class="n">tess</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>     <span class="c1"># Instantiate objects of type Turtle</span>
+<span class="n">alex</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The variables <code class="docutils literal"><span class="pre">p</span></code> and <code class="docutils literal"><span class="pre">q</span></code> are assigned references to two new <code class="docutils literal"><span class="pre">Point</span></code> objects.
+A function like <code class="docutils literal"><span class="pre">Turtle</span></code> or <code class="docutils literal"><span class="pre">Point</span></code> that creates a new object instance
+is called a <strong>constructor</strong>.  Every class automatically uses the name of the class as the name of the constructor function.
+The definition of the constructor function is done
+when you write the <code class="docutils literal"><span class="pre">__init__</span></code> function.</p>
+<p>It may be helpful to think of a class as a factory for making objects.
+The class itself isn’t an instance of a point, but it contains the machinery
+to make point instances.   Every time you call the constructor, you’re asking
+the factory to make you a new object.  As the object comes off the
+production line, its initialization method is executed to
+get the object properly set up with its factory default settings.</p>
+<p>The combined process of “make me a new object” and “get its settings initialized
+to the factory default settings” is called <strong>instantiation</strong>.</p>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

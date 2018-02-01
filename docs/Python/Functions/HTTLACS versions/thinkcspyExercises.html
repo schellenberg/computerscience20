@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Exercises &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Exercises</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+
+    <div data-component="question" class="full-width container question" id="functions_ex_1" >
+    <ol start=1 class=arabic><li class="alert alert-warning">
+
+    <table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">number:</th><td class="field-body">1</td>
+</tr>
+</tbody>
+</table>
+<div id='q1' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_1" class="runestone explainer ac_section alert alert-warning">
+<p>Use the drawsquare function we wrote in this chapter in a program to draw
+the image shown below.
+Assume each side is 20 units.
+(Hint: notice that the turtle has already moved away from the ending point of the last
+square when the program ends.)</p>
+<img alt="../../../_images/five_squares.png" src="../../../_images/five_squares.png" />
+
+<textarea data-component="activecode" id=ex_5_1 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+import turtle
+
+def drawSquare(t, sz):
+    """Get turtle t to draw a square of sz side"""
+
+    for i in range(4):
+        t.forward(sz)
+        t.left(90)
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+alex.color("pink")
+
+drawSquare(alex,20)
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q1_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q1_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawSquare(t, sz):
+    """Make turtle t draw a square of with side sz."""
+    for i in range(4):
+        t.forward(sz)
+        t.left(90)
+
+wn = turtle.Screen()       # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()     # create alex
+alex.color('hotpink')
+alex.pensize(3)
+
+for i in range(5):
+    drawSquare(alex, 20)   # Call the function to draw the square
+    alex.penup()
+    alex.forward(40)       # move alex to the starting position for the next square
+    alex.pendown()
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function a2ac86a8d0524fc6830aefb785199048_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'a2ac86a8d0524fc6830aefb785199048_' + eBookConfig.course;
+                    this.page.url = 'http://a2ac86a8d0524fc6830aefb785199048_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'a2ac86a8d0524fc6830aefb785199048_' + eBookConfig.course;
+            disqus_url = 'http://a2ac86a8d0524fc6830aefb785199048_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="a2ac86a8d0524fc6830aefb785199048" onclick="a2ac86a8d0524fc6830aefb785199048_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='a2ac86a8d0524fc6830aefb785199048']").attr('data-disqus-identifier', 'a2ac86a8d0524fc6830aefb785199048_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_2" >
+    <ol start=2 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_2" class="runestone explainer ac_section alert alert-warning">
+<p>Write a program to draw this. Assume the innermost square is 20 units per side,
+and each successive square is 20 units bigger, per side, than the one inside it.</p>
+<img alt="../../../_images/nested_squares.png" src="../../../_images/nested_squares.png" />
+
+<textarea data-component="activecode" id=ex_5_2 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_3" >
+    <ol start=3 class=arabic><li class="alert alert-warning">
+
+    <div id='q3' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_3" class="runestone explainer ac_section alert alert-warning">
+<p>Write a non-fruitful function <code class="docutils literal"><span class="pre">drawPoly(someturtle,</span> <span class="pre">somesides,</span> <span class="pre">somesize)</span></code> which makes a turtle
+draw a regular polygon.
+When called with <code class="docutils literal"><span class="pre">drawPoly(tess,</span> <span class="pre">8,</span> <span class="pre">50)</span></code>, it will draw a shape like this:</p>
+<img alt="../../../_images/regularpolygon.png" src="../../../_images/regularpolygon.png" />
+
+<textarea data-component="activecode" id=ex_5_3 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q3_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q3_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawPoly(t, num_sides, side_length):
+    for i in range(num_sides):
+        t.forward(side_length)
+        t.left(360/num_sides)
+
+wn = turtle.Screen()       # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()
+tess.color('hotpink')
+tess.pensize(3)
+
+drawPoly(tess, 8, 50)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function ba2f11265c524c7581bf7cf25d23bf3a_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'ba2f11265c524c7581bf7cf25d23bf3a_' + eBookConfig.course;
+                    this.page.url = 'http://ba2f11265c524c7581bf7cf25d23bf3a_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'ba2f11265c524c7581bf7cf25d23bf3a_' + eBookConfig.course;
+            disqus_url = 'http://ba2f11265c524c7581bf7cf25d23bf3a_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="ba2f11265c524c7581bf7cf25d23bf3a" onclick="ba2f11265c524c7581bf7cf25d23bf3a_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='ba2f11265c524c7581bf7cf25d23bf3a']").attr('data-disqus-identifier', 'ba2f11265c524c7581bf7cf25d23bf3a_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_4" >
+    <ol start=4 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_4" class="runestone explainer ac_section alert alert-warning">
+<p>Draw this pretty pattern.</p>
+<img alt="../../../_images/tess08.png" src="../../../_images/tess08.png" />
+
+<textarea data-component="activecode" id=ex_5_4 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_5" >
+    <ol start=5 class=arabic><li class="alert alert-warning">
+
+    <div id='q5' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_5" class="runestone explainer ac_section alert alert-warning">
+<p>The two spirals in this picture differ only by the turn angle.  Draw both.</p>
+<a class="reference internal image-reference" href="../../../_images/tess_spirals.png"><img alt="../../../_images/tess_spirals.png" src="../../../_images/tess_spirals.png" style="height: 240px;" /></a>
+
+<textarea data-component="activecode" id=ex_5_5 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q5_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q5_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawSpiral(t, angle):
+    ''' takes a turtle, t, and an angle in degrees '''
+    length = 1
+    for i in range(84):
+        t.forward(length)
+        t.right(angle)
+        length = length + 2
+
+
+wn = turtle.Screen()       # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+guido = turtle.Turtle()    # create guido
+guido.color('blue')
+
+## draw the first spiral ##
+# position guido
+guido.penup()
+guido.backward(110)
+guido.pendown()
+
+# draw the spiral using a 90 degree turn angle
+drawSpiral(guido, 90)
+
+
+## draw the second spiral ##
+# position guido
+guido.home()
+guido.penup()
+guido.forward(90)
+guido.pendown()
+
+drawSpiral(guido, 89)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function c587119991344db988f8fb37c8c9a31e_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'c587119991344db988f8fb37c8c9a31e_' + eBookConfig.course;
+                    this.page.url = 'http://c587119991344db988f8fb37c8c9a31e_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'c587119991344db988f8fb37c8c9a31e_' + eBookConfig.course;
+            disqus_url = 'http://c587119991344db988f8fb37c8c9a31e_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="c587119991344db988f8fb37c8c9a31e" onclick="c587119991344db988f8fb37c8c9a31e_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='c587119991344db988f8fb37c8c9a31e']").attr('data-disqus-identifier', 'c587119991344db988f8fb37c8c9a31e_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_6" >
+    <ol start=6 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_6" class="runestone explainer ac_section alert alert-warning">
+Write a non-fruitful function <code class="docutils literal"><span class="pre">drawEquitriangle(someturtle,</span> <span class="pre">somesize)</span></code> which calls <code class="docutils literal"><span class="pre">drawPoly</span></code> from the
+previous question to have its turtle draw a equilateral triangle.
+<textarea data-component="activecode" id=ex_5_6 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_7" >
+    <ol start=7 class=arabic><li class="alert alert-warning">
+
+    <div id='q7' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_7" class="runestone explainer ac_section alert alert-warning">
+Write a fruitful function <code class="docutils literal"><span class="pre">sumTo(n)</span></code> that returns the sum of all integer numbers up to and
+including <cite>n</cite>.   So <code class="docutils literal"><span class="pre">sumTo(10)</span></code> would be <code class="docutils literal"><span class="pre">1+2+3...+10</span></code> which would return the value 55.  Use the
+equation  (n * (n + 1)) / 2.
+<textarea data-component="activecode" id=ex_5_7 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+def sumTo(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(sumTo(15),120.0,0,"Tested sumTo on input 15")
+        self.assertAlmostEqual(sumTo(0),0.0,0,"Tested sumTo on input 0")
+        self.assertAlmostEqual(sumTo(25),325.0,0,"Tested sumTo on input 25")
+        self.assertAlmostEqual(sumTo(7),28.0,0,"Tested sumTo on input 7")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q7_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q7_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+from test import testEqual
+
+def sumTo(n):
+    result = (n * (n + 1)) / 2
+    return result
+
+# Now lets see how well this works
+t = sumTo(0)
+print("The sum from 1 to 0 is",t)
+t = sumTo(10)
+print("The sum from 1 to 10 is",t)
+t = sumTo(5)
+print("The sum from 1 to 5 is",t)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function d6ba37a51d09845f39c96d4d4ef1d6f45_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'd6ba37a51d09845f39c96d4d4ef1d6f45_' + eBookConfig.course;
+                    this.page.url = 'http://d6ba37a51d09845f39c96d4d4ef1d6f45_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'd6ba37a51d09845f39c96d4d4ef1d6f45_' + eBookConfig.course;
+            disqus_url = 'http://d6ba37a51d09845f39c96d4d4ef1d6f45_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="d6ba37a51d09845f39c96d4d4ef1d6f45" onclick="d6ba37a51d09845f39c96d4d4ef1d6f45_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='d6ba37a51d09845f39c96d4d4ef1d6f45']").attr('data-disqus-identifier', 'd6ba37a51d09845f39c96d4d4ef1d6f45_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_8" >
+    <ol start=8 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_8" class="runestone explainer ac_section alert alert-warning">
+Write a function <cite>areaOfCircle(r)</cite> which returns the area of a circle of radius <cite>r</cite>.  Make sure you use the math module in your solution.
+<textarea data-component="activecode" id=ex_5_8 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+def areaOfCircle(r):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(areaOfCircle(5.0),78.53981633974483,5,"Tested input: areaOfCircle(5.0)")
+        self.assertEqual(areaOfCircle(5.0),78.53981633974483,"Tested input: areaOfCirlce(5.0)")
+        self.assertEqual(areaOfCircle(0),0.0,"Tested input: areaOfCirlce(0)")
+        self.assertAlmostEqual(areaOfCircle(31415.926535897932),3100627668.0299816,5,"Tested input: areaOfCirlce(31415.926535897932)")
+
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_9" >
+    <ol start=9 class=arabic><li class="alert alert-warning">
+
+    <div id='q9' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_9" class="runestone explainer ac_section alert alert-warning">
+<p>Write a non-fruitful function to draw a five pointed star, where the length of each side is 100 units.</p>
+<img alt="../../../_images/star.png" src="../../../_images/star.png" />
+
+<textarea data-component="activecode" id=ex_5_9 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q9_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q9_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawFivePointStar(t):
+    for i in range(5):
+        t.forward(100)
+        t.left(216)
+
+wolfram = turtle.Turtle()
+drawFivePointStar(wolfram)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function e757873187bb4581bffecdad449b5f61_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'e757873187bb4581bffecdad449b5f61_' + eBookConfig.course;
+                    this.page.url = 'http://e757873187bb4581bffecdad449b5f61_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'e757873187bb4581bffecdad449b5f61_' + eBookConfig.course;
+            disqus_url = 'http://e757873187bb4581bffecdad449b5f61_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="e757873187bb4581bffecdad449b5f61" onclick="e757873187bb4581bffecdad449b5f61_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='e757873187bb4581bffecdad449b5f61']").attr('data-disqus-identifier', 'e757873187bb4581bffecdad449b5f61_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_10" >
+    <ol start=10 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_10" class="runestone explainer ac_section alert alert-warning">
+<p>Extend your program above.  Draw five stars, but between each, pick up the pen,
+move forward by 350 units, turn right by 144, put the pen down, and draw the next star.
+You’ll get something like this (note that you will need to move to the left before drawing your first star in order to fit everything in the window):</p>
+<img alt="../../../_images/five_stars.png" src="../../../_images/five_stars.png" />
+<p>What would it look like if you didn’t pick up the pen?</p>
+
+<textarea data-component="activecode" id=ex_5_10 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_11" >
+    <ol start=11 class=arabic><li class="alert alert-warning">
+
+    <div id='q11' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_11" class="runestone explainer ac_section alert alert-warning">
+Extend the star function to draw an n pointed star.  (Hint: n must be an odd number greater or
+equal to 3).
+<textarea data-component="activecode" id=ex_5_11 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q11_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q11_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawStar(t, n):
+    for i in range(n):
+        t.forward(100)
+        t.left(180 - 180/n)
+
+stroustrup = turtle.Turtle()
+drawStar(stroustrup, 7)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function f2f8ff1b301e4d99bd4ac52e68c8c1ed_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'f2f8ff1b301e4d99bd4ac52e68c8c1ed_' + eBookConfig.course;
+                    this.page.url = 'http://f2f8ff1b301e4d99bd4ac52e68c8c1ed_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'f2f8ff1b301e4d99bd4ac52e68c8c1ed_' + eBookConfig.course;
+            disqus_url = 'http://f2f8ff1b301e4d99bd4ac52e68c8c1ed_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="f2f8ff1b301e4d99bd4ac52e68c8c1ed" onclick="f2f8ff1b301e4d99bd4ac52e68c8c1ed_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='f2f8ff1b301e4d99bd4ac52e68c8c1ed']").attr('data-disqus-identifier', 'f2f8ff1b301e4d99bd4ac52e68c8c1ed_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_12" >
+    <ol start=12 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_12" class="runestone explainer ac_section alert alert-warning">
+Write a function called drawSprite that will draw a sprite.  The function will need parameters for
+the turtle, the number of legs, and the length of the legs.  Invoke the function to create a sprite
+with 15 legs of length 120.
+<textarea data-component="activecode" id=ex_5_12 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_13" >
+    <ol start=13 class=arabic><li class="alert alert-warning">
+
+    <div id='q13' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_13" class="runestone explainer ac_section alert alert-warning">
+Rewrite the function <code class="docutils literal"><span class="pre">sumTo(n)</span></code> that returns the sum of all integer numbers up to and
+including <cite>n</cite>.   This time use the accumulator pattern.
+<textarea data-component="activecode" id=ex_5_13 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+def sumTo(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sumTo(15),120,"Tested sumTo on input 15")
+        self.assertEqual(sumTo(0),0,"Tested sumTo on input 0")
+        self.assertEqual(sumTo(25),325,"Tested sumTo on input 25")
+        self.assertEqual(sumTo(7),28,"Tested sumTo on input 7")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q13_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q13_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def sumTo(n):
+    sum = 0
+    for i in range(1,n+1):
+        sum = sum + i
+    return sum
+
+# Now lets see how well this works
+t = sumTo(0)
+print("The sum from 1 to 0 is",t)
+t = sumTo(10)
+print("The sum from 1 to 10 is",t)
+t = sumTo(5)
+print("The sum from 1 to 5 is",t)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function eda665389fda49a584b128cc30515595_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'eda665389fda49a584b128cc30515595_' + eBookConfig.course;
+                    this.page.url = 'http://eda665389fda49a584b128cc30515595_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'eda665389fda49a584b128cc30515595_' + eBookConfig.course;
+            disqus_url = 'http://eda665389fda49a584b128cc30515595_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="eda665389fda49a584b128cc30515595" onclick="eda665389fda49a584b128cc30515595_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='eda665389fda49a584b128cc30515595']").attr('data-disqus-identifier', 'eda665389fda49a584b128cc30515595_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_14" >
+    <ol start=14 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_14" class="runestone explainer ac_section alert alert-warning">
+Write a function called <code class="docutils literal"><span class="pre">mySqrt</span></code> that will approximate the square root of a number, call it n, by using
+Newton’s algorithm.
+Newton’s approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess
+is computed using   the formula:  newguess = (1/2) * (oldguess + (n/oldguess)).
+<textarea data-component="activecode" id=ex_5_14 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+def mySqrt(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertAlmostEqual(mySqrt(4.0),2.0,0,"Tested mySqrt on input 4.0")
+        self.assertAlmostEqual(mySqrt(9.0),3.0,4,"Tested accuracy of mySqrt on input 3.0")
+        self.assertAlmostEqual(mySqrt(36.0),6.0,5,"Tested accuracy of mySqrt on input 6.0")
+        self.assertAlmostEqual(mySqrt(100.0),10.0,4,"Tested accuracy of mySqrt on input 10.0. Try iterating more times.")
+
+myTests().main()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_15" >
+    <ol start=15 class=arabic><li class="alert alert-warning">
+
+    <div id='q15' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_15" class="runestone explainer ac_section alert alert-warning">
+Write a function called <code class="docutils literal"><span class="pre">myPi</span></code> that will return an approximation of PI (3.14159…).  Use the <a class="reference external" href="http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80">Leibniz</a> approximation.
+<textarea data-component="activecode" id=ex_5_15 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+ def myPi(iters):
+     # Calculate an approximation of PI using the Leibniz
+     # approximation with iters number of iterations
+
+     # your code here
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q15_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q15_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def myPi(iters):
+    ''' Calculate an approximation of PI using the Leibniz
+    approximation with iters number of iterations '''
+    pi = 0
+    sign = 1
+    denominator = 1
+    for i in range(iters):
+        pi = pi + (sign/denominator)
+        sign = sign * -1  # alternate positive and negative
+        denominator = denominator + 2
+
+    pi = pi * 4.0
+    return pi
+
+pi_approx = myPi(10000)
+print(pi_approx)
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function b699e4b7bad44db6bd788c795c124b23_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'b699e4b7bad44db6bd788c795c124b23_' + eBookConfig.course;
+                    this.page.url = 'http://b699e4b7bad44db6bd788c795c124b23_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'b699e4b7bad44db6bd788c795c124b23_' + eBookConfig.course;
+            disqus_url = 'http://b699e4b7bad44db6bd788c795c124b23_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="b699e4b7bad44db6bd788c795c124b23" onclick="b699e4b7bad44db6bd788c795c124b23_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='b699e4b7bad44db6bd788c795c124b23']").attr('data-disqus-identifier', 'b699e4b7bad44db6bd788c795c124b23_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_16" >
+    <ol start=16 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_16" class="runestone explainer ac_section alert alert-warning">
+Write a function called <cite>myPi</cite> that will return an approximation of PI (3.14159…).  Use the <a class="reference external" href="http://en.wikipedia.org/wiki/Madhava_of_Sangamagrama">Madhava</a> approximation.
+<textarea data-component="activecode" id=ex_5_16 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+def myPi(iters):
+    # Calculate an approximation of PI using the Madhava
+    # approximation with iters number of iterations
+
+    #your code here
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_17" >
+    <ol start=17 class=arabic><li class="alert alert-warning">
+
+    <div id='q17' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+
+<div data-childcomponent="ex_5_17" class="runestone explainer ac_section alert alert-warning">
+Write a function called <cite>fancySquare</cite> that will draw a square with fancy corners (sprites on the corners).  You should
+implement and use the <cite>drawSprite</cite> function from above.  For an even more interesting look, how about adding small
+triangles to the ends of the sprite legs.
+<textarea data-component="activecode" id=ex_5_17 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="q17_answer" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=q17_answer data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+
+def drawSprite(t, numlegs, leglength):
+   angle = 360/numlegs
+   for i in range(numlegs):
+      t.forward(leglength)
+      t.backward(leglength)
+      t.left(angle)
+
+def drawFancySquare(t, sz, lgs, lgl):
+   for i in range(4):
+       t.forward(sz)
+       drawSprite(t, lgs, lgl)
+       t.left(90)
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+drawFancySquare(alex, 100, 10, 15)
+
+wn.exitonclick()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function db5d8808bf5749579718bdd2088b539f_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'db5d8808bf5749579718bdd2088b539f_' + eBookConfig.course;
+                    this.page.url = 'http://db5d8808bf5749579718bdd2088b539f_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'db5d8808bf5749579718bdd2088b539f_' + eBookConfig.course;
+            disqus_url = 'http://db5d8808bf5749579718bdd2088b539f_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="db5d8808bf5749579718bdd2088b539f" onclick="db5d8808bf5749579718bdd2088b539f_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='db5d8808bf5749579718bdd2088b539f']").attr('data-disqus-identifier', 'db5d8808bf5749579718bdd2088b539f_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+
+    </li></ol>
+    </div>
+    
+    <div data-component="question" class="full-width container question" id="functions_ex_18" >
+    <ol start=18 class=arabic><li class="alert alert-warning">
+
+    
+<div data-childcomponent="ex_5_18" class="runestone explainer ac_section alert alert-warning">
+There was a whole program in <a class="reference internal" href="ATurtleBarChart.html#bar-chart"><span class="std std-ref">A Turtle Bar Chart</span></a> to create a bar chart with specific data.  Creating a bar chart is a useful idea in general.  Write a non-fruitful function called barChart, that takes the numeric list of data as a parameter, and draws the bar chart.  Write a full program calling this function.
+The current version of the <code class="docutils literal"><span class="pre">drawBar</span></code> function unfortuately draws the top of the bar through the bottom of the label.  A nice elaboration is to make the label appear completely above the top line.  To keep the spacing consistent you might pass an extra parameter to <code class="docutils literal"><span class="pre">drawBar</span></code> for the distance to move up.  For the <code class="docutils literal"><span class="pre">barChart</span></code> function make that parameter be some small fraction of <code class="docutils literal"><span class="pre">maxheight+border</span></code>.  The fill action makes this modification particularly tricky:  You will want to move past the top of the bar and write before or after drawing and filling the bar.
+<textarea data-component="activecode" id=ex_5_18 data-lang="python"  data-hidecode="true"  data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''    data-gradebutton=true >
+
+import turtle
+
+def drawBar(t, height):
+    """ Get turtle t to draw one bar, of height. """
+    t.begin_fill()               # start filling this shape
+    t.left(90)
+    t.forward(height)
+    t.write(str(height))
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()                 # stop filling this shape
+
+
+
+xs = [48, 117, 200, 240, 160, 260, 220]  # here is the data
+maxheight = max(xs)
+numbars = len(xs)
+border = 10
+
+wn = turtle.Screen()             # Set up the window and its attributes
+wn.setworldcoordinates(0-border, 0-border, 40*numbars+border, maxheight+border)
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()           # create tess and set some attributes
+tess.color("blue")
+tess.fillcolor("red")
+tess.pensize(3)
+
+
+
+for a in xs:
+    drawBar(tess, a)
+
+wn.exitonclick()
+</textarea>
+</div>
+
+    </li></ol>
+    </div>
+    </div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

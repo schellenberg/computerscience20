@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Functions that Return Values &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Functions that Return Values</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="functions-that-return-values">
+<span id="index-0"></span><h1>Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h1>
+<p>Most functions require arguments, values that control how the function does its
+job. For example, if you want to find the absolute value of a number, you have
+to indicate what the number is. Python has a built-in function for computing
+the absolute value:</p>
+
+<div data-childcomponent="ch04_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch04_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(abs(5))
+
+print(abs(-5))
+</textarea>
+</div>
+<p>In this example, the arguments to the <code class="docutils literal"><span class="pre">abs</span></code> function are 5 and -5.</p>
+<p>Some functions take more than one argument. For example the math module contains a function
+called
+<code class="docutils literal"><span class="pre">pow</span></code> which takes two arguments, the base and the exponent.</p>
+
+<div data-childcomponent="ch04_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch04_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import math
+print(math.pow(2, 3))
+
+print(math.pow(7, 4))
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Of course, we have already seen that raising a base to an exponent can be done with the ** operator.</p>
+</div>
+<p>Another built-in function that takes more than one argument is <code class="docutils literal"><span class="pre">max</span></code>.</p>
+
+<div data-childcomponent="ch04_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch04_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(max(7, 11))
+print(max(4, 1, 17, 2, 12))
+print(max(3 * 11, 5 ** 3, 512 - 9, 1024 ** 0))
+</textarea>
+</div>
+<p><code class="docutils literal"><span class="pre">max</span></code> can be sent any number of arguments, separated by commas, and will
+return the maximum value sent. The arguments can be either simple values or
+expressions. In the last example, 503 is returned, since it is larger than 33,
+125, and 1.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
+<p>Furthermore, functions like <code class="docutils literal"><span class="pre">range</span></code>, <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">abs</span></code> all return values that
+can be used to build more complex expressions.</p>
+<p id="index-1">So an important difference between these functions and one like <code class="docutils literal"><span class="pre">drawSquare</span></code> is that
+<code class="docutils literal"><span class="pre">drawSquare</span></code> was not executed because we wanted it to compute a value — on the contrary,
+we wrote <code class="docutils literal"><span class="pre">drawSquare</span></code> because we wanted it to execute a sequence of steps that caused
+the turtle to draw a specific shape.</p>
+<p>Functions that return values are sometimes called <strong>fruitful functions</strong>.
+In many other languages, a chunk that doesn’t return a value is called a <strong>procedure</strong>,
+but we will stick here with the Python way of also calling it a function, or if we want
+to stress it, a <em>non-fruitful</em> function.</p>
+<p>Fruitful functions still allow the user to provide information (arguments).  However there is now an additional
+piece of data that is returned from the function.</p>
+<img alt="../../../_images/blackboxfun.png" src="../../../_images/blackboxfun.png" />
+<p>How do we write our own fruitful function?  Let’s start by creating a very simple
+mathematical function that we will call <code class="docutils literal"><span class="pre">square</span></code>.  The square function will take one number
+as a parameter and return the result of squaring that number.  Here is the
+black-box diagram with the Python code following.</p>
+<img alt="../../../_images/squarefun.png" src="../../../_images/squarefun.png" />
+
+<div data-childcomponent="ch04_square" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch04_square data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def square(x):
+    y = x * x
+    return y
+
+toSquare = 10
+result = square(toSquare)
+print("The result of", toSquare, "squared is", result)
+</textarea>
+</div>
+<p>The <strong>return</strong> statement is followed by an expression which is evaluated.  Its
+result is returned to the caller as the “fruit” of calling this function.
+Because the return statement can contain any Python expression we could have
+avoided creating the <strong>temporary variable</strong> <code class="docutils literal"><span class="pre">y</span></code> and simply used
+<code class="docutils literal"><span class="pre">return</span> <span class="pre">x*x</span></code>.
+Try modifying the square function above to see that this works just the same.
+On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal"><span class="pre">y</span></code> in the program above makes
+debugging
+easier.  These temporary variables are examples of <strong>local variables</strong>, pursued further
+in the next section.</p>
+<p>Notice something important here. The name of the variable we pass as an
+argument — <code class="docutils literal"><span class="pre">toSquare</span></code> — has nothing to do with the name of the formal parameter
+— <code class="docutils literal"><span class="pre">x</span></code>.  It is as if  <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">toSquare</span></code> is executed when <code class="docutils literal"><span class="pre">square</span></code> is called.
+It doesn’t matter what the value was named in
+the caller. In <code class="docutils literal"><span class="pre">square</span></code>, it’s name is <code class="docutils literal"><span class="pre">x</span></code>.  You can see this very clearly in
+codelens, where the <strong>global variables</strong> (variables defined outside of any function) and the local variables for the square
+function are in separate boxes.</p>
+<p>As you step through the example in codelens notice that the <strong>return</strong> statement not only causes the
+function to return a value, but it also returns the flow of control back to the place in the program
+where the function call was made.  this is true in general:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The call to a function <em>terminates</em> after the execution of a return statement.
+This is fairly obvious if the return statement is the last statement in the function, but
+we will see later where it makes sense to have a return statement even when other statements
+follow, and the further statements are <em>not</em> executed.</p>
+</div>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="ch04_clsquare"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (ch04_clsquare)</span> </p>
+</div>
+<script type="text/javascript">
+var ch04_clsquare_trace = {"code": "def square(x):\n    y = x * x\n    return y\n\ntoSquare = 10\nsquareResult = square(toSquare)\nprint(\"The result of\", toSquare, \"squared is\", squareResult)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10, "squareResult": 100}, "ordered_globals": ["square", "toSquare", "squareResult"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10, "squareResult": 100}, "ordered_globals": ["square", "toSquare", "squareResult"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "The result of 10 squared is 100\n"}]};
+var ch04_clsquare_vis;
+
+$(document).ready(function() {
+    try {
+        ch04_clsquare_vis = new ExecutionVisualizer('ch04_clsquare',ch04_clsquare_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(ch04_clsquare_vis,'ch04_clsquare');
+        styleButtons('ch04_clsquare');
+        allVisualizers.push(ch04_clsquare_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component ch04_clsquare_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#ch04_clsquare_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch04_clsquare'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (ch04_clsquare_vis) {
+        ch04_clsquare_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>Another important thing to notice as you step through this codelens
+demonstration is the movement of the red and green arrows.  Codelens uses these arrows to show you where it is currently executing.
+Recall that the red arrow always points to the next line of code that will be executed.  The light green arrow points to the line
+that was just executed in the last step.</p>
+<p>When you first start running this codelens demonstration you will notice that there is only a red arrow and it points to
+line 1.  This is because line 1 is the next line to be executed and since it is the first line, there is no previously executed line
+of code.</p>
+<p>When you click on the forward button, notice that the red arrow moves to line 5, skipping lines 2 and 3 of the function (and
+the light green arrow has now appeared on line 1).  Why is this?
+The answer is that function definition is not the same as function execution.  Lines 2
+and 3 will not be executed until the function is called on line 6.  Line 1 defines the function and the name <code class="docutils literal"><span class="pre">square</span></code> is added to the
+global variables, but that is all the <code class="docutils literal"><span class="pre">def</span></code> does at that point.  The body of the function will be executed later.  Continue to click
+the forward button to see how the flow of control moves from the call, back up to the body of the function, and then finally back to line 7, after the function has returned its value and the value has been assigned to <code class="docutils literal"><span class="pre">squareResult</span></code>.</p>
+<p>Finally, there is one more aspect of function return values that should be noted.  All Python functions return the value <code class="docutils literal"><span class="pre">None</span></code> unless there is an explicit return statement with
+a value other than <code class="docutils literal"><span class="pre">None.</span></code>
+Consider the following common mistake made by beginning Python
+programmers.  As you step through this example, pay very close attention to the return
+value in the local variables listing.  Then look at what is printed when the
+function returns.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="ch04_clsquare_bad"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (ch04_clsquare_bad)</span> </p>
+</div>
+<script type="text/javascript">
+var ch04_clsquare_bad_trace = {"code": "def square(x):\n    y = x * x\n    print(y)   # Bad! should use return instead!\n\ntoSquare = 10\nsquareResult = square(toSquare)\nprint(\"The result of\", toSquare, \"squared is\", squareResult)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "toSquare": 10}, "ordered_globals": ["square", "toSquare"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "y": 100, "__return__": null}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "100\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10, "squareResult": null}, "ordered_globals": ["square", "toSquare", "squareResult"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "100\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "toSquare": 10, "squareResult": null}, "ordered_globals": ["square", "toSquare", "squareResult"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "100\nThe result of 10 squared is None\n"}]};
+var ch04_clsquare_bad_vis;
+
+$(document).ready(function() {
+    try {
+        ch04_clsquare_bad_vis = new ExecutionVisualizer('ch04_clsquare_bad',ch04_clsquare_bad_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(ch04_clsquare_bad_vis,'ch04_clsquare_bad');
+        styleButtons('ch04_clsquare_bad');
+        allVisualizers.push(ch04_clsquare_bad_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component ch04_clsquare_bad_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#ch04_clsquare_bad_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch04_clsquare_bad'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (ch04_clsquare_bad_vis) {
+        ch04_clsquare_bad_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>The problem with this function is that even though it prints the value of the square, that value will not be returned to the place
+where the call was made.  Since line 6 uses the return value as the right hand side of an assignment statement, the evaluation of the
+function will be <code class="docutils literal"><span class="pre">None</span></code>.  In this case, <code class="docutils literal"><span class="pre">squareResult</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_1">
+            <p>func-2-1: What is wrong with the following function definition:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addEm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;the answer is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question5_2_1_opt_a">You should never use a print statement in a function definition.</li><li data-component="feedback" id="test_question5_2_1_opt_a">Although you should not mistake print for return, you may include print statements inside your functions.</li>
+            
+            <li data-component="answer" data-correct id="test_question5_2_1_opt_b">You should not have any statements in a function after the return statement.  Once the function gets to the return statement it will immediately stop executing the function.</li><li data-component="feedback" id="test_question5_2_1_opt_b">This is a very common mistake so be sure to watch out for it when you write your code!</li>
+            
+            <li data-component="answer"  id="test_question5_2_1_opt_c">You must calculate the value of x+y+z before you return it.</li><li data-component="feedback" id="test_question5_2_1_opt_c">Python will automatically calculate the value x+y+z and then return it in the statement as it is written</li>
+            
+            <li data-component="answer"  id="test_question5_2_1_opt_d">A function cannot return a number.</li><li data-component="feedback" id="test_question5_2_1_opt_d">Functions can return any legal data, including (but not limited to) numbers, strings, turtles, etc.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_2">
+            <p>func-2-2: What will the following function return?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addEm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="test_question5_2_2_opt_a">None</li><li data-component="feedback" id="test_question5_2_2_opt_a">We have accidentally used print where we mean return.  Therefore, the function will return the value None by default.  This is a VERY COMMON mistake so watch out!  This mistake is also particularly difficult to find because when you run the function the output looks the same.  It is not until you try to assign its value to a variable that you can notice a difference.</li>
+            
+            <li data-component="answer"  id="test_question5_2_2_opt_b">The value of x + y + z</li><li data-component="feedback" id="test_question5_2_2_opt_b">Careful!  This is a very common mistake.  Here we have printed the value x+y+z but we have not returned it.  To return a value we MUST use the return keyword.</li>
+            
+            <li data-component="answer"  id="test_question5_2_2_opt_c">The string 'x + y + z'</li><li data-component="feedback" id="test_question5_2_2_opt_c">x+y+z calculates a number (assuming x+y+z are numbers) which represents the sum of the values x, y and z.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
