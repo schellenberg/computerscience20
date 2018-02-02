@@ -15,7 +15,7 @@ Drawing Polygons - Part 2 (Variables and Nested Repeat)
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
-If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=yV9GjD7-dg8>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=yV9GjD7-dg8>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: yV9GjD7-dg8
     :height: 315

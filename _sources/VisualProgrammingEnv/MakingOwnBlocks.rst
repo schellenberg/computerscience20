@@ -14,7 +14,7 @@ Making Your Own Blocks (Functions)
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
 
-If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=mXH0WTfA5eo>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=mXH0WTfA5eo>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: mXH0WTfA5eo
     :height: 315

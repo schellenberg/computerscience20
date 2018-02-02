@@ -14,7 +14,7 @@ Tracing Code and Cannonball Motion (Repeat Until)
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
-If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=_jTHwZCY2CI>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=_jTHwZCY2CI>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: _jTHwZCY2CI
     :height: 315

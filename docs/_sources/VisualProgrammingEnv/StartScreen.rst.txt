@@ -13,7 +13,7 @@ Making a Start Screen (Repeat, If/Else, Broadcast)
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
-If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=mrLWnxC07DU>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=mrLWnxC07DU>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: mrLWnxC07DU
     :height: 315

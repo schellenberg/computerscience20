@@ -14,7 +14,7 @@ Timing Issues and Dodging Game (Broadcasts and Variables)
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
-If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=1vPKlqxNloc>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=1vPKlqxNloc>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: 1vPKlqxNloc
     :height: 315

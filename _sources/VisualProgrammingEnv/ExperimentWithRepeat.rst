@@ -13,7 +13,7 @@ Chase the Mouse and Drawing Polygons (Repeat and If/Else)
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
-If you'd prefer to watch a video describing how to create your first Scratch program, `the following video <https://www.youtube.com/watch?v=AJ1elMM7CwY>`_ demonstrates the same ideas as what I've described in text below.
+If you'd prefer to watch a video, `the following video <https://www.youtube.com/watch?v=AJ1elMM7CwY>`_ demonstrates the same ideas I've described in text below.
 
 .. youtube:: AJ1elMM7CwY
     :height: 315

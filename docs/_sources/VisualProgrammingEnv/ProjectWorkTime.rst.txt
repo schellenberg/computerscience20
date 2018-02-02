@@ -15,3 +15,6 @@ Project Work Period
 .. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
 
 We won't be learning anything new today. Instead, you will be given time to try to build a project that puts to use many of the ideas that we've seen so far. 
+
+.. note:: Need to add some comprehension testing questions here... practice quiz?
+
