@@ -171,7 +171,7 @@ Now that you have seen how to trace the the code contained in a repeat until blo
 	If you would like to edit the Repeat Until Practice handout, you can download the :download:`editable Word document <handouts/scratch_repeat_until_practice.docx>`.
 
 
-Demonstrating How to Use Repeat Until
+Cannonball Motion Using Repeat Until
 -------------------------------------
 
 Let's use the repeat until block to create a simulation of a cannonball being shot. First, we need to make a cannonball. To do this, click on the paintbrush beside New sprite (under the stage):
