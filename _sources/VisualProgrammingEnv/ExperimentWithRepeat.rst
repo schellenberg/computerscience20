@@ -40,6 +40,44 @@ We learned in the previous lesson that anytime you want to ask the computer a qu
 
 .. note:: Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn't the behaviour you want, you can use the **play sound** block instead of the **play sound until done** block.
 
+
+Check Your Understanding
+--------------------------
+
+.. fillintheblank:: scratch_sound_check_1
+
+    Given the code below, how many times would you hear a meow sound when you click the green flag?
+
+    .. image:: images/scratch_play_sound_check_1.png
+
+    - :1: Yes! Scratch will start playing each sound, then move on to the next block BEFORE the sound has completed. This means that although each sound did start, only the last block completely played, so it will sound as though only one sound block occurred.
+      :5: No. Even though the play sound block is there 5 times, Scratch will start playing each sound, then move on to the next block BEFORE the sound has completed.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_sound_check_2
+
+    Given the code below, how many times would you hear a meow sound when you click the green flag?
+
+    .. image:: images/scratch_sound_check_2.png
+
+    - :5: Yes! Because we are using the play sound until done block, Scratch will finish playing each sound before moving on to the next block.
+      :1: No. Because we are using the play sound until done block, Scratch will finish playing each sound before moving on to the next block.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_sound_check_3
+
+    Given the code below, how many times would you hear a meow sound when you click the green flag?
+
+    .. image:: images/scratch_sound_check_3.png
+
+    - :2: Yes! The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block.
+      :1: No. The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block.
+      :3: No. The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block.
+      :.*: Try again!
+
+
 Drawing Regular Polygons
 ------------------------
 

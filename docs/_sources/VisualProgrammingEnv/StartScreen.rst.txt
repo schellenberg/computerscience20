@@ -25,3 +25,23 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
 
 Making a start screen. Not really new concepts, just combining some of the previously learned blocks to make something useful. Blocks used: **broadcast**, **forever** and **if/else**.
 
+
+Creating Button Sprites
+-------------------------
+
+- convert to vector mode
+- be sure to fill in rectangle with a color (paint bucket tool)
+- two costumes (hovering over and not hovering over), with different color backgrounds and text (make one costume first, then duplicate and change colors)
+  
+
+Set Up Button to React to Mouse
+----------------------------------
+
+- when flag clicked, forever, if touching mouse-pointer, switch costume, else switch costume
+- when this sprite clicked, broadcast Begin Situation 1
+- duplicate button for second situation
+
+Add Characters to Situation
+-----------------------------
+
+
