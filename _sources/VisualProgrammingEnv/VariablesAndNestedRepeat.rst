@@ -23,8 +23,6 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
     :align: left
     :http: https
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
-
 
 Variables
 ---------
