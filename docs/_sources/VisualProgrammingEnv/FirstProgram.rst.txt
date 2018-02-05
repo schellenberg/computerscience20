@@ -160,9 +160,6 @@ Check Your Understanding
    
 
 
-
-
-
 Practice Problem
 -----------------
 
