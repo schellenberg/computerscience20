@@ -122,7 +122,7 @@ Check Your Understanding
 
     Given the code below, how many times would the script below say "Hooray" when you click the green flag?
 
-    .. image:: images/scratch_nested_loops_check2.png
+    .. image:: images/scratch_nested_loops_check3.png
 
     - :0: Yes! Since everything is inside a repeat -1 block, it will not happen at all. Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
       :8: No. What is the block that encloses everything? Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
