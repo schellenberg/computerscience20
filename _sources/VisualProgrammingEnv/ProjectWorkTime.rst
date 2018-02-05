@@ -12,7 +12,7 @@ Project Work Period
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
+
 
 We won't be learning anything new today. Instead, you will be given time to try to build a project that puts to use many of the ideas that we've seen so far. 
 

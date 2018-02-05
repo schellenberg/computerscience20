@@ -82,6 +82,52 @@ You might find it interesting to make one more variable in your sketch (perhaps 
 
 .. note:: Try moving the **change pen color** block so that it is right after the **move 100 steps** block. What do you expect the resulting image to look like?
 
+Check Your Understanding
+-------------------------
+
+.. fillintheblank:: scratch_nested_repeat_check_1
+
+    Given the code below, how many times would the script below say "Hip" when you click the green flag?
+
+    .. image:: images/scratch_nested_loops_check1.png
+
+    - :8: Yes! Since the repeat 2 is inside a repeat 4 block, you can multiply them together to find the total number of times it will repeat.
+      :2: No. Notice that the repeat 2 block is INSIDE a repeat 4 block.
+      :4: No. Even though the say Hip block is inside the repeat 4, it is ALSO inside a repeat 2 block.
+      :.*: Try again!
+
+.. fillintheblank:: scratch_nested_repeat_check_2
+
+    Given the code below, how many times would the script below say "Hooray" when you click the green flag?
+
+    .. image:: images/scratch_nested_loops_check1.png
+
+    - :4: Yes! Since the say Hooray block is inside the repeat 4 block, but OUTSIDE the repeat 2 block, it will only happen 4 times.
+      :8: No. Even though the say Hip block is inside the repeat 4, it is OUTSIDE the repeat 2 block.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_nested_repeat_check_3
+
+    Given the code below, how many times would the script below say "Hooray" when you click the green flag?
+
+    .. image:: images/scratch_nested_loops_check2.png
+
+    - :0: Yes! Since everything is inside a repeat 0 block, it will not happen at all.
+      :8: No. What is the block that encloses everything?
+      :.*: Try again! Hint: What is the block that encloses everything?
+
+
+.. fillintheblank:: scratch_nested_repeat_check_4
+
+    Given the code below, how many times would the script below say "Hooray" when you click the green flag?
+
+    .. image:: images/scratch_nested_loops_check2.png
+
+    - :0: Yes! Since everything is inside a repeat -1 block, it will not happen at all. Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
+      :8: No. What is the block that encloses everything? Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
+      :.*: Try again! Hint: What is the block that encloses everything? Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
+
 
 Practice Problem
 ------------------
