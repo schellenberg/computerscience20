@@ -14,7 +14,96 @@ Project Work Period
 
 
 
-We won't be learning anything new today. Instead, you will be given time to try to build a project that puts to use many of the ideas that we've seen so far. 
+We won't be learning anything new today. Instead, you will be given time to work on a project that puts to use many of the ideas that we've seen so far. Before you begin working on your project, however, you should try the practice quiz below to confirm that you understand the ideas we've seen so far.
 
-.. note:: Need to add some comprehension testing questions here... practice quiz?
+Check Your Understanding
+-------------------------
+
+.. mchoice:: scratch_practice_quiz_1
+    :answer_a: The current sprite would say "Hi" for 1 second, then say "there" for 1 second, then say "everyone" for 1 second.
+    :answer_b: The current sprite would say "Hi" for 1 second, then say "everyone" for 1 second, then say "there" for 1 second.
+    :answer_c: The current sprite would say "Hi" for 1 second, then say "there" for 1 second.
+    :correct: a
+    :feedback_a: No. Be sure to look very carefully at the names of the broadcasts!
+    :feedback_b: Yes! The order is controlled by the names of the broadcasts, not which is higher or lower in your script.
+    :feedback_c: No. Be sure to look very carefully at the names of the broadcasts!
+
+    What would happen when you click the green flag, given the code below?
+
+    .. image:: images/scratch_practice_quiz_1.png
+
+
+.. mchoice:: scratch_practice_quiz_2
+    :answer_a: The current sprite would say "Hi" for 1 second, then say "there" for 1 second, then say "everyone" for 1 second.
+    :answer_b: The current sprite would say "Hi" for 1 second, then say "everyone" for 1 second, then say "there" for 1 second.
+    :answer_c: The current sprite would say "Hi" for 1 second, then say "everyone" forever.
+    :correct: a
+    :feedback_a: No. Be sure to look very carefully at the names of the broadcasts!
+    :feedback_b: No. Be sure to look very carefully at the names of the broadcasts!
+    :feedback_c: Yes! Since the 'when I receive alpha' block of code calls itself, it will never stop repeating.
+
+    What would happen when you click the green flag, given the code below?
+
+    .. image:: images/scratch_practice_quiz_2.png
+
+
+.. fillintheblank:: scratch_practice_quiz_3
+
+    Given the code below, how far would the current sprite move when you click the green flag?
+
+    .. image:: images/scratch_practice_quiz_3.png
+
+    - :50: Yes! Since we repeat the 'move 10 steps' block 5 times, it is the equivalent of executing the move 10 steps block 5 times.
+      :5: No. Although there is a repeat 5 block, for each repetition the sprite will move 10 steps.
+      :10: No. Since we repeat the 'move 10 steps' block 5 times, it is the equivalent of executing the move 10 steps block 5 times.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_practice_quiz_4
+
+    Given the code below, how many times will you hear the meow sound when you click the green flag?
+
+    .. image:: images/scratch_practice_quiz_4.png
+
+    - :3: Yes! Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block. 
+      :6: No. Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block.
+      :2: No. Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block.
+      :.*: Try again!
+
+
+
+.. fillintheblank:: scratch_practice_quiz_5
+
+    Given the code below, how far will the current sprite move when you click the green flag?
+
+    .. image:: images/scratch_practice_quiz_5.png
+
+    - :60: Yes! Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
+      :30: No. Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
+      :5: No. Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
+      :.*: Try again! Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. 
+
+
+
+.. fillintheblank:: scratch_practice_quiz_6
+
+    Given the code below, what would be the value of x after the following code is executed?
+
+    .. image:: images/scratch_practice_quiz_6.png
+
+    - :20: Yes! Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
+      :17: No. Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
+      :.*: Try again! Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
+
+
+
+.. fillintheblank:: scratch_practice_quiz_7
+
+    Given the code below, how many iterations would occur when the following code is executed?
+
+    .. image:: images/scratch_practice_quiz_6.png
+
+    - :3: Yes! Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
+      :5: No. Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
+      :.*: Try again! Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
 
