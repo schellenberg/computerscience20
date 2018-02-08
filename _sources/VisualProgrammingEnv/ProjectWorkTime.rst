@@ -23,7 +23,7 @@ Check Your Understanding
     :answer_a: The current sprite would say "Hi" for 1 second, then say "there" for 1 second, then say "everyone" for 1 second.
     :answer_b: The current sprite would say "Hi" for 1 second, then say "everyone" for 1 second, then say "there" for 1 second.
     :answer_c: The current sprite would say "Hi" for 1 second, then say "there" for 1 second.
-    :correct: a
+    :correct: b
     :feedback_a: No. Be sure to look very carefully at the names of the broadcasts!
     :feedback_b: Yes! The order is controlled by the names of the broadcasts, not which is higher or lower in your script.
     :feedback_c: No. Be sure to look very carefully at the names of the broadcasts!
@@ -37,7 +37,7 @@ Check Your Understanding
     :answer_a: The current sprite would say "Hi" for 1 second, then say "there" for 1 second, then say "everyone" for 1 second.
     :answer_b: The current sprite would say "Hi" for 1 second, then say "everyone" for 1 second, then say "there" for 1 second.
     :answer_c: The current sprite would say "Hi" for 1 second, then say "everyone" forever.
-    :correct: a
+    :correct: c
     :feedback_a: No. Be sure to look very carefully at the names of the broadcasts!
     :feedback_b: No. Be sure to look very carefully at the names of the broadcasts!
     :feedback_c: Yes! Since the 'when I receive alpha' block of code calls itself, it will never stop repeating.
