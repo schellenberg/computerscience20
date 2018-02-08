@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Computer Science 20 - Saskatchewan'
-copyright = '2017 Dan Schellenberg'
+project = 'Computer Science 30 - Saskatchewan'
+copyright = '2018 Dan Schellenberg'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -102,10 +102,10 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Computer Science 20 - Saskatchewan",
+    'navbar_title': "Computer Science 30 - Saskatchewan",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "CS20",
+    'navbar_site_name': "CS30",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
@@ -148,10 +148,10 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Computer Science 20 Saskatchewan'
+html_title = 'Computer Science 30 Saskatchewan'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='CS20'
+html_short_title ='CS30'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
