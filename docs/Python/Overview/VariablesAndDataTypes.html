@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. Variables, Data Types, and User Input &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Conditionals" href="Conditionals.html" />
+    <link rel="prev" title="1. Quick Python Overview" href="QuickOverview.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">2. Variables, Data Types, and User Input</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">2.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#using-thonny">2.2. Using Thonny</a></li>
+<li><a class="reference internal" href="#comments">2.3. Comments</a></li>
+<li><a class="reference internal" href="#variables">2.4. Variables</a></li>
+<li><a class="reference internal" href="#variable-names-and-keywords">2.5. Variable Names and Keywords</a></li>
+<li><a class="reference internal" href="#user-input">2.6. User Input</a></li>
+<li><a class="reference internal" href="#practice-problems">2.7. Practice Problems</a><ul>
+<li><a class="reference internal" href="#area-of-a-circle">2.7.1. Area of a Circle</a></li>
+<li><a class="reference internal" href="#area-of-a-rectangle">2.7.2. Area of a Rectangle</a></li>
+<li><a class="reference internal" href="#car-gas-usage">2.7.3. Car Gas Usage</a></li>
+<li><a class="reference internal" href="#if-you-finish-early">2.7.4. If You Finish Early</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 1. Quick Python Overview" data-toggle="tooltip">
+    <a href="QuickOverview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 3. Conditionals' data-toggle="tooltip" >
+    <a href="Conditionals.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="variables-data-types-and-user-input">
+<h1>2. Variables, Data Types, and User Input<a class="headerlink" href="#variables-data-types-and-user-input" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+</ul>
+
+    </div>
+    <div class="section" id="what-does-this-program-do">
+<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<p>Remember the we learned four primitive data types in our overview of Python. They are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">int</span></code></li>
+<li><code class="docutils literal"><span class="pre">float</span></code></li>
+<li><code class="docutils literal"><span class="pre">string</span></code></li>
+<li><code class="docutils literal"><span class="pre">bool</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>For the following examples, consider the data type of each variable. What will the program output? Why?</p>
+
+<div data-childcomponent="wdtpd_variable_assignment_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_variable_assignment_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+x = 4
+y = 3 + x
+print(x + y)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_variable_assignment_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_variable_assignment_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+x = 4
+y = 3
+z = "five"
+x = 2
+print(x + y)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_variable_assignment_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_variable_assignment_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+x = 4
+y = 3
+z = "five"
+print(y + z)
+</textarea>
+</div>
+</div>
+<div class="section" id="using-thonny">
+<h2>2.2. Using Thonny<a class="headerlink" href="#using-thonny" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to use Thonny: <em>shell mode</em> and <em>program
+mode</em>. In shell mode, you type Python expressions into the <strong>Python shell</strong>,
+and the interpreter immediately shows the result.  The example below shows the Python shell at work.</p>
+<img alt="../../_images/thonny_shell.png" src="../../_images/thonny_shell.png" />
+<p>The <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> is called the <strong>Python prompt</strong>. The interpreter uses the prompt to
+indicate that it is ready for instructions. We typed <code class="docutils literal"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span></code>, then pressed Enter.  The
+interpreter evaluated our expression and replied <code class="docutils literal"><span class="pre">5</span></code>. On the next line
+it gave a new prompt indicating that it is ready for more input.</p>
+<p>Working directly in the interpreter is convenient for testing short bits of
+code because you get immediate feedback. Think of it as scratch paper used to
+help you work out problems.</p>
+<p>Alternatively, you can write an entire program by placing lines of Python instructions
+in a file and then use the interpreter to
+execute the contents of the file as a whole. Such a file is often referred to as <strong>source code</strong>.  For
+example, we used a Thonny to create a source code file named <code class="docutils literal"><span class="pre">firstprogram.py</span></code> with
+the following contents:</p>
+<img alt="../../_images/thonny_editor.png" src="../../_images/thonny_editor.png" />
+<p>By convention, files that contain Python programs have names that end with
+<code class="docutils literal"><span class="pre">.py</span></code> .  Thonny will save your files with a .py extension automatically, and you should be able to open them in Thonny by double clicking them in File Explorer (or Finder).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that when we were using the <strong>shell</strong>, we didn’t have to worry about using <code class="docutils literal"><span class="pre">print()</span></code> to see the value of a statement. The shell does that automatically. However, if we are using the <strong>code editor</strong>, we need to call <strong>print()</strong> any time we want to see output.</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_2_1">
+            intro-11: Source code is another name for:
+            <li data-component="answer" data-correct id="question1_2_1_opt_a">the instructions in a program, stored in a file.</li><li data-component="feedback" id="question1_2_1_opt_a">The file that contains the instructions written in the high level language is called the source code file.</li>
+            
+            <li data-component="answer"  id="question1_2_1_opt_b">the language that you are programming in (e.g., Python).</li><li data-component="feedback" id="question1_2_1_opt_b">This language is simply called the programming language, or simply the language.</li>
+            
+            <li data-component="answer"  id="question1_2_1_opt_c">the environment/tool in which you are programming.</li><li data-component="feedback" id="question1_2_1_opt_c">The environment may be called the IDE, or integrated development environment, though not always.</li>
+            
+            <li data-component="answer"  id="question1_2_1_opt_d">the number (or "code") that you must input at the top of each program to tell the computer how to execute your program.</li><li data-component="feedback" id="question1_2_1_opt_d">There is no such number that you must type in at the start of your program.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="comments">
+<h2>2.3. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>As programs get bigger and more complicated, they get more difficult to read.
+Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of code and figure out what it is doing, or why.
+For this reason, it is a good idea to add notes to your programs to explain in
+natural language what the program is doing.  These notes are called comments.</p>
+<p>A <strong>comment</strong> in a computer program is text that is intended only for the human
+reader - it is completely ignored by the interpreter.
+In Python, the <code class="docutils literal"><span class="pre">#</span></code> token starts a comment.  The rest of the line is ignored.
+<strong>Every program you write should start with a comment header</strong>, which could look something like this:</p>
+
+<div data-childcomponent="ch01_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch01_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+#---------------------------------------------------
+# First Python Program
+# Dan Schellenberg
+# Oct 16, 2017
+#---------------------------------------------------
+
+print("Hello, World!")
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Create a folder (call it Computer Science 20) on your computer to hold all of the code you will write in Python this semester. Save the file you created above as <code class="docutils literal"><span class="pre">template.py</span></code>, and save it in that folder.</p>
+</div>
+<p>Notice that when you run this program, it only prints the phrase Hello, World!  None of the comments appear. You’ll also notice that we’ve left a blank line in the program.  Blank lines
+are also ignored by the interpreter, but comments and blank lines can make your
+programs much easier for humans to parse.  Use them liberally!</p>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_12_1">
+            intro-12: What are comments for?
+            <li data-component="answer"  id="question1_12_1_opt_a">To tell the computer what you mean in your program.</li><li data-component="feedback" id="question1_12_1_opt_a">Comments are ignored by the computer.</li>
+            
+            <li data-component="answer" data-correct id="question1_12_1_opt_b">For the people who are reading your code to know, in natural language, what the program is doing.</li><li data-component="feedback" id="question1_12_1_opt_b">The computer ignores comments.  It's for the humans that will "consume" your program.</li>
+            
+            <li data-component="answer"  id="question1_12_1_opt_c">Nothing, they are extraneous information that is not needed.</li><li data-component="feedback" id="question1_12_1_opt_c">Comments can provide much needed information for anyone reading the program.</li>
+            
+            <li data-component="answer"  id="question1_12_1_opt_d">Nothing in a short program.  They are only needed for really large programs.</li><li data-component="feedback" id="question1_12_1_opt_d">Even small programs benefit from comments.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="variables">
+<h2>2.4. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>One of the most powerful features of a programming language is the ability to
+manipulate <strong>variables</strong>. A variable is a name that refers to a value.</p>
+<p><strong>Assignment statements</strong> create new variables and also give them values to refer to.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s up, Doc?&quot;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+</pre></div>
+</div>
+<p>This example makes three assignments. The first assigns the string value
+<code class="docutils literal"><span class="pre">&quot;What's</span> <span class="pre">up,</span> <span class="pre">Doc?&quot;</span></code> to a new variable named <code class="docutils literal"><span class="pre">message</span></code>. The second gives the
+integer <code class="docutils literal"><span class="pre">17</span></code> to <code class="docutils literal"><span class="pre">n</span></code>, and the third assigns the floating-point number
+<code class="docutils literal"><span class="pre">3.14159</span></code> to a variable called <code class="docutils literal"><span class="pre">pi</span></code>.</p>
+<p>The <strong>assignment token</strong>, <code class="docutils literal"><span class="pre">=</span></code>, should not be confused with <em>equality</em> (we will see later that equality uses the
+<code class="docutils literal"><span class="pre">==</span></code> token).  The assignment statement links a <em>name</em>, on the left hand
+side of the operator, with a <em>value</em>, on the right hand side.  This is why you
+will get an error if you enter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="mi">17</span> <span class="o">=</span> <span class="n">n</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">When reading or writing code, say to yourself “n is assigned 17” or “n gets
+the value 17” or “n is a reference to the object 17” or “n refers to the object 17”.  Don’t say “n equals 17”.</p>
+</div>
+<p>A common way to represent variables on paper is to write the name with an arrow
+pointing to the variable’s value. This kind of figure, known as a <strong>reference diagram</strong>, is often called a <strong>state
+snapshot</strong> because it shows what state each of the variables is in at a
+particular instant in time.  (Think of it as the variable’s state of mind).
+This diagram shows the result of executing the assignment statements shown above.</p>
+<img alt="Reference Diagram" src="../../_images/refdiagram1.png" />
+<p>If you ask Python to evaluate a variable, it will produce the value
+that is currently linked to the variable.  In other words, evaluating a variable will give you the value that is referred to
+by the variable.</p>
+
+<div data-childcomponent="ch02_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_9 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+message = "What's up, Doc?"
+n = 17
+pi = 3.14159
+
+print(message)
+print(n)
+print(pi)
+</textarea>
+</div>
+<p>In each case the result is the value of the variable.</p>
+<p>Variables also have types; again, we can ask the interpreter what they are.</p>
+
+<div data-childcomponent="ch02_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_10 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+message = "What's up, Doc?"
+n = 17
+pi = 3.14159
+
+print(type(message))
+print(type(n))
+print(type(pi))
+</textarea>
+</div>
+<p>The type of a variable is the type of the object it currently refers to.</p>
+<p>We use variables in a program to “remember” things, like the current score at
+the basketball game.  But variables are <em>variable</em>. This means they can change
+over time, just like the scoreboard at a basketball game.  You can assign a value
+to a variable, and later assign a different value to the same variable.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different from math. In math, if you give <code class="docutils literal"><span class="pre">x</span></code> the value 3, it
+cannot change to refer to a different value half-way through your
+calculations!</p>
+</div>
+<p>To see this, read and then run the following program.
+You’ll notice we change the value of <code class="docutils literal"><span class="pre">day</span></code> three times, and on the third
+assignment we even give it a value that is of a different type.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="ch02_11"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (ch02_11)</span> </p>
+</div>
+<script type="text/javascript">
+var ch02_11_trace = {"code": "day = \"Thursday\"\nprint(day)\nday = \"Friday\"\nprint(day)\nday = 21\nprint(day)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"day": "Thursday"}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"day": "Thursday"}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": "Thursday\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"day": "Friday"}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": "Thursday\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"day": "Friday"}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": "Thursday\nFriday\n"}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"day": 21}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": "Thursday\nFriday\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"day": 21}, "ordered_globals": ["day"], "stack_to_render": [], "heap": {}, "stdout": "Thursday\nFriday\n21\n"}]};
+var ch02_11_vis;
+
+$(document).ready(function() {
+    try {
+        ch02_11_vis = new ExecutionVisualizer('ch02_11',ch02_11_trace,
+                                    {embeddedMode: false,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(ch02_11_vis,'ch02_11');
+        styleButtons('ch02_11');
+        allVisualizers.push(ch02_11_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component ch02_11_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#ch02_11_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'ch02_11'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (ch02_11_vis) {
+        ch02_11_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question2_3_2">
+            <p>intro-13: What is printed when the following statements execute?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="s2">&quot;Thursday&quot;</span>
+<span class="n">day</span> <span class="o">=</span> <span class="mf">32.5</span>
+<span class="n">day</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="k">print</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question2_3_2_opt_a">Nothing is printed. A runtime error occurs.</li><li data-component="feedback" id="test_question2_3_2_opt_a">It is legal to change the type of data that a variable holds in Python.</li>
+            
+            <li data-component="answer"  id="test_question2_3_2_opt_b">Thursday</li><li data-component="feedback" id="test_question2_3_2_opt_b">This is the first value assigned to the variable day, but the next statements reassign that variable to new values.</li>
+            
+            <li data-component="answer"  id="test_question2_3_2_opt_c">32.5</li><li data-component="feedback" id="test_question2_3_2_opt_c">This is the second value assigned to the variable day, but the next statement reassigns that variable to a new value.</li>
+            
+            <li data-component="answer" data-correct id="test_question2_3_2_opt_d">19</li><li data-component="feedback" id="test_question2_3_2_opt_d">The variable day will contain the last value assigned to it when it is printed.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="variable-names-and-keywords">
+<h2>2.5. Variable Names and Keywords<a class="headerlink" href="#variable-names-and-keywords" title="Permalink to this headline">¶</a></h2>
+<p><strong>Variable names</strong> can be arbitrarily long. They can contain both letters and
+digits, but they have to begin with a letter or an underscore. You should use long, descriptive variable names. For example, if you were creating a program to calculate how much gas a car uses, a good variable name might be <code class="docutils literal"><span class="pre">litres_per_100_kms</span></code>. A bad variable name in that case would be <code class="docutils literal"><span class="pre">l</span></code>. Using a single letter as the variable name usually makes your program harder to understand for other people. Although that can be a bit annoying to type out a long variable name the first time, once you have typed it once in Thonny, you should be able to simply type the first few letters of the variable name, then press <strong>Ctrl-Space</strong> to have the rest of the variable name auto-complete for you. <em>If that doesn’t work for you, check Thonny’s preferences.</em></p>
+<p>The underscore character ( <code class="docutils literal"><span class="pre">_</span></code>) can also appear in a name. It is often used in
+names with multiple words, such as <code class="docutils literal"><span class="pre">my_name</span></code> or <code class="docutils literal"><span class="pre">price_of_tea_in_china</span></code>. <strong>This is the preferred way to write long variable names in Python, and you should use this style!</strong></p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Variable names can never contain spaces.</p>
+</div>
+<p>There are some situations in which names beginning with an underscore have
+special meaning, so a safe rule for beginners is to start all names with a
+letter.</p>
+<p>Although it is legal to use uppercase letters, by convention we don’t. If you choose to use uppercase letters, remember that case matters. <code class="docutils literal"><span class="pre">Bruce</span></code> and <code class="docutils literal"><span class="pre">bruce</span></code> are different variables.</p>
+<p>If you give a variable an illegal name, you get a syntax error.  In the example below, each
+of the variable names is illegal.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>76trombones = &quot;big parade&quot;
+more$ = 1000000
+class = &quot;Computer Science 101&quot;
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">76trombones</span></code> is illegal because it does not begin with a letter.  <code class="docutils literal"><span class="pre">more$</span></code>
+is illegal because it contains an illegal character, the dollar sign. But
+what’s wrong with <code class="docutils literal"><span class="pre">class</span></code>?</p>
+<p>It turns out that <code class="docutils literal"><span class="pre">class</span></code> is one of the Python <strong>keywords</strong>. Keywords define
+the language’s syntax rules and structure, and they cannot be used as variable
+names.
+Python has thirty-something keywords (and every now and again improvements to
+Python introduce or eliminate one or two):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>and</td>
+<td>as</td>
+<td>assert</td>
+<td>break</td>
+<td>class</td>
+<td>continue</td>
+</tr>
+<tr class="row-even"><td>def</td>
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+<td>except</td>
+<td>exec</td>
+</tr>
+<tr class="row-odd"><td>finally</td>
+<td>for</td>
+<td>from</td>
+<td>global</td>
+<td>if</td>
+<td>import</td>
+</tr>
+<tr class="row-even"><td>in</td>
+<td>is</td>
+<td>lambda</td>
+<td>nonlocal</td>
+<td>not</td>
+<td>or</td>
+</tr>
+<tr class="row-odd"><td>pass</td>
+<td>raise</td>
+<td>return</td>
+<td>try</td>
+<td>while</td>
+<td>with</td>
+</tr>
+<tr class="row-even"><td>yield</td>
+<td>True</td>
+<td>False</td>
+<td>None</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>You might want to keep this list handy. If the interpreter complains about one
+of your variable names and you don’t know why, see if it is on this list.</p>
+<p>Programmers generally choose names for their variables that are meaningful to
+the human readers of the program — they help the programmer document, or
+remember, what the variable is used for.</p>
+</div>
+<div class="section" id="user-input">
+<h2>2.6. User Input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
+<p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. <code class="docutils literal"><span class="pre">input()</span></code> will <strong>always return a string</strong>. You will need to convert it to an int or a float if you are expecting a number.</p>
+
+<div data-childcomponent="input_demo_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_demo_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+your_school = input("What school do you attend?")
+print(your_school)
+</textarea>
+</div>
+<p>The following example is not going to work when you try to run it. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
+
+<div data-childcomponent="input_demo_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=input_demo_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+current_year = input("What is the current year?")
+grad_year = input("What year will you graduate from high school?")
+
+year_difference = grad_year - current_year
+
+print("You will graduate in", year_difference, "years.")
+</textarea>
+</div>
+<p><strong>Do not look</strong> at this sample solution unless you have spent time attempting to create your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_input_demo_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">current_year</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the current year?&quot;</span><span class="p">)</span>
+<span class="n">grad_year</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What year will you graduate from high school?&quot;</span><span class="p">)</span>
+
+<span class="c1"># convert user input to be integers, so we can subtract</span>
+<span class="n">current_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">current_year</span><span class="p">)</span>
+<span class="n">grad_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">grad_year</span><span class="p">)</span>
+
+<span class="n">year_difference</span> <span class="o">=</span> <span class="n">grad_year</span> <span class="o">-</span> <span class="n">current_year</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will graduate in&quot;</span><span class="p">,</span> <span class="n">year_difference</span><span class="p">,</span> <span class="s2">&quot;years.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="practice-problems">
+<h2>2.7. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that every time you take <code class="docutils literal"><span class="pre">input()</span></code> from the user, the data type of that input will be a string! You might want to look back at <a class="reference internal" href="../../Review/Python.html#type-casting-functions"><span class="std std-ref">Converting Between Data Types</span></a>.</p>
+</div>
+<div class="section" id="area-of-a-circle">
+<h3>2.7.1. Area of a Circle<a class="headerlink" href="#area-of-a-circle" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will compute the area of a circle.  Prompt the user to enter the radius and print a nice message back to the user with the answer.</p>
+
+<div data-childcomponent="practice_problem_variables_data_types_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_variables_data_types_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Area of a Circle Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Area of a Circle Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 18, 2017</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the radius: &quot;</span><span class="p">)</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>  <span class="c1">#convert input into a number</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The area of the circle is&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="area-of-a-rectangle">
+<h3>2.7.2. Area of a Rectangle<a class="headerlink" href="#area-of-a-rectangle" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle. Print a nice message with the answer.</p>
+
+<div data-childcomponent="practice_problem_variables_data_types_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_variables_data_types_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Area of a Rectangle Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Area of a Rectangle Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 19, 2017</span>
+
+<span class="n">length</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the length of the rectangle: &quot;</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the width of the rectangle: &quot;</span><span class="p">)</span>
+
+<span class="c1">#convert user input into numbers</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The area of the rectangle is&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="car-gas-usage">
+<h3>2.7.3. Car Gas Usage<a class="headerlink" href="#car-gas-usage" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Promp the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. <em>Note: If you aren’t sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km</em>.</p>
+
+<div data-childcomponent="practice_problem_variables_data_types_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=practice_problem_variables_data_types_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Gas Mileage Calculator
+# Put Your Name Here
+# Put the Date Here
+
+# your code goes here
+</textarea>
+</div>
+<p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
+
+    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution">
+    <p>This is one possible solution:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Gas Mileage Calculator</span>
+<span class="c1"># Dan Schellenberg</span>
+<span class="c1"># Oct 19, 2017</span>
+
+<span class="n">kilometers_driven</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many kilometers did you drive? &quot;</span><span class="p">)</span>
+<span class="n">litres_used</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many litres of gas did it take? &quot;</span><span class="p">)</span>
+
+<span class="c1">#convert user input to numbers</span>
+<span class="n">kilometers_driven</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kilometers_driven</span><span class="p">)</span>
+<span class="n">litres_used</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">litres_used</span><span class="p">)</span>
+
+<span class="n">gas_usage</span> <span class="o">=</span> <span class="n">litres_used</span> <span class="o">/</span> <span class="n">kilometers_driven</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your car is using&quot;</span><span class="p">,</span> <span class="n">gas_usage</span><span class="p">,</span> <span class="s2">&quot;L/100km&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="if-you-finish-early">
+<h3>2.7.4. If You Finish Early<a class="headerlink" href="#if-you-finish-early" title="Permalink to this headline">¶</a></h3>
+<p>If you completed all the questions above before the end of class, you might want to try one of the following extra challenges:</p>
+<ul class="simple">
+<li>making a calculator for a more complicated math problem.</li>
+<li>you look at the clock and it is exactly 2pm. You set an alarm to go off in 51 hours. At what time does the alarm go off? Write a Python program to solve the general version of this problem. Ask the user for the time now (in hours), and ask for the number of hours to wait. Your program should output what the time will be on the clock when the alarm goes off. Note: You might want to look back at <a class="reference internal" href="../../Review/Python.html#math-operator-list"><span class="std std-ref">Math Operators</span></a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. Quick Python Overview' data-toggle="tooltip">
+    <a href="QuickOverview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="QuickOverview.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 3. Conditionals' data-toggle="tooltip" >
+    <a href="Conditionals.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Conditionals.html" >Next Section - 3. Conditionals</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

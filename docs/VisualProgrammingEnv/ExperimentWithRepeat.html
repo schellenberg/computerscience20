@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3. Chase the Mouse and Drawing Polygons (Repeat and If/Else) &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Drawing Polygons - Part 2 (Variables and Nested Repeat)" href="VariablesAndNestedRepeat.html" />
+    <link rel="prev" title="2. Controlling a Character with WASD (Repetition and Conditionals)" href="CharacterControl.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">3. Chase the Mouse and Drawing Polygons (Repeat and If/Else)</a><ul>
+<li><a class="reference internal" href="#character-following-the-mouse">3.1. Character Following the Mouse</a></li>
+<li><a class="reference internal" href="#check-your-understanding">3.2. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#drawing-regular-polygons">3.3. Drawing Regular Polygons</a></li>
+<li><a class="reference internal" href="#practice-problem">3.4. Practice Problem</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 2. Controlling a Character with WASD (Repetition and Conditionals)" data-toggle="tooltip">
+    <a href="CharacterControl.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 4. Drawing Polygons - Part 2 (Variables and Nested Repeat)' data-toggle="tooltip" >
+    <a href="VariablesAndNestedRepeat.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="chase-the-mouse-and-drawing-polygons-repeat-and-if-else">
+<h1>3. Chase the Mouse and Drawing Polygons (Repeat and If/Else)<a class="headerlink" href="#chase-the-mouse-and-drawing-polygons-repeat-and-if-else" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Use a <strong>forever</strong> block combined with an <strong>if/else</strong> block to make a character follow the mouse, then make a sound when it reaches the mouse cursor. Introduce the pen in Scratch, and use it to draw regular polygons with the <strong>repeat</strong> block.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+</ul>
+
+    </div>
+    <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=AJ1elMM7CwY">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
+<iframe src="https://www.youtube.com/embed/AJ1elMM7CwY"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="character-following-the-mouse">
+<h2>3.1. Character Following the Mouse<a class="headerlink" href="#character-following-the-mouse" title="Permalink to this headline">¶</a></h2>
+<p>Let’s make a program that has a cat following the mouse cursor around the stage, then meowing when it touches the mouse cursor. To start, hook up a <strong>forever</strong> block to a <strong>when key is pressed</strong> event block. Now put a <strong>point towards mouse-pointer</strong> block inside the forever block. Your program should look like this:</p>
+<img alt="../_images/scratch_point_to_mouse.png" src="../_images/scratch_point_to_mouse.png" />
+<p>When you press the space key, you should see the cat continue to turn and face the direction of the mouse cursor. To make the cat move, connect a <strong>move 10 steps</strong> block as the last part of the forever block, as follows:</p>
+<img alt="../_images/scratch_cat_chasing_mouse.png" src="../_images/scratch_cat_chasing_mouse.png" />
+<p>When you press the space key now, the cat should be following your mouse cursor around the screen. There is an obvious problem, however, when the cat actually <em>catches</em> the mouse. The cat overshoots the mouse, gets to the other side of it, turns around, then does the same thing all over again. Let’s fix this situation by having the cat stop moving when it gets close to the mouse, and make a meowing sound instead.</p>
+<p>We learned in the previous lesson that anytime you want to ask the computer a question, you can do it using an <strong>if-then</strong> block. Although we could use an <strong>if-then</strong> block to ask whether the cat is close to the mouse, in this situation we want to do one thing if the cat is far away, and a different thing when the cat is close. For situations like this, we can use a <strong>if/else</strong> block. The question we want to ask the computer is whether or not the cat is currently touching the mouse pointer. If it is, we want to have the cat make a meow sound. If it isn’t, the cat should move closer to the mouse. To do this in Scratch, hook up an <strong>if/else</strong> block inside your forever block as follows:</p>
+<img alt="../_images/scratch_if_else.png" src="../_images/scratch_if_else.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that when the cat touches the mouse cursor, the entire script pauses and waits until the sound has finished playing. If this isn’t the behaviour you want, you can use the <strong>play sound</strong> block instead of the <strong>play sound until done</strong> block.</p>
+</div>
+</div>
+<div class="section" id="check-your-understanding">
+<h2>3.2. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_sound_check_1">
+            <p>Given the code below, how many times would you hear a meow sound when you click the green flag?</p>
+<img alt="../_images/scratch_play_sound_check_1.png" src="../_images/scratch_play_sound_check_1.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [1, 1], "feedback": "Yes! Scratch will start playing each sound, then move on to the next block BEFORE the sound has completed. This means that although each sound did start, only the last block completely played, so it will sound as though only one sound block occurred."}, {"number": [5, 5], "feedback": "No. Even though the play sound block is there 5 times, Scratch will start playing each sound, then move on to the next block BEFORE the sound has completed."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_sound_check_2">
+            <p>Given the code below, how many times would you hear a meow sound when you click the green flag?</p>
+<img alt="../_images/scratch_sound_check_2.png" src="../_images/scratch_sound_check_2.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [5, 5], "feedback": "Yes! Because we are using the play sound until done block, Scratch will finish playing each sound before moving on to the next block."}, {"number": [1, 1], "feedback": "No. Because we are using the play sound until done block, Scratch will finish playing each sound before moving on to the next block."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_sound_check_3">
+            <p>Given the code below, how many times would you hear a meow sound when you click the green flag?</p>
+<img alt="../_images/scratch_sound_check_3.png" src="../_images/scratch_sound_check_3.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [2, 2], "feedback": "Yes! The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block."}, {"number": [1, 1], "feedback": "No. The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block."}, {"number": [3, 3], "feedback": "No. The first sound you will hear completely is the play sound until done block. The second sound you will hear is the final play sound block."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="drawing-regular-polygons">
+<h2>3.3. Drawing Regular Polygons<a class="headerlink" href="#drawing-regular-polygons" title="Permalink to this headline">¶</a></h2>
+<p>Every sprite in Scratch has the ability to draw with a virtual pen that they are holding at all times. This allows each sprite to leave a trail that shows where they have walked. In order to do this, you need to use the <strong>pen down</strong> block from the Pen tab, then have your sprite move. Explore this by trying the following:</p>
+<img alt="../_images/scratch_pen_down.png" src="../_images/scratch_pen_down.png" />
+<p>To remove the path you have drawn, double click on the <strong>clear</strong> block in the Pen tab.</p>
+<div class="topic">
+<p class="topic-title first">Your Turn 1</p>
+<p>Now that you know how to draw on the stage, see if you can draw a square using only the <strong>pen down</strong>, <strong>move __ steps</strong> and <strong>turn __ degrees</strong> blocks.</p>
+</div>
+<p>For many students, the first square they draw would be with code that looks like this:</p>
+<img alt="../_images/scratch_first_square.png" src="../_images/scratch_first_square.png" />
+<p>Although this does create a square, notice that there is code that is repeated multiple times. Any time you notice identical code being repeated, it should trigger a warning bell in your head saying “There’s got to be a better way!”. Think back to when we made a sprite shrink. We used a <strong>repeat</strong> block. We can improve the drawing a square code above by putting the code that shows up over and over into a <strong>repeat</strong> block, as follows:</p>
+<img alt="../_images/scratch_better_square.png" src="../_images/scratch_better_square.png" />
+<div class="topic">
+<p class="topic-title first">Your Turn 2</p>
+<p>Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the <em>t</em> key draws a triangle, <em>s</em> draws a square, <em>p</em> draws a pentagon, etc.</p>
+<p><img alt="regularPolygonImages" src="../_images/scratch_regular_polygons.png" /></p>
+<p>If you complete the regular polygons before the rest of your classmates, try to draw a circle and a five sided star.</p>
+<p><img alt="extraShapes" src="../_images/scratch_extra_shapes.png" /></p>
+</div>
+<p>Although you may have used a guess and check method to determine the angles used to draw the shapes above, there is a pattern we can use to draw these shapes. Notice the angles that you used in order to draw the shapes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="26%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shape</th>
+<th class="head">Sides</th>
+<th class="head">Angle Used</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>triangle</td>
+<td>3</td>
+<td>120</td>
+</tr>
+<tr class="row-odd"><td>square</td>
+<td>4</td>
+<td>90</td>
+</tr>
+<tr class="row-even"><td>pentagon</td>
+<td>5</td>
+<td>72</td>
+</tr>
+<tr class="row-odd"><td>hexagon</td>
+<td>6</td>
+<td>60</td>
+</tr>
+<tr class="row-even"><td>octagon</td>
+<td>8</td>
+<td>45</td>
+</tr>
+<tr class="row-odd"><td>polygon</td>
+<td>n</td>
+<td>360/n</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lesson draws on ideas from the <a class="reference external" href="http://bjc.edc.org/">Beauty and Joy of Computing Curriculum</a> .</p>
+</div>
+</div>
+<div class="section" id="practice-problem">
+<h2>3.4. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>Work on your first Scratch assignment, for any remaining time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.</p>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. Controlling a Character with WASD (Repetition and Conditionals)' data-toggle="tooltip">
+    <a href="CharacterControl.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="CharacterControl.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 4. Drawing Polygons - Part 2 (Variables and Nested Repeat)' data-toggle="tooltip" >
+    <a href="VariablesAndNestedRepeat.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="VariablesAndNestedRepeat.html" >Next Section - 4. Drawing Polygons - Part 2 (Variables and Nested Repeat)</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

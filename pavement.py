@@ -23,8 +23,8 @@ options(
         sourcedir="_sources",
         outdir="./docs",
         confdir=".",
-        project_name = "cs30sk",
-        template_args={'course_id': 'cs30sk',
+        project_name = "cs20sk",
+        template_args={'course_id': 'cs20sk',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 0,
@@ -32,7 +32,7 @@ options(
                        'use_services': 'false',
                        'python3': 'true',
                        'dburl': '',
-                       'basecourse': 'cs30sk'
+                       'basecourse': 'cs20sk'
                         }
     )
 )

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1. Image Processing and Nested Loops &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Image Processing Practice" href="ImageProcessingPractice.html" />
+    <link rel="prev" title="5. Animating a Micro:bit LED Image with a for Loop" href="../Functions/AnimatingImagesForLoop.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">1. Image Processing and Nested Loops</a><ul>
+<li><a class="reference internal" href="#image-processing-introduction">1.1. Image Processing Introduction</a></li>
+<li><a class="reference internal" href="#the-rgb-color-model">1.2. The RGB Color Model</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">1.2.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nested-iteration">1.3. Nested Iteration</a></li>
+<li><a class="reference internal" href="#creating-an-empty-image">1.4. Creating an Empty Image</a><ul>
+<li><a class="reference internal" href="#try-this">1.4.1. Try This</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#image-objects">1.5. Image Objects</a></li>
+<li><a class="reference internal" href="#image-processing-with-an-existing-image">1.6. Image Processing with an Existing Image</a><ul>
+<li><a class="reference internal" href="#increasing-a-color">1.6.1. Increasing a Color</a></li>
+<li><a class="reference internal" href="#negative-images">1.6.2. Negative Images</a></li>
+<li><a class="reference internal" href="#id1">1.6.3. Try This</a></li>
+<li><a class="reference internal" href="#id2">1.6.4. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#acknowledgments">1.6.5. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop" data-toggle="tooltip">
+    <a href="../Functions/AnimatingImagesForLoop.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 2. Image Processing Practice' data-toggle="tooltip" >
+    <a href="ImageProcessingPractice.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="image-processing-and-nested-loops">
+<h1>1. Image Processing and Nested Loops<a class="headerlink" href="#image-processing-and-nested-loops" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="image-processing-introduction">
+<h2>1.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
+<p class="last"><strong>Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!</strong></p>
+</div>
+<p>The following video (created by Code.org) describes how images are represented using binary digits, as well as an overview of how image filters work. It is a great introduction to the image filtering that follows.</p>
+<iframe src="https://www.youtube.com/embed/15aqFQQVBWU"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><p>Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
+spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
+explore how iteration allows us to manipulate these images.</p>
+<p>A <strong>digital image</strong> is a finite collection of small, discrete picture elements called <strong>pixels</strong>.  These pixels are organized in a two-dimensional grid.  Each pixel represents the smallest amount of picture information that is
+available.  Sometimes these pixels appear as small “dots”.</p>
+<p>Each image (grid of pixels) has its own width and its own height.  The width is the number of columns and the height is the number of rows.  We can name the pixels in the grid by using the column number and row number.  However, it is very important to remember
+that computer scientists like to start counting with 0!  This means that if there are 20 rows, they will be named 0,1,2, and so on through 19.  This will be very useful later when we iterate using range.</p>
+<p>In the figure below, the pixel of interest is found at column <strong>c</strong> and row <strong>r</strong>.</p>
+<img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
+</div>
+<div class="section" id="the-rgb-color-model">
+<h2>1.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
+of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
+The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
+resulting color.</p>
+<p>The minimum intensity value for a basic color is 0.  For example if the red intensity is 0, then there is no red in the pixel.  The maximum
+intensity is 255.  This means that there are actually 256 different amounts of intensity for each basic color.  Since there
+are three basic colors, that means that you can create 256<sup>3</sup> distinct colors using the RGB Color Model.</p>
+<p>Here are the red, green and blue intensities for some common colors.  Note that “Black” is represented by a pixel having
+no basic color.  On the other hand, “White” has maximum values for all three basic color components.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Color</th>
+<th class="head">Red</th>
+<th class="head">Green</th>
+<th class="head">Blue</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Red</td>
+<td>255</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>Green</td>
+<td>0</td>
+<td>255</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>Blue</td>
+<td>0</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="row-odd"><td>White</td>
+<td>255</td>
+<td>255</td>
+<td>255</td>
+</tr>
+<tr class="row-even"><td>Black</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>Yellow</td>
+<td>255</td>
+<td>255</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>Magenta</td>
+<td>255</td>
+<td>0</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
+a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
+<p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
+that allow us to ask for the intensity values.  They are called <code class="docutils literal"><span class="pre">getRed</span></code>, <code class="docutils literal"><span class="pre">getGreen</span></code>, and <code class="docutils literal"><span class="pre">getBlue</span></code>.  In addition, we can ask a
+pixel to change an intensity value using its <code class="docutils literal"><span class="pre">setRed</span></code>, <code class="docutils literal"><span class="pre">setGreen</span></code>, and <code class="docutils literal"><span class="pre">setBlue</span></code> methods.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="23%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method Name</th>
+<th class="head">Example</th>
+<th class="head">Explanation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Pixel(r,g,b)</td>
+<td>p = Pixel(20,100,50)</td>
+<td>Create a new pixel with 20 red, 100 green, and 50 blue.</td>
+</tr>
+<tr class="row-odd"><td>getRed()</td>
+<td>r = p.getRed()</td>
+<td>Return the red component intensity.</td>
+</tr>
+<tr class="row-even"><td>getGreen()</td>
+<td>g = p.getGreen()</td>
+<td>Return the green component intensity.</td>
+</tr>
+<tr class="row-odd"><td>getBlue()</td>
+<td>b = p.getBlue()</td>
+<td>Return the blue component intensity.</td>
+</tr>
+<tr class="row-even"><td>setRed()</td>
+<td>p.setRed(100)</td>
+<td>Set the red component intensity to 100.</td>
+</tr>
+<tr class="row-odd"><td>setGreen()</td>
+<td>p.setGreen(45)</td>
+<td>Set the green component intensity to 45.</td>
+</tr>
+<tr class="row-even"><td>setBlue()</td>
+<td>p.setBlue(156)</td>
+<td>Set the blue component intensity to 156.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
+We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
+the same as the current amount of green.</p>
+
+<div data-childcomponent="pixelex1a" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=pixelex1a data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+p = image.Pixel(45, 76, 200)
+print(p.getRed())
+p.setRed(66)
+print(p.getRed())
+p.setBlue(p.getGreen())
+print(p.getGreen(), p.getBlue())
+</textarea>
+</div>
+<div class="section" id="check-your-understanding">
+<h3>1.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
+            accumulator-pattern1: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
+            <li data-component="answer" data-correct id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback" id="test_question7_8_1_1_opt_a">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
+            
+            <li data-component="answer"  id="test_question7_8_1_1_opt_b">Light red</li><li data-component="feedback" id="test_question7_8_1_1_opt_b">The closer the values are to 0, the darker the color will appear.</li>
+            
+            <li data-component="answer"  id="test_question7_8_1_1_opt_c">Dark green</li><li data-component="feedback" id="test_question7_8_1_1_opt_c">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
+            
+            <li data-component="answer"  id="test_question7_8_1_1_opt_d">Light green</li><li data-component="feedback" id="test_question7_8_1_1_opt_d">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="nested-iteration">
+<h2>1.3. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
+all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
+to do this is to use <strong>nested iteration</strong>.</p>
+<p>Nested iteration simply means that we will place one iteration construct inside of another.  We will call these two
+iterations the <strong>outer iteration</strong> and the <strong>inner iteration</strong>.
+To see how this works, consider the iteration below.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We have seen this enough times to know that the value of <code class="docutils literal"><span class="pre">i</span></code> will be 0, then 1, then 2, and so on up to 4.
+The <code class="docutils literal"><span class="pre">print</span></code> will be performed once for each pass.
+However, the body of the loop can contain any statements, including another iteration (another <code class="docutils literal"><span class="pre">for</span></code> statement).  For example,</p>
+
+<div data-childcomponent="nested1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=nested1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for i in range(5):
+    for j in range(3):
+        print(i, j)
+</textarea>
+</div>
+<p>The <code class="docutils literal"><span class="pre">for</span> <span class="pre">i</span></code> iteration is the <cite>outer iteration</cite> and the <code class="docutils literal"><span class="pre">for</span> <span class="pre">j</span></code> iteration is the <cite>inner iteration</cite>.  Each pass through
+the outer iteration will result in the complete processing of the inner iteration from beginning to end.  This means that
+the output from this nested iteration will show that for each value of <code class="docutils literal"><span class="pre">i</span></code>, all values of <code class="docutils literal"><span class="pre">j</span></code> will occur.</p>
+<p>Note that the value of <code class="docutils literal"><span class="pre">i</span></code> stays the same while the value of <code class="docutils literal"><span class="pre">j</span></code> changes.  The inner iteration, in effect, is moving “faster” than the outer iteration.</p>
+<p>Another way to see this in more detail is to examine the behavior with codelens.  Step through the iterations to see the
+flow of control as it occurs with the nested iteration.  Again, for every value of <code class="docutils literal"><span class="pre">i</span></code>, all of the values of <code class="docutils literal"><span class="pre">j</span></code> will occur.  You can see that the inner iteration completes before going on to the next pass of the outer iteration.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="nested2"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (nested2)</span> </p>
+</div>
+<script type="text/javascript">
+var nested2_trace = {"code": "for i in range(5):\n    for j in range(3):\n        print(i, j)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"i": 0, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"i": 2, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"i": 3, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 0}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 1}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n4 1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n4 1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n4 1\n4 2\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"i": 4, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n4 1\n4 2\n"}, {"line": 1, "event": "return", "func_name": "<module>", "globals": {"i": 4, "j": 2}, "ordered_globals": ["i", "j"], "stack_to_render": [], "heap": {}, "stdout": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2\n2 0\n2 1\n2 2\n3 0\n3 1\n3 2\n4 0\n4 1\n4 2\n"}]};
+var nested2_vis;
+
+$(document).ready(function() {
+    try {
+        nested2_vis = new ExecutionVisualizer('nested2',nested2_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(nested2_vis,'nested2');
+        styleButtons('nested2');
+        allVisualizers.push(nested2_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component nested2_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#nested2_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'nested2'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (nested2_vis) {
+        nested2_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>Our goal with image processing is to visit each pixel.  We will use an iteration to process each <cite>row</cite>.  Within that iteration, we will use a nested iteration to process each <cite>column</cite>.  The result is a nested iteration, similar to the one
+seen above, where the outer <code class="docutils literal"><span class="pre">for</span></code> loop processes the rows, from 0 up to but not including the height of the image.
+The inner <code class="docutils literal"><span class="pre">for</span></code> loop will process each column of a row, again from 0 up to but not including the width of the image.</p>
+<p>The resulting code will look like the following.  We are now free to do anything we wish to each pixel in the image.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+        <span class="c1"># do something with the pixel at position (col,row)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-an-empty-image">
+<h2>1.4. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only “White” pixels when it is created. We can create and draw an empty image like this:</p>
+
+<div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=empty_image_demo data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+width = 600
+height = 300
+
+win = image.ImageWin(600,300)
+img = image.EmptyImage(width,height)
+
+img.draw(win)
+</textarea>
+</div>
+<p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">setPixel</span></code> function inside of a nested for loop.</p>
+
+<div data-childcomponent="change_empty_image_to_red" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=change_empty_image_to_red data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+width = 600
+height = 300
+
+win = image.ImageWin(600,300)
+img = image.EmptyImage(width,height)
+
+for row in range(height):
+    for col in range(width):
+        this_pixel = image.Pixel(255, 0, 0)
+        img.setPixel(col,row,this_pixel)
+
+img.draw(win)
+</textarea>
+</div>
+<div class="section" id="try-this">
+<h3>1.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<p>Change the code above to draw an image of a different color. Now, adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?</p>
+</div>
+</div>
+<div class="section" id="image-objects">
+<h2>1.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
+<p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">getWidth</span></code> and <code class="docutils literal"><span class="pre">getHeight</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">getPixel</span></code> and change the pixel at
+a particular location using <code class="docutils literal"><span class="pre">setPixel</span></code>.</p>
+<p>The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
+different depending on whether you are using an image file or creating an empty image.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="31%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method Name</th>
+<th class="head">Example</th>
+<th class="head">Explanation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Image(filename)</td>
+<td>img = image.Image(“cy.png”)</td>
+<td>Create an Image object from the file cy.png.</td>
+</tr>
+<tr class="row-odd"><td>EmptyImage()</td>
+<td>img = image.EmptyImage(100,200)</td>
+<td>Create an Image object that has all “White” pixels</td>
+</tr>
+<tr class="row-even"><td>getWidth()</td>
+<td>w = img.getWidth()</td>
+<td>Return the width of the image in pixels.</td>
+</tr>
+<tr class="row-odd"><td>getHeight()</td>
+<td>h = img.getHeight()</td>
+<td>Return the height of the image in pixels.</td>
+</tr>
+<tr class="row-even"><td>getPixel(col,row)</td>
+<td>p = img.getPixel(35,86)</td>
+<td>Return the pixel at column 35, row 86.</td>
+</tr>
+<tr class="row-odd"><td>setPixel(col,row,p)</td>
+<td>img.setPixel(100,50,mp)</td>
+<td>Set the pixel at column 100, row 50 to be mp.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Consider the image shown below.  Assume that the image is stored in a file called <code class="docutils literal"><span class="pre">skflag.png</span></code>.  Line 2 opens the
+file and uses the contents to create an image object that is referred to by <code class="docutils literal"><span class="pre">img</span></code>.  Once we have an image object,
+we can use the methods described above to access information about the image or to get a specific pixel and check
+on its basic color intensities.</p>
+<img src="../../_static/skflag.png" id="skflag.png">
+<div data-childcomponent="pixelex1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=pixelex1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+img = image.Image("skflag.png")
+
+print(img.getWidth())
+print(img.getHeight())
+
+p = img.getPixel(45, 55)
+print(p.getRed(), p.getGreen(), p.getBlue())
+</textarea>
+</div>
+<p>When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
+pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">getPixel</span></code> arguments and rerunning the program.</p>
+</div>
+<div class="section" id="image-processing-with-an-existing-image">
+<h2>1.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="increasing-a-color">
+<h3>1.6.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
+<img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
+
+<div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=increase_color_amount data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+img = image.Image("sneakers.jpg")
+win = image.ImageWin(img.getWidth(), img.getHeight())
+img.draw(win)
+img.setDelay(1,15)   # setDelay(0) turns off animation
+
+for row in range(img.getHeight()):
+    for col in range(img.getWidth()):
+        p = img.getPixel(col, row)
+
+        new_red = p.getRed()
+        new_green = p.getGreen() + 50
+        new_blue = p.getBlue()
+
+        new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+        img.setPixel(col, row, new_pixel)
+
+img.draw(win)
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Please note that the setDelay() method is not implemented in the cs20-image module, but you can still show image manipulation in an “animated” way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;sneakers.jpg&quot;</span><span class="p">)</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
+<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">setDelay</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>   <span class="c1"># setDelay(0) turns off animation</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">()):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">()):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+
+        <span class="n">new_red</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
+        <span class="n">new_green</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">()</span> <span class="o">+</span> <span class="mi">50</span>
+        <span class="n">new_blue</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">()</span>
+
+        <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="n">new_red</span><span class="p">,</span> <span class="n">new_green</span><span class="p">,</span> <span class="n">new_blue</span><span class="p">)</span>
+
+        <span class="n">img</span><span class="o">.</span><span class="n">setPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">new_pixel</span><span class="p">)</span>
+
+    <span class="c1"># redrawing the image after each row allows us to see how the image is being changed</span>
+    <span class="c1"># you can move this outside the for loop if you don&#39;t want to watch the process</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
+
+<span class="c1"># the following line will save the adjusted version of the file into the save folder as your python script</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;negative.jpg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">Notice that the <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
+</div>
+<p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">getWidth()</span></code> and <code class="docutils literal"><span class="pre">getHeight()</span></code> functions to create a window that is the same size as the image.</p>
+<p>Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
+Line 10 gets an individual pixel at the current location of the nested loop.</p>
+<p>Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the <code class="docutils literal"><span class="pre">new_red</span></code>, <code class="docutils literal"><span class="pre">new_green</span></code>, and <code class="docutils literal"><span class="pre">new_blue</span></code> values, we can create a new pixel (Line 15).</p>
+<p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
+</div>
+<div class="section" id="negative-images">
+<h3>1.6.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
+<p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
+<p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
+and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
+<code class="docutils literal"><span class="pre">255-50</span></code> or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.</p>
+<p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.</p>
+
+<div data-childcomponent="acimg_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=acimg_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+img = image.Image("skflag.png")
+win = image.ImageWin(img.getWidth(), img.getHeight())
+img.draw(win)
+img.setDelay(1,15)   # setDelay(0) turns off animation
+
+for row in range(img.getHeight()):
+    for col in range(img.getWidth()):
+        p = img.getPixel(col, row)
+
+        newred = 255 - p.getRed()
+        newgreen = 255 - p.getGreen()
+        newblue = 255 - p.getBlue()
+
+        newpixel = image.Pixel(newred, newgreen, newblue)
+
+        img.setPixel(col, row, newpixel)
+
+img.draw(win)
+</textarea>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>1.6.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Change the name of the file in the <code class="docutils literal"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal"><span class="pre">pineapples.jpg</span></code>):</li>
+</ul>
+<img src="../../_static/fransaskoisflag.jpg" id="fransaskoisflag.jpg">
+<h4 style="text-align: center;">fransaskoisflag.jpg</h4><img src="../../_static/pineapples.jpg" id="pineapples.jpg">
+<h4 style="text-align: center;">pineapples.jpg</h4><ul class="simple">
+<li>Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.</li>
+<li>See if you can create a <strong>gray scale</strong> version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. <em>Note that any RGB value that contains the same value for it’s R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.</em></li>
+<li>You can create <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.</li>
+<li>You can also do some complex arithmetic and create interesting effects, such as <a class="reference external" href="https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created">Sepia Tone</a></li>
+</ul>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">If you are using Thonny, be careful to always pass integer values when using the <code class="docutils literal"><span class="pre">setPixel()</span></code> function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the <code class="docutils literal"><span class="pre">int()</span></code> function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>1.6.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
+            <p>accumulator-pattern2: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span>
+
+<span class="mi">0</span> <span class="mi">0</span>
+<span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">0</span>
+<span class="mi">1</span> <span class="mi">1</span>
+<span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">2</span> <span class="mi">1</span>
+
+<span class="n">b</span><span class="o">.</span>
+
+<span class="mi">0</span>   <span class="mi">0</span>
+<span class="mi">1</span>   <span class="mi">0</span>
+<span class="mi">2</span>   <span class="mi">0</span>
+<span class="mi">0</span>   <span class="mi">1</span>
+<span class="mi">1</span>   <span class="mi">1</span>
+<span class="mi">2</span>   <span class="mi">1</span>
+
+<span class="n">c</span><span class="o">.</span>
+
+<span class="mi">0</span>   <span class="mi">0</span>
+<span class="mi">0</span>   <span class="mi">1</span>
+<span class="mi">0</span>   <span class="mi">2</span>
+<span class="mi">1</span>   <span class="mi">0</span>
+<span class="mi">1</span>   <span class="mi">1</span>
+<span class="mi">1</span>   <span class="mi">2</span>
+
+<span class="n">d</span><span class="o">.</span>
+
+<span class="mi">0</span>   <span class="mi">1</span>
+<span class="mi">0</span>   <span class="mi">1</span>
+<span class="mi">0</span>   <span class="mi">1</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="test_question7_8_3_1_opt_a">Output a</li><li data-component="feedback" id="test_question7_8_3_1_opt_a">i will start with a value of 0 and then j will iterate from 0 to 1.  Next, i will be 1 and j will iterate from 0 to 1.  Finally, i will be 2 and j will iterate from 0 to 1.</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_1_opt_b">Output b</li><li data-component="feedback" id="test_question7_8_3_1_opt_b">The inner for-loop controls the second digit (j).  The inner for-loop must complete before the outer for-loop advances.</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_1_opt_c">Output c</li><li data-component="feedback" id="test_question7_8_3_1_opt_c">The inner for-loop controls the second digit (j).  Notice that the inner for-loop is over the list [0, 1].</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_1_opt_d">Output d</li><li data-component="feedback" id="test_question7_8_3_1_opt_d">The outer for-loop runs 3 times (0, 1, 2) and the inner for-loop runs twice for each time the outer for-loop runs, so this code prints exactly 6 lines.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_2">
+            <p>accumulator-pattern3: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
+<span class="n">newgreen</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">()</span>
+<span class="n">newblue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>with the lines:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
+<span class="n">newgreen</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">newblue</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="test_question7_8_3_2_opt_a">It would look like a red-washed version of the bell image</li><li data-component="feedback" id="test_question7_8_3_2_opt_a">Because we are removing the green and the blue values, but keeping the variation of the red the same, you will get the same image, but it will look like it has been bathed in red.</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_2_opt_b">It would be a solid red rectangle the same size as the original image</li><li data-component="feedback" id="test_question7_8_3_2_opt_b">Because the red value varies from pixel to pixel, this will not look like a solid red rectangle.  For it to look like a solid red rectangle each pixel would have to have exactly the same red value.</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_2_opt_c">It would look the same as the original image</li><li data-component="feedback" id="test_question7_8_3_2_opt_c">If you remove the blue and green values from the pixels, the image will look different, even though there does not appear to be any blue or green in the original image (remember that other colors are made of combinations of red, green and blue).</li>
+            
+            <li data-component="answer"  id="test_question7_8_3_2_opt_d">It would look the same as the negative image in the example code</li><li data-component="feedback" id="test_question7_8_3_2_opt_d">Because we have changed the value of the pixels from what they were in the original ActiveCode box code, the image will not be the same.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="acknowledgments">
+<h3>1.6.5. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip">
+    <a href="../Functions/AnimatingImagesForLoop.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../Functions/AnimatingImagesForLoop.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 2. Image Processing Practice' data-toggle="tooltip" >
+    <a href="ImageProcessingPractice.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingPractice.html" >Next Section - 2. Image Processing Practice</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Step 0: Transitioning To Text &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Step 1: Move Reeborg Home and Saving Your Work" href="Step1.html" />
+    <link rel="prev" title="13. Possible Extensions" href="../VisualProgrammingEnv/PossibleExtensions.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Step 0: Transitioning To Text</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#reeborg-s-first-step">Reeborg’s First Step</a></li>
+<li><a class="reference internal" href="#dealing-with-errors">Dealing with eRRoRs</a></li>
+<li><a class="reference internal" href="#a-special-tool-to-help-you">A special tool to help you</a></li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
+<li><a class="reference internal" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 13. Possible Extensions" data-toggle="tooltip">
+    <a href="../VisualProgrammingEnv/PossibleExtensions.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Step 1: Move Reeborg Home and Saving Your Work' data-toggle="tooltip" >
+    <a href="Step1.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="step-0-transitioning-to-text">
+<h1>Step 0: Transitioning To Text<a class="headerlink" href="#step-0-transitioning-to-text" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Explore the <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%200" target="_blank">Reeborg environment</a>, and the basic commands available to Reeborg. Introduce the steps the students will be following. Unlike the rest of the pages in this textbook, the steps that follow do not map easily to a single class period. Some early steps will take the students very little time, and some later steps will take them quite a long time. The intended use of these steps is to give the students approximately two weeks of class time to work on the steps at their own pace.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+</ul>
+
+    </div>
+    <p>If you’d prefer to watch a video introducing Reeborg, <a class="reference external" href="https://www.youtube.com/watch?v=GSszijgTFxU">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
+<iframe src="https://www.youtube.com/embed/GSszijgTFxU"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Although there is a lot you can learn using an environment like Scratch, we’d like to reinforce that what you have learned works using a more traditional programming language as well. In this course, the traditional programming language we will use is called <a class="reference external" href="https://www.python.org/">Python</a>. Instead of jumping straight into working with Python, however, we are going to continue our journey in exploring programming by using an environment called Reeborg. Using Reeborg, we will begin to type in Python commands, rather than simply dragging them into place as we did with Scratch. This lets you start to make syntax errors (in other words, if you type something the computer doesn’t understand, it will not work), but still gives you visual feedback about your programs.</p>
+</div>
+<div class="section" id="reeborg-s-first-step">
+<h2>Reeborg’s First Step<a class="headerlink" href="#reeborg-s-first-step" title="Permalink to this headline">¶</a></h2>
+<p>Open the <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%200" target="_blank">Reeborg environment</a>. If the Step 0 world does not open by default, select it in the world menu:</p>
+<div class="figure align-center">
+<img alt="../_images/step0.png" src="../_images/step0.png" />
+</div>
+<p>You should now see the robot, Reeborg, alone in an empty world. Unfortunately, Reeborg is a used robot, and so it is only capable of doing a few basic commands. One thing Reeborg can do is move forward, as follows:</p>
+<div class="figure align-center">
+<img alt="../_images/move.png" src="../_images/move.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/move_one_step.gif" src="../_images/move_one_step.gif" />
+</div>
+<p>In the editor panel, there is a single instruction:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">move()</span></code> is an example of a Python <strong>function</strong>.
+A function has a name; in this case, it is <code class="docutils literal"><span class="pre">move</span></code>. Valid names must start with either a letter or the underscore character “_” and may contain letters, numbers or the underscore character “_”. The name of the function is followed by <code class="docutils literal"><span class="pre">()</span></code>. This tells Reeborg (Python) that the function must be <em>executed</em> or <em>called</em> (which are two synonyms). This function must be on a line of its own. [We will see exception to this rule later on.]</p>
+<p>Occasionally we will make <strong>flowcharts</strong> which are graphical representations of a program. In a flowchart, a single instruction like <code class="docutils literal"><span class="pre">move()</span></code> might be represented
+as follows:</p>
+<div class="figure align-center">
+<img alt="../_images/move1.jpg" src="../_images/move1.jpg" />
+</div>
+<p>and a complete program containing this single instruction would be represented
+as follows:</p>
+<div class="figure align-center">
+<img alt="../_images/move.jpg" src="../_images/move.jpg" />
+</div>
+<p>In a flowchart, the sequence of instructions follows the arrows, starting at “Start”
+and ending at “Stop”.</p>
+<div class="topic">
+<p class="topic-title first">Try this!</p>
+<p>Add a second <code class="docutils literal"><span class="pre">move()</span></code> instruction so that Reeborg takes two steps instead
+of only one.</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Each instruction must appear on its own line, with no extra space
+at the beginning of the line.</p>
+</div>
+</div>
+<div class="section" id="dealing-with-errors">
+<h2>Dealing with eRRoRs<a class="headerlink" href="#dealing-with-errors" title="Permalink to this headline">¶</a></h2>
+<p>When writing computer programs, you will likely make many errors. To see how Reeborg reacts to some errors, I will ask you to intentionally introduce one error in the program.</p>
+<div class="topic">
+<p class="topic-title first">Try this!</p>
+<p>Change <code class="docutils literal"><span class="pre">move()</span></code> to <code class="docutils literal"><span class="pre">Move()</span></code> (with an uppercase M) and try to
+execute the program.</p>
+</div>
+<p>Python, the language that Reeborg understands, is “case sensitive”;
+that is, lowercase letters have a different meanings than uppercase
+ones. Now that you see how Reeborg deals with errors, go back,
+fix the program and run the corrected version.</p>
+</div>
+<div class="section" id="a-special-tool-to-help-you">
+<h2>A special tool to help you<a class="headerlink" href="#a-special-tool-to-help-you" title="Permalink to this headline">¶</a></h2>
+<p>At the very top of Reeborg’s World, you will find a button
+titled <strong>Reeborg’s keyboard</strong>.  If you click on it, a special
+keyboard will appear.  By clicking on a each button, the corresponding
+instruction, Python keyword, etc., will be inserted in the editor
+automatically.   This can be useful to ensure that names are
+spelled out correctly and that required parentheses are not forgotten.</p>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>The following pages will provide you with challenges for you to complete. Although you could complete them in any order, the order they are presented will reveal the capabilities of Reeborg in a logical order. When you finish a step, it is a good idea to show your solution to your teacher to confirm you have created an appropriate solution to the problem. Although the worlds have been created to give you instant feedback, it can be really helpful to have an experienced human give you tips as well!</p>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+<p>Reeborg is a modern adaptation of an environment called Karel the Robot, created by Richard Pattis at Stanford University in 1981. The version we will use was created by Andre Roberge. The tutorials you will be using are an adaptation of tutorials made by Roger Frank, Jeffrey Elkner, Andre Roberge and Dan Schellenberg.</p>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 13. Possible Extensions' data-toggle="tooltip">
+    <a href="../VisualProgrammingEnv/PossibleExtensions.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../VisualProgrammingEnv/PossibleExtensions.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Step 1: Move Reeborg Home and Saving Your Work' data-toggle="tooltip" >
+    <a href="Step1.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step1.html" >Next Section - Step 1: Move Reeborg Home and Saving Your Work</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4. Boolean Functions and Randomly Walking Turtles &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. User Controlled Turtle Race" href="UserControlledTurtleRace.html" />
+    <link rel="prev" title="3. The Accumulator Pattern" href="TheAccumulatorPattern.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">4. Boolean Functions and Randomly Walking Turtles</a><ul>
+<li><a class="reference internal" href="#boolean-functions">4.1. Boolean Functions</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">4.1.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#randomly-walking-turtles">4.2. Randomly Walking Turtles</a></li>
+<li><a class="reference internal" href="#detecting-if-turtles-are-touching">4.3. Detecting If Turtles are Touching</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 3. The Accumulator Pattern" data-toggle="tooltip">
+    <a href="TheAccumulatorPattern.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 1. User Controlled Turtle Race' data-toggle="tooltip" >
+    <a href="UserControlledTurtleRace.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="boolean-functions-and-randomly-walking-turtles">
+<h1>4. Boolean Functions and Randomly Walking Turtles<a class="headerlink" href="#boolean-functions-and-randomly-walking-turtles" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Introduce the idea of Boolean functions (which return either True or False). Demonstrate two Boolean functions relating to turtle graphics.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="boolean-functions">
+<h2>4.1. Boolean Functions<a class="headerlink" href="#boolean-functions" title="Permalink to this headline">¶</a></h2>
+<p>We have already seen that boolean values result from the evaluation of boolean expressions.  Since the result of any expression evaluation can be returned by a function (using the <code class="docutils literal"><span class="pre">return</span></code> statement), functions can return boolean values.  This turns out to be a very convenient way to hide the details of complicated tests. For example:</p>
+
+<div data-childcomponent="boolean_functions_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=boolean_functions_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def is_divisible(x, y):
+    if x % y == 0:
+        result = True
+    else:
+        result = False
+
+    return result
+
+print(is_divisible(10, 5))
+</textarea>
+</div>
+<p>The name of this function is <code class="docutils literal"><span class="pre">is_divisible</span></code>. It is common to give <strong>boolean
+functions</strong> names that sound like yes/no questions.  <code class="docutils literal"><span class="pre">is_divisible</span></code> returns
+either <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> to indicate whether the <code class="docutils literal"><span class="pre">x</span></code> is or is not
+divisible by <code class="docutils literal"><span class="pre">y</span></code>.</p>
+<p>We can make the function more concise by taking advantage of the fact that the
+condition of the <code class="docutils literal"><span class="pre">if</span></code> statement is itself a boolean expression. We can return
+it directly, avoiding the <code class="docutils literal"><span class="pre">if</span></code> statement altogether:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisible</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Boolean functions are often used in conditional statements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">is_divisible</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1"># do something ...</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c1"># do something else ...</span>
+</pre></div>
+</div>
+<p>It might be tempting to write something like
+<code class="docutils literal"><span class="pre">if</span> <span class="pre">is_divisible(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">True:</span></code>
+but the extra comparison is redundant.  You only need an <code class="docutils literal"><span class="pre">==</span></code> expression if you are comparing some other type than boolean. (<code class="docutils literal"><span class="pre">is_divisible(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">False</span></code> can also be made more concise as
+<code class="docutils literal"><span class="pre">not</span> <span class="pre">is_divisible(x,</span> <span class="pre">y)</span></code>). The following example shows the <code class="docutils literal"><span class="pre">is_divisible</span></code> function at work.  Notice how
+descriptive the code is when we move the testing details into a boolean function.  Try it
+with a few other actual arguments to see what is printed.</p>
+
+<div data-childcomponent="boolean_functions_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=boolean_functions_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def is_divisible(x, y):
+    return x % y == 0
+
+if is_divisible(10, 5):
+    print("That works")
+else:
+    print("Those values are no good")
+</textarea>
+</div>
+<p>Here is the same program in codelens.  When we evaluate the <code class="docutils literal"><span class="pre">if</span></code> statement in the main part of the program, the evaluation of
+the boolean expression causes a call to the <code class="docutils literal"><span class="pre">is_divisible</span></code> function.  This is very easy to see in codelens.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="boolean_functions_codelens_1"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (boolean_functions_codelens_1)</span> </p>
+</div>
+<script type="text/javascript">
+var boolean_functions_codelens_1_trace = {"code": "def is_divisible(x, y):\n    return x % y == 0\n\nif is_divisible(10, 5):\n    print(\"That works\")\nelse:\n    print(\"Those values are no good\")", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "is_divisible", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [{"func_name": "is_divisible", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"y": 5, "x": 10}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "is_divisible_f1"}], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "is_divisible", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [{"func_name": "is_divisible", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"y": 5, "x": 10}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "is_divisible_f1"}], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "is_divisible", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [{"func_name": "is_divisible", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"y": 5, "x": 10, "__return__": true}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "is_divisible_f1"}], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"is_divisible": ["REF", 1]}, "ordered_globals": ["is_divisible"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "is_divisible(x, y)", null]}, "stdout": "That works\n"}]};
+var boolean_functions_codelens_1_vis;
+
+$(document).ready(function() {
+    try {
+        boolean_functions_codelens_1_vis = new ExecutionVisualizer('boolean_functions_codelens_1',boolean_functions_codelens_1_trace,
+                                    {embeddedMode: false,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(boolean_functions_codelens_1_vis,'boolean_functions_codelens_1');
+        styleButtons('boolean_functions_codelens_1');
+        allVisualizers.push(boolean_functions_codelens_1_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component boolean_functions_codelens_1_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#boolean_functions_codelens_1_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'boolean_functions_codelens_1'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (boolean_functions_codelens_1_vis) {
+        boolean_functions_codelens_1_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<div class="section" id="check-your-understanding">
+<h3>4.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="boolean_function_check_1">
+            boolean-functions-random-turtles1: What is a Boolean function?
+            <li data-component="answer" data-correct id="boolean_function_check_1_opt_a">A function that returns True or False</li><li data-component="feedback" id="boolean_function_check_1_opt_a">A Boolean function is just like any other function, but it always returns True or False.</li>
+            
+            <li data-component="answer"  id="boolean_function_check_1_opt_b">A function that takes True or False as an argument</li><li data-component="feedback" id="boolean_function_check_1_opt_b">A Boolean function may take any number of arguments (including 0, though that is rare), of any type.</li>
+            
+            <li data-component="answer"  id="boolean_function_check_1_opt_c">The same as a Boolean expression</li><li data-component="feedback" id="boolean_function_check_1_opt_c">A Boolean expression is a statement that evaluates to True or False, e.g. 5+3==8.  A function is a series of expressions grouped together with a name that are only executed when you call the function.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="boolean_function_check_2">
+            <p>boolean-functions-random-turtles2: Is the following statement legal in a Python function (assuming x, y and z are defined to be numbers)?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="boolean_function_check_2_opt_a">Yes</li><li data-component="feedback" id="boolean_function_check_2_opt_a">It is perfectly valid to return the result of evaluating a Boolean expression.</li>
+            
+            <li data-component="answer"  id="boolean_function_check_2_opt_b">No</li><li data-component="feedback" id="boolean_function_check_2_opt_b">x +y < z is a valid Boolean expression, which will evaluate to True or False.  It is perfectly legal to return True or False from a function, and to have the statement to be evaluated in the same line as the return keyword.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="randomly-walking-turtles">
+<h2>4.2. Randomly Walking Turtles<a class="headerlink" href="#randomly-walking-turtles" title="Permalink to this headline">¶</a></h2>
+<p>Suppose we want to entertain ourselves by watching a turtle wander around
+randomly inside the screen.  When we run the program we want the turtle and
+program to behave in the following way:</p>
+<ol class="arabic simple">
+<li>The turtle begins in the center of the screen.</li>
+<li>Flip a coin. If it’s heads then turn to the left 90 degrees. If it’s tails
+then turn to the right 90 degrees.</li>
+<li>Take 50 steps forward.</li>
+<li>If the turtle has moved outside the screen then stop, otherwise go back to
+step 2 and repeat.</li>
+</ol>
+<p>Notice that we cannot predict how many times the turtle will need to flip the
+coin before it wanders out of the screen, so we can’t use a for loop in this
+case. In fact, although very unlikely, this program might never end;
+that is why we call this indefinite iteration.</p>
+<p>So based on the problem description above, we can outline a program as follows:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span>create a window and a turtle
+
+while the turtle is still in the window:
+    generate a random number between 0 and 1
+    if the number == 0:  # flipped heads
+        turn left
+    else:                # flipped tails
+        turn right
+    move the turtle forward 50
+</pre></div>
+</div>
+<p>Now, probably the only thing that seems a bit confusing to you is the part
+about whether or not the turtle is still in the screen.  But this is the nice
+thing about programming, we can delay the tough stuff and get <em>something</em> in
+our program working right away.  The way we are going to do this is to
+delegate the work of deciding whether the turtle is still in the screen or
+not to a boolean function.  Let’s call this boolean function <code class="docutils literal"><span class="pre">is_in_screen</span></code> We
+can write a very simple version of this boolean function by having
+it always return <code class="docutils literal"><span class="pre">True</span></code>, or by having it decide randomly.
+The point is to have it do something simple so that we can focus on the parts
+we already know how to do well and get them working.  For now, we will just return <code class="docutils literal"><span class="pre">True</span></code>, so our turtle will never stop moving.</p>
+
+<div data-childcomponent="iter_randwalk1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=iter_randwalk1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import random
+import turtle
+
+
+def is_in_screen(the_window, the_turtle):
+    return True
+
+
+canvas = turtle.Screen()
+
+justyn = turtle.Turtle()
+justyn.shape('turtle')
+
+while is_in_screen(canvas, justyn):
+    coin = random.randrange(0, 2)
+    if coin == 0:              # heads
+        justyn.left(90)
+    else:                      # tails
+        justyn.right(90)
+
+    justyn.forward(50)
+
+canvas.exitonclick()
+</textarea>
+</div>
+<p>Now we have a working program that draws a random walk of our turtle, with the obvious problem that the turtle will never stop moving.  We are in a good position,
+because a large part of our program is working and we can focus on the next
+bit of work – deciding whether the turtle is inside the screen boundaries or
+not.</p>
+<p>We can find out the width and the height of the screen using the
+<code class="docutils literal"><span class="pre">window_width</span></code> and <code class="docutils literal"><span class="pre">window_height</span></code> methods of the screen object.
+However, remember that the turtle starts at position 0,0 in the middle of the
+screen.  So we never want the turtle to go farther right than width/2 or
+farther left than negative width/2.  We never want the turtle to go further
+up than height/2 or further down than negative height/2.  Once we know what
+the boundaries are we can use some conditionals to check the turtle position
+against the boundaries and return <code class="docutils literal"><span class="pre">False</span></code> if the turtle is outside or
+<code class="docutils literal"><span class="pre">True</span></code> if the turtle is inside.</p>
+<p>Once we have computed our boundaries we can get the current position of the
+turtle and then use conditionals to decide.  Here is one implementation:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_in_screen</span><span class="p">(</span><span class="n">the_window</span><span class="p">,</span> <span class="n">the_turtle</span><span class="p">):</span>
+    <span class="n">left_bound</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">the_window</span><span class="o">.</span><span class="n">window_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">right_bound</span> <span class="o">=</span> <span class="n">the_window</span><span class="o">.</span><span class="n">window_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">top_bound</span> <span class="o">=</span> <span class="n">the_window</span><span class="o">.</span><span class="n">window_height</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">bottom_bound</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">the_window</span><span class="o">.</span><span class="n">window_height</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">turtle_x</span> <span class="o">=</span> <span class="n">the_turtle</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span>
+    <span class="n">turtle_y</span> <span class="o">=</span> <span class="n">the_turtle</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span>
+
+    <span class="n">still_in</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">if</span> <span class="n">turtle_x</span> <span class="o">&gt;</span> <span class="n">right_bound</span> <span class="ow">or</span> <span class="n">turtle_x</span> <span class="o">&lt;</span> <span class="n">left_bound</span><span class="p">:</span>
+        <span class="n">still_in</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">turtle_y</span> <span class="o">&gt;</span> <span class="n">top_bound</span> <span class="ow">or</span> <span class="n">turtle_y</span> <span class="o">&lt;</span> <span class="n">bottom_bound</span><span class="p">:</span>
+        <span class="n">still_in</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">return</span> <span class="n">still_in</span>
+</pre></div>
+</div>
+<p>There are lots of ways that the conditional could be written.  In this case
+we have given <code class="docutils literal"><span class="pre">still_in</span></code> the default value of <code class="docutils literal"><span class="pre">True</span></code> and use two <code class="docutils literal"><span class="pre">if</span></code>
+statements
+to possibly set the value to <code class="docutils literal"><span class="pre">False</span></code>.  You could rewrite this to use nested
+conditionals or <code class="docutils literal"><span class="pre">elif</span></code> statements and set <code class="docutils literal"><span class="pre">still_in</span></code> to <code class="docutils literal"><span class="pre">True</span></code> in an else
+clause.</p>
+<p>Here is the full version of our random walk program.</p>
+
+<div data-childcomponent="iter_randwalk2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=iter_randwalk2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import random
+import turtle
+
+def is_in_screen(the_window, the_turtle):
+    left_bound = -(the_window.window_width() / 2)
+    right_bound = the_window.window_width() / 2
+    top_bound = the_window.window_height() / 2
+    bottom_bound = -(the_window.window_height() / 2)
+
+    turtle_x = the_turtle.xcor()
+    turtle_y = the_turtle.ycor()
+
+    still_in = True
+    if turtle_x > right_bound or turtle_x < left_bound:
+        still_in = False
+    if turtle_y > top_bound or turtle_y < bottom_bound:
+        still_in = False
+
+    return still_in
+
+
+canvas = turtle.Screen()
+
+justyn = turtle.Turtle()
+justyn.shape('turtle')
+
+while is_in_screen(canvas, justyn):
+    coin = random.randrange(0, 2)
+    if coin == 0:              # heads
+        justyn.left(90)
+    else:                      # tails
+        justyn.right(90)
+
+    justyn.forward(50)
+
+
+print("All done. I'm off the screen now!")
+canvas.exitonclick()
+</textarea>
+</div>
+<p>We could have written this program without using a boolean function.
+You might want to try to rewrite it using a complex condition on the while statement.
+However, using a boolean function makes the program much more readable and easier
+to understand.  It also gives us another tool to use if this was a
+larger program and we needed to have a check for whether the turtle
+was still in the screen in another part of the program.  Another advantage is
+that if you ever need to write a similar program, you can reuse this function
+with confidence the next time you need it.  Breaking up this
+program into a couple of parts is an example of <strong>functional decomposition</strong> (in which a problem is broken down into smaller parts, in order to make solving each part of the problem easier).</p>
+</div>
+<div class="section" id="detecting-if-turtles-are-touching">
+<h2>4.3. Detecting If Turtles are Touching<a class="headerlink" href="#detecting-if-turtles-are-touching" title="Permalink to this headline">¶</a></h2>
+<p>When trying to create a visualization with turtles, it can be helpful to be able to ask if two turtles are “touching” each other. One fairly simple way to test this is to create a boolean function that determines if the turtles are within some distance of each other. To do this, we will use the distance equation that you have likely learned in math class.</p>
+<p>Assume that we want to find the distance between the two turtles (represented by circles) below. The turtle locations are (x1, y1) and (x2, y2), respectively.</p>
+<img alt="../../_images/turtle_distance.png" src="../../_images/turtle_distance.png" />
+<p>In order to calculate the distance between these two points, we construct a right triangle, then calculate the distance between the two turtles as the hypotenuse of that triangle.</p>
+<img alt="../../_images/turtle_distance_triangle.png" src="../../_images/turtle_distance_triangle.png" />
+<p>Knowing how to do this by hand, we can now create a boolean function that will return True or False, based on whether or not the turtles are less than the required distance apart. One possible implementation of this is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turtles_are_touching</span><span class="p">(</span><span class="n">first_turtle</span><span class="p">,</span> <span class="n">second_turtle</span><span class="p">,</span> <span class="n">close_enough_distance</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True or False, based on whether two turtles are &#39;close enough&#39; to be touching.&quot;&quot;&quot;</span>
+
+    <span class="n">x_dist</span> <span class="o">=</span> <span class="n">first_turtle</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span> <span class="o">-</span> <span class="n">second_turtle</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span>
+    <span class="n">y_dist</span> <span class="o">=</span> <span class="n">first_turtle</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">-</span> <span class="n">second_turtle</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span>
+
+    <span class="n">distance_apart</span> <span class="o">=</span> <span class="p">(</span> <span class="n">x_dist</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y_dist</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+
+    <span class="k">if</span> <span class="n">distance_apart</span> <span class="o">&lt;</span> <span class="n">close_enough_distance</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<p>To make sure that this function is working the way we want it to, we can create a simple testing program. In this program, we will have two turtles start on opposite sides of the screen, face each other, then continue to move towards each other until they are “close enough” to be touching.</p>
+
+<div data-childcomponent="distance_formula_testing_program" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=distance_formula_testing_program data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def turtles_are_touching(first_turtle, second_turtle, close_enough_distance):
+    """Returns True or False, based on whether two turtles are 'close enough' to be touching."""
+
+    x_dist = first_turtle.xcor() - second_turtle.xcor()
+    y_dist = first_turtle.ycor() - second_turtle.ycor()
+
+    distance_apart = ( x_dist**2 + y_dist**2) ** 0.5
+
+    if distance_apart < close_enough_distance:
+        return True
+    else:
+        return False
+
+
+canvas = turtle.Screen()
+canvas.bgcolor("black")
+
+charlie = turtle.Turtle()
+charlie.color("blue")
+charlie.up()
+
+musawer = turtle.Turtle()
+musawer.color("red")
+musawer.up()
+
+charlie.goto(-200, 0)
+musawer.goto(200, 5)
+
+musawer.left(180)
+
+while not turtles_are_touching(charlie, musawer, 20):
+    charlie.forward(5)
+    musawer.forward(2)
+
+
+print("That's close enough!")
+</textarea>
+</div>
+<p>Experiment with the program above by changing the “close enough” argument being passed into the <code class="docutils literal"><span class="pre">turtles_are_touching</span></code> function.</p>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 3. The Accumulator Pattern' data-toggle="tooltip">
+    <a href="TheAccumulatorPattern.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="TheAccumulatorPattern.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 1. User Controlled Turtle Race' data-toggle="tooltip" >
+    <a href="UserControlledTurtleRace.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="UserControlledTurtleRace.html" >Next Section - 1. User Controlled Turtle Race</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

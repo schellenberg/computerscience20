@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Converting an Object to a String &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../../_static/css.js"></script>
+    <script type="text/javascript" src="../../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../../_static/python.js"></script>
+    <script type="text/javascript" src="../../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Converting an Object to a String</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="converting-an-object-to-a-string">
+<h1>Converting an Object to a String<a class="headerlink" href="#converting-an-object-to-a-string" title="Permalink to this headline">¶</a></h1>
+<p>When we’re working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
+Consider the example below.</p>
+
+<div data-childcomponent="chp13_classesstr1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp13_classesstr1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+
+p = Point(7, 6)
+print(p)
+</textarea>
+</div>
+<p>The <code class="docutils literal"><span class="pre">print</span></code> function shown above produces a string representation of the Point <code class="docutils literal"><span class="pre">p</span></code>.  The default functionality provided by
+Python tells you that <code class="docutils literal"><span class="pre">p</span></code> is an object of type <code class="docutils literal"><span class="pre">Point</span></code>.  However, it does not tell you anything about the specific
+state of the point.</p>
+<p>We can improve on this representation if we include a special method call <code class="docutils literal"><span class="pre">__str__</span></code>.  Notice that this method uses the same naming convention as the constructor, that is two underscores before and after the name.  It is common that Python
+uses this naming technique for special methods.</p>
+<p>The <code class="docutils literal"><span class="pre">__str__</span></code> method is responsible for returning a string representation as defined by the class creator.  In other words, you as the programmer, get to choose what a <code class="docutils literal"><span class="pre">Point</span></code> should look like when it gets printed.  In this case, we
+have decided that the string representation will include the values of x and y as well as some identifying text.  It
+is required that the <code class="docutils literal"><span class="pre">__str__</span></code> method create and <em>return</em> a string.</p>
+
+<div data-childcomponent="chp13_classesstr2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp13_classesstr2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return "x=" + str(self.x) + ", y=" + str(self.y)
+
+p = Point(7, 6)
+print(p)
+</textarea>
+</div>
+<p>When we run the program above you can see that the <code class="docutils literal"><span class="pre">print</span></code> function now shows the string that we chose.</p>
+<p>Now, you ask, don’t we already have an <code class="docutils literal"><span class="pre">str</span></code> type converter that can
+turn our object into a string?  Yes we do!</p>
+<p>And doesn’t <code class="docutils literal"><span class="pre">print</span></code>
+automatically use this when printing things?  Yes again!</p>
+<p>But, as we saw earlier, these automatic mechanisms do not do exactly what we want.  Python provides many default implementations for
+methods that we as programmers will probably want to change.  When a programmer changes the meaning of a special method we
+say that we <strong>override</strong> the method.  Note also that the <code class="docutils literal"><span class="pre">str</span></code> type converter function uses whatever <code class="docutils literal"><span class="pre">__str__</span></code> method we
+provide.</p>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

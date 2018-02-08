@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. List Methods &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How the Internet Works Videos" href="../../ComputingAndSociety/Internet/HowTheInternetWorks.html" />
+    <link rel="prev" title="1. Using Lists" href="ListOverview.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">2. List Methods</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">2.1. What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#id1">2.2. List Methods</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">2.2.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inventory-example">2.3. Inventory Example</a><ul>
+<li><a class="reference internal" href="#id2">2.3.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#shopping-list">2.4. Shopping List</a></li>
+<li><a class="reference internal" href="#shakespearean-insult-generator">2.5. Shakespearean Insult Generator</a></li>
+<li><a class="reference internal" href="#strings-and-lists">2.6. Strings and Lists</a><ul>
+<li><a class="reference internal" href="#id3">2.6.1. Check Your Understanding</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#turtle-coordinate-list-extra-for-experts-example">2.7. Turtle Coordinate List (Extra for Experts Example)</a></li>
+<li><a class="reference internal" href="#practice-problems">2.8. Practice Problems</a><ul>
+<li><a class="reference internal" href="#compliment-generator">2.8.1. Compliment Generator</a></li>
+<li><a class="reference internal" href="#averaging-random-integer-list">2.8.2. Averaging Random Integer List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 1. Using Lists" data-toggle="tooltip">
+    <a href="ListOverview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="list-methods">
+<h1>2. List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Use lists while moving turtles.</p>
+</div>
+
+    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
+    <ul class="simple">
+<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
+<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
+<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+</ul>
+
+    </div>
+    <div class="section" id="what-does-this-program-do">
+<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>What will the following programs output? Why?</p>
+
+<div data-childcomponent="wdtpd_lists_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", 3.14, False]
+print(len(alist))
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(len(alist))
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[5])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[2][0])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_5 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [4, 2, 8, 6, 5]
+alist[2] = True
+print(alist)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_6 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[3][2])
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_lists_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=wdtpd_lists_7 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[3][2][2])
+</textarea>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>2.2. List Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The dot operator can also be used to access built-in methods of list objects.
+<code class="docutils literal"><span class="pre">append</span></code> is a list method which adds the argument passed to it to the end of
+the list. Continuing with this example, we show several other list methods.  Many of them are
+easy to understand.</p>
+
+<div data-childcomponent="chp09_meth1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp09_meth1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+my_list = []
+my_list.append(5)
+my_list.append(27)
+my_list.append(3)
+my_list.append(12)
+print(my_list)
+
+my_list.insert(1, 12)
+print(my_list)
+print(my_list.count(12))
+
+print(my_list.index(3))
+print(my_list.count(5))
+
+my_list.reverse()
+print(my_list)
+
+my_list.sort()
+print(my_list)
+
+my_list.remove(5)
+print(my_list)
+
+lastitem = my_list.pop()
+print(lastitem)
+print(my_list)
+</textarea>
+</div>
+<p>There are two ways to use the <code class="docutils literal"><span class="pre">pop</span></code> method.  The first, with no parameter, will remove and return the
+last item of the list.  If you provide a parameter for the position, <code class="docutils literal"><span class="pre">pop</span></code> will remove and return the
+item at that position.  Either way the list is changed.</p>
+<p>The following table provides a summary of the list methods shown above.  The column labeled
+<cite>result</cite> gives an explanation as to what the return value is as it relates to the new value of the list.  The word
+<strong>mutator</strong> means that the list is changed by the method but nothing is returned (actually <code class="docutils literal"><span class="pre">None</span></code> is returned).  A <strong>hybrid</strong> method is one that not only changes the list but also returns a value as its result.  Finally, if the result is simply a return, then the list
+is unchanged by the method.</p>
+<p>Be sure to experiment with these methods to gain a better understanding of what they do.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="17%" />
+<col width="14%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Parameters</th>
+<th class="head">Result</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>append</td>
+<td>item</td>
+<td>mutator</td>
+<td>Adds a new item to the end of a list</td>
+</tr>
+<tr class="row-odd"><td>insert</td>
+<td>position, item</td>
+<td>mutator</td>
+<td>Inserts a new item at the position given</td>
+</tr>
+<tr class="row-even"><td>pop</td>
+<td>none</td>
+<td>hybrid</td>
+<td>Removes and returns the last item</td>
+</tr>
+<tr class="row-odd"><td>pop</td>
+<td>position</td>
+<td>hybrid</td>
+<td>Removes and returns the item at position</td>
+</tr>
+<tr class="row-even"><td>sort</td>
+<td>none</td>
+<td>mutator</td>
+<td>Modifies a list to be sorted</td>
+</tr>
+<tr class="row-odd"><td>reverse</td>
+<td>none</td>
+<td>mutator</td>
+<td>Modifies a list to be in reverse order</td>
+</tr>
+<tr class="row-even"><td>index</td>
+<td>item</td>
+<td>return idx</td>
+<td>Returns the position of first occurrence of item</td>
+</tr>
+<tr class="row-odd"><td>count</td>
+<td>item</td>
+<td>return ct</td>
+<td>Returns the number of occurrences of item</td>
+</tr>
+<tr class="row-even"><td>remove</td>
+<td>item</td>
+<td>mutator</td>
+<td>Removes the first occurrence of item</td>
+</tr>
+</tbody>
+</table>
+<p>Details for these and others
+can be found in the <a class="reference external" href="http://docs.python.org/py3k/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range">Python Documentation</a>.</p>
+<p>It is important to remember that methods like <code class="docutils literal"><span class="pre">append</span></code>, <code class="docutils literal"><span class="pre">sort</span></code>,
+and <code class="docutils literal"><span class="pre">reverse</span></code> all return <code class="docutils literal"><span class="pre">None</span></code>.  This means that re-assigning <code class="docutils literal"><span class="pre">my_list</span></code> to the result of sorting <code class="docutils literal"><span class="pre">my_list</span></code> will result in losing the entire list.  Calls like these will likely never appear as part of an assignment statement (see line 8 below).</p>
+
+<div data-childcomponent="chp09_meth2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=chp09_meth2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+my_list = []
+my_list.append(5)
+my_list.append(27)
+my_list.append(3)
+my_list.append(12)
+print(my_list)
+
+my_list = my_list.sort()   #probably an error
+print(my_list)
+</textarea>
+</div>
+<div class="section" id="check-your-understanding">
+<h3>2.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_1">
+            <p>using-lists1: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question9_13_1_opt_a">[4, 2, 8, 6, 5, False, True]</li><li data-component="feedback" id="test_question9_13_1_opt_a">True was added first, then False was added last.</li>
+            
+            <li data-component="answer" data-correct id="test_question9_13_1_opt_b">[4, 2, 8, 6, 5, True, False]</li><li data-component="feedback" id="test_question9_13_1_opt_b">Yes, each item is added to the end of the list.</li>
+            
+            <li data-component="answer"  id="test_question9_13_1_opt_c">[True, False, 4, 2, 8, 6, 5]</li><li data-component="feedback" id="test_question9_13_1_opt_c">append adds at the end, not the beginning.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_3">
+            <p>using-lists2: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question9_13_3_opt_a">[4, 8, 6]</li><li data-component="feedback" id="test_question9_13_3_opt_a">pop(2) removes the item at index 2, not the 2 itself.</li>
+            
+            <li data-component="answer"  id="test_question9_13_3_opt_b">[2, 6, 5]</li><li data-component="feedback" id="test_question9_13_3_opt_b">pop() removes the last item, not the first.</li>
+            
+            <li data-component="answer" data-correct id="test_question9_13_3_opt_c">[4, 2, 6]</li><li data-component="feedback" id="test_question9_13_3_opt_c">Yes, first the 8 was removed, then the last item, which was 5.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_13_4">
+            <p>using-lists3: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">alist</span> <span class="o">=</span> <span class="n">alist</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question9_13_4_opt_a">[2, 8, 6, 5]</li><li data-component="feedback" id="test_question9_13_4_opt_a">alist is now the value that was returned from pop(0).</li>
+            
+            <li data-component="answer"  id="test_question9_13_4_opt_b">[4, 2, 8, 6, 5]</li><li data-component="feedback" id="test_question9_13_4_opt_b">pop(0) changes the list by removing the first item.</li>
+            
+            <li data-component="answer" data-correct id="test_question9_13_4_opt_c">4</li><li data-component="feedback" id="test_question9_13_4_opt_c">Yes, first the 4 was removed from the list, then returned and assigned to alist.  The list is lost.</li>
+            
+            <li data-component="answer"  id="test_question9_13_4_opt_d">None</li><li data-component="feedback" id="test_question9_13_4_opt_d">pop(0) returns the first item in the list so alist has now been changed.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="inventory-example">
+<h2>2.3. Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this headline">¶</a></h2>
+<p>If you were making a computer game, and you needed to keep track of what items the player was currently holding, using a list would be a good choice. At the beginning of the game, you might create an empty list, if the player begins the game without any items.</p>
+
+<div data-childcomponent="inventory_example_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+print(inventory)
+</textarea>
+</div>
+<p>If the player obtains a new item, the new item should be added to the list. The easiest way to do this is to use the built-in <code class="docutils literal"><span class="pre">.append()</span></code> method.</p>
+
+<div data-childcomponent="inventory_example_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+inventory.append("room 1 key")
+print(inventory)
+</textarea>
+</div>
+<p>When you need to check if the player is currently able to perform a certain action, such as opening a locked door, you simply need to check if an item is in the inventory list.</p>
+
+<div data-childcomponent="inventory_example_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+
+# after the player does something to find the key
+# try commenting out the line below and running the code again
+inventory.append("room 1 key")
+
+# player now attempts to open a door
+if "room 1 key" in inventory:
+    print("Door opened.")
+else:
+    print("Sorry. The door is locked. You need a key.")
+
+print(inventory)
+</textarea>
+</div>
+<p>Sometimes, the item the players uses might be something they can only use once. For example, after they used the “rooom 1 key”, we might want the “room 1 key” to no longer be in the player’s inventory. The following code does just that.</p>
+
+<div data-childcomponent="inventory_example_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=inventory_example_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+inventory = []
+
+# after the player does something to find the key
+# try commenting out the line below and running the code again
+inventory.append("room 1 key")
+
+# player now attempts to open a door
+if "room 1 key" in inventory:
+    print("Door opened.")
+
+    # now remove the room 1 key from the inventory
+    inventory.remove("room 1 key")
+
+else:
+    print("Sorry. The door is locked. You need a key.")
+
+print(inventory)
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Change the code above so you append a <code class="docutils literal"><span class="pre">book</span></code> instead of a room 1 key, then run the code again.</p>
+</div>
+<div class="section" id="id2">
+<h3>2.3.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
+            <p>using-lists4: What will be the result of the following code being executed?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">stamp</span><span class="p">()</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">draw_thing</span><span class="p">(</span><span class="n">bob</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
+
+            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_a">Nice!</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_b">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_c">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_d">Try again.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
+            <p>using-lists5: What will be the result of the following code being executed?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">stamp</span><span class="p">()</span>
+        <span class="n">some_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">draw_thing</span><span class="p">(</span><span class="n">bob</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
+
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_a">Try again.</li>
+            
+            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_b">Nice!</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_c">Try again.</li>
+            
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_d">Try again.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="shopping-list">
+<h2>2.4. Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this headline">¶</a></h2>
+<p>Say you want to make a list of things to buy when you go to the store. You could do something like this:</p>
+
+<div data-childcomponent="shopping_list_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shopping_list_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+shopping_list = []
+item = input("Please enter an item to add to your shopping list:")
+shopping_list.append(item)
+print(shopping_list)
+</textarea>
+</div>
+<p>The obvious problem here is that we can only add one item to our list. Let’s put that logic into an infinite loop, so that we can continue to add items until we enter the word <code class="docutils literal"><span class="pre">quit</span></code>:</p>
+
+<div data-childcomponent="shopping_list_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shopping_list_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+shopping_list = []
+
+while True:
+    item = input("Please enter an item to add to your shopping list:")
+
+    if item == "quit":
+        break
+
+    else:
+        shopping_list.append(item)
+
+
+print()
+print("Don't Forget To Buy:")
+print()
+
+for thing_to_get in shopping_list:
+    print(thing_to_get)
+</textarea>
+</div>
+</div>
+<div class="section" id="shakespearean-insult-generator">
+<h2>2.5. Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this headline">¶</a></h2>
+<p>The following is a simple insult generator, using words found in the works of the great bard.</p>
+
+<div data-childcomponent="shakespeare_insult_example" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=shakespeare_insult_example data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# Shakespeare Insult Kit
+# Idea from http://www.pangloss.com/seidel/shake_rule.html
+# Original concept attributed to Jerry Maguire, an English teacher at Center Grove High School in Greenwood, Indiana
+
+import random
+
+first_word_list = ["artless", "bawdy", "beslubbering", "bootless", "churlish", "cockered", "clouted", "craven", "currish", "dankish", "dissembling", "droning", "errant", "fawning", "fobbing", "froward", "frothy", "gleeking", "goatish", "gorbellied", "impertinent", "infectious", "jarring", "loggerheaded", "lumpish", "mammering", "mangled", "mewling", "paunchy", "pribbling", "puking", "puny", "qualling", "rank", "reeky", "roguish", "ruttish", "saucy", "spleeny", "spongy", "surly", "tottering", "unmuzzled", "vain", "venomed", "villainous", "warped", "wayward", "weedy", "yeasty"]
+
+second_word_list = ["base-court", "bat-fowling", "beef-witted", "beetle-headed", "boil-brained", "clapper-clawed", "clay-brained", "common-kissing", "crook-pated", "dismal-dreaming", "dizzy-eyed", "doghearted, ""dread-bolted", "earth-vexing", "elf-skinned", "fat-kidneyed", "fen-sucked", "flap-mouthed", "fly-bitten", "folly-fallen", "fool-born", "full-gorged", "guts-griping", "half-faced", "hasty-witted", "hedge-born", "hell-hated", "idle-headed", "ill-breeding", "ill-nurtured", "knotty-pated", "milk-livered", "motley-minded", "onion-eyed", "plume-plucked", "pottle-deep", "pox-marked", "reeling-ripe", "rough-hewn", "rude-growing", "rump-fed", "shard-borne", "sheep-biting", "spur-galled", "swag-bellied", "tardy-gaited", "tickle-brained", "toad-spotted", "unchin-snouted", "weather-bitten"]
+
+third_word_list = ["apple-john", "baggage", "barnacle", "bladder", "boar-pig", "bugbear", "bum-bailey", "canker-blossom", "clack-dish", "clotpole", "coxcomb", "codpiece", "death-token", "dewberry", "flap-dragon", "flax-wench", "flirt-gill", "foot-licker", "fustilarian", "giglet", "gudgeon", "haggard", "harpy", "hedge-pig", "horn-beast", "hugger-mugger", "joithead", "lewdster", "lout", "maggot-pie", "malt-worm", "mammet", "measle", "minnow", "miscreant", "moldwarp", "mumble-news", "nut-hook", "pigeon-egg", "pignut", "puttock", "pumpion", "ratsbane", "scut", "skainsmate", "strumpet", "varlot", "vassal", "whey-face", "wagtail"]
+
+
+first_word = first_word_list[ random.randrange(0, len(first_word_list)) ]
+second_word = second_word_list[ random.randrange(0, len(second_word_list)) ]
+third_word = third_word_list[ random.randrange(0, len(third_word_list)) ]
+
+the_insult = "Thou " + first_word + " " + second_word + " " + third_word + "!"
+
+print(the_insult)
+</textarea>
+</div>
+</div>
+<div class="section" id="strings-and-lists">
+<h2>2.6. Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this headline">¶</a></h2>
+<p>Two of the most useful methods on strings involve lists of
+strings. The <code class="docutils literal"><span class="pre">split</span></code> method
+breaks a string into a list of words.  By
+default, any number of whitespace characters is considered a word boundary.</p>
+
+<div data-childcomponent="ch09_split1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_split1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+song = "The rain in Spain..."
+wds = song.split()
+print(wds)
+</textarea>
+</div>
+<p>An optional argument called a <strong>delimiter</strong> can be used to specify which
+characters to use as word boundaries. The following example uses the string
+<code class="docutils literal"><span class="pre">ai</span></code> as the delimiter:</p>
+
+<div data-childcomponent="ch09_split2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_split2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+song = "The rain in Spain..."
+wds = song.split('ai')
+print(wds)
+</textarea>
+</div>
+<p>Notice that the delimiter doesn’t appear in the result.</p>
+<p>The inverse of the <code class="docutils literal"><span class="pre">split</span></code> method is <code class="docutils literal"><span class="pre">join</span></code>.  You choose a
+desired <strong>separator</strong> string, (often called the <em>glue</em>)
+and join the list with the glue between each of the elements.</p>
+
+<div data-childcomponent="ch09_join" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch09_join data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds)
+print(s)
+print(wds)
+
+print("***".join(wds))
+print("".join(wds))
+</textarea>
+</div>
+<p>The list that you glue together (<code class="docutils literal"><span class="pre">wds</span></code> in this example) is not modified.  Also,
+you can use empty glue or multi-character strings as glue.</p>
+<div class="section" id="id3">
+<h3>2.6.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_22_1">
+            <p>using-lists6: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">myname</span> <span class="o">=</span> <span class="s2">&quot;Edgar Allan Poe&quot;</span>
+<span class="n">namelist</span> <span class="o">=</span> <span class="n">myname</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">init</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">aname</span> <span class="ow">in</span> <span class="n">namelist</span><span class="p">:</span>
+    <span class="n">init</span> <span class="o">=</span> <span class="n">init</span> <span class="o">+</span> <span class="n">aname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="test_question9_22_1_opt_a">Poe</li><li data-component="feedback" id="test_question9_22_1_opt_a">Three characters but not the right ones.  namelist is the list of names.</li>
+            
+            <li data-component="answer"  id="test_question9_22_1_opt_b">EdgarAllanPoe</li><li data-component="feedback" id="test_question9_22_1_opt_b">Too many characters in this case.  There should be a single letter from each name.</li>
+            
+            <li data-component="answer" data-correct id="test_question9_22_1_opt_c">EAP</li><li data-component="feedback" id="test_question9_22_1_opt_c">Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.</li>
+            
+            <li data-component="answer"  id="test_question9_22_1_opt_d">William Shakespeare</li><li data-component="feedback" id="test_question9_22_1_opt_d">That does not make any sense.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="turtle-coordinate-list-extra-for-experts-example">
+<h2>2.7. Turtle Coordinate List (Extra for Experts Example)<a class="headerlink" href="#turtle-coordinate-list-extra-for-experts-example" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following:</p>
+
+<div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+import turtle
+import random
+
+window = turtle.Screen()
+jane = turtle.Turtle()
+
+history = [[0, 0]]
+
+while True:
+    number = random.randrange(1, 101)
+    if number < 50:
+        jane.left(90)
+    else:
+        jane.right(90)
+
+    jane.forward(10)
+
+    # check if been here before
+    #current_spot = [jane.xcor(), jane.ycor()]
+    x = int(round(jane.xcor()))
+    y = int(round(jane.ycor()))
+
+    current_spot = [x, y]
+
+    if current_spot in history:
+        # break forces the current loop to stop (ends the while True loop)
+        break
+    else:
+        history.append(current_spot)
+
+print("Done. Places jane walked are:")
+print(history)
+</textarea>
+</div>
+</div>
+<div class="section" id="practice-problems">
+<h2>2.8. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compliment-generator">
+<h3>2.8.1. Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
+<p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal"><span class="pre">great</span></code> <code class="docutils literal"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal"><span class="pre">great</span></code> into a list called <code class="docutils literal"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal"><span class="pre">friend``into</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">called</span> <span class="pre">``second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
+
+<div data-childcomponent="list_methods_practice_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
+<div class="section" id="averaging-random-integer-list">
+<h3>2.8.2. Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
+<p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
+
+<div data-childcomponent="list_methods_practice_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. Using Lists' data-toggle="tooltip">
+    <a href="ListOverview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="ListOverview.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - How the Internet Works Videos' data-toggle="tooltip" >
+    <a href="../../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../ComputingAndSociety/Internet/HowTheInternetWorks.html" >Next Section - How the Internet Works Videos</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
