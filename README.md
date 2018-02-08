@@ -1,4 +1,4 @@
-# sk-thinkcs
+# Computer Science 20 - Saskatchewan
 An open textbook intended to cover the requirements of the Saskatchewan Computer Science 20 curriculum (curriculum to go live Feb, 2018).
 
 ## Contributing to the Book
