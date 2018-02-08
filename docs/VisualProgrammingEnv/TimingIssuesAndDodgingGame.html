@@ -195,6 +195,7 @@
 <li><a class="reference internal" href="#">7. Timing Issues and Dodging Game (Broadcasts and Variables)</a><ul>
 <li><a class="reference internal" href="#timing-issues">7.1. Timing Issues</a></li>
 <li><a class="reference internal" href="#dodging-game">7.2. Dodging Game</a></li>
+<li><a class="reference internal" href="#practice-problem">7.3. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -257,17 +258,33 @@
 
     </div>
     <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=1vPKlqxNloc">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
-<iframe src="https://www.youtube.com/embed/1vPKlqxNloc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This is just a stub, to give a sense of what should go here. It will be written up properly soon…</p>
-</div>
-<div class="section" id="timing-issues">
+<iframe src="https://www.youtube.com/embed/1vPKlqxNloc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="timing-issues">
 <h2>7.1. Timing Issues<a class="headerlink" href="#timing-issues" title="Permalink to this headline">¶</a></h2>
-<p>Demo broadcast issues — have two sprites pick random numbers from 1-100, and a third sprite that says which one chose the highest number. Have a button that initiates the sequence via a broadcast. Screw it up first (all respond to same broadcast, then fix it – ordered broadcasts).</p>
+<p>When you begin creating more complicated projects in Scratch, it is possible to run into problems that we will call <em>timing issues</em>. This can happen when you respond to one event with multiple sprites. Although you can certainly respond to an event with many different sprites, there is no guarantee as to the order in which those responses will occur. If the response of one sprite depends on another sprite already taking an action, this can cause difficult to find problems in your project.</p>
+<p>To demonstrate this problem, we will create a very simple “game” that intentionally exposes this problem. First, create three sprites and position them on the stage as follows:</p>
+<img alt="../_images/scratch_timing_issues_sprite_setup.png" src="../_images/scratch_timing_issues_sprite_setup.png" />
+<p>For our game, we will the dinosaur and reindeer sprites each choose a random number from 1 to 100. The duck sprite will then determine which sprite is the winner (by checking which number is larger), and announce the winner. This would obviously be a terrible game to play with humans, but it will serve nicely to illustrate possible timing issues.</p>
+<p>We need to create two variables, one to hold the number chosen by the dinosaur and one to hold the number chosen by the reindeer. Go to the Data tab to create these, making sure you provide descriptive names for the variables.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>When creating your variables, you should leave the <strong>For all sprites</strong> button selected (instead of switching it to <strong>For this sprite only</strong>) unless you have a very good reason for declaring the variable only be accessible by the current sprite. If you create a variable for this sprite only, no other sprites are able to see what the value of that variable is (even if you drag the variable onto another sprite). You can tell that you have created a variable for a single sprite if, prior to the name of the variable, Scratch displays the name of the sprite followed by a colon:</p>
+<img alt="../_images/scratch_variable_scope.png" class="last" src="../_images/scratch_variable_scope.png" />
+</div>
+<p>Set up the basic version of the game by creating the following scripts for your sprites:</p>
+<img alt="../_images/scratch_timing_issue_game_1.png" src="../_images/scratch_timing_issue_game_1.png" />
+<p>To make the variables a bit nicer to look at, you can right click on the variable (as shown on the stage), and select the “large readout” option. Now drag that variable so that it is over the appropriate sprite.</p>
+<p>You should now test out your sketch by pressing the green flag a few times. You should notice that your program will occasionally select the correct winner, but will often make an error about who has won. Why is this happening? The logic of the duck sprite is correct, and yet we are encountering an error…</p>
+<img alt="../_images/scratch_broadcast_issues_animation.gif" src="../_images/scratch_broadcast_issues_animation.gif" />
+<p>Although the individual logic of each of our sprites is correct, <strong>they are all reacting to the same event</strong> (in this case, the flag being clicked). We are therefore unable to guarantee the order the code will run. When the flag is clicked, we do not know whether the dinosaur, reindeer or duck will have their code executed first. If the duck code happens before both of the other sprites select their new numbers, the duck may be making a decision based on the numbers selected the last time the flag was clicked (or one old number and one new number).</p>
+<p>Since we need to guarantee the order in which these scripts run, we can remake the script so that dinosaur picks a number when the flag is clicked, then broadcasts a message telling the reindeer to pick a number. The reindeer can react to that message by picking a number, then broadcast a message telling the duck to determine the winner. With this setup, we are guaranteed to have both numbers chosen before the duck attempts to decide which sprite is the winner.</p>
+<img alt="../_images/scratch_timing_issue_game_2.png" src="../_images/scratch_timing_issue_game_2.png" />
 </div>
 <div class="section" id="dodging-game">
 <h2>7.2. Dodging Game<a class="headerlink" href="#dodging-game" title="Permalink to this headline">¶</a></h2>
 <p>Create a dodging game, in which the object to avoid (bouncing randomly around the screen) and the character (which is following the mouse) both speed up as the game progresses. When they contact each other, the game should end.</p>
+</div>
+<div class="section" id="practice-problem">
+<h2>7.3. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Work time on RPS/Coolest Scratch Assn.</p>
 </div>
 </div>
