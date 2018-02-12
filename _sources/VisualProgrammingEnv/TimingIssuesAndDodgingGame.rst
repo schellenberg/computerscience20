@@ -61,11 +61,40 @@ Since we need to guarantee the order in which these scripts run, we can remake t
 Dodging Game
 ------------
 
-Create a dodging game, in which the object to avoid (bouncing randomly around the screen) and the character (which is following the mouse) both speed up as the game progresses. When they contact each other, the game should end.
+Let's try something totally different. This example will not require us to think about the timing issues that can crop up when we are responding to the same event with multiple sprites, but it will allow us to use quite a few of the ideas that we've learned so far. We will create a dodging game, in which there is a ball bouncing around the screen, and a second object that follows our mouse around the screen. As soon as the bouncing ball contacts the object following our mouse, the game will end.
+
+To begin, select a ball to add to your project. I'm going with a basketball. Drag the ball to some location on the left side of the screen, so that we can avoid a collision right at the start of the game. We then need to choose a random direction that we should be moving, then forever move in that direction, and bounce if we hit the edge of the stage. Add the following script to your ball:
+
+.. image:: images/scratch_dodging_game_bball_1.png
+
+Although the version above does work, the game would always have the same difficulty level, since the ball is moving at a constant speed. To make the game more interesting, we'd like to have the ball start by moving relatively slowly, and speed up throughout the game. Whenever we need a value to change during our project, we should be thinking about adding a variable. Create a variable called Ball Speed (in the Data tab), then change the ball script to the following:
+
+.. image:: images/scratch_dodging_game_bball_2.png
+
+Note that in the script above, we have created a maximum value of 50 that the ball speed can increase up to. If we didn't have the 'if Ball Speed < 50' block, the ball would continue to increase speed throughout the game, and eventually be moving so fast that graphical problems would occur (since the ball would be moving by more steps/pixels than the screen contains).
+
+Now we need to create a sprite that will follow our mouse around the screen while trying to dodge the bouncing ball. I'm going with a watermelon, but you can choose any sprite. Drag the watermelon somewhere on the right hand side of the stage to avoid a collision right at the start of the game. We now want the watermelon to always move in the direction of the mouse. Try adding a script like the following to your sprite, and test it out:
+
+.. image:: images/scratch_dodging_game_watermelon_1.png
+
+When you run the script given above, you can see that although the watermelon does follow the mouse, there are a few problems. One problem is that the watermelon moves at the same speed for the entire game. To solve this problem, we need to create another variable (something like "Watermelon Speed") that increases at the same rate as the bouncing ball. 
+
+Another problem is that when the watermelon "catches" the mouse, it has incredibly jittery movement. This happens because the watermelon points toward the mouse, moves past the mouse, turns around and then does it all again. A nice way to solve this issue is to first ask if the distance to the mouse is greater than the speed the watermelon is moving, and only move toward the mouse if we won't overshoot the goal.
+
+The final problem is that we have not actually checked to see if the the watermelon is touching the basketball. We need to add that question to the script, and stop everything that is happening when the two sprites touch.
+
+To solve each of these problems, adapt your previous code as follows:
+
+.. image:: images/scratch_dodging_game.png
+
+.. note:: An interesting extension to the dodging game is having the a sound play when the sprites collide. You may have to use a broadcast, and explore the 'stop other scripts in sprite' block to make it work.
 
 
 Practice Problem
 ------------------
 
-Work time on RPS/Coolest Scratch Assn.
+Work on your second Scratch assignment, for any remaining time.
+
+.. note:: If your teacher did not assign you a project, you may want to consider making a Rock Paper Scissors simulator to practice your Scratch skills. You will need to use variables, if-else blocks, and broadcasts. A nice extension to the basic version of this project is to allow the user to choose either a player versus computer game, or a computer versus computer game. You could use a start screen to allow the user to choose which type of game to play.
+
 
