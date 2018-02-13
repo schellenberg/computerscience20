@@ -298,16 +298,34 @@
 <img alt="../_images/scratch_ask_block_1.png" src="../_images/scratch_ask_block_1.png" />
 <p>We can improve the script above by using the “join block”, which you can find in the Operators tab. The join block allows us to squish two things together (often called concatenation in Computer Science parlance). If we use the join block as follows, we can say “Hello, Dan”, or “Go away, somebody”, where somebody will be whatever name the user entered.</p>
 <img alt="../_images/scratch_ask_block_2.png" src="../_images/scratch_ask_block_2.png" />
-<p>If we would like to allow more than one name to trigger the Hello message, we can use the “or block” found in the Operators tab. The script below will say hello to either Dan or Zoe, but will say go away to anyone else.</p>
+<p>If we would like to allow more than one name to trigger the Hello message, we can use the “or block” found in the Operators tab. This allows us to check for more than one condition. The script below will say hello to either Dan or Zoe, but will say go away to anyone else.</p>
 <img alt="../_images/scratch_ask_block_3.png" src="../_images/scratch_ask_block_3.png" />
 </div>
 <div class="section" id="timer">
 <h2>9.4. Timer<a class="headerlink" href="#timer" title="Permalink to this headline">¶</a></h2>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">This is just a stub. Will be written up properly soon.</p>
+<p>Let’s create a simple game, in which the user has to try to press a key after a certain number of seconds. If the user is close, congratulate them. If they are not close, tell them to try again.</p>
+<p>Since we don’t want the wait time to always be the same, we need to create a variable that we can use instead of a specific number. After creating the variable, have the computer pick a random number to use for the wait time, and tell the user how long they need to wait.</p>
+<img alt="../_images/scratch_timer_game_1.png" src="../_images/scratch_timer_game_1.png" />
+<p>To show the built-in timer variable on the stage, open the Sensing tab and click the checkbox beside the timer variable. Although you don’t want to have the timer on the stage in the final version of the game, it can be helpful while creating the game. Notice that every time you click on the flag, the timer resets to 0. If you wanted to begin the game using something other than the flag being clicked, you could use the “reset timer” block in the Sensing tab.</p>
+<p>In order to determine if the user is “close enough” to the time to wait, we need to consider what happens if they are slightly above, or slightly below the wait time. For example, assume that the wait time was supposed to be 5 seconds. We would like the user to “win” if they press a key within half a second of the wait time. If the user presses the key half a second <strong>too late</strong>, at 5.5 seconds, we can simply subtract the timer value from the wait time:</p>
+<div class="math">
+\[5.5 - 5 = 0.5\]</div>
+<p>However, if the user presses the key half a second <strong>too soon</strong>, and we perform the same subtraction, we will get a negative number:</p>
+<div class="math">
+\[4.5 - 5 = -0.5\]</div>
+<p>What we would really like to do is simply ask if the time clicked is less than half a second away from the expected wait time. To do this, we need to convert the negative answer below into a positive value. In math class, you have learned a useful operation that does just that: absolute value.</p>
+<div class="math">
+\[\left | 5.5-5 \right | = 0.5\]</div>
+<div class="math">
+\[\left | 4.5-5 \right | = 0.5\]</div>
+<p>We can use absolute value in Scratch to find the distance away (always positive) the timer is from the wait time. You will find the absolute value operator in the Operators tab, though it will initially look like this:</p>
+<img alt="../_images/scratch_math_operators_1.png" src="../_images/scratch_math_operators_1.png" />
+<p>Click on the word <em>sqrt</em>, and select <em>abs</em>, which is short for absolute value. We can now create code that executes when a key is pressed, and checks to see if the user pressed a key within half a second before or after the expected wait time.</p>
+<img alt="../_images/scratch_timer_game_2.png" src="../_images/scratch_timer_game_2.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An nice extension to this game is to have the game tell the user how far away they were from the expected wait time. If you do this in a separate say block <em>after</em> the initial “Nice” or “Not quite” blocks, you may need to create another variable to keep track of when the key was actually pressed.</p>
 </div>
-<p>Use the built-in timer variable to create a guessing number of seconds elapsed game.</p>
 </div>
 <div class="section" id="practice-problem">
 <h2>9.5. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
