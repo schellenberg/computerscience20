@@ -27,7 +27,33 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
 Say Greeting Block
 ------------------
 
-Create a block in Scratch that does not require any arguments.
+At this point in our exploration of Scratch, we have learned how to use a large number of different blocks. What do we do, however, when we would like to have some functionality that isn't built into Scratch? As it turns out, we can create our own blocks, and use them just like the built in blocks! This is an incredibly powerful idea in Computer Science, and in most languages is called creating your own functions (we will explore how to do this in another language soon!).
+
+Perhaps we would like to have a block that would say a greeting, choosing one at random from a number of different languages. For this example, we will have our block choose from one of the following greetings:
+
++--------+----------+-------------------+
+| Number | Language |      Greeting     |
++========+==========+===================+
+|      1 | English  | Hello             |
++--------+----------+-------------------+
+|      2 | French   | Bonjour           |
++--------+----------+-------------------+
+|      3 | Cree     | Tanisi            |
++--------+----------+-------------------+
+|      4 | Chinese  | nǐ hǎo            |
++--------+----------+-------------------+
+|      5 | Arabic   | as-salām 'alaykum |
++--------+----------+-------------------+
+|      6 | German   | Guten Tag         |
++--------+----------+-------------------+
+|      7 | Punjabi  | sat srī akāl      |
++--------+----------+-------------------+
+|      8 | Spanish  | ¡Hola!            |
++--------+----------+-------------------+
+
+There are 8 different greetings listed above. In order to choose between them, we need to have Scratch choose a random number from 1 to 8, then say one of the above greetings based on which number was chosen.
+
+
 
 
 Draw Polygon Block
