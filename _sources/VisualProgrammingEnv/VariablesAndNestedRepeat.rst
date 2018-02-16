@@ -23,6 +23,7 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
     :align: left
     :http: https
 
+.. _scratch_variables:
 
 Variables
 ---------
