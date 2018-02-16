@@ -22,9 +22,17 @@ Saving Your Work
 
 Although the code you are creating for this first few worlds is quite simple, as you progress to the more difficult steps, you will want to save your code. 
 
-**To save the code** you have created, use the **Ctrl-S** keyboard shortcut (**Cmd-S** on a Mac).
+To save your code to your computer, you can click on the Save button. To open code that you have saved to your computer, use the Open button.
 
-**To load code** you have saved previously, use the **Ctrl-O** keyboard shortcut (**Cmd-O** on a Mac).
+.. image:: images/save_open_buttons.png
+
+If you cannot see the Save and Open buttons, you may need to press the Reload button, as shown below:
+
+.. image:: images/reveal_save_and_open.gif
+
+
+If you would prefer to use a keyboard shortcut, you can save the code you have created using the **Ctrl-S** keyboard shortcut (**Cmd-S** on a Mac). To load code you have saved previously, use the **Ctrl-O** keyboard shortcut (**Cmd-O** on a Mac).
+
 
 .. note:: If your teacher has asked you to show them your code as you progress through the steps, you may find it helpful to open a new tab when you have completed a step, but are waiting for your teacher. That way, you can have a number of steps easily available for your teacher to look at when they get to you.
 

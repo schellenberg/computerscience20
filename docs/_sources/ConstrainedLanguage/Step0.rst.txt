@@ -112,7 +112,7 @@ The following pages will provide you with challenges for you to complete. Althou
 Acknowledgments
 -------------------
 
-Reeborg is a modern adaptation of an environment called Karel the Robot, created by Richard Pattis at Stanford University in 1981. The version we will use was created by Andre Roberge. The tutorials you will be using are an adaptation of tutorials made by Roger Frank, Jeffrey Elkner, Andre Roberge and Dan Schellenberg.
+Reeborg is a modern adaptation of an environment called Karel the Robot, created by Richard Pattis at Stanford University in 1981. The version we will use was created by André Roberge. The tutorials you will be using are an adaptation of tutorials made by Roger Frank, Jeffrey Elkner, André Roberge and Dan Schellenberg.
 
 
 .. |reeborg_environment| raw:: html
