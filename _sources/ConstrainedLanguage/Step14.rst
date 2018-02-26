@@ -98,26 +98,28 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 
 .. note:: Reeborg cannot use a ``repeat`` statement, since it has no idea of the dimensions of the lake it is walking around.
 
-.. warning:: You cannot use a ``from library import *`` statement in this world, or the code that checks your solution will not work. Instead, use something like ``from library import turn_right``. If you are curious, the reason for this is that I have redefined how the ``move()`` function works for this step (in order to keep track of where you move Reeborg), and when you call ``from library import *``, ``move()`` is reset to it's original version, so I cannot keep track of where Reeborg goes.
-
-
-
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014" target="_blank">Reeborg environment</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014a" target="_blank">Reeborg environment</a>
+
 
 Extra for Experts
 ------------------
 
 **Only attempt the following step if you are either: ahead of the rest of your peers, or finished off the rest of the steps. If you've been having any trouble with these Reeborg steps, just skip this Extra for Experts for now. You can always come back and try it later!**
 
+
+Open Step 14b on the |reeborg_environment_extra|.
+
 Reeborg has found a much more interesting lake to walk around. 
 
 .. image:: images/step14b.gif
 
-Try to adapt the solution for the basic world to also work with this new lake. Reeborg should once again put down the banana at the starting position and continue walking along the border of the lake until it finds the banana again. Staying along the wall will be trickier this time, but that's the challenge!
+Try to adapt the solution for the basic world to also work with this new lake. Reeborg should once again put down the banana at the starting position and continue walking along the border of the lake (this time, a gravel path) until it finds the banana again. Staying along the wall will be trickier this time, but that's the challenge!
 
 .. note:: Your solution for the Extra for Experts world should also work in the basic (Step 14a) world!
 
 
+.. |reeborg_environment_extra| raw:: html
 
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014b" target="_blank">Reeborg environment</a>
