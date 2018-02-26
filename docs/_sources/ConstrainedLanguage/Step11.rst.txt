@@ -55,11 +55,11 @@ Open Step 11 on the |reeborg_environment|.
 
 .. image:: images/step11.png
 
-Reeborg wants to make some bouquets of flowers for it's friends, Zoe and Eli. Reeborg has permission to ``take()`` tulips from some of his neighbor's gardens. Unfortunately for Reeborg, each of the gardens is different. Reeborg does know that the garden will be rectangular, that it will take 23 steps to get around the garden, and that there will be a tulip in each corner of the garden. 
+Reeborg wants to make some bouquets of flowers for it's friends, Zoe and Eli. Reeborg has permission to ``take()`` tulips from some of his neighbor's yards. Unfortunately for Reeborg, each of the yards is different. Reeborg does know that the yard will be rectangular, that it will take 23 steps to get around the yard, and that there will be a tulip in each corner of the yard. 
 
-Create a program to have Reeborg walk around the outside of the garden, picking up a tulip if it can, and moving ahead if it cannot. You **must** use a ``repeat 23:`` and ``if/else``.
+Create a program to have Reeborg walk around the outside of the yard, picking up a tulip if it can, and moving ahead if it cannot. You **must** use a ``repeat 23:`` and ``if/else``.
 
-.. note:: For this step, the world will be different each time you press the *Play* button. Each time you run your code, new dimensions for the world will be used.
+.. note:: For this step, the world will be different each time you press the *Play* button. Each time you run your code, new dimensions for the world will be used. You may assume the starting location will always be in the lower left hand corner of the world.
 
 
 .. |reeborg_environment| raw:: html
