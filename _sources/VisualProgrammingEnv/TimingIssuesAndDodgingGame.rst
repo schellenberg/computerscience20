@@ -37,7 +37,7 @@ For our game, we will the dinosaur and reindeer sprites each choose a random num
 We need to create two variables, one to hold the number chosen by the dinosaur and one to hold the number chosen by the reindeer. Go to the Data tab to create these, making sure you provide descriptive names for the variables.
 
 .. note:: 
-	When creating your variables, you should leave the **For all sprites** button selected (instead of switching it to **For this sprite only**) unless you have a very good reason for declaring the variable only be accessible by the current sprite. If you create a variable for this sprite only, no other sprites are able to see what the value of that variable is (even if you drag the variable onto another sprite). You can tell that you have created a variable for a single sprite if, prior to the name of the variable, Scratch displays the name of the sprite followed by a colon:
+	When creating your variables, you should leave the **For all sprites** button selected (instead of switching it to **For this sprite only**) unless you have a very good reason for declaring the variable to only be accessible by the current sprite. If you create a variable for this sprite only, no other sprites are able to see what the value of that variable is (even if you drag the variable onto another sprite). You can tell that you have created a variable for a single sprite if, prior to the name of the variable, Scratch displays the name of the sprite followed by a colon:
 
 	.. image:: images/scratch_variable_scope.png
 	
