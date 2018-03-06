@@ -43,16 +43,16 @@ The exact amount of time that you spend on the Reeborg unit is hard to predict, 
 
 **Making Your Own Quiz Worlds**
 
-Creating your own worlds in Reeborg can be time consuming, but once you understand the process, it works quite well. The general procedure is to select "Additional Options", then click "Edit world". Note that in order to use the world that you create with your students, you will need to save the world to your computer (Additional Options -> Save world to file). Then you need to give the students a way to access that file. One simple way to do this is to copy/paste the contents of the ``world_name.json`` file into a web service like `pastebin.com <pastebin.com>`_. I have done this with `a simple demo world <https://pastebin.com/yLb3CUzq>`_. Note that to get just the contents of the file, you can click the "raw" button on pastebin, which provides `something like this <https://pastebin.com/raw/yLb3CUzq>`_. You should now be able to use that url to create a link that your students can access. It will look something like this:
+Creating your own worlds in Reeborg can be time consuming, but once you understand the process, it works quite well. The general procedure is to select "Additional Options", then click "Edit world". Creating a simple world (that doesn't change each time you open it), you can simply use the graphical world editor on the Reeborg website. If you want to make a world that changes, you can use Python or JavaScript to change certain portions of the world when it is loaded. To find out much more information about how to create worlds, you might want to `read the guide created by André Roberge <https://aroberge.gitbooks.io/reeborg-s-world-advanced-world-creation/content/included/chapter1.html>`_ (the creator of Reeborg).
+
+Note that in order to use the world that you create with your students, you will need to save the world to your computer (Additional Options -> Save world to file). Then you need to give the students a way to access that file. One simple way to do this is to copy/paste the contents of the ``world_name.json`` file into a web service like `pastebin.com <pastebin.com>`_. I have done this with `a simple demo world <https://pastebin.com/yLb3CUzq>`_. Note that to get just the contents of the file, you can click the "raw" button on pastebin, which provides `something like this <https://pastebin.com/raw/yLb3CUzq>`_. You should now be able to use that url to create a link that your students can access. It will look something like this:
 
     `https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld <https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld>`_
 
-To make the same thing work for you, simply replace the ``https://pastebin.com/raw/yLb3CUzq`` portion of the link with the link to your world, and change ``DemoExternalWorld`` to whatever name you would like to have appear in the Reeborg World Selector menu. **This is how I link to extra worlds in the More Challenges and Second Practice Quiz sections of Reeborg.**
+To make the same thing work for you, simply replace the ``https://pastebin.com/raw/yLb3CUzq`` portion of the link with the link to your world, and change ``DemoExternalWorld`` to whatever name you would like to have appear in the Reeborg World Selector menu. **This is similar to how I link to extra worlds in the More Challenges and Second Practice Quiz sections of Reeborg.**
 
 .. note:: Although it does take one extra step, I like to use a url shortening service, such as `bitly.com <https://bitly.com>`_, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into `http://bit.ly/2hI9ejK <http://bit.ly/2hI9ejK>`_
 
-To find out much more information about how to create worlds, you might want to `read the guide created by André Roberge <https://github.com/aroberge/reeborg-world-creation>`_ (the creator of Reeborg).
-    
 
 Python
 ~~~~~~~
