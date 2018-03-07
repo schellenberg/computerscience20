@@ -33,7 +33,6 @@ Scratch
    VisualProgrammingEnv/NumberGuessingGame.rst
    VisualProgrammingEnv/MakingOwnBlocks.rst
    VisualProgrammingEnv/StudentDirectedProject.rst
-   VisualProgrammingEnv/PossibleExtensions.rst
 
 
 Reeborg

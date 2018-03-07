@@ -15,14 +15,15 @@ Student Directed Project
     - **CS20-SD1** Develop a coding project or conduct research in an area of computer science of the student’s choice.
 
 
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
-
-We won't be demonstrating anything new during these periods. Instead, you will be given time to try to build a project that puts to use many of the ideas that we've seen so far. 
-
-Be sure that the project you choose allows you to demonstrate your understanding of:
+Now that you have learned quite a number of concepts with Scratch, you should try to build a project that puts these ideas to use. Be sure that the project you choose allows you to demonstrate your understanding of:
 
 - broadcast (to control program flow)
 - loops (repeat, repeat until, forever blocks)
 - conditionals (if, if/else blocks)
 - variables
 
+If you would like to explore some new concepts in your project, you might consider researching:
+
+- clones (found in the Control tab)
+- lists (found in the Data tab)
+- reacting to video and audio input (found in the Sensing tab)
