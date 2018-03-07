@@ -278,6 +278,14 @@ If we create our own list, we can still iterate through it using a for loop. For
     for item in grocery_list:
         print("Don't forget to buy the", item)
 
+If you want to access just one element inside a list, you can specify the location of the element you want. For example, if we wanted to access the *carrots* from the grocery_list above, we could ask for the 1th element (since we start counting from 0). We enclose the location inside square brackets, so this would be ``grocery_list[1]``.
+
+.. activecode:: list_intro_4
+    :nocodelens:
+    
+    grocery_list = ["apples", "carrots", "milk", "yogurt"]
+    print("Don't forget to buy some", grocery_list[1])
+
 
 Functions
 ----------
