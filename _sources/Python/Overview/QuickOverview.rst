@@ -251,9 +251,27 @@ Notice that the loop above repeats 10 times, but begins counting at 0, so the la
     for counter in range(5, 11):
         print(counter)
 
-One last version of the for loop that we will introduce allows us to go through a *list* of values, as follows. *Please note that there are a bunch of things in this example that you don't need to understand yet! We'll get there!*
 
-.. activecode:: for_loop_intro_3
+Lists
+------
+
+How does the range function above work? What it does is create a **list** of numbers, which allows us to save more than one value into the same variable. For example, when we called ``range(5, 11)`` above, Python created a list with the numbers 5, 6, 7, 8, 9, 10. If we had wanted to create that list ourselves, we could have done something like this:
+
+.. activecode:: list_intro_1
+    :nocodelens:
+    
+    number_list = [5, 6, 7, 8, 9, 10]
+
+We can put any data type inside of the list, so it would also be okay to make a list like:
+
+.. activecode:: list_intro_2
+    :nocodelens:
+    
+    number_list = [5, "happy", 2.5, True]
+
+If we create our own list, we can still iterate through it using a for loop. For example, if you were keeping track of which groceries you wanted to buy at the store, you might put all the items you want to buy into a list, then print out each of them. 
+
+.. activecode:: list_intro_3
     :nocodelens:
     
     grocery_list = ["apples", "carrots", "milk", "yogurt"]
