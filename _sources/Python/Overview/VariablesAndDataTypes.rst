@@ -77,7 +77,7 @@ help you work out problems.
 Alternatively, you can write an entire program by placing lines of Python instructions
 in a file and then use the interpreter to
 execute the contents of the file as a whole. Such a file is often referred to as **source code**.  For
-example, we used a Thonny to create a source code file named ``firstprogram.py`` with
+example, we used Thonny to create a source code file named ``firstprogram.py`` with
 the following contents:
 
 .. image:: images/thonny_editor.png
@@ -90,7 +90,7 @@ By convention, files that contain Python programs have names that end with
 
 **Check your understanding**
 
-.. mchoice:: question1_2_1
+.. mchoice:: source_code_check
    :answer_a: the instructions in a program, stored in a file.
    :answer_b: the language that you are programming in (e.g., Python).
    :answer_c: the environment/tool in which you are programming.
@@ -117,7 +117,7 @@ reader - it is completely ignored by the interpreter.
 In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
 **Every program you write should start with a comment header**, which could look something like this:
 
-.. activecode:: ch01_3
+.. activecode:: comment_header_example
 
     #---------------------------------------------------
     # First Python Program
@@ -136,7 +136,7 @@ programs much easier for humans to parse.  Use them liberally!
 
 **Check your understanding**
 
-.. mchoice:: question1_12_1
+.. mchoice:: comment_check
    :answer_a: To tell the computer what you mean in your program.
    :answer_b: For the people who are reading your code to know, in natural language, what the program is doing.
    :answer_c: Nothing, they are extraneous information that is not needed.
@@ -196,7 +196,7 @@ If you ask Python to evaluate a variable, it will produce the value
 that is currently linked to the variable.  In other words, evaluating a variable will give you the value that is referred to
 by the variable.
 
-.. activecode:: ch02_9
+.. activecode:: variables_example_1
     :nocanvas:
 
     message = "What's up, Doc?"
@@ -211,7 +211,7 @@ In each case the result is the value of the variable.
 
 Variables also have types; again, we can ask the interpreter what they are.
 
-.. activecode:: ch02_10
+.. activecode:: variables_example_2
     :nocanvas:
 
     message = "What's up, Doc?"
@@ -242,7 +242,7 @@ You'll notice we change the value of ``day`` three times, and on the third
 assignment we even give it a value that is of a different type.
 
 
-.. codelens:: ch02_11
+.. codelens:: variables_example_3
     :showoutput:
 
     day = "Thursday"
@@ -255,7 +255,7 @@ assignment we even give it a value that is of a different type.
 
 **Check your understanding**
 
-.. mchoice:: test_question2_3_2
+.. mchoice:: variables_check_1
    :answer_a: Nothing is printed. A runtime error occurs.
    :answer_b: Thursday
    :answer_c: 32.5
@@ -297,6 +297,9 @@ letter.
 
 Although it is legal to use uppercase letters, by convention we don't. If you choose to use uppercase letters, remember that case matters. ``Bruce`` and ``bruce`` are different variables.
 
+.. note:: Conventions about variable names differ from one language to another. Another common variable naming pattern is to use a lowercase letter for the first word, and to capitalize the starting letter of each word that follows. For example, you might use ``myName`` or ``priceOfTeaInChina``. This is often called camelCaps (think of the humps of a camel). 
+
+
 If you give a variable an illegal name, you get a syntax error.  In the example below, each
 of the variable names is illegal.
 
@@ -329,9 +332,9 @@ yield    True     False    None
 You might want to keep this list handy. If the interpreter complains about one
 of your variable names and you don't know why, see if it is on this list.
 
-Programmers generally choose names for their variables that are meaningful to
+**Programmers generally choose names for their variables that are meaningful to
 the human readers of the program --- they help the programmer document, or
-remember, what the variable is used for.
+remember, what the variable is used for.**
 
 
 User Input
