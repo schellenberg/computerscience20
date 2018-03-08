@@ -1,8 +1,3 @@
-
-.. qnum::
-   :prefix: while-loops-intro-
-   :start: 1
-
 The ``while`` Statement
 ========================
 
@@ -93,7 +88,7 @@ Counting Up
 
 Write a program that will print out the numbers 1 to 100.
 
-.. activecode:: while_intro_3
+.. activecode:: while_intro_4
 
     #put your code here!
 
@@ -103,7 +98,7 @@ Counting Down
 
 Write a program that counts down from 20 to 1, then prints *Blastoff!*.
 
-.. activecode:: while_intro_4
+.. activecode:: while_intro_5
 
     #put your code here!
 

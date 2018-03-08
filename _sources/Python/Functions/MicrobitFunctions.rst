@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: fruitful-functions-microbit
-   :start: 1
-
-
 Fruitful Functions and the Micro:bit
 =====================================
 

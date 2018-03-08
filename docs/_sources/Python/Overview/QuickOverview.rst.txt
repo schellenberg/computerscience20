@@ -257,16 +257,14 @@ Lists
 
 How does the range function above work? What it does is create a **list** of numbers, which allows us to save more than one value into the same variable. For example, when we called ``range(5, 11)`` above, Python created a list with the numbers 5, 6, 7, 8, 9, 10. If we had wanted to create that list ourselves, we could have done something like this:
 
-.. activecode:: list_intro_1
-    :nocodelens:
+.. code-block:: python
     
     number_list = [5, 6, 7, 8, 9, 10]
 
 We can put any data type inside of the list, so it would also be okay to make a list like:
 
-.. activecode:: list_intro_2
-    :nocodelens:
-    
+.. code-block:: python
+
     number_list = [5, "happy", 2.5, True]
 
 If we create our own list, we can still iterate through it using a for loop. For example, if you were keeping track of which groceries you wanted to buy at the store, you might put all the items you want to buy into a list, then print out each of them. 
@@ -278,7 +276,7 @@ If we create our own list, we can still iterate through it using a for loop. For
     for item in grocery_list:
         print("Don't forget to buy the", item)
 
-If you want to access just one element inside a list, you can specify the location of the element you want. For example, if we wanted to access the *carrots* from the grocery_list above, we could ask for the 1th element (since we start counting from 0). We enclose the location inside square brackets, so this would be ``grocery_list[1]``.
+If you want to access just one element inside a list, you can specify the location of the element you want. For example, if we wanted to access the *carrots* from the grocery_list above, we could ask for the 1th element (since we start counting from 0). We enclose the location inside square brackets, so to access the carrots we would call ``grocery_list[1]``.
 
 .. activecode:: list_intro_4
     :nocodelens:
@@ -394,7 +392,7 @@ Remember the number guessing game we created in Scratch? The basic premise was a
 We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.
 
 
-.. activecode:: module_intro_3
+.. activecode:: number_guessing_game_attempt
     :caption: Create a number guessing game here!
     
     # the algorithm for the game can be described as follows

@@ -200,15 +200,15 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#length">1.4. Length</a><ul>
-<li><a class="reference internal" href="#id2">1.4.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#id1">1.4.1. Check Your Understanding</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#the-slice-operator">1.5. The Slice Operator</a><ul>
-<li><a class="reference internal" href="#id3">1.5.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#id2">1.5.1. Check Your Understanding</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#traversal-and-the-for-loop-by-item">1.6. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Item</a><ul>
-<li><a class="reference internal" href="#id4">1.6.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#id3">1.6.1. Check Your Understanding</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#practice-problems">1.7. Practice Problems</a><ul>
@@ -353,7 +353,7 @@ It is just a string of length 1.</p>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_index_test_question_1">
-            <p>more-info-about-strings1: What is printed by the following statements?</p>
+            <p>turtle-confusion-119: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
@@ -373,7 +373,7 @@ It is just a string of length 1.</p>
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_index_test_question_2">
-            <p>more-info-about-strings2: What is printed by the following statements?</p>
+            <p>turtle-confusion-120: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -406,9 +406,9 @@ print(len(fruit))
 <p>To get the last letter of a string, you might be tempted to try something like
 this:</p>
 
-<div data-childcomponent="string_length_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_length_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_length_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_length_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "Banana"
 size = len(fruit)
 last = fruit[size]       # ERROR!
@@ -422,9 +422,9 @@ Since we started counting at zero, the six indexes are
 numbered 0 to 5. To get the last character, we have to subtract 1 from
 the length.  Give it a try in the example above.</p>
 
-<div data-childcomponent="string_length_2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="string_length_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_length_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_length_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 fruit = "Banana"
 size = len(fruit)
 last_char = fruit[size-1]
@@ -435,12 +435,12 @@ print(last_char)
 end of the string. The expression <code class="docutils literal"><span class="pre">fruit[-1]</span></code> yields the last letter,
 <code class="docutils literal"><span class="pre">fruit[-2]</span></code> yields the second to last, and so on.  Try it!
 Most other languages do <em>not</em> allow the negative indices, but they are a handy feature of Python!</p>
-<div class="section" id="id2">
-<h3>1.4.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>1.4.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_1">
-            <p>more-info-about-strings3: What is printed by the following statements?</p>
+            <p>turtle-confusion-121: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
 </pre></div>
@@ -456,7 +456,7 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_2">
-            <p>more-info-about-strings4: What is printed by the following statements?</p>
+            <p>turtle-confusion-122: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -476,7 +476,7 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_3">
-            <p>more-info-about-strings5: What is printed by the following statements?</p>
+            <p>turtle-confusion-123: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
@@ -534,12 +534,12 @@ print(fruit[3:99])
 <p class="first admonition-title">Note</p>
 <p class="last">What do you think <code class="docutils literal"><span class="pre">fruit[:]</span></code> means?</p>
 </div>
-<div class="section" id="id3">
-<h3>1.5.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>1.5.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_1">
-            <p>more-info-about-strings6: What is printed by the following statements?</p>
+            <p>turtle-confusion-124: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
 </pre></div>
@@ -559,7 +559,7 @@ print(fruit[3:99])
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_length_test_question_2">
-            <p>more-info-about-strings7: What is printed by the following statements?</p>
+            <p>turtle-confusion-125: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -616,12 +616,12 @@ for a_char in "Go Spot Go":
 <p>The loop variable <code class="docutils literal"><span class="pre">a_char</span></code> is automatically reassigned each character in the string “Go Spot Go”.
 We will refer to this type of sequence iteration as <strong>iteration by item</strong>.
 Note that it is only possible to process the characters one at a time from left to right.</p>
-<div class="section" id="id4">
-<h3>1.6.1. Check Your Understanding<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>1.6.1. Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_1">
-            <p>more-info-about-strings8: How many times is the word HELLO printed by the following statements?</p>
+            <p>turtle-confusion-126: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
@@ -642,7 +642,7 @@ Note that it is only possible to process the characters one at a time from left 
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_2">
-            <p>more-info-about-strings9: How many times is the word HELLO printed by the following statements?</p>
+            <p>turtle-confusion-127: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>

@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: string-turtle-drawing
-   :start: 1
-
 Turtle Drawing and Strings (L-Systems)
 =======================================
 

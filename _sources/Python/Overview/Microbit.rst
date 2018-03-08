@@ -1,8 +1,3 @@
-
-.. qnum::
-   :prefix: microbit-intro-
-   :start: 1
-
 The Time Module and Using a Micro:bit
 ======================================
 

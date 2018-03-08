@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: accumulator-pattern
-   :start: 1
-
 The Accumulator Pattern
 ========================
 

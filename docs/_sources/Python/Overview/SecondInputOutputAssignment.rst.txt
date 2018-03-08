@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: input-output-assn-1
-   :start: 1
-
-
 Input/Output Strings Assignment
 ===============================
 
@@ -60,7 +54,7 @@ Try the following code with ``x = 42``, ``x = 32``, ``x = 2``, ``x = 82``, and `
 
 Try the following, entering in ``17``. How about ``14``? Can you fix it? *Hint: think data types!*
 
-.. activecode:: wdtpd_input_output_strings_2
+.. activecode:: wdtpd_input_output_strings_3
     :caption: What will this program print?
     :nocodelens:
 

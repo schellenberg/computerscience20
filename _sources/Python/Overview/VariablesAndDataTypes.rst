@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: intro-1
-   :start: 1
-
-
 Variables, Data Types, and User Input
 ======================================
 

@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: functions-practice
-   :start: 1
-
-
 User Controlled Turtle Race
 =====================================
 

@@ -1,14 +1,9 @@
-
-.. qnum::
-    :prefix: for-loops-intro-
-    :start: 1
-
 Multiple Turtles and ``for`` Loops
 =============================================
 
 .. topic:: Quick Overview of Day
 
-    Explore how to instantiate more than one turtle object in the same program. Introduce the ``for`` loop, and use the ``range()``function to simplify the creation of large for loops.
+    Explore how to instantiate more than one turtle object in the same program. Introduce the ``for`` loop, and use the ``range()`` function to simplify the creation of large for loops.
 
 
 .. reveal:: curriculum_addressed

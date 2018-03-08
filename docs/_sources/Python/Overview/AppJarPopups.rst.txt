@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: other-input-methods-1
-   :start: 1
-
-
 Other Input Methods (appJar)
 ===============================
 

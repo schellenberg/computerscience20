@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: fruitful-functions-practice
-   :start: 1
-
-
 Reaction Game with Micro:bit
 ====================================
 

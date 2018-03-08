@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: turtle-assn-
-   :start: 1
-
-
 Looping with Turtles Assignment
 ================================
 

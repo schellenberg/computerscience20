@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: using-lists
-   :start: 1
-
 List Methods
 =======================================
 

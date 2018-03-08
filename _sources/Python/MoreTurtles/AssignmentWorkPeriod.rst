@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: turtle-square-shapes
-   :start: 1
-
-
 Assignment Work Period
 ================================
 

@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: more-info-about-strings
-   :start: 1
-
 String Traversal (by index), and the Accumulator Pattern with Strings
 =====================================================================================
 
@@ -137,7 +133,7 @@ The ``in`` operator tests if one string is a substring of another:
 
 Note that a string is a substring of itself, and the empty string is a 
 substring of any other string. *(Also note that computer scientists 
-like to think about these edge cases quite carefully!) *
+like to think about these edge cases quite carefully!)*
 
 .. activecode:: string_in_not_in_2
     

@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: string-manipulation-practice
-   :start: 1
-
 String Manipulation Practice
 ==================================
 

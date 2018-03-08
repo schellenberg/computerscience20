@@ -1,8 +1,3 @@
-
-.. qnum::
-   :prefix: turtle-intro-
-   :start: 1
-
 Our First Turtle Program
 =========================
 
@@ -405,7 +400,7 @@ Create a program that uses the turtle module to draw a square. The user should b
    
 *Hint:* your input from the user will return a string, but the turtles ``pensize`` method expects its argument to be an ``int``.  That means you need to convert the string to an int before you pass it to ``pensize``.
 
-.. activecode:: practice_problem_turtle_intro_1
+.. activecode:: practice_problem_turtle_intro_2
     :nocodelens:
 
     # Color Selection

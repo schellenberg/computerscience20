@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: input-output-assn-1
-   :start: 1
-
-
 Input/Output Assignment
 ========================
 

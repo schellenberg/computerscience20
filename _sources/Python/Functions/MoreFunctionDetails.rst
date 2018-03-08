@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: more-function-details
-   :start: 1
-
-
 Fruitful Functions and Variable Scope
 ======================================
 

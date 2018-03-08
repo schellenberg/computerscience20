@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: functions-assignment-work-period
-   :start: 1
-
-
 Custom Images and Work Period for Micro:bit Game
 =================================================
 
@@ -58,7 +52,7 @@ Although we can figure out what is going on in the above code (each row is separ
 
 Recall that the ``+`` operator means *concatenation* (think join) when used on strings. Python gives us a second way to concatenate two strings together, as follows:
 
-.. activecode:: concatenation_reminder
+.. activecode:: concatenation_reminder2
     :nocanvas:
     :nocodelens:
 

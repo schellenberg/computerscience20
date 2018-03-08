@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: logical-operators
-   :start: 1
-
-
 Logical Operators
 ===============================
 

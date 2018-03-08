@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: for-loop-animating-images
-   :start: 1
-
-
 Animating a Micro:bit LED Image with a ``for`` Loop
 ====================================================
 

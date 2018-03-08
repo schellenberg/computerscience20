@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: turtle-tips
-   :start: 1
-
-
 Handy Turtle Tips
 ================================
 

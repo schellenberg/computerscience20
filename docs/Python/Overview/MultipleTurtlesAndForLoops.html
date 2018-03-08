@@ -199,7 +199,7 @@
 </li>
 <li><a class="reference internal" href="#the-for-loop">10.2. The <code class="docutils literal"><span class="pre">for</span></code> Loop</a></li>
 <li><a class="reference internal" href="#iteration-simplifies-our-turtle-program">10.3. Iteration Simplifies our Turtle Program</a><ul>
-<li><a class="reference internal" href="#id3">10.3.1. Mixed Up Programs</a></li>
+<li><a class="reference internal" href="#id1">10.3.1. Mixed Up Programs</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#the-range-function">10.4. The Range Function</a></li>
@@ -259,7 +259,7 @@
 <h1>10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal"><span class="pre">for</span></code> loop, and use the <a href="#id1"><span class="problematic" id="id2">``</span></a>range()``function to simplify the creation of large for loops.</p>
+<p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal"><span class="pre">for</span></code> loop, and use the <code class="docutils literal"><span class="pre">range()</span></code> function to simplify the creation of large for loops.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
@@ -341,7 +341,7 @@ ideas. They’re not always explicit in the code.</li>
 
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="for-loops-parsons-1">
-        <span data-question>for-loops-intro-1: The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left, <img src="../../_static/parsons/TwoTurtles1.png" width="150" align="left" hspace="10" vspace="5" />.  The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.   Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <span data-question>turtle-confusion-104: The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left, <img src="../../_static/parsons/TwoTurtles1.png" width="150" align="left" hspace="10" vspace="5" />.  The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.   Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
 wn = turtle.Screen()
 ---
 jamal = turtle.Turtle()
@@ -365,7 +365,7 @@ wn.exitonclick()
     
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="for-loops-parsons-2">
-        <span data-question>for-loops-intro-2: The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, <img src="../../_static/parsons/TwoTurtlesL.png" width="150" align="left" hspace="10" vspace="5" />.  The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.  Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <span data-question>turtle-confusion-105: The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, <img src="../../_static/parsons/TwoTurtlesL.png" width="150" align="left" hspace="10" vspace="5" />.  The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.  Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
 ---
 wn = turtle.Screen()
 ---
@@ -573,12 +573,12 @@ wn.exitonclick()
 </textarea>
 </div>
 <p>In this case, the value of <code class="docutils literal"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
-<div class="section" id="id3">
-<h3>10.3.1. Mixed Up Programs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>10.3.1. Mixed Up Programs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="3_8">
-        <span data-question>for-loops-intro-3: The following program uses a turtle to draw a triangle as shown to the left, <img src="../../_static/parsons/TurtleTriangle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
+        <span data-question>turtle-confusion-106: The following program uses a turtle to draw a triangle as shown to the left, <img src="../../_static/parsons/TurtleTriangle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
 ---
 wn = turtle.Screen()
 marie = turtle.Turtle()
@@ -596,7 +596,7 @@ wn.exitonclick()
     
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="3_9">
-        <span data-question>for-loops-intro-4: The following program uses a turtle to draw a rectangle as shown to the left, <img src="../../_static/parsons/TurtleRect.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
+        <span data-question>turtle-confusion-107: The following program uses a turtle to draw a rectangle as shown to the left, <img src="../../_static/parsons/TurtleRect.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
 wn = turtle.Screen()
 carlos = turtle.Turtle()
 ---
@@ -617,7 +617,7 @@ wn.exitonclick()
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_1">
-            <p>for-loops-intro-5: In the following code, how many lines does this code print?</p>
+            <p>turtle-confusion-108: In the following code, how many lines does this code print?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
@@ -637,7 +637,7 @@ wn.exitonclick()
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_2">
-            for-loops-intro-6: How does python know what statements are contained in the loop body?
+            turtle-confusion-109: How does python know what statements are contained in the loop body?
             <li data-component="answer" data-correct id="test_question3_4_2_opt_a">They are indented to the same degree from the loop header.</li><li data-component="feedback" id="test_question3_4_2_opt_a">The loop body can have any number of lines, all indented from the loop header.</li>
             
             <li data-component="answer"  id="test_question3_4_2_opt_b">There is always exactly one line in the loop body.</li><li data-component="feedback" id="test_question3_4_2_opt_b">The loop body may have more than one line.</li>
@@ -650,7 +650,7 @@ wn.exitonclick()
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_3">
-            <p>for-loops-intro-7: In the following code, what is the value of number the second time Python executes the loop?</p>
+            <p>turtle-confusion-110: In the following code, what is the value of number the second time Python executes the loop?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>

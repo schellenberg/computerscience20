@@ -1,9 +1,3 @@
-
-.. qnum::
-   :prefix: string-operators-1
-   :start: 1
-
-
 String Operators and Assignment Work Time
 ==========================================
 

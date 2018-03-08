@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: more-info-about-strings
-   :start: 1
-
 String Index, Length, Slicing and Traversal
 ============================================
 
@@ -163,7 +159,7 @@ The ``len`` function, when applied to a string, returns the number of characters
 To get the last letter of a string, you might be tempted to try something like
 this:
 
-.. activecode:: string_length_1
+.. activecode:: string_length_2
     
     fruit = "Banana"
     size = len(fruit)
@@ -177,7 +173,7 @@ Since we started counting at zero, the six indexes are
 numbered 0 to 5. To get the last character, we have to subtract 1 from
 the length.  Give it a try in the example above.
 
-.. activecode:: string_length_2
+.. activecode:: string_length_3
     
     fruit = "Banana"
     size = len(fruit)

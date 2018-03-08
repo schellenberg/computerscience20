@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: accumulator-pattern
-   :start: 1
-
 Image Processing With Conditionals
 ===================================
 
