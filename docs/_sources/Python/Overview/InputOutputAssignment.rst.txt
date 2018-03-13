@@ -62,11 +62,10 @@ Remember that when you are taking input from the user with the ``input()`` funct
 - ``str(x)`` to convert *x* to a string (a value surrounded by quotes)
 
 
-.. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. You will now put the knowledge you've gained into practice on your first Python hand-in assignment. Your teacher may choose to give you a different assignment, but one possible assignment is given below.
-
-
-Temperature Conversion Assignment
+Input/Output Assignment
 ----------------------------------
+
+.. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. This might be a nice time to put the knowledge you've gained into practice on a hand-in assignment. One possible assignment is given below.
 
 You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!
 
@@ -80,14 +79,11 @@ As this is the first Python assignment you are going to submit, the following no
 
 - be sure to include a comment header in your code, which means your Python file should start with something like::
 
-    #########################################################################
-    # Dan Schellenberg
-    # Computer Science 20
-    # Oct 23, 2017
-    # 
-    # Temperature Conversion Program
-    # Purpose: To convert a temperature between celsius/fahrenheit.
-    #########################################################################
+    # Temperature Conversion Assignment
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
  
 
 **Extras for Experts (things to try if you finish before your classmates)**
