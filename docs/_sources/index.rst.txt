@@ -76,8 +76,8 @@ Python - Getting Started
    Python/Overview/Conditionals.rst
    Python/Overview/InputOutputAssignment.rst
    Python/Overview/StringOperations.rst
+   Python/Overview/OtherInputMethods.rst
    Python/Overview/SecondInputOutputAssignment.rst
-   Python/Overview/AppJarPopups.rst
    Python/Overview/WhileLoopsIntro.rst
    Python/Overview/FirstTurtleProgram.rst
    Python/Overview/MultipleTurtlesAndForLoops.rst

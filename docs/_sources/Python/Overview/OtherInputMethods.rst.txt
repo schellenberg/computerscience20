@@ -89,10 +89,13 @@ When using Python outside Reeborg, if you'd like to get user input through a gra
 
 Now type in ``cs20-easygui`` into the Search box (be sure to spell it *exactly*). Now click the Install button.
 
-.. image:: images/thonny_add_appjar_module.png
+.. image:: images/thonny_add_easygui_module.png
 
 .. note:: The ``cs20-easygui`` package attempts to install ``easygui_qt``, along with it's prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be ``sip``, then ``PyQt5``, then ``easygui_qt``.
 
+
+Get String From User
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will now be able to use the easygui_qt module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console. 
 
@@ -108,6 +111,9 @@ You will now be able to use the easygui_qt module in the same way you can use an
     greeting = "Hello there, " + first_name + " " + last_name + "!"
     print(greeting)
 
+
+Display Graphical Message
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to output the message to a graphical window (instead of the console), you can call the ``show_message()`` function, as shown below.
 
@@ -125,12 +131,60 @@ If you would like to output the message to a graphical window (instead of the co
     # can also display output graphically
     easy.show_message(greeting)
 
+Get Choice From User
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To give the user a list of options to choose from, we can create a list of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:
 
 
+.. sourcecode:: python
+
+    # import the module to allow GUI interaction
+    import easygui_qt as easy
+
+    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed", "Chemistry"]
+
+    # note that the values passed to the following function are Prompt, Window Title, and Choices
+    favourite = easy.get_choice("What is your favourite subject?", "Pick Subject", subjects)
+
+    easy.show_message("Good call. " + favourite + " is good.")
 
 
+You could take this a step further, doing something different depending on which subject the user selected. 
+
+.. sourcecode:: python
+
+    # import the module to allow GUI interaction
+    import easygui_qt as easy
+
+    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed", "Chemistry"]
+    favourite = easy.get_choice("What is your favourite subject?", "Pick Subject", subjects)
+
+    if favourite == "English":
+        easy.show_message("To be or not to be: that is the question.")
+    elif favourite == "Math":
+        easy.show_message("I'll take that as a good sine")
+    elif favourite == "Computer Science":
+        easy.show_message("Are you just saying that?")
+    else:
+        easy.show_message("Good call. " + favourite + " is good.")
+
+
+Other Methods
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are many more things you can use easygui_qt for. For a complete list, see the `easygui_qt API <http://easygui-qt.readthedocs.io/en/latest/api.html>`_ (application programming interface) for reference. 
+
+For quick reference, here are a few of them (assumes you have called ``import easygui_qt as easy``):
+
+- ``easy.get_string("Some prompt/question:")`` → returns a string (or None if cancelled)
+- ``easy.get_integer("Some prompt/question:")`` → returns an int (or None if cancelled)
+- ``easy.get_float("Some prompt/question:")`` → returns a float (or None if cancelled)
+- ``easy.get_yes_or_no("Some prompt/question:")`` → returns a ``True`` or ``False`` (or None if cancelled)
+- ``easy.get_choice("Message to user", "Window Title", ["Some", "list", "of", "choices"])`` → one a choice from the list (or None if cancelled)
+- ``easy.get_list_of_choices("Window title", ["Some", "list", "of", "choices"])`` → returns a list of selected items (or an empty list)
+- ``easy.show_message("Some message.")`` → doesn't return anything
+- ``easy.show_text("A large chunk of text.")`` → doesn't return anything
 
 
 Assignment Work Time
