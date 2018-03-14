@@ -580,23 +580,23 @@ Count Words with Length 5
     myTests().main()
 
 
-Look For "sask"
-~~~~~~~~~~~~~~~~~~~~~~
+Look For "saskatchewan"
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 
 .. activecode:: list_overview_practice_problem_5
     :nocodelens:
 
-    Write a function to check if the word "sask" shows up somewhere in a list. If it does, return ``True``. If it doesn't, return ``False``.
+    Write a function to check if the word "saskatchewan" shows up somewhere in a list. If it does, return ``True``. If it doesn't, return ``False``.
 
     **Examples:**
 
     ``has_sask(["computer", "science"]) → False``
 
-    ``has_sask(["sask", "is", "nice"]) → True``
+    ``has_sask(["sask", "is", "nice"]) → False``
 
-    ``has_sask(["we", "live", "in", "saskatchewan"]) → False``
+    ``has_sask(["we", "live", "in", "saskatchewan"]) → True``
     ~~~~   
     def has_sask(a_list):
         # your code here
@@ -608,8 +608,10 @@ Look For "sask"
 
       def testOne(self):
           self.assertEqual(has_sask(["computer", "science"]),False,'has_sask(["computer", "science"])')
-          self.assertEqual(has_sask(["sask", "is", "nice"]),True,'has_sask(["sask", "is", "nice"])')
-          self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),False,'has_sask(["we", "live", "in", "saskatchewan"])')
+          self.assertEqual(has_sask(["sask", "is", "nice"]),False,'has_sask(["sask", "is", "nice"])')
+          self.assertEqual(has_sask(["we", "live", "in", "saskatchewan"]),True,'has_sask(["we", "live", "in", "saskatchewan"])')
+          self.assertEqual(has_sask(["saskatchewan", "roughriders"]),True,'has_sask(["saskatchewan", "roughriders"])')
+          self.assertEqual(has_sask(["saskatoon", "has", "bridges"]),False,'has_sask(["saskatoon", "has", "bridges"])')
 
     myTests().main()
 

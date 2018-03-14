@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>6. Input/Output Strings Assignment &#8212; Computer Science 20 Saskatchewan</title>
+    <title>Other Input Methods (easygui_qt) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,6 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. Other Input Methods (appJar)" href="AppJarPopups.html" />
-    <link rel="prev" title="5. String Operators and Assignment Work Time" href="StringOperations.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,10 +190,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">6. Input/Output Strings Assignment</a><ul>
-<li><a class="reference internal" href="#a-bit-more-detail-about-strings">6.1. A Bit More Detail About Strings</a></li>
-<li><a class="reference internal" href="#what-does-this-program-do">6.2. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#madlibs-assignment">6.3. Madlibs Assignment</a></li>
+<li><a class="reference internal" href="#">Other Input Methods (easygui_qt)</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#getting-user-input-with-easygui-qt">Getting User Input With easygui_qt</a></li>
+<li><a class="reference internal" href="#assignment-work-time">Assignment Work Time</a></li>
 </ul>
 </li>
 </ul>
@@ -205,18 +203,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 5. String Operators and Assignment Work Time" data-toggle="tooltip">
-    <a href="StringOperations.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-  <li id="relations-next" title='Next Chapter - 7. Other Input Methods (appJar)' data-toggle="tooltip" >
-    <a href="AppJarPopups.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -242,11 +228,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="input-output-strings-assignment">
-<h1>6. Input/Output Strings Assignment<a class="headerlink" href="#input-output-strings-assignment" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="other-input-methods-easygui-qt">
+<h1>Other Input Methods (easygui_qt)<a class="headerlink" href="#other-input-methods-easygui-qt" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Triple quoted strings can span multiple lines, and contain other types of quotes. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
+<p>Getting user input with a pop-up window using the easygui_qt module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
@@ -257,95 +243,13 @@
 </ul>
 
     </div>
-    <div class="section" id="a-bit-more-detail-about-strings">
-<h2>6.1. A Bit More Detail About Strings<a class="headerlink" href="#a-bit-more-detail-about-strings" title="Permalink to this headline">¶</a></h2>
-<p>Strings in Python can be enclosed in either single quotes (<code class="docutils literal"><span class="pre">'</span></code>) or double
-quotes (<code class="docutils literal"><span class="pre">&quot;</span></code> - the double quote character), or three of the same separate quote characters (<code class="docutils literal"><span class="pre">'''</span></code> or <code class="docutils literal"><span class="pre">&quot;&quot;&quot;</span></code>).</p>
-
-<div data-childcomponent="ch02_4" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch02_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-print(type('This is a string.') )
-print(type("And so is this.") )
-print(type("""and this.""") )
-print(type('''and even this...''') )
-</textarea>
-</div>
-<p>Double quoted strings can contain single quotes inside them, as in <code class="docutils literal"><span class="pre">&quot;Bruce's</span>
-<span class="pre">beard&quot;</span></code>, and single quoted strings can have double quotes inside them, as in
-<code class="docutils literal"><span class="pre">'The</span> <span class="pre">knights</span> <span class="pre">who</span> <span class="pre">say</span> <span class="pre">&quot;Ni!&quot;'</span></code>.
-Strings enclosed with three occurrences of either quote symbol are called
-triple quoted strings.  They can contain either single or double quotes:</p>
-
-<div data-childcomponent="ch02_5" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch02_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
-</textarea>
-</div>
-<p>Triple quoted strings can even span multiple lines:</p>
-
-<div data-childcomponent="ch02_6" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch02_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-print("""This message will span
-several lines
-of the text.""")
-</textarea>
-</div>
-<p>Python doesn’t care whether you use single or double quotes or the
-three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
-your program or command, the way it stores the value is identical in all cases,
-and the surrounding quotes are not part of the value.</p>
-
-<div data-childcomponent="ch02_7" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch02_7 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-print('This is a string.')
-print("""And so is this.""")
-</textarea>
-</div>
-</div>
-<div class="section" id="what-does-this-program-do">
-<h2>6.2. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="what-does-this-program-do">
+<h2>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
-<p>Can you fix the error in the following programs?</p>
-
-<div data-childcomponent="wdtpd_other_input_methods_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_other_input_methods_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the error in this program!'>
-song_quote = 'Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in."'
-
-print(song_quote)
-</textarea>
-</div>
-
-<div data-childcomponent="wdtpd_other_input_methods_2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
-part_one = "Leonard Cohen, in his song "Anthem", sings"
-part_two = 'There is a crack in everything; That's how the light gets in.'
-
-print(part_one + part_two)
-</textarea>
-</div>
-
-<div data-childcomponent="wdtpd_other_input_methods_3" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
-interesting_quotes = 'There's a lot of people who have said interesting things. Some fun quotes include:
-
-"What I cannot create, I do not understand." - Richard Feynman
-"Judge a man by his questions rather than by his answers." - Voltaire
-"Our ignorance of history causes us to slander our own times." - Gustave Flaubert'
-
-print(interesting_quotes)
-</textarea>
-</div>
 <p>Remember that a single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 <p>Try the following code with <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">42</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">32</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">82</span></code>, and <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">142</span></code>.</p>
 
@@ -385,80 +289,61 @@ if age > 15:
     print("Wow! Already " + age + " years old!")
 </textarea>
 </div>
+</div>
+<div class="section" id="getting-user-input-with-easygui-qt">
+<h2>Getting User Input With easygui_qt<a class="headerlink" href="#getting-user-input-with-easygui-qt" title="Permalink to this headline">¶</a></h2>
+<p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
+<img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
+<p>In Reeborg, we would often import that code using <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
+<img alt="../../_images/reeborg_code_calling_library.png" src="../../_images/reeborg_code_calling_library.png" />
+<p>You can think of this code as saying “Look into the <code class="docutils literal"><span class="pre">library</span></code>, and find something called <code class="docutils literal"><span class="pre">turn_right()</span></code>”. For many Python modules, this is equivalent to saying, “Look into the library.py file, and find a function called turn_right()”.</p>
+<p>Another method of importing the library allows us give the module a nickname that is faster to type. Consider the following:</p>
+<img alt="../../_images/reeborg_import_as.png" src="../../_images/reeborg_import_as.png" />
+<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal"><span class="pre">cs20-easygui</span></code>. In Thonny, open <em>Tools -&gt; Manage packages…</em>.</p>
+<img alt="../../_images/thonny_manage_packages_menu_item.png" src="../../_images/thonny_manage_packages_menu_item.png" />
+<p>Now type in <code class="docutils literal"><span class="pre">cs20-easygui</span></code> into the Search box (be sure to spell it <em>exactly</em>). Now click the Install button.</p>
+<img alt="../../_images/thonny_add_appjar_module.png" src="../../_images/thonny_add_appjar_module.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. You will now put the knowledge you’ve gained into practice on your first Python hand-in assignment. Your teacher may choose to give you a different assignment, but one possible assignment is given below.</p>
+<p class="last">The <code class="docutils literal"><span class="pre">cs20-easygui</span></code> package attempts to install <code class="docutils literal"><span class="pre">easygui_qt</span></code>, along with it’s prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be <code class="docutils literal"><span class="pre">sip</span></code>, then <code class="docutils literal"><span class="pre">PyQt5</span></code>, then <code class="docutils literal"><span class="pre">easygui_qt</span></code>.</p>
 </div>
-</div>
-<div class="section" id="madlibs-assignment">
-<h2>6.3. Madlibs Assignment<a class="headerlink" href="#madlibs-assignment" title="Permalink to this headline">¶</a></h2>
-<p>You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!</p>
-<p>Your assignment is to make a program that asks the user choose which madlib they would like to use (your program must have at least two madlibs for the user to choose from), take in user input, and print out the result.</p>
-<p>If you are not familiar with madlibs, you may want to investigate what they are all about by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might take the classic Old MacDonald rhyme:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Old</span> <span class="n">Macdonald</span> <span class="n">had</span> <span class="n">a</span> <span class="n">farm</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span>
-<span class="ow">and</span> <span class="n">on</span> <span class="n">that</span> <span class="n">farm</span> <span class="n">he</span> <span class="n">had</span> <span class="n">an</span> <span class="n">cow</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span>
-<span class="k">with</span> <span class="n">a</span> <span class="n">moo</span> <span class="n">moo</span> <span class="n">here</span>
-<span class="ow">and</span> <span class="n">a</span> <span class="n">moo</span> <span class="n">moo</span> <span class="n">there</span><span class="p">,</span>
-<span class="n">here</span> <span class="n">a</span> <span class="n">moo</span><span class="p">,</span> <span class="n">there</span> <span class="n">a</span> <span class="n">moo</span><span class="p">,</span>
-<span class="n">everywhere</span> <span class="n">a</span> <span class="n">moo</span> <span class="n">moo</span><span class="p">,</span>
-<span class="n">Old</span> <span class="n">Macdonald</span> <span class="n">had</span> <span class="n">a</span> <span class="n">farm</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span><span class="o">.</span>
+<p>You will now be able to use the easygui_qt module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In your program, you could take user input:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Adjective</span><span class="p">:</span> <span class="n">Post</span><span class="o">-</span><span class="n">war</span>
-<span class="n">Noun</span><span class="p">:</span> <span class="n">dog</span> <span class="n">toy</span>
-<span class="n">Animal</span><span class="p">:</span> <span class="n">Redtail</span> <span class="n">Catfish</span>
-<span class="n">Noise</span><span class="p">:</span> <span class="n">crack</span>
+<p>If you would like to output the message to a graphical window (instead of the console), you can call the <code class="docutils literal"><span class="pre">show_message()</span></code> function, as shown below.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+
+<span class="c1"># can also display output graphically</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>After processing the user input, your program might print out:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Post</span><span class="o">-</span><span class="n">War</span> <span class="n">Macdonald</span> <span class="n">had</span> <span class="n">a</span> <span class="n">dog</span> <span class="n">toy</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span>
-<span class="ow">and</span> <span class="n">on</span> <span class="n">that</span> <span class="n">dog</span> <span class="n">toy</span> <span class="n">he</span> <span class="n">had</span> <span class="n">an</span> <span class="n">Redtail</span> <span class="n">Catfish</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span>
-<span class="k">with</span> <span class="n">a</span> <span class="n">crack</span> <span class="n">crack</span> <span class="n">here</span>
-<span class="ow">and</span> <span class="n">a</span> <span class="n">crack</span> <span class="n">crack</span> <span class="n">there</span><span class="p">,</span>
-<span class="n">here</span> <span class="n">a</span> <span class="n">crack</span><span class="p">,</span> <span class="n">there</span> <span class="n">a</span> <span class="n">crack</span><span class="p">,</span>
-<span class="n">everywhere</span> <span class="n">a</span> <span class="n">crack</span> <span class="n">crack</span><span class="p">,</span>
-<span class="n">Post</span><span class="o">-</span><span class="n">War</span> <span class="n">Macdonald</span> <span class="n">had</span> <span class="n">a</span> <span class="n">dog</span> <span class="n">toy</span><span class="p">,</span> <span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">E</span><span class="o">-</span><span class="n">I</span><span class="o">-</span><span class="n">O</span><span class="o">.</span>
-</pre></div>
+<p>To give the user a list of options to choose from, we can create a list of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:</p>
 </div>
-<p>Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Make sure your story makes sense, though!</p>
-<p>Remember to use a comment header at the top of your program!</p>
-<p><strong>Extra for Experts</strong></p>
-<ul class="simple">
-<li>instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:</li>
-<li>easier: create a list of possible words, and have Python choose one of these words <a class="reference external" href="http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python">at random</a>.</li>
-<li>harder: create text files for each of the parts of speech that you will require (ie. nouns.txt, adjectives.txt, etc) and have the computer randomly choose one of the words from the appropriate text file to complete the madlib. Hint: To simplify things, I’d recommend that you generate the text file with one word per line.</li>
-</ul>
-
-<div data-childcomponent="second_input_output_assignment_scratch_work_area" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=second_input_output_assignment_scratch_work_area data-lang="python"    data-timelimit=25000   data-audio=''     >
-# Madlib Assignment
-# Put Your Name Here
-# Put the Date Here
-
-# your code goes here
-</textarea>
-</div>
+<div class="section" id="assignment-work-time">
+<h2>Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
+<p>Please spend the rest of the class continuing to work on your current Python assignment (likely something emphasizing user input and output).</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 5. String Operators and Assignment Work Time' data-toggle="tooltip">
-    <a href="StringOperations.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="StringOperations.html" ></a>
-  
-  <li id="relations-next" class="navLink" title='Next Section - 7. Other Input Methods (appJar)' data-toggle="tooltip" >
-    <a href="AppJarPopups.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="AppJarPopups.html" >Next Section - 7. Other Input Methods (appJar)</a>
 
 <script type="text/javascript">
 

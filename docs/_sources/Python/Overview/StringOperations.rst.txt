@@ -159,4 +159,4 @@ done first, you will need to use parenthesis.
 Assignment Work Time
 ---------------------
 
-Please spend the rest of the class continuing to work on your first Python assignment (Temperature Conversion, or something similar). If you are completely done that assignment, you can look ahead at the next assignment (creating a Madlib).
+Please spend the rest of the class continuing to work on your current Python assignment (likely some kind of input/output assignment). If you are completely done that assignment, you may want to look ahead at the next assignment or ask your teacher what additional challenges you can attempt.
