@@ -395,15 +395,41 @@ if age > 15:
 <h3>6.2.4. Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
 <p>There are many more things you can use easygui_qt for. For a complete list, see the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">easygui_qt API</a> (application programming interface) for reference.</p>
 <p>For quick reference, here are a few of them (assumes you have called <code class="docutils literal"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">What it Returns</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
+<td>returns a string (or None if cancelled)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.get_integer(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
+<td>returns an int (or None if cancelled)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.get_float(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
+<td>returns a float (or None if cancelled)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.get_yes_or_no(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
+<td>returns a <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> (or None if cancelled)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.show_message(&quot;Some</span> <span class="pre">message.&quot;)</span></code></td>
+<td>doesn’t return anything</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.show_text(&quot;A</span> <span class="pre">large</span> <span class="pre">chunk</span> <span class="pre">of</span> <span class="pre">text.&quot;)</span></code></td>
+<td>doesn’t return anything</td>
+</tr>
+</tbody>
+</table>
+<p>Two other functions that you might find useful (that require you to use lists) are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code> → returns a string (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_integer(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code> → returns an int (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_float(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code> → returns a float (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_yes_or_no(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code> → returns a <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_choice(&quot;Message</span> <span class="pre">to</span> <span class="pre">user&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code> → one a choice from the list (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_list_of_choices(&quot;Window</span> <span class="pre">title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code> → returns a list of selected items (or an empty list)</li>
-<li><code class="docutils literal"><span class="pre">easy.show_message(&quot;Some</span> <span class="pre">message.&quot;)</span></code> → doesn’t return anything</li>
-<li><code class="docutils literal"><span class="pre">easy.show_text(&quot;A</span> <span class="pre">large</span> <span class="pre">chunk</span> <span class="pre">of</span> <span class="pre">text.&quot;)</span></code> → doesn’t return anything</li>
+<li><code class="docutils literal"><span class="pre">easy.get_choice(&quot;Message</span> <span class="pre">to</span> <span class="pre">user&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a single choice from the list (or None if cancelled)</li>
+<li><code class="docutils literal"><span class="pre">easy.get_list_of_choices(&quot;Window</span> <span class="pre">title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a list of selected items (or an empty list if cancelled)</li>
 </ul>
 </div>
 </div>

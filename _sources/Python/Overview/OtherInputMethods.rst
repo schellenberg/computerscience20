@@ -177,14 +177,26 @@ There are many more things you can use easygui_qt for. For a complete list, see 
 
 For quick reference, here are a few of them (assumes you have called ``import easygui_qt as easy``):
 
-- ``easy.get_string("Some prompt/question:")`` → returns a string (or None if cancelled)
-- ``easy.get_integer("Some prompt/question:")`` → returns an int (or None if cancelled)
-- ``easy.get_float("Some prompt/question:")`` → returns a float (or None if cancelled)
-- ``easy.get_yes_or_no("Some prompt/question:")`` → returns a ``True`` or ``False`` (or None if cancelled)
-- ``easy.get_choice("Message to user", "Window Title", ["Some", "list", "of", "choices"])`` → one a choice from the list (or None if cancelled)
-- ``easy.get_list_of_choices("Window title", ["Some", "list", "of", "choices"])`` → returns a list of selected items (or an empty list)
-- ``easy.show_message("Some message.")`` → doesn't return anything
-- ``easy.show_text("A large chunk of text.")`` → doesn't return anything
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|                                          Function                                         |                    What it Returns                     |
++===========================================================================================+========================================================+
+| ``easy.get_string("Some prompt/question:")``                                              | returns a string (or None if cancelled)                |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``easy.get_integer("Some prompt/question:")``                                             | returns an int (or None if cancelled)                  |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``easy.get_float("Some prompt/question:")``                                               | returns a float (or None if cancelled)                 |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``easy.get_yes_or_no("Some prompt/question:")``                                           | returns a ``True`` or ``False`` (or None if cancelled) |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``easy.show_message("Some message.")``                                                    | doesn't return anything                                |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``easy.show_text("A large chunk of text.")``                                              | doesn't return anything                                |
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+
+Two other functions that you might find useful (that require you to use lists) are:
+
+-  ``easy.get_choice("Message to user", "Window Title", ["Some", "list", "of", "choices"])``, which returns a single choice from the list (or None if cancelled)
+- ``easy.get_list_of_choices("Window title", ["Some", "list", "of", "choices"])``, which returns a list of selected items (or an empty list if cancelled)
 
 
 Assignment Work Time
