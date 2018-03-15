@@ -67,7 +67,7 @@ Input/Output Assignment
 
 .. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. This might be a nice time to put the knowledge you've gained into practice on a hand-in assignment. One possible assignment is given below.
 
-You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!
+*You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!*
 
 Write a Python program that will convert degrees Celsius to degrees Fahrenheit AND from Fahrenheit to Celsius.
 

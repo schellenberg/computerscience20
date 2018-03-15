@@ -101,49 +101,6 @@ Can you fix the error in the following programs?
     print(interesting_quotes)
 
 
-Remember that a single equal sign ``=`` is used to **assign** a value. Two equal signs ``==`` are used when **comparing** a value.
-
-Try the following code with ``x = 42``, ``x = 32``, ``x = 2``, ``x = 82``, and ``x = 142``.
-
-.. activecode:: wdtpd_input_output_strings_1
-    :caption: What will this program print?
-    :nocodelens:
-
-    x = 42
-    if x < 10:
-        x = x + 10
-    elif x < 40:
-        x = x + 5
-    elif x < 70:
-        x = x - 10
-    elif x < 100:
-        x = x - 5
-    else:
-        print("big number!")
-
-    print(x)
-
-
-.. activecode:: wdtpd_input_output_strings_2
-    :caption: What will this program print?
-    :nocodelens:
-
-    age = input("How old are you?")
-    print("Wow! Already " + age + " years old!")
-
-
-Try the following, entering in ``17``. How about ``14``? Can you fix it? *Hint: think data types!*
-
-.. activecode:: wdtpd_input_output_strings_3
-    :caption: What will this program print?
-    :nocodelens:
-
-    age = input("How old are you?")
-    if age > 15:
-        print("Wow! Already " + age + " years old!")
-
-
-
 .. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. You will now put the knowledge you've gained into practice on your first Python hand-in assignment. Your teacher may choose to give you a different assignment, but one possible assignment is given below.
 
 

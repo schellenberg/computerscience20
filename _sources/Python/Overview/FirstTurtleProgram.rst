@@ -309,7 +309,7 @@ Modify the program given below so that before it creates the window, it prompts 
 (Hint: you can find a list of permitted color names at `https://www.w3schools.com/colors/colors_names.asp <https://www.w3schools.com/colors/colors_names.asp>`_ .  It includes some quite unusual ones, like "PeachPuff" and "HotPink".)
 
 .. note:: 
-    If you are running your code in Thonny, the order of your instructions matters a lot, since a window will open up in front of the main Thonny window (whereas in the browser, the window is just a canvas on the webpage). You might want to ask the user questions *before* creating a Screen() to draw on. Although you can use something like ``appJar`` to ask the questions with pop-up windows, there is also a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module that will cause a pop-up window to appear. You need to use the name of your turtle.Screen() instance when calling the ``textinput`` function. For example::
+    If you are running your code in Thonny, the order of your instructions matters a lot, since a window will open up in front of the main Thonny window (whereas in the browser, the window is just a canvas on the webpage). You might want to ask the user questions *before* creating a Screen() to draw on. Although you can use something like ``easygui_qt`` to ask the questions with pop-up windows, there is also a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module that will cause a pop-up window to appear. You need to use the name of your turtle.Screen() instance when calling the ``textinput`` function. For example::
       
       canvas = turtle.Screen()
       question = canvas.textinput("Window name", "Question to ask")
