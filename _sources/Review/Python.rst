@@ -82,8 +82,6 @@ If you aren't sure what the data type of something is, you can check it using th
     print( type(5) )
 
 
-.. _type_casting_functions:
-
 Converting Between Data Types
 -----------------------------
 
@@ -105,8 +103,6 @@ Sometimes you might need to convert from one data type to another. You can use t
     c = float(b)  #c is the float 4.0
     print( type(c) )
    
-
-.. _math_operator_list:
 
 Math Operators
 --------------
@@ -382,7 +378,7 @@ Remember the number guessing game we created in Scratch? The basic premise was a
 We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.
 
 
-.. activecode:: module_intro_3
+.. activecode:: number_guessing_game_review
     :caption: Create a number guessing game here!
     
     # the algorithm for the game can be described as follows
