@@ -103,9 +103,17 @@ Write a program that counts down from 20 to 1, then prints *Blastoff!*.
     #put your code here!
 
 
+Kinda Password
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that asks the user to enter a password. Keep asking for the password until they enter "sask".  Once they have successfully typed in "sask", print out *What a great place!*.
+
+.. activecode:: while_intro_6
+
+    #put your code here!
+
 
 Assignment Work Time
 ---------------------
 
-Please spend the rest of the class continuing to work on your current Python assignment (Madlib, or something similar). 
-
+Please spend the rest of the class continuing to work on your current Python assignment (likely a string input/output assignment like Madlibs, or something similar). 
