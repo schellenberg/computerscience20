@@ -186,7 +186,6 @@ Computing and Society
    ComputingAndSociety/Internet/HowTheInternetWorksPracticeQuiz.rst
    ComputingAndSociety/Internet/HTML.rst
    ComputingAndSociety/Internet/CSS.rst
-   .. ComputingAndSociety/UnderlyingTechnology.rst
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
 Career Exploration

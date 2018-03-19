@@ -380,7 +380,7 @@ IFrames
 IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page. If you wanted to embed a YouTube video onto a webpage, you would copy/paste the iframe element from YouTube into your HTML.
 
 
-.. activecode:: advhtml_table
+.. activecode:: iframe_example
    :language: html
 
     Open up YouTube, find a video, then copy/paste the iframe embed code here!
