@@ -134,7 +134,7 @@ If you would like to output the message to a graphical window (instead of the co
 Get Choice From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To give the user a list of options to choose from, we can create a list of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:
+To give the user a list of options to choose from, we can create a **list** of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:
 
 
 .. sourcecode:: python
@@ -142,10 +142,10 @@ To give the user a list of options to choose from, we can create a list of all t
     # import the module to allow GUI interaction
     import easygui_qt as easy
 
-    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed", "Chemistry"]
+    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed"]
 
     # note that the values passed to the following function are Prompt, Window Title, and Choices
-    favourite = easy.get_choice("What is your favourite subject?", "Pick Subject", subjects)
+    favourite = easy.get_choice("What is your fav?", "Pick Subject", subjects)
 
     easy.show_message("Good call. " + favourite + " is good.")
 
@@ -157,8 +157,8 @@ You could take this a step further, doing something different depending on which
     # import the module to allow GUI interaction
     import easygui_qt as easy
 
-    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed", "Chemistry"]
-    favourite = easy.get_choice("What is your favourite subject?", "Pick Subject", subjects)
+    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed"]
+    favourite = easy.get_choice("What is your fav?", "Pick Subject", subjects)
 
     if favourite == "English":
         easy.show_message("To be or not to be: that is the question.")
