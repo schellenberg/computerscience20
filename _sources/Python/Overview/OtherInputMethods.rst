@@ -198,6 +198,12 @@ Two other functions that you might find useful (that require you to use lists) a
 -  ``easy.get_choice("Message to user", "Window Title", ["Some", "list", "of", "choices"])``, which returns a single choice from the list (or None if cancelled)
 - ``easy.get_list_of_choices("Window title", ["Some", "list", "of", "choices"])``, which returns a list of selected items (or an empty list if cancelled)
 
+.. note:: 
+
+    In the examples given above, each of the functions above can take multiple arguments, as specified in the easygui_qt API. For example, you could call ``easy.get_string("Some prompt/question:", "Window Title", "Default response text")``. 
+
+    Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify *which* argument you are passing, like 
+    ``easy.get_string(message="Some prompt/question:", default_response="Default response text")``.
 
 Assignment Work Time
 ---------------------
