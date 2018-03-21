@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>7. Other Input Methods (easygui_qt) &#8212; Computer Science 20 Saskatchewan</title>
+    <title>7. Which Quotes to Use When Creating Strings &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,16 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">7. Other Input Methods (easygui_qt)</a><ul>
-<li><a class="reference internal" href="#what-does-this-program-do">7.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#getting-user-input-with-easygui-qt">7.2. Getting User Input With easygui_qt</a><ul>
-<li><a class="reference internal" href="#get-string-from-user">7.2.1. Get String From User</a></li>
-<li><a class="reference internal" href="#display-graphical-message">7.2.2. Display Graphical Message</a></li>
-<li><a class="reference internal" href="#lists">7.2.3. Lists</a></li>
-<li><a class="reference internal" href="#get-choice-from-user">7.2.4. Get Choice From User</a></li>
-<li><a class="reference internal" href="#other-methods">7.2.5. Other Methods</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">7. Which Quotes to Use When Creating Strings</a><ul>
+<li><a class="reference internal" href="#a-bit-more-detail-about-strings">7.1. A Bit More Detail About Strings</a></li>
+<li><a class="reference internal" href="#what-does-this-program-do">7.2. What Does This Program Do?</a></li>
 <li><a class="reference internal" href="#assignment-work-time">7.3. Assignment Work Time</a></li>
 </ul>
 </li>
@@ -249,11 +242,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="other-input-methods-easygui-qt">
-<h1>7. Other Input Methods (easygui_qt)<a class="headerlink" href="#other-input-methods-easygui-qt" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="which-quotes-to-use-when-creating-strings">
+<h1>7. Which Quotes to Use When Creating Strings<a class="headerlink" href="#which-quotes-to-use-when-creating-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Getting user input with a pop-up window using the easygui_qt module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
+<p>Triple quoted strings can span multiple lines, and contain other types of quotes. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
@@ -264,194 +257,94 @@
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
-<h2>7.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+    <div class="section" id="a-bit-more-detail-about-strings">
+<h2>7.1. A Bit More Detail About Strings<a class="headerlink" href="#a-bit-more-detail-about-strings" title="Permalink to this headline">¶</a></h2>
+<p>Strings in Python can be enclosed in either single quotes (<code class="docutils literal"><span class="pre">'</span></code>) or double
+quotes (<code class="docutils literal"><span class="pre">&quot;</span></code> - the double quote character), or three of the same separate quote characters (<code class="docutils literal"><span class="pre">'''</span></code> or <code class="docutils literal"><span class="pre">&quot;&quot;&quot;</span></code>).</p>
+
+<div data-childcomponent="ch02_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(type('This is a string.') )
+print(type("And so is this.") )
+print(type("""and this.""") )
+print(type('''and even this...''') )
+</textarea>
+</div>
+<p>Double quoted strings can contain single quotes inside them, as in <code class="docutils literal"><span class="pre">&quot;Bruce's</span>
+<span class="pre">beard&quot;</span></code>, and single quoted strings can have double quotes inside them, as in
+<code class="docutils literal"><span class="pre">'The</span> <span class="pre">knights</span> <span class="pre">who</span> <span class="pre">say</span> <span class="pre">&quot;Ni!&quot;'</span></code>.
+Strings enclosed with three occurrences of either quote symbol are called
+triple quoted strings.  They can contain either single or double quotes:</p>
+
+<div data-childcomponent="ch02_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
+</textarea>
+</div>
+<p>Triple quoted strings can even span multiple lines:</p>
+
+<div data-childcomponent="ch02_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print("""This message will span
+several lines
+of the text.""")
+</textarea>
+</div>
+<p>Python doesn’t care whether you use single or double quotes or the
+three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
+your program or command, the way it stores the value is identical in all cases,
+and the surrounding quotes are not part of the value.</p>
+
+<div data-childcomponent="ch02_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch02_7 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print('This is a string.')
+print("""And so is this.""")
+</textarea>
+</div>
+</div>
+<div class="section" id="what-does-this-program-do">
+<h2>7.2. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
-<p>Remember that a single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
-<p>Try the following code with <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">42</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">32</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">82</span></code>, and <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">142</span></code>.</p>
+<p>Can you fix the error in the following programs?</p>
 
-<div data-childcomponent="wdtpd_input_output_strings_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_other_input_methods_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_input_output_strings_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-x = 42
-if x < 10:
-    x = x + 10
-elif x < 40:
-    x = x + 5
-elif x < 70:
-    x = x - 10
-elif x < 100:
-    x = x - 5
-else:
-    print("big number!")
+<textarea data-component="activecode" id=wdtpd_other_input_methods_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the error in this program!'>
+song_quote = 'Leonard Cohen, in his song "Anthem", sings "There is a crack in everything; That's how the light gets in."'
 
-print(x)
+print(song_quote)
 </textarea>
 </div>
 
-<div data-childcomponent="wdtpd_input_output_strings_2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_other_input_methods_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_input_output_strings_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-age = input("How old are you?")
-print("Wow! Already " + age + " years old!")
+<textarea data-component="activecode" id=wdtpd_other_input_methods_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
+part_one = "Leonard Cohen, in his song "Anthem", sings"
+part_two = 'There is a crack in everything; That's how the light gets in.'
+
+print(part_one + part_two)
 </textarea>
 </div>
-<p>Try the following, entering in <code class="docutils literal"><span class="pre">17</span></code>. How about <code class="docutils literal"><span class="pre">14</span></code>? Can you fix it? <em>Hint: think data types!</em></p>
 
-<div data-childcomponent="wdtpd_input_output_strings_3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="wdtpd_other_input_methods_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_input_output_strings_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
-age = input("How old are you?")
-if age > 15:
-    print("Wow! Already " + age + " years old!")
+<textarea data-component="activecode" id=wdtpd_other_input_methods_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Find and fix the errors in this program!'>
+interesting_quotes = 'There's a lot of people who have said interesting things. Some fun quotes include:
+
+"What I cannot create, I do not understand." - Richard Feynman
+"Judge a man by his questions rather than by his answers." - Voltaire
+"Our ignorance of history causes us to slander our own times." - Gustave Flaubert'
+
+print(interesting_quotes)
 </textarea>
-</div>
-</div>
-<div class="section" id="getting-user-input-with-easygui-qt">
-<h2>7.2. Getting User Input With easygui_qt<a class="headerlink" href="#getting-user-input-with-easygui-qt" title="Permalink to this headline">¶</a></h2>
-<p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
-<img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
-<p>In Reeborg, we would often import that code using <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
-<img alt="../../_images/reeborg_code_calling_library.png" src="../../_images/reeborg_code_calling_library.png" />
-<p>You can think of this code as saying “Look into the <code class="docutils literal"><span class="pre">library</span></code>, and find something called <code class="docutils literal"><span class="pre">turn_right()</span></code>”. For many Python modules, this is equivalent to saying, “Look into the library.py file, and find a function called turn_right()”.</p>
-<p>Another method of importing the library allows us give the module a nickname that is faster to type. Consider the following:</p>
-<img alt="../../_images/reeborg_import_as.png" src="../../_images/reeborg_import_as.png" />
-<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal"><span class="pre">cs20-easygui</span></code>. In Thonny, open <em>Tools -&gt; Manage packages…</em>.</p>
-<img alt="../../_images/thonny_manage_packages_menu_item.png" src="../../_images/thonny_manage_packages_menu_item.png" />
-<p>Now type in <code class="docutils literal"><span class="pre">cs20-easygui</span></code> into the Search box (be sure to spell it <em>exactly</em>). Now click the Install button.</p>
-<img alt="../../_images/thonny_add_easygui_module.png" src="../../_images/thonny_add_easygui_module.png" />
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">cs20-easygui</span></code> package attempts to install <code class="docutils literal"><span class="pre">easygui_qt</span></code>, along with it’s prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be <code class="docutils literal"><span class="pre">sip</span></code>, then <code class="docutils literal"><span class="pre">PyQt5</span></code>, then <code class="docutils literal"><span class="pre">easygui_qt</span></code>.</p>
-</div>
-<div class="section" id="get-string-from-user">
-<h3>7.2.1. Get String From User<a class="headerlink" href="#get-string-from-user" title="Permalink to this headline">¶</a></h3>
-<p>You will now be able to use the easygui_qt module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
-
-<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
-<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
-
-<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="display-graphical-message">
-<h3>7.2.2. Display Graphical Message<a class="headerlink" href="#display-graphical-message" title="Permalink to this headline">¶</a></h3>
-<p>If you would like to output the message to a graphical window (instead of the console), you can call the <code class="docutils literal"><span class="pre">show_message()</span></code> function, as shown below.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
-
-<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
-<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
-
-<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
-
-<span class="c1"># can also display output graphically</span>
-<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="lists">
-<h3>7.2.3. Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
-<p>In the next example, we need to provide a <strong>list</strong> of options for the user to pick from. As we saw in the quick Python overview, a list can be created using square brackets <code class="docutils literal"><span class="pre">[]</span></code>, with each elemnt inside the square brackets separated with a comma. Consider the example below, in which we create a list of ski hills, then print out some elements from it. <em>Note that lists begin counting at 0, so the first element in the list is accessed using list_name[0].</em></p>
-
-<div data-childcomponent="lists_overview_ski_hills" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=lists_overview_ski_hills data-lang="python"    data-timelimit=25000   data-audio=''     >
-ski_hills = ["Table Mountain", "Mission Ridge", "Wapiti", "Duck Mountain", "Asessippi"]
-print(ski_hills[0])     # Table Mountain
-print(ski_hills[2])     # Wapiti
-print(ski_hills[8])     # IndexError: list index out of range
-</textarea>
-</div>
-</div>
-<div class="section" id="get-choice-from-user">
-<h3>7.2.4. Get Choice From User<a class="headerlink" href="#get-choice-from-user" title="Permalink to this headline">¶</a></h3>
-<p>To give the user a list of options to choose from, we can create a <strong>list</strong> of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
-
-<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">]</span>
-
-<span class="c1"># note that the values passed to the following function are Prompt, Window Title, and Choices</span>
-<span class="n">favourite</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="s2">&quot;What is your fav?&quot;</span><span class="p">,</span> <span class="s2">&quot;Pick Subject&quot;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">)</span>
-
-<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Good call. &quot;</span> <span class="o">+</span> <span class="n">favourite</span> <span class="o">+</span> <span class="s2">&quot; is good.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You could take this a step further, doing something different depending on which subject the user selected.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
-
-<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">]</span>
-<span class="n">favourite</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="s2">&quot;What is your fav?&quot;</span><span class="p">,</span> <span class="s2">&quot;Pick Subject&quot;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;English&quot;</span><span class="p">:</span>
-    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;To be or not to be: that is the question.&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;Math&quot;</span><span class="p">:</span>
-    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;I&#39;ll take that as a good sine&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">:</span>
-    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Are you just saying that?&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Good call. &quot;</span> <span class="o">+</span> <span class="n">favourite</span> <span class="o">+</span> <span class="s2">&quot; is good.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="other-methods">
-<h3>7.2.5. Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
-<p>There are many more things you can use easygui_qt for. For a complete list, see the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">easygui_qt API</a> (application programming interface) for reference.</p>
-<p>For quick reference, here are a few of them (assumes you have called <code class="docutils literal"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="62%" />
-<col width="38%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Function</th>
-<th class="head">What it Returns</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
-<td>returns a string (or None if cancelled)</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.get_integer(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
-<td>returns an int (or None if cancelled)</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.get_float(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
-<td>returns a float (or None if cancelled)</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.get_yes_or_no(&quot;Some</span> <span class="pre">prompt/question:&quot;)</span></code></td>
-<td>returns a <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code> (or None if cancelled)</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">easy.show_message(&quot;Some</span> <span class="pre">message.&quot;)</span></code></td>
-<td>doesn’t return anything</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">easy.show_text(&quot;A</span> <span class="pre">large</span> <span class="pre">chunk</span> <span class="pre">of</span> <span class="pre">text.&quot;)</span></code></td>
-<td>doesn’t return anything</td>
-</tr>
-</tbody>
-</table>
-<p>Two other functions that you might find useful (that require you to use lists) are:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">easy.get_choice(&quot;Message</span> <span class="pre">to</span> <span class="pre">user&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a single choice from the list (or None if cancelled)</li>
-<li><code class="docutils literal"><span class="pre">easy.get_list_of_choices(&quot;Window</span> <span class="pre">title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a list of selected items (or an empty list if cancelled)</li>
-</ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>In the examples given above, each of the functions above can take multiple arguments, as specified in the easygui_qt API. For example, you could call <code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">&quot;Default</span> <span class="pre">response</span> <span class="pre">text&quot;)</span></code>.</p>
-<p class="last">Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify <em>which</em> argument you are passing, like
-<code class="docutils literal"><span class="pre">easy.get_string(message=&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">default_response=&quot;Default</span> <span class="pre">response</span> <span class="pre">text&quot;)</span></code>.</p>
-</div>
 </div>
 </div>
 <div class="section" id="assignment-work-time">
