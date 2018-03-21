@@ -131,6 +131,22 @@ If you would like to output the message to a graphical window (instead of the co
     # can also display output graphically
     easy.show_message(greeting)
 
+
+Lists
+~~~~~~~
+
+In the next example, we need to provide a **list** of options for the user to pick from. As we saw in the quick Python overview, a list can be created using square brackets ``[]``, with each elemnt inside the square brackets separated with a comma. Consider the example below, in which we create a list of ski hills, then print out some elements from it. *Note that lists begin counting at 0, so the first element in the list is accessed using list_name[0].*
+
+.. activecode:: lists_overview_ski_hills
+    :nocodelens:
+
+    ski_hills = ["Table Mountain", "Mission Ridge", "Wapiti", "Duck Mountain", "Asessippi"]
+    print(ski_hills[0])     # Table Mountain
+    print(ski_hills[2])     # Wapiti
+    print(ski_hills[8])     # IndexError: list index out of range
+
+
+
 Get Choice From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

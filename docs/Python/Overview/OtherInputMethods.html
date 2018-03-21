@@ -197,8 +197,9 @@
 <li><a class="reference internal" href="#getting-user-input-with-easygui-qt">6.2. Getting User Input With easygui_qt</a><ul>
 <li><a class="reference internal" href="#get-string-from-user">6.2.1. Get String From User</a></li>
 <li><a class="reference internal" href="#display-graphical-message">6.2.2. Display Graphical Message</a></li>
-<li><a class="reference internal" href="#get-choice-from-user">6.2.3. Get Choice From User</a></li>
-<li><a class="reference internal" href="#other-methods">6.2.4. Other Methods</a></li>
+<li><a class="reference internal" href="#lists">6.2.3. Lists</a></li>
+<li><a class="reference internal" href="#get-choice-from-user">6.2.4. Get Choice From User</a></li>
+<li><a class="reference internal" href="#other-methods">6.2.5. Other Methods</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#assignment-work-time">6.3. Assignment Work Time</a></li>
@@ -359,8 +360,22 @@ if age > 15:
 </pre></div>
 </div>
 </div>
+<div class="section" id="lists">
+<h3>6.2.3. Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>In the next example, we need to provide a <strong>list</strong> of options for the user to pick from. As we saw in the quick Python overview, a list can be created using square brackets <code class="docutils literal"><span class="pre">[]</span></code>, with each elemnt inside the square brackets separated with a comma. Consider the example below, in which we create a list of ski hills, then print out some elements from it. <em>Note that lists begin counting at 0, so the first element in the list is accessed using list_name[0].</em></p>
+
+<div data-childcomponent="lists_overview_ski_hills" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=lists_overview_ski_hills data-lang="python"    data-timelimit=25000   data-audio=''     >
+ski_hills = ["Table Mountain", "Mission Ridge", "Wapiti", "Duck Mountain", "Asessippi"]
+print(ski_hills[0])     # Table Mountain
+print(ski_hills[2])     # Wapiti
+print(ski_hills[8])     # IndexError: list index out of range
+</textarea>
+</div>
+</div>
 <div class="section" id="get-choice-from-user">
-<h3>6.2.3. Get Choice From User<a class="headerlink" href="#get-choice-from-user" title="Permalink to this headline">¶</a></h3>
+<h3>6.2.4. Get Choice From User<a class="headerlink" href="#get-choice-from-user" title="Permalink to this headline">¶</a></h3>
 <p>To give the user a list of options to choose from, we can create a <strong>list</strong> of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
 <span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
@@ -392,7 +407,7 @@ if age > 15:
 </div>
 </div>
 <div class="section" id="other-methods">
-<h3>6.2.4. Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
+<h3>6.2.5. Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
 <p>There are many more things you can use easygui_qt for. For a complete list, see the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">easygui_qt API</a> (application programming interface) for reference.</p>
 <p>For quick reference, here are a few of them (assumes you have called <code class="docutils literal"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
 <table border="1" class="docutils">
