@@ -221,8 +221,57 @@ Two other functions that you might find useful (that require you to use lists) a
     Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify *which* argument you are passing, like 
     ``easy.get_string(message="Some prompt/question:", default_response="Default response text")``.
 
-Assignment Work Time
----------------------
 
-Please spend the rest of the class continuing to work on your current Python assignment (likely something emphasizing user input and output). 
+Mad Libs Practice Problem
+-------------------------
+
+You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use easygui_qt in your program.*
+
+To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.
+
+If you are not familiar with madlibs, you may want to investigate what they are by searching the web for a "madlibs website". In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might start with the classic Humpty Dumpty rhyme::
+
+    Humpty Dumpty sat on a wall,
+    Humpty Dumpty had a great fall.
+    All the king's horses and all the king's men
+    Couldn't put Humpty together again.
+
+In your program, you could take user input::
+
+    Person's First Name: Bree
+    Person's Last Name: Janzen
+    Verb (past tense action): ran
+    Job Title (such as principal, electrician, etc.): plumber
+    Animal (plural): dogs
+
+After processing the user input, your program could print out::
+
+    Bree Janzen ran on a wall,
+    Bree Janzen had a great fall.
+    All the plumber's dogs and all the plumber's men
+    Couldn't put Bree together again.
+
+
+Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Though it can be difficult with user input, try to make sure your story makes sense.
+
+Remember to use a comment header at the top of your program!
+
+
+.. activecode:: second_input_output_assignment_scratch_work_area
+    :nocodelens:
+
+    # Madlibs
+    # Put Your Name Here
+    # Put the Date Here
+
+    # your code goes here
+
+
+
+Extra for Experts
+~~~~~~~~~~~~~~~~~~
+
+- instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:
+- easier: create a list of possible words, and have Python choose one of these words `at random <http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python>`_.
+- harder: create text files for each of the parts of speech that you will require (ie. nouns.txt, adjectives.txt, etc) and have the computer randomly choose one of the words from the appropriate text file to complete the madlib. Hint: To simplify things, I'd recommend that you generate the text file with one word per line.
 

@@ -1,5 +1,5 @@
-Input/Output Strings Assignment
-===============================
+Which Quotes to Use When Creating Strings
+==========================================
 
 .. topic:: Quick Overview of Day
 
@@ -101,61 +101,8 @@ Can you fix the error in the following programs?
     print(interesting_quotes)
 
 
-.. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. You will now put the knowledge you've gained into practice on your first Python hand-in assignment. Your teacher may choose to give you a different assignment, but one possible assignment is given below.
 
+Assignment Work Time
+---------------------
 
-Madlibs Assignment
-----------------------------------
-
-You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day!
-
-Your assignment is to make a program that asks the user choose which madlib they would like to use (your program must have at least two madlibs for the user to choose from), take in user input, and print out the result.
-
-If you are not familiar with madlibs, you may want to investigate what they are all about by searching the web for a "madlibs website". In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might take the classic Old MacDonald rhyme::
-
-    Old Macdonald had a farm, E-I-E-I-O
-    and on that farm he had an cow, E-I-E-I-O
-    with a moo moo here
-    and a moo moo there,
-    here a moo, there a moo,
-    everywhere a moo moo,
-    Old Macdonald had a farm, E-I-E-I-O.
-
-In your program, you could take user input::
-
-    Adjective: Post-war
-    Noun: dog toy
-    Animal: Redtail Catfish
-    Noise: crack
-
-After processing the user input, your program might print out::
-
-    Post-War Macdonald had a dog toy, E-I-E-I-O
-    and on that dog toy he had an Redtail Catfish, E-I-E-I-O
-    with a crack crack here
-    and a crack crack there,
-    here a crack, there a crack,
-    everywhere a crack crack,
-    Post-War Macdonald had a dog toy, E-I-E-I-O.
-
-Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Make sure your story makes sense, though!
-
-Remember to use a comment header at the top of your program!
-
-**Extra for Experts**
-
-- instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:
-- easier: create a list of possible words, and have Python choose one of these words `at random <http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python>`_.
-- harder: create text files for each of the parts of speech that you will require (ie. nouns.txt, adjectives.txt, etc) and have the computer randomly choose one of the words from the appropriate text file to complete the madlib. Hint: To simplify things, I'd recommend that you generate the text file with one word per line.
-
-
-.. activecode:: second_input_output_assignment_scratch_work_area
-    :nocodelens:
-
-    # Madlib Assignment
-    # Put Your Name Here
-    # Put the Date Here
-
-    # your code goes here
-
-
+Please spend the rest of the class continuing to work on your current Python assignment (likely something emphasizing user input and output). 
