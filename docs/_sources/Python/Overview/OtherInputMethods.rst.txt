@@ -160,7 +160,7 @@ To give the user a list of options to choose from, we can create a **list** of a
 
     subjects = ["English", "Math", "Computer Science", "History", "Phys Ed"]
 
-    # note that the values passed to the following function are Prompt, Window Title, and Choices
+    # the values passed to get_choice() are Prompt, Window Title, and Choices
     favourite = easy.get_choice("What is your fav?", "Pick Subject", subjects)
 
     easy.show_message("Good call. " + favourite + " is good.")
@@ -219,11 +219,13 @@ Two other functions that you might find useful (that require you to use lists) a
     In the examples given above, each of the functions above can take multiple arguments, as specified in the easygui_qt API. For example, you could call ``easy.get_string("Some prompt/question:", "Window Title", "Default response text")``. 
 
     Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify *which* argument you are passing, like 
-    ``easy.get_string(message="Some prompt/question:", default_response="Default response text")``.
+    ``easy.get_string(message="Some prompt/question:", default_response="Some string")``.
 
 
 Mad Libs Practice Problem
 -------------------------
+
+.. highlight:: none
 
 You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use easygui_qt in your program.*
 

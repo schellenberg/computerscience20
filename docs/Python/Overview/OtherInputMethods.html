@@ -385,7 +385,7 @@ print(ski_hills[8])     # IndexError: list index out of range
 
 <span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">]</span>
 
-<span class="c1"># note that the values passed to the following function are Prompt, Window Title, and Choices</span>
+<span class="c1"># the values passed to get_choice() are Prompt, Window Title, and Choices</span>
 <span class="n">favourite</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="s2">&quot;What is your fav?&quot;</span><span class="p">,</span> <span class="s2">&quot;Pick Subject&quot;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">)</span>
 
 <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Good call. &quot;</span> <span class="o">+</span> <span class="n">favourite</span> <span class="o">+</span> <span class="s2">&quot; is good.&quot;</span><span class="p">)</span>
@@ -453,7 +453,7 @@ print(ski_hills[8])     # IndexError: list index out of range
 <p class="first admonition-title">Note</p>
 <p>In the examples given above, each of the functions above can take multiple arguments, as specified in the easygui_qt API. For example, you could call <code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">&quot;Default</span> <span class="pre">response</span> <span class="pre">text&quot;)</span></code>.</p>
 <p class="last">Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify <em>which</em> argument you are passing, like
-<code class="docutils literal"><span class="pre">easy.get_string(message=&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">default_response=&quot;Default</span> <span class="pre">response</span> <span class="pre">text&quot;)</span></code>.</p>
+<code class="docutils literal"><span class="pre">easy.get_string(message=&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">default_response=&quot;Some</span> <span class="pre">string&quot;)</span></code>.</p>
 </div>
 </div>
 </div>
@@ -462,25 +462,25 @@ print(ski_hills[8])     # IndexError: list index out of range
 <p>You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day! <em>If you work in Thonny, you will be able to use easygui_qt in your program.</em></p>
 <p>To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.</p>
 <p>If you are not familiar with madlibs, you may want to investigate what they are by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might start with the classic Humpty Dumpty rhyme:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Humpty</span> <span class="n">Dumpty</span> <span class="n">sat</span> <span class="n">on</span> <span class="n">a</span> <span class="n">wall</span><span class="p">,</span>
-<span class="n">Humpty</span> <span class="n">Dumpty</span> <span class="n">had</span> <span class="n">a</span> <span class="n">great</span> <span class="n">fall</span><span class="o">.</span>
-<span class="n">All</span> <span class="n">the</span> <span class="n">king</span><span class="s1">&#39;s horses and all the king&#39;</span><span class="n">s</span> <span class="n">men</span>
-<span class="n">Couldn</span><span class="s1">&#39;t put Humpty together again.</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Humpty Dumpty sat on a wall,
+Humpty Dumpty had a great fall.
+All the king&#39;s horses and all the king&#39;s men
+Couldn&#39;t put Humpty together again.
 </pre></div>
 </div>
 <p>In your program, you could take user input:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Person</span><span class="s1">&#39;s First Name: Bree</span>
-<span class="n">Person</span><span class="s1">&#39;s Last Name: Janzen</span>
-<span class="n">Verb</span> <span class="p">(</span><span class="n">past</span> <span class="n">tense</span> <span class="n">action</span><span class="p">):</span> <span class="n">ran</span>
-<span class="n">Job</span> <span class="n">Title</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="n">principal</span><span class="p">,</span> <span class="n">electrician</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">):</span> <span class="n">plumber</span>
-<span class="n">Animal</span> <span class="p">(</span><span class="n">plural</span><span class="p">):</span> <span class="n">dogs</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Person&#39;s First Name: Bree
+Person&#39;s Last Name: Janzen
+Verb (past tense action): ran
+Job Title (such as principal, electrician, etc.): plumber
+Animal (plural): dogs
 </pre></div>
 </div>
 <p>After processing the user input, your program could print out:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Bree</span> <span class="n">Janzen</span> <span class="n">ran</span> <span class="n">on</span> <span class="n">a</span> <span class="n">wall</span><span class="p">,</span>
-<span class="n">Bree</span> <span class="n">Janzen</span> <span class="n">had</span> <span class="n">a</span> <span class="n">great</span> <span class="n">fall</span><span class="o">.</span>
-<span class="n">All</span> <span class="n">the</span> <span class="n">plumber</span><span class="s1">&#39;s dogs and all the plumber&#39;</span><span class="n">s</span> <span class="n">men</span>
-<span class="n">Couldn</span><span class="s1">&#39;t put Bree together again.</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Bree Janzen ran on a wall,
+Bree Janzen had a great fall.
+All the plumber&#39;s dogs and all the plumber&#39;s men
+Couldn&#39;t put Bree together again.
 </pre></div>
 </div>
 <p>Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Though it can be difficult with user input, try to make sure your story makes sense.</p>

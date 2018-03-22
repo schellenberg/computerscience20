@@ -14,7 +14,7 @@ Our First Turtle Program
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 There are many *modules* in Python that provide very powerful features that we
-can use in our own programs.  Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations. We have already used one module, called ``appJar``, which allowed us to use pop-up windows when asking for user input. Today, we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures. *The turtle module is very similar to the Pen functionality that we explored using Scratch!* Note that the ``turtle`` module is part of the standard Python installation, so you do not need to install it before using it.
+can use in our own programs.  Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations. We have already used one module, called ``easygui_qt``, which allowed us to use pop-up windows when asking for user input. Today, we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures. *The turtle module is very similar to the Pen functionality that we explored using Scratch!* Note that the ``turtle`` module is part of the standard Python installation, so you do not need to install it before using it.
 
 Turtle graphics, as it is known, is based on a very simple
 metaphor. Imagine that you have a turtle that understands English.  You can

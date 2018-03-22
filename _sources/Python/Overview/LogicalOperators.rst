@@ -3,7 +3,7 @@ Logical Operators
 
 .. topic:: Quick Overview of Day
 
-    Go over Micro:bit program from last day. Introduce the logical operators ``and``, ``or``, ``not``. Work on more practice problems, in which students create functions that return values.
+    Introduce the logical operators ``and``, ``or``, ``not``. Work on practice problems, in which students create programs that utilize logical operators.
 
 
 .. reveal:: curriculum_addressed
