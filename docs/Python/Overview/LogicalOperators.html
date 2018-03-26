@@ -202,8 +202,10 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#practice-problems">11.3. Practice Problems</a><ul>
-<li><a class="reference internal" href="#day-name">11.3.1. Day Name</a></li>
-<li><a class="reference internal" href="#day-number">11.3.2. Day Number</a></li>
+<li><a class="reference internal" href="#under-100">11.3.1. Under 100</a></li>
+<li><a class="reference internal" href="#from-saskatchewan">11.3.2. From Saskatchewan</a></li>
+<li><a class="reference internal" href="#divisible-by-3-or-5">11.3.3. Divisible by 3 or 5</a></li>
+<li><a class="reference internal" href="#turtle-stuck-in-a-square">11.3.4. Turtle Stuck In a Square</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +258,7 @@
 <h1>11. Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Go over Micro:bit program from last day. Introduce the logical operators <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code>. Work on more practice problems, in which students create functions that return values.</p>
+<p>Introduce the logical operators <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code>. Work on practice problems, in which students create programs that utilize logical operators.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
@@ -300,7 +302,7 @@ print(n % 2 == 0 or n % 3 == 0)
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_2_1">
-            microbit-examples-23: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?
+            microbit-examples-84: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?
             <li data-component="answer"  id="test_question6_2_1_opt_a">x &gt; 0 and &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_a">Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</li>
             
             <li data-component="answer"  id="test_question6_2_1_opt_b">x &gt; 0 or x &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_b">Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be True.</li>
@@ -314,13 +316,13 @@ print(n % 2 == 0 or n % 3 == 0)
 </div>
 <div class="section" id="precedence-of-operators">
 <h2>11.2. Precedence of Operators<a class="headerlink" href="#precedence-of-operators" title="Permalink to this headline">¶</a></h2>
-<p>We have now added a number of additional operators to those we learned in the previous chapters.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
+<p>We have now added a number of additional operators to those we have learned.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
 <p>The following table summarizes the precedence discussed so far from highest to lowest.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="19%" />
-<col width="39%" />
-<col width="42%" />
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Level</th>
@@ -335,15 +337,15 @@ print(n % 2 == 0 or n % 3 == 0)
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>multiplication</td>
-<td>*,/,//,%</td>
+<td>*, /, //, %</td>
 </tr>
 <tr class="row-even"><td>5</td>
 <td>addition</td>
-<td>+,-</td>
+<td>+, -</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>relational</td>
-<td>==,!=,&lt;=,&gt;=,&gt;,&lt;</td>
+<td>==, !=, &lt;=, &gt;=, &gt;, &lt;</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>logical</td>
@@ -364,7 +366,7 @@ print(n % 2 == 0 or n % 3 == 0)
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_3_1">
-            microbit-examples-24: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: 5*3 &gt; 10 and 4+6==11
+            microbit-examples-85: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: <code class="docutils literal"><span class="pre">5*3</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">4+6==11</span></code>
             <li data-component="answer" data-correct id="test_question6_3_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback" id="test_question6_3_1_opt_a">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
             
             <li data-component="answer"  id="test_question6_3_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback" id="test_question6_3_1_opt_b">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
@@ -396,74 +398,78 @@ print(n % 2 == 0 or n % 3 == 0)
 </div>
 <div class="section" id="practice-problems">
 <h2>11.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">These practice problems need to be replaced/rewritten with versions that do not require knowledge of fruitful functions. (This is due to reordering where this page appears)</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
-</div>
-<div class="section" id="day-name">
-<h3>11.3.1. Day Name<a class="headerlink" href="#day-name" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="under-100">
+<h3>11.3.1. Under 100<a class="headerlink" href="#under-100" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that takes in a number from the user, and correctly prints either “That number is between 1 to 100” or “That number is not between 1 to 100”. <em>You may only use a single if/else block to solve this problem</em>.</p>
 
-<div data-childcomponent="day-name" class="runestone explainer ac_section alert alert-warning">
-<p>Write a function that takes in a number from 0 to 6 as a parameter, and returns the name associated with that number. If something other than a number from 0 to 6 is passed in, the function should return None.</p>
-<p><code class="docutils literal"><span class="pre">day_name(0)</span> <span class="pre">→</span> <span class="pre">&quot;Sunday&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">day_name(4)</span> <span class="pre">→</span> <span class="pre">&quot;Thursday&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">day_name(6)</span> <span class="pre">→</span> <span class="pre">&quot;Saturday&quot;</span></code></p>
+<div data-childcomponent="under-100" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=day-name data-lang="python"    data-timelimit=25000   data-audio=''     >
-def day_name(day_number):
-    return "Wednesday"
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(day_name(0),"Sunday","day_name(0)")
-        self.assertEqual(day_name(1),"Monday","day_name(1)")
-        self.assertEqual(day_name(2),"Tuesday","day_name(2)")
-        self.assertEqual(day_name(3),"Wednesday","day_name(3)")
-        self.assertEqual(day_name(4),"Thursday","day_name(4)")
-        self.assertEqual(day_name(5),"Friday","day_name(5)")
-        self.assertEqual(day_name(6),"Saturday","day_name(6)")
-
-myTests().main()
+<textarea data-component="activecode" id=under-100 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# your code goes here!
 </textarea>
 </div>
 </div>
-<div class="section" id="day-number">
-<h3>11.3.2. Day Number<a class="headerlink" href="#day-number" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="from-saskatchewan">
+<h3>11.3.2. From Saskatchewan<a class="headerlink" href="#from-saskatchewan" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that asks the user which province they live in. If the province isn’t “saskatchewan”, print out “You should come visit Saskatchewan sometime!”. <em>You must use at least one logical operator in your solution</em>.</p>
 
-<div data-childcomponent="day-number" class="runestone explainer ac_section alert alert-warning">
-<p>Write a function that takes in the name of a day as a parameter, and returns the day number associated with that day. If something other than a number from 0 to 6 is passed in, the function should return None.</p>
-<p><code class="docutils literal"><span class="pre">day_name(0)</span> <span class="pre">→</span> <span class="pre">&quot;Sunday&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">day_name(4)</span> <span class="pre">→</span> <span class="pre">&quot;Thursday&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">day_name(6)</span> <span class="pre">→</span> <span class="pre">&quot;Saturday&quot;</span></code></p>
+<div data-childcomponent="from-saskatchewan" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=day-number data-lang="python"    data-timelimit=25000   data-audio=''     >
-def day_name(day_number):
-    return "Wednesday"
+<textarea data-component="activecode" id=from-saskatchewan data-lang="python"    data-timelimit=25000   data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
+<div class="section" id="divisible-by-3-or-5">
+<h3>11.3.3. Divisible by 3 or 5<a class="headerlink" href="#divisible-by-3-or-5" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that asks the user to enter a number. You should print out a message to the user, either “That number is divisible by either 3 or 5”, or “That number is not divisible by either 3 or 5”. <em>Be sure to consider the data type of the input you are taking in from the user. Use a single if/else block to solve this problem.</em></p>
 
-====
-from unittest.gui import TestCaseGui
+<div data-childcomponent="divisible-by-3-or-5" class="runestone explainer ac_section alert alert-warning">
 
-class myTests(TestCaseGui):
+<textarea data-component="activecode" id=divisible-by-3-or-5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
+<div class="section" id="turtle-stuck-in-a-square">
+<h3>11.3.4. Turtle Stuck In a Square<a class="headerlink" href="#turtle-stuck-in-a-square" title="Permalink to this headline">¶</a></h3>
+<p>You have been given some starter code for the problem below. <strong>You only need to change one line of the code, specifically the line containing the while loop.</strong> Replace the word <code class="docutils literal"><span class="pre">something</span></code> with the appropriate boolean questions that will cause the turtle to continue moving until it gets to one of the edges of the square. Each time the program is run, the turtle will pick a new random direction to move. When executed, your program should look something like this:</p>
+<img alt="../../_images/stuck_in_square.gif" src="../../_images/stuck_in_square.gif" />
+<p>Note that you can get the current x coordinate of the turtle by calling <code class="docutils literal"><span class="pre">bob.xcor()</span></code>, and the current y coordinate by calling <code class="docutils literal"><span class="pre">bob.ycor()</span></code>. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The lines of the square have x and y coordinates as shown below:</p>
+<img alt="../../_images/stuck_in_square_coordinates.png" src="../../_images/stuck_in_square_coordinates.png" />
 
-    def testOne(self):
-        self.assertEqual(day_name(0),"Sunday","day_name(0)")
-        self.assertEqual(day_name(1),"Monday","day_name(1)")
-        self.assertEqual(day_name(2),"Tuesday","day_name(2)")
-        self.assertEqual(day_name(3),"Wednesday","day_name(3)")
-        self.assertEqual(day_name(4),"Thursday","day_name(4)")
-        self.assertEqual(day_name(5),"Friday","day_name(5)")
-        self.assertEqual(day_name(6),"Saturday","day_name(6)")
+<div data-childcomponent="turtle-stuck-in-square" class="runestone explainer ac_section alert alert-warning">
 
-myTests().main()
+<textarea data-component="activecode" id=turtle-stuck-in-square data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+import random
+
+canvas = turtle.Screen()
+
+bob = turtle.Turtle()
+
+# draw a square to represent the area the turtle needs to stay inside
+bob.speed(0)
+bob.penup()
+bob.goto(-100, -100) # sends bob to a specific coordinate
+bob.pendown()
+for side in range(4):
+    bob.forward(200)
+    bob.left(90)
+bob.penup()
+
+# reset turtle to normal starting location
+bob.goto(0, 0)
+bob.speed(3)
+
+# pick random direction to move
+some_angle = random.randrange(1, 360)
+bob.setheading(some_angle)
+
+# complete the while statement below
+# you should only need to adjust one line of code (directly under this comment)
+while something:
+    bob.forward(5)
 </textarea>
 </div>
 </div>

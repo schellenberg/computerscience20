@@ -63,7 +63,7 @@ Check Your Understanding
 Precedence of Operators
 -----------------------
 
-We have now added a number of additional operators to those we learned in the previous chapters.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression ``x*5 >= 10 and y-6 <= 20`` will be evaluated so as to first perform the arithmetic and then check the relationships.  The ``and`` will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.
+We have now added a number of additional operators to those we have learned.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression ``x*5 >= 10 and y-6 <= 20`` will be evaluated so as to first perform the arithmetic and then check the relationships.  The ``and`` will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.
 
 The following table summarizes the precedence discussed so far from highest to lowest.  
 
@@ -71,9 +71,9 @@ The following table summarizes the precedence discussed so far from highest to l
 Level     Category        Operators
 =======   ==============  ===============
 7(high)   exponent        \**
-6         multiplication  \*,/,//,%
-5         addition        +,-
-4         relational      ==,!=,<=,>=,>,<
+6         multiplication  \*, /, //, %
+5         addition        +, -
+4         relational      ==, !=, <=, >=, >, <
 3         logical         not
 2         logical         and
 1(low)    logical         or
@@ -94,7 +94,7 @@ Check Your Understanding
    :feedback_c: This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.
    :feedback_d: This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true. 
 
-   Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: 5*3 > 10 and 4+6==11
+   Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: ``5*3 > 10 and 4+6==11``
 
 Here is an animation for the above expression:
 
@@ -114,77 +114,156 @@ Here is an animation for the above expression:
 Practice Problems
 ------------------
 
-Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have** to return the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
+Under 100
+~~~~~~~~~~
 
-.. caution:: These practice problems need to be replaced/rewritten with versions that do not require knowledge of fruitful functions. (This is due to reordering where this page appears)
+Write a program that takes in a number from the user, and correctly prints either "That number is between 1 to 100" or "That number is not between 1 to 100". *You may only use a single if/else block to solve this problem*.
 
-
-.. note:: The only thing you need to do for the following is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
-
-Day Name
-~~~~~~~~~~~~~~~~~~~~~
-
-.. activecode:: day-name
+.. activecode:: under-100
     :nocodelens:
 
-    Write a function that takes in a number from 0 to 6 as a parameter, and returns the name associated with that number. If something other than a number from 0 to 6 is passed in, the function should return None.
-
-    ``day_name(0) → "Sunday"``
-
-    ``day_name(4) → "Thursday"``
-    
-    ``day_name(6) → "Saturday"``
-    ~~~~
-    def day_name(day_number):
-        return "Wednesday"
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(day_name(0),"Sunday","day_name(0)")
-            self.assertEqual(day_name(1),"Monday","day_name(1)")
-            self.assertEqual(day_name(2),"Tuesday","day_name(2)")
-            self.assertEqual(day_name(3),"Wednesday","day_name(3)")
-            self.assertEqual(day_name(4),"Thursday","day_name(4)")
-            self.assertEqual(day_name(5),"Friday","day_name(5)")
-            self.assertEqual(day_name(6),"Saturday","day_name(6)")
-
-    myTests().main()
+    # your code goes here!
 
 
+From Saskatchewan
+~~~~~~~~~~~~~~~~~~
 
-Day Number
-~~~~~~~~~~~~~~~~~~~~~
+Write a program that asks the user which province they live in. If the province isn't "saskatchewan", print out "You should come visit Saskatchewan sometime!". *You must use at least one logical operator in your solution*.
 
-.. activecode:: day-number
+.. activecode:: from-saskatchewan
     :nocodelens:
 
-    Write a function that takes in the name of a day as a parameter, and returns the day number associated with that day. If something other than a number from 0 to 6 is passed in, the function should return None.
+    # your code goes here!
 
-    ``day_name(0) → "Sunday"``
 
-    ``day_name(4) → "Thursday"``
+Divisible by 3 or 5
+~~~~~~~~~~~~~~~~~~~~
+
+Write a program that asks the user to enter a number. You should print out a message to the user, either "That number is divisible by either 3 or 5", or "That number is not divisible by either 3 or 5". *Be sure to consider the data type of the input you are taking in from the user. Use a single if/else block to solve this problem.*
+
+.. activecode:: divisible-by-3-or-5
+    :nocodelens:
+
+    # your code goes here!
+
+
+Turtle Stuck In a Square
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You have been given some starter code for the problem below. **You only need to change one line of the code, specifically the line containing the while loop.** Replace the word ``something`` with the appropriate boolean questions that will cause the turtle to continue moving until it gets to one of the edges of the square. Each time the program is run, the turtle will pick a new random direction to move. When executed, your program should look something like this:
+
+.. image:: images/stuck_in_square.gif
+
+Note that you can get the current x coordinate of the turtle by calling ``bob.xcor()``, and the current y coordinate by calling ``bob.ycor()``. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The lines of the square have x and y coordinates as shown below:
+
+.. image:: images/stuck_in_square_coordinates.png
+
+
+.. activecode:: turtle-stuck-in-square
+    :nocodelens:
+
+    import turtle
+    import random
+
+    canvas = turtle.Screen()
+
+    bob = turtle.Turtle()
+
+    # draw a square to represent the area the turtle needs to stay inside
+    bob.speed(0) 
+    bob.penup()
+    bob.goto(-100, -100) # sends bob to a specific coordinate
+    bob.pendown()
+    for side in range(4):
+        bob.forward(200)
+        bob.left(90)
+    bob.penup()
+
+    # reset turtle to normal starting location
+    bob.goto(0, 0)
+    bob.speed(3)
+
+    # pick random direction to move
+    some_angle = random.randrange(1, 360)
+    bob.setheading(some_angle)
+
+    # complete the while statement below
+    # you should only need to adjust one line of code (directly under this comment)
+    while something:
+        bob.forward(5)
+
+.. not (bob.xcor() > 100 or bob.xcor() < -100 or bob.ycor() < -100 or bob.ycor() > 100)
+
+
+
+
+
+
+
+.. Day Name
+.. ~~~~~~~~~~~~~~~~~~~~~
+
+.. .. activecode:: day-name
+..     :nocodelens:
+
+..     Write a function that takes in a number from 0 to 6 as a parameter, and returns the name associated with that number. If something other than a number from 0 to 6 is passed in, the function should return None.
+
+..     ``day_name(0) → "Sunday"``
+
+..     ``day_name(4) → "Thursday"``
     
-    ``day_name(6) → "Saturday"``
-    ~~~~
-    def day_name(day_number):
-        return "Wednesday"
+..     ``day_name(6) → "Saturday"``
+..     ~~~~
+..     def day_name(day_number):
+..         return "Wednesday"
 
-    ====
-    from unittest.gui import TestCaseGui
+..     ====
+..     from unittest.gui import TestCaseGui
 
-    class myTests(TestCaseGui):
+..     class myTests(TestCaseGui):
 
-        def testOne(self):
-            self.assertEqual(day_name(0),"Sunday","day_name(0)")
-            self.assertEqual(day_name(1),"Monday","day_name(1)")
-            self.assertEqual(day_name(2),"Tuesday","day_name(2)")
-            self.assertEqual(day_name(3),"Wednesday","day_name(3)")
-            self.assertEqual(day_name(4),"Thursday","day_name(4)")
-            self.assertEqual(day_name(5),"Friday","day_name(5)")
-            self.assertEqual(day_name(6),"Saturday","day_name(6)")
+..         def testOne(self):
+..             self.assertEqual(day_name(0),"Sunday","day_name(0)")
+..             self.assertEqual(day_name(1),"Monday","day_name(1)")
+..             self.assertEqual(day_name(2),"Tuesday","day_name(2)")
+..             self.assertEqual(day_name(3),"Wednesday","day_name(3)")
+..             self.assertEqual(day_name(4),"Thursday","day_name(4)")
+..             self.assertEqual(day_name(5),"Friday","day_name(5)")
+..             self.assertEqual(day_name(6),"Saturday","day_name(6)")
 
-    myTests().main()
+..     myTests().main()
+
+
+
+.. Day Number
+.. ~~~~~~~~~~~~~~~~~~~~~
+
+.. .. activecode:: day-number
+..     :nocodelens:
+
+..     Write a function that takes in the name of a day as a parameter, and returns the day number associated with that day. If something other than a number from 0 to 6 is passed in, the function should return None.
+
+..     ``day_name(0) → "Sunday"``
+
+..     ``day_name(4) → "Thursday"``
+    
+..     ``day_name(6) → "Saturday"``
+..     ~~~~
+..     def day_name(day_number):
+..         return "Wednesday"
+
+..     ====
+..     from unittest.gui import TestCaseGui
+
+..     class myTests(TestCaseGui):
+
+..         def testOne(self):
+..             self.assertEqual(day_name(0),"Sunday","day_name(0)")
+..             self.assertEqual(day_name(1),"Monday","day_name(1)")
+..             self.assertEqual(day_name(2),"Tuesday","day_name(2)")
+..             self.assertEqual(day_name(3),"Wednesday","day_name(3)")
+..             self.assertEqual(day_name(4),"Thursday","day_name(4)")
+..             self.assertEqual(day_name(5),"Friday","day_name(5)")
+..             self.assertEqual(day_name(6),"Saturday","day_name(6)")
+
+..     myTests().main()
