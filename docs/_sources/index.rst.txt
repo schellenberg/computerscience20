@@ -83,7 +83,6 @@ Python - Getting Started
    Python/Overview/MultipleTurtlesAndForLoops.rst
    Python/Overview/LogicalOperators.rst
    Python/Overview/Microbit.rst
-   Python/PracticeQuizzes/Booleans.rst
 
 
 Python - Turtle Drawings (Loops and Functions)

@@ -7,7 +7,6 @@ There are no official docs yet, but here is a short quick-reference to get you s
 
 If you haven't used the Micro:bit before, you will want to check out the :ref:`microbit_setup` instructions at the bottom of this page.
 
-.. note:: There is a ``microbit.sleep(2000)`` at the end of some examples, because once your Python program finishes the bitio icon will be displayed on the micro:bit again and this will overwrite whatever is on the micro:bit screen.
 
 Connecting to the micro:bit
 ----------------------------

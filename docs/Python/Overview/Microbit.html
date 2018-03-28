@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="13. Booleans Practice Quiz" href="../PracticeQuizzes/Booleans.html" />
+    <link rel="next" title="1. Looping with Turtles Assignment" href="../MoreTurtles/TurtleAssignment.html" />
     <link rel="prev" title="11. Logical Operators" href="LogicalOperators.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -204,7 +204,11 @@
 <li><a class="reference internal" href="#using-the-micro-bit">12.3. Using the Micro:bit</a></li>
 <li><a class="reference internal" href="#displaying-single-characters">12.4. Displaying Single Characters</a></li>
 <li><a class="reference internal" href="#drawing-with-a-turtle">12.5. Drawing with a Turtle</a></li>
-<li><a class="reference internal" href="#practice-problem">12.6. Practice Problem</a></li>
+<li><a class="reference internal" href="#practice-problems">12.6. Practice Problems</a><ul>
+<li><a class="reference internal" href="#better-turtle-controller">12.6.1. Better Turtle Controller</a></li>
+<li><a class="reference internal" href="#drawing-different-shapes">12.6.2. Drawing Different Shapes</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#going-further">12.7. Going Further</a></li>
 </ul>
 </li>
@@ -221,8 +225,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 13. Booleans Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Booleans.html" >
+  <li id="relations-next" title='Next Chapter - 1. Looping with Turtles Assignment' data-toggle="tooltip" >
+    <a href="../MoreTurtles/TurtleAssignment.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -400,14 +404,55 @@ print("All done!")
 </div>
 <div class="section" id="drawing-with-a-turtle">
 <h2>12.5. Drawing with a Turtle<a class="headerlink" href="#drawing-with-a-turtle" title="Permalink to this headline">¶</a></h2>
-<p>Let’s use the Micro:bit as a controller for a turtle object on the screen.</p>
+<p>The examples above used the Micro:bit as an output device, as we sent instructions telling the Micro:bit to change what the LED grid was displaying. We can also use the Micro:bit as an input device. One of the built in ways of taking input from the Micro:bit is the accelerometer. An accelerometer allows us to detect the orientation of the device (in other words, whether it is tilted in the <em>x</em>, <em>y</em> or <em>z</em> axis). The following example checks the <em>x</em> axis to detect whether the device has been tilted left or right. To help you understand the values that are sent back to Python, I have printed out the value of x (note that in order to concatenate the x value, I had to convert it’s data type to a string).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Not Tilted&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="practice-problem">
-<h2>12.6. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
-<p>Now that you’ve seen how some things can be accomplished, try this:</p>
+<p>To use the accelerometer data from the Micro:bit to control a turtle, we can adapt the program as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">tim</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Right&quot;</span><span class="p">)</span>
+        <span class="n">tim</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Left&quot;</span><span class="p">)</span>
+        <span class="n">tim</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Not Tilted&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="practice-problems">
+<h2>12.6. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="better-turtle-controller">
+<h3>12.6.1. Better Turtle Controller<a class="headerlink" href="#better-turtle-controller" title="Permalink to this headline">¶</a></h3>
+<p>Adapt the program shown above to make your turtle:</p>
 <ul class="simple">
-<li>create a program that draws a square when you press the “A” button, and a triangle when you press the “B” button.</li>
+<li>turn left or right based on tilting the <em>x</em> axis</li>
+<li>move forward or backward based on tilting the <em>y</em> axis</li>
 </ul>
+</div>
+<div class="section" id="drawing-different-shapes">
+<h3>12.6.2. Drawing Different Shapes<a class="headerlink" href="#drawing-different-shapes" title="Permalink to this headline">¶</a></h3>
+<p>Create a program that uses the turtle module to draw a square when you press the “A” button, and a triangle when you press the “B” button. You will need look at the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-reference"><span class="std std-ref">Micro:bit Reference</span></a> in the appendix to figure out how to detect a button being pressed.</p>
+</div>
 </div>
 <div class="section" id="going-further">
 <h2>12.7. Going Further<a class="headerlink" href="#going-further" title="Permalink to this headline">¶</a></h2>
@@ -425,12 +470,12 @@ print("All done!")
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="LogicalOperators.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 13. Booleans Practice Quiz' data-toggle="tooltip" >
-    <a href="../PracticeQuizzes/Booleans.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 1. Looping with Turtles Assignment' data-toggle="tooltip" >
+    <a href="../MoreTurtles/TurtleAssignment.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../PracticeQuizzes/Booleans.html" >Next Section - 13. Booleans Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../MoreTurtles/TurtleAssignment.html" >Next Section - 1. Looping with Turtles Assignment</a>
 
 <script type="text/javascript">
 

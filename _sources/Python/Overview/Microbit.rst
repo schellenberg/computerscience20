@@ -164,17 +164,62 @@ This works much better! We can now see each letter appear on the screen then pau
 Drawing with a Turtle
 ----------------------
 
-Let's use the Micro:bit as a controller for a turtle object on the screen. 
+The examples above used the Micro:bit as an output device, as we sent instructions telling the Micro:bit to change what the LED grid was displaying. We can also use the Micro:bit as an input device. One of the built in ways of taking input from the Micro:bit is the accelerometer. An accelerometer allows us to detect the orientation of the device (in other words, whether it is tilted in the *x*, *y* or *z* axis). The following example checks the *x* axis to detect whether the device has been tilted left or right. To help you understand the values that are sent back to Python, I have printed out the value of x (note that in order to concatenate the x value, I had to convert it's data type to a string).
+
+.. sourcecode:: python
+
+    import microbit
+    import time
+
+    while True:
+        x = microbit.accelerometer.get_x()
+        if x > 200 or x < -200:
+            print("Tilted: " + str(x))
+        else:
+            print("Not Tilted")
+        time.sleep(0.5)
 
 
+To use the accelerometer data from the Micro:bit to control a turtle, we can adapt the program as follows:
 
-Practice Problem
------------------
+.. sourcecode:: python
 
-Now that you've seen how some things can be accomplished, try this:
+    import microbit
+    import time
+    import turtle
 
-- create a program that draws a square when you press the "A" button, and a triangle when you press the "B" button.
+    window = turtle.Screen()
+    tim = turtle.Turtle()
 
+    while True:
+        x = microbit.accelerometer.get_x()
+        if x > 200:
+            print("Right")
+            tim.forward(5)
+        elif x < -200:
+            print("Left")
+            tim.backward(5)
+        else:
+            print("Not Tilted")
+        time.sleep(0.1)
+
+
+Practice Problems
+------------------
+
+Better Turtle Controller
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adapt the program shown above to make your turtle:
+
+- turn left or right based on tilting the *x* axis
+- move forward or backward based on tilting the *y* axis
+
+
+Drawing Different Shapes
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a program that uses the turtle module to draw a square when you press the "A" button, and a triangle when you press the "B" button. You will need look at the :ref:`microbit_reference` in the appendix to figure out how to detect a button being pressed.
 
 
 Going Further
