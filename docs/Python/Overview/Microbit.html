@@ -202,6 +202,10 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#using-the-micro-bit">12.3. Using the Micro:bit</a></li>
+<li><a class="reference internal" href="#displaying-single-characters">12.4. Displaying Single Characters</a></li>
+<li><a class="reference internal" href="#drawing-with-a-turtle">12.5. Drawing with a Turtle</a></li>
+<li><a class="reference internal" href="#practice-problem">12.6. Practice Problem</a></li>
+<li><a class="reference internal" href="#going-further">12.7. Going Further</a></li>
 </ul>
 </li>
 </ul>
@@ -263,11 +267,7 @@
 </ul>
 
     </div>
-    <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This is just a stub, to show what should go here. It will be written up properly later. The install process for bitio is also really awkward right now. It will be improved to use the “Manage Packages…” menu soon.</p>
-</div>
-<div class="section" id="time-module">
+    <div class="section" id="time-module">
 <h2>12.1. Time Module<a class="headerlink" href="#time-module" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes, we’d like to wait a bit before running the next command in a Python program. To do this, we can <code class="docutils literal"><span class="pre">import</span> <span class="pre">time</span></code>, then use the <code class="docutils literal"><span class="pre">.sleep()</span></code> function. An example is below:</p>
 
@@ -291,8 +291,8 @@ print("second thing")
 import time
 
 for counter in range(10):
-        print("Counting up. Now at", counter)
-        time.sleep(1)
+    print("Counting up. Now at", counter)
+    time.sleep(1)
 
 print("All done!")
 </textarea>
@@ -312,24 +312,27 @@ print("All done!")
 <li>running “flashed” code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)</li>
 <li>communicating through the serial port with your computer as an input/output device</li>
 </ul>
-<p>For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating through the serial port. In order to do this, we need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). You should only have to do this once, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.</p>
+<p>For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating over a USB connection.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the` Microbit website &lt;http://microbit.org/&gt;`_.</p>
+<p class="last">If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the <a class="reference external" href="http://microbit.org/">Microbit website</a>.</p>
 </div>
 </div>
 <div class="section" id="flashing-the-micro-bit">
 <h3>12.2.3. Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
-<p>To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -&gt; Manage plug-ins…, then type <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the “Flash I/O .hex to BBC Microbit” icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).</p>
+<p>While your Micro:bit is connected to your computer via USB, it is possible to send instructions to the Micro:bit using serial commands. In order to do this, we first need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). <strong>You should only have to do this once</strong>, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.</p>
+<p>To flash your Micro:bit, first connect your Micro:bit to your computer via USB. Now download the <a class="reference download internal" href="../../_downloads/bitio.hex" download=""><code class="xref download docutils literal"><span class="pre">bitio.hex</span></code></a> file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder), as shown below.</p>
+<img alt="../../_images/flash-microbit.gif" src="../../_images/flash-microbit.gif" />
+<p>You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).</p>
 <img alt="../../_images/bitio1.png" src="../../_images/bitio1.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> was written very quickly to try to ease the process of getting the Micro:bit going in my class, and is currently very much alpha quality. If the process fails for any reason, you can do the same thing manually. Download the <a class="reference external" href="https://github.com/whaleygeek/bitio/archive/master.zip">bitio module</a> and extract the contents of the .zip file. Flash the Micro:bit by dragging and dropping the <code class="docutils literal"><span class="pre">bitio.hex</span></code> file inside the folder you just extracted onto the <code class="docutils literal"><span class="pre">MICROBIT</span></code> device (in Windows Explorer, or the Mac Finder).</p>
+<p class="last">The bitio.hex file is from the <a class="reference external" href="https://github.com/whaleygeek/bitio">bitio package</a> written by David Whale. This is the package we are about to install to communicate with the Micro:bit. Since the bitio package is not published on PIP, I (Dan Schellenberg) simply packaged it in a format that makes it easy to install via Thonny. Even though it is called cs20-microbitio, it is really just the bitio package.</p>
 </div>
 </div>
 <div class="section" id="installing-the-micro-bit-module-in-thonny">
 <h3>12.2.4. Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
-<p>In order to communicate with the microbit in Python, you need to install the package <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> in Thonny. To do that, go to Tools -&gt; Manage packages…, type in cs20-microbitio into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
+<p>In order to communicate with the microbit in Python, you need to install the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package in Thonny. To do that, go to Tools -&gt; Manage packages…, type in <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
 </div>
 </div>
 <div class="section" id="using-the-micro-bit">
@@ -360,11 +363,55 @@ print("All done!")
 </div>
 </div></blockquote>
 <p>Once the connection is established, you should see the message scroll across the 5x5 LED grid on your Micro:bit.</p>
-<p>Look at the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-reference"><span class="std std-ref">Micro:bit Reference</span></a> in the appendix, and run some of the demonstration code found there to get a sense of what the Micro:bit can do.</p>
+</div>
+<div class="section" id="displaying-single-characters">
+<h2>12.4. Displaying Single Characters<a class="headerlink" href="#displaying-single-characters" title="Permalink to this headline">¶</a></h2>
+<p>If we wanted to display the letters from the word “SASK” one at a time, there are a number of different ways we could do it. Our first thought might be to do something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;K&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Although this technically works, when you run this code, you will notice that the letters flash on the LED grid <em>very</em> quickly. To slow this down a bit, we can use the time module we experimented with above. Consider the following version:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;K&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This works much better! We can now see each letter appear on the screen then pause for half a second before the next letter appears. However, you will notice that we are essentially repeating the same instruction four times in a row. We can improve the code using a for loop to perform the repetition, as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">]:</span>
+    <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="drawing-with-a-turtle">
+<h2>12.5. Drawing with a Turtle<a class="headerlink" href="#drawing-with-a-turtle" title="Permalink to this headline">¶</a></h2>
+<p>Let’s use the Micro:bit as a controller for a turtle object on the screen.</p>
+</div>
+<div class="section" id="practice-problem">
+<h2>12.6. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Now that you’ve seen how some things can be accomplished, try this:</p>
 <ul class="simple">
 <li>create a program that draws a square when you press the “A” button, and a triangle when you press the “B” button.</li>
 </ul>
+</div>
+<div class="section" id="going-further">
+<h2>12.7. Going Further<a class="headerlink" href="#going-further" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-reference"><span class="std std-ref">Micro:bit Reference</span></a> in the appendix, and run some of the demonstration code found there to get a sense of what the Micro:bit can do.</p>
 </div>
 </div>
 

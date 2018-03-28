@@ -1,8 +1,3 @@
-
-.. qnum::
-   :prefix: microbit-examples-
-   :start: 1
-
 .. _microbit_reference:
 
 Micro:bit Reference
@@ -12,7 +7,7 @@ There are no official docs yet, but here is a short quick-reference to get you s
 
 If you haven't used the Micro:bit before, you will want to check out the :ref:`microbit_setup` instructions at the bottom of this page.
 
-.. note:: There is a microbit.sleep(2000) at the end of some examples, because once your Python program finishes the bitio icon will be displayed on the micro:bit again and this will overwrite whatever is on the micro:bit screen.
+.. note:: There is a ``microbit.sleep(2000)`` at the end of some examples, because once your Python program finishes the bitio icon will be displayed on the micro:bit again and this will overwrite whatever is on the micro:bit screen.
 
 Connecting to the micro:bit
 ----------------------------
@@ -30,7 +25,6 @@ Scrolling text on the screen
     
     import microbit
     microbit.display.scroll("Hello")
-    microbit.sleep(2000)
 
 
 Displaying a single character
@@ -40,7 +34,6 @@ Displaying a single character
     
     import microbit
     microbit.display.show("A")
-    microbit.sleep(2000)
 
 
 Displaying numbers
@@ -50,7 +43,6 @@ Displaying numbers
     
     import microbit
     microbit.display.scroll(2345)
-    microbit.sleep(2000)
 
 
 Displaying numbers using a 2-digit font
@@ -59,9 +51,10 @@ Displaying numbers using a 2-digit font
 .. sourcecode:: python
     
     import microbit
+    import time
     for n in range(99):
         microbit.display.show(n)
-        microbit.sleep(250)
+        time.sleep(0.25)
 
 
 Getting a list of pre-defined images
@@ -73,7 +66,6 @@ The full list of pre-defined images is at the bottom of this page as well.
     
     import microbit
     print(microbit.Image.STD_IMAGE_NAMES)
-    microbit.sleep(2000)
 
 
 Displaying a pre-defined image
@@ -83,7 +75,6 @@ Displaying a pre-defined image
     
     import microbit
     microbit.display.show(microbit.Image.HAPPY)
-    microbit.sleep(2000)
 
 
 Spinning a clock
@@ -92,9 +83,10 @@ Spinning a clock
 .. sourcecode:: python
     
     import microbit
+    import time
     for c in microbit.Image.ALL_CLOCKS:
         microbit.display.show(c)
-        microbit.sleep(250)
+        time.sleep(0.25)
 
     
 Defining a custom image
@@ -105,7 +97,6 @@ Defining a custom image
     import microbit
     BANANA = microbit.Image("00090:00090:00990:09900:99000")
     microbit.display.show(BANANA)
-    microbit.sleep(2000)
 
 
 Clearing the display
@@ -115,7 +106,6 @@ Clearing the display
     
     import microbit
     microbit.display.clear()
-    microbit.sleep(2000)
 
 
 Sensing when a button is pressed
@@ -124,10 +114,11 @@ Sensing when a button is pressed
 .. sourcecode:: python
     
     import microbit
+    import time
     while True:
         if microbit.button_a.was_pressed():
             microbit.display.show("A")
-            microbit.sleep(500)
+            time.sleep(0.5)
             microbit.display.clear()
 
     
@@ -137,10 +128,11 @@ Sensing when a pin is touched
 .. sourcecode:: python
     
     import microbit
+    import time
     while True:
         if microbit.pin0.is_touched():
             microbit.display.show("T")
-            microbit.sleep(500)
+            time.sleep(0.5)
             microbit.display.clear()
 
     
@@ -150,9 +142,10 @@ Reading accelerometer values
 .. sourcecode:: python
     
     import microbit
+    import time
     while True:
         print(microbit.accelerometer.get_values())
-        microbit.sleep(250)
+        time.sleep(0.25)
 
   
 Sensing tilt in the X plane
@@ -161,6 +154,7 @@ Sensing tilt in the X plane
 .. sourcecode:: python
     
     import microbit
+    import time
     while True:
         x = microbit.accelerometer.get_x()
         x = abs(x)
@@ -168,7 +162,7 @@ Sensing tilt in the X plane
             print("Tilted")
         else:
             print("Not Tilted")
-        microbit.sleep(500)
+        time.sleep(0.5)
 
 
 Reading the temperature
@@ -177,9 +171,10 @@ Reading the temperature
 .. sourcecode:: python
     
     import microbit
+    import time
     while True:  
         print(microbit.temperature())
-        microbit.sleep(500)
+        microbit.sleep(0.5)
 
 
 .. _microbit_predefined_images:
@@ -247,7 +242,7 @@ Installing a Driver If Using Legacy Windows OS
 
 **The following only applies to users of Windows that are on a version earlier than Windows 10. If you are using Windows 10, Mac, or Linux, you can skip this step.**
 
-If you are on a Windows machine (*< Windows 10*), you will need to download the `mbed driver <https://os.mbed.com/handbook/Windows-serial-configuration>`_ if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done).
+If you are on a Windows machine (*< Windows 10*), you will need to download the `mbed driver <https://os.mbed.com/handbook/Windows-serial-configuration>`_ if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done, and none of the examples in the textbook will work).
 
 Micro:bit Modes
 ~~~~~~~~~~~~~~~
@@ -257,25 +252,32 @@ Your Micro:bit can be used in two modes:
 - running "flashed" code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)
 - communicating through the serial port with your computer as an input/output device
 
-For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating through the serial port. In order to do this, we need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). You should only have to do this once, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.
+For the purposes of this textbook, we will always be using the Micro:bit as an input/output device by communicating over a USB connection.
 
-.. note:: note
+.. note::
     
-    If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the` Microbit website <http://microbit.org/>`_. 
+    If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the `Microbit website <http://microbit.org/>`_.
 
 Flashing the Micro:bit
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To get this working, you will first need to install a plugin for Thonny. To do this, go to Tools -> Manage plug-ins..., then type ``thonny-flash-microbitio`` into the search bar. After the plugin has been installed, you will need to restart Thonny. You should now see an extra icon beside the Stop button, which will flash the Micro:bit with a micropython .hex file, to allow it to act as an input/output device. Connect the Micro:bit, wait until your computer has recognized it, then click the "Flash I/O .hex to BBC Microbit" icon. You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).
+While your Micro:bit is connected to your computer via USB, it is possible to send instructions to the Micro:bit using serial commands. In order to do this, we first need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). **You should only have to do this once**, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.
+
+
+To flash your Micro:bit, first connect your Micro:bit to your computer via USB. Now download the :download:`bitio.hex <../Microbit/bitio.hex>` file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder), as shown below.
+
+.. image:: images/flash-microbit.gif
+
+You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).
 
 .. image:: images/bitio.png
 
-.. note:: The ``thonny-flash-microbitio`` was written very quickly to try to ease the process of getting the Micro:bit going in my class, and is currently very much alpha quality. If the process fails for any reason, you can do the same thing manually. Download the `bitio module <https://github.com/whaleygeek/bitio/archive/master.zip>`_ and extract the contents of the .zip file. Flash the Micro:bit by dragging and dropping the ``bitio.hex`` file inside the folder you just extracted onto the ``MICROBIT`` device (in Windows Explorer, or the Mac Finder). 
+.. note:: The bitio.hex file is from the `bitio package <https://github.com/whaleygeek/bitio>`_ written by David Whale. This is the package we are about to install to communicate with the Micro:bit. Since the bitio package is not published on PIP, I (Dan Schellenberg) simply packaged it in a format that makes it easy to install via Thonny. Even though it is called cs20-microbitio, it is really just the bitio package.
 
 Installing the Micro:bit Module in Thonny
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to communicate with the microbit in Python, you need to install the package ``cs20-microbitio`` in Thonny. To do that, go to Tools -> Manage packages..., type in cs20-microbitio into the search bar, and install. You only need to do this once, after which you should be able to use ``import microbit`` whenever you want to interact with the Micro:bit in Python.
+In order to communicate with the microbit in Python, you need to install the ``cs20-microbitio`` package in Thonny. To do that, go to Tools -> Manage packages..., type in ``cs20-microbitio`` into the search bar, and install. You only need to do this once, after which you should be able to use ``import microbit`` whenever you want to interact with the Micro:bit in Python.
 
 
 Using the Micro:bit
@@ -306,5 +308,6 @@ When you press Run, there will be a prompt in the console telling you to disconn
 
 
 Once the connection is established, you should see the message scroll across the 5x5 LED grid on your Micro:bit.
+
 
 

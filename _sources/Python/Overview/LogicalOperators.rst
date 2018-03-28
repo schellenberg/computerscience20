@@ -154,7 +154,7 @@ You have been given some starter code for the problem below. **You only need to 
 
 .. image:: images/stuck_in_square.gif
 
-Note that you can get the current x coordinate of the turtle by calling ``bob.xcor()``, and the current y coordinate by calling ``bob.ycor()``. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The lines of the square have x and y coordinates as shown below:
+Note that you can get the current x coordinate of the turtle by calling ``bob.xcor()``, and the current y coordinate by calling ``bob.ycor()``. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The vertices of the square have x and y coordinates as shown below:
 
 .. image:: images/stuck_in_square_coordinates.png
 
