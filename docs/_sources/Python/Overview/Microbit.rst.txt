@@ -66,7 +66,7 @@ For the purposes of this textbook, we will always be using the Micro:bit as an i
 
 .. note::
     
-    If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the `Microbit website <http://microbit.org/>`_.
+    If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the `Microbit website <http://microbit.org/>`_. Using web based platforms, you can create code  using a `block based environment similar to Scratch <https://makecode.microbit.org/>`_, or an `online Python environment <http://python.microbit.org/>`_. Note that these environments simply run your code on the Micro:bit, and do not send any signals back to the computer.
 
 Flashing the Micro:bit
 ~~~~~~~~~~~~~~~~~~~~~~
