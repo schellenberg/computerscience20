@@ -92,7 +92,7 @@ Python - Turtle Drawings (Loops and Functions)
    :numbered:
    :maxdepth: 1
    
-   Python/MoreTurtles/TurtleAssignment.rst
+   Python/MoreTurtles/LoopsReview.rst
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst

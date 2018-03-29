@@ -89,14 +89,13 @@ Here are a few more things that you might find useful as you write programs that
   going to play with turtles.
 
 * A turtle's pen can be picked up or put down.  This allows us to move a turtle
-  to a different place without drawing a line.   The methods are ``up`` and ``down``.  Note that the methods ``penup`` and ``pendown`` do the
-  same thing.
+  to a different place without drawing a line.   The methods are ``penup`` and ``pendown``.  Note that the methods ``up`` and ``down`` do the same thing.
 
   .. sourcecode:: python
 
-     alex.up()
+     alex.penup()
      alex.forward(100)     # this moves alex, but no line is drawn
-     alex.down()
+     alex.pendown()
 
 * Every turtle can have its own shape.  The ones available "out of the box"
   are ``arrow``, ``blank``, ``circle``, ``classic``, ``square``, ``triangle``,
@@ -136,7 +135,7 @@ Let's do an example that shows off some of these new features.
    tess.color("blue")
    tess.shape("turtle")
 
-   tess.up()
+   tess.penup()
 
    # start with size = 5 and grow by 2
    for size in range(5, 60, 2):
@@ -216,8 +215,8 @@ forward     distance      Moves the turtle forward
 backward    distance      Moves the turle backward
 right       angle         Turns the turtle clockwise
 left        angle         Turns the turtle counter clockwise
-up          None          Picks up the turtles tail
-down        None          Puts down the turtles tail
+penup       None          Picks up the turtles tail
+pendown     None          Puts down the turtles tail
 color       color name    Changes the color of the turtle's tail
 fillcolor   color name    Changes the color of the turtle will use to fill a polygon
 heading     None          Returns the current heading
@@ -234,12 +233,13 @@ shape       shape name    Should be 'arrow', 'classic', 'turtle', 'circle' or 's
 
 As we have seen previously, you can read about even more options on the `Python Docs Website <http://docs.python.org/dev/py3k/library/turtle.html>`_.  
 
-Practice Problem
------------------
+Practice Problems
+------------------
+
+Hollow C
+~~~~~~~~~
 
 .. image:: images/confusion-4.png
-
-.. note:: The small triangle indicates the corner which the turtle should start and end when the Hollow C is drawn. Make sure that the turtle is pointing in the same direction at the beginning and end.
 
 Let's draw the image three different ways:
 
@@ -247,14 +247,16 @@ Let's draw the image three different ways:
 - using only the ``.forward()`` and ``.right()`` commands
 - using ``.forward()``, ``.backward()``, and ``.right(90)`` (note that you may use 90, and only 90, as the argument to the ``.right()`` command for this solution)
 
+.. note:: Getting a solution to this problem is great, but consider whether you have chosen the most *elegant* solution you can. After you have completed your solution, it might be a good idea to compare your solution with what your classmates came up with.
+
 .. activecode:: turtle_confusion_4
     :nocodelens:
 
     import turtle
 
 
-Turtle Graphics Assignment
----------------------------
+Open Ended Drawing
+~~~~~~~~~~~~~~~~~~~~
 
 Create a Python program that uses the turtle module, and draws something cool. The sky is the limit on what you can draw. There are a couple things you need to make sure you do, though:
 

@@ -85,8 +85,8 @@ Here is the Python code for the first 4 steps above
    andy.shape('turtle')
 
    # move the turtles to their starting locations
-   andy.up()
-   lance.up()
+   andy.penup()
+   lance.penup()
    andy.goto(-100,20)
    lance.goto(-100,-20)
 
@@ -123,7 +123,7 @@ some artificial finish line?  Good question!  In order to make that happen, we'l
 Turtle Race with a While Loop
 -----------------------------
 
-We can ask a turtle what it's current x or y coordinate is, using the ``turtle.xcor()`` and ``turtle.ycor()`` functions. Consider the following example of this:
+We can ask a turtle what it's current x or y coordinate is, using the ``turtle_name.xcor()`` and ``turtle_name.ycor()`` functions. Consider the following example of this:
 
 .. activecode:: turtle_races_2
     :nocodelens:
@@ -140,7 +140,8 @@ We can ask a turtle what it's current x or y coordinate is, using the ``turtle.x
     print(lance.xcor())
     print(lance.ycor())
 
-Use the ``xcor()`` function to write a version of the turtle race that has the turtles stop after they reach a virtual finish line. *You might want to create a third turtle that draws a finish line before the race begins.*
+
+Use the ``xcor()`` function to write a version of the turtle race that has the turtles stop after they reach a virtual finish line. *You might want to create a third turtle that draws a finish line before the race begins.*  You will want to recall the logical operators we have studied: specifically, ``and`` and ``or``.
 
 
 .. activecode:: turtle_races_3
@@ -169,10 +170,10 @@ Use the ``xcor()`` function to write a version of the turtle race that has the t
    # your code goes here
 
 
-.. note:: Although we will explore the ``and`` and ``or`` keywords in more detail later, after you get the program working, you should try switching your while conditional statement to use ``and`` instead of ``or``. Can you predict what the program will do?
+.. note::  After you get the program working, you should try switching your while conditional statement to use ``and`` instead of ``or``. Can you predict what the program will do?
 
 
 Assignment Work Time
 ---------------------
 
-Continue working on your most recent assignment (for example, a turtle graphics assignment focused on loops and conditionals).
+Continue working on your most recent assignment (possibly a turtle graphics assignment focused on loops and conditionals).
