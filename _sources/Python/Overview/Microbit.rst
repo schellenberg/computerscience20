@@ -17,7 +17,7 @@ The Time Module and Using a Micro:bit
 Time Module
 ------------
 
-Sometimes, we'd like to wait a bit before running the next command in a Python program. To do this, we can ``import time``, then use the ``.sleep()`` function. An example is below:
+Sometimes, we'd like to wait a bit before running the next command in a Python program. To do this, we can ``import time``, then use the ``sleep()`` function. An example is below:
 
 .. activecode:: time-sleep-1
     :nocodelens:
