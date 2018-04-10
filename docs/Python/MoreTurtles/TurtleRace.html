@@ -261,7 +261,7 @@
     <div class="section" id="random-numbers">
 <h2>2.1. Random Numbers<a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h2>
 <p>Before we begin writing code for this lab, we need to introduce one more
-Python module.  The <code class="docutils literal"><span class="pre">random</span></code> module allows us to generate random numbers.
+Python module.  The <code class="docutils literal"><span class="pre">random</span></code> module allows us to generate random numbers. It has been used in a few places earlier in the text, so you might already feel comfortable with it.
 It’s easy to use:</p>
 
 <div data-childcomponent="lab01_1" class="runestone explainer ac_section alert alert-warning">
@@ -272,10 +272,9 @@ number = random.randrange(1,10)
 print(number)
 </textarea>
 </div>
-<p>The <code class="docutils literal"><span class="pre">randrange</span></code> function as called in the example above, generates a random
-number from 1 to 9.
-Even though we said 10 the randrange function works just like the <em>range</em>
-function when it comes to starting and stopping points.  If you run the
+<p>The <code class="docutils literal"><span class="pre">randrange</span></code> function, as called in the example above, generates a random
+number from 1 to 9. Even though we passed in 1,10 the randrange function works just like the <em>range</em>
+function when it comes to starting and stopping points. In other words, the randrange function will start at 1, and go <em>up to but not including 10</em>. If you run the
 program over and over again you should see that each time you run it a
 different number is generated.  Random numbers are the basis of all kinds of
 interesting programs we can write, and the <code class="docutils literal"><span class="pre">randrange</span></code> function is just one
@@ -354,7 +353,7 @@ some artificial finish line?  Good question!  In order to make that happen, we�
 </div>
 <div class="section" id="turtle-race-with-a-while-loop">
 <h2>2.3. Turtle Race with a While Loop<a class="headerlink" href="#turtle-race-with-a-while-loop" title="Permalink to this headline">¶</a></h2>
-<p>We can ask a turtle what it’s current x or y coordinate is, using the <code class="docutils literal"><span class="pre">turtle_name.xcor()</span></code> and <code class="docutils literal"><span class="pre">turtle_name.ycor()</span></code> functions. Consider the following example of this:</p>
+<p>As we’ve seen before, we can ask a turtle about it’s current x or y coordinate using the <code class="docutils literal"><span class="pre">turtle_name.xcor()</span></code> and <code class="docutils literal"><span class="pre">turtle_name.ycor()</span></code> functions. Consider the following example:</p>
 
 <div data-childcomponent="turtle_races_2" class="runestone explainer ac_section alert alert-warning">
 
@@ -367,7 +366,12 @@ lance = turtle.Turtle()
 lance.shape('turtle')
 
 # move the turtles to their starting locations
+print(lance.xcor())
+print(lance.ycor())
+
+print()
 lance.forward(100)
+
 print(lance.xcor())
 print(lance.ycor())
 </textarea>

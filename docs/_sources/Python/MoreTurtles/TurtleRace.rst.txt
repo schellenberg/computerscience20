@@ -17,7 +17,7 @@ Random Numbers
 --------------
 
 Before we begin writing code for this lab, we need to introduce one more
-Python module.  The ``random`` module allows us to generate random numbers.
+Python module.  The ``random`` module allows us to generate random numbers. It has been used in a few places earlier in the text, so you might already feel comfortable with it.
 It's easy to use:
 
 .. activecode:: lab01_1
@@ -27,10 +27,9 @@ It's easy to use:
    number = random.randrange(1,10)
    print(number)
 
-The ``randrange`` function as called in the example above, generates a random
-number from 1 to 9.
-Even though we said 10 the randrange function works just like the *range*
-function when it comes to starting and stopping points.  If you run the
+The ``randrange`` function, as called in the example above, generates a random
+number from 1 to 9. Even though we passed in 1,10 the randrange function works just like the *range*
+function when it comes to starting and stopping points. In other words, the randrange function will start at 1, and go *up to but not including 10*. If you run the
 program over and over again you should see that each time you run it a
 different number is generated.  Random numbers are the basis of all kinds of
 interesting programs we can write, and the ``randrange`` function is just one
@@ -123,7 +122,7 @@ some artificial finish line?  Good question!  In order to make that happen, we'l
 Turtle Race with a While Loop
 -----------------------------
 
-We can ask a turtle what it's current x or y coordinate is, using the ``turtle_name.xcor()`` and ``turtle_name.ycor()`` functions. Consider the following example of this:
+As we've seen before, we can ask a turtle about it's current x or y coordinate using the ``turtle_name.xcor()`` and ``turtle_name.ycor()`` functions. Consider the following example:
 
 .. activecode:: turtle_races_2
     :nocodelens:
@@ -136,7 +135,12 @@ We can ask a turtle what it's current x or y coordinate is, using the ``turtle_n
     lance.shape('turtle')
 
     # move the turtles to their starting locations
+    print(lance.xcor())
+    print(lance.ycor())
+    
+    print()
     lance.forward(100)
+    
     print(lance.xcor())
     print(lance.ycor())
 
