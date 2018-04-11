@@ -23,7 +23,7 @@ Inner Squares
 
 .. image:: images/confusion-6.png
 
-Draw the shape above. You may find it helpful to consider how you might draw this shape by defining a new version of ``draw_square()``. Perhaps you might not start in the same location as we did the last time we drew a square?
+Define a function similar to ``draw_square(my_turtle, side_length)`` and call it twice to draw the shape above. You may find it helpful define a new version of of this function, instead of reusing the one from yesterday. Perhaps you might not start in the same location as we did the last time we drew a square?
 
 .. activecode:: practice_problems_1
     :nocodelens:
@@ -33,14 +33,14 @@ Draw the shape above. You may find it helpful to consider how you might draw thi
 .. reveal:: hint_given
     :showtitle: Need a Hint?
 
-    For the first three problems, beginning your drawing from the *middle* of the square, then ending in the middle of the square (facing the same direction as you started) can be a really helpful strategy. You might want to create a function such as ``draw_square_from_centre(the_turtle, side_length)`` that does this. This new function could even call your old ``draw_square()`` function, if you'd like.
+    For the first three problems, beginning your drawing from the *middle* of the square, then ending in the middle of the square (facing the same direction as you started) can be a really helpful strategy. You might want to create a function such as ``draw_square_from_centre(the_turtle, side_length)`` that does this. This new function could even call your old ``draw_square(my_turtle, side_length)`` function, if you'd like.
 
 Square Logo
 ~~~~~~~~~~~~~~
 
 .. image:: images/confusion-7.png
 
-Draw the shape above. Depending on how you defined the ``draw_square()`` function in the problem above, you may be able to easily use reuse your function.
+Draw the shape above. Depending on how you defined the function in the problem above, you may be able to easily use reuse your function.
 
 .. activecode:: practice_problems_2
     :nocodelens:
@@ -66,7 +66,7 @@ Bonus - If You Are Done Before Others
 
 .. image:: images/confusion-20.png
 
-Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)! Creating an adapted version of your previous ``draw_square()`` function isn't a bad idea...
+Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)! Creating an adapted version of one of your previous functions isn't a bad idea...
 
 .. activecode:: practice_problems_4
     :nocodelens:
