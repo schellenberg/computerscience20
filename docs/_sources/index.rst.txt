@@ -96,8 +96,7 @@ Python - Turtle Drawings (Loops and Functions)
    Python/MoreTurtles/TurtleRace.rst
    Python/MoreTurtles/FunctionIntro.rst
    Python/MoreTurtles/DrawingPractice.rst
-   Python/MoreTurtles/AssignmentWorkPeriod.rst
-   Python/PracticeQuizzes/Loops.rst
+   Python/MoreTurtles/PracticeQuizAndWorkPeriod.rst
 
 
 Python - Functions in Detail
