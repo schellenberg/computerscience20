@@ -113,7 +113,7 @@ this purpose!
 
 
 Defining a new function does not make the function run. To do that we need a
-**function call**.  This is also known as a **function invocation**. We've already seen how to call some built-in functions like
+**function call** (also known as a function invocation). We've already seen how to call some built-in functions like
 ``print``, ``range`` and ``int``. Function calls contain the name of the function to be
 executed followed by a list of values in parentheses, called *arguments*, which are assigned
 to the parameters in the function definition.  
@@ -124,7 +124,7 @@ Once we've defined a function, we can call it as often as we like and its
 statements will be executed each time we call it.  In this case, we could use it to get
 one of our turtles to draw a square and then we can move the turtle and have it draw a different square in a
 different location.  Note that we lift the tail so that when ``alex`` moves there is no trace.  We put the tail
-back down before drawing the next square.  Make sure you can identify both invocations of the ``draw_square`` function.
+back down before drawing the next square.  Make sure you can identify both calls of the ``draw_square`` function.
 
 .. activecode:: functions_intro_2
     :nocodelens:
@@ -205,10 +205,10 @@ Check your understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: functions_intro_understanding_1
-   :answer_a: def draw_circle(t):
+   :answer_a: def draw_circle(my_turtle):
    :answer_b: def draw_circle:
-   :answer_c: draw_circle(t, sz):
-   :answer_d: def draw_circle(t, sz)
+   :answer_c: draw_circle(my_turtle, side_length):
+   :answer_d: def draw_circle(my_turtle, side_length)
    :correct: a
    :feedback_a: A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.
    :feedback_b: A function needs to specify its parameters in its header.
@@ -220,49 +220,49 @@ Check your understanding
 
 .. mchoice:: functions_intro_understanding_2
    :answer_a: i
-   :answer_b: t
-   :answer_c: t, sz
-   :answer_d: t, sz, i
+   :answer_b: my_turtle
+   :answer_c: my_turtle, side_length
+   :answer_d: my_turtle, side_length, i
    :correct: c
    :feedback_a: i is a variable used inside of the function, but not a parameter, which is passed in to the function.
-   :feedback_b: t is only one of the parameters to this function.
-   :feedback_c: Yes, the function specifies two parameters: t and sz.
+   :feedback_b: my_turtle is only one of the parameters to this function.
+   :feedback_c: Yes, the function specifies two parameters: my_turtle and side_length.
    :feedback_d: the parameters include only those variables whose values that the function expects to receive as input.  They are specified in the header of the function.
 
    What are the parameters of the following function?
 
    .. code-block:: python
 
-     def draw_square(t, sz):
-         """Make turtle t draw a square of with side sz."""
+     def draw_square(my_turtle, side_length):
+         """Make turtle my_turtle draw a square of with side side_length."""
          for i in range(4):
-             t.forward(sz)
-             t.left(90)
+             my_turtle.forward(side_length)
+             my_turtle.left(90)
 
 
 
 .. mchoice:: functions_intro_understanding_3
-   :answer_a: def draw_square(t, sz)
+   :answer_a: def draw_square(my_turtle, side_length)
    :answer_b: draw_square
    :answer_c: draw_square(10)
    :answer_d: draw_square(alex, 10):
    :answer_e: draw_square(alex, 10)
    :correct: e
-   :feedback_a: No, t and sz are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.
+   :feedback_a: No, my_turtle and side_length are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.
    :feedback_b: A function call always requires parentheses after the name of the function.
    :feedback_c: This function takes two parameters (arguments)
    :feedback_d: A colon is only required in a function definition.  It will cause an error with a function call.
    :feedback_e: Since alex was already previously defined and 10 is a value, we have passed in two correct values for this function.
 
-   Considering the function below, which of the following statements correctly invokes, or calls, this function (i.e., causes it to run)?  Assume we already have a turtle named alex.
+   Considering the function below, which of the following statements correctly calls, or invokes, this function (i.e., causes it to run)?  Assume we already have defined a turtle named alex.
 
    .. code-block:: python
 
-     def draw_square(t, sz):
-         """Make turtle t draw a square of with side sz."""
+     def draw_square(my_turtle, side_length):
+         """Make turtle my_turtle draw a square of with side side_length."""
          for i in range(4):
-             t.forward(sz)
-             t.left(90)
+             my_turtle.forward(side_length)
+             my_turtle.left(90)
 
 .. mchoice:: functions_intro_understanding_4
    :answer_a: True

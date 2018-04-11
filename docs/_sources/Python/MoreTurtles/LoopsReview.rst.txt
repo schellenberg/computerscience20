@@ -1,4 +1,4 @@
-Looping with Turtles Assignment
+Loops Review and Turtle Drawing 
 ================================
 
 .. topic:: Quick Overview of Day
