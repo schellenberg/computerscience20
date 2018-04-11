@@ -156,7 +156,9 @@ Now that you have written a solution for the ``sum_to(n)`` function, let's test 
 
 Although our accumulator pattern worked just fine when we passed in a number like 10, let's see what happens if we crank that number up a bit. Try 100. How about 1000? Let's keep going, and try 10000. Continue to add on one more zero, then running the code again. Depending on the speed of your computer, there will come a point where you begin to notice a distinct pause before your program prints an answer. Why is this? By looking at your code, you should realize that the loop must repeat by the number you pass into the function, so when we pass in 100, the loop repeats 100 times. Is there any way we can write a better ``sum_to(n)`` function?
 
-There's a famous story (no one really knows if it's true) about the mathematician Carl Friedrich Gauss, from when the mathematician was only in grade school (in the late 18th century). Gauss' teacher wanted a break from dealing with his students, so he assigned them a simple, but tedious problem; find the sum of the integers from 1 to 100. The teacher expected to have a few minutes of peace and quiet, but Gauss thought briefly, and astonished his teacher by correctly answering the question without doing the tedious task of summing all the values together. How did he do it? He noticed a pattern, as follows::
+There's a famous story (no one really knows if it's true) about the mathematician Carl Friedrich Gauss, from when the mathematician was only in grade school (in the late 18th century). Gauss' teacher wanted a break from dealing with his students, so he assigned them a simple, but tedious problem; find the sum of the integers from 1 to 100. The teacher expected to have a few minutes of peace and quiet, but Gauss thought briefly, and astonished his teacher by correctly answering the question without doing the tedious task of summing all the values together. 
+
+How did he do it? He noticed a pattern, as follows::
 
     the_sum = 1 + 2 + 3 + 4 + ... + 98 + 99 + 100
 

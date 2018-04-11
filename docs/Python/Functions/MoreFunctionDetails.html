@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. Writing Fruitful Functions Practice" href="WritingFruitfulFunctionsPractice.html" />
-    <link rel="prev" title="6. Loops Practice Quiz" href="../PracticeQuizzes/Loops.html" />
+    <link rel="prev" title="5. Loops Practice Quiz and Assignment Work Period" href="../MoreTurtles/PracticeQuizAndWorkPeriod.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -217,8 +217,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 6. Loops Practice Quiz" data-toggle="tooltip">
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-prev" title="Previous Chapter - 5. Loops Practice Quiz and Assignment Work Period" data-toggle="tooltip">
+    <a href="../MoreTurtles/PracticeQuizAndWorkPeriod.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -307,7 +307,7 @@ print(abs(-5))
 import math
 print(math.pow(2, 3))
 
-print(math.pow(7, 4))
+print(math.pow(7, 2))
 </textarea>
 </div>
 <div class="admonition note">
@@ -321,15 +321,15 @@ print(math.pow(7, 4))
 <textarea data-component="activecode" id=more_function_details_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 print(max(7, 11))
 print(max(4, 1, 17, 2, 12))
-print(max(3 * 11, 5 ** 3, 512 - 9, 1024 ** 0))
+print(max(11, 5 * 3, 25 - 9, 0))
 </textarea>
 </div>
 <p><code class="docutils literal"><span class="pre">max</span></code> can be sent any number of arguments, separated by commas, and will
 return the maximum value sent. The arguments can be either simple values or
-expressions. In the last example, 503 is returned, since it is larger than 33,
-125, and 1.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
+expressions. In the last example, 16 is returned, since it is larger than 11,
+15, and 0.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
 <p>Notice that each of the above functions return values that can be used to build more complex expressions.</p>
-<p>So an important difference between these functions and one like <code class="docutils literal"><span class="pre">draw_square</span></code> or <code class="docutils literal"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
+<p>So an important difference between these functions and ones like <code class="docutils literal"><span class="pre">draw_square</span></code> or <code class="docutils literal"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
 <p>Functions that return values are sometimes called <strong>fruitful functions</strong>.
 A function that doesn’t return a value can be simply called a function, or if we want
 to make it extremely clear, a <em>non-fruitful</em> function.</p>
@@ -357,7 +357,7 @@ print("The result of", to_square, "squared is", result)
 result is returned to the caller as the “fruit” of calling this function.
 Because the return statement can contain any Python expression we could have
 avoided creating the <strong>temporary variable</strong> <code class="docutils literal"><span class="pre">squared_value</span></code> and simply used
-<code class="docutils literal"><span class="pre">return</span> <span class="pre">original_number*original_number</span></code>.
+<code class="docutils literal"><span class="pre">return</span> <span class="pre">original_number</span> <span class="pre">*</span> <span class="pre">original_number</span></code>.
 Try modifying the square function above to see that this works just the same.
 On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal"><span class="pre">squared_value</span></code> in the program above makes debugging easier.  These temporary variables are examples of <strong>local variables</strong>, which will be explained further in the next section.</p>
 <p>Notice something important here. The name of the variable we pass as an
@@ -494,7 +494,7 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_1">
-            <p>string-operators-119: What is wrong with the following function definition:</p>
+            <p>microbit-examples-118: What is wrong with the following function definition:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;the answer is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
@@ -515,7 +515,7 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_2">
-            <p>string-operators-120: What will the following function return?</p>
+            <p>microbit-examples-119: What will the following function return?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
@@ -611,26 +611,26 @@ nonsensical variation of the square function.</p>
 <div data-childcomponent="badsquare_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=badsquare_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-def badsquare(original_number):
+def bad_square(original_number):
     squared_value = original_number ** power
     return squared_value
 
 power = 2
-result = badsquare(10)
+result = bad_square(10)
 print(result)
 </textarea>
 </div>
-<p>Although the <code class="docutils literal"><span class="pre">badsquare</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
+<p>Although the <code class="docutils literal"><span class="pre">bad_square</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
 an important rule about how variables are looked up in Python.
 First, Python looks at the variables that are defined as local variables in
 the function.  We call this the <strong>local scope</strong>.  If the variable name is not
 found in the local scope, then Python looks at the global variables,
 or <strong>global scope</strong>.  This is exactly the case illustrated in the code above.
-<code class="docutils literal"><span class="pre">power</span></code> is not found locally in <code class="docutils literal"><span class="pre">badsquare</span></code> but it does exist globally.
+<code class="docutils literal"><span class="pre">power</span></code> is not found locally in <code class="docutils literal"><span class="pre">bad_square</span></code> but it does exist globally.
 The appropriate way to write this function would be to pass power as a parameter.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For practice, you should rewrite the badsquare example above to have a second parameter called power.</p>
+<p class="last">For practice, you should rewrite the bad_square example above to have a second parameter called <code class="docutils literal"><span class="pre">power</span></code>.</p>
 </div>
 <p>There is another variation on this theme of local versus global variables.  Assignment statements in the local function cannot
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
@@ -642,7 +642,7 @@ codelens example:</p>
 <p class="cl_caption"><span class="cl_caption_text"> (codelens_powerof_bad)</span> </p>
 </div>
 <script type="text/javascript">
-var codelens_powerof_bad_trace = {"code": "def powerof(original_number, p):\n    power = p   # Another dumb mistake\n    new_value = original_number ** power\n    return new_value\n\npower = 3\nresult = powerof(10, 2)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1]}, "ordered_globals": ["powerof"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2}, "ordered_varnames": ["original_number", "p", "power"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(original_number, p)", null]}, "stdout": "100\n"}]};
+var codelens_powerof_bad_trace = {"code": "def power_of(original_number, p):\n    power = p   # Another dumb mistake\n    new_value = original_number ** power\n    return new_value\n\npower = 3\nresult = power_of(10, 2)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"power_of": ["REF", 1]}, "ordered_globals": ["power_of"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "power_of", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [{"func_name": "power_of", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "power_of_f1"}], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "power_of", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [{"func_name": "power_of", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10}, "ordered_varnames": ["original_number", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "power_of_f1"}], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "power_of", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [{"func_name": "power_of", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2}, "ordered_varnames": ["original_number", "p", "power"], "is_zombie": false, "is_highlighted": true, "unique_hash": "power_of_f1"}], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "power_of", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [{"func_name": "power_of", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "power_of_f1"}], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "power_of", "globals": {"power_of": ["REF", 1], "power": 3}, "ordered_globals": ["power_of", "power"], "stack_to_render": [{"func_name": "power_of", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"p": 2, "original_number": 10, "power": 2, "new_value": 100, "__return__": 100}, "ordered_varnames": ["original_number", "p", "power", "new_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "power_of_f1"}], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"power_of": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["power_of", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"power_of": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["power_of", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "power_of(original_number, p)", null]}, "stdout": "100\n"}]};
 var codelens_powerof_bad_vis;
 
 $(document).ready(function() {
@@ -756,7 +756,7 @@ $(window).resize(function() {
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_1">
-            string-operators-121: What is a variable’s scope?
+            microbit-examples-120: What is a variable’s scope?
             <li data-component="answer"  id="test_question5_3_1_opt_a">Its value</li><li data-component="feedback" id="test_question5_3_1_opt_a">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
             
             <li data-component="answer" data-correct id="test_question5_3_1_opt_b">The area in the code where a variable can be accessed.</li><li data-component="feedback" id="test_question5_3_1_opt_b"></li>
@@ -769,7 +769,7 @@ $(window).resize(function() {
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_2">
-            string-operators-122: What is a local variable?
+            microbit-examples-121: What is a local variable?
             <li data-component="answer" data-correct id="test_question5_3_2_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback" id="test_question5_3_2_opt_a">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
             
             <li data-component="answer"  id="test_question5_3_2_opt_b">The same as a parameter</li><li data-component="feedback" id="test_question5_3_2_opt_b">While parameters may be considered local variables, functions may also define and use additional local variables.</li>
@@ -782,7 +782,7 @@ $(window).resize(function() {
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_3">
-            string-operators-123: Can you use the same name for a local variable as a global variable?
+            microbit-examples-122: Can you use the same name for a local variable as a global variable?
             <li data-component="answer"  id="test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback" id="test_question5_3_3_opt_a">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
             
             <li data-component="answer" data-correct id="test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback" id="test_question5_3_3_opt_b">It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
@@ -796,7 +796,7 @@ $(window).resize(function() {
 </div>
 <div class="section" id="practice-problems">
 <h2>1.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have to return</strong> the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -898,12 +898,12 @@ myTests().main()
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 6. Loops Practice Quiz' data-toggle="tooltip">
-    <a href="../PracticeQuizzes/Loops.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 5. Loops Practice Quiz and Assignment Work Period' data-toggle="tooltip">
+    <a href="../MoreTurtles/PracticeQuizAndWorkPeriod.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../PracticeQuizzes/Loops.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../MoreTurtles/PracticeQuizAndWorkPeriod.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - 2. Writing Fruitful Functions Practice' data-toggle="tooltip" >
     <a href="WritingFruitfulFunctionsPractice.html" >

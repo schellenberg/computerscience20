@@ -55,7 +55,7 @@ Some functions take more than one argument. For example the math module contains
     import math
     print(math.pow(2, 3))
 
-    print(math.pow(7, 4))
+    print(math.pow(7, 2))
 
 .. note::
 
@@ -68,16 +68,16 @@ Another built-in function that takes more than one argument is ``max``.
 
     print(max(7, 11))
     print(max(4, 1, 17, 2, 12))
-    print(max(3 * 11, 5 ** 3, 512 - 9, 1024 ** 0))
+    print(max(11, 5 * 3, 25 - 9, 0))
 
 ``max`` can be sent any number of arguments, separated by commas, and will
 return the maximum value sent. The arguments can be either simple values or
-expressions. In the last example, 503 is returned, since it is larger than 33,
-125, and 1.  Note that ``max`` also works on lists of values.
+expressions. In the last example, 16 is returned, since it is larger than 11,
+15, and 0.  Note that ``max`` also works on lists of values.
 
 Notice that each of the above functions return values that can be used to build more complex expressions.
 
-So an important difference between these functions and one like ``draw_square`` or ``draw_rectangle`` is that ``draw_square`` was not executed because we wanted it to compute a value --- on the contrary, we wrote ``draw_square`` because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.
+So an important difference between these functions and ones like ``draw_square`` or ``draw_rectangle`` is that ``draw_square`` was not executed because we wanted it to compute a value --- on the contrary, we wrote ``draw_square`` because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.
 
 Functions that return values are sometimes called **fruitful functions**.
 A function that doesn't return a value can be simply called a function, or if we want
@@ -110,7 +110,7 @@ The **return** statement is followed by an expression which is evaluated.  Its
 result is returned to the caller as the "fruit" of calling this function.
 Because the return statement can contain any Python expression we could have
 avoided creating the **temporary variable** ``squared_value`` and simply used
-``return original_number*original_number``.
+``return original_number * original_number``.
 Try modifying the square function above to see that this works just the same.
 On the other hand, using **temporary variables** like ``squared_value`` in the program above makes debugging easier.  These temporary variables are examples of **local variables**, which will be explained further in the next section.
 
@@ -265,25 +265,25 @@ nonsensical variation of the square function.
 
 .. activecode:: badsquare_1
 
-    def badsquare(original_number):
+    def bad_square(original_number):
         squared_value = original_number ** power
         return squared_value
 
     power = 2
-    result = badsquare(10)
+    result = bad_square(10)
     print(result)
 
 
-Although the ``badsquare`` function works, it is silly and poorly written.  We have done it here to illustrate
+Although the ``bad_square`` function works, it is silly and poorly written.  We have done it here to illustrate
 an important rule about how variables are looked up in Python.
 First, Python looks at the variables that are defined as local variables in
 the function.  We call this the **local scope**.  If the variable name is not
 found in the local scope, then Python looks at the global variables,
 or **global scope**.  This is exactly the case illustrated in the code above.
-``power`` is not found locally in ``badsquare`` but it does exist globally.
+``power`` is not found locally in ``bad_square`` but it does exist globally.
 The appropriate way to write this function would be to pass power as a parameter.
 
-.. note:: For practice, you should rewrite the badsquare example above to have a second parameter called power.
+.. note:: For practice, you should rewrite the bad_square example above to have a second parameter called ``power``.
 
 There is another variation on this theme of local versus global variables.  Assignment statements in the local function cannot 
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
@@ -291,13 +291,13 @@ codelens example:
 
 .. codelens::  codelens_powerof_bad
 
-    def powerof(original_number, p):
+    def power_of(original_number, p):
         power = p   # Another dumb mistake
         new_value = original_number ** power
         return new_value
 
     power = 3
-    result = powerof(10, 2)
+    result = power_of(10, 2)
     print(result)
 
 Now step through the code.  What do you notice about the values of variable ``power``
@@ -381,7 +381,7 @@ Check Your Understanding
 Practice Problems
 ------------------
 
-Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have** to return the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
+Try the following practice problems to be sure you understand how to create fruitful functions. Your functions **have to return** the correct value -- using ``print()`` will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.
 
 .. note:: The only thing you need to do for the following is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
 

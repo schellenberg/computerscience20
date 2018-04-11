@@ -376,7 +376,7 @@ $(window).resize(function() {
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_4_1">
-            <p>string-operators-124: Consider the following code:</p>
+            <p>microbit-examples-123: Consider the following code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">running_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -402,7 +402,7 @@ instruction in the loop?</p>
             
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="question5_4_1p">
-        <span data-question>string-operators-125: Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</span>n = int(input('How many odd numbers would
+        <span data-question>microbit-examples-124: Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</span>n = int(input('How many odd numbers would
 you like to add together?'))
 the_sum = 0
 odd_number = 1
@@ -429,7 +429,8 @@ print(the_sum)
 </div>
 <p>Now that you have written a solution for the <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function, let’s test it a bit. You might want to do the following in Thonny, rather than your browser, as it will cause your browser to become unresponsive while the program is working.</p>
 <p>Although our accumulator pattern worked just fine when we passed in a number like 10, let’s see what happens if we crank that number up a bit. Try 100. How about 1000? Let’s keep going, and try 10000. Continue to add on one more zero, then running the code again. Depending on the speed of your computer, there will come a point where you begin to notice a distinct pause before your program prints an answer. Why is this? By looking at your code, you should realize that the loop must repeat by the number you pass into the function, so when we pass in 100, the loop repeats 100 times. Is there any way we can write a better <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function?</p>
-<p>There’s a famous story (no one really knows if it’s true) about the mathematician Carl Friedrich Gauss, from when the mathematician was only in grade school (in the late 18th century). Gauss’ teacher wanted a break from dealing with his students, so he assigned them a simple, but tedious problem; find the sum of the integers from 1 to 100. The teacher expected to have a few minutes of peace and quiet, but Gauss thought briefly, and astonished his teacher by correctly answering the question without doing the tedious task of summing all the values together. How did he do it? He noticed a pattern, as follows:</p>
+<p>There’s a famous story (no one really knows if it’s true) about the mathematician Carl Friedrich Gauss, from when the mathematician was only in grade school (in the late 18th century). Gauss’ teacher wanted a break from dealing with his students, so he assigned them a simple, but tedious problem; find the sum of the integers from 1 to 100. The teacher expected to have a few minutes of peace and quiet, but Gauss thought briefly, and astonished his teacher by correctly answering the question without doing the tedious task of summing all the values together.</p>
+<p>How did he do it? He noticed a pattern, as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">100</span>
 </pre></div>
 </div>
