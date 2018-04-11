@@ -110,7 +110,7 @@ Loops Practice Quiz
 --------------------
 
 Question 1
------------
+~~~~~~~~~~~~
 
 .. mchoice:: loops_practice_quiz_1
     :answer_a: No shape will be drawn.
@@ -138,7 +138,7 @@ Question 1
 
 
 Question 2
------------
+~~~~~~~~~~~~
 
 .. mchoice:: loops_practice_quiz_2
     :answer_a: No shape will be drawn.
@@ -166,7 +166,7 @@ Question 2
 
 
 Question 3
------------
+~~~~~~~~~~~~
 
 .. fillintheblank:: loops_practice_quiz_3
 
@@ -181,7 +181,7 @@ Question 3
 
 
 Question 4
------------
+~~~~~~~~~~~~
 
 .. mchoice:: loops_practice_quiz_4
     :answer_a: True
@@ -197,7 +197,7 @@ Question 4
 
 
 Question 5
------------
+~~~~~~~~~~~~
 
 .. fillintheblank:: loops_practice_quiz_5
 
