@@ -301,3 +301,15 @@ Leap Year
             
     myTests().main()
 
+
+
+
+Using Your Is Even Function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that continues to take in a number from the user until the number given is NOT even. For example, the user might enter 4, 10, 42, 5. The program would only stop when the non-even number 5 is entered. You need to use the ``is_even`` function you defined above.
+
+.. activecode:: using-is-even
+    :nocodelens:
+
+    # your code here!
