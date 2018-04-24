@@ -194,12 +194,11 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">3. Fruitful Functions and the Micro:bit</a><ul>
 <li><a class="reference internal" href="#adapting-the-reaction-game">3.1. Adapting the Reaction Game</a></li>
-<li><a class="reference internal" href="#micro-bit-accelerometer">3.2. Micro:bit Accelerometer</a></li>
-<li><a class="reference internal" href="#an-accelerometer-fruitful-function">3.3. An Accelerometer Fruitful Function</a></li>
-<li><a class="reference internal" href="#things-to-explain-in-the-code">3.4. Things to Explain in the Code</a></li>
-<li><a class="reference internal" href="#adapt-the-code">3.5. Adapt the Code</a></li>
-<li><a class="reference internal" href="#turtle-drawing">3.6. Turtle Drawing</a></li>
-<li><a class="reference internal" href="#micro-bit-game-assignment">3.7. Micro:bit Game Assignment</a></li>
+<li><a class="reference internal" href="#an-accelerometer-fruitful-function">3.2. An Accelerometer Fruitful Function</a></li>
+<li><a class="reference internal" href="#things-to-explain-in-the-code">3.3. Things to Explain in the Code</a></li>
+<li><a class="reference internal" href="#adapt-the-code">3.4. Adapt the Code</a></li>
+<li><a class="reference internal" href="#turtle-drawing">3.5. Turtle Drawing</a></li>
+<li><a class="reference internal" href="#micro-bit-game-assignment">3.6. Micro:bit Game Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -268,44 +267,8 @@
 <li>change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.</li>
 </ul>
 </div>
-<div class="section" id="micro-bit-accelerometer">
-<h2>3.2. Micro:bit Accelerometer<a class="headerlink" href="#micro-bit-accelerometer" title="Permalink to this headline">¶</a></h2>
-<p>Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package installed (if you do not, just open Tools -&gt; Manage Packages… and type it into the search bar).</p>
-<p>The Micro:bit can measure movement along three axes:</p>
-<ul class="simple">
-<li>X - tilting left/right.</li>
-<li>Y - tilting forwards/backwards.</li>
-<li>Z - moving up/down.</li>
-</ul>
-<p>You can ask the Micro:bit for the current amount of tilt on any of the x, y and z axes. To do this, you use a the following functions:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">microbit.accelerometer.get_x()</span></code></li>
-<li><code class="docutils literal"><span class="pre">microbit.accelerometer.get_y()</span></code></li>
-<li><code class="docutils literal"><span class="pre">microbit.accelerometer.get_z()</span></code></li>
-</ul>
-<p>Each of the above functions will return an integer representing the measurement in milli-g’s. If you are “level” along a particular axis, the function will return 0.</p>
-<p>A simple example of how this works follows. Notice that for the <code class="docutils literal"><span class="pre">get_x</span></code>, a positive value means “tilted right”, and a negative value means “tilted left”. The larger the value is (either positive or negative), the more the Micro:bit is tilted. You might want to print out the value of <code class="docutils literal"><span class="pre">x_tilt</span></code> below, to be sure you understand how this works.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
-
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">x_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">x_tilt</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted right.&quot;</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="n">x_tilt</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">100</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted left.&quot;</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flat!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="an-accelerometer-fruitful-function">
-<h2>3.3. An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
 <p>Let’s adapt the code above to use a fruitful function. We will make a function called <code class="docutils literal"><span class="pre">horizontal_tilt()</span></code> that returns either “left”, “right”, or None.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -338,7 +301,7 @@
 </div>
 </div>
 <div class="section" id="things-to-explain-in-the-code">
-<h2>3.4. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This will be written up better soon. For now, use the following topic list to guide your class discussion regarding how the code works.</p>
@@ -349,7 +312,7 @@
 </ul>
 </div>
 <div class="section" id="adapt-the-code">
-<h2>3.5. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
 <p>Try the following (either by yourself or with a partner):</p>
 <ul class="simple">
 <li>create a fruitful function <code class="docutils literal"><span class="pre">vertical_tilt(sensitivity_amount)</span></code> that uses <code class="docutils literal"><span class="pre">get_y</span></code> and returns either “forward”, “backward”, or None</li>
@@ -357,7 +320,7 @@
 </ul>
 </div>
 <div class="section" id="turtle-drawing">
-<h2>3.6. Turtle Drawing<a class="headerlink" href="#turtle-drawing" title="Permalink to this headline">¶</a></h2>
+<h2>3.5. Turtle Drawing<a class="headerlink" href="#turtle-drawing" title="Permalink to this headline">¶</a></h2>
 <p>Now that you have created some functions that let us easily find out what direction the Micro:bit is tilted in, let’s use those functions to do some turtle drawing. Your program should be able to have your turtle:</p>
 <ul class="simple">
 <li>move forward when the Micro:bit is tilted forward</li>
@@ -379,7 +342,7 @@
 </div>
 </div>
 <div class="section" id="micro-bit-game-assignment">
-<h2>3.7. Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
+<h2>3.6. Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Use the examples we’ve done as a starting point, and come up with your own game that uses the Micro:bit and functions! You are welcome to combine the turtle module as well. At a minimum, your game must:</p>
 <ul class="simple">
 <li>use at least one fruitful function (that you have created). You are welcome to use the fruitful functions shown in our demos, but you need to create at least one of your own!</li>

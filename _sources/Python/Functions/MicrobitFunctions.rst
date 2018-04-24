@@ -21,47 +21,6 @@ Adapting the Reaction Game
 - change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.
 
 
-Micro:bit Accelerometer
--------------------------
-
-Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the ``cs20-microbitio`` package installed (if you do not, just open Tools -> Manage Packages... and type it into the search bar). 
-
-The Micro:bit can measure movement along three axes:
-
-- X - tilting left/right.
-- Y - tilting forwards/backwards.
-- Z - moving up/down.
-
-You can ask the Micro:bit for the current amount of tilt on any of the x, y and z axes. To do this, you use a the following functions:
-
-- ``microbit.accelerometer.get_x()``
-- ``microbit.accelerometer.get_y()``
-- ``microbit.accelerometer.get_z()``
-
-Each of the above functions will return an integer representing the measurement in milli-g's. If you are "level" along a particular axis, the function will return 0.
-
-A simple example of how this works follows. Notice that for the ``get_x``, a positive value means "tilted right", and a negative value means "tilted left". The larger the value is (either positive or negative), the more the Micro:bit is tilted. You might want to print out the value of ``x_tilt`` below, to be sure you understand how this works.
-
-.. code-block:: python
-
-    import microbit
-
-    while True:
-        x_tilt = microbit.accelerometer.get_x()
-        
-        if x_tilt > 100:
-            microbit.display.show("R")
-            print("Tilted right.")
-        
-        elif x_tilt < -100:
-            microbit.display.show("L")
-            print("Tilted left.")
-        
-        else:
-            microbit.display.show("-")
-            print("Flat!")
-
-
 An Accelerometer Fruitful Function
 ----------------------------------
 

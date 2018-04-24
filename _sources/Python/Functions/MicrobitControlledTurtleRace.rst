@@ -1,4 +1,4 @@
-User Controlled Turtle Race
+Micro:bit Controlled Turtle Race
 =====================================
 
 .. topic:: Quick Overview of Day
@@ -98,8 +98,11 @@ What will the following programs output? Why?
 
     some_function( 2, 3)
 
-Microbit Button Pressing - Extra Details
------------------------------------------
+.. note:: To execute the following Python code, you will need to have the ``cs20-microbitio`` package installed (if you do not, just open Tools -> Manage Packages... and type it into the search bar). 
+
+
+Micro:bit Button Pressing 
+-------------------------
 
 Copy/paste the following code into Thonny, then run it and hold down the *a* button on your Micro:bit.
 
@@ -140,13 +143,70 @@ The `Micro:bit micropython documentation <http://microbit-micropython.readthedoc
         Returns ``True`` or ``False`` to indicate if the button was pressed since the device started or the last time this method was called.
 
 
+.. note:: Be aware that not all of the functions described in the micropython documentation linked to above are implemented in the bitio Python module that we are using. Specifically, the get_pixel and set_pixel functions are not implemented. If you really want to create a program that uses these functions, you can certainly do so by flashing the Micro:bit with your program (as described in the Hello World section of the micropython documentation), but your program will not be able to communicate with Python running on your computer.
+
+
 User Controlled Turtle Racing
 --------------------------------
 
 .. note:: If you have Micro:bit's, they are a great way to control a user controlled turtle race. If you do not have Micro:bit's, you can accomplish the same thing with keyboard input.
 
-Create a turtle racing game, in which one player presses the "a" button, and the other presses the "b" button. Be sure to:
+Create a turtle racing game, in which one player presses the "a" button, and the other presses the "b" button. You may want to:
 
 - create a non-fruitful function called ``move_to_starting_locations(player1, player2, starting_x_cord)``
 - create a non-fruitful function called ``draw_finish_line(ref_turtle, finish_line_x_cord)`` 
 - experiment with ``is_pressed()`` and ``was_pressed()`` to see which makes more sense for this simulation
+
+
+Micro:bit Accelerometer
+-------------------------
+
+The Micro:bit can measure movement along three axes:
+
+- X - tilting left/right.
+- Y - tilting forwards/backwards.
+- Z - moving up/down.
+
+You can ask the Micro:bit for the current amount of tilt on any of the x, y and z axes. To do this, you use a the following functions:
+
+- ``microbit.accelerometer.get_x()``
+- ``microbit.accelerometer.get_y()``
+- ``microbit.accelerometer.get_z()``
+
+Each of the above functions will return an integer representing the measurement in milli-g's. If you are "level" along a particular axis, the function will return 0.
+
+A simple example of how this works follows. Notice that for the ``get_x``, a positive value means "tilted right", and a negative value means "tilted left". The larger the value is (either positive or negative), the more the Micro:bit is tilted. You might want to print out the value of ``x_tilt`` below, to be sure you understand how this works.
+
+.. code-block:: python
+
+    import microbit
+
+    while True:
+        x_tilt = microbit.accelerometer.get_x()
+        
+        if x_tilt > 100:
+            microbit.display.show("R")
+            print("Tilted right.")
+        
+        elif x_tilt < -100:
+            microbit.display.show("L")
+            print("Tilted left.")
+        
+        else:
+            microbit.display.show("-")
+            print("Flat!")
+
+
+Turtle Racing Using the Accelerometer
+--------------------------------------
+
+Adjust your turtle race code so that one of the turtles is controlled by the user, while the other moves forward with a random number of steps each time through the loop. The user controlled turtle should move based on the accelerometer of the Micro:bit. You may either:
+
+- take the accelerometer value on the x axis, divide it by some amount, and then move your turtle forward accordingly
+- make the user tilt the Micro:bit back and forth, so that the turtle only moves forward after the Micro:bit has been tilted sufficiently to the left, and then sufficiently to the right
+
+
+Practice Problem
+-----------------
+
+Continue working on your most recent assignment (likely focused on non-fruitful and fruitful functions).
