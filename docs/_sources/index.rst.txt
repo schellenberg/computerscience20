@@ -120,8 +120,8 @@ Python - Micro:bit and More Functions
    :maxdepth: 1
 
    Python/Functions/MicrobitControlledTurtleRace.rst
-   Python/Functions/MicrobitReactionGame.rst
    Python/Functions/MicrobitFunctions.rst
+   Python/Functions/MicrobitReactionGame.rst
    Python/Functions/FunctionsAssignmentWorkTime.rst
    Python/Functions/AnimatingImagesForLoop.rst
    
