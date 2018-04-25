@@ -1,9 +1,9 @@
-Custom Images and Work Period for Micro:bit Game
-=================================================
+Micro:bit Custom Images
+========================
 
 .. topic:: Quick Overview of Day
 
-    Create a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.
+    Learn how to create your own custom Micro:bit images. Continue working on creating a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.
 
 
 .. reveal:: curriculum_addressed
@@ -30,18 +30,18 @@ We have seen that we can display many built-in images on the Micro:bit. You can 
 
 What if you want to create your own images? The way an image is created on the Micro:bit is by making a string that represents each LED/pixel on the Micro:bit. For each LED, you need to set the value to be a number from 0 to 9, which is the brightness of that LED. Setting the brightness to 0 means that LED should be off, while setting the brightness to 9 means turning it on as bright as possible. Any number in between will set the LED to be turned on somewhat bright, where 1 is the least bright, and 8 is almost the brightest.
 
-The following code creates an image of a boat and displays it on the Micro:bit:
+The following code creates an image of the side of a die, and displays it on the Micro:bit:
 
 .. code-block:: python
 
     import microbit
 
-    boat = microbit.Image("05050:05050:05050:99999:09990")
+    dice = microbit.Image("33333:39093:30003:39093:33333")
 
-    microbit.display.show(boat)
+    microbit.display.show(dice)
 
 
-Although we can figure out what is going on in the above code (each row is separated by a :), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:
+Although we can figure out what is going on in the above code (each row is separated by a ``:``), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:
 
 .. activecode:: concatenation_reminder
     :nocanvas:
@@ -70,14 +70,14 @@ The purpose of using this second style of concatenation is simply to increase th
     # keep looking for more of the string on the next line, and
     # concatenates the strings automatically for you
 
-    my_image = "05050:" \
-               "05050:" \
-               "05050:" \
-               "99999:" \
-               "09990"
+    dice4 = "33333:" \
+            "39093:" \
+            "30003:" \
+            "39093:" \
+            "33333"
             
-    boat = microbit.Image(my_image)
-    microbit.display.show(boat)
+    the_roll = microbit.Image(dice4)
+    microbit.display.show(the_roll)
 
 
 .. note:: 
@@ -95,14 +95,14 @@ The purpose of using this second style of concatenation is simply to increase th
             return custom_image
 
 
-        line1 = "05050"
-        line2 = "05050"
-        line3 = "05050"
-        line4 = "99999"
-        line5 = "09990"
+        line1 = "33333"
+        line2 = "39093"
+        line3 = "30003"
+        line4 = "39093"
+        line5 = "33333"
 
-        boat = create_microbit_image(line1, line2, line3, line4, line5)
-        microbit.display.show(boat)
+        the_roll = create_microbit_image(line1, line2, line3, line4, line5)
+        microbit.display.show(the_roll)
 
 
     The ``create_microbit_image()`` fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.

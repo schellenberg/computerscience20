@@ -15,13 +15,6 @@ Fruitful Functions and the Micro:bit
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
 
-.. Adapting the Reaction Game
-.. ---------------------------
-
-.. - change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.
-
-
-
 What Does This Program Do?
 ---------------------------
 
@@ -91,11 +84,6 @@ What will the following programs output? Why?
 
 Functions Practice Quiz
 ------------------------
-
-.. reveal:: curriculum_addressed
-    :showtitle: Curriculum Outcomes Addressed In This Section
-
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
 To confirm that you understand the major concepts you've seen in Python, try to answer the following questions **without opening Python**.
 

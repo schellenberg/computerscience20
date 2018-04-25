@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>5. Reaction Game with Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
+    <title>3. Micro:bit Custom Images &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,8 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. Image Processing and Nested Loops" href="../MoreAboutIteration/NestedLoops.html" />
-    <link rel="prev" title="4. Animating a Micro:bit LED Image with a for Loop" href="AnimatingImagesForLoop.html" />
+    <link rel="next" title="4. Animating a Micro:bit LED Image with a for Loop" href="AnimatingImagesForLoop.html" />
+    <link rel="prev" title="2. Fruitful Functions and the Micro:bit" href="MicrobitFunctions.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -192,13 +192,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">5. Reaction Game with Micro:bit</a><ul>
-<li><a class="reference internal" href="#micro-bit-reaction-game">5.1. Micro:bit Reaction Game</a></li>
-<li><a class="reference internal" href="#things-to-explain-in-the-code">5.2. Things to Explain in the Code</a></li>
-<li><a class="reference internal" href="#adapt-the-code">5.3. Adapt the Code</a><ul>
-<li><a class="reference internal" href="#extra-for-experts">5.3.1. Extra for Experts</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">3. Micro:bit Custom Images</a><ul>
+<li><a class="reference internal" href="#creating-custom-images-on-the-micro-bit">3.1. Creating Custom Images on the Micro:bit</a></li>
+<li><a class="reference internal" href="#work-time-on-assignment">3.2. Work Time on Assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -208,14 +204,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop" data-toggle="tooltip">
-    <a href="AnimatingImagesForLoop.html" >
+  <li id="relations-prev" title="Previous Chapter - 2. Fruitful Functions and the Micro:bit" data-toggle="tooltip">
+    <a href="MicrobitFunctions.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 1. Image Processing and Nested Loops' data-toggle="tooltip" >
-    <a href="../MoreAboutIteration/NestedLoops.html" >
+  <li id="relations-next" title='Next Chapter - 4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip" >
+    <a href="AnimatingImagesForLoop.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -245,11 +241,11 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="reaction-game-with-micro-bit">
-<h1>5. Reaction Game with Micro:bit<a class="headerlink" href="#reaction-game-with-micro-bit" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="micro-bit-custom-images">
+<h1>3. Micro:bit Custom Images<a class="headerlink" href="#micro-bit-custom-images" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Play Micro:bit reaction game, and discuss how the code works. Add features to the game, if time.</p>
+<p>Learn how to create your own custom Micro:bit images. Continue working on creating a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.</p>
 </div>
 
     <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
@@ -261,142 +257,106 @@
 </ul>
 
     </div>
-    <div class="section" id="micro-bit-reaction-game">
-<h2>5.1. Micro:bit Reaction Game<a class="headerlink" href="#micro-bit-reaction-game" title="Permalink to this headline">¶</a></h2>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Need to improve the description of how to connect the micro:bit. It’s the same way we did it before…</p>
-</div>
-<p>Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package installed (if you do not, just open Tools -&gt; Manage Packages… and type it into the search bar). The Micro:bit also needs to have the <code class="docutils literal"><span class="pre">bitio.hex</span></code> file (drag and drop this file onto the Micro:bit in Windows Explorer/Mac Finder, or install the <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> plugin by going to Tools -&gt; Manage plugins…).</p>
-<p>In this game, you and a friend will compete to see who has faster reactions. After clicking Run, your Micro:bit will wait between 1 and 5 seconds, then display a happy face image. Whichever player presses their button (A or B) first gets one point. Be careful! If you click your button too soon, you will lose 2 points!</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Mico:bit Reaction Game</span>
-<span class="c1"># Computer Science 20</span>
-<span class="c1"># Dan Schellenberg</span>
-
-<span class="kn">import</span> <span class="nn">microbit</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-
-<span class="k">def</span> <span class="nf">button_clicked</span><span class="p">(</span><span class="n">current_score</span><span class="p">,</span> <span class="n">should_be_pressing</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">should_be_pressing</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">current_score</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">current_score</span> <span class="o">-=</span> <span class="mi">2</span>
-
-    <span class="k">return</span> <span class="n">current_score</span>
-
-
-<span class="c1"># global variables</span>
-<span class="n">a_score</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">b_score</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
-<span class="n">time_to_wait</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">starting_time</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">ending_time</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># constants</span>
-<span class="n">POINTS_TO_WIN_GAME</span> <span class="o">=</span> <span class="mi">5</span>
-
-
-<span class="c1"># game loop</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="c1"># check if need to pick a new amount of time to wait</span>
-    <span class="k">if</span> <span class="n">run_reset_code</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-        <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
-
-        <span class="c1"># pausing execution for 1 second stops players from accidentally clicking more than once</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-        <span class="n">time_to_wait</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-        <span class="n">starting_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">False</span>
-
-    <span class="c1"># check if it is time to display the image</span>
-    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">time_since_start</span> <span class="o">=</span> <span class="n">time_now</span> <span class="o">-</span> <span class="n">starting_time</span>
-    <span class="k">if</span> <span class="n">time_since_start</span> <span class="o">&gt;</span> <span class="n">time_to_wait</span><span class="p">:</span>
-        <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">True</span>
-
-    <span class="k">if</span> <span class="n">showing_image</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
-
-
-    <span class="c1"># deal with a button being pressed</span>
-    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
-        <span class="n">a_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
-
-
-    <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_b</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
-        <span class="n">b_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">b_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
-
-    <span class="c1"># if somebody wins, end the game</span>
-    <span class="k">if</span> <span class="n">a_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span> <span class="ow">or</span> <span class="n">b_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span><span class="p">:</span>
-        <span class="k">break</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Game over!&quot;</span><span class="p">)</span>
+    <div class="section" id="creating-custom-images-on-the-micro-bit">
+<h2>3.1. Creating Custom Images on the Micro:bit<a class="headerlink" href="#creating-custom-images-on-the-micro-bit" title="Permalink to this headline">¶</a></h2>
+<p>We have seen that we can display many built-in images on the Micro:bit. You can display any of the built in images (see the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-predefined-images"><span class="std std-ref">List of Pre-Defined Images</span></a>) by doing something like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>What if you want to create your own images? The way an image is created on the Micro:bit is by making a string that represents each LED/pixel on the Micro:bit. For each LED, you need to set the value to be a number from 0 to 9, which is the brightness of that LED. Setting the brightness to 0 means that LED should be off, while setting the brightness to 9 means turning it on as bright as possible. Any number in between will set the LED to be turned on somewhat bright, where 1 is the least bright, and 8 is almost the brightest.</p>
+<p>The following code creates an image of the side of a die, and displays it on the Micro:bit:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="n">dice</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;33333:39093:30003:39093:33333&quot;</span><span class="p">)</span>
+
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="things-to-explain-in-the-code">
-<h2>5.2. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
+<p>Although we can figure out what is going on in the above code (each row is separated by a <code class="docutils literal"><span class="pre">:</span></code>), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:</p>
+
+<div data-childcomponent="concatenation_reminder" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=concatenation_reminder data-lang="python"    data-timelimit=25000   data-audio=''     >
+message = "Hello there" + " Computer Science 20"
+print(message)
+</textarea>
+</div>
+<p>Recall that the <code class="docutils literal"><span class="pre">+</span></code> operator means <em>concatenation</em> (think join) when used on strings. Python gives us a second way to concatenate two strings together, as follows:</p>
+
+<div data-childcomponent="concatenation_reminder2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=concatenation_reminder2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+message = "Hello there" \
+          " Computer Science 20"
+print(message)
+</textarea>
+</div>
+<p>The purpose of using this second style of concatenation is simply to increase the readability of your code. It would be a poor decision to use this style in the example above, but it is a great choice when we think back to how we might come up with a customized image for the Micro:bit to display. Consider the following, which accomplishes the same task of making and displaying a boat image:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="c1"># using the \ character at the end of a string tells Python to</span>
+<span class="c1"># keep looking for more of the string on the next line, and</span>
+<span class="c1"># concatenates the strings automatically for you</span>
+
+<span class="n">dice4</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;30003:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">the_roll</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice4</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">the_roll</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This will be written up better soon. For now, use the following topic list to guide your class discussion regarding how the code works.</p>
+<p>If you would rather not teach/use another method of concatenation, you could also accomplish the same thing by creating a fruitful function that combines multiple strings together for you, as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+
+<span class="k">def</span> <span class="nf">create_microbit_image</span><span class="p">(</span><span class="n">row1</span><span class="p">,</span> <span class="n">row2</span><span class="p">,</span> <span class="n">row3</span><span class="p">,</span> <span class="n">row4</span><span class="p">,</span> <span class="n">row5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Takes in 5 strings, each containing 5 integers.</span>
+<span class="sd">    Returns an image that works on the micro:bit&quot;&quot;&quot;</span>
+    <span class="n">combined_string</span> <span class="o">=</span> <span class="n">row1</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row2</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row3</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row4</span> <span class="o">+</span>  <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">row5</span>
+    <span class="n">custom_image</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">combined_string</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">custom_image</span>
+
+
+<span class="n">line1</span> <span class="o">=</span> <span class="s2">&quot;33333&quot;</span>
+<span class="n">line2</span> <span class="o">=</span> <span class="s2">&quot;39093&quot;</span>
+<span class="n">line3</span> <span class="o">=</span> <span class="s2">&quot;30003&quot;</span>
+<span class="n">line4</span> <span class="o">=</span> <span class="s2">&quot;39093&quot;</span>
+<span class="n">line5</span> <span class="o">=</span> <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">the_roll</span> <span class="o">=</span> <span class="n">create_microbit_image</span><span class="p">(</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">,</span> <span class="n">line3</span><span class="p">,</span> <span class="n">line4</span><span class="p">,</span> <span class="n">line5</span><span class="p">)</span>
+<span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">the_roll</span><span class="p">)</span>
+</pre></div>
 </div>
-<p>Talk through the following parts of the code:</p>
-<ul class="simple">
-<li>initializing the global variables with a value at the start of the code</li>
-<li>using ALL_CAPS when creating a constant (variable whose value should never be changed within your code)</li>
-<li>using an infinite loop for the game loop (<code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code>)</li>
-<li>using booleans to keep track of the state of the program</li>
-<li>time.sleep(1)  – comment out this line and run the code again…</li>
-<li>time.time()  – run this in the Python interpreter to see what the function returns [The epoch is the point where the time starts, and is platform dependent. For Unix, the epoch is January 1, 1970, 00:00:00 (UTC). To find out what the epoch is on a given platform, look at time.gmtime(0). <a class="reference external" href="https://docs.python.org/3/library/time.html#epoch">Python time docs</a>]</li>
-<li>might want to add a print(time_since_start) line, to be sure students understand what that variable is doing</li>
-<li>is_pressed() vs. was_pressed() for the button_a and button_b – is_pressed() is used, since we only want to know “is it pressed RIGHT NOW”? If we use was_pressed(), micro:bit keeps track of whether it’s been pressed since the last time that question was asked</li>
-<li><code class="docutils literal"><span class="pre">break</span></code> to force an exit out of loop. In this case, it allows us to exit the <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> infinite loop</li>
-</ul>
+<p class="last">The <code class="docutils literal"><span class="pre">create_microbit_image()</span></code> fruitful function defined above allows us to pass in 5 strings, each containing 5 integers representing the brightness of an LED. Organizing our code in this way allows us to visualize what the image will look like, simply by looking at the code.</p>
 </div>
-<div class="section" id="adapt-the-code">
-<h2>5.3. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
-<p>Try the following with a partner (the person you were playing the game with):</p>
-<ul class="simple">
-<li>change the game so that you need only 3 points to win the game</li>
-<li>change the game so that a click at the wrong time makes you only lose 1 point instead of 2</li>
-<li>add a message when somebody wins. In Thonny, your program should say something like “Player A wins!”, while on the Micro:bit, an “A” should be shown. You should also display a message if it is a tie.</li>
-</ul>
-<div class="section" id="extra-for-experts">
-<h3>5.3.1. Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.</li>
-</ul>
 </div>
+<div class="section" id="work-time-on-assignment">
+<h2>3.2. Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Continue working on your current assignment (focused on creating fruitful and non-fruitful functions).</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip">
-    <a href="AnimatingImagesForLoop.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. Fruitful Functions and the Micro:bit' data-toggle="tooltip">
+    <a href="MicrobitFunctions.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="AnimatingImagesForLoop.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="MicrobitFunctions.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 1. Image Processing and Nested Loops' data-toggle="tooltip" >
-    <a href="../MoreAboutIteration/NestedLoops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip" >
+    <a href="AnimatingImagesForLoop.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../MoreAboutIteration/NestedLoops.html" >Next Section - 1. Image Processing and Nested Loops</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="AnimatingImagesForLoop.html" >Next Section - 4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop</a>
 
 <script type="text/javascript">
 

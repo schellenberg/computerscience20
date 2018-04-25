@@ -121,9 +121,9 @@ Python - Micro:bit and More Functions
 
    Python/Functions/MicrobitControlledTurtleRace.rst
    Python/Functions/MicrobitFunctions.rst
-   Python/Functions/MicrobitReactionGame.rst
-   Python/Functions/FunctionsAssignmentWorkTime.rst
+   Python/Functions/MicrobitCustomImages.rst
    Python/Functions/AnimatingImagesForLoop.rst
+   Python/Functions/MicrobitReactionGame.rst
    
 
 Python - Image Processing

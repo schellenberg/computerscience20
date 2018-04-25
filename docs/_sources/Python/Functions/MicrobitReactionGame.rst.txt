@@ -3,7 +3,7 @@ Reaction Game with Micro:bit
 
 .. topic:: Quick Overview of Day
 
-    WDTPD questions about functions. Play Micro:bit reaction game, and discuss how the code works. Add features to the game, if time.
+    Play Micro:bit reaction game, and discuss how the code works. Add features to the game, if time.
 
 
 .. reveal:: curriculum_addressed
@@ -129,3 +129,8 @@ Try the following with a partner (the person you were playing the game with):
 - change the game so that you need only 3 points to win the game
 - change the game so that a click at the wrong time makes you only lose 1 point instead of 2
 - add a message when somebody wins. In Thonny, your program should say something like "Player A wins!", while on the Micro:bit, an "A" should be shown. You should also display a message if it is a tie.
+
+Extra for Experts
+~~~~~~~~~~~~~~~~~~
+
+- change the game so that either a HAPPY face or a SKULL can be displayed. If it is a HAPPY face and a user clicks, they should get a point. However, if it is a SKULL and the user clicks, they should lose a point.
