@@ -194,8 +194,8 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">4. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop</a><ul>
 <li><a class="reference internal" href="#animate-built-in-images-on-micro-bit-leds">4.1. Animate Built-In Images On Micro:bit LEDs</a></li>
-<li><a class="reference internal" href="#moving-an-led-on-the-bottom-row">4.2. Moving an LED On the Bottom Row</a></li>
-<li><a class="reference internal" href="#moving-a-turtle-by-tilting-micro-bit">4.3. Moving a Turtle By Tilting Micro:bit</a></li>
+<li><a class="reference internal" href="#animating-custom-made-images">4.2. Animating Custom Made Images</a></li>
+<li><a class="reference internal" href="#moving-an-led-on-the-bottom-row">4.3. Moving an LED On the Bottom Row</a></li>
 <li><a class="reference internal" href="#work-time-on-assignment">4.4. Work Time on Assignment</a></li>
 </ul>
 </li>
@@ -261,7 +261,7 @@
     </div>
     <div class="section" id="animate-built-in-images-on-micro-bit-leds">
 <h2>4.1. Animate Built-In Images On Micro:bit LEDs<a class="headerlink" href="#animate-built-in-images-on-micro-bit-leds" title="Permalink to this headline">¶</a></h2>
-<p>Let’s pick a few of the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-predefined-images"><span class="std std-ref">List of Pre-Defined Images</span></a>), and have them show in succession, one after another. There are a number of ways we could do this, but let’s use a list to do it. We’ve used a list before, in code that looked like this:</p>
+<p>Let’s pick a few of the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-predefined-images"><span class="std std-ref">List of Pre-Defined Images</span></a>), and have them show in succession, one after another. There are a number of ways we could do this, but we will use a list. We’ve used a list before, in code that looked like this:</p>
 
 <div data-childcomponent="colorlist-list-refresher" class="runestone explainer ac_section alert alert-warning">
 
@@ -269,7 +269,7 @@
 import turtle
 
 # setup the drawing environment
-wn = turtle.Screen()
+canvas = turtle.Screen()
 alex = turtle.Turtle()
 
 for aColor in ["yellow", "red", "purple", "blue"]:
@@ -286,7 +286,7 @@ for aColor in ["yellow", "red", "purple", "blue"]:
 import turtle
 
 # setup the drawing environment
-wn = turtle.Screen()
+canvas = turtle.Screen()
 alex = turtle.Turtle()
 
 color_list = ["yellow", "red", "purple", "blue"]
@@ -311,30 +311,93 @@ for aColor in color_list:
     <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>When you run the code above, you will see that your Micro:bit flashes through all of the images of the different arrows, but it happens really, really fast. To slow that down, we can use a <code class="docutils literal"><span class="pre">sleep()</span></code> function that pauses the execution of the program for a specified number of milliseconds. Notice that when we include the <code class="docutils literal"><span class="pre">sleep()</span></code> function below, we do so in the for loop, so that there is a pause prior to displaying the next image in the list.</p>
+<p>When you run the code above, you will see that your Micro:bit flashes through all of the images of the different arrows, but it happens really, really fast. To slow that down, we can <code class="docutils literal"><span class="pre">import</span> <span class="pre">time</span></code> and use the <code class="docutils literal"><span class="pre">time.sleep()</span></code> function that pauses the execution of the program for a specified number of seconds. Notice that when we include the <code class="docutils literal"><span class="pre">sleep()</span></code> function below, we do so in the for loop, so that there is a pause prior to displaying the next image in the list.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">arrow_image_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_N</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_E</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_S</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SW</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_W</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NW</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">this_image</span> <span class="ow">in</span> <span class="n">arrow_image_list</span><span class="p">:</span>
     <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
-<span class="hll">    <span class="n">microbit</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+<span class="hll">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
 </span></pre></div>
 </div>
 <p>If you would like this animation to continue forever, simply enclose the for loop inside of a <code class="docutils literal"><span class="pre">while</span> <span class="pre">True:</span></code> loop that keeps the program going infinitely.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">arrow_image_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_N</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_E</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SE</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_S</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_SW</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_W</span><span class="p">,</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ARROW_NW</span><span class="p">]</span>
 
 <span class="hll"><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
 </span>    <span class="k">for</span> <span class="n">this_image</span> <span class="ow">in</span> <span class="n">arrow_image_list</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">this_image</span><span class="p">)</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="animating-custom-made-images">
+<h2>4.2. Animating Custom Made Images<a class="headerlink" href="#animating-custom-made-images" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes we might want to animate a series of Micro:bit images that we create, as opposed to the built in images we animated above. The logic for this is the same as what we did above, though we need to define each image first. Consider the following, in which an image is defined for each side of a 6 sided die, then displayed one after another.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># define each of the dice images as strings</span>
+<span class="n">dice1</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;30003:&quot;</span> \
+        <span class="s2">&quot;30903:&quot;</span> \
+        <span class="s2">&quot;30003:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">dice2</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;30093:&quot;</span> \
+        <span class="s2">&quot;30003:&quot;</span> \
+        <span class="s2">&quot;39003:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">dice3</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;39003:&quot;</span> \
+        <span class="s2">&quot;30903:&quot;</span> \
+        <span class="s2">&quot;30093:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">dice4</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;30003:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">dice5</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;30903:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="n">dice6</span> <span class="o">=</span> <span class="s2">&quot;33333:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;39093:&quot;</span> \
+        <span class="s2">&quot;33333&quot;</span>
+
+<span class="c1"># convert the strings to microbit images</span>
+<span class="n">roll1</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice1</span><span class="p">)</span>
+<span class="n">roll2</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice2</span><span class="p">)</span>
+<span class="n">roll3</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice3</span><span class="p">)</span>
+<span class="n">roll4</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice4</span><span class="p">)</span>
+<span class="n">roll5</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice5</span><span class="p">)</span>
+<span class="n">roll6</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dice6</span><span class="p">)</span>
+
+<span class="c1"># create a list that contains all of the images</span>
+<span class="n">all_dice</span> <span class="o">=</span> <span class="p">[</span><span class="n">roll1</span><span class="p">,</span> <span class="n">roll2</span><span class="p">,</span> <span class="n">roll3</span><span class="p">,</span> <span class="n">roll4</span><span class="p">,</span> <span class="n">roll5</span><span class="p">,</span> <span class="n">roll6</span><span class="p">]</span>
+
+<span class="c1"># loop over all of the dice images</span>
+<span class="k">for</span> <span class="n">die</span> <span class="ow">in</span> <span class="n">all_dice</span><span class="p">:</span>
+    <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">die</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="moving-an-led-on-the-bottom-row">
-<h2>4.2. Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this headline">¶</a></h2>
 <p>If you want to create a game that moves an LED around the 5x5 LED grid of the Micro:bit, you will need to learn how to manipulate strings. For now, however, we can make a simple visualization of how to “move” and LED left and right on the bottom row of the grid using the a and b buttons. Before we can do this, however, you need to understand how to access particular elements inside of a list. Consider the following:</p>
 
 <div data-childcomponent="list-accessing-values" class="runestone explainer ac_section alert alert-warning">
@@ -394,60 +457,6 @@ print()
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Although the code above works, you might want to adapt the code so that the program does not crash (or behave strangely) when the LED goes “off the screen”.</p>
-</div>
-</div>
-<div class="section" id="moving-a-turtle-by-tilting-micro-bit">
-<h2>4.3. Moving a Turtle By Tilting Micro:bit<a class="headerlink" href="#moving-a-turtle-by-tilting-micro-bit" title="Permalink to this headline">¶</a></h2>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Explanation needs to be written up. Should include description of register_shape() function, saving the .gif image file in the same folder as the Python script.</p>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
-<span class="kn">import</span> <span class="nn">turtle</span>
-
-<span class="k">def</span> <span class="nf">horizontal_tilt</span><span class="p">(</span><span class="n">sensitivity_amount</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns left or right, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive.&quot;&quot;&quot;</span>
-    <span class="n">x_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">x_tilt</span> <span class="o">&gt;</span> <span class="n">sensitivity_amount</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;right&quot;</span>
-
-    <span class="k">elif</span> <span class="n">x_tilt</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">sensitivity_amount</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;left&quot;</span>
-
-
-<span class="n">canvas</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
-<span class="n">canvas</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="c1">#canvas.register_shape(&quot;ship.gif&quot;)</span>
-
-<span class="n">travis</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
-<span class="n">travis</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
-<span class="n">travis</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
-<span class="c1">#travis.shape(&quot;ship.gif&quot;)</span>
-<span class="n">travis</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">)</span>
-<span class="n">travis</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">horizontal_tilt_direction</span> <span class="o">=</span> <span class="n">horizontal_tilt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted right.&quot;</span><span class="p">)</span>
-        <span class="n">travis</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted left.&quot;</span><span class="p">)</span>
-        <span class="n">travis</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flat!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Adapt the code above by creating another turtle that starts at the top of the screen and moves downward. If you want to get really fancy, you could look up xcor() and ycor(). These functions allow you to check where turtles are, and with some clever logic, whether two turtles are touching each other.</p>
 </div>
 </div>
 <div class="section" id="work-time-on-assignment">

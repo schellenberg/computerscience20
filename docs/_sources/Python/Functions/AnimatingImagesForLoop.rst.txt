@@ -19,7 +19,7 @@ Animating a Micro:bit LED Image with a ``for`` Loop
 Animate Built-In Images On Micro:bit LEDs
 -----------------------------------------------
 
-Let's pick a few of the :ref:`microbit_predefined_images`), and have them show in succession, one after another. There are a number of ways we could do this, but let's use a list to do it. We've used a list before, in code that looked like this:
+Let's pick a few of the :ref:`microbit_predefined_images`), and have them show in succession, one after another. There are a number of ways we could do this, but we will use a list. We've used a list before, in code that looked like this:
 
 .. activecode:: colorlist-list-refresher
     :nocodelens:
@@ -27,7 +27,7 @@ Let's pick a few of the :ref:`microbit_predefined_images`), and have them show i
     import turtle
 
     # setup the drawing environment
-    wn = turtle.Screen()
+    canvas = turtle.Screen()
     alex = turtle.Turtle()
 
     for aColor in ["yellow", "red", "purple", "blue"]:
@@ -44,7 +44,7 @@ We could have rewritten the code above to store the list in a variable, like thi
     import turtle
 
     # setup the drawing environment
-    wn = turtle.Screen()
+    canvas = turtle.Screen()
     alex = turtle.Turtle()
 
     color_list = ["yellow", "red", "purple", "blue"]
@@ -61,9 +61,9 @@ We are going to use the same idea, but now we will create a list of images that 
     import microbit
     microbit.display.show(microbit.Image.HAPPY)
 
+
 To create a list of images that we want to show, we can do the following:
 
-
 .. code-block:: python
 
     import microbit
@@ -74,32 +74,99 @@ To create a list of images that we want to show, we can do the following:
         microbit.display.show(this_image)
 
 
-When you run the code above, you will see that your Micro:bit flashes through all of the images of the different arrows, but it happens really, really fast. To slow that down, we can use a ``sleep()`` function that pauses the execution of the program for a specified number of milliseconds. Notice that when we include the ``sleep()`` function below, we do so in the for loop, so that there is a pause prior to displaying the next image in the list.
+When you run the code above, you will see that your Micro:bit flashes through all of the images of the different arrows, but it happens really, really fast. To slow that down, we can ``import time`` and use the ``time.sleep()`` function that pauses the execution of the program for a specified number of seconds. Notice that when we include the ``sleep()`` function below, we do so in the for loop, so that there is a pause prior to displaying the next image in the list.
 
 .. code-block:: python
-    :emphasize-lines: 7
+    :emphasize-lines: 8
 
     import microbit
+    import time
 
     arrow_image_list = [microbit.Image.ARROW_N, microbit.Image.ARROW_NE, microbit.Image.ARROW_E, microbit.Image.ARROW_SE, microbit.Image.ARROW_S, microbit.Image.ARROW_SW, microbit.Image.ARROW_W, microbit.Image.ARROW_NW]
 
     for this_image in arrow_image_list:
         microbit.display.show(this_image)
-        microbit.sleep(250)
+        time.sleep(0.25)
 
 If you would like this animation to continue forever, simply enclose the for loop inside of a ``while True:`` loop that keeps the program going infinitely.
 
 .. code-block:: python
-    :emphasize-lines: 5
+    :emphasize-lines: 6
 
     import microbit
+    import time
 
     arrow_image_list = [microbit.Image.ARROW_N, microbit.Image.ARROW_NE, microbit.Image.ARROW_E, microbit.Image.ARROW_SE, microbit.Image.ARROW_S, microbit.Image.ARROW_SW, microbit.Image.ARROW_W, microbit.Image.ARROW_NW]
 
     while True:
         for this_image in arrow_image_list:
             microbit.display.show(this_image)
-            microbit.sleep(250)
+            time.sleep(0.25)
+
+Animating Custom Made Images
+-----------------------------
+
+Sometimes we might want to animate a series of Micro:bit images that we create, as opposed to the built in images we animated above. The logic for this is the same as what we did above, though we need to define each image first. Consider the following, in which an image is defined for each side of a 6 sided die, then displayed one after another.
+
+.. code-block:: python
+
+    import microbit
+    import time
+
+    # define each of the dice images as strings
+    dice1 = "33333:" \
+            "30003:" \
+            "30903:" \
+            "30003:" \
+            "33333"
+
+    dice2 = "33333:" \
+            "30093:" \
+            "30003:" \
+            "39003:" \
+            "33333"
+
+    dice3 = "33333:" \
+            "39003:" \
+            "30903:" \
+            "30093:" \
+            "33333"
+
+    dice4 = "33333:" \
+            "39093:" \
+            "30003:" \
+            "39093:" \
+            "33333"
+
+    dice5 = "33333:" \
+            "39093:" \
+            "30903:" \
+            "39093:" \
+            "33333"
+
+    dice6 = "33333:" \
+            "39093:" \
+            "39093:" \
+            "39093:" \
+            "33333"
+
+    # convert the strings to microbit images
+    roll1 = microbit.Image(dice1)
+    roll2 = microbit.Image(dice2)
+    roll3 = microbit.Image(dice3)
+    roll4 = microbit.Image(dice4)
+    roll5 = microbit.Image(dice5)
+    roll6 = microbit.Image(dice6)
+
+    # create a list that contains all of the images
+    all_dice = [roll1, roll2, roll3, roll4, roll5, roll6]
+
+    # loop over all of the dice images
+    for die in all_dice:
+        microbit.display.show(die)
+        time.sleep(1)
+
+
 
 Moving an LED On the Bottom Row
 --------------------------------
@@ -164,57 +231,6 @@ Now that we can access an element inside a list, we can build a function that ta
 
 
 .. note:: Although the code above works, you might want to adapt the code so that the program does not crash (or behave strangely) when the LED goes "off the screen".
-
-Moving a Turtle By Tilting Micro:bit
--------------------------------------
-
-.. caution:: Explanation needs to be written up. Should include description of register_shape() function, saving the .gif image file in the same folder as the Python script.
-
-.. code-block:: python
-
-    import microbit
-    import turtle
-
-    def horizontal_tilt(sensitivity_amount):
-        """Returns left or right, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive."""
-        x_tilt = microbit.accelerometer.get_x()
-
-        if x_tilt > sensitivity_amount:
-            return "right"
-
-        elif x_tilt < -1 * sensitivity_amount:
-            return "left"
-
-
-    canvas = turtle.Screen()
-    canvas.bgcolor("black")
-    #canvas.register_shape("ship.gif")
-
-    travis = turtle.Turtle()
-    travis.color("white")
-    travis.penup()
-    #travis.shape("ship.gif")
-    travis.shape("square")
-    travis.pensize(5)
-
-    while True:
-        horizontal_tilt_direction = horizontal_tilt(100)
-
-        if horizontal_tilt_direction == "right":
-            microbit.display.show("R")
-            print("Tilted right.")
-            travis.forward(10)
-
-        elif horizontal_tilt_direction == "left":
-            microbit.display.show("L")
-            print("Tilted left.")
-            travis.backward(10)
-
-        else:
-            microbit.display.show("-")
-            print("Flat!")
-
-.. note:: Adapt the code above by creating another turtle that starts at the top of the screen and moves downward. If you want to get really fancy, you could look up xcor() and ycor(). These functions allow you to check where turtles are, and with some clever logic, whether two turtles are touching each other.
 
 
 Work Time on Assignment
