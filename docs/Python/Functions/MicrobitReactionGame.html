@@ -194,7 +194,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">5. Reaction Game with Micro:bit</a><ul>
 <li><a class="reference internal" href="#micro-bit-reaction-game">5.1. Micro:bit Reaction Game</a></li>
-<li><a class="reference internal" href="#things-to-explain-in-the-code">5.2. Things to Explain in the Code</a></li>
+<li><a class="reference internal" href="#new-ideas-used-in-the-reaction-game">5.2. New Ideas Used in the Reaction Game</a></li>
 <li><a class="reference internal" href="#adapt-the-code">5.3. Adapt the Code</a><ul>
 <li><a class="reference internal" href="#extra-for-experts">5.3.1. Extra for Experts</a></li>
 </ul>
@@ -263,12 +263,7 @@
     </div>
     <div class="section" id="micro-bit-reaction-game">
 <h2>5.1. Micro:bit Reaction Game<a class="headerlink" href="#micro-bit-reaction-game" title="Permalink to this headline">¶</a></h2>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Need to improve the description of how to connect the micro:bit. It’s the same way we did it before…</p>
-</div>
-<p>Copy/paste the following code into Thonny, and connect a Micro:bit to your computer. You will need to have the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package installed (if you do not, just open Tools -&gt; Manage Packages… and type it into the search bar). The Micro:bit also needs to have the <code class="docutils literal"><span class="pre">bitio.hex</span></code> file (drag and drop this file onto the Micro:bit in Windows Explorer/Mac Finder, or install the <code class="docutils literal"><span class="pre">thonny-flash-microbitio</span></code> plugin by going to Tools -&gt; Manage plugins…).</p>
-<p>In this game, you and a friend will compete to see who has faster reactions. After clicking Run, your Micro:bit will wait between 1 and 5 seconds, then display a happy face image. Whichever player presses their button (A or B) first gets one point. Be careful! If you click your button too soon, you will lose 2 points!</p>
+<p>In this game, you and a friend will compete to see who has faster reactions. After clicking Run, your Micro:bit will wait between 1 and 5 seconds, then display a happy face image. Whichever player presses their button (A or B) first gets one point. <em>Be careful! If you click your button too soon, you will lose 2 points!</em></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Mico:bit Reaction Game</span>
 <span class="c1"># Computer Science 20</span>
 <span class="c1"># Dan Schellenberg</span>
@@ -279,18 +274,27 @@
 
 
 <span class="k">def</span> <span class="nf">button_clicked</span><span class="p">(</span><span class="n">current_score</span><span class="p">,</span> <span class="n">should_be_pressing</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Adds or subtracts from the current score, based on whether an image is showing.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">should_be_pressing</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">current_score</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">current_score</span> <span class="o">=</span> <span class="n">current_score</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">current_score</span> <span class="o">-=</span> <span class="mi">2</span>
+        <span class="n">current_score</span> <span class="o">=</span> <span class="n">current_score</span> <span class="o">-</span> <span class="mi">2</span>
 
     <span class="k">return</span> <span class="n">current_score</span>
 
+<span class="k">def</span> <span class="nf">show_winner</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">b_score</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print winner to console, and display winner on Micro:bit.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">a_score</span> <span class="o">&gt;</span> <span class="n">b_score</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A wins!&quot;</span><span class="p">)</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player B wins!&quot;</span><span class="p">)</span>
+        <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
 
 <span class="c1"># global variables</span>
 <span class="n">a_score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">b_score</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">time_to_wait</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">starting_time</span> <span class="o">=</span> <span class="mi">0</span>
@@ -303,24 +307,31 @@
 <span class="c1"># game loop</span>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="c1"># check if need to pick a new amount of time to wait</span>
-    <span class="k">if</span> <span class="n">run_reset_code</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">someone_pressed_button</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">False</span>
 
-        <span class="c1"># pausing execution for 1 second stops players from accidentally clicking more than once</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># pausing execution for 0.5 seconds stops players from accidentally clicking more than once</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 
+        <span class="c1"># determine when the image should reappear on the microbit</span>
         <span class="n">time_to_wait</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-        <span class="n">starting_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">starting_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># unit is seconds</span>
 
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="bp">False</span>
 
     <span class="c1"># check if it is time to display the image</span>
     <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">time_since_start</span> <span class="o">=</span> <span class="n">time_now</span> <span class="o">-</span> <span class="n">starting_time</span>
+
+    <span class="c1"># uncomment the following line to understand how the time works</span>
+    <span class="c1"># print(time_since_start)</span>
+
+    <span class="c1"># change the boolean to turn on the image if enough time has gone by</span>
     <span class="k">if</span> <span class="n">time_since_start</span> <span class="o">&gt;</span> <span class="n">time_to_wait</span><span class="p">:</span>
         <span class="n">showing_image</span> <span class="o">=</span> <span class="bp">True</span>
 
+    <span class="c1"># display image if enough time has elapsed</span>
     <span class="k">if</span> <span class="n">showing_image</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
 
@@ -329,40 +340,40 @@
     <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
         <span class="n">a_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
-
+        <span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="bp">True</span>
 
     <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_b</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
         <span class="n">b_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">b_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
-        <span class="n">run_reset_code</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="bp">True</span>
 
     <span class="c1"># if somebody wins, end the game</span>
     <span class="k">if</span> <span class="n">a_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span> <span class="ow">or</span> <span class="n">b_score</span> <span class="o">&gt;=</span> <span class="n">POINTS_TO_WIN_GAME</span><span class="p">:</span>
         <span class="k">break</span>
 
+<span class="n">show_winner</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Game over!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="things-to-explain-in-the-code">
-<h2>5.2. Things to Explain in the Code<a class="headerlink" href="#things-to-explain-in-the-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-ideas-used-in-the-reaction-game">
+<h2>5.2. New Ideas Used in the Reaction Game<a class="headerlink" href="#new-ideas-used-in-the-reaction-game" title="Permalink to this headline">¶</a></h2>
+<p>As you read through the reaction game code, there are a number of things that may deserve some explanation. Notice that the structure of the code is generally:</p>
+<ul class="simple">
+<li>comment header</li>
+<li>import statements</li>
+<li>function definitions</li>
+<li>global variables / constants</li>
+<li>main code</li>
+</ul>
+<p>Although you do not have to follow the structure given above exactly, it does provide a reasonable way to organize your code.</p>
+<p>Another thing you likely noticed is that I used ALL_CAPS when creating a <em>constant</em>. In Python, a constant is just a regular variable (so it behaves the exact same way as any other variable). However, a common convention is to use ALL_CAPITAL_LETTERS_IN_THE_VARIABLE_NAME, which simply reminds us as programmers that this is a variable whose value should never be changed within our code.</p>
+<p>I also used a new function from the <code class="docutils literal"><span class="pre">time</span></code> module in this program. <code class="docutils literal"><span class="pre">time.time()</span></code> returns the number of seconds that have elapsed since the <em>epoch</em>, which is how your computer keeps track of what the current time is. To understand what this means, call <code class="docutils literal"><span class="pre">time.time()</span></code> in Thonny’s shell a few times. Notice that the number you get back from the function is a really large number, and that it has increased each time you call the function. It is important to realize that the unit of this number is <strong>seconds</strong>. You might find it helpful to uncomment the line containing <code class="docutils literal"><span class="pre">print(time_since_start)</span></code> to help you understand the <code class="docutils literal"><span class="pre">time.time()</span></code> function.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This will be written up better soon. For now, use the following topic list to guide your class discussion regarding how the code works.</p>
+<p class="last">The <a class="reference external" href="https://docs.python.org/3/library/time.html#epoch">Python docs section on time</a> define the epoch as “the point where the time starts, and is platform dependent. For Unix, the epoch is January 1, 1970, 00:00:00 (UTC). To find out what the epoch is on a given platform, look at <code class="docutils literal"><span class="pre">time.gmtime(0)</span></code>.”</p>
 </div>
-<p>Talk through the following parts of the code:</p>
-<ul class="simple">
-<li>initializing the global variables with a value at the start of the code</li>
-<li>using ALL_CAPS when creating a constant (variable whose value should never be changed within your code)</li>
-<li>using an infinite loop for the game loop (<code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code>)</li>
-<li>using booleans to keep track of the state of the program</li>
-<li>time.sleep(1)  – comment out this line and run the code again…</li>
-<li>time.time()  – run this in the Python interpreter to see what the function returns [The epoch is the point where the time starts, and is platform dependent. For Unix, the epoch is January 1, 1970, 00:00:00 (UTC). To find out what the epoch is on a given platform, look at time.gmtime(0). <a class="reference external" href="https://docs.python.org/3/library/time.html#epoch">Python time docs</a>]</li>
-<li>might want to add a print(time_since_start) line, to be sure students understand what that variable is doing</li>
-<li>is_pressed() vs. was_pressed() for the button_a and button_b – is_pressed() is used, since we only want to know “is it pressed RIGHT NOW”? If we use was_pressed(), micro:bit keeps track of whether it’s been pressed since the last time that question was asked</li>
-<li><code class="docutils literal"><span class="pre">break</span></code> to force an exit out of loop. In this case, it allows us to exit the <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> infinite loop</li>
-</ul>
+<p>The <code class="docutils literal"><span class="pre">break</span></code> command forces the current loop to terminate. In this case, it allows us to exit the <code class="docutils literal"><span class="pre">while</span> <span class="pre">True</span></code> infinite loop when one of the players has earned enough points to win the game.</p>
 </div>
 <div class="section" id="adapt-the-code">
 <h2>5.3. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
@@ -370,7 +381,6 @@
 <ul class="simple">
 <li>change the game so that you need only 3 points to win the game</li>
 <li>change the game so that a click at the wrong time makes you only lose 1 point instead of 2</li>
-<li>add a message when somebody wins. In Thonny, your program should say something like “Player A wins!”, while on the Micro:bit, an “A” should be shown. You should also display a message if it is a tie.</li>
 </ul>
 <div class="section" id="extra-for-experts">
 <h3>5.3.1. Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h3>
