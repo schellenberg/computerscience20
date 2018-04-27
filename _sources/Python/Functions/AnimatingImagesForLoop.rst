@@ -30,8 +30,8 @@ Let's pick a few of the :ref:`microbit_predefined_images`), and have them show i
     canvas = turtle.Screen()
     alex = turtle.Turtle()
 
-    for aColor in ["yellow", "red", "purple", "blue"]:
-       alex.color(aColor)
+    for some_color in ["yellow", "red", "purple", "blue"]:
+       alex.color(some_color)
        alex.forward(50)
        alex.left(90)
 
@@ -49,8 +49,8 @@ We could have rewritten the code above to store the list in a variable, like thi
 
     color_list = ["yellow", "red", "purple", "blue"]
 
-    for aColor in color_list:
-       alex.color(aColor)
+    for some_color in color_list:
+       alex.color(some_color)
        alex.forward(50)
        alex.left(90)
 
