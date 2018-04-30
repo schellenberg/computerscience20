@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. Image Processing Practice" href="ImageProcessingPractice.html" />
-    <link rel="prev" title="5. Animating a Micro:bit LED Image with a for Loop" href="../Functions/AnimatingImagesForLoop.html" />
+    <link rel="prev" title="5. Reaction Game with Micro:bit" href="../Functions/MicrobitReactionGame.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -221,8 +221,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop" data-toggle="tooltip">
-    <a href="../Functions/AnimatingImagesForLoop.html" >
+  <li id="relations-prev" title="Previous Chapter - 5. Reaction Game with Micro:bit" data-toggle="tooltip">
+    <a href="../Functions/MicrobitReactionGame.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -360,8 +360,8 @@ no basic color.  On the other hand, “White” has maximum values for all three
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
-that allow us to ask for the intensity values.  They are called <code class="docutils literal"><span class="pre">getRed</span></code>, <code class="docutils literal"><span class="pre">getGreen</span></code>, and <code class="docutils literal"><span class="pre">getBlue</span></code>.  In addition, we can ask a
-pixel to change an intensity value using its <code class="docutils literal"><span class="pre">setRed</span></code>, <code class="docutils literal"><span class="pre">setGreen</span></code>, and <code class="docutils literal"><span class="pre">setBlue</span></code> methods.</p>
+that allow us to ask for the intensity values.  They are called <code class="docutils literal"><span class="pre">get_red</span></code>, <code class="docutils literal"><span class="pre">get_green</span></code>, and <code class="docutils literal"><span class="pre">get_blue</span></code>.  In addition, we can ask a
+pixel to change an intensity value using its <code class="docutils literal"><span class="pre">set_red</span></code>, <code class="docutils literal"><span class="pre">set_green</span></code>, and <code class="docutils literal"><span class="pre">set_blue</span></code> methods.</p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -380,28 +380,28 @@ pixel to change an intensity value using its <code class="docutils literal"><spa
 <td>p = Pixel(20,100,50)</td>
 <td>Create a new pixel with 20 red, 100 green, and 50 blue.</td>
 </tr>
-<tr class="row-odd"><td>getRed()</td>
-<td>r = p.getRed()</td>
+<tr class="row-odd"><td>get_red()</td>
+<td>r = p.get_red()</td>
 <td>Return the red component intensity.</td>
 </tr>
-<tr class="row-even"><td>getGreen()</td>
-<td>g = p.getGreen()</td>
+<tr class="row-even"><td>get_green()</td>
+<td>g = p.get_green()</td>
 <td>Return the green component intensity.</td>
 </tr>
-<tr class="row-odd"><td>getBlue()</td>
-<td>b = p.getBlue()</td>
+<tr class="row-odd"><td>get_blue()</td>
+<td>b = p.get_blue()</td>
 <td>Return the blue component intensity.</td>
 </tr>
-<tr class="row-even"><td>setRed()</td>
-<td>p.setRed(100)</td>
+<tr class="row-even"><td>set_red()</td>
+<td>p.set_red(100)</td>
 <td>Set the red component intensity to 100.</td>
 </tr>
-<tr class="row-odd"><td>setGreen()</td>
-<td>p.setGreen(45)</td>
+<tr class="row-odd"><td>set_green()</td>
+<td>p.set_green(45)</td>
 <td>Set the green component intensity to 45.</td>
 </tr>
-<tr class="row-even"><td>setBlue()</td>
-<td>p.setBlue(156)</td>
+<tr class="row-even"><td>set_blue()</td>
+<td>p.set_blue(156)</td>
 <td>Set the blue component intensity to 156.</td>
 </tr>
 </tbody>
@@ -416,12 +416,12 @@ the same as the current amount of green.</p>
 <textarea data-component="activecode" id=pixelex1a data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-p = image.Pixel(45, 76, 200)
-print(p.getRed())
-p.setRed(66)
-print(p.getRed())
-p.setBlue(p.getGreen())
-print(p.getGreen(), p.getBlue())
+this_pixel = image.Pixel(45, 76, 200)
+print(this_pixel.get_red())
+this_pixel.set_red(66)
+print(this_pixel.get_red())
+this_pixel.set_blue(this_pixel.get_green())
+print(this_pixel.get_green(), this_pixel.get_blue())
 </textarea>
 </div>
 <div class="section" id="check-your-understanding">
@@ -429,7 +429,7 @@ print(p.getGreen(), p.getBlue())
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
-            microbit-examples-1: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
+            microbit-examples-153: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
             <li data-component="answer" data-correct id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback" id="test_question7_8_1_1_opt_a">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
             
             <li data-component="answer"  id="test_question7_8_1_1_opt_b">Light red</li><li data-component="feedback" id="test_question7_8_1_1_opt_b">The closer the values are to 0, the darker the color will appear.</li>
@@ -529,7 +529,7 @@ The inner <code class="docutils literal"><span class="pre">for</span></code> loo
 
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
-        <span class="c1"># do something with the pixel at position (col,row)</span>
+        <span class="c1"># do something with the pixel at position (col, row)</span>
 </pre></div>
 </div>
 </div>
@@ -545,13 +545,13 @@ import image
 width = 600
 height = 300
 
-win = image.ImageWin(600,300)
-img = image.EmptyImage(width,height)
+win = image.ImageWin(width, height)
+img = image.EmptyImage(width, height)
 
 img.draw(win)
 </textarea>
 </div>
-<p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">setPixel</span></code> function inside of a nested for loop.</p>
+<p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">set_pixel</span></code> function inside of a nested for loop.</p>
 
 <div data-childcomponent="change_empty_image_to_red" class="runestone explainer ac_section alert alert-warning">
 
@@ -561,13 +561,13 @@ import image
 width = 600
 height = 300
 
-win = image.ImageWin(600,300)
-img = image.EmptyImage(width,height)
+win = image.ImageWin(width, height)
+img = image.EmptyImage(width, height)
 
 for row in range(height):
     for col in range(width):
         this_pixel = image.Pixel(255, 0, 0)
-        img.setPixel(col,row,this_pixel)
+        img.set_pixel(col, row, this_pixel)
 
 img.draw(win)
 </textarea>
@@ -580,14 +580,14 @@ img.draw(win)
 <div class="section" id="image-objects">
 <h2>1.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
-<p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">getWidth</span></code> and <code class="docutils literal"><span class="pre">getHeight</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">getPixel</span></code> and change the pixel at
-a particular location using <code class="docutils literal"><span class="pre">setPixel</span></code>.</p>
+<p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">get_width</span></code> and <code class="docutils literal"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">get_pixel</span></code> and change the pixel at
+a particular location using <code class="docutils literal"><span class="pre">set_pixel</span></code>.</p>
 <p>The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
 different depending on whether you are using an image file or creating an empty image.</p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
-<col width="19%" />
+<col width="20%" />
 <col width="31%" />
 <col width="50%" />
 </colgroup>
@@ -606,20 +606,20 @@ different depending on whether you are using an image file or creating an empty 
 <td>img = image.EmptyImage(100,200)</td>
 <td>Create an Image object that has all “White” pixels</td>
 </tr>
-<tr class="row-even"><td>getWidth()</td>
-<td>w = img.getWidth()</td>
+<tr class="row-even"><td>get_width()</td>
+<td>w = img.get_width()</td>
 <td>Return the width of the image in pixels.</td>
 </tr>
-<tr class="row-odd"><td>getHeight()</td>
-<td>h = img.getHeight()</td>
+<tr class="row-odd"><td>get_height()</td>
+<td>h = img.get_height()</td>
 <td>Return the height of the image in pixels.</td>
 </tr>
-<tr class="row-even"><td>getPixel(col,row)</td>
-<td>p = img.getPixel(35,86)</td>
+<tr class="row-even"><td>get_pixel(col,row)</td>
+<td>p = img.get_pixel(35,86)</td>
 <td>Return the pixel at column 35, row 86.</td>
 </tr>
-<tr class="row-odd"><td>setPixel(col,row,p)</td>
-<td>img.setPixel(100,50,mp)</td>
+<tr class="row-odd"><td>set_pixel(col,row,p)</td>
+<td>img.set_pixel(100,50,mp)</td>
 <td>Set the pixel at column 100, row 50 to be mp.</td>
 </tr>
 </tbody>
@@ -636,15 +636,15 @@ on its basic color intensities.</p>
 import image
 img = image.Image("skflag.png")
 
-print(img.getWidth())
-print(img.getHeight())
+print(img.get_width())
+print(img.get_height())
 
-p = img.getPixel(45, 55)
-print(p.getRed(), p.getGreen(), p.getBlue())
+p = img.get_pixel(45, 55)
+print(p.get_red(), p.get_green(), p.get_blue())
 </textarea>
 </div>
 <p>When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">getPixel</span></code> arguments and rerunning the program.</p>
+pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
 </div>
 <div class="section" id="image-processing-with-an-existing-image">
 <h2>1.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
@@ -658,46 +658,46 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 import image
 
 img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.getWidth(), img.getHeight())
+win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
+img.set_delay(1,15)   # set_delay(0) turns off animation
 
-for row in range(img.getHeight()):
-    for col in range(img.getWidth()):
-        p = img.getPixel(col, row)
+for row in range(img.get_height()):
+    for col in range(img.get_width()):
+        p = img.get_pixel(col, row)
 
-        new_red = p.getRed()
-        new_green = p.getGreen() + 50
-        new_blue = p.getBlue()
+        new_red = p.get_red()
+        new_green = p.get_green() + 50
+        new_blue = p.get_blue()
 
         new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-        img.setPixel(col, row, new_pixel)
+        img.set_pixel(col, row, new_pixel)
 
 img.draw(win)
 </textarea>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Please note that the setDelay() method is not implemented in the cs20-image module, but you can still show image manipulation in an “animated” way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this:</p>
+<p>Please note that the set_delay() method is not implemented in the cs20-image module, but you can still show image manipulation in an “animated” way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;sneakers.jpg&quot;</span><span class="p">)</span>
-<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">())</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">get_height</span><span class="p">())</span>
 <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">win</span><span class="p">)</span>
-<span class="n">img</span><span class="o">.</span><span class="n">setDelay</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>   <span class="c1"># setDelay(0) turns off animation</span>
+<span class="n">img</span><span class="o">.</span><span class="n">set_delay</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>   <span class="c1"># set_delay(0) turns off animation</span>
 
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getHeight</span><span class="p">()):</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getWidth</span><span class="p">()):</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">get_height</span><span class="p">()):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">()):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
 
-        <span class="n">new_red</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
-        <span class="n">new_green</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">()</span> <span class="o">+</span> <span class="mi">50</span>
-        <span class="n">new_blue</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">()</span>
+        <span class="n">new_red</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+        <span class="n">new_green</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span> <span class="o">+</span> <span class="mi">50</span>
+        <span class="n">new_blue</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
 
         <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="n">new_red</span><span class="p">,</span> <span class="n">new_green</span><span class="p">,</span> <span class="n">new_blue</span><span class="p">)</span>
 
-        <span class="n">img</span><span class="o">.</span><span class="n">setPixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">new_pixel</span><span class="p">)</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">new_pixel</span><span class="p">)</span>
 
     <span class="c1"># redrawing the image after each row allows us to see how the image is being changed</span>
     <span class="c1"># you can move this outside the for loop if you don&#39;t want to watch the process</span>
@@ -709,7 +709,7 @@ img.draw(win)
 </div>
 <p class="last">Notice that the <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
-<p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">getWidth()</span></code> and <code class="docutils literal"><span class="pre">getHeight()</span></code> functions to create a window that is the same size as the image.</p>
+<p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">get_width()</span></code> and <code class="docutils literal"><span class="pre">get_height()</span></code> functions to create a window that is the same size as the image.</p>
 <p>Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
 Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the <code class="docutils literal"><span class="pre">new_red</span></code>, <code class="docutils literal"><span class="pre">new_green</span></code>, and <code class="docutils literal"><span class="pre">new_blue</span></code> values, we can create a new pixel (Line 15).</p>
@@ -729,21 +729,21 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 import image
 
 img = image.Image("skflag.png")
-win = image.ImageWin(img.getWidth(), img.getHeight())
+win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.setDelay(1,15)   # setDelay(0) turns off animation
+img.set_delay(1,15)   # set_delay(0) turns off animation
 
-for row in range(img.getHeight()):
-    for col in range(img.getWidth()):
-        p = img.getPixel(col, row)
+for row in range(img.get_height()):
+    for col in range(img.get_width()):
+        p = img.get_pixel(col, row)
 
-        newred = 255 - p.getRed()
-        newgreen = 255 - p.getGreen()
-        newblue = 255 - p.getBlue()
+        newred = 255 - p.get_red()
+        newgreen = 255 - p.get_green()
+        newblue = 255 - p.get_blue()
 
         newpixel = image.Pixel(newred, newgreen, newblue)
 
-        img.setPixel(col, row, newpixel)
+        img.set_pixel(col, row, newpixel)
 
 img.draw(win)
 </textarea>
@@ -764,7 +764,7 @@ img.draw(win)
 </ul>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
-<p class="last">If you are using Thonny, be careful to always pass integer values when using the <code class="docutils literal"><span class="pre">setPixel()</span></code> function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the <code class="docutils literal"><span class="pre">int()</span></code> function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.</p>
+<p class="last">If you are using Thonny, be careful to always pass integer values when using the <code class="docutils literal"><span class="pre">set_pixel()</span></code> function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the <code class="docutils literal"><span class="pre">int()</span></code> function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.</p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -772,7 +772,7 @@ img.draw(win)
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
-            <p>microbit-examples-2: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
+            <p>microbit-examples-154: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
@@ -827,14 +827,14 @@ img.draw(win)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_2">
-            <p>microbit-examples-3: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
-<span class="n">newgreen</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getGreen</span><span class="p">()</span>
-<span class="n">newblue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">getBlue</span><span class="p">()</span>
+            <p>microbit-examples-155: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+<span class="n">newgreen</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
+<span class="n">newblue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>with the lines:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getRed</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">newred</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
 <span class="n">newgreen</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">newblue</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
@@ -862,12 +862,12 @@ img.draw(win)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 5. Animating a Micro:bit LED Image with a <code class="docutils literal"><span class="pre">for</span></code> Loop' data-toggle="tooltip">
-    <a href="../Functions/AnimatingImagesForLoop.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 5. Reaction Game with Micro:bit' data-toggle="tooltip">
+    <a href="../Functions/MicrobitReactionGame.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../Functions/AnimatingImagesForLoop.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../Functions/MicrobitReactionGame.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - 2. Image Processing Practice' data-toggle="tooltip" >
     <a href="ImageProcessingPractice.html" >

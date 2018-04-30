@@ -30,25 +30,25 @@ Consider the following code, in which the increase green code from a previous le
     import image
 
     def increase_green(original_image):
-        width = original_image.getWidth()
-        height = original_image.getHeight()
+        width = original_image.get_width()
+        height = original_image.get_height()
         new_image = image.EmptyImage(width, height)
         for row in range(height):
             for col in range(width):
-                p = original_image.getPixel(col, row)
+                p = original_image.get_pixel(col, row)
 
-                new_red = p.getRed()
-                new_green = p.getGreen() + 50
-                new_blue = p.getBlue()
+                new_red = p.get_red()
+                new_green = p.get_green() + 50
+                new_blue = p.get_blue()
 
                 new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-                new_image.setPixel(col, row, new_pixel)
+                new_image.set_pixel(col, row, new_pixel)
         return new_image
 
 
     img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
 
     converted_img = increase_green(img)
@@ -64,29 +64,29 @@ If you'd like the function to animate while it runs, you can reorganize your cod
     import image
 
     def increase_green(original_image, window):
-        width = original_image.getWidth()
-        height = original_image.getHeight()
+        width = original_image.get_width()
+        height = original_image.get_height()
         new_image = image.EmptyImage(width, height)
         
         original_image.draw(window)
         
         for row in range(height):
             for col in range(width):
-                p = img.getPixel(col, row)
+                p = img.get_pixel(col, row)
 
-                new_red = p.getRed()
-                new_green = p.getGreen() + 50
-                new_blue = p.getBlue()
+                new_red = p.get_red()
+                new_green = p.get_green() + 50
+                new_blue = p.get_blue()
 
                 new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-                new_image.setPixel(col, row, new_pixel)
+                new_image.set_pixel(col, row, new_pixel)
             new_image.draw(window)
         return new_image
 
 
     img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
 
     converted_img = increase_green(img, win)
     converted_img.draw(win)
@@ -130,9 +130,9 @@ Write a program that opens an image and uses a nested loop to look at all of the
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -155,7 +155,7 @@ Turn the code you wrote above into a function called ``red_remover(original_imag
 
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
 
     converted_img = red_remover(img, win)
     converted_img.draw(win)
@@ -172,9 +172,9 @@ Write a program that sets the red value to the original green value, the green v
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -192,9 +192,9 @@ Write a program that keeps only the green values of all pixels in the image. Onc
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -212,9 +212,9 @@ Write a program that sets each pixel's red intensity to be half of the original 
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -232,9 +232,9 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -252,9 +252,9 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
