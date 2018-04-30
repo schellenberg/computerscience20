@@ -1057,3 +1057,214 @@ BrokenPipeError: [Errno 32] Broken pipe
 127.0.0.1 - - [27/Apr/2018 09:10:17] "GET /_images/bitio1.png HTTP/1.1" 200 -
 
 Aborted!
+127.0.0.1 - - [30/Apr/2018 10:50:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:50] "GET /_static/accessibility.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52715)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 10:50:51] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52717)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /ConstrainedLanguage/Step0.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_images/step0.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_images/move.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_images/move_one_step.gif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_images/move1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_images/move.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:50:56] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:01] "GET /ConstrainedLanguage/Step5.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:01] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:01] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:01] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:01] "GET /_images/step5.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:53] "GET /ConstrainedLanguage/Step14.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:54] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:54] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:54] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:54] "GET /_images/hurdles2.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:51:54] "GET /_images/step14.gif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:06] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:06] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:06] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:06] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:10] "GET /ConstrainedLanguage/Step15.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:11] "GET /_images/step15.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:52:11] "GET /_images/open_window.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:35] "GET /ConstrainedLanguage/Step19.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:36] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:36] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:36] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:36] "GET /_images/step19.gif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:43] "GET /ConstrainedLanguage/Step14.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 10:54:49] "GET /ConstrainedLanguage/Step19.html HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52778)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+
+Aborted!
+127.0.0.1 - - [30/Apr/2018 11:07:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:07:52] "GET /_static/accessibility.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52929)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 11:07:53] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52930)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 11:07:53] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52931)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 11:08:05] "GET /ConstrainedLanguage/Step19.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:08:05] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:08:05] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 11:08:05] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+
+Aborted!

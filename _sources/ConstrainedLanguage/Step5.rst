@@ -99,29 +99,17 @@ the synonym being **called** [that is, the name appears followed by
 block *as is* at that location.
 
 
-.. Your Turn - Part 1
-.. -------------------
-
-.. Open Step 5a on the |reeborg_environment_1|.
-
-.. .. image:: images/step5a.png
-
-.. Define a ``turn_right()`` function, and use it to have Reeborg walk down the gravel path to the flag. Once again, be sure to use comments and whitespace to increase the readability of your solution!
-
-
 Your Turn
 ----------
 
 Open Step 5 on the |reeborg_environment|.
 
-.. image:: images/step5b.png
+.. image:: images/step5.png
 
 Reeborg wants to pick some strawberries in its garden. Reeborg's garden has a very strange shape, as you've seen above. Define a ``pick_two_berries()`` function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!
 
-.. .. |reeborg_environment_1| raw:: html
-
-..    <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%205a" target="_blank">Reeborg environment</a>
 
 .. |reeborg_environment| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%205" target="_blank">Reeborg environment</a>
+

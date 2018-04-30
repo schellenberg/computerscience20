@@ -88,9 +88,9 @@ There is a function that is more specific to wall called
 Your Turn
 ---------
 
-Open Step 14a on the |reeborg_environment|.
+Open Step 14 on the |reeborg_environment|.
 
-.. image:: images/step14a.gif
+.. image:: images/step14.gif
 
 Reeborg loves going for walks, especially when it is around a lake. The lakes in Reeborg's neighborhood are all different sizes of rectangles, so Reeborg does not know how many steps it will take to get back to the start of walk. Thankfully, Reeborg happens to be carrying a banana, which you can tell Reeborg to ``put()`` down at the start of it's walk. Reeborg knows it's done walking when it reaches the banana again.
 
@@ -100,26 +100,6 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014a" target="_blank">Reeborg environment</a>
+   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014" target="_blank">Reeborg environment</a>
 
 
-Extra for Experts
-------------------
-
-**Only attempt the following step if you are either: ahead of the rest of your peers, or finished off the rest of the steps. If you've been having any trouble with these Reeborg steps, just skip this Extra for Experts for now. You can always come back and try it later!**
-
-
-Open Step 14b on the |reeborg_environment_extra|.
-
-Reeborg has found a much more interesting lake to walk around. 
-
-.. image:: images/step14b.gif
-
-Try to adapt the solution for the basic world to also work with this new lake. Reeborg should once again put down the banana at the starting position and continue walking along the border of the lake (this time, a gravel path) until it finds the banana again. Staying along the wall will be trickier this time, but that's the challenge!
-
-.. note:: Your solution for the Extra for Experts world should also work in the basic (Step 14a) world!
-
-
-.. |reeborg_environment_extra| raw:: html
-
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014b" target="_blank">Reeborg environment</a>
