@@ -14,83 +14,6 @@ Image Processing and Nested Loops
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
-.. Simple Tables
-.. ---------------
-
-.. .. One Table
-.. .. ~~~~~~~~~~
-
-.. One of the things loops are good for is generating tabular data.  Before
-.. computers were readily available, people had to calculate logarithms, sines and
-.. cosines, and other mathematical functions by hand. To make that easier,
-.. mathematics books contained long tables listing the values of these functions.
-.. Creating the tables was slow and boring, and they tended to be full of errors.
-
-.. When computers appeared on the scene, one of the initial reactions was, *"This is
-.. great! We can use the computers to generate the tables, so there will be no
-.. errors."* That turned out to be true (mostly) but shortsighted. Soon thereafter,
-.. computers and calculators were so pervasive that the tables became obsolete.
-
-.. Well, almost. For some operations, computers use tables of values to get an
-.. approximate answer and then perform computations to improve the approximation.
-.. In some cases, there have been errors in the underlying tables, most famously
-.. in the table the Intel Pentium processor chip used to perform floating-point division.
-
-.. Although a power of 2 table is not as useful as it once was, it still makes a good
-.. example of iteration. The following program outputs a sequence of values in the
-.. left column and 2 raised to the power of that value in the right column:
-
-.. .. activecode:: powers_of_two_table
-..     :nocodelens:
-
-..     #table column headings
-..     print("n", '\t', "2**n")
-..     print("---", '\t', "-----")
-
-..     # generate values for columns
-..     for counter in range(13):
-..         print(counter, '\t', 2 ** counter)
-
-.. The string ``'\t'`` represents a **tab character**. The backslash character in
-.. ``'\t'`` indicates the beginning of an **escape sequence**.  Escape sequences
-.. are used to represent invisible characters like tabs and newlines. The sequence
-.. ``\n`` represents a **newline**.
-
-.. An escape sequence can appear anywhere in a string.  In this example, the tab
-.. escape sequence is the only thing in the string. How do you think you represent
-.. a backslash in a string?
-
-.. As characters and strings are displayed on the screen, an invisible marker
-.. called the **cursor** keeps track of where the next character will go. After a
-.. ``print`` function is executed, the cursor normally goes to the beginning of the next
-.. line.
-
-.. The tab character shifts the cursor to the right until it reaches one of the
-.. tab stops. Tabs are useful for making columns of text line up, as in the output
-.. of the previous program. Because of the tab characters between the columns, the position of the second column does not depend on the number of digits in the first column.
-
-
-.. Multiple Tables
-.. ~~~~~~~~~~~~~~~~
-
-.. Say we want to create tables for tables of 1, 2, 3, 4 and 5. We could go back to the code above and change the 2 into a 1, then a 2, then a three, etc. This would quickly get tedious, however. An alternate method would be to create a **nested loop** (a loop inside of another loop). Consider the following adaptation of the table printing program:
-
-.. .. activecode:: powers_of_n_table
-
-..     max_power = 5
-
-..     for power in range(1, max_power+1):
-..         #table column headings
-..         print("n", '\t', str(power)+"**n")
-..         print("---", '\t', "-----")
-
-..         # generate values for columns
-..         for counter in range(13):
-..             print(counter, '\t', power ** counter)
-        
-..         print()
-..         print()
-
 
 Image Processing Introduction
 ------------------------------
@@ -158,20 +81,20 @@ In order to manipulate an image, we need to be able to access individual pixels.
 a module called **image**, provided in ActiveCode (or with the ``cs20-image`` package). The image module defines two classes: ``Image`` and ``Pixel``.
 
 Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
-that allow us to ask for the intensity values.  They are called ``getRed``, ``getGreen``, and ``getBlue``.  In addition, we can ask a
-pixel to change an intensity value using its ``setRed``, ``setGreen``, and ``setBlue`` methods.
+that allow us to ask for the intensity values.  They are called ``get_red``, ``get_green``, and ``get_blue``.  In addition, we can ask a
+pixel to change an intensity value using its ``set_red``, ``set_green``, and ``set_blue`` methods.
 
 
     ============  ====================        ===============================================
     Method Name   Example                     Explanation
     ============  ====================        ===============================================
     Pixel(r,g,b)  p = Pixel(20,100,50)        Create a new pixel with 20 red, 100 green, and 50 blue.
-    getRed()      r = p.getRed()              Return the red component intensity.
-    getGreen()    g = p.getGreen()            Return the green component intensity.
-    getBlue()     b = p.getBlue()             Return the blue component intensity.
-    setRed()      p.setRed(100)               Set the red component intensity to 100.
-    setGreen()    p.setGreen(45)              Set the green component intensity to 45.
-    setBlue()     p.setBlue(156)              Set the blue component intensity to 156.
+    get_red()     r = p.get_red()             Return the red component intensity.
+    get_green()   g = p.get_green()           Return the green component intensity.
+    get_blue()    b = p.get_blue()            Return the blue component intensity.
+    set_red()     p.set_red(100)              Set the red component intensity to 100.
+    set_green()   p.set_green(45)             Set the green component intensity to 45.
+    set_blue()    p.set_blue(156)             Set the blue component intensity to 156.
     ============  ====================        ===============================================
 
 In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
@@ -183,12 +106,12 @@ the same as the current amount of green.
 
     import image
 
-    p = image.Pixel(45, 76, 200)
-    print(p.getRed())
-    p.setRed(66)
-    print(p.getRed())
-    p.setBlue(p.getGreen())
-    print(p.getGreen(), p.getBlue())
+    this_pixel = image.Pixel(45, 76, 200)
+    print(this_pixel.get_red())
+    this_pixel.set_red(66)
+    print(this_pixel.get_red())
+    this_pixel.set_blue(this_pixel.get_green())
+    print(this_pixel.get_green(), this_pixel.get_blue())
 
 
 Check Your Understanding
@@ -262,7 +185,7 @@ The resulting code will look like the following.  We are now free to do anything
 
     for row in range(height):
         for col in range(width):
-            # do something with the pixel at position (col,row)
+            # do something with the pixel at position (col, row)
 
 
 Creating an Empty Image
@@ -278,13 +201,13 @@ It is possible to create an Image object that is "empty".  An ``EmptyImage`` has
     width = 600
     height = 300
 
-    win = image.ImageWin(600,300)
-    img = image.EmptyImage(width,height)
+    win = image.ImageWin(width, height)
+    img = image.EmptyImage(width, height)
 
     img.draw(win)
 
 
-After creating an empty image, we can change the color of a specific pixel by using the ``setPixel`` function inside of a nested for loop.
+After creating an empty image, we can change the color of a specific pixel by using the ``set_pixel`` function inside of a nested for loop.
 
 .. activecode:: change_empty_image_to_red
     :nocodelens:
@@ -294,13 +217,13 @@ After creating an empty image, we can change the color of a specific pixel by us
     width = 600
     height = 300
 
-    win = image.ImageWin(600,300)
-    img = image.EmptyImage(width,height)
+    win = image.ImageWin(width, height)
+    img = image.EmptyImage(width, height)
 
     for row in range(height):
         for col in range(width):
             this_pixel = image.Pixel(255, 0, 0)
-            img.setPixel(col,row,this_pixel)
+            img.set_pixel(col, row, this_pixel)
 
     img.draw(win)
 
@@ -316,23 +239,23 @@ Image Objects
 
 To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.
 
-We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods.  We can also get a pixel from a particular location in the image using ``getPixel`` and change the pixel at
-a particular location using ``setPixel``.
+We can ask an image object to return its size using the ``get_width`` and ``get_height`` methods.  We can also get a pixel from a particular location in the image using ``get_pixel`` and change the pixel at
+a particular location using ``set_pixel``.
 
 
 The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
 different depending on whether you are using an image file or creating an empty image.
 
-    =================== =============================== ==================================================
-    Method Name         Example                         Explanation
-    =================== =============================== ==================================================
-    Image(filename)     img = image.Image("cy.png")     Create an Image object from the file cy.png.
-    EmptyImage()        img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
-    getWidth()          w = img.getWidth()              Return the width of the image in pixels.
-    getHeight()         h = img.getHeight()             Return the height of the image in pixels.
-    getPixel(col,row)   p = img.getPixel(35,86)         Return the pixel at column 35, row 86.
-    setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
-    =================== =============================== ==================================================
+    ==================== =============================== ==================================================
+    Method Name          Example                         Explanation
+    ==================== =============================== ==================================================
+    Image(filename)      img = image.Image("cy.png")     Create an Image object from the file cy.png.
+    EmptyImage()         img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
+    get_width()          w = img.get_width()             Return the width of the image in pixels.
+    get_height()         h = img.get_height()            Return the height of the image in pixels.
+    get_pixel(col,row)   p = img.get_pixel(35,86)        Return the pixel at column 35, row 86.
+    set_pixel(col,row,p) img.set_pixel(100,50,mp)        Set the pixel at column 100, row 50 to be mp.
+    ==================== =============================== ==================================================
 
 Consider the image shown below.  Assume that the image is stored in a file called ``skflag.png``.  Line 2 opens the
 file and uses the contents to create an image object that is referred to by ``img``.  Once we have an image object,
@@ -350,15 +273,15 @@ on its basic color intensities.
     import image
     img = image.Image("skflag.png")
 
-    print(img.getWidth())
-    print(img.getHeight())
+    print(img.get_width())
+    print(img.get_height())
 
-    p = img.getPixel(45, 55)
-    print(p.getRed(), p.getGreen(), p.getBlue())
+    p = img.get_pixel(45, 55)
+    print(p.get_red(), p.get_green(), p.get_blue())
 
 
 When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
+pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the ``get_pixel`` arguments and rerunning the program.
 
 
 Image Processing with an Existing Image
@@ -380,47 +303,47 @@ Let's say that we wanted to increase the amount of green in the image shown abov
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
-    for row in range(img.getHeight()):
-        for col in range(img.getWidth()):
-            p = img.getPixel(col, row)
+    for row in range(img.get_height()):
+        for col in range(img.get_width()):
+            p = img.get_pixel(col, row)
 
-            new_red = p.getRed()
-            new_green = p.getGreen() + 50
-            new_blue = p.getBlue()
+            new_red = p.get_red()
+            new_green = p.get_green() + 50
+            new_blue = p.get_blue()
 
             new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-            img.setPixel(col, row, new_pixel)
+            img.set_pixel(col, row, new_pixel)
 
     img.draw(win)
 
 
 .. note:: 
 
-    Please note that the setDelay() method is not implemented in the cs20-image module, but you can still show image manipulation in an "animated" way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this::
+    Please note that the set_delay() method is not implemented in the cs20-image module, but you can still show image manipulation in an "animated" way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this::
     
         import image
 
         img = image.Image("sneakers.jpg")
-        win = image.ImageWin(img.getWidth(), img.getHeight())
+        win = image.ImageWin(img.get_width(), img.get_height())
         img.draw(win)
-        img.setDelay(1,15)   # setDelay(0) turns off animation
+        img.set_delay(1,15)   # set_delay(0) turns off animation
 
-        for row in range(img.getHeight()):
-            for col in range(img.getWidth()):
-                p = img.getPixel(col, row)
+        for row in range(img.get_height()):
+            for col in range(img.get_width()):
+                p = img.get_pixel(col, row)
 
-                new_red = p.getRed()
-                new_green = p.getGreen() + 50
-                new_blue = p.getBlue()
+                new_red = p.get_red()
+                new_green = p.get_green() + 50
+                new_blue = p.get_blue()
 
                 new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-                img.setPixel(col, row, new_pixel)
+                img.set_pixel(col, row, new_pixel)
 
             # redrawing the image after each row allows us to see how the image is being changed
             # you can move this outside the for loop if you don't want to watch the process
@@ -431,7 +354,7 @@ Let's say that we wanted to increase the amount of green in the image shown abov
 
     Notice that the ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
 
-Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``getWidth()`` and ``getHeight()`` functions to create a window that is the same size as the image.
+Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``get_width()`` and ``get_height()`` functions to create a window that is the same size as the image.
 
 Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
 Line 10 gets an individual pixel at the current location of the nested loop.
@@ -459,21 +382,21 @@ The program below implements this algorithm using the previous image (skflag.png
     import image
 
     img = image.Image("skflag.png")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
-    for row in range(img.getHeight()):
-        for col in range(img.getWidth()):
-            p = img.getPixel(col, row)
+    for row in range(img.get_height()):
+        for col in range(img.get_width()):
+            p = img.get_pixel(col, row)
 
-            newred = 255 - p.getRed()
-            newgreen = 255 - p.getGreen()
-            newblue = 255 - p.getBlue()
+            newred = 255 - p.get_red()
+            newgreen = 255 - p.get_green()
+            newblue = 255 - p.get_blue()
 
             newpixel = image.Pixel(newred, newgreen, newblue)
 
-            img.setPixel(col, row, newpixel)
+            img.set_pixel(col, row, newpixel)
 
     img.draw(win)
 
@@ -504,7 +427,7 @@ Try This
 - You can also do some complex arithmetic and create interesting effects, such as `Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_
 
 
-.. caution:: If you are using Thonny, be careful to always pass integer values when using the ``setPixel()`` function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the ``int()`` function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.
+.. caution:: If you are using Thonny, be careful to always pass integer values when using the ``set_pixel()`` function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the ``int()`` function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.
 
 
 Check Your Understanding
@@ -581,15 +504,15 @@ Check Your Understanding
 
    .. code-block:: python
 
-      newred = 255 - p.getRed()
-      newgreen = 255 - p.getGreen()
-      newblue = 255 - p.getBlue()
+      newred = 255 - p.get_red()
+      newgreen = 255 - p.get_green()
+      newblue = 255 - p.get_blue()
 
    with the lines:
 
    .. code-block:: python
 
-      newred = p.getRed()
+      newred = p.get_red()
       newgreen = 0
       newblue = 0
 

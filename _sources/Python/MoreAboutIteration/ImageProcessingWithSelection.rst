@@ -38,26 +38,26 @@ Due to the contrast in the image, we can apply certain effects to only a portion
     img = image.Image("moon.jpg")
 
     # figure out how large the image is
-    width = img.getWidth()
-    height = img.getHeight()
+    width = img.get_width()
+    height = img.get_height()
 
     # make a window to draw on
     win = image.ImageWin(width, height)
 
     # draw the original image onto the window
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image
     for x in range(width):
         for y in range(height):
             # get the current pixel
-            this_pixel = img.getPixel(x, y)
+            this_pixel = img.get_pixel(x, y)
 
             # access the amount of red, green and blue for this pixel
-            r = this_pixel.getRed()
-            g = this_pixel.getGreen()
-            b = this_pixel.getBlue()
+            r = this_pixel.get_red()
+            g = this_pixel.get_green()
+            b = this_pixel.get_blue()
 
             # apply any effect to the pixels
             if r + g + b < 30:
@@ -73,7 +73,7 @@ Due to the contrast in the image, we can apply certain effects to only a portion
             new_pixel = image.Pixel(new_red, new_green, new_blue)
 
             # reassign the pixel value in the image to be the changed version
-            img.setPixel(x, y, new_pixel)
+            img.set_pixel(x, y, new_pixel)
 
     # draw the changed image to the window
     img.draw(win)
@@ -111,26 +111,26 @@ To apply an effect to just the left hand side, we can write a program that itera
     img = image.Image("sneakers.jpg")
 
     # figure out how large the image is
-    width = img.getWidth()
-    height = img.getHeight()
+    width = img.get_width()
+    height = img.get_height()
 
     # make a window to draw on
     win = image.ImageWin(width, height)
 
     # draw the original image onto the window
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image
     for x in range(width):
         for y in range(height):
             # get the current pixel
-            this_pixel = img.getPixel(x, y)
+            this_pixel = img.get_pixel(x, y)
 
             # access the amount of red, green and blue for this pixel
-            r = this_pixel.getRed()
-            g = this_pixel.getGreen()
-            b = this_pixel.getBlue()
+            r = this_pixel.get_red()
+            g = this_pixel.get_green()
+            b = this_pixel.get_blue()
 
             # apply any effect to the pixels
             if x < width/2:
@@ -147,7 +147,7 @@ To apply an effect to just the left hand side, we can write a program that itera
             new_pixel = image.Pixel(new_red, new_green, new_blue)
 
             # reassign the pixel value in the image to be the changed version
-            img.setPixel(x, y, new_pixel)
+            img.set_pixel(x, y, new_pixel)
 
     # draw the changed image to the window
     img.draw(win)
@@ -178,7 +178,7 @@ If you want to combine two images together, you need to copy the pixel informati
     <img src="../../_static/rooster.jpg" id="rooster.jpg">
     <h4 style="text-align: center;">rooster.jpg</h4>
 
-When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call ``original_image.setPixel()`` on line 36.
+When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call ``original_image.set_pixel()`` on line 36.
 
 .. activecode::  combining_images
     :nocodelens:
@@ -191,34 +191,34 @@ When we are copying the smile over to the rooster image, we can adjust where the
     img_to_add = image.Image("smile.png")
 
     # figure out how large the image to add is
-    width_small = img_to_add.getWidth()
-    height_small = img_to_add.getHeight()
+    width_small = img_to_add.get_width()
+    height_small = img_to_add.get_height()
 
     # figure out how large the original image is
-    width = original_img.getWidth()
-    height = original_img.getHeight()
+    width = original_img.get_width()
+    height = original_img.get_height()
 
     # make a window to draw on
     win = image.ImageWin(width, height)
 
     # draw the original image onto the window
     original_img.draw(win)
-    original_img.setDelay(1,15)   # setDelay(0) turns off animation
+    original_img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image to add
     for x in range(width_small):
         for y in range(height_small):
             # get the current pixel
-            this_pixel = img_to_add.getPixel(x, y)
+            this_pixel = img_to_add.get_pixel(x, y)
 
             # access the amount of red, green and blue for this pixel
-            r = this_pixel.getRed()
-            g = this_pixel.getGreen()
-            b = this_pixel.getBlue()
+            r = this_pixel.get_red()
+            g = this_pixel.get_green()
+            b = this_pixel.get_blue()
 
             # check if this is NOT a white background pixel
             if r < 250 and g < 250 and b < 250:
-                original_img.setPixel(x, y + 135, this_pixel)
+                original_img.set_pixel(x, y + 135, this_pixel)
 
 
     # draw the changed image to the window
@@ -272,9 +272,9 @@ Write a program that sets the red intensity of all pixels on the left half of th
     import image
 
     img = image.Image("berries.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -293,9 +293,9 @@ Write a program that makes the top right quarter of the image be tinted blue (in
     import image
 
     img = image.Image("bird-far.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -313,9 +313,9 @@ Write a program that changes the colour of the rooster's comb and wattle (the re
     import image
 
     img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -333,9 +333,9 @@ Write a program that takes the left side of an image and displays it both on the
     import image
 
     img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -354,9 +354,9 @@ Write a program that mirrors an image from left to right around a vertical line 
     import image
 
     img = image.Image("berries.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -375,9 +375,9 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
     import image
 
     img = image.Image("berries.jpg")
-    win = image.ImageWin(img.getWidth(), img.getHeight())
+    win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -405,7 +405,7 @@ Your program should create an image that looks similar to the following:
     win = image.ImageWin(width, height)
     img = image.EmptyImage(width, height)
     
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -435,7 +435,7 @@ To make a radial gradient, you need to set a centre point, then for each pixel, 
     win = image.ImageWin(width, height)
     img = image.EmptyImage(width, height)
     
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 

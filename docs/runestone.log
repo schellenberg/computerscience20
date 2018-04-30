@@ -1368,3 +1368,76 @@ Aborted!
 127.0.0.1 - - [30/Apr/2018 13:53:04] "GET /runestone/ajax/gethist.json?acid=increase_green_function HTTP/1.1" 404 -
 
 Aborted!
+127.0.0.1 - - [30/Apr/2018 14:01:51] code 404, message File not found
+127.0.0.1 - - [30/Apr/2018 14:01:51] "GET /runestone/ajax/gethist.json?acid=pixelex1a HTTP/1.1" 404 -
+127.0.0.1 - - [30/Apr/2018 14:02:25] code 404, message File not found
+127.0.0.1 - - [30/Apr/2018 14:02:25] "GET /runestone/ajax/gethist.json?acid=change_empty_image_to_red HTTP/1.1" 404 -
+127.0.0.1 - - [30/Apr/2018 14:03:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:01] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:01] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:01] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:01] "GET /_static/accessibility.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:01] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61001)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 14:03:02] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61002)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /Python/MoreAboutIteration/NestedLoops.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /_images/image_pixels.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /_static/skflag.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /_static/sneakers.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /_static/fransaskoisflag.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:06] "GET /_static/pineapples.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:08] "GET /_static/images/ui-bg_flat_75_ffffff_40x100.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:08] "GET /_static/images/ui-bg_glass_75_e6e6e6_1x400.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2018 14:03:34] code 404, message File not found
+127.0.0.1 - - [30/Apr/2018 14:03:34] "GET /runestone/ajax/gethist.json?acid=pixelex1a HTTP/1.1" 404 -
+
+Aborted!
