@@ -134,7 +134,7 @@ To apply an effect to just the left hand side, we can write a program that itera
 
             # apply any effect to the pixels
             if x < width/2:
-                average = int((r + b + g) / 3)
+                average = (r + b + g) / 3
                 new_red = average
                 new_green = average
                 new_blue = average

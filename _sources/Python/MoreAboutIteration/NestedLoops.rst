@@ -390,13 +390,13 @@ The program below implements this algorithm using the previous image (skflag.png
         for col in range(img.get_width()):
             p = img.get_pixel(col, row)
 
-            newred = 255 - p.get_red()
-            newgreen = 255 - p.get_green()
-            newblue = 255 - p.get_blue()
+            new_red = 255 - p.get_red()
+            new_green = 255 - p.get_green()
+            new_blue = 255 - p.get_blue()
 
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-            img.set_pixel(col, row, newpixel)
+            img.set_pixel(col, row, new_pixel)
 
     img.draw(win)
 
@@ -504,17 +504,17 @@ Check Your Understanding
 
    .. code-block:: python
 
-      newred = 255 - p.get_red()
-      newgreen = 255 - p.get_green()
-      newblue = 255 - p.get_blue()
+      new_red = 255 - p.get_red()
+      new_green = 255 - p.get_green()
+      new_blue = 255 - p.get_blue()
 
    with the lines:
 
    .. code-block:: python
 
-      newred = p.get_red()
-      newgreen = 0
-      newblue = 0
+      new_red = p.get_red()
+      new_green = 0
+      new_blue = 0
 
 
 Acknowledgments
