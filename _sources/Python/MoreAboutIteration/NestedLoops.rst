@@ -106,12 +106,12 @@ the same as the current amount of green.
 
     import image
 
-    this_pixel = image.Pixel(45, 76, 200)
-    print(this_pixel.get_red())
-    this_pixel.set_red(66)
-    print(this_pixel.get_red())
-    this_pixel.set_blue(this_pixel.get_green())
-    print(this_pixel.get_green(), this_pixel.get_blue())
+    p = image.Pixel(45, 76, 200)
+    print(p.get_red())
+    p.set_red(66)
+    print(p.get_red())
+    p.set_blue(p.get_green())
+    print(p.get_green(), p.get_blue())
 
 
 Check Your Understanding
