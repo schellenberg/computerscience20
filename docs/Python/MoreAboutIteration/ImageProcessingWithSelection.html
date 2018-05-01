@@ -385,7 +385,7 @@ for x in range(width):
 
         # apply any effect to the pixels
         if x < width/2:
-            average = int((r + b + g) / 3)
+            average = (r + b + g) / 3
             new_red = average
             new_green = average
             new_blue = average

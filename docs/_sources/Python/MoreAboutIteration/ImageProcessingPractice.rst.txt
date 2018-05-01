@@ -204,7 +204,7 @@ Write a program that keeps only the green values of all pixels in the image. Onc
 Half Red
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program that sets each pixel's red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
+Write a program that sets each pixel's red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image.
 
  .. activecode::  practice_problem_half_red
     :nocodelens:
@@ -224,7 +224,7 @@ Write a program that sets each pixel's red intensity to be half of the original 
 Combining Bits of Colors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program that sets each pixel's blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
+Write a program that sets each pixel's blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image.
 
  .. activecode::  practice_problem_combining_colors
     :nocodelens:
@@ -244,7 +244,7 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
 Half Each Color
 ~~~~~~~~~~~~~~~~~~~
 
-Write a program that sets each pixel's RGB intensities to be half of their original value. *Note that if you do this in Thonny, you need to make sure you convert back into an integer after you divide!*
+Write a program that sets each pixel's RGB intensities to be half of their original value.
 
  .. activecode::  practice_problem_half_each_color
     :nocodelens:
