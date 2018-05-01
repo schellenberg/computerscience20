@@ -1,4 +1,4 @@
-Image Processing and Nested Loops
+Nested Loops and Image Processing
 ==================================
 
 .. topic:: Quick Overview of Day
@@ -77,6 +77,12 @@ no basic color.  On the other hand, "White" has maximum values for all three bas
     Magenta  255      0        255
     =======  =======  =======  =======
 
+.. note:: Search the web for a ``color picker``. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.
+
+
+Creating and Manipulating Pixels
+---------------------------------
+
 In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called **image**, provided in ActiveCode (or with the ``cs20-image`` package). The image module defines two classes: ``Image`` and ``Pixel``.
 
@@ -85,17 +91,17 @@ that allow us to ask for the intensity values.  They are called ``get_red``, ``g
 pixel to change an intensity value using its ``set_red``, ``set_green``, and ``set_blue`` methods.
 
 
-    ============  ====================        ===============================================
-    Method Name   Example                     Explanation
-    ============  ====================        ===============================================
-    Pixel(r,g,b)  p = Pixel(20,100,50)        Create a new pixel with 20 red, 100 green, and 50 blue.
-    get_red()     r = p.get_red()             Return the red component intensity.
-    get_green()   g = p.get_green()           Return the green component intensity.
-    get_blue()    b = p.get_blue()            Return the blue component intensity.
-    set_red()     p.set_red(100)              Set the red component intensity to 100.
-    set_green()   p.set_green(45)             Set the green component intensity to 45.
-    set_blue()    p.set_blue(156)             Set the blue component intensity to 156.
-    ============  ====================        ===============================================
+    ============  ==========================        ===============================================
+    Method Name   Example                           Explanation
+    ============  ==========================        ===============================================
+    Pixel(r,g,b)  p = image.Pixel(20,100,50)        Create a new pixel with 20 red, 100 green, and 50 blue.
+    get_red()     r = p.get_red()                   Return the red component intensity.
+    get_green()   g = p.get_green()                 Return the green component intensity.
+    get_blue()    b = p.get_blue()                  Return the blue component intensity.
+    set_red()     p.set_red(100)                    Set the red component intensity to 100.
+    set_green()   p.set_green(45)                   Set the green component intensity to 45.
+    set_blue()    p.set_blue(156)                   Set the blue component intensity to 156.
+    ============  ==========================        ===============================================
 
 In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
 We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
@@ -180,7 +186,7 @@ The resulting code will look like the following.  We are now free to do anything
 
 .. sourcecode:: python
 
-    width = 600
+    width = 400
     height = 300
 
     for row in range(height):
@@ -191,14 +197,14 @@ The resulting code will look like the following.  We are now free to do anything
 Creating an Empty Image
 ------------------------
 
-It is possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the pixel collection consists of only "White" pixels when it is created. We can create and draw an empty image like this:
+It is possible to create an Image object that is "empty".  An ``EmptyImage`` has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:
 
 .. activecode:: empty_image_demo
     :nocodelens:
 
     import image
 
-    width = 600
+    width = 400
     height = 300
 
     win = image.ImageWin(width, height)
@@ -214,7 +220,7 @@ After creating an empty image, we can change the color of a specific pixel by us
 
     import image
 
-    width = 600
+    width = 400
     height = 300
 
     win = image.ImageWin(width, height)
@@ -231,7 +237,9 @@ After creating an empty image, we can change the color of a specific pixel by us
 Try This
 ~~~~~~~~~
 
-Change the code above to draw an image of a different color. Now, adapt the code above to draw a "pinstripe" image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?
+- Change the code above to draw an image of a different color. 
+- Adapt the code above to draw a "pinstripe" image. In other words, change the code so that only every other row is colored red. *Hint: recall the modulus % operator.*
+- Can you make it work for every other column (instead of every other row)? How about every 5th row/column?
 
 
 Image Objects
@@ -250,7 +258,7 @@ different depending on whether you are using an image file or creating an empty 
     Method Name          Example                         Explanation
     ==================== =============================== ==================================================
     Image(filename)      img = image.Image("cy.png")     Create an Image object from the file cy.png.
-    EmptyImage()         img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
+    EmptyImage()         img = image.EmptyImage(100,200) Create an Image object that has all white pixels
     get_width()          w = img.get_width()             Return the width of the image in pixels.
     get_height()         h = img.get_height()            Return the height of the image in pixels.
     get_pixel(col,row)   p = img.get_pixel(35,86)        Return the pixel at column 35, row 86.

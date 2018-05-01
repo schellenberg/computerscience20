@@ -15,82 +15,46 @@ Image Processing Practice
     - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
 
 
-Image Conversion with Functions
----------------------------------
+Nested Loop Review
+-------------------
 
-.. caution:: Need to explain this in text. For now, I'm just going to demonstrate this in class. Essentially, just make a function that takes in an Image object, performs some pixel manipulations, then returns the converted image.
+In the previous section, we used a lot of nested loops, which is a loop inside another loop. Use what you learned from that section to answer the following:
 
+.. fillintheblank:: nested_loops_review_1
 
-Consider the following code, in which the increase green code from a previous lesson is turned into a function:
+    In the following code, how many lines does this code print?::
 
+        for i in range(4):
+            for j in range(3):
+                print(i, j)
 
-.. activecode::  increase_green_function
-    :nocodelens:
-
-    import image
-
-    def increase_green(original_image):
-        width = original_image.get_width()
-        height = original_image.get_height()
-        new_image = image.EmptyImage(width, height)
-        for row in range(height):
-            for col in range(width):
-                p = original_image.get_pixel(col, row)
-
-                new_red = p.get_red()
-                new_green = p.get_green() + 50
-                new_blue = p.get_blue()
-
-                new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-                new_image.set_pixel(col, row, new_pixel)
-        return new_image
+    - :12: Great!
+      :4: Careful! Although the outer loop does repeat four times, the inner loop repeats three times for each outer iteration.
+      :3: Careful! Although the inner loop does repeat three times, the outer loop causes that to happen four times.
+      :.*: Try again!
 
 
-    img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. mchoice:: nested_loops_review_2
+    :answer_a: 0 0
+    :answer_b: 4 3
+    :answer_c: 3 4
+    :answer_d: 3 2
+    :answer_e: 2 3
+    :correct: d
+    :feedback_a: Try again! This would be the first thing printed.
+    :feedback_b: Try again! Remember that when using range, the numbers will go up to, but not including, the value passed to range. This is because the first number will be a 0.
+    :feedback_c: Try again! Consider which loop is using the variable i as it's counter.
+    :feedback_d: Great!
+    :feedback_e: Try again! Consider which loop is using the variable i as it's counter.
 
-    converted_img = increase_green(img)
+    What is the last line that the following code will print?::
 
-    converted_img.draw(win)
-
-
-If you'd like the function to animate while it runs, you can reorganize your code as follows:
-
-.. activecode::  increase_green_function_2
-    :nocodelens:
-
-    import image
-
-    def increase_green(original_image, window):
-        width = original_image.get_width()
-        height = original_image.get_height()
-        new_image = image.EmptyImage(width, height)
-        
-        original_image.draw(window)
-        
-        for row in range(height):
-            for col in range(width):
-                p = img.get_pixel(col, row)
-
-                new_red = p.get_red()
-                new_green = p.get_green() + 50
-                new_blue = p.get_blue()
-
-                new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-                new_image.set_pixel(col, row, new_pixel)
-            new_image.draw(window)
-        return new_image
+        for i in range(4):
+            for j in range(3):
+                print(i, j)
 
 
-    img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-
-    converted_img = increase_green(img, win)
-    converted_img.draw(win)
-
+As we saw in the last section, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. *Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!*
 
 Practice Problems
 ------------------
@@ -137,28 +101,6 @@ Write a program that opens an image and uses a nested loop to look at all of the
     # your code goes here!    
 
     img.draw(win)
-
-
-Red Remover Function
-~~~~~~~~~~~~~~~~~~~~~~
-
-Turn the code you wrote above into a function called ``red_remover(original_image, window)``. 
-
-.. activecode::  practice_problem_red_remover_function
-    :nocodelens:
-
-    import image
-
-    def red_remover(original_image, window):
-        # your code goes here!
-        return new_image
-
-
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-
-    converted_img = red_remover(img, win)
-    converted_img.draw(win)
 
 
 Color Swapping 

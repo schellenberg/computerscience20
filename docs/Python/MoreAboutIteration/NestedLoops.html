@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>1. Image Processing and Nested Loops &#8212; Computer Science 20 Saskatchewan</title>
+    <title>1. Nested Loops and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -192,24 +192,25 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">1. Image Processing and Nested Loops</a><ul>
+<li><a class="reference internal" href="#">1. Nested Loops and Image Processing</a><ul>
 <li><a class="reference internal" href="#image-processing-introduction">1.1. Image Processing Introduction</a></li>
-<li><a class="reference internal" href="#the-rgb-color-model">1.2. The RGB Color Model</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">1.2.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#the-rgb-color-model">1.2. The RGB Color Model</a></li>
+<li><a class="reference internal" href="#creating-and-manipulating-pixels">1.3. Creating and Manipulating Pixels</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">1.3.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#nested-iteration">1.3. Nested Iteration</a></li>
-<li><a class="reference internal" href="#creating-an-empty-image">1.4. Creating an Empty Image</a><ul>
-<li><a class="reference internal" href="#try-this">1.4.1. Try This</a></li>
+<li><a class="reference internal" href="#nested-iteration">1.4. Nested Iteration</a></li>
+<li><a class="reference internal" href="#creating-an-empty-image">1.5. Creating an Empty Image</a><ul>
+<li><a class="reference internal" href="#try-this">1.5.1. Try This</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#image-objects">1.5. Image Objects</a></li>
-<li><a class="reference internal" href="#image-processing-with-an-existing-image">1.6. Image Processing with an Existing Image</a><ul>
-<li><a class="reference internal" href="#increasing-a-color">1.6.1. Increasing a Color</a></li>
-<li><a class="reference internal" href="#negative-images">1.6.2. Negative Images</a></li>
-<li><a class="reference internal" href="#id1">1.6.3. Try This</a></li>
-<li><a class="reference internal" href="#id2">1.6.4. Check Your Understanding</a></li>
-<li><a class="reference internal" href="#acknowledgments">1.6.5. Acknowledgments</a></li>
+<li><a class="reference internal" href="#image-objects">1.6. Image Objects</a></li>
+<li><a class="reference internal" href="#image-processing-with-an-existing-image">1.7. Image Processing with an Existing Image</a><ul>
+<li><a class="reference internal" href="#increasing-a-color">1.7.1. Increasing a Color</a></li>
+<li><a class="reference internal" href="#negative-images">1.7.2. Negative Images</a></li>
+<li><a class="reference internal" href="#id1">1.7.3. Try This</a></li>
+<li><a class="reference internal" href="#id2">1.7.4. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#acknowledgments">1.7.5. Acknowledgments</a></li>
 </ul>
 </li>
 </ul>
@@ -258,8 +259,8 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="image-processing-and-nested-loops">
-<h1>1. Image Processing and Nested Loops<a class="headerlink" href="#image-processing-and-nested-loops" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="nested-loops-and-image-processing">
+<h1>1. Nested Loops and Image Processing<a class="headerlink" href="#nested-loops-and-image-processing" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
@@ -357,6 +358,13 @@ no basic color.  On the other hand, “White” has maximum values for all three
 </tbody>
 </table>
 </div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Search the web for a <code class="docutils literal"><span class="pre">color</span> <span class="pre">picker</span></code>. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.</p>
+</div>
+</div>
+<div class="section" id="creating-and-manipulating-pixels">
+<h2>1.3. Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
@@ -365,9 +373,9 @@ pixel to change an intensity value using its <code class="docutils literal"><spa
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
-<col width="14%" />
-<col width="23%" />
-<col width="63%" />
+<col width="13%" />
+<col width="28%" />
+<col width="59%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Method Name</th>
@@ -377,7 +385,7 @@ pixel to change an intensity value using its <code class="docutils literal"><spa
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Pixel(r,g,b)</td>
-<td>p = Pixel(20,100,50)</td>
+<td>p = image.Pixel(20,100,50)</td>
 <td>Create a new pixel with 20 red, 100 green, and 50 blue.</td>
 </tr>
 <tr class="row-odd"><td>get_red()</td>
@@ -425,11 +433,11 @@ print(p.get_green(), p.get_blue())
 </textarea>
 </div>
 <div class="section" id="check-your-understanding">
-<h3>1.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
-            microbit-examples-162: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
+            microbit-examples-166: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
             <li data-component="answer" data-correct id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback" id="test_question7_8_1_1_opt_a">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
             
             <li data-component="answer"  id="test_question7_8_1_1_opt_b">Light red</li><li data-component="feedback" id="test_question7_8_1_1_opt_b">The closer the values are to 0, the darker the color will appear.</li>
@@ -444,7 +452,7 @@ print(p.get_green(), p.get_blue())
             </div>
 </div>
 <div class="section" id="nested-iteration">
-<h2>1.3. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
@@ -524,7 +532,7 @@ $(window).resize(function() {
 seen above, where the outer <code class="docutils literal"><span class="pre">for</span></code> loop processes the rows, from 0 up to but not including the height of the image.
 The inner <code class="docutils literal"><span class="pre">for</span></code> loop will process each column of a row, again from 0 up to but not including the width of the image.</p>
 <p>The resulting code will look like the following.  We are now free to do anything we wish to each pixel in the image.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
 
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
@@ -534,15 +542,15 @@ The inner <code class="docutils literal"><span class="pre">for</span></code> loo
 </div>
 </div>
 <div class="section" id="creating-an-empty-image">
-<h2>1.4. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only “White” pixels when it is created. We can create and draw an empty image like this:</p>
+<h2>1.5. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:</p>
 
 <div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=empty_image_demo data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-width = 600
+width = 400
 height = 300
 
 win = image.ImageWin(width, height)
@@ -558,7 +566,7 @@ img.draw(win)
 <textarea data-component="activecode" id=change_empty_image_to_red data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
-width = 600
+width = 400
 height = 300
 
 win = image.ImageWin(width, height)
@@ -573,12 +581,16 @@ img.draw(win)
 </textarea>
 </div>
 <div class="section" id="try-this">
-<h3>1.4.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
-<p>Change the code above to draw an image of a different color. Now, adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. Can you make it work for every other column? How about every 5th row/column?</p>
+<h3>1.5.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Change the code above to draw an image of a different color.</li>
+<li>Adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. <em>Hint: recall the modulus % operator.</em></li>
+<li>Can you make it work for every other column (instead of every other row)? How about every 5th row/column?</li>
+</ul>
 </div>
 </div>
 <div class="section" id="image-objects">
-<h2>1.5. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">get_width</span></code> and <code class="docutils literal"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">get_pixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal"><span class="pre">set_pixel</span></code>.</p>
@@ -604,7 +616,7 @@ different depending on whether you are using an image file or creating an empty 
 </tr>
 <tr class="row-odd"><td>EmptyImage()</td>
 <td>img = image.EmptyImage(100,200)</td>
-<td>Create an Image object that has all “White” pixels</td>
+<td>Create an Image object that has all white pixels</td>
 </tr>
 <tr class="row-even"><td>get_width()</td>
 <td>w = img.get_width()</td>
@@ -647,9 +659,9 @@ print(p.get_red(), p.get_green(), p.get_blue())
 pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
 </div>
 <div class="section" id="image-processing-with-an-existing-image">
-<h2>1.6. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
+<h2>1.7. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="increasing-a-color">
-<h3>1.6.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
@@ -716,7 +728,7 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
 </div>
 <div class="section" id="negative-images">
-<h3>1.6.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.2. Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
@@ -750,7 +762,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id1">
-<h3>1.6.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Change the name of the file in the <code class="docutils literal"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal"><span class="pre">pineapples.jpg</span></code>):</li>
 </ul>
@@ -768,11 +780,11 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="id2">
-<h3>1.6.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
-            <p>microbit-examples-163: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
+            <p>microbit-examples-167: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
@@ -827,7 +839,7 @@ img.draw(win)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_2">
-            <p>microbit-examples-164: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
+            <p>microbit-examples-168: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
 <span class="n">new_green</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
 <span class="n">new_blue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
@@ -853,7 +865,7 @@ img.draw(win)
             </div>
             </div>
 <div class="section" id="acknowledgments">
-<h3>1.6.5. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.5. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
 </div>
 </div>
