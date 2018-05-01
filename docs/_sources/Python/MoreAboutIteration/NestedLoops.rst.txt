@@ -427,7 +427,7 @@ Try This
 - You can also do some complex arithmetic and create interesting effects, such as `Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_
 
 
-.. caution:: If you are using Thonny, be careful to always pass integer values when using the ``set_pixel()`` function. If you have done some division (perhaps when finding an average), you will need to convert the variable into an integer using the ``int()`` function. You also need to remember to save any image you are experimenting with in the same folder as the Python file you create.
+.. caution:: If you are using Thonny, be careful to save any image you are experimenting with in the same folder as the Python file you create.
 
 
 Check Your Understanding
