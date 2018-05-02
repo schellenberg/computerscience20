@@ -316,9 +316,8 @@ Let's say that we wanted to increase the amount of green in the image shown abov
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
+    canvas = image.ImageWin(img.get_width(), img.get_height())
+    img.draw(canvas)
 
     for row in range(img.get_height()):
         for col in range(img.get_width()):
@@ -332,40 +331,17 @@ Let's say that we wanted to increase the amount of green in the image shown abov
 
             img.set_pixel(col, row, new_pixel)
 
-    img.draw(win)
+        # unindent the following line to remove the "animation"
+        img.draw(canvas)
+
+    # if you run this in Thonny, the following line will save the 
+    #   adjusted version of the file into the same folder as your python script
+    # img.save("negative.jpg")
 
 
 .. note:: 
 
-    Please note that the set_delay() method is not implemented in the cs20-image module, but you can still show image manipulation in an "animated" way. To do this, you should redraw the image inside the nested loop you use to look at each pixel. An example would look something like this::
-    
-        import image
-
-        img = image.Image("sneakers.jpg")
-        win = image.ImageWin(img.get_width(), img.get_height())
-        img.draw(win)
-        img.set_delay(1,15)   # set_delay(0) turns off animation
-
-        for row in range(img.get_height()):
-            for col in range(img.get_width()):
-                p = img.get_pixel(col, row)
-
-                new_red = p.get_red()
-                new_green = p.get_green() + 50
-                new_blue = p.get_blue()
-
-                new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-                img.set_pixel(col, row, new_pixel)
-
-            # redrawing the image after each row allows us to see how the image is being changed
-            # you can move this outside the for loop if you don't want to watch the process
-            img.draw(win)
-
-        # the following line will save the adjusted version of the file into the save folder as your python script
-        img.save("negative.jpg")
-
-    Notice that the ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
+    The ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
 
 Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``get_width()`` and ``get_height()`` functions to create a window that is the same size as the image.
 
@@ -395,9 +371,8 @@ The program below implements this algorithm using the previous image (skflag.png
     import image
 
     img = image.Image("skflag.png")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
+    canvas = image.ImageWin(img.get_width(), img.get_height())
+    img.draw(canvas)
 
     for row in range(img.get_height()):
         for col in range(img.get_width()):
@@ -411,7 +386,8 @@ The program below implements this algorithm using the previous image (skflag.png
 
             img.set_pixel(col, row, new_pixel)
 
-    img.draw(win)
+        # unindent the following line to remove the "animation"
+        img.draw(canvas)
 
 
 
@@ -433,12 +409,7 @@ Try This
 
 - Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.
 
-- See if you can create a **gray scale** version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. *Note that any RGB value that contains the same value for it's R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.* 
-
-- You can create **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.
-
-- You can also do some complex arithmetic and create interesting effects, such as `Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_
-
+- Download an image from the internet. Save it in the same location 
 
 .. caution:: If you are using Thonny, be careful to save any image you are experimenting with in the same folder as the Python file you create.
 

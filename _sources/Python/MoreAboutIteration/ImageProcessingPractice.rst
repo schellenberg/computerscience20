@@ -54,12 +54,107 @@ In the previous section, we used a lot of nested loops, which is a loop inside a
 
     What is the last line that the following code will print?::
 
-        for i in range(4):
-            for j in range(3):
-                print(i, j)
+        for x in range(4):
+            for y in range(3):
+                print(x, y)
 
+
+.. mchoice:: nested_loops_review_3
+    :answer_a: The window will slowly be filled in from top to bottom with red pixels.
+    :answer_b: The window will slowly be filled in from bottom to top with red pixels.
+    :answer_c: The window will slowly be filled in from left to right with red pixels.
+    :answer_d: The window will slowly be filled in from right to left with red pixels.
+    :answer_e: No animation will be shown. The window will simply show up as all red pixels.
+    :correct: c
+    :feedback_a: Try again! Notice that the y value will iterate entirely through the loop before the x value iterates at all.
+    :feedback_b: Try again! Remember that the origin is on the top left side of the image, and range begins counting at 0.
+    :feedback_c: Great!
+    :feedback_d: Try again! Remember that the origin is on the top left side of the image, and range begins counting at 0.
+    :feedback_e: Try again! This would happen if img.draw(win) was NOT inside the nested for loop.
+
+    When you run this code, what will the animation look like?::
+
+        import image
+
+        width = 400
+        height = 300
+
+        win = image.ImageWin(width, height)
+        img = image.EmptyImage(width, height)
+
+        for x in range(width):
+            for y in range(height):
+                new_pixel = image.Pixel(255, 0, 0)
+                img.set_pixel(x, y, new_pixel)
+            img.draw(win)
 
 As we saw in the last section, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. *Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!*
+
+Warmup Problems
+-----------------
+
+Gray Scale
+~~~~~~~~~~~
+
+See if you can create a **gray scale** version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. *Note that any RGB value that contains the same value for it's R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.* 
+
+
+.. activecode::  gray_scale
+    :nocodelens:
+
+    import image
+
+    img = image.Image("skflag.png")
+    canvas = image.ImageWin(img.get_width(), img.get_height())
+    img.draw(canvas)
+
+    for row in range(img.get_height()):
+        for col in range(img.get_width()):
+            p = img.get_pixel(col, row)
+
+            # adjust the following to apply your image processing
+            new_red = p.get_red()
+            new_green = p.get_green()
+            new_blue = p.get_blue()
+
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+            img.set_pixel(col, row, new_pixel)
+
+        # unindent the following line to remove the "animation"
+        img.draw(canvas)
+
+
+Black and White Threshold
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can create **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.
+
+.. activecode::  gray_scale
+    :nocodelens:
+
+    import image
+
+    img = image.Image("skflag.png")
+    canvas = image.ImageWin(img.get_width(), img.get_height())
+    img.draw(canvas)
+
+    for row in range(img.get_height()):
+        for col in range(img.get_width()):
+            p = img.get_pixel(col, row)
+
+            # adjust the following to apply your image processing
+            new_red = p.get_red()
+            new_green = p.get_green()
+            new_blue = p.get_blue()
+
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+            img.set_pixel(col, row, new_pixel)
+
+        # unindent the following line to remove the "animation"
+        img.draw(canvas)
+
 
 Practice Problems
 ------------------
@@ -101,7 +196,6 @@ Write a program that opens an image and uses a nested loop to look at all of the
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -121,7 +215,6 @@ Write a program that sets the red value to the original green value, the green v
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -141,7 +234,6 @@ Write a program that keeps only the green values of all pixels in the image. Onc
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -161,7 +253,6 @@ Write a program that sets each pixel's red intensity to be half of the original 
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -181,7 +272,6 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -201,7 +291,25 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
     img = image.Image("sneakers.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
+
+    # your code goes here!    
+
+    img.draw(win)
+
+
+Sepia
+~~~~~~~
+
+Write a program that converts an image using a sepia filter (`Sepia Tone <https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created>`_).
+
+ .. activecode::  practice_problem_sepia_tone
+    :nocodelens:
+
+    import image
+
+    img = image.Image("sneakers.jpg")
+    win = image.ImageWin(img.get_width(), img.get_height())
+    img.draw(win)
 
     # your code goes here!    
 
