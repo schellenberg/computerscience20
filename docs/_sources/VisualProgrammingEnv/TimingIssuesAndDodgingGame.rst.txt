@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-broadcasts
+   :start: 1
+
+
 Timing Issues and Dodging Game (Broadcasts and Variables)
 =========================================================
 

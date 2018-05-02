@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: turtle-confusion
+   :start: 1
+
+
 .. _turtle_confusion:
 
 Turtle Confusion Challenges

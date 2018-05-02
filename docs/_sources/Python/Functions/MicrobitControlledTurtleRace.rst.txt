@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: microbit-race
+   :start: 1
+
+
 Micro:bit Controlled Turtle Race
 =====================================
 

@@ -48,7 +48,6 @@ Sometimes, we'd like to wait a bit before running the next command in a Python p
 
     print("All done!")
 
-.. _microbit_setup:
 
 Micro:bit Setup
 ----------------

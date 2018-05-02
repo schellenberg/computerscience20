@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: internet-technology
+   :start: 1
+
+
 Underlying Technology of Computing Devices and the Internet
 ===========================================================
 

@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: microbit-reference
+   :start: 1
+
+
 .. _microbit_reference:
 
 Micro:bit Reference

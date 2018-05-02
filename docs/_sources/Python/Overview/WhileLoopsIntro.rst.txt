@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: intro-while-loops
+   :start: 1
+
+
 The ``while`` Statement
 ========================
 

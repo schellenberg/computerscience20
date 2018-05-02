@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: image-processing-functions
+   :start: 1
+
+
 Functions and Image Processing
 ===============================
 

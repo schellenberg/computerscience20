@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-pair-programming
+   :start: 1
+
+
 Number Guessing Game (Pair Programming)
 =======================================
 

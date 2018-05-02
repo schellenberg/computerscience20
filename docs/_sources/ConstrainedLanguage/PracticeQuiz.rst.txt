@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: reeborg-second-quiz
+   :start: 1
+
+
 Second Practice Quiz
 ================================
 

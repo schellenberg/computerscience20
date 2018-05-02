@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: first-turtle
+   :start: 1
+
+
 Our First Turtle Program
 =========================
 

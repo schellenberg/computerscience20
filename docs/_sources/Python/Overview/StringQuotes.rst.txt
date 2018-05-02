@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: string-quotes
+   :start: 1
+
+
 Which Quotes to Use When Creating Strings
 ==========================================
 

@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: python-variables
+   :start: 1
+
+
 Variables, Data Types, and User Input
 ======================================
 

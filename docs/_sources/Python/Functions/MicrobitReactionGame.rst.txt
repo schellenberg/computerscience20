@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: microbit-game
+   :start: 1
+
+
 Reaction Game with Micro:bit
 ====================================
 

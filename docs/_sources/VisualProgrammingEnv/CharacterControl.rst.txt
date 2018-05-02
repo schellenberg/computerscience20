@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-wasd
+   :start: 1
+
+
 Controlling a Character with WASD (Repetition and Conditionals)
 ===============================================================
 

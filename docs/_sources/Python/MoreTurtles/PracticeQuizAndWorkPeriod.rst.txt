@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: loops-practice-quiz
+   :start: 1
+
+
 Loops Practice Quiz and Assignment Work Period
 ===============================================
 

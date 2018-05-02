@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: loops-quiz
+   :start: 1
+
+
 Loops Practice Quiz
 ================================
 

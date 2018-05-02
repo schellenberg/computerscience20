@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: boolean-functions
+   :start: 1
+
+
 Boolean Functions and Randomly Walking Turtles
 =================================================
 

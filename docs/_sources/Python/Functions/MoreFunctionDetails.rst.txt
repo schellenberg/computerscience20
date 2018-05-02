@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: variable-scope
+   :start: 1
+
+
 Fruitful Functions and Variable Scope
 ======================================
 

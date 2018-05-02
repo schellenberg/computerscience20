@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: conditionals
+   :start: 1
+
+
 Conditionals
 =============
 

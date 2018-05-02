@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: image-processing-practice
+   :start: 1
+
+
 Image Processing Practice
 ==========================
 

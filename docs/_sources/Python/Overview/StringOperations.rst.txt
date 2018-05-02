@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: intro-string-operators
+   :start: 1
+
+
 String Operators and Assignment Work Time
 ==========================================
 

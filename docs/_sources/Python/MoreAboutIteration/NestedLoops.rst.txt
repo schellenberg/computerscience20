@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: image-processing-nested-loops
+   :start: 1
+
+
 Nested Loops and Image Processing
 ==================================
 

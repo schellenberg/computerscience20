@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: intro-for-loops
+   :start: 1
+
+
 Multiple Turtles and ``for`` Loops
 =============================================
 

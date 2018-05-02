@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: html-quiz
+   :start: 1
+
+
 HTML Quiz
 =========
 
