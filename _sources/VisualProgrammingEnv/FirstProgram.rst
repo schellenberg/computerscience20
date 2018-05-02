@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-intro
+   :start: 1
+
+
 Introduction to Scratch (Broadcasts)
 ============================================
 

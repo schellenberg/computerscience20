@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-project
+   :start: 1
+
+
 Project Work Period
 ===================
 

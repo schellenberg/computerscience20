@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-start-screen
+   :start: 1
+
+
 Making a Start Screen (Repeat, If/Else, Broadcast)
 ==================================================
 

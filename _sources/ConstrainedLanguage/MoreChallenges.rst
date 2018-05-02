@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: reeborg-more-challenges
+   :start: 1
+
+
 More Challenges
 ================
 

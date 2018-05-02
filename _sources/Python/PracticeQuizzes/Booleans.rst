@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: boolean-quiz
+   :start: 1
+
+
 Booleans Practice Quiz
 ================================
 

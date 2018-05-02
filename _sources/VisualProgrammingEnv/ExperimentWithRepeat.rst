@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-conditionals
+   :start: 1
+
+
 Chase the Mouse and Drawing Polygons (Repeat and If/Else)
 ===========================================================
 

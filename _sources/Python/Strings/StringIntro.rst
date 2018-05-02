@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: string-exploration
+   :start: 1
+
+
 String Index, Length, Slicing and Traversal
 ============================================
 

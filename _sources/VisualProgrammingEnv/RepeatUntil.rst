@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-repeat-until
+   :start: 1
+
+
 Tracing Code and Cannonball Motion (Repeat Until)
 =================================================
 

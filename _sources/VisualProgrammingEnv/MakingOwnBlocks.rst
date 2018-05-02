@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-functions
+   :start: 1
+
+
 Making Your Own Blocks (Functions)
 ====================================
 

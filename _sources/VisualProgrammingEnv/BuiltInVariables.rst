@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-variables
+   :start: 1
+
+
 Built-In Variables (Tempo, Answer and Timer)
 ============================================
 

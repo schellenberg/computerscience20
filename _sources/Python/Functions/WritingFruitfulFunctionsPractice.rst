@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: fruitful-functions
+   :start: 1
+
+
 Writing Fruitful Functions Practice
 ====================================
 

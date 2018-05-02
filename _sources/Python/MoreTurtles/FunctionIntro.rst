@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: functions-intro
+   :start: 1
+
+
 Functions Introduction
 ================================
 

@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: reeborg-practice-quiz
+   :start: 1
+
+
 First Practice Quiz - ``repeat``, ``if``, ``def``
 ==================================================
 

@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: input-methods
+   :start: 1
+
+
 Other Input Methods (easygui_qt)
 =================================
 

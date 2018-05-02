@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-student-project
+   :start: 1
+
+
 Student Directed Project
 ========================
 

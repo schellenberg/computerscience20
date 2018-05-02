@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: microbit-images
+   :start: 1
+
+
 Micro:bit Custom Images
 ========================
 

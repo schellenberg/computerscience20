@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: function-quiz
+   :start: 1
+
+
 Functions Practice Quiz
 ================================
 

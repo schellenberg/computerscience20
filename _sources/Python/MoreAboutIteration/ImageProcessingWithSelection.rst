@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: image-processing-conditionals
+   :start: 1
+
+
 Image Processing With Conditionals
 ===================================
 

@@ -1,3 +1,7 @@
+.. qnum::
+   :prefix: how-the-internet-works
+   :start: 1
+
 
 How the Internet Works Practice Quiz
 =====================================

@@ -1,6 +1,6 @@
 
 .. qnum::
-   :prefix: string-operators-1
+   :prefix: www
    :start: 1
 
 .. _www_technology:

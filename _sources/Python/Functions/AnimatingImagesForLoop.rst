@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: microbit-for
+   :start: 1
+
+
 Animating a Micro:bit LED Image with a ``for`` Loop
 ====================================================
 

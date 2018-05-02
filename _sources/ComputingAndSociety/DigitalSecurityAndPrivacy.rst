@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: security-privacy
+   :start: 1
+
+
 Digital Security and Privacy Implications
 =========================================
 

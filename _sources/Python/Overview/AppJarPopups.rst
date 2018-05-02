@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: appjar
+   :start: 1
+
+
 Other Input Methods (appJar)
 ===============================
 

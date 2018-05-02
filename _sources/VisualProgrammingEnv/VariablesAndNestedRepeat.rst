@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: scratch-nested-loops
+   :start: 1
+
+
 Drawing Polygons - Part 2 (Variables and Nested Repeat)
 =======================================================
 

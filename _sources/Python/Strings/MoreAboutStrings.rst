@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: string-acc
+   :start: 1
+
+
 String Traversal (by index), and the Accumulator Pattern with Strings
 =====================================================================================
 
