@@ -70,17 +70,17 @@ are three basic colors, that means that you can create 256\ :sup:`3` distinct co
 Here are the red, green and blue intensities for some common colors.  Note that "Black" is represented by a pixel having
 no basic color.  On the other hand, "White" has maximum values for all three basic color components.
 
-    =======  =======  =======  =======
-    Color    Red      Green    Blue
-    =======  =======  =======  =======
-    Red      255      0        0
-    Green    0        255      0
-    Blue     0        0        255
-    White    255      255      255
-    Black    0        0        0
-    Yellow   255      255      0
-    Magenta  255      0        255
-    =======  =======  =======  =======
+=======  =======  =======  =======
+Color    Red      Green    Blue
+=======  =======  =======  =======
+Red      255      0        0
+Green    0        255      0
+Blue     0        0        255
+White    255      255      255
+Black    0        0        0
+Yellow   255      255      0
+Magenta  255      0        255
+=======  =======  =======  =======
 
 .. note:: Search the web for a ``color picker``. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.
 
@@ -96,17 +96,17 @@ that allow us to ask for the intensity values.  They are called ``get_red``, ``g
 pixel to change an intensity value using its ``set_red``, ``set_green``, and ``set_blue`` methods.
 
 
-    ============  ==========================        ===============================================
-    Method Name   Example                           Explanation
-    ============  ==========================        ===============================================
-    Pixel(r,g,b)  p = image.Pixel(20,100,50)        Create a new pixel with 20 red, 100 green, and 50 blue.
-    get_red()     r = p.get_red()                   Return the red component intensity.
-    get_green()   g = p.get_green()                 Return the green component intensity.
-    get_blue()    b = p.get_blue()                  Return the blue component intensity.
-    set_red()     p.set_red(100)                    Set the red component intensity to 100.
-    set_green()   p.set_green(45)                   Set the green component intensity to 45.
-    set_blue()    p.set_blue(156)                   Set the blue component intensity to 156.
-    ============  ==========================        ===============================================
+==================  ================================        ===============================================
+Method Name         Example                                 Explanation
+==================  ================================        ===============================================
+``Pixel(r, g, b)``  ``p = image.Pixel(20, 100, 50)``        Create a new pixel with 20 red, 100 green, and 50 blue.
+``get_red()``       ``r = p.get_red()``                     Return the red component intensity.
+``get_green()``     ``g = p.get_green()``                   Return the green component intensity.
+``get_blue()``      ``b = p.get_blue()``                    Return the blue component intensity.
+``set_red()``       ``p.set_red(100)``                      Set the red component intensity to 100.
+``set_green()``     ``p.set_green(45)``                     Set the green component intensity to 45.
+``set_blue()``      ``p.set_blue(156)``                     Set the blue component intensity to 156.
+==================  ================================        ===============================================
 
 In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
 We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
@@ -259,16 +259,16 @@ a particular location using ``set_pixel``.
 The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
 different depending on whether you are using an image file or creating an empty image.
 
-    ==================== =============================== ==================================================
-    Method Name          Example                         Explanation
-    ==================== =============================== ==================================================
-    Image(filename)      img = image.Image("cy.png")     Create an Image object from the file cy.png.
-    EmptyImage()         img = image.EmptyImage(100,200) Create an Image object that has all white pixels
-    get_width()          w = img.get_width()             Return the width of the image in pixels.
-    get_height()         h = img.get_height()            Return the height of the image in pixels.
-    get_pixel(col,row)   p = img.get_pixel(35,86)        Return the pixel at column 35, row 86.
-    set_pixel(col,row,p) img.set_pixel(100,50,mp)        Set the pixel at column 100, row 50 to be mp.
-    ==================== =============================== ==================================================
+========================== ==================================== ==================================================
+Method Name                Example                              Explanation
+========================== ==================================== ==================================================
+``Image(filename)``        ``img = image.Image("cy.png")``      Create an Image object from the file cy.png.
+``EmptyImage()``           ``img = image.EmptyImage(100, 200)`` Create an Image object that has all white pixels
+``get_width()``            ``w = img.get_width()``              Return the width of the image in pixels.
+``get_height()``           ``h = img.get_height()``             Return the height of the image in pixels.
+``get_pixel(col, row)``    ``p = img.get_pixel(35, 86)``        Return the pixel at column 35, row 86.
+``set_pixel(col, row, p)`` ``img.set_pixel(100, 50, mp)``       Set the pixel at column 100, row 50 to be mp (where mp is of the Pixel data type).
+========================== ==================================== ==================================================
 
 Consider the image shown below.  Assume that the image is stored in a file called ``skflag.png``.  Line 2 opens the
 file and uses the contents to create an image object that is referred to by ``img``.  Once we have an image object,
