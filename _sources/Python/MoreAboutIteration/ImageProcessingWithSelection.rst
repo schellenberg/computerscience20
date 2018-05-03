@@ -285,12 +285,18 @@ Write a program that sets the red intensity of all pixels on the left half of th
 
     img.draw(win)
 
+.. reveal:: no_red_left_solution
+    :showtitle: Solution Image
+
+    If you are using the berries.jpg image, your solution should look something like this:
+
+    .. image:: images/no-red-left-side-solution.png
 
 
 Blue Tint Top Right
 ~~~~~~~~~~~~~~~~~~~~
 
-Write a program that makes the top right quarter of the image be tinted blue (increase the amount of blue).
+Write a program that makes the top right quarter of the image be tinted blue (by increasing the amount of blue in that area of the image).
 
  .. activecode::  practice_problem_blue_tint_top_right
     :nocodelens:
@@ -305,6 +311,13 @@ Write a program that makes the top right quarter of the image be tinted blue (in
     # your code goes here!    
 
     img.draw(win)
+
+.. reveal:: blue_tint_solution
+    :showtitle: Solution Image
+
+    If you are using the sneakers.jpg image, your solution should look something like this:
+
+    .. image:: images/blue-tint-solution.png
 
 
 Change the Rooster Colour
@@ -326,6 +339,13 @@ Write a program that changes the colour of the rooster's comb and wattle (the re
 
     img.draw(win)
 
+.. reveal:: rooster_color_solution
+    :showtitle: Solution Image
+
+    If you changed the rooster from red to blue, your solution should look something like this:
+
+    .. image:: images/change-rooster-color-solution.png
+
 
 Repeat Left Twice
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -346,6 +366,12 @@ Write a program that takes the left side of an image and displays it both on the
 
     img.draw(win)
 
+.. reveal:: left_twice_solution
+    :showtitle: Solution Image
+
+    If you are using the giraffe.jpg image, your solution should look something like this:
+
+    .. image:: images/left-twice-solution.png
 
 
 Mirror Horizontal
@@ -367,6 +393,12 @@ Write a program that mirrors an image from left to right around a vertical line 
 
     img.draw(win)
 
+.. reveal:: mirror_horizontal_solution
+    :showtitle: Solution Image
+
+    If you are using the giraffe.jpg image, your solution should look something like this:
+
+    .. image:: images/mirror-horizontal-solution.png
 
 
 Mirror Vertical
@@ -388,16 +420,18 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
 
     img.draw(win)
 
+.. reveal:: mirror_vertical_solution
+    :showtitle: Solution Image
+
+    If you are using the giraffe.jpg image, your solution should look something like this:
+
+    .. image:: images/mirror-vertical-solution.png
 
 
 Gradient
 ~~~~~~~~~
 
 Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and **after each pass of the inner loop**, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.
-
-Your program should create an image that looks similar to the following:
-
-.. image:: images/gradient.png
 
 .. activecode::  practice_problem_gradient
     :nocodelens:
@@ -416,12 +450,16 @@ Your program should create an image that looks similar to the following:
 
     img.draw(win)
 
+.. reveal:: mirror_vertical_solution
+    :showtitle: Solution Image
+
+    Your program should create an image that looks similar to the following:
+
+    .. image:: images/gradient.png
 
 
-Radial Gradient
-~~~~~~~~~~~~~~~~
-
-**Extra for Experts Challenge**
+Radial Gradient (Extra Challenge)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to try something even more challenging, see if you can create a radial gradient. Radial gradients look like this:
 
