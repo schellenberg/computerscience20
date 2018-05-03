@@ -88,15 +88,17 @@ In the previous section, we used a lot of nested loops, which is a loop inside a
                 img.set_pixel(x, y, new_pixel)
             img.draw(win)
 
-As we saw in the last section, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. *Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!*
-
 Warmup Problems
 -----------------
+
+.. note:: Your teacher may choose to work through the following problems to help build your confidence before you attempt the practice problems.
+
+
 
 Gray Scale
 ~~~~~~~~~~~
 
-See if you can create a **gray scale** version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. *Note that any RGB value that contains the same value for it's R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.* 
+See if you can create a **gray scale** version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. *Note that any RGB value that contains the same value for it's R, G and B amounts will be a gray value. For example, (50, 50, 50) is a dark gray, and (200, 200, 200) is a lighter gray.* 
 
 
 .. activecode::  gray_scale
@@ -128,36 +130,28 @@ See if you can create a **gray scale** version of the image. When looking at eac
 Black and White Threshold
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can create **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.
+You can create interesting **black and white** images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the ``skflag.png`` image, it looks like this originally:
 
-.. activecode::  gray_scale
+.. raw:: html
+
+    <img src="../../_static/skflag.png">
+
+If you look at every pixel to find the sum of the red, green, and blue values, then insert a black pixel whenever the sum is greater than 200 (or a white pixel if it is not), you will create the following image:
+
+.. image:: images/threshold-flag.png
+
+.. activecode:: black_white_threshold
     :nocodelens:
 
-    import image
-
-    img = image.Image("skflag.png")
-    canvas = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(canvas)
-
-    for row in range(img.get_height()):
-        for col in range(img.get_width()):
-            p = img.get_pixel(col, row)
-
-            # adjust the following to apply your image processing
-            new_red = p.get_red()
-            new_green = p.get_green()
-            new_blue = p.get_blue()
-
-            new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-            img.set_pixel(col, row, new_pixel)
-
-        # unindent the following line to remove the "animation"
-        img.draw(canvas)
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
+    # Be sure to experiment with different threshold values!
 
 
 Practice Problems
 ------------------
+
+As we have seen, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. *Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!*
 
 For the following problems, use one of these images:
 
@@ -193,13 +187,23 @@ Write a program that opens an image and uses a nested loop to look at all of the
 
     import image
 
+    width = img.get_width()
+    height = img.get_height()
+
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    win = image.ImageWin(width, height)
     img.draw(win)
 
-    # your code goes here!    
+    # your code goes here!
 
     img.draw(win)
+
+.. reveal:: red_remover_solution
+    :showtitle: Solution Image
+
+    If you are using the sneakers.jpg image, your solution should look something like this:
+
+    .. image:: images/red-remover-solution.png
 
 
 Color Swapping 
@@ -210,35 +214,33 @@ Write a program that sets the red value to the original green value, the green v
  .. activecode::  practice_problem_color_swapper
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: color_swapping_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/color-swapping-solution.png
 
 Keep the Green
 ~~~~~~~~~~~~~~~~~~~~
 
-Write a program that keeps only the green values of all pixels in the image. Once it is working, turn the code into a function.
+Write a program that keeps only the green values of all pixels in the image.
 
  .. activecode::  practice_problem_keep_the_green
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: keep_green_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/keep-green-solution.png
 
 Half Red
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -248,16 +250,15 @@ Write a program that sets each pixel's red intensity to be half of the original 
  .. activecode::  practice_problem_half_red
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: half_red_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/half-red-solution.png
 
 Combining Bits of Colors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,16 +268,15 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
  .. activecode::  practice_problem_combining_colors
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: combining_colors_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/combining-colors-solution.png
 
 Half Each Color
 ~~~~~~~~~~~~~~~~~~~
@@ -286,16 +286,15 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
  .. activecode::  practice_problem_half_each_color
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: half_each_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/half-each-solution.png
 
 Sepia
 ~~~~~~~
@@ -305,16 +304,15 @@ Write a program that converts an image using a sepia filter (`Sepia Tone <https:
  .. activecode::  practice_problem_sepia_tone
     :nocodelens:
 
-    import image
+    # Try to create a solution to this problem 
+    #   WITHOUT looking back to previous solutions.
 
-    img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
-    img.draw(win)
+.. reveal:: sepia_solution
+    :showtitle: Solution Image
 
-    # your code goes here!    
+    If you are using the sneakers.jpg image, your solution should look something like this:
 
-    img.draw(win)
-
+    .. image:: images/sepia-solution.png
 
 
 Acknowledgments

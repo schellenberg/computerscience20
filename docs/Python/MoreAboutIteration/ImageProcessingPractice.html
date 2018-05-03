@@ -347,13 +347,16 @@
 
             </ul>
             </div>
-            <p>As we saw in the last section, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. <em>Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!</em></p>
-</div>
+            </div>
 <div class="section" id="warmup-problems">
 <h2>2.2. Warmup Problems<a class="headerlink" href="#warmup-problems" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your teacher may choose to work through the following problems to help build your confidence before you attempt the practice problems.</p>
+</div>
 <div class="section" id="gray-scale">
 <h3>2.2.1. Gray Scale<a class="headerlink" href="#gray-scale" title="Permalink to this headline">¶</a></h3>
-<p>See if you can create a <strong>gray scale</strong> version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. <em>Note that any RGB value that contains the same value for it’s R, G and B amounts will be a gray value. For example, (100, 100, 100) is a dark gray, and (200, 200, 200) is a light gray.</em></p>
+<p>See if you can create a <strong>gray scale</strong> version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. <em>Note that any RGB value that contains the same value for it’s R, G and B amounts will be a gray value. For example, (50, 50, 50) is a dark gray, and (200, 200, 200) is a lighter gray.</em></p>
 
 <div data-childcomponent="gray_scale" class="runestone explainer ac_section alert alert-warning">
 
@@ -384,38 +387,23 @@ for row in range(img.get_height()):
 </div>
 <div class="section" id="black-and-white-threshold">
 <h3>2.2.2. Black and White Threshold<a class="headerlink" href="#black-and-white-threshold" title="Permalink to this headline">¶</a></h3>
-<p>You can create <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location.</p>
+<p>You can create interesting <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the <code class="docutils literal"><span class="pre">skflag.png</span></code> image, it looks like this originally:</p>
+<img src="../../_static/skflag.png"><p>If you look at every pixel to find the sum of the red, green, and blue values, then insert a black pixel whenever the sum is greater than 200 (or a white pixel if it is not), you will create the following image:</p>
+<img alt="../../_images/threshold-flag.png" src="../../_images/threshold-flag.png" />
 
-<div data-childcomponent="gray_scale" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="black_white_threshold" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=gray_scale data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("skflag.png")
-canvas = image.ImageWin(img.get_width(), img.get_height())
-img.draw(canvas)
-
-for row in range(img.get_height()):
-    for col in range(img.get_width()):
-        p = img.get_pixel(col, row)
-
-        # adjust the following to apply your image processing
-        new_red = p.get_red()
-        new_green = p.get_green()
-        new_blue = p.get_blue()
-
-        new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-        img.set_pixel(col, row, new_pixel)
-
-    # unindent the following line to remove the "animation"
-    img.draw(canvas)
+<textarea data-component="activecode" id=black_white_threshold data-lang="python"    data-timelimit=25000   data-audio=''     >
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
+# Be sure to experiment with different threshold values!
 </textarea>
 </div>
 </div>
 </div>
 <div class="section" id="practice-problems">
 <h2>2.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<p>As we have seen, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. <em>Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!</em></p>
 <p>For the following problems, use one of these images:</p>
 <img src="../../_static/skflag.png" id="skflag.png">
 <h4 style="text-align: center;">skflag.png</h4><img src="../../_static/moon.jpg" id="moon.jpg">
@@ -430,8 +418,11 @@ for row in range(img.get_height()):
 <textarea data-component="activecode" id=practice_problem_red_remover data-lang="python"    data-timelimit=25000   data-audio=''     >
 import image
 
+width = img.get_width()
+height = img.get_height()
+
 img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
+win = image.ImageWin(width, height)
 img.draw(win)
 
 # your code goes here!
@@ -439,7 +430,13 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
-</div>
+
+    <div data-component="reveal" id="red_remover_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/red-remover-solution.png" src="../../_images/red-remover-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="color-swapping">
 <h3>2.3.2. Color Swapping<a class="headerlink" href="#color-swapping" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets the red value to the original green value, the green value to the original blue value, and the blue value to the original red value.</p>
@@ -448,40 +445,38 @@ img.draw(win)
 <div data-childcomponent="practice_problem_color_swapper" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_color_swapper data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="color_swapping_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/color-swapping-solution.png" src="../../_images/color-swapping-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="keep-the-green">
 <h3>2.3.3. Keep the Green<a class="headerlink" href="#keep-the-green" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that keeps only the green values of all pixels in the image. Once it is working, turn the code into a function.</p>
+<p>Write a program that keeps only the green values of all pixels in the image.</p>
 <blockquote>
 <div>
 <div data-childcomponent="practice_problem_keep_the_green" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_keep_the_green data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="keep_green_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/keep-green-solution.png" src="../../_images/keep-green-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="half-red">
 <h3>2.3.4. Half Red<a class="headerlink" href="#half-red" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets each pixel’s red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image.</p>
@@ -490,19 +485,18 @@ img.draw(win)
 <div data-childcomponent="practice_problem_half_red" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_half_red data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="half_red_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/half-red-solution.png" src="../../_images/half-red-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="combining-bits-of-colors">
 <h3>2.3.5. Combining Bits of Colors<a class="headerlink" href="#combining-bits-of-colors" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets each pixel’s blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image.</p>
@@ -511,19 +505,18 @@ img.draw(win)
 <div data-childcomponent="practice_problem_combining_colors" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_combining_colors data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="combining_colors_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/combining-colors-solution.png" src="../../_images/combining-colors-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="half-each-color">
 <h3>2.3.6. Half Each Color<a class="headerlink" href="#half-each-color" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets each pixel’s RGB intensities to be half of their original value.</p>
@@ -532,19 +525,18 @@ img.draw(win)
 <div data-childcomponent="practice_problem_half_each_color" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_half_each_color data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="half_each_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/half-each-solution.png" src="../../_images/half-each-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="sepia">
 <h3>2.3.7. Sepia<a class="headerlink" href="#sepia" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that converts an image using a sepia filter (<a class="reference external" href="https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created">Sepia Tone</a>).</p>
@@ -553,19 +545,18 @@ img.draw(win)
 <div data-childcomponent="practice_problem_sepia_tone" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_sepia_tone data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-win = image.ImageWin(img.get_width(), img.get_height())
-img.draw(win)
-
-# your code goes here!
-
-img.draw(win)
+# Try to create a solution to this problem
+#   WITHOUT looking back to previous solutions.
 </textarea>
 </div>
 </div></blockquote>
-</div>
+
+    <div data-component="reveal" id="sepia_solution"   data-showtitle="Solution Image" data-hidetitle="Hide">
+    <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
+<img alt="../../_images/sepia-solution.png" src="../../_images/sepia-solution.png" />
+
+    </div>
+    </div>
 <div class="section" id="acknowledgments">
 <h3>2.3.8. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
