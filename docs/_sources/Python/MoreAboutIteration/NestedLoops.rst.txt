@@ -310,6 +310,13 @@ Increasing a Color
 
 Let's say that we wanted to increase the amount of green in the image shown above (``sneakers.jpg``). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:
 
+.. caution:: 
+
+    The following program (and most of the image processing examples on the following pages) will likely not finish execution before triggering a ``TimeLimitError`` in your web browser. To see the completed version of the image, you may either:
+
+    - copy/paste this code into Thonny and execute it there (being sure to save the image file into the same folder as the Python code)
+    - unindent (remove all spaces before) the call to ``img.draw(canvas)`` (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)
+
 .. activecode::  increase_color_amount
     :nocodelens:
 
@@ -334,14 +341,6 @@ Let's say that we wanted to increase the amount of green in the image shown abov
         # unindent the following line to remove the "animation"
         img.draw(canvas)
 
-    # if you run this in Thonny, the following line will save the 
-    #   adjusted version of the file into the same folder as your python script
-    # img.save("negative.jpg")
-
-
-.. note:: 
-
-    The ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
 
 Let's take a closer look at the code.  After importing the image module, we create an image object called ``img`` that represents a typical digital photo. We use the ``get_width()`` and ``get_height()`` functions to create a window that is the same size as the image.
 
@@ -389,6 +388,14 @@ The program below implements this algorithm using the previous image (skflag.png
         # unindent the following line to remove the "animation"
         img.draw(canvas)
 
+    # if you run this in Thonny, the following line will save the 
+    #   adjusted version of the file into the same folder as your python script
+    # img.save("negative.jpg")
+
+
+.. note:: 
+
+    The ``cs20-image`` module allows you to do a few things that cannot be done on the website version, including the ``.save("filename.jpg")`` method shown in the last line of the code above.
 
 
 Try This

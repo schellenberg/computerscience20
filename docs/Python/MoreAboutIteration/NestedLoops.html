@@ -657,6 +657,14 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 <div class="section" id="increasing-a-color">
 <h3>1.7.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p>The following program (and most of the image processing examples on the following pages) will likely not finish execution before triggering a <code class="docutils literal"><span class="pre">TimeLimitError</span></code> in your web browser. To see the completed version of the image, you may either:</p>
+<ul class="last simple">
+<li>copy/paste this code into Thonny and execute it there (being sure to save the image file into the same folder as the Python code)</li>
+<li>unindent (remove all spaces before) the call to <code class="docutils literal"><span class="pre">img.draw(canvas)</span></code> (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)</li>
+</ul>
+</div>
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
 
@@ -681,15 +689,7 @@ for row in range(img.get_height()):
 
     # unindent the following line to remove the "animation"
     img.draw(canvas)
-
-# if you run this in Thonny, the following line will save the
-#   adjusted version of the file into the same folder as your python script
-# img.save("negative.jpg")
 </textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
 <p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">get_width()</span></code> and <code class="docutils literal"><span class="pre">get_height()</span></code> functions to create a window that is the same size as the image.</p>
 <p>Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
@@ -728,7 +728,15 @@ for row in range(img.get_height()):
 
     # unindent the following line to remove the "animation"
     img.draw(canvas)
+
+# if you run this in Thonny, the following line will save the
+#   adjusted version of the file into the same folder as your python script
+# img.save("negative.jpg")
 </textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
 </div>
 <div class="section" id="id1">
