@@ -67,7 +67,7 @@ Remember that when you are taking input from the user with the ``input()`` funct
 - ``str(x)`` to convert *x* to a string (a value surrounded by quotes)
 
 
-Input/Output Assignment
+Input/Output Sample Assignment
 ----------------------------------
 
 .. note:: You have now had a chance to practice a number of problems that involved taking in input from the user, performing some operation on that input, and printing out a result. This might be a nice time to put the knowledge you've gained into practice on a hand-in assignment. One possible assignment is given below.

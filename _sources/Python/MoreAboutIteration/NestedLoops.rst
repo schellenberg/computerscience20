@@ -262,7 +262,7 @@ different depending on whether you are using an image file or creating an empty 
 ========================== ==================================== ==================================================
 Method Name                Example                              Explanation
 ========================== ==================================== ==================================================
-``Image(filename)``        ``img = image.Image("cy.png")``      Create an Image object from the file cy.png.
+``Image(filename)``        ``img = image.Image("skflag.png")``      Create an Image object from the file skflag.png.
 ``EmptyImage()``           ``img = image.EmptyImage(100, 200)`` Create an Image object that has all white pixels
 ``get_width()``            ``w = img.get_width()``              Return the width of the image in pixels.
 ``get_height()``           ``h = img.get_height()``             Return the height of the image in pixels.
