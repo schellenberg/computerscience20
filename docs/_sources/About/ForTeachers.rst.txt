@@ -44,7 +44,7 @@ During the semester I was creating this textbook, the number of days spent on Sc
 Reeborg
 ~~~~~~~
 
-The exact amount of time that you spend on the Reeborg unit is hard to predict, as each class will progress through the material at a slightly different speed. A reasonable estimate, however, is that students should be done at least up to Step 9 by the end of the first 4/5 periods, which would be a logical time to give them a quiz on Steps 1-9. Finishing the remaining steps will likely take another 5-8 periods, at which point a quiz covering all of the content from Steps 1-18 would be a good idea.
+The exact amount of time that you spend on the Reeborg unit is hard to predict, as each class will progress through the material at a slightly different speed. A reasonable estimate, however, is that students should be done at least up to Step 9 by the end of the first 4/5 periods, which would be a logical time to give them a quiz on Steps 1-9. Finishing the remaining steps will likely take another 5-8 periods, at which point a quiz covering all of the content from Steps 1-20 would be a good idea.
 
 **Making Your Own Quiz Worlds**
 

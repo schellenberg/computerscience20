@@ -138,6 +138,7 @@ Python - Image Processing
    Python/MoreAboutIteration/NestedLoops.rst
    Python/MoreAboutIteration/ImageProcessingPractice.rst
    Python/MoreAboutIteration/ImageProcessingWithSelection.rst
+   Python/MoreAboutIteration/ImageProcessingFunctions.rst
 
 
 Python - Strings
