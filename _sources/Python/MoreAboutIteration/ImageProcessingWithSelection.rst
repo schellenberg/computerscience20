@@ -51,7 +51,6 @@ Due to the contrast in the image, we can apply certain effects to only a portion
 
     # draw the original image onto the window
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image
     for x in range(width):
