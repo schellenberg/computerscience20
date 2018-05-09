@@ -27,6 +27,7 @@ If you call ``show_message`` with a single argument, that argument should be a s
     import easygui_qt as easy
     easy.show_message("Enter your message here, or pass in a variable containing a string.")
 
+.. image:: images/showing-messages1.png
 
 **Additional Options**
 
@@ -37,6 +38,7 @@ If you call ``show_message`` with a second argument (separated by a comma), that
     import easygui_qt as easy
     easy.show_message("My message goes here!", "Some Title")
 
+.. image:: images/showing-messages2.png
 
 Getting Strings
 ----------------
@@ -48,6 +50,7 @@ To create a pop up window that prompts the user to enter a string, use the ``get
     import easygui_qt as easy
     answer = easy.get_string("What is your name?")
 
+.. image:: images/getting-strings1.png
 
 **Additional Options**
 
@@ -58,12 +61,16 @@ If you call ``get_string`` with a second argument (separated by a comma), that s
     import easygui_qt as easy
     answer = easy.get_string("What is your name?", "Name")
 
+.. image:: images/getting-strings2.png
+
 If you call ``get_string`` with a third argument (separated by a comma), that third argument should also be a string, and will be interpreted as the default value inside the input box.
 
 .. sourcecode:: python
     
     import easygui_qt as easy
     answer = easy.get_string("What is your name?", "Name", "John Doe")
+
+.. image:: images/getting-strings3.png
 
 
 Getting Integers
@@ -76,6 +83,8 @@ To create a pop up window that prompts the user to enter an integer, use the ``g
     import easygui_qt as easy
     answer = easy.get_integer("How old are you?")
 
+.. image:: images/getting-integers1.png
+
 
 **Additional Options**
 
@@ -86,6 +95,8 @@ If you call ``get_integer`` with a second argument (separated by a comma), that 
     import easygui_qt as easy
     answer = easy.get_integer("How old are you?", "Age")
 
+.. image:: images/getting-integers2.png
+
 If you call ``get_integer`` with a third argument (separated by a comma), that third argument should be an integer, and will be interpreted as the default value inside the input box.
 
 .. sourcecode:: python
@@ -93,6 +104,7 @@ If you call ``get_integer`` with a third argument (separated by a comma), that t
     import easygui_qt as easy
     answer = easy.get_integer("How old are you?", "Age", 16)
 
+.. image:: images/getting-integers3.png
 
 If you call ``get_integer`` with five arguments (separated by commas), the fourth argument should be an integer representing the minimum value allowed, and the fifth argument should be an integer representing the maximum value allowed.
 
@@ -100,6 +112,8 @@ If you call ``get_integer`` with five arguments (separated by commas), the fourt
     
     import easygui_qt as easy
     answer = easy.get_integer("How old are you?", "Age", 16, 0, 120)
+
+.. image:: images/getting-integers4.png
 
 
 Getting Floats
@@ -112,6 +126,8 @@ To create a pop up window that prompts the user to enter an float, use the ``get
     import easygui_qt as easy
     answer = easy.get_float("How tall are you (in meters)?")
 
+.. image:: images/getting-floats1.png
+
 
 **Additional Options**
 
@@ -122,6 +138,8 @@ If you call ``get_float`` with a second argument (separated by a comma), that se
     import easygui_qt as easy
     answer = easy.get_float("How tall are you (in meters)?", "Height")
 
+.. image:: images/getting-floats2.png
+
 If you call ``get_float`` with a third argument (separated by a comma), that third argument should be a float, and will be interpreted as the default value inside the input box.
 
 .. sourcecode:: python
@@ -129,6 +147,7 @@ If you call ``get_float`` with a third argument (separated by a comma), that thi
     import easygui_qt as easy
     answer = easy.get_float("How tall are you (in meters)?", "Height", 1.82)
 
+.. image:: images/getting-floats3.png
 
 If you call ``get_float`` with five arguments (separated by commas), the fourth argument should be a number (int or float) representing the minimum value allowed, and the fifth argument should be a number (int or float) representing the maximum value allowed.
 
@@ -137,6 +156,7 @@ If you call ``get_float`` with five arguments (separated by commas), the fourth 
     import easygui_qt as easy
     answer = easy.get_float("How tall are you (in meters)?", "Height", 1.82, 0.22, 2.72)
 
+.. image:: images/getting-floats4.png
 
 If you call ``get_float`` with six arguments (separated by commas), the sixth argument should be an integer representing the number of decimals allowed.
 
@@ -145,6 +165,7 @@ If you call ``get_float`` with six arguments (separated by commas), the sixth ar
     import easygui_qt as easy
     answer = easy.get_float("How tall are you (in meters)?", "Height", 1.82, 0.22, 2.72, 2)
 
+.. image:: images/getting-floats5.png
 
 Getting Selection from Drop-Down List
 --------------------------------------
@@ -162,6 +183,7 @@ This function requires three arguments, the prompt message (as a string), the wi
 
     reply = easy.get_choice(prompt, title, choices)
 
+.. image:: images/getting-choice.png
 
 Getting Multiple Selections from List
 --------------------------------------
@@ -176,9 +198,9 @@ This function requires two arguments, the window title (as a string), and the ch
     prompt = "Subjects You Enjoy"
     choices = ["Computer Science", "Math", "Phys Ed", "English", "History"]
 
-    reply = easy.get_choice(prompt, title, choices)
+    reply = easy.get_list_of_choices(prompt, choices)
 
-
+.. image:: images/getting-multiple-selections.png
 
 Getting A Password
 -------------------
@@ -191,6 +213,7 @@ To create a pop up window that prompts the user to enter a password, use the ``g
 
     reply = easy.get_password("Please enter your password")
 
+.. image:: images/getting-password1.png
 
 **Additional Options**
 
@@ -202,6 +225,7 @@ If you call ``get_password`` with a second argument (separated by a comma), that
 
     reply = easy.get_password("Please enter your password", "Password")
 
+.. image:: images/getting-password2.png
 
 
 Getting A Yes/No Answer
@@ -215,6 +239,8 @@ To create a pop up window that prompts the user to answer either Yes or No, use 
 
     reply = easy.get_yes_or_no("Fight the monster?")
 
+.. image:: images/getting-yes-no1.png
+
 
 **Additional Options**
 
@@ -226,6 +252,7 @@ If you call ``get_yes_or_no`` with a second argument (separated by a comma), tha
 
     reply = easy.get_yes_or_no("Fight the monster?", "Fight")
 
+.. image:: images/getting-yes-no2.png
 
 
 Getting An RGB Color Value
@@ -243,6 +270,8 @@ To create a pop up window that prompts the user to select a color, use the ``get
     g = color[1]    # access the amount in the green channel
     b = color[2]    # access the amount in the blue channel
 
+.. image:: images/getting-color.png
+
 
 Get File Name Path
 --------------------
@@ -255,6 +284,8 @@ To create a pop up window that prompts the user to select a file from their comp
 
     selected_image = easy.get_file_name()
 
+.. image:: images/getting-file-name1.png
+
 
 **Additional Options**
 
@@ -266,6 +297,7 @@ If you call ``get_file_name`` with a second argument (separated by a comma), tha
 
     selected_image = easy.get_file_name("Select Image")
 
+.. image:: images/getting-file-name2.png
 
 
 Display HTML Formatted Text
@@ -292,6 +324,7 @@ This function requires two arguments, the window title (as a string), and the HT
 
     easy.show_html("Demo", some_html)
 
+.. image:: images/showing-html.png
 
 
 Display HTML Formatted Text
@@ -307,6 +340,8 @@ This function requires three arguments, the path of the file (as a string), the 
 
     file = "path/to/index.html"
     easy.show_file(file, "File Demo", "html")
+
+.. image:: images/showing-file1.png
 
 
 **Additional Options**
@@ -324,3 +359,6 @@ When calling the ``show_file`` function, you can choose between the following re
 
     file = "path/to/some_script.py"
     easy.show_file(file, "File Demo", "python")
+
+
+.. image:: images/showing-file2.png
