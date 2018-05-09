@@ -124,13 +124,24 @@ Images are another common element of a document or a web page.  To include an im
 
 The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
 
-.. activecode:: html_img
+.. activecode:: html_img1
    :language: html
 
    <h1>Embedded Images</h1>
    <p>Images are inline elements they fit in the flow
-   <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg">
+   <img src="/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
+   <p>This image uses a <em>relative path</em>, which means
+   that there isn't a http:// at the start of the path.</p>
+
+.. activecode:: html_img2
+   :language: html
+
+   <p>
+   <img src="http://cs20.ca/_static/skflag.png">
+   of a paragraph without causing extra line breaks.</p>
+   <p>This image uses an <em>absolute path</em>, which means
+   that there is a http:// at the start of the path.</p>
 
 
 Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.
@@ -143,7 +154,7 @@ There are several other attributes of the image tag as well.  You can read about
 Links
 ~~~~~~~~~~~~
 
-The last basic link to cover in this section is the link tag ``a``.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an ``img`` tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the ``href`` attribute on the ``a`` tag.   The text that you will click on goes between the opening ``a`` tag and the closing ``a`` tag.
+The last basic tag to cover in this section is the link tag ``a``.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an ``img`` tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the ``href`` attribute on the ``a`` tag.   The text that you will click on goes between the opening ``a`` tag and the closing ``a`` tag.
 
 
 .. activecode:: html_link
@@ -358,16 +369,18 @@ Embedding audio in your webpage allows you to link to various files containing m
 
 The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for the listener.  The ``source`` tags inside the ``audio`` tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.
 
+
 Video
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Embedding video in your webpage allows you to link to various files containing movies.
 
-.. code-block:: html
+.. activecode:: video_demo
+   :language: html
 
-    <video height=312 width= 540 controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
+    <video height=300 width=400 controls>
+        <source src="/_static/run-cycle.mp4" type="video/mp4">
+        <source src="/_static/run-cycle.ogg" type="video/ogg">
         Your browser does not support the video element.
     </video>
 
