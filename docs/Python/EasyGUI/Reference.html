@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EasyGUI_Qt Reference &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../../_static/xml.js"></script>
+    <script type="text/javascript" src="../../_static/css.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/javascript.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/clike.js"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/datafile.js"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Micro:bit Reference" href="../Microbit/QuickStartExamples.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/cs20sk/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">EasyGUI_Qt Reference</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#showing-messages">Showing Messages</a></li>
+<li><a class="reference internal" href="#getting-strings">Getting Strings</a></li>
+<li><a class="reference internal" href="#getting-integers">Getting Integers</a></li>
+<li><a class="reference internal" href="#getting-floats">Getting Floats</a></li>
+<li><a class="reference internal" href="#getting-selection-from-drop-down-list">Getting Selection from Drop-Down List</a></li>
+<li><a class="reference internal" href="#getting-multiple-selections-from-list">Getting Multiple Selections from List</a></li>
+<li><a class="reference internal" href="#getting-a-password">Getting A Password</a></li>
+<li><a class="reference internal" href="#getting-a-yes-no-answer">Getting A Yes/No Answer</a></li>
+<li><a class="reference internal" href="#getting-an-rgb-color-value">Getting An RGB Color Value</a></li>
+<li><a class="reference internal" href="#get-file-name-path">Get File Name Path</a></li>
+<li><a class="reference internal" href="#display-html-formatted-text">Display HTML Formatted Text</a></li>
+<li><a class="reference internal" href="#id1">Display HTML Formatted Text</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Micro:bit Reference" data-toggle="tooltip">
+    <a href="../Microbit/QuickStartExamples.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="easygui-qt-reference">
+<span id="easygui-reference"></span><h1>EasyGUI_Qt Reference<a class="headerlink" href="#easygui-qt-reference" title="Permalink to this headline">¶</a></h1>
+<p>EasyGUI_Qt is inspired by EasyGUI and contains a number of different basic graphical user interface components. The version you are using is forked from <a class="reference external" href="https://github.com/aroberge/easygui_qt">https://github.com/aroberge/easygui_qt</a>, and adds just a few changes to make things easier for students to use (improved install process by adding PyQt5 as a dependency, added get_file_name function). The following reference covers a subset of the functions that are most accessible to a student at the CS20 level, so you may want to read the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">official docs of the original project</a> if you would like to explore more usage options.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>In Thonny, open Tools -&gt; Manage Packages and type in <code class="docutils literal"><span class="pre">cs20-easygui</span></code> into the search bar, then click Install. This installation will take some time, as part of the installation is the backend graphical rendering engine (PyQt5).</p>
+</div>
+<div class="section" id="showing-messages">
+<h2>Showing Messages<a class="headerlink" href="#showing-messages" title="Permalink to this headline">¶</a></h2>
+<p>If you call <code class="docutils literal"><span class="pre">show_message</span></code> with a single argument, that argument should be a string containing the message you would like to show.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Enter your message here, or pass in a variable containing a string.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">show_message</span></code> with a second argument (separated by a comma), that second argument should also be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;My message goes here!&quot;</span><span class="p">,</span> <span class="s2">&quot;Some Title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-strings">
+<h2>Getting Strings<a class="headerlink" href="#getting-strings" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to enter a string, use the <code class="docutils literal"><span class="pre">get_string</span></code> function. This function will return whatever the user types in (as a string). If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_string</span></code> with a second argument (separated by a comma), that second argument should also be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_string</span></code> with a third argument (separated by a comma), that third argument should also be a string, and will be interpreted as the default value inside the input box.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-integers">
+<h2>Getting Integers<a class="headerlink" href="#getting-integers" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to enter an integer, use the <code class="docutils literal"><span class="pre">get_integer</span></code> function. This function will return an integer, and forces the user to only enter numbers. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with a third argument (separated by a comma), that third argument should be an integer, and will be interpreted as the default value inside the input box.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with five arguments (separated by commas), the fourth argument should be an integer representing the minimum value allowed, and the fifth argument should be an integer representing the maximum value allowed.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-floats">
+<h2>Getting Floats<a class="headerlink" href="#getting-floats" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to enter an float, use the <code class="docutils literal"><span class="pre">get_float</span></code> function. This function will return a float, and forces the user to only enter numeric values. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with a third argument (separated by a comma), that third argument should be a float, and will be interpreted as the default value inside the input box.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with five arguments (separated by commas), the fourth argument should be a number (int or float) representing the minimum value allowed, and the fifth argument should be a number (int or float) representing the maximum value allowed.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">2.72</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with six arguments (separated by commas), the sixth argument should be an integer representing the number of decimals allowed.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">2.72</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-selection-from-drop-down-list">
+<h2>Getting Selection from Drop-Down List<a class="headerlink" href="#getting-selection-from-drop-down-list" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to select an option from a drop-down list, use the <code class="docutils literal"><span class="pre">get_choice</span></code> function. This function will return a string containing the user’s choice. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p>This function requires three arguments, the prompt message (as a string), the window title (as a string), and the choices the user can choose from (as a list).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;What is your favourite subject?&quot;</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Best Subject&quot;</span>
+<span class="n">choices</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">]</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-multiple-selections-from-list">
+<h2>Getting Multiple Selections from List<a class="headerlink" href="#getting-multiple-selections-from-list" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to select an option (or more than one option) from a list, use the <code class="docutils literal"><span class="pre">get_list_of_choices</span></code> function. This function will return a list containing the user’s choices. If the user presses <em>Cancel</em>, closes the window, or does not select any options, this function will return an empty list.</p>
+<p>This function requires two arguments, the window title (as a string), and the choices the user can choose from (as a list).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Subjects You Enjoy&quot;</span>
+<span class="n">choices</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">]</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-a-password">
+<h2>Getting A Password<a class="headerlink" href="#getting-a-password" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to enter a password, use the <code class="docutils literal"><span class="pre">get_password</span></code> function. This function will return a string containing the user’s input. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_password</span><span class="p">(</span><span class="s2">&quot;Please enter your password&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_password</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_password</span><span class="p">(</span><span class="s2">&quot;Please enter your password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-a-yes-no-answer">
+<h2>Getting A Yes/No Answer<a class="headerlink" href="#getting-a-yes-no-answer" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to answer either Yes or No, use the <code class="docutils literal"><span class="pre">get_yes_or_no</span></code> function. This function will return a boolean (<code class="docutils literal"><span class="pre">True</span></code> if they clicked Yes, <code class="docutils literal"><span class="pre">False</span></code> if they clicked No). If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_yes_or_no</span><span class="p">(</span><span class="s2">&quot;Fight the monster?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_yes_or_no</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_yes_or_no</span><span class="p">(</span><span class="s2">&quot;Fight the monster?&quot;</span><span class="p">,</span> <span class="s2">&quot;Fight&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-an-rgb-color-value">
+<h2>Getting An RGB Color Value<a class="headerlink" href="#getting-an-rgb-color-value" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to select a color, use the <code class="docutils literal"><span class="pre">get_color_rgb</span></code> function. This function will return a list with the RGB values of the selected color. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_color_rgb</span><span class="p">()</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    <span class="c1"># access the amount in the red channel</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># access the amount in the green channel</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># access the amount in the blue channel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-file-name-path">
+<h2>Get File Name Path<a class="headerlink" href="#get-file-name-path" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that prompts the user to select a file from their computer, use the <code class="docutils literal"><span class="pre">get_file_name</span></code> function. This function will return a string containing the full path to the file they selected. If the user presses <em>Cancel</em>, or closes the window, this function will return an empty string <code class="docutils literal"><span class="pre">''</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">selected_image</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_file_name</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>If you call <code class="docutils literal"><span class="pre">get_file_name</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">selected_image</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_file_name</span><span class="p">(</span><span class="s2">&quot;Select Image&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="display-html-formatted-text">
+<h2>Display HTML Formatted Text<a class="headerlink" href="#display-html-formatted-text" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that shows rendered HTML, use the <code class="docutils literal"><span class="pre">show_html</span></code> function.</p>
+<p>This function requires two arguments, the window title (as a string), and the HTML to render (also a string).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="n">some_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;h1&gt;Example&lt;/h1&gt;</span>
+<span class="s2">&lt;p&gt;This is just an example of &lt;em&gt;some&lt;/em&gt; of the things you can</span>
+<span class="s2">do when rendering HTML. There are many more things you could do:&lt;/p&gt;</span>
+
+<span class="s2">&lt;ul&gt;</span>
+<span class="s2">    &lt;li&gt;other HTML tags you learn&lt;/li&gt;</span>
+<span class="s2">    &lt;li&gt;including images&lt;/li&gt;</span>
+<span class="s2">    &lt;li&gt;much more!&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;&quot;&quot;&quot;</span>
+
+<span class="n">easy</span><span class="o">.</span><span class="n">show_html</span><span class="p">(</span><span class="s2">&quot;Demo&quot;</span><span class="p">,</span> <span class="n">some_html</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Display HTML Formatted Text<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>To create a pop up window that shows the contents of a file as rendered HTML, use the <code class="docutils literal"><span class="pre">show_file</span></code> function.</p>
+<p>This function requires three arguments, the path of the file (as a string), the window title (as a string), rendering engine to use (also a string).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="s2">&quot;path/to/index.html&quot;</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s2">&quot;File Demo&quot;</span><span class="p">,</span> <span class="s2">&quot;html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Additional Options</strong></p>
+<p>When calling the <code class="docutils literal"><span class="pre">show_file</span></code> function, you can choose between the following rendering engines:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">text</span></code></li>
+<li><code class="docutils literal"><span class="pre">code</span></code></li>
+<li><code class="docutils literal"><span class="pre">html</span></code></li>
+<li><code class="docutils literal"><span class="pre">python</span></code></li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="s2">&quot;path/to/some_script.py&quot;</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s2">&quot;File Demo&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Micro:bit Reference' data-toggle="tooltip">
+    <a href="../Microbit/QuickStartExamples.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../Microbit/QuickStartExamples.html" ></a>
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
