@@ -97,6 +97,7 @@
     <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Turtle Confusion Challenges" href="../TurtleConfusion/Challenges.html" />
     <link rel="prev" title="Micro:bit Reference" href="../Microbit/QuickStartExamples.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -220,8 +221,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - Turtle Confusion Challenges' data-toggle="tooltip" >
+    <a href="../TurtleConfusion/Challenges.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -261,12 +266,14 @@
 <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Enter your message here, or pass in a variable containing a string.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/showing-messages1.png" src="../../_images/showing-messages1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">show_message</span></code> with a second argument (separated by a comma), that second argument should also be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;My message goes here!&quot;</span><span class="p">,</span> <span class="s2">&quot;Some Title&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/showing-messages2.png" src="../../_images/showing-messages2.png" />
 </div>
 <div class="section" id="getting-strings">
 <h2>Getting Strings<a class="headerlink" href="#getting-strings" title="Permalink to this headline">¶</a></h2>
@@ -275,17 +282,20 @@
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-strings1.png" src="../../_images/getting-strings1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_string</span></code> with a second argument (separated by a comma), that second argument should also be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-strings2.png" src="../../_images/getting-strings2.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_string</span></code> with a third argument (separated by a comma), that third argument should also be a string, and will be interpreted as the default value inside the input box.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-strings3.png" src="../../_images/getting-strings3.png" />
 </div>
 <div class="section" id="getting-integers">
 <h2>Getting Integers<a class="headerlink" href="#getting-integers" title="Permalink to this headline">¶</a></h2>
@@ -294,22 +304,26 @@
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-integers1.png" src="../../_images/getting-integers1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-integers2.png" src="../../_images/getting-integers2.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with a third argument (separated by a comma), that third argument should be an integer, and will be interpreted as the default value inside the input box.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-integers3.png" src="../../_images/getting-integers3.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_integer</span></code> with five arguments (separated by commas), the fourth argument should be an integer representing the minimum value allowed, and the fifth argument should be an integer representing the maximum value allowed.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-integers4.png" src="../../_images/getting-integers4.png" />
 </div>
 <div class="section" id="getting-floats">
 <h2>Getting Floats<a class="headerlink" href="#getting-floats" title="Permalink to this headline">¶</a></h2>
@@ -318,27 +332,32 @@
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-floats1.png" src="../../_images/getting-floats1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-floats2.png" src="../../_images/getting-floats2.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with a third argument (separated by a comma), that third argument should be a float, and will be interpreted as the default value inside the input box.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-floats3.png" src="../../_images/getting-floats3.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with five arguments (separated by commas), the fourth argument should be a number (int or float) representing the minimum value allowed, and the fifth argument should be a number (int or float) representing the maximum value allowed.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">2.72</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-floats4.png" src="../../_images/getting-floats4.png" />
 <p>If you call <code class="docutils literal"><span class="pre">get_float</span></code> with six arguments (separated by commas), the sixth argument should be an integer representing the number of decimals allowed.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">,</span> <span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">2.72</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-floats5.png" src="../../_images/getting-floats5.png" />
 </div>
 <div class="section" id="getting-selection-from-drop-down-list">
 <h2>Getting Selection from Drop-Down List<a class="headerlink" href="#getting-selection-from-drop-down-list" title="Permalink to this headline">¶</a></h2>
@@ -352,6 +371,7 @@
 <span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-choice.png" src="../../_images/getting-choice.png" />
 </div>
 <div class="section" id="getting-multiple-selections-from-list">
 <h2>Getting Multiple Selections from List<a class="headerlink" href="#getting-multiple-selections-from-list" title="Permalink to this headline">¶</a></h2>
@@ -361,9 +381,10 @@
 <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Subjects You Enjoy&quot;</span>
 <span class="n">choices</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">]</span>
 
-<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
+<span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_list_of_choices</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-multiple-selections.png" src="../../_images/getting-multiple-selections.png" />
 </div>
 <div class="section" id="getting-a-password">
 <h2>Getting A Password<a class="headerlink" href="#getting-a-password" title="Permalink to this headline">¶</a></h2>
@@ -373,6 +394,7 @@
 <span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_password</span><span class="p">(</span><span class="s2">&quot;Please enter your password&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-password1.png" src="../../_images/getting-password1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_password</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
@@ -380,6 +402,7 @@
 <span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_password</span><span class="p">(</span><span class="s2">&quot;Please enter your password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-password2.png" src="../../_images/getting-password2.png" />
 </div>
 <div class="section" id="getting-a-yes-no-answer">
 <h2>Getting A Yes/No Answer<a class="headerlink" href="#getting-a-yes-no-answer" title="Permalink to this headline">¶</a></h2>
@@ -389,6 +412,7 @@
 <span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_yes_or_no</span><span class="p">(</span><span class="s2">&quot;Fight the monster?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-yes-no1.png" src="../../_images/getting-yes-no1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_yes_or_no</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
@@ -396,6 +420,7 @@
 <span class="n">reply</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_yes_or_no</span><span class="p">(</span><span class="s2">&quot;Fight the monster?&quot;</span><span class="p">,</span> <span class="s2">&quot;Fight&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-yes-no2.png" src="../../_images/getting-yes-no2.png" />
 </div>
 <div class="section" id="getting-an-rgb-color-value">
 <h2>Getting An RGB Color Value<a class="headerlink" href="#getting-an-rgb-color-value" title="Permalink to this headline">¶</a></h2>
@@ -409,6 +434,7 @@
 <span class="n">b</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># access the amount in the blue channel</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-color.png" src="../../_images/getting-color.png" />
 </div>
 <div class="section" id="get-file-name-path">
 <h2>Get File Name Path<a class="headerlink" href="#get-file-name-path" title="Permalink to this headline">¶</a></h2>
@@ -418,6 +444,7 @@
 <span class="n">selected_image</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_file_name</span><span class="p">()</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-file-name1.png" src="../../_images/getting-file-name1.png" />
 <p><strong>Additional Options</strong></p>
 <p>If you call <code class="docutils literal"><span class="pre">get_file_name</span></code> with a second argument (separated by a comma), that second argument should be a string, and will be interpreted as the title the pop up window should have.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="kn">as</span> <span class="nn">easy</span>
@@ -425,6 +452,7 @@
 <span class="n">selected_image</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_file_name</span><span class="p">(</span><span class="s2">&quot;Select Image&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/getting-file-name2.png" src="../../_images/getting-file-name2.png" />
 </div>
 <div class="section" id="display-html-formatted-text">
 <h2>Display HTML Formatted Text<a class="headerlink" href="#display-html-formatted-text" title="Permalink to this headline">¶</a></h2>
@@ -446,6 +474,7 @@
 <span class="n">easy</span><span class="o">.</span><span class="n">show_html</span><span class="p">(</span><span class="s2">&quot;Demo&quot;</span><span class="p">,</span> <span class="n">some_html</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/showing-html.png" src="../../_images/showing-html.png" />
 </div>
 <div class="section" id="id1">
 <h2>Display HTML Formatted Text<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -457,6 +486,7 @@
 <span class="n">easy</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s2">&quot;File Demo&quot;</span><span class="p">,</span> <span class="s2">&quot;html&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/showing-file1.png" src="../../_images/showing-file1.png" />
 <p><strong>Additional Options</strong></p>
 <p>When calling the <code class="docutils literal"><span class="pre">show_file</span></code> function, you can choose between the following rendering engines:</p>
 <ul class="simple">
@@ -471,6 +501,7 @@
 <span class="n">easy</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s2">&quot;File Demo&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<img alt="../../_images/showing-file2.png" src="../../_images/showing-file2.png" />
 </div>
 </div>
 
@@ -484,6 +515,12 @@
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../Microbit/QuickStartExamples.html" ></a>
   
+  <li id="relations-next" class="navLink" title='Next Section - Turtle Confusion Challenges' data-toggle="tooltip" >
+    <a href="../TurtleConfusion/Challenges.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../TurtleConfusion/Challenges.html" >Next Section - Turtle Confusion Challenges</a>
 
 <script type="text/javascript">
 

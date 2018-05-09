@@ -5723,3 +5723,105 @@ BrokenPipeError: [Errno 32] Broken pipe
 127.0.0.1 - - [09/May/2018 12:55:45] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
 
 Aborted!
+127.0.0.1 - - [09/May/2018 15:37:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/clike.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/timed_activecode.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/animationbase.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/mchoice.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/timedmc.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/timed.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/clickable.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/timedclickable.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:53] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:37:54] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61335)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+----------------------------------------
+127.0.0.1 - - [09/May/2018 15:37:54] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61336)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /Python/Microbit/QuickStartExamples.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /_images/flash-microbit1.gif HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:08] "GET /_images/bitio.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:11] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:11] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:11] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:16] "GET /Python/EasyGUI/Reference.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/showing-messages1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/showing-messages2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-strings1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-strings2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-strings3.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-integers1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-integers2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-integers3.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-integers4.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-floats1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-floats2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-floats3.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-floats4.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-floats5.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-choice.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-multiple-selections.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-password1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-password2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-yes-no1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-yes-no2.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-color.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-file-name1.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2018 15:38:17] "GET /_images/getting-file-name2.png HTTP/1.1" 200 -
