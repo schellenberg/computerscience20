@@ -164,11 +164,14 @@ The last basic tag to cover in this section is the link tag ``a``.  In fact the 
    :language: html
 
    <h1>Links make the web!</h1>
-   <p>Links are another inline element.  You can read about links and their attributes
-   <a href="http://www.w3schools.com/tags/tag_a.asp">Here</a> on the w3schools website.</p>
+   <p>Links are another inline element.  You can read about links and their attributes on
+   <a href="http://www.w3schools.com/tags/tag_a.asp">the w3schools website</a>.</p>
 
 
 Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
+
+.. note:: Due to a rendering error within ActiveCode, <a> tags will look like regular links, but will not function properly. To see the result of an <a> tag in action, I recommend doing these demonstrations using a text editor (such as Atom), and viewing the page in your browser.
+
 
 Links can also be used to navigate within the same page.  to do this you use one ``a`` tag to create
 an anchor point on the page using the name attribute like this:  ``<a name="target">I am a target</a>``  You can create
