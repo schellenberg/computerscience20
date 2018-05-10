@@ -354,8 +354,8 @@
 
 <textarea data-component="activecode" id=html_img1 data-lang="htmlmixed"    data-timelimit=25000   data-audio=''     >
 &lt;h1&gt;Embedded Images&lt;/h1&gt;
-&lt;p&gt;Images are inline elements they fit in the flow
-&lt;img src=&quot;/_static/skflag.png&quot;&gt;
+&lt;p&gt;Images are inline elements because they fit in the flow
+&lt;img src=&quot;/computerscience20/_static/skflag.png&quot;&gt;
 of a paragraph without causing extra line breaks.&lt;/p&gt;
 &lt;p&gt;This image uses a &lt;em&gt;relative path&lt;/em&gt;, which means
 that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
@@ -365,7 +365,7 @@ that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
 <div data-childcomponent="html_img2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=html_img2 data-lang="htmlmixed"    data-timelimit=25000   data-audio=''     >
-&lt;p&gt;
+&lt;p&gt;Images are inline elements because they fit in the flow
 &lt;img src=&quot;http://cs20.ca/_static/skflag.png&quot;&gt;
 of a paragraph without causing extra line breaks.&lt;/p&gt;
 &lt;p&gt;This image uses an &lt;em&gt;absolute path&lt;/em&gt;, which means
@@ -373,6 +373,10 @@ that there is a http:// at the start of the path.&lt;/p&gt;
 </textarea>
 </div>
 <p>Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your <code class="docutils literal"><span class="pre">skflag.png</span></code> image is saved in the same folder as your <code class="docutils literal"><span class="pre">index.html</span></code> file, you can just use something like &lt;img src=”skflag.png”&gt;.</p>
+</div>
 <p>You can also change the height and width of  an image by using a <code class="docutils literal"><span class="pre">height=</span></code> attribute or a <code class="docutils literal"><span class="pre">width=</span></code> attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.</p>
 <p>There are several other attributes of the image tag as well.  You can read about them <a class="reference external" href="http://www.w3schools.com/tags/tag_img.asp">here</a>.</p>
 </div>
@@ -566,12 +570,16 @@ a link that will jump to the target anywhere else on the page using <code class=
 <div class="section" id="audio">
 <h3>Audio<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h3>
 <p>Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:</p>
-<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;horse.ogg&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/ogg&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;horse.mp3&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/mpeg&quot;</span><span class="p">&gt;</span>
-    Your browser does not support the audio element.
-<span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
-</pre></div>
+
+<div data-childcomponent="audio_demo" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=audio_demo data-lang="htmlmixed"    data-timelimit=25000   data-audio=''     >
+ &lt;audio controls&gt;
+     &lt;source src=&quot;/computerscience20/_static/battleThemeA.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+     &lt;source src=&quot;/computerscience20/_static/battleThemeA.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+     Your browser does not support the audio element.
+ &lt;/audio&gt;
+</textarea>
 </div>
 <p>The <code class="docutils literal"><span class="pre">controls</span></code> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <code class="docutils literal"><span class="pre">source</span></code> tags inside the <code class="docutils literal"><span class="pre">audio</span></code> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
 </div>
@@ -583,8 +591,8 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <textarea data-component="activecode" id=video_demo data-lang="htmlmixed"    data-timelimit=25000   data-audio=''     >
  &lt;video height=300 width=400 controls&gt;
-     &lt;source src=&quot;/_static/run-cycle.mp4&quot; type=&quot;video/mp4&quot;&gt;
-     &lt;source src=&quot;/_static/run-cycle.ogg&quot; type=&quot;video/ogg&quot;&gt;
+     &lt;source src=&quot;/computerscience20/_static/run-cycle.mp4&quot; type=&quot;video/mp4&quot;&gt;
+     &lt;source src=&quot;/computerscience20/_static/run-cycle.ogg&quot; type=&quot;video/ogg&quot;&gt;
      Your browser does not support the video element.
  &lt;/video&gt;
 </textarea>

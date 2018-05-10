@@ -128,8 +128,8 @@ The image tag has a new component to it called an attribute.  In general tags ca
    :language: html
 
    <h1>Embedded Images</h1>
-   <p>Images are inline elements they fit in the flow
-   <img src="/_static/skflag.png">
+   <p>Images are inline elements because they fit in the flow
+   <img src="/computerscience20/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
    <p>This image uses a <em>relative path</em>, which means
    that there isn't a http:// at the start of the path.</p>
@@ -137,7 +137,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
 .. activecode:: html_img2
    :language: html
 
-   <p>
+   <p>Images are inline elements because they fit in the flow
    <img src="http://cs20.ca/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
    <p>This image uses an <em>absolute path</em>, which means
@@ -145,6 +145,9 @@ The image tag has a new component to it called an attribute.  In general tags ca
 
 
 Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.
+
+.. note:: If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your ``skflag.png`` image is saved in the same folder as your ``index.html`` file, you can just use something like <img src="skflag.png">.
+
 
 You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
 
@@ -359,11 +362,12 @@ Audio
 
 Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:
 
-.. code-block:: html
+.. activecode:: audio_demo
+   :language: html
 
     <audio controls>
-        <source src="horse.ogg" type="audio/ogg">
-        <source src="horse.mp3" type="audio/mpeg">
+        <source src="/computerscience20/_static/battleThemeA.mp3" type="audio/mpeg">
+        <source src="/computerscience20/_static/battleThemeA.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
 
@@ -379,8 +383,8 @@ Embedding video in your webpage allows you to link to various files containing m
    :language: html
 
     <video height=300 width=400 controls>
-        <source src="/_static/run-cycle.mp4" type="video/mp4">
-        <source src="/_static/run-cycle.ogg" type="video/ogg">
+        <source src="/computerscience20/_static/run-cycle.mp4" type="video/mp4">
+        <source src="/computerscience20/_static/run-cycle.ogg" type="video/ogg">
         Your browser does not support the video element.
     </video>
 
