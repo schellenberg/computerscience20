@@ -36,10 +36,12 @@ Computing and Society
 
 The sections in the Computing and Society portion of the textbook that deal with the history of the world wide web and the basics of how to create webpages are adapted from the `Fundamentals of Web Programming <https://runestone.academy/runestone/static/webfundamentals/index.html>`_ book by Brad Miller, which is released under a Creative Commons BY-SA license.
 
+
+Media Used
+------------
+
 The videos on `How the Internet Works are made by code.org <https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7>`_, and are released under a Creative Commons BY-NC-ND license.
 
-Images Used
-~~~~~~~~~~~~
 
 The images that are used for the Python Image Processing sections come from:
 
@@ -47,3 +49,5 @@ The images that are used for the Python Image Processing sections come from:
 - `EmojiOne <https://github.com/emojione/emojione/tree/2.2.7>`_ (CC-BY) - this applies to any emoji used in image processing
 
 The CS20 logo (on the top left of the page) was created by Chrystelle Cayabyab, as part of her Graphic Arts course taught by Stefan Scott at Aden Bowman Collegiate.
+
+The video file used in the HTML section was graciously provided by Stefan Scott. The audio file used in the HTML section was made by cynicmusic, and was released under a CC0 license.

@@ -146,7 +146,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
 
 Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.
 
-.. note:: If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your ``skflag.png`` image is saved in the same folder as your ``index.html`` file, you can just use something like <img src="skflag.png">.
+.. note:: If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your ``skflag.png`` image is saved in the same folder as your ``index.html`` file, you can just use something like ``<img src="skflag.png">``.
 
 
 You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
