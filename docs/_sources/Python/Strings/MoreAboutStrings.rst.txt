@@ -87,8 +87,10 @@ correctly when using ``len`` of the string as its parameter value.
 
 
 You may also note that iteration by position allows the programmer to control the direction of the
-traversal by changing the sequence of index values.  Recall that we can create ranges that count down as 
-well as up so the following code will print the characters from right to left.
+traversal by changing the sequence of index values.  Recall that we can create ranges that count down as well as up so the following code will print the characters from right to left. 
+
+.. note:: Remember that when using the ``range()`` function with three arguments, the arguments are interpreted as ``starting_number``, ``ending_number``, and ``amount_to_step_by``. The range function begins at the ``starting_number``, and goes up to, but not including, the ``ending_number``.
+
 
 .. codelens:: string_for_loop_by_index_3
 
