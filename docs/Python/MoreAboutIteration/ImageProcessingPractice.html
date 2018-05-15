@@ -364,27 +364,63 @@
 import image
 
 img = image.Image("skflag.png")
-canvas = image.ImageWin(img.get_width(), img.get_height())
+width = img.get_width()
+height = img.get_height()
+
+canvas = image.ImageWin(width, height)
 img.draw(canvas)
 
-for row in range(img.get_height()):
-    for col in range(img.get_width()):
-        p = img.get_pixel(col, row)
+for y in range(height):
+    for x in range(width):
+        p = img.get_pixel(x, y)
 
         # adjust the following to apply your image processing
-        new_red = p.get_red()
-        new_green = p.get_green()
-        new_blue = p.get_blue()
+        r = p.get_red()
+        g = p.get_green()
+        b = p.get_blue()
 
-        new_pixel = image.Pixel(new_red, new_green, new_blue)
+        new_pixel = image.Pixel(r, g, b)
 
-        img.set_pixel(col, row, new_pixel)
+        img.set_pixel(x, y, new_pixel)
 
     # unindent the following line to remove the "animation"
     img.draw(canvas)
 </textarea>
 </div>
+
+    <div data-component="reveal" id="greyscale_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
+    <p>One possible solution is as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;skflag.png&quot;</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># adjust the following to apply your image processing</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
+
+        <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="n">g</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+
+        <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">)</span>
+
+        <span class="n">img</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">new_pixel</span><span class="p">)</span>
+
+    <span class="c1"># unindent the following line to remove the &quot;animation&quot;</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 <div class="section" id="black-and-white-threshold">
 <h3>2.2.2. Black and White Threshold<a class="headerlink" href="#black-and-white-threshold" title="Permalink to this headline">¶</a></h3>
 <p>You can create interesting <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the <code class="docutils literal"><span class="pre">skflag.png</span></code> image, it looks like this originally:</p>
@@ -399,7 +435,41 @@ for row in range(img.get_height()):
 # Be sure to experiment with different threshold values!
 </textarea>
 </div>
+
+    <div data-component="reveal" id="threshold_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
+    <p>One possible solution is as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;skflag.png&quot;</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">ImageWin</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># adjust the following to apply your image processing</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">r</span> <span class="o">+</span> <span class="n">g</span> <span class="o">+</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Pixel</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+        <span class="n">img</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">new_pixel</span><span class="p">)</span>
+
+    <span class="c1"># unindent the following line to remove the &quot;animation&quot;</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+</pre></div>
 </div>
+
+    </div>
+    </div>
 </div>
 <div class="section" id="practice-problems">
 <h2>2.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
@@ -559,7 +629,7 @@ img.draw(win)
     </div>
 <div class="section" id="acknowledgments">
 <h3>2.3.8. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
-<p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
+<p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. The Saskatchewan flag image is also licensed as CC-0, and was obtained from Wikimedia.</p>
 </div>
 </div>
 </div>

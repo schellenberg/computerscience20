@@ -27,9 +27,9 @@ As we learn HTML its important to keep in mind that the job of HTML is to struct
 
 HTML uses a set of tags to annotate (mark up) the document.  The tags all look like this: ``< tagname >`` and they are balanced so that at the end of the content for that tag there is ``</ tagname >``. Notice that the closing tag contains a slash at the beginning to differentiate itself from an opening tag.
 
-An HTML document then just contains a series of these balanced tags. 
+An HTML document then just contains a series of these balanced tags.
 
-.. note:: 
+.. note::
 
     When experimenting with HTML, you can simply use a web based environment (like the one you are in right now), but it can be very instructive to experiment with how to do this with files on your computer as well. For any of the examples given below, you can simply create a text file on your computer, type some HTML, then make sure you save the file as ``something.html``. The .html extension is very important, as it allows your computer to identify what type of content is contained within the file. After the file is saved, open it using your web browser of choice (Chrome, Edge, Firefox, etc.).
 
@@ -49,7 +49,7 @@ The HTML for this document is as follows:
 
 .. activecode:: html_1
    :language: html
-   
+
    <html>
        <head>
            <title>Test Page</title>
@@ -69,7 +69,7 @@ Before we move on to talk more about specific HTML tags its useful to think abou
 
 .. image:: images/tree.svg
 
-   
+
 This tree is upside down with how we usually think of a tree, but in computer science we put the "root" of the tree at the top.  So the root of this tree is the html tag.  The html tag has two **children**, the head and the body.  The head has one child, which is the head tag.  The html tag is the **parent** of the head tag.  The body has three children, the h1 tag and two p tags.  You may also find it helpful to think of this as an outline, although you would have to rotate the picture 90 degrees counter clockwise to get the orientation into outline form.  We will see how this tree structure of an html page is useful later on if/when we start to use CSS and Javascript.
 
 
@@ -120,7 +120,7 @@ What happens when you put a paragraph inside another paragraph?  What about a he
 Images
 ~~~~~~~~~~~~
 
-Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  
+Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.
 
 The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
 
@@ -266,7 +266,7 @@ Ordered Lists
    <li>Notice that the <code>li</code> tags are used for both.
    </ol>
 
-The ``ol`` tag can also have a type attribute.  The type attribute can be one of the following values
+The ``ol`` tag can also have a ``type`` attribute, so it could look something like ``<ol type="1">``.  The ``type`` attribute can be one of the following values:
 
 * 1 This will cause the list to be numbered with numbers
 * A This will cause the list to be ordered with upper case letters
@@ -406,6 +406,7 @@ IFrames allow you to embed a webpage within another webpage.  The activecode exa
     Open up YouTube, find a video, then copy/paste the iframe embed code here!
 
 
+.. note::  Although you can certainly do the following practice problems here in the textbook, you might find it useful to make an HTML page in an text editor (such as Atom), then solve each of the following problems inside of that file.
 
 
 Practice Problems

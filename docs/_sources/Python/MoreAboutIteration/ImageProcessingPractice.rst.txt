@@ -93,8 +93,6 @@ Warmup Problems
 
 .. note:: Your teacher may choose to work through the following problems to help build your confidence before you attempt the practice problems.
 
-
-
 Gray Scale
 ~~~~~~~~~~~
 
@@ -107,24 +105,62 @@ See if you can create a **gray scale** version of the image. When looking at eac
     import image
 
     img = image.Image("skflag.png")
-    canvas = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    canvas = image.ImageWin(width, height)
     img.draw(canvas)
 
-    for row in range(img.get_height()):
-        for col in range(img.get_width()):
-            p = img.get_pixel(col, row)
+    for y in range(height):
+        for x in range(width):
+            p = img.get_pixel(x, y)
 
             # adjust the following to apply your image processing
-            new_red = p.get_red()
-            new_green = p.get_green()
-            new_blue = p.get_blue()
+            r = p.get_red()
+            g = p.get_green()
+            b = p.get_blue()
+            
+            new_pixel = image.Pixel(r, g, b)
 
-            new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-            img.set_pixel(col, row, new_pixel)
+            img.set_pixel(x, y, new_pixel)
 
         # unindent the following line to remove the "animation"
         img.draw(canvas)
+
+
+.. reveal:: greyscale_solution
+    :showtitle: Reveal Solution
+
+    One possible solution is as follows:
+
+    .. code-block:: python
+    
+        import image
+
+        img = image.Image("skflag.png")
+        width = img.get_width()
+        height = img.get_height()
+
+        canvas = image.ImageWin(width, height)
+        img.draw(canvas)
+
+        for y in range(height):
+            for x in range(width):
+                p = img.get_pixel(x, y)
+
+                # adjust the following to apply your image processing
+                r = p.get_red()
+                g = p.get_green()
+                b = p.get_blue()
+
+                average = (r + g + b) / 3
+                
+                new_pixel = image.Pixel(average, average, average)
+
+                img.set_pixel(x, y, new_pixel)
+
+            # unindent the following line to remove the "animation"
+            img.draw(canvas)
 
 
 Black and White Threshold
@@ -146,6 +182,41 @@ If you look at every pixel to find the sum of the red, green, and blue values, t
     # Try to create a solution to this problem 
     #   WITHOUT looking back to previous solutions.
     # Be sure to experiment with different threshold values!
+
+.. reveal:: threshold_solution
+    :showtitle: Reveal Solution
+
+    One possible solution is as follows:
+
+    .. code-block:: python
+
+        import image
+
+        img = image.Image("skflag.png")
+        width = img.get_width()
+        height = img.get_height()
+
+        canvas = image.ImageWin(width, height)
+        img.draw(canvas)
+
+        for y in range(height):
+            for x in range(width):
+                p = img.get_pixel(x, y)
+
+                # adjust the following to apply your image processing
+                r = p.get_red()
+                g = p.get_green()
+                b = p.get_blue()
+                
+                if r + g + b > 200:
+                    new_pixel = image.Pixel(0, 0, 0)
+                else:
+                    new_pixel = image.Pixel(255, 255, 255)
+
+                img.set_pixel(x, y, new_pixel)
+
+            # unindent the following line to remove the "animation"
+            img.draw(canvas)
 
 
 Practice Problems
@@ -318,4 +389,4 @@ Write a program that converts an image using a sepia filter (`Sepia Tone <https:
 Acknowledgments
 ~~~~~~~~~~~~~~~~~~
 
-Images are from `Pexels <https://www.pexels.com/>`_, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.
+Images are from `Pexels <https://www.pexels.com/>`_, and are licensed as CC-0. The Saskatchewan flag image is also licensed as CC-0, and was obtained from Wikimedia.
