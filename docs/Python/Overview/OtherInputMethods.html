@@ -411,8 +411,7 @@ print(ski_hills[8])     # IndexError: list index out of range
 </div>
 <div class="section" id="other-methods">
 <h3>6.2.5. Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
-<p>There are many more things you can use easygui_qt for. For a complete list, see the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">easygui_qt API</a> (application programming interface) for reference.</p>
-<p>For quick reference, here are a few of them (assumes you have called <code class="docutils literal"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
+<p>There are many more methods you can use with easygui_qt. You may want to look in the appendices for the <a class="reference internal" href="../EasyGUI/Reference.html#easygui-reference"><span class="std std-ref">EasyGUI_Qt Reference</span></a> for a more comprehensive list of what is available. For quick reference, here are a few of them (each of the following assumes you have already called <code class="docutils literal"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="62%" />
@@ -449,12 +448,6 @@ print(ski_hills[8])     # IndexError: list index out of range
 <li><code class="docutils literal"><span class="pre">easy.get_choice(&quot;Message</span> <span class="pre">to</span> <span class="pre">user&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a single choice from the list (or None if cancelled)</li>
 <li><code class="docutils literal"><span class="pre">easy.get_list_of_choices(&quot;Window</span> <span class="pre">title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a list of selected items (or an empty list if cancelled)</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>In the examples given above, each of the functions above can take multiple arguments, as specified in the easygui_qt API. For example, you could call <code class="docutils literal"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">&quot;Default</span> <span class="pre">response</span> <span class="pre">text&quot;)</span></code>.</p>
-<p class="last">Although investigating optional arguments in functions goes beyond the scope of CS20, you may find it useful to know that you can call the function with only some of the arguments. If you do this, however, you need to specify <em>which</em> argument you are passing, like
-<code class="docutils literal"><span class="pre">easy.get_string(message=&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">default_response=&quot;Some</span> <span class="pre">string&quot;)</span></code>.</p>
-</div>
 </div>
 </div>
 <div class="section" id="mad-libs-practice-problem">

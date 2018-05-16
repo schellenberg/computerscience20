@@ -8,7 +8,7 @@
 EasyGUI_Qt Reference
 ====================
 
-EasyGUI_Qt is inspired by EasyGUI and contains a number of different basic graphical user interface components. The version you are using is forked from `https://github.com/aroberge/easygui_qt <https://github.com/aroberge/easygui_qt>`_, and adds just a few changes to make things easier for students to use (improved install process by adding PyQt5 as a dependency, added get_file_name function). The following reference covers a subset of the functions that are most accessible to a student at the CS20 level, so you may want to read the `official docs of the original project <http://easygui-qt.readthedocs.io/en/latest/api.html>`_ if you would like to explore more usage options.
+EasyGUI_Qt is inspired by EasyGUI and contains a number of different basic graphical user interface components. The version you are using is forked from `https://github.com/aroberge/easygui_qt <https://github.com/aroberge/easygui_qt>`_, and adds just a few changes to make things easier for students to use (improved install process by adding PyQt5 as a dependency, added get_file_name function). The following reference covers a subset of the functions that are most accessible to a student at the CS20 level, so you may want to read the `official docs of the original project <http://easygui-qt.readthedocs.io/en/latest/api.html>`_ if you would like to explore more usage options. If you explore the official docs, you may find it useful to know that you can call functions with only some of the arguments (this is called optional arguments). If you do this, however, you need to specify *which* argument you are passing, like ``easy.get_string(message="Some prompt/question:", default_response="Some string")``.
 
 
 Installation
