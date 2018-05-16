@@ -46,6 +46,16 @@ IP Addresses & DNS
     :http: https
 
 
+Packets, Routing & Reliability
+--------------------------------------
+
+.. youtube:: AYdF7b3nMto
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
 HTTP & HTML
 --------------------------------------
 
