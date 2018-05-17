@@ -163,6 +163,7 @@ Python - Lists
 
    Python/Lists/ListOverview.rst
    Python/Lists/ListMethods.rst
+   Python/Lists/ListsAndTurtles.rst
 
 
 End of Semester Review

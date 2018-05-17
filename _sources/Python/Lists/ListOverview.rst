@@ -23,7 +23,7 @@ Using Lists
 List Overview
 ---------------
 
-We've been using lists throughout the course, so you probably already feel quite comfortable with them. We will now spend a bit of time going into more depth than we have done up to now.
+We've been using lists throughout the course, so you probably already feel quite comfortable with them. Some of the following information will be a review for you, but we will spend a bit of time going into more depth than we have done up to now.
 
 A **list** is a sequential collection of Python data values, where each value is identified by an
 index. The values that make up a list are called its **elements**. Lists are
@@ -62,13 +62,12 @@ As you would expect, we can also assign list values to variables and pass lists 
     vocabulary = ["iteration", "selection", "control"]
     numbers = [17, 123]
     empty = []
-    mixedlist = ["hello", 2.0, 5*2, [10, 20]]
+    mixed_list = ["hello", 2.0, 5*2, [10, 20]]
 
     print(numbers)
-    print(mixedlist)
-    newlist = [ numbers, vocabulary ]
-    print(newlist)
-
+    print(mixed_list)
+    new_list = [ numbers, vocabulary ]
+    print(new_list)
 
 
 List Length
@@ -81,9 +80,9 @@ item when counting the length of the list.
 
 .. activecode:: list_overview_2
 
-    alist =  ["hello", 2.0, 5, [10, 20]]
-    print(len(alist))
-    print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))
+    a_list =  ["hello", 2.0, 5, [10, 20]]
+    print(len(a_list))
+    print(len(['Hepburn', 1, ['Saskatoon', 'Regina', 'Prince Albert'], [1, 2, 3]]))
 
 
 Check Your Understanding
@@ -100,8 +99,8 @@ Check Your Understanding
    
    .. code-block:: python
 
-     alist = [3, 67, "cat", 3.14, False]
-     print(len(alist))
+     a_list = [3, 67, "cat", 3.14, False]
+     print(len(a_list))
    
    
 .. mchoice:: test_question9_2_2
@@ -116,8 +115,8 @@ Check Your Understanding
 
    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(len(alist))
+      a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+      print(len(a_list))
 
 
 
@@ -174,8 +173,8 @@ Check Your Understanding
    
    .. code-block:: python
 
-     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-     print(alist[5])
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[5])
 
    
 .. mchoice:: test_question9_3_3
@@ -193,8 +192,8 @@ Check Your Understanding
    
    .. code-block:: python
 
-     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-     print(alist[2][0])
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[2][0])
 
 
    
@@ -211,6 +210,7 @@ used them previously with strings and they also work here.
     print("apple" in fruit)
     print("pear" in fruit)
 
+
 Check Your Understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -218,15 +218,15 @@ Check Your Understanding
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Yes, 3.14 is an item in the list alist.
+   :feedback_a: Yes, 3.14 is an item in the list a_list.
    :feedback_b: There are 7 items in the list, 3.14 is one of them. 
    
    What is printed by the following statements?
    
    .. code-block:: python
 
-     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-     print(3.14 in alist)
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(3.14 in a_list)
 
 
 .. mchoice:: test_question9_4_2
@@ -234,14 +234,14 @@ Check Your Understanding
    :answer_b: False
    :correct: b
    :feedback_a: in returns True for top level items only.  57 is in a sublist.
-   :feedback_b: Yes, 57 is not a top level item in alist.  It is in a sublist.
+   :feedback_b: Yes, 57 is not a top level item in a_list.  It is in a sublist.
    
    What is printed by the following statements?
    
    .. code-block:: python
 
-     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-     print(57 in alist)
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(57 in a_list)
 
 
 
@@ -277,8 +277,8 @@ Check Your Understanding
    
    .. code-block:: python
    
-     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-     print(alist[4:])
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[4:])
 
 
 
@@ -304,8 +304,8 @@ best you can do is create a new string that is a variation on the original.
 .. activecode:: ch08_imm2
     
     greeting = "Hello, world!"
-    newGreeting = 'J' + greeting[1:]
-    print(newGreeting)
+    new_greeting = 'J' + greeting[1:]
+    print(new_greeting)
     print(greeting)            # same as it was
 
 The solution here is to concatenate a new first letter onto a slice of
@@ -349,33 +349,9 @@ Check Your Understanding
    
    .. code-block:: python
 
-     alist = [4, 2, 8, 6, 5]
-     alist[2] = True
-     print(alist)
-
-
-List Deletion
--------------
-
-Using slices to delete list elements can be awkward and therefore error-prone.
-Python provides an alternative that is more readable.
-The ``del`` statement removes an element from a list by using its position.
-
-.. activecode:: ch09_11
-    
-    a = ['one', 'two', 'three']
-    del a[1]
-    print(a)
-
-    alist = ['a', 'b', 'c', 'd', 'e', 'f']
-    del alist[1:5]
-    print(alist)
-
-As you might expect, ``del`` handles negative indices and causes a runtime
-error if the index is out of range.
-In addition, you can use a slice as an index for ``del``.
-As usual, slices select all the elements up to, but not including, the second
-index, but do not cause runtime errors if the index limits go too far.
+     a_list = [4, 2, 8, 6, 5]
+     a_list[2] = True
+     print(a_list)
 
 
 Lists and ``for`` loops
@@ -389,8 +365,8 @@ It is also possible to perform **list traversal** using iteration by item as wel
     fruits = ["apple", "orange", "banana", "cherry"]
 
     # looping by item
-    for afruit in fruits:     
-        print(afruit)
+    for some_fruit in fruits:     
+        print(some_fruit)
 
 It almost reads like natural language: For (every) fruit in (the list of) fruits,
 print (the name of the) fruit.

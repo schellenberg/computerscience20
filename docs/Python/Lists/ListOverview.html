@@ -216,15 +216,14 @@
 <li><a class="reference internal" href="#id4">1.8.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#list-deletion">1.9. List Deletion</a></li>
-<li><a class="reference internal" href="#lists-and-for-loops">1.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
-<li><a class="reference internal" href="#practice-problems">1.11. Practice Problems</a><ul>
-<li><a class="reference internal" href="#warmup">1.11.1. Warmup</a></li>
-<li><a class="reference internal" href="#make-it-fun">1.11.2. Make it Fun</a></li>
-<li><a class="reference internal" href="#sum-of-squares">1.11.3. Sum of Squares</a></li>
-<li><a class="reference internal" href="#count-odd-numbers">1.11.4. Count Odd Numbers</a></li>
-<li><a class="reference internal" href="#count-words-with-length-5">1.11.5. Count Words with Length 5</a></li>
-<li><a class="reference internal" href="#look-for-saskatchewan">1.11.6. Look For “saskatchewan”</a></li>
+<li><a class="reference internal" href="#lists-and-for-loops">1.9. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+<li><a class="reference internal" href="#practice-problems">1.10. Practice Problems</a><ul>
+<li><a class="reference internal" href="#warmup">1.10.1. Warmup</a></li>
+<li><a class="reference internal" href="#make-it-fun">1.10.2. Make it Fun</a></li>
+<li><a class="reference internal" href="#sum-of-squares">1.10.3. Sum of Squares</a></li>
+<li><a class="reference internal" href="#count-odd-numbers">1.10.4. Count Odd Numbers</a></li>
+<li><a class="reference internal" href="#count-words-with-length-5">1.10.5. Count Words with Length 5</a></li>
+<li><a class="reference internal" href="#look-for-saskatchewan">1.10.6. Look For “saskatchewan”</a></li>
 </ul>
 </li>
 </ul>
@@ -291,7 +290,7 @@
     </div>
     <div class="section" id="list-overview">
 <h2>1.1. List Overview<a class="headerlink" href="#list-overview" title="Permalink to this headline">¶</a></h2>
-<p>We’ve been using lists throughout the course, so you probably already feel quite comfortable with them. We will now spend a bit of time going into more depth than we have done up to now.</p>
+<p>We’ve been using lists throughout the course, so you probably already feel quite comfortable with them. Some of the following information will be a review for you, but we will spend a bit of time going into more depth than we have done up to now.</p>
 <p>A <strong>list</strong> is a sequential collection of Python data values, where each value is identified by an
 index. The values that make up a list are called its <strong>elements</strong>. Lists are
 similar to strings, which are ordered collections of characters, except that the
@@ -323,12 +322,12 @@ empty list and is denoted <code class="docutils literal"><span class="pre">[]</s
 vocabulary = ["iteration", "selection", "control"]
 numbers = [17, 123]
 empty = []
-mixedlist = ["hello", 2.0, 5*2, [10, 20]]
+mixed_list = ["hello", 2.0, 5*2, [10, 20]]
 
 print(numbers)
-print(mixedlist)
-newlist = [ numbers, vocabulary ]
-print(newlist)
+print(mixed_list)
+new_list = [ numbers, vocabulary ]
+print(new_list)
 </textarea>
 </div>
 </div>
@@ -342,9 +341,9 @@ item when counting the length of the list.</p>
 <div data-childcomponent="list_overview_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=list_overview_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-alist =  ["hello", 2.0, 5, [10, 20]]
-print(len(alist))
-print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))
+a_list =  ["hello", 2.0, 5, [10, 20]]
+print(len(a_list))
+print(len(['Hepburn', 1, ['Saskatoon', 'Regina', 'Prince Albert'], [1, 2, 3]]))
 </textarea>
 </div>
 <div class="section" id="check-your-understanding">
@@ -353,8 +352,8 @@ print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_2_1">
             <p>lists-overview1: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">))</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
 </pre></div>
 </div>
 
@@ -369,8 +368,8 @@ print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_2_2">
             <p>lists-overview2: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">))</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
 </pre></div>
 </div>
 
@@ -429,8 +428,8 @@ print(places[2][1][3])
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_3_1">
             <p>lists-overview3: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 
@@ -447,8 +446,8 @@ print(places[2][1][3])
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_3_3">
             <p>lists-overview4: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 
@@ -485,12 +484,12 @@ print("pear" in fruit)
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_4_1">
             <p>lists-overview5: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="mf">3.14</span> <span class="ow">in</span> <span class="n">alist</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="mf">3.14</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question9_4_1_opt_a">True</li><li data-component="feedback" id="test_question9_4_1_opt_a">Yes, 3.14 is an item in the list alist.</li>
+            <li data-component="answer" data-correct id="test_question9_4_1_opt_a">True</li><li data-component="feedback" id="test_question9_4_1_opt_a">Yes, 3.14 is an item in the list a_list.</li>
             
             <li data-component="answer"  id="test_question9_4_1_opt_b">False</li><li data-component="feedback" id="test_question9_4_1_opt_b">There are 7 items in the list, 3.14 is one of them.</li>
             
@@ -501,14 +500,14 @@ print("pear" in fruit)
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_4_2">
             <p>lists-overview6: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">57</span> <span class="ow">in</span> <span class="n">alist</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">57</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
             <li data-component="answer"  id="test_question9_4_2_opt_a">True</li><li data-component="feedback" id="test_question9_4_2_opt_a">in returns True for top level items only.  57 is in a sublist.</li>
             
-            <li data-component="answer" data-correct id="test_question9_4_2_opt_b">False</li><li data-component="feedback" id="test_question9_4_2_opt_b">Yes, 57 is not a top level item in alist.  It is in a sublist.</li>
+            <li data-component="answer" data-correct id="test_question9_4_2_opt_b">False</li><li data-component="feedback" id="test_question9_4_2_opt_b">Yes, 57 is not a top level item in a_list.  It is in a sublist.</li>
             
 
             </ul>
@@ -538,8 +537,8 @@ print(a_list[:])
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_6_1">
             <p>lists-overview7: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
 </pre></div>
 </div>
 
@@ -577,8 +576,8 @@ best you can do is create a new string that is a variation on the original.</p>
 
 <textarea data-component="activecode" id=ch08_imm2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 greeting = "Hello, world!"
-newGreeting = 'J' + greeting[1:]
-print(newGreeting)
+new_greeting = 'J' + greeting[1:]
+print(new_greeting)
 print(greeting)            # same as it was
 </textarea>
 </div>
@@ -610,9 +609,9 @@ assignment does not work for strings.  Recall that strings are immutable.</p>
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question9_7_1">
             <p>lists-overview8: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">alist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="k">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -627,32 +626,8 @@ assignment does not work for strings.  Recall that strings are immutable.</p>
             </div>
             </div>
 </div>
-<div class="section" id="list-deletion">
-<h2>1.9. List Deletion<a class="headerlink" href="#list-deletion" title="Permalink to this headline">¶</a></h2>
-<p>Using slices to delete list elements can be awkward and therefore error-prone.
-Python provides an alternative that is more readable.
-The <code class="docutils literal"><span class="pre">del</span></code> statement removes an element from a list by using its position.</p>
-
-<div data-childcomponent="ch09_11" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=ch09_11 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-a = ['one', 'two', 'three']
-del a[1]
-print(a)
-
-alist = ['a', 'b', 'c', 'd', 'e', 'f']
-del alist[1:5]
-print(alist)
-</textarea>
-</div>
-<p>As you might expect, <code class="docutils literal"><span class="pre">del</span></code> handles negative indices and causes a runtime
-error if the index is out of range.
-In addition, you can use a slice as an index for <code class="docutils literal"><span class="pre">del</span></code>.
-As usual, slices select all the elements up to, but not including, the second
-index, but do not cause runtime errors if the index limits go too far.</p>
-</div>
 <div class="section" id="lists-and-for-loops">
-<h2>1.10. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops<a class="headerlink" href="#lists-and-for-loops" title="Permalink to this headline">¶</a></h2>
+<h2>1.9. Lists and <code class="docutils literal"><span class="pre">for</span></code> loops<a class="headerlink" href="#lists-and-for-loops" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to perform <strong>list traversal</strong> using iteration by item as well as iteration by index.</p>
 
 <div data-childcomponent="chp09_03a" class="runestone explainer ac_section alert alert-warning">
@@ -661,8 +636,8 @@ index, but do not cause runtime errors if the index limits go too far.</p>
 fruits = ["apple", "orange", "banana", "cherry"]
 
 # looping by item
-for afruit in fruits:
-    print(afruit)
+for some_fruit in fruits:
+    print(some_fruit)
 </textarea>
 </div>
 <p>It almost reads like natural language: For (every) fruit in (the list of) fruits,
@@ -703,9 +678,9 @@ it works. We are interested here in both the <em>value</em> and its <em>index</e
 list, so that we can assign a new value to it.</p>
 </div>
 <div class="section" id="practice-problems">
-<h2>1.11. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>1.10. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="warmup">
-<h3>1.11.1. Warmup<a class="headerlink" href="#warmup" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.1. Warmup<a class="headerlink" href="#warmup" title="Permalink to this headline">¶</a></h3>
 <p>Create a list called <code class="docutils literal"><span class="pre">my_list</span></code> with the following six items: <code class="docutils literal"><span class="pre">76,</span> <span class="pre">92.3,</span> <span class="pre">&quot;hello&quot;,</span> <span class="pre">True,</span> <span class="pre">4,</span> <span class="pre">76</span></code>. Print out the list to make sure it is doing what you intend.</p>
 
 <div data-childcomponent="list_overview_practice_problem_1" class="runestone explainer ac_section alert alert-warning">
@@ -716,7 +691,7 @@ list, so that we can assign a new value to it.</p>
 </div>
 </div>
 <div class="section" id="make-it-fun">
-<h3>1.11.2. Make it Fun<a class="headerlink" href="#make-it-fun" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.2. Make it Fun<a class="headerlink" href="#make-it-fun" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -748,7 +723,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="sum-of-squares">
-<h3>1.11.3. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.3. Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -782,7 +757,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="count-odd-numbers">
-<h3>1.11.4. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.4. Count Odd Numbers<a class="headerlink" href="#count-odd-numbers" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -815,7 +790,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="count-words-with-length-5">
-<h3>1.11.5. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.5. Count Words with Length 5<a class="headerlink" href="#count-words-with-length-5" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -847,7 +822,7 @@ myTests().main()
 </div>
 </div>
 <div class="section" id="look-for-saskatchewan">
-<h3>1.11.6. Look For “saskatchewan”<a class="headerlink" href="#look-for-saskatchewan" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.6. Look For “saskatchewan”<a class="headerlink" href="#look-for-saskatchewan" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
