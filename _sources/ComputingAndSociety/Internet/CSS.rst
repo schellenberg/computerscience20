@@ -26,16 +26,16 @@ CSS defines how a webpage should look, and it does this using a set of rules.  W
 CSS Syntax
 ----------
 
-To tell the computer about these if/then rules, we need a consistent syntax.  The syntax for CSS has two parts, a selector and a declaration.
+To tell the computer about these if/then rules, we need a consistent syntax.  The syntax for CSS has two parts, a selector and a property:value declaration.
 
 .. code-block:: css
 
-   selector {
-       declaration;
-       declaration;
-       }
+    selector {
+       property: value;
+       property: value;
+    }
 
-The declaration itself consists of two parts: a property and a value.  There are many many CSS properties and we willl look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.
+There are many many CSS properties and we willl look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.
 
 Selectors can be as simple as a tag name, or a very complex pattern to match.  We will start with some very simple selectors and work our way up to the more complex.
 
@@ -66,10 +66,10 @@ Lets now look at a complete example:
    <html>
       <head>
          <style>
-         h1 {
-            color: blue;
-            font-size: 28pt;
-         }
+           h1 {
+              color: blue;
+              font-size: 28pt;
+           }
          </style>
       </head>
       <body>
@@ -115,13 +115,13 @@ CSS has the following properties which we can use to change the background.
    <html>
       <head>
          <style>
-         h1 {
-            color: blue;
-            font-size: 28pt;
-         }
-         body {
-             background-image: url("https://static.pexels.com/photos/618833/pexels-photo-618833.jpeg")
-         }
+           h1 {
+              color: blue;
+              font-size: 28pt;
+           }
+           body {
+               background-image: url("https://static.pexels.com/photos/618833/pexels-photo-618833.jpeg")
+           }
          </style>
       </head>
       <body>
@@ -163,12 +163,12 @@ In the example below we have two rules.  One that changes the text to blue in al
    <html>
       <head>
          <style>
-         p {
-            color: blue;
-         }
-         p#abc456 {
-            font-size: 18pt;
-         }
+           p {
+              color: blue;
+           }
+           p#abc456 {
+              font-size: 18pt;
+           }
          </style>
       </head>
       <body>
@@ -202,12 +202,12 @@ Returning to our HTML table example we have some rows that are "odd" and some th
    <html>
       <head>
          <style>
-         .odd {
-            background-color: #9999ee;
-         }
-         .even {
-            background-color: pink;
-         }
+           .odd {
+              background-color: #9999ee;
+           }
+           .even {
+              background-color: pink;
+           }
          </style>
       </head>
       <body>
@@ -228,7 +228,10 @@ Now for some additional practice lets make the table look really nice.  Add a he
 Extra for Experts Information
 -------------------------------
 
-.. note:: Although the following information can be really interesting, it can also cause frustration for students. This additional information might be useful for students who are moving quickly through the initial HTML/CSS content.
+.. note:: Although the following information can be really interesting, it can also cause frustration for students. This additional information might be useful for students who are moving quickly through the initial HTML/CSS content. For those that want to learn even more, you might want to look at a website like `w3schools.com <https://www.w3schools.com/>`_, or just search the web for something like "css navbar".
+
+External CSS Files
+~~~~~~~~~~~~~~~~~~~
 
 Using a separate css file is the preferred way to organize your CSS. This allows you to use the same style in multiple web pages, and in a group setting makes it easy for one person to work on the style while another focuses on the content.  CSS stylesheets are included in a web page by using the ``link`` tag in the ``head`` section of your page as follows:
 
@@ -238,7 +241,7 @@ Using a separate css file is the preferred way to organize your CSS. This allows
 
 
 The CSS Box Model
------------------
+~~~~~~~~~~~~~~~~~~~
 
 Before we go any further it is important to stop and think a bit about how the browser renders the html into the browser window.  As the browser reads each html tag, it must figure out where on the page it belongs.  For the most part, the browser flows each tag from top to bottom and from left to right.  As we have mentioned, block elements start on a new line, and inline elements flow from left to right, fitting within the horizontal size of the page or else going on to the next line. 
 
@@ -263,13 +266,13 @@ Lets try a simple example:
    <html>
       <head>
          <style>
-         section {
+            section {
               width: 250px;
               background-color: green;
               padding: 25px;
               border: 10px solid blue;
               margin: 25px;
-              }
+            }
          </style>
        </head>
    <body>
@@ -294,6 +297,8 @@ The size of content area itself can also be controlled using the following prope
 
 Each of these properties can be specified in terms of pixels (px), points (pt), or as a percentage.  In addition the auto keyword can be used, which is the default and allows the browser to figure out the proper height and width.
 
+Overflow Property
+~~~~~~~~~~~~~~~~~~~
 
 When you use height and width with a **container** element, such as one of the semantic elements, it is very useful to know about the overflow property.  What if you set your height so small that the content does not fit?  The `overflow <http://www.w3schools.com/cssref/pr_pos_overflow.asp>`_ property tells you how to handle that.
 
@@ -305,14 +310,14 @@ Here is an example activecode for you to experiment with:
    <html>
       <head>
          <style>
-         section {
+            section {
               width: 250px;
               background-color: green;
               padding: 25px;
               border: 10px solid blue;
               margin: 25px;
               height: 100px;
-              }
+            }
          </style>
        </head>
    <body>
@@ -342,3 +347,37 @@ Give them a try in the example above and see what happens.
 .. admonition:: Greeking
 
    You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.
+
+
+Pseudo-classes
+~~~~~~~~~~~~~~~
+
+A pseudo-class can be used to define a special state for an element on your webpage that is used when some condition is met. A simple example of this is creating a link that looks like a button. 
+
+
+.. activecode:: css_pseudo_classes
+    :language: html
+
+    <html>
+       <head>
+          <style>
+            .button {
+                 text-decoration: none;
+                 background-color: #D76D6D;
+                 color: black;
+                 padding: 15px;
+                 border-radius: 20px;
+             }
+             .button:hover {
+                 background-color: #AC5787;
+                 color: white;
+             }
+          </style>
+        </head>
+    <body>
+       <h1>Button Example</h1>
+       <a href="http://cs20.ca" class="button">CS20 Textbook</a>
+
+    </body>
+    </html>
+
