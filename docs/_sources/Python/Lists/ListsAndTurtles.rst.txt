@@ -16,13 +16,12 @@ Lists and Turtle Drawing
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
-
-
+    - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
+    - **CS20-FP4**  Investigate one-dimensional arrays and their applications.
 
 
 Check Your Understanding
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 
 .. mchoice:: test_question_turtle_lists_1
@@ -158,34 +157,32 @@ Consider the following:
 The Return of L-Systems
 -----------------------
 
-Let's return to the L-systems we introduced in the previous chapter and
+Let's return to the L-systems we introduced previously and
 introduce a very interesting new feature that requires the use of lists.
 
-Suppose we have the following grammar::
+Suppose our L-System has the following rules::
 
-    X
     X --> F[-X]+X
     F --> FF
 
-This L-system looks very similar to the old L-system except that we've added
-one change.  We've added the characters '[' and ']'.  The meaning of these
-characters adds a very interesting new dimension to our L-Systems.  The '['
+This L-system looks very similar to the old L-system, except that we've added
+one change.  We've added the characters ``[`` and ``]``.  The meaning of these
+characters adds a very interesting new dimension to our L-Systems.  The ``[``
 character indicates that we want to save the state of our turtle,
-namely its position and its heading so that we can come back to this position
-later.  The ']' tells the turtle to warp to the most recently saved position.
+namely its position and its heading (direction the turtle is facing) so that we can come back to this position later.  The ``]`` tells the turtle to warp to the most recently saved position.
 The way that we will accomplish this is to use lists.  We can save the
-heading and position of the turtle as a list of 3 elements.  ``[heading x
-y]``  The first index position in the list holds the heading,
-the second index position in the list holds the x coordinate,
-and the third index position holds the y coordinate.
+heading and position of the turtle as a list of 3 elements, like this: ``[heading, x,
+y]``.  The index position 0 in the list holds the heading, 
+index position 1 in the list holds the x coordinate,
+and index position 2 holds the y coordinate.
 
-Now, if we create an empty list and every time we see a '[' we append the
-list that contains ``[heading, x, y]`` we create a history of saved places
+Now, if we create an empty list and every time we see a ``[`` we append a
+list that contains ``[heading, x, y]``, we create a history of saved places
 the turtle has been where the most recently saved location will always be at
-the end of the list.  When we find a ']' in the string we use the pop
+the end of the list.  When we find a ``]`` in the string we use the ``pop``
 function to remove the the most recently appended information.
 
-Let's modify our ``drawLsystem`` function to begin to implement this new
+Let's modify our ``draw_l_system`` function to begin to implement this new
 behavior.
 
 .. activecode:: list_lsys1
@@ -193,28 +190,33 @@ behavior.
 
     import turtle
 
-    def drawLsystem(aTurtle, instructions, angle, distance):
-        savedInfoList = []
-        for cmd in instructions:
-            if cmd == 'F':
-                aTurtle.forward(distance)
-            elif cmd == 'B':
-                aTurtle.backward(distance)
-            elif cmd == '+':
-                aTurtle.right(angle)
-            elif cmd == '-':
-                aTurtle.left(angle)
-            elif cmd == '[':
-                savedInfoList.append([aTurtle.heading(), aTurtle.xcor(), aTurtle.ycor()])
-                print(savedInfoList)
-            elif cmd == ']':
-                newInfo = savedInfoList.pop()
-                print(newInfo)
-                print(savedInfoList)
+    def draw_l_system(some_turtle, instructions, angle, distance):
+        """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+        saved_info_list = []
+        for task in instructions:
+            if task == 'F':
+                some_turtle.forward(distance)
+            elif task == 'B':
+                some_turtle.backward(distance)
+            elif task == '+':
+                some_turtle.right(angle)
+            elif task == '-':
+                some_turtle.left(angle)
+            elif task == '[':
+                saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+                print(saved_info_list)
+            elif task == ']':
+                new_info = saved_info_list.pop()
+                print(new_info)
+                print(saved_info_list)
 
-    t = turtle.Turtle()
-    inst = "FF[-F[-X]+X]+F[-X]+X"
-    drawLsystem(t, inst, 60, 20)
+    # setup for drawing
+    window = turtle.Screen()
+    jill = turtle.Turtle()
+
+    # draw the picture, using angle 60 and segment length 20
+    instruction_string = "FF[-F[-X]+X]+F[-X]+X"
+    draw_l_system(jill, instruction_string, 60, 20)
 
 When we run this example we can see that the picture is not very interesting,
 but notice what gets printed out, and how the saved information about the
@@ -223,43 +225,144 @@ we'll make use of the information from the list to save and restore the
 turtle's position and heading when needed.  We'll use a longer example here
 so you get an idea of what the kind of drawing the L-System can really make.
 
+
 .. activecode:: list_lsys2
     :nocodelens:
 
     import turtle
 
-    def drawLsystem(aTurtle, instructions, angle, distance):
-        savedInfoList = []
-        for cmd in instructions:
-            if cmd == 'F':
-                aTurtle.forward(distance)
-            elif cmd == 'B':
-                aTurtle.backward(distance)
-            elif cmd == '+':
-                aTurtle.right(angle)
-            elif cmd == '-':
-                aTurtle.left(angle)
-            elif cmd == '[':
-                savedInfoList.append([aTurtle.heading(), aTurtle.xcor(), aTurtle.ycor()])
-                print(savedInfoList)
-            elif cmd == ']':
-                newInfo = savedInfoList.pop()
-                aTurtle.setheading(newInfo[0])
-                aTurtle.setposition(newInfo[1], newInfo[2])
+    def draw_l_system(some_turtle, instructions, angle, distance):
+        """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+        saved_info_list = []
+        for task in instructions:
+            if task == 'F':
+                some_turtle.forward(distance)
+            elif task == 'B':
+                some_turtle.backward(distance)
+            elif task == '+':
+                some_turtle.right(angle)
+            elif task == '-':
+                some_turtle.left(angle)
+            elif task == '[':
+                saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+                # uncomment the following line to see the information saved each time a [ is encountered
+                # print(saved_info_list)
+            elif task == ']':
+                new_info = saved_info_list.pop()
+                some_turtle.setheading(new_info[0])
+                some_turtle.goto(new_info[1], new_info[2])
 
-    t = turtle.Turtle()
-    inst = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF[-FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X"
-    t.setposition(0, -200)
-    t.left(90)
-    drawLsystem(t, inst, 30, 2)
+    # setup for drawing
+    window = turtle.Screen()
+    jill = turtle.Turtle()
+
+    instruction_string = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF[-FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X"
+
+    # move turtle to bottom and middle of screen
+    jill.goto(0, -200)
+    jill.left(90)
+
+    # draw the picture, using angle 30 and segment length 2
+    draw_l_system(jill, instruction_string, 30, 2)
 
 
-Rather than use the ``inst`` string supplied here, use the code from the string
-chapter, and write your own applyRules function to implement this L-system.
-This example only uses 6 expansions.  Try it out with a larger number of
-expansions.  You may also want to try this example with different values for
-the angle and distance parameters.
+Putting It All Together
+------------------------
+
+To determine the ``instruction_string`` we used in the last example, we used an axiom of ``X`` and applied the following rules 6 times::
+
+    X --> F[-X]+X
+    F --> FF
+
+If you run the code below, you will not see much happen. To fix the code below, you need to:
+
+- fix the ``apply_rules`` function so that the rules given above are applied
+- fix the call to ``create_l_system`` to use the correct axiom and number_of_iterations
+
+.. activecode:: list_lsys3
+    :nocodelens:
+
+    import turtle
+
+    def apply_rules(letter):
+        """Apply rules to an individual letter, and return the result."""
+        # Rule 1
+        if letter == 'X':
+            new_string = 'X'
+            
+        # Rule 2
+        elif letter == 'F':
+            new_string = 'F'
+            
+        # no rules apply so keep the character
+        else:
+            new_string = letter
+
+        return new_string
+
+    def process_string(original_string):
+        """Apply rules to a string, one letter at a time, and return the result."""
+        tranformed_string = ""
+        for letter in original_string:
+            tranformed_string = tranformed_string + apply_rules(letter)
+
+        return tranformed_string
+
+    def create_l_system(number_of_iterations, axiom):
+        """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
+        start_string = axiom
+        for counter in range(number_of_iterations):
+            end_string = process_string(start_string)
+            start_string = end_string
+
+        return end_string
+
+    def draw_l_system(some_turtle, instructions, angle, distance):
+        """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+        saved_info_list = []
+        for task in instructions:
+            if task == 'F':
+                some_turtle.forward(distance)
+            elif task == 'B':
+                some_turtle.backward(distance)
+            elif task == '+':
+                some_turtle.right(angle)
+            elif task == '-':
+                some_turtle.left(angle)
+            elif task == '[':
+                saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+                # print(saved_info_list)
+            elif task == ']':
+                new_info = saved_info_list.pop()
+                some_turtle.setheading(new_info[0])
+                some_turtle.goto(new_info[1], new_info[2])
+
+    # create the string of turtle instructions, 
+    #   with 3 iterations and an axiom of F
+    instruction_string = create_l_system(3, "F")
+    print(instruction_string)
+
+    # setup for drawing
+    window = turtle.Screen()
+    jill = turtle.Turtle()
+    jill.speed(0)
+
+    # using screen.tracer() speeds up your drawing (by skipping some frames when drawing)
+    #window.tracer(10)
+
+    # move turtle to bottom and middle of screen
+    jill.goto(0, -200)
+    jill.left(90)
+
+    # draw the picture, using angle 30 and segment length 2
+    draw_l_system(jill, instruction_string, 30, 2)
 
 
+.. note:: 
 
+    Once you have the code working, try it out with a larger number of iterations. You may also want to try this example with different values for the angle and distance parameters.
+
+
+Practice Problems
+------------------
 

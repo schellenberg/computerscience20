@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1. Using Lists" href="../Lists/ListOverview.html" />
-    <link rel="prev" title="3. String Manipulation Practice" href="StringManipulationPractice.html" />
+    <link rel="prev" title="3. String Methods" href="StringMethods.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -193,7 +193,10 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">4. Turtle Drawing and Strings (L-Systems)</a><ul>
-<li><a class="reference internal" href="#controlling-a-turtle-with-strings">4.1. Controlling a Turtle With Strings</a></li>
+<li><a class="reference internal" href="#controlling-a-turtle-with-strings">4.1. Controlling a Turtle With Strings</a><ul>
+<li><a class="reference internal" href="#try-this">4.1.1. Try This</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#turtles-and-strings-and-l-systems">4.2. Turtles and Strings and L-Systems</a></li>
 <li><a class="reference internal" href="#drawing-with-l-systems">4.3. Drawing With L-Systems</a></li>
 <li><a class="reference internal" href="#practice-problems">4.4. Practice Problems</a><ul>
@@ -216,8 +219,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 3. String Manipulation Practice" data-toggle="tooltip">
-    <a href="StringManipulationPractice.html" >
+  <li id="relations-prev" title="Previous Chapter - 3. String Methods" data-toggle="tooltip">
+    <a href="StringMethods.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -265,7 +268,7 @@
 <li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
 <li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
 <li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
 </ul>
 
     </div>
@@ -301,15 +304,15 @@ for task in instructions:
         escher.left(45)
 </textarea>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
+<div class="section" id="try-this">
+<h3>4.1.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <p>In the code above, try:</p>
 <ul class="simple">
 <li>changing the instruction string to have the turtle draw a different image</li>
 <li>adding three additional possible instruction for the turtle. Any <code class="docutils literal"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal"><span class="pre">F</span></code> moves forward). A <code class="docutils literal"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
 <li>increasing the speed of the turtle</li>
 </ul>
-<p class="last">After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
+<p>After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
 </div>
 </div>
 <div class="section" id="turtles-and-strings-and-l-systems">
@@ -397,7 +400,7 @@ def process_string(original_string):
 
     return tranformed_string
 
-def create_l_system(number_of_iterations,axiom):
+def create_l_system(number_of_iterations, axiom):
     """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
     start_string = axiom
     for counter in range(number_of_iterations):
@@ -544,7 +547,7 @@ def process_string(original_string):
 
     return tranformed_string
 
-def create_l_system(number_of_iterations,axiom):
+def create_l_system(number_of_iterations, axiom):
     """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
     start_string = axiom
     for counter in range(number_of_iterations):
@@ -803,12 +806,12 @@ draw_l_system(jill, instruction_string, 60, 5)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 3. String Manipulation Practice' data-toggle="tooltip">
-    <a href="StringManipulationPractice.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 3. String Methods' data-toggle="tooltip">
+    <a href="StringMethods.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="StringManipulationPractice.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="StringMethods.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - 1. Using Lists' data-toggle="tooltip" >
     <a href="../Lists/ListOverview.html" >

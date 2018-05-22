@@ -9,7 +9,7 @@ Functions Practice Quiz
 .. reveal:: curriculum_addressed
     :showtitle: Curriculum Outcomes Addressed In This Section
 
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+    - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
 To confirm that you understand the major concepts you've seen in Python, try to answer the following questions **without opening Python**.
 

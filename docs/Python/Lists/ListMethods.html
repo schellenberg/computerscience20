@@ -206,8 +206,11 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#practice-problems">2.7. Practice Problems</a><ul>
-<li><a class="reference internal" href="#compliment-generator">2.7.1. Compliment Generator</a></li>
-<li><a class="reference internal" href="#averaging-random-integer-list">2.7.2. Averaging Random Integer List</a></li>
+<li><a class="reference internal" href="#appending-to-a-list">2.7.1. Appending to a List</a></li>
+<li><a class="reference internal" href="#list-methods-practice">2.7.2. List Methods Practice</a></li>
+<li><a class="reference internal" href="#compliment-generator">2.7.3. Compliment Generator</a></li>
+<li><a class="reference internal" href="#averaging-random-integer-list">2.7.4. Averaging Random Integer List</a></li>
+<li><a class="reference internal" href="#writing-your-own-methods">2.7.5. Writing Your Own Methods</a></li>
 </ul>
 </li>
 </ul>
@@ -268,7 +271,8 @@
 <li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
 <li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
 <li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
+<li><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</li>
 </ul>
 
     </div>
@@ -755,9 +759,9 @@ you can use empty glue or multi-character strings as glue.</p>
 </div>
 <div class="section" id="practice-problems">
 <h2>2.7. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="compliment-generator">
-<h3>2.7.1. Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
-<p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal"><span class="pre">great</span></code> <code class="docutils literal"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal"><span class="pre">great</span></code> into a list called <code class="docutils literal"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal"><span class="pre">friend``into</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">called</span> <span class="pre">``second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
+<div class="section" id="appending-to-a-list">
+<h3>2.7.1. Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this headline">¶</a></h3>
+<p>Create an empty list called <code class="docutils literal"><span class="pre">my_list</span></code>. Now append the following items (one item at a time): 76, 92.3, “hello”, True, 4, 76.</p>
 
 <div data-childcomponent="list_methods_practice_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -765,20 +769,104 @@ you can use empty glue or multi-character strings as glue.</p>
 # your code goes here!
 </textarea>
 </div>
+
+    <div data-component="reveal" id="methods_practice_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
+    <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">92.3</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="averaging-random-integer-list">
-<h3>2.7.2. Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
-<p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
+
+    </div>
+    </div>
+<div class="section" id="list-methods-practice">
+<h3>2.7.2. List Methods Practice<a class="headerlink" href="#list-methods-practice" title="Permalink to this headline">¶</a></h3>
+<p>Given <code class="docutils literal"><span class="pre">my_list</span></code> below, write Python statements to do the following:</p>
+<ol class="loweralpha simple">
+<li>Append “apple” and 76 to the list.</li>
+<li>Insert the value “cat” at position 3.</li>
+<li>Insert the value 99 at the start of the list.</li>
+<li>Find the index of “hello”.</li>
+<li>Count the number of 76s in the list.</li>
+<li>Remove the first occurrence of 76 from the list.</li>
+<li>Remove the last element from the list, and print it’s value.</li>
+</ol>
 
 <div data-childcomponent="list_methods_practice_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=list_methods_practice_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+my_list = [76, 92.3, 'hello', True, 4, 76]
+
+# add your code below
+</textarea>
+</div>
+
+    <div data-component="reveal" id="methods_practice_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
+    <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span> <span class="mf">92.3</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">76</span><span class="p">]</span>
+
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)</span>         <span class="c1"># a</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>              <span class="c1"># a</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">)</span>        <span class="c1"># b</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>           <span class="c1"># c</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>   <span class="c1"># d</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">76</span><span class="p">))</span>        <span class="c1"># e</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>              <span class="c1"># f</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>            <span class="c1"># g</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="compliment-generator">
+<h3>2.7.3. Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
+<p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal"><span class="pre">great</span></code> <code class="docutils literal"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal"><span class="pre">great</span></code> into a list called <code class="docutils literal"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal"><span class="pre">friend``into</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">called</span> <span class="pre">``second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
+
+<div data-childcomponent="list_methods_practice_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 # your code goes here!
 </textarea>
 </div>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Add some more practice problems here!!</p>
+</div>
+<div class="section" id="averaging-random-integer-list">
+<h3>2.7.4. Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
+<p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
+
+<div data-childcomponent="list_methods_practice_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+# your code goes here!
+</textarea>
+</div>
+</div>
+<div class="section" id="writing-your-own-methods">
+<h3>2.7.5. Writing Your Own Methods<a class="headerlink" href="#writing-your-own-methods" title="Permalink to this headline">¶</a></h3>
+<p>Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Write Python functions that work like the following:</p>
+<ol class="loweralpha simple">
+<li><code class="docutils literal"><span class="pre">count</span></code></li>
+<li><code class="docutils literal"><span class="pre">in</span></code></li>
+<li><code class="docutils literal"><span class="pre">reverse</span></code></li>
+<li><code class="docutils literal"><span class="pre">index</span></code></li>
+<li><code class="docutils literal"><span class="pre">insert</span></code></li>
+</ol>
+
+<div data-childcomponent="list_methods_practice_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_methods_practice_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def count(thing_to_find, list_to_look_in):
+    # your code goes here!
+
+
+# add the other methods below
+</textarea>
 </div>
 </div>
 </div>

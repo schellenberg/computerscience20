@@ -17,7 +17,8 @@ List Methods
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+    - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
+    - **CS20-FP4**  Investigate one-dimensional arrays and their applications.
 
 
 
@@ -447,13 +448,76 @@ Check Your Understanding
 Practice Problems
 -------------------
 
+Appending to a List
+~~~~~~~~~~~~~~~~~~~~
+
+Create an empty list called ``my_list``. Now append the following items (one item at a time): 76, 92.3, "hello", True, 4, 76.
+
+.. activecode:: list_methods_practice_1
+
+    # your code goes here!
+
+.. reveal:: methods_practice_1
+    :showtitle: Reveal Solution
+
+    .. code-block:: python
+    
+        my_list = []
+
+        my_list.append(76)
+        my_list.append(92.3)
+        my_list.append("hello")
+        my_list.append(True)
+        my_list.append(4)
+        my_list.append(76)
+
+
+List Methods Practice
+~~~~~~~~~~~~~~~~~~~~~~
+
+Given ``my_list`` below, write Python statements to do the following:
+
+a. Append "apple" and 76 to the list.
+#. Insert the value "cat" at position 3.
+#. Insert the value 99 at the start of the list.
+#. Find the index of "hello".
+#. Count the number of 76s in the list.
+#. Remove the first occurrence of 76 from the list.
+#. Remove the last element from the list, and print it's value.
+
+.. activecode:: list_methods_practice_2
+
+    my_list = [76, 92.3, 'hello', True, 4, 76]
+
+    # add your code below
+
+.. reveal:: methods_practice_2
+    :showtitle: Reveal Solution
+
+    .. code-block:: python
+    
+        my_list = [76, 92.3, 'hello', True, 4, 76]
+
+        my_list.append("apple")         # a
+        my_list.append(76)              # a
+        my_list.insert(3, "cat")        # b
+        my_list.insert(0, 99)           # c
+
+        print(my_list.index("hello"))   # d
+        print(my_list.count(76))        # e
+        my_list.remove(76)              # f
+        print(my_list.pop())            # g
+
+        print (my_list)
+
+
 Compliment Generator
 ~~~~~~~~~~~~~~~~~~~~~
 
 Those Shakespearean insults sting a bit. Let's cheer everyone up by creating a random compliment generator. Your compliments should be in the style of "You are a ``great`` ``friend``!". Store any number of words similar to ``great`` into a list called ``first_word_list``, and any number of words similar to ``friend``into a list called ``second_word_list``. Then pick one word from each of the lists at random, and print out a random compliment!
 
 
-.. activecode:: list_methods_practice_1
+.. activecode:: list_methods_practice_3
 
     # your code goes here!
 
@@ -463,12 +527,29 @@ Averaging Random Integer List
 
 Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.
 
-.. activecode:: list_methods_practice_2
+.. activecode:: list_methods_practice_4
 
     # your code goes here!
 
 
 
-.. caution:: Add some more practice problems here!!
+Writing Your Own Methods
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Write Python functions that work like the following:
+   
+a. ``count``
+#. ``in``
+#. ``reverse``
+#. ``index``
+#. ``insert``
+
+
+.. activecode:: list_methods_practice_5
+
+    def count(thing_to_find, list_to_look_in):
+        # your code goes here!
+
+
+    # add the other methods below
 

@@ -193,11 +193,11 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">3. Lists and Turtle Drawing</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">3.1. Check Your Understanding</a><ul>
-<li><a class="reference internal" href="#turtle-coordinate-list">3.1.1. Turtle Coordinate List</a></li>
-<li><a class="reference internal" href="#the-return-of-l-systems">3.1.2. The Return of L-Systems</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#check-your-understanding">3.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#turtle-coordinate-list">3.2. Turtle Coordinate List</a></li>
+<li><a class="reference internal" href="#the-return-of-l-systems">3.3. The Return of L-Systems</a></li>
+<li><a class="reference internal" href="#putting-it-all-together">3.4. Putting It All Together</a></li>
+<li><a class="reference internal" href="#practice-problems">3.5. Practice Problems</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +256,8 @@
 <li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
 <li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
 <li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to encapsulate reusable pieces of code.</li>
+<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
+<li><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</li>
 </ul>
 
     </div>
@@ -327,8 +328,9 @@
 
             </ul>
             </div>
-            <div class="section" id="turtle-coordinate-list">
-<h3>3.1.1. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h3>
+            </div>
+<div class="section" id="turtle-coordinate-list">
+<h2>3.2. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
 <p>Recall that you can use <code class="docutils literal"><span class="pre">in</span></code> to check for membership in a list as follows:</p>
 
 <div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
@@ -393,32 +395,30 @@ print(history)
 </div>
 </div>
 <div class="section" id="the-return-of-l-systems">
-<h3>3.1.2. The Return of L-Systems<a class="headerlink" href="#the-return-of-l-systems" title="Permalink to this headline">¶</a></h3>
-<p>Let’s return to the L-systems we introduced in the previous chapter and
+<h2>3.3. The Return of L-Systems<a class="headerlink" href="#the-return-of-l-systems" title="Permalink to this headline">¶</a></h2>
+<p>Let’s return to the L-systems we introduced previously and
 introduce a very interesting new feature that requires the use of lists.</p>
-<p>Suppose we have the following grammar:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">X</span>
-<span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
+<p>Suppose our L-System has the following rules:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
 <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
 </pre></div>
 </div>
-<p>This L-system looks very similar to the old L-system except that we’ve added
-one change.  We’ve added the characters ‘[‘ and ‘]’.  The meaning of these
-characters adds a very interesting new dimension to our L-Systems.  The ‘[‘
+<p>This L-system looks very similar to the old L-system, except that we’ve added
+one change.  We’ve added the characters <code class="docutils literal"><span class="pre">[</span></code> and <code class="docutils literal"><span class="pre">]</span></code>.  The meaning of these
+characters adds a very interesting new dimension to our L-Systems.  The <code class="docutils literal"><span class="pre">[</span></code>
 character indicates that we want to save the state of our turtle,
-namely its position and its heading so that we can come back to this position
-later.  The ‘]’ tells the turtle to warp to the most recently saved position.
+namely its position and its heading (direction the turtle is facing) so that we can come back to this position later.  The <code class="docutils literal"><span class="pre">]</span></code> tells the turtle to warp to the most recently saved position.
 The way that we will accomplish this is to use lists.  We can save the
-heading and position of the turtle as a list of 3 elements.  <code class="docutils literal"><span class="pre">[heading</span> <span class="pre">x</span>
-<span class="pre">y]</span></code>  The first index position in the list holds the heading,
-the second index position in the list holds the x coordinate,
-and the third index position holds the y coordinate.</p>
-<p>Now, if we create an empty list and every time we see a ‘[‘ we append the
-list that contains <code class="docutils literal"><span class="pre">[heading,</span> <span class="pre">x,</span> <span class="pre">y]</span></code> we create a history of saved places
+heading and position of the turtle as a list of 3 elements, like this: <code class="docutils literal"><span class="pre">[heading,</span> <span class="pre">x,</span>
+<span class="pre">y]</span></code>.  The index position 0 in the list holds the heading,
+index position 1 in the list holds the x coordinate,
+and index position 2 holds the y coordinate.</p>
+<p>Now, if we create an empty list and every time we see a <code class="docutils literal"><span class="pre">[</span></code> we append a
+list that contains <code class="docutils literal"><span class="pre">[heading,</span> <span class="pre">x,</span> <span class="pre">y]</span></code>, we create a history of saved places
 the turtle has been where the most recently saved location will always be at
-the end of the list.  When we find a ‘]’ in the string we use the pop
+the end of the list.  When we find a <code class="docutils literal"><span class="pre">]</span></code> in the string we use the <code class="docutils literal"><span class="pre">pop</span></code>
 function to remove the the most recently appended information.</p>
-<p>Let’s modify our <code class="docutils literal"><span class="pre">drawLsystem</span></code> function to begin to implement this new
+<p>Let’s modify our <code class="docutils literal"><span class="pre">draw_l_system</span></code> function to begin to implement this new
 behavior.</p>
 
 <div data-childcomponent="list_lsys1" class="runestone explainer ac_section alert alert-warning">
@@ -426,28 +426,33 @@ behavior.</p>
 <textarea data-component="activecode" id=list_lsys1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import turtle
 
-def drawLsystem(aTurtle, instructions, angle, distance):
-    savedInfoList = []
-    for cmd in instructions:
-        if cmd == 'F':
-            aTurtle.forward(distance)
-        elif cmd == 'B':
-            aTurtle.backward(distance)
-        elif cmd == '+':
-            aTurtle.right(angle)
-        elif cmd == '-':
-            aTurtle.left(angle)
-        elif cmd == '[':
-            savedInfoList.append([aTurtle.heading(), aTurtle.xcor(), aTurtle.ycor()])
-            print(savedInfoList)
-        elif cmd == ']':
-            newInfo = savedInfoList.pop()
-            print(newInfo)
-            print(savedInfoList)
+def draw_l_system(some_turtle, instructions, angle, distance):
+    """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+    saved_info_list = []
+    for task in instructions:
+        if task == 'F':
+            some_turtle.forward(distance)
+        elif task == 'B':
+            some_turtle.backward(distance)
+        elif task == '+':
+            some_turtle.right(angle)
+        elif task == '-':
+            some_turtle.left(angle)
+        elif task == '[':
+            saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+            print(saved_info_list)
+        elif task == ']':
+            new_info = saved_info_list.pop()
+            print(new_info)
+            print(saved_info_list)
 
-t = turtle.Turtle()
-inst = "FF[-F[-X]+X]+F[-X]+X"
-drawLsystem(t, inst, 60, 20)
+# setup for drawing
+window = turtle.Screen()
+jill = turtle.Turtle()
+
+# draw the picture, using angle 60 and segment length 20
+instruction_string = "FF[-F[-X]+X]+F[-X]+X"
+draw_l_system(jill, instruction_string, 60, 20)
 </textarea>
 </div>
 <p>When we run this example we can see that the picture is not very interesting,
@@ -462,38 +467,141 @@ so you get an idea of what the kind of drawing the L-System can really make.</p>
 <textarea data-component="activecode" id=list_lsys2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import turtle
 
-def drawLsystem(aTurtle, instructions, angle, distance):
-    savedInfoList = []
-    for cmd in instructions:
-        if cmd == 'F':
-            aTurtle.forward(distance)
-        elif cmd == 'B':
-            aTurtle.backward(distance)
-        elif cmd == '+':
-            aTurtle.right(angle)
-        elif cmd == '-':
-            aTurtle.left(angle)
-        elif cmd == '[':
-            savedInfoList.append([aTurtle.heading(), aTurtle.xcor(), aTurtle.ycor()])
-            print(savedInfoList)
-        elif cmd == ']':
-            newInfo = savedInfoList.pop()
-            aTurtle.setheading(newInfo[0])
-            aTurtle.setposition(newInfo[1], newInfo[2])
+def draw_l_system(some_turtle, instructions, angle, distance):
+    """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+    saved_info_list = []
+    for task in instructions:
+        if task == 'F':
+            some_turtle.forward(distance)
+        elif task == 'B':
+            some_turtle.backward(distance)
+        elif task == '+':
+            some_turtle.right(angle)
+        elif task == '-':
+            some_turtle.left(angle)
+        elif task == '[':
+            saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+            # uncomment the following line to see the information saved each time a [ is encountered
+            # print(saved_info_list)
+        elif task == ']':
+            new_info = saved_info_list.pop()
+            some_turtle.setheading(new_info[0])
+            some_turtle.goto(new_info[1], new_info[2])
 
-t = turtle.Turtle()
-inst = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF[-FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X"
-t.setposition(0, -200)
-t.left(90)
-drawLsystem(t, inst, 30, 2)
+# setup for drawing
+window = turtle.Screen()
+jill = turtle.Turtle()
+
+instruction_string = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF[-FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFFFFFFFFFF[-FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFFFFFF[-FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X]+FFFF[-FF[-F[-X]+X]+F[-X]+X]+FF[-F[-X]+X]+F[-X]+X"
+
+# move turtle to bottom and middle of screen
+jill.goto(0, -200)
+jill.left(90)
+
+# draw the picture, using angle 30 and segment length 2
+draw_l_system(jill, instruction_string, 30, 2)
 </textarea>
 </div>
-<p>Rather than use the <code class="docutils literal"><span class="pre">inst</span></code> string supplied here, use the code from the string
-chapter, and write your own applyRules function to implement this L-system.
-This example only uses 6 expansions.  Try it out with a larger number of
-expansions.  You may also want to try this example with different values for
-the angle and distance parameters.</p>
 </div>
+<div class="section" id="putting-it-all-together">
+<h2>3.4. Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>To determine the <code class="docutils literal"><span class="pre">instruction_string</span></code> we used in the last example, we used an axiom of <code class="docutils literal"><span class="pre">X</span></code> and applied the following rules 6 times:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
+<span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
+</pre></div>
+</div>
+<p>If you run the code below, you will not see much happen. To fix the code below, you need to:</p>
+<ul class="simple">
+<li>fix the <code class="docutils literal"><span class="pre">apply_rules</span></code> function so that the rules given above are applied</li>
+<li>fix the call to <code class="docutils literal"><span class="pre">create_l_system</span></code> to use the correct axiom and number_of_iterations</li>
+</ul>
+
+<div data-childcomponent="list_lsys3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_lsys3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+def apply_rules(letter):
+    """Apply rules to an individual letter, and return the result."""
+    # Rule 1
+    if letter == 'X':
+        new_string = 'X'
+
+    # Rule 2
+    elif letter == 'F':
+        new_string = 'F'
+
+    # no rules apply so keep the character
+    else:
+        new_string = letter
+
+    return new_string
+
+def process_string(original_string):
+    """Apply rules to a string, one letter at a time, and return the result."""
+    tranformed_string = ""
+    for letter in original_string:
+        tranformed_string = tranformed_string + apply_rules(letter)
+
+    return tranformed_string
+
+def create_l_system(number_of_iterations, axiom):
+    """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
+    start_string = axiom
+    for counter in range(number_of_iterations):
+        end_string = process_string(start_string)
+        start_string = end_string
+
+    return end_string
+
+def draw_l_system(some_turtle, instructions, angle, distance):
+    """Draw with some_turtle, interpreting each letter in the instructions passed in."""
+    saved_info_list = []
+    for task in instructions:
+        if task == 'F':
+            some_turtle.forward(distance)
+        elif task == 'B':
+            some_turtle.backward(distance)
+        elif task == '+':
+            some_turtle.right(angle)
+        elif task == '-':
+            some_turtle.left(angle)
+        elif task == '[':
+            saved_info_list.append([some_turtle.heading(), some_turtle.xcor(), some_turtle.ycor()])
+            # print(saved_info_list)
+        elif task == ']':
+            new_info = saved_info_list.pop()
+            some_turtle.setheading(new_info[0])
+            some_turtle.goto(new_info[1], new_info[2])
+
+# create the string of turtle instructions,
+#   with 3 iterations and an axiom of F
+instruction_string = create_l_system(3, "F")
+print(instruction_string)
+
+# setup for drawing
+window = turtle.Screen()
+jill = turtle.Turtle()
+jill.speed(0)
+
+# using screen.tracer() speeds up your drawing (by skipping some frames when drawing)
+#window.tracer(10)
+
+# move turtle to bottom and middle of screen
+jill.goto(0, -200)
+jill.left(90)
+
+# draw the picture, using angle 30 and segment length 2
+draw_l_system(jill, instruction_string, 30, 2)
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once you have the code working, try it out with a larger number of iterations. You may also want to try this example with different values for the angle and distance parameters.</p>
+</div>
+</div>
+<div class="section" id="practice-problems">
+<h2>3.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

@@ -17,7 +17,7 @@ Turtle Drawing and Strings (L-Systems)
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+    - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
 
 Controlling a Turtle With Strings
@@ -52,15 +52,16 @@ To turn a string like ``FF+F-FF`` into a set of instructions that our turtle can
             escher.left(45)
 
 
-.. note:: 
+Try This
+~~~~~~~~~
 
-    In the code above, try:
+In the code above, try:
 
-    - changing the instruction string to have the turtle draw a different image
-    - adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
-    - increasing the speed of the turtle
-    
-    After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
+- changing the instruction string to have the turtle draw a different image
+- adding three additional possible instruction for the turtle. Any ``B`` in the string should be interpreted as an instruction to move backwards (by the same amount as ``F`` moves forward). A ``U`` should cause the turtle to pick up it's pen (so it doesn't draw as it moves). A ``D`` should cause the turtle should put down it's pen (so that it draws as it moves).
+- increasing the speed of the turtle
+
+After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
 
 
 Turtles and Strings and L-Systems
@@ -145,7 +146,7 @@ above.
 
         return tranformed_string
 
-    def create_l_system(number_of_iterations,axiom):
+    def create_l_system(number_of_iterations, axiom):
         """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
         start_string = axiom
         for counter in range(number_of_iterations):
@@ -272,7 +273,7 @@ Here is the complete program, which combines generating the L-System string, and
 
         return tranformed_string
 
-    def create_l_system(number_of_iterations,axiom):
+    def create_l_system(number_of_iterations, axiom):
         """Begin with an axiom, and apply rules to the original axiom string number_of_iterations times, then return the result."""
         start_string = axiom
         for counter in range(number_of_iterations):

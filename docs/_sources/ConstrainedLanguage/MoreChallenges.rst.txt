@@ -12,7 +12,7 @@ More Challenges
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
     - **CS20-FP2** Investigate how control structures affect program flow.
-    - **CS20-FP3** Construct and utilize functions to encapsulate reusable pieces of code.
+    - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
 If you have finished off all of steps 1 - 17, and are waiting for your classmates to catch up, take a look at the following challenges. Some of them will require you to do a fair bit of thinking before you begin to code! You will likely find it helpful to think them through with paper/pencil before attempting to write out a solution on the computer.
 
