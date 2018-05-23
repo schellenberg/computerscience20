@@ -6,33 +6,29 @@
 Digital Security and Privacy Implications
 =========================================
 
+This textbook does not attempt to fulfill this outcome. It is hoped that this outcome can be interwoven into discussions held throughout the semester. Using current events as examples of these issues can be a very helpful way to start a discussion on these topics.
+
+
 
 Outcome
 --------------
 
-Investigate digital security practices and privacy implications.
+Investigate the impacts of information technologies on privacy, including digital security practices.
 
 
-Indicators
---------------
+Indicators For This Outcome
+------------------------------
 
-Add some stuff here. Curriculum indicators are:
+* Describe legal and ethical issues related to the use of computing devices (e.g., social media, advertising, encryption, malicious software and social engineering).
 
-* Describe legal and ethical issues (e.g., plagiarism, intellectual property,
-  social media, advertising, encryption, malicious software and social
-  engineering) related to the use of computing devices.
+* Explore how issues related to personal rights and privacy such as identity theft, data collection, permanence of information on the Internet and surveillance are affected by technologies.
 
-* Explore how issues related to personal rights and privacy such as identity
-  theft, data collection, permanence of information on the Internet and
-  surveillance are affected by technologies.
+* Identify the role of different layers (e.g., network, operating system, application and data) of digital security, including the responsibility of users.
 
-* Identify the role of different layers (e.g., Internet, network, operating
-  system, applications and data) of digital security.
+* Discuss the benefits and limitations of user authentication techniques to prevent or allow access to resources
 
-* Discuss the benefits and limitations of user authentication techniques to
-  prevent or allow access to resources.
+* Research data encryption techniques used for storage and transmission.
 
-* Research data encryption techniques for storage and transmission.
+* Explore the role or personal responsibility in the context of access and use of confidential information, including intellectual property rights and plagiarism.
 
-* Explore personal responsibility issues involving access and use of
-  confidential information.
+

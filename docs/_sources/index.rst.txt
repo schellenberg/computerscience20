@@ -184,6 +184,8 @@ Computing and Society
    :caption: Computing and Society
    :maxdepth: 1
 
+   ComputingAndSociety/UnderlyingTechnology.rst
+   ComputingAndSociety/HowComputersWork.rst
    ComputingAndSociety/Internet/HowTheInternetWorks.rst
    ComputingAndSociety/Internet/HowTheInternetWorksPracticeQuiz.rst
    ComputingAndSociety/Internet/HTML.rst
