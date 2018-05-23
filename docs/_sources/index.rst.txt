@@ -166,6 +166,15 @@ Python - Lists
    Python/Lists/ListsAndTurtles.rst
 
 
+Student-Directed Research
+:::::::::::::::::::::::::
+
+.. toctree::
+   :caption: Student-Directed Research
+   :maxdepth: 1
+
+   StudentResearch/ProjectOverview.rst
+
 End of Semester Review
 ::::::::::::::::::::::::::::::::::::
 
@@ -192,6 +201,7 @@ Computing and Society
    ComputingAndSociety/Internet/CSS.rst
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
+
 Career Exploration
 ::::::::::::::::::
 
@@ -199,16 +209,7 @@ Career Exploration
    :caption: Career Exploration
    :maxdepth: 1
 
-   CareerExploration/ResearchIdeas.rst
-
-Student-Directed Research
-:::::::::::::::::::::::::
-
-.. toctree::
-   :caption: Student-Directed Research
-   :maxdepth: 1
-
-   StudentResearch/ProjectOverview.rst
+   CareerExploration/Research.rst
 
 
 Appendices
@@ -218,6 +219,6 @@ Appendices
    :caption: Appendices
    :maxdepth: 1
 
-   Python/Microbit/QuickStartExamples.rst
    Python/EasyGUI/Reference.rst
    Python/TurtleConfusion/Challenges.rst
+   Python/Microbit/QuickStartExamples.rst
