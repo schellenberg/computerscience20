@@ -17,15 +17,23 @@ Reeborg Review
 To confirm that you understand the major concepts we learned from our Reeborg unit, try the following *without looking back at any previous code*!
 
 
-Question 1 - Step 16
----------------------
+Question 1 - Apple Pie
+------------------------
 
-See if you can recreate a solution for |step_16| (without looking back at how you did it previously).
+Reeborg must walk around the outside of the world, collecting all the apples so that it can make apple pie when it gets home.
+
+Try to make your code as short as possible using for/repeat loops. **Beware! The apples keep changing locations each time you reload this world.**
+
+Open the |apple_pie_world| and create a solution to this problem!
+
+.. image:: images/reeborg_goToOrigin.png
+
+.. See if you can recreate a solution for |step_16| (without looking back at how you did it previously).
 
 
-.. |step_16| raw:: html
+.. |apple_pie_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Step 16</a>
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/apple-pie.json&name=ApplePie" target="_blank">Go To Origin Review world</a>
 
 Question 2 - Review a Previous Quiz
 ------------------------------------
