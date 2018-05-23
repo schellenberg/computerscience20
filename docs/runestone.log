@@ -10470,3 +10470,30 @@ Traceback (most recent call last):
     self.finish_request(request, client_address)
   File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 361, in finish_request
     self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/dan/Envs/cs20/lib/python3.6/shutil.py", line 76, in copyfileobj
+    fdst.write(buf)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [23/May/2018 11:42:36] "GET /ComputingAndSociety/Internet/HowTheInternetWorks.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:36] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:36] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:36] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:42] "GET /ComputingAndSociety/Internet/WorldWideWeb.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:42] "GET /_images/Tim-CERN-Britannica.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2018 11:42:42] "GET /_images/SimpleRequest.png HTTP/1.1" 200 -
+
+Aborted!
+
+Aborted!

@@ -195,10 +195,10 @@ Computing and Society
 
    ComputingAndSociety/UnderlyingTechnology.rst
    ComputingAndSociety/HowComputersWork.rst
-   ComputingAndSociety/Internet/HowTheInternetWorks.rst
-   ComputingAndSociety/Internet/HowTheInternetWorksPracticeQuiz.rst
-   ComputingAndSociety/Internet/HTML.rst
-   ComputingAndSociety/Internet/CSS.rst
+   ComputingAndSociety/HowTheInternetWorks.rst
+   ComputingAndSociety/HowTheInternetWorksPracticeQuiz.rst
+   ComputingAndSociety/HTML.rst
+   ComputingAndSociety/CSS.rst
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
 

@@ -8,8 +8,6 @@ How the Internet Works Videos
 
 The following videos were created by Code.org, and are released under a Creative Commons BY-NC-ND license. Showing these videos at the start of class (one per day) for a number of days can be a really nice way to start some conversations about the technology that powers the Internet.
 
-If you would like to look at a written description of the technology that powers the world wide web, you can read a description of the :ref:`www_technology`.
-
 .. reveal:: curriculum_addressed
     :showtitle: Curriculum Outcomes Addressed In This Section
 
