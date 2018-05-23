@@ -366,3 +366,127 @@ If you run the code below, you will not see much happen. To fix the code below, 
 Practice Problems
 ------------------
 
+Garden Herb
+~~~~~~~~~~~~
+
+Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.
+   
+::
+
+    Axiom: H
+    Rule 1: H --> HFX[+H][-H]
+    Rule 2: X --> X[-FFF][+FFF]FX
+
+
+.. activecode:: list_turtle_practice_1
+    :nocodelens:
+
+    import turtle
+
+    # your code here!
+
+.. reveal:: garden_herb_image
+    :showtitle: Reveal Solution Image
+
+    If you iterated through the rules 5 times to create your ``instruction_string``, and used a distance of 5, your code should have created something that looks like the following:
+
+    .. image:: images/garden-herb.png
+    
+
+
+Branch
+~~~~~~~~
+
+Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.
+   
+::
+
+    Axiom: F
+    Rule 1: F --> F[-F]F[+F]F
+
+
+.. activecode:: list_turtle_practice_2
+    :nocodelens:
+
+    import turtle
+
+    # your code here!
+
+.. reveal:: branch_image
+    :showtitle: Reveal Solution Image
+
+    If you iterated through the rules 4 times to create your ``instruction_string``, and used a distance of 5, your code should have created something that looks like the following:
+
+    .. image:: images/branch.png
+    
+
+
+Symmetrical Branch
+~~~~~~~~~~~~~~~~~~~
+
+Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.
+   
+::
+
+    Axiom: X
+    Rule 1: X --> F[+X][-X]FX
+    Rule 2: F --> FF
+
+
+.. activecode:: list_turtle_practice_3
+    :nocodelens:
+
+    import turtle
+
+    # your code here!
+
+.. reveal:: symmetrical_branch_image
+    :showtitle: Reveal Solution Image
+
+    If you iterated through the rules 5 times to create your ``instruction_string``, and used a distance of 5, your code should have created something that looks like the following:
+
+    .. image:: images/symmetrical-branch.png
+    
+
+
+Seaweed
+~~~~~~~~
+
+Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.
+   
+::
+
+    Axiom: F
+    Rule 1: F --> FF-[-F+F+F]+[+F-F-F]
+
+
+.. activecode:: list_turtle_practice_4
+    :nocodelens:
+
+    import turtle
+
+    # your code here!
+
+.. reveal:: seaweed_image
+    :showtitle: Reveal Solution Image
+
+    If you iterated through the rules 4 times to create your ``instruction_string``, and used a distance of 10, your code should have created something that looks like the following:
+
+    .. image:: images/seaweed.png
+    
+
+    
+
+Create Your Own
+~~~~~~~~~~~~~~~~
+
+Experiment by creating your own rules for an L-system. Be sure to use the ``[`` and ``]`` characters in the rule(s) of your L-system.
+
+
+.. activecode:: list_turtle_practice_5
+    :nocodelens:
+
+    import turtle
+
+    # your code here!
+

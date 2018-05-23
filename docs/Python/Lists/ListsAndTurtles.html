@@ -197,7 +197,14 @@
 <li><a class="reference internal" href="#turtle-coordinate-list">3.2. Turtle Coordinate List</a></li>
 <li><a class="reference internal" href="#the-return-of-l-systems">3.3. The Return of L-Systems</a></li>
 <li><a class="reference internal" href="#putting-it-all-together">3.4. Putting It All Together</a></li>
-<li><a class="reference internal" href="#practice-problems">3.5. Practice Problems</a></li>
+<li><a class="reference internal" href="#practice-problems">3.5. Practice Problems</a><ul>
+<li><a class="reference internal" href="#garden-herb">3.5.1. Garden Herb</a></li>
+<li><a class="reference internal" href="#branch">3.5.2. Branch</a></li>
+<li><a class="reference internal" href="#symmetrical-branch">3.5.3. Symmetrical Branch</a></li>
+<li><a class="reference internal" href="#seaweed">3.5.4. Seaweed</a></li>
+<li><a class="reference internal" href="#create-your-own">3.5.5. Create Your Own</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -602,6 +609,113 @@ draw_l_system(jill, instruction_string, 30, 2)
 </div>
 <div class="section" id="practice-problems">
 <h2>3.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="garden-herb">
+<h3>3.5.1. Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
+<p>Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">H</span>
+<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">H</span> <span class="o">--&gt;</span> <span class="n">HFX</span><span class="p">[</span><span class="o">+</span><span class="n">H</span><span class="p">][</span><span class="o">-</span><span class="n">H</span><span class="p">]</span>
+<span class="n">Rule</span> <span class="mi">2</span><span class="p">:</span> <span class="n">X</span> <span class="o">--&gt;</span> <span class="n">X</span><span class="p">[</span><span class="o">-</span><span class="n">FFF</span><span class="p">][</span><span class="o">+</span><span class="n">FFF</span><span class="p">]</span><span class="n">FX</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="list_turtle_practice_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_turtle_practice_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+# your code here!
+</textarea>
+</div>
+
+    <div data-component="reveal" id="garden_herb_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
+    <p>If you iterated through the rules 5 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+<img alt="../../_images/garden-herb.png" src="../../_images/garden-herb.png" />
+
+    </div>
+    </div>
+<div class="section" id="branch">
+<h3>3.5.2. Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
+<p>Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">F</span>
+<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">F</span><span class="p">]</span><span class="n">F</span><span class="p">[</span><span class="o">+</span><span class="n">F</span><span class="p">]</span><span class="n">F</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="list_turtle_practice_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_turtle_practice_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+# your code here!
+</textarea>
+</div>
+
+    <div data-component="reveal" id="branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
+    <p>If you iterated through the rules 4 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+<img alt="../../_images/branch.png" src="../../_images/branch.png" />
+
+    </div>
+    </div>
+<div class="section" id="symmetrical-branch">
+<h3>3.5.3. Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
+<p>Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">X</span>
+<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">+</span><span class="n">X</span><span class="p">][</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="n">FX</span>
+<span class="n">Rule</span> <span class="mi">2</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="list_turtle_practice_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_turtle_practice_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+# your code here!
+</textarea>
+</div>
+
+    <div data-component="reveal" id="symmetrical_branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
+    <p>If you iterated through the rules 5 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+<img alt="../../_images/symmetrical-branch.png" src="../../_images/symmetrical-branch.png" />
+
+    </div>
+    </div>
+<div class="section" id="seaweed">
+<h3>3.5.4. Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
+<p>Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">F</span>
+<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span><span class="o">-</span><span class="p">[</span><span class="o">-</span><span class="n">F</span><span class="o">+</span><span class="n">F</span><span class="o">+</span><span class="n">F</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="o">+</span><span class="n">F</span><span class="o">-</span><span class="n">F</span><span class="o">-</span><span class="n">F</span><span class="p">]</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="list_turtle_practice_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_turtle_practice_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+# your code here!
+</textarea>
+</div>
+
+    <div data-component="reveal" id="seaweed_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
+    <p>If you iterated through the rules 4 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 10, your code should have created something that looks like the following:</p>
+<img alt="../../_images/seaweed.png" src="../../_images/seaweed.png" />
+
+    </div>
+    </div>
+<div class="section" id="create-your-own">
+<h3>3.5.5. Create Your Own<a class="headerlink" href="#create-your-own" title="Permalink to this headline">¶</a></h3>
+<p>Experiment by creating your own rules for an L-system. Be sure to use the <code class="docutils literal"><span class="pre">[</span></code> and <code class="docutils literal"><span class="pre">]</span></code> characters in the rule(s) of your L-system.</p>
+
+<div data-childcomponent="list_turtle_practice_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=list_turtle_practice_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import turtle
+
+# your code here!
+</textarea>
+</div>
+</div>
 </div>
 </div>
 
