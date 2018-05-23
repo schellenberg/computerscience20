@@ -1,5 +1,5 @@
-Computer Science Related Career Paths
-=======================================
+Computer Science Career Paths
+==============================
 
 This textbook does not attempt to fulfill this outcome.
 
