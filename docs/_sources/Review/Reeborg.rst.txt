@@ -22,26 +22,21 @@ Question 1 - Apple Pie
 
 Reeborg must walk around the outside of the world, collecting all the apples so that it can make apple pie when it gets home.
 
-Try to make your code as short as possible using for/repeat loops. **Beware! The apples keep changing locations each time you reload this world.**
+Try to make your code as short as possible using for/repeat loops. 
+
+*Beware!* The apples keep changing locations each time you reload this world.
 
 Open the |apple_pie_world| and create a solution to this problem!
 
-.. image:: images/reeborg_goToOrigin.png
-
-.. See if you can recreate a solution for |step_16| (without looking back at how you did it previously).
-
+.. image:: images/reeborg_apple_pie.png
 
 .. |apple_pie_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/apple-pie.json&name=ApplePie" target="_blank">Go To Origin Review world</a>
-
-Question 2 - Review a Previous Quiz
-------------------------------------
-
-Earlier in the course, you showed your understanding of Reeborg by doing a quiz. Let's review that quiz to be sure you recall the important concepts we studied.
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/apple-pie.json&name=ApplePie" target="_blank">Apple Pie world</a>
 
 
-Question 3 - Go To Origin
+
+Question 2 - Go To Origin
 -------------------------
 
 Define a new function called ``go_to_origin`` that sends Reeborg to the bottom left corner of the screen (south-west corner), regardless of its initial location or the direction it is initially facing. Assume that there are no wall sections present. 
@@ -52,36 +47,29 @@ Open the |origin_world| and create a solution to this problem!
 
 .. image:: images/reeborg_goToOrigin.png
 
-
-.. think(0)
-
-.. def turn_right():
-..     repeat 3:
-..         turn_left()
-
-.. def go_to_bottom():
-..     while not is_facing_north():
-..         turn_left()
-..     repeat 2:
-..         turn_left()
-..     while front_is_clear():
-..         move()
-
-.. def go_to_left_side():
-..     #assumes you are facing south to begin with
-..     turn_right()
-..     while front_is_clear():
-..         move()
-        
-.. def go_to_origin():
-..     go_to_bottom()
-..     go_to_left_side()
-
-.. go_to_origin()
-
 .. |origin_world| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a>
+
+
+
+Question 3 - Planting Time
+---------------------------
+
+Reeborg has planted carrot seeds in the garden, but the carrots are growing unevenly. At some places, no carrots have grown; at others, many carrots are growing.
+
+Have Reeborg remove the excess carrots and plant new ones where there is none so that there is only one carrot at each location. Reeborg already carries enough carrots (seeds) to replant the entire garden if needed.
+
+You might find it convenient to define a function named ``fix_one_row``, then call the function 6 times.
+
+Open the |planting_time_world| and create a solution to this problem!
+
+.. image:: images/reeborg_carrots.png
+
+.. |planting_time_world| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/planting-time.json&name=PlantingTime" target="_blank">Planting Time world</a>
+
 
 
 Question 4 - Hurdle Jumping
@@ -89,12 +77,12 @@ Question 4 - Hurdle Jumping
 
 Reeborg is jumping hurdles again. This time, the hurdles can be of any height, and of any width. Reeborg needs to keep jumping over them until it gets to the end of the world, which will always be at (12, 1).
 
-Open the |hurdle1| and create a solution to this problem!
-
-.. caution:: Due to time constraints, the hurdle worlds above do not test the path followed automatically. I will come back to this section and add path following logic when time permits.
+Open the |hurdle_world| and create a solution to this problem!
 
 .. image:: images/reeborg_hurdle_jump.png
 
-.. |hurdle1| raw:: html
+.. |hurdle_world| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
+
+
