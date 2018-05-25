@@ -352,15 +352,15 @@ done first, you will need to use parenthesis.</p>
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_operators_practice_1">
             <p>intro-string-operators1: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
-<span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+<span class="n">second_string</span> <span class="o">=</span> <span class="s2">&quot;rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">first_string</span> <span class="o">+</span> <span class="n">second_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
             <li data-component="answer"  id="string_operators_practice_1_opt_a">python rocks</li><li data-component="feedback" id="string_operators_practice_1_opt_a">Concatenation does not automatically add a space.</li>
             
-            <li data-component="answer"  id="string_operators_practice_1_opt_b">python</li><li data-component="feedback" id="string_operators_practice_1_opt_b">The expression s+t is evaluated first, then the resulting string is printed.</li>
+            <li data-component="answer"  id="string_operators_practice_1_opt_b">python</li><li data-component="feedback" id="string_operators_practice_1_opt_b">The expression first_string + second_string is evaluated first, then the resulting string is printed.</li>
             
             <li data-component="answer" data-correct id="string_operators_practice_1_opt_c">pythonrocks</li><li data-component="feedback" id="string_operators_practice_1_opt_c">Yes, the two strings are glued end to end.</li>
             
@@ -373,9 +373,9 @@ done first, you will need to use parenthesis.</p>
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_operators_practice_2">
             <p>intro-string-operators2: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
-<span class="n">excl</span> <span class="o">=</span> <span class="s2">&quot;!&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">excl</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+<span class="n">exclamation</span> <span class="o">=</span> <span class="s2">&quot;!&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">first_string</span> <span class="o">+</span> <span class="n">exclamation</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -383,7 +383,7 @@ done first, you will need to use parenthesis.</p>
             
             <li data-component="answer"  id="string_operators_practice_2_opt_b">python!python!python!</li><li data-component="feedback" id="string_operators_practice_2_opt_b">Repetition is done first.</li>
             
-            <li data-component="answer"  id="string_operators_practice_2_opt_c">pythonpythonpython!</li><li data-component="feedback" id="string_operators_practice_2_opt_c">The repetition operator is working on the excl variable.</li>
+            <li data-component="answer"  id="string_operators_practice_2_opt_c">pythonpythonpython!</li><li data-component="feedback" id="string_operators_practice_2_opt_c">The repetition operator is working on the exclamation variable.</li>
             
             <li data-component="answer"  id="string_operators_practice_2_opt_d">Error, you cannot perform concatenation and repetition at the same time.</li><li data-component="feedback" id="string_operators_practice_2_opt_d">The + and * operator are defined for strings as well as numbers.</li>
             

@@ -53,7 +53,24 @@ Open the |origin_world| and create a solution to this problem!
 
 
 
-Question 3 - Planting Time
+
+Question 3 - Hurdle Jumping
+----------------------------------
+
+Reeborg is jumping hurdles again. This time, the hurdles can be of any height, and of any width. Reeborg needs to keep jumping over them until it gets to the flag.
+
+Open the |hurdle_world| and create a solution to this problem!
+
+.. image:: images/reeborg_hurdle_jump.png
+
+.. |hurdle_world| raw:: html
+
+   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
+
+
+
+
+Question 4 - Planting Time
 ---------------------------
 
 Reeborg has planted carrot seeds in the garden, but the carrots are growing unevenly. At some places, no carrots have grown; at others, many carrots are growing.
@@ -69,20 +86,5 @@ Open the |planting_time_world| and create a solution to this problem!
 .. |planting_time_world| raw:: html
 
    <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/planting-time.json&name=PlantingTime" target="_blank">Planting Time world</a>
-
-
-
-Question 4 - Hurdle Jumping
-----------------------------------
-
-Reeborg is jumping hurdles again. This time, the hurdles can be of any height, and of any width. Reeborg needs to keep jumping over them until it gets to the end of the world, which will always be at (12, 1).
-
-Open the |hurdle_world| and create a solution to this problem!
-
-.. image:: images/reeborg_hurdle_jump.png
-
-.. |hurdle_world| raw:: html
-
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
 
 

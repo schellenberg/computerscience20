@@ -125,7 +125,7 @@ done first, you will need to use parenthesis.
    :answer_d: Error, you cannot add two strings together.
    :correct: c
    :feedback_a: Concatenation does not automatically add a space.
-   :feedback_b: The expression s+t is evaluated first, then the resulting string is printed.
+   :feedback_b: The expression first_string + second_string is evaluated first, then the resulting string is printed.
    :feedback_c: Yes, the two strings are glued end to end.
    :feedback_d: The + operator has different meanings depending on the operands, in this case, two strings.
 
@@ -134,9 +134,9 @@ done first, you will need to use parenthesis.
    
    .. code-block:: python
 
-      s = "python"
-      t = "rocks"
-      print(s + t)
+      first_string = "python"
+      second_string = "rocks"
+      print(first_string + second_string)
 
 
 
@@ -148,7 +148,7 @@ done first, you will need to use parenthesis.
    :correct: a
    :feedback_a: Yes, repetition has precedence over concatenation
    :feedback_b: Repetition is done first.
-   :feedback_c: The repetition operator is working on the excl variable.
+   :feedback_c: The repetition operator is working on the exclamation variable.
    :feedback_d: The + and * operator are defined for strings as well as numbers.
 
 
@@ -156,9 +156,9 @@ done first, you will need to use parenthesis.
    
    .. code-block:: python
  
-      s = "python"
-      excl = "!"
-      print(s+excl*3)
+      first_string = "python"
+      exclamation = "!"
+      print(first_string + exclamation * 3)
 
 
 Assignment Work Time

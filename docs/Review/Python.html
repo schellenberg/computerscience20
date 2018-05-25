@@ -97,7 +97,7 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How the Internet Works Videos" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" />
+    <link rel="next" title="Underlying Technology of Computing Devices and the Internet" href="../ComputingAndSociety/UnderlyingTechnology.html" />
     <link rel="prev" title="1. Reeborg Review" href="Reeborg.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -193,16 +193,40 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">2. Python Review</a><ul>
-<li><a class="reference internal" href="#variables-and-data-types">2.1. Variables and Data Types</a></li>
-<li><a class="reference internal" href="#checking-data-types">2.2. Checking Data Types</a></li>
-<li><a class="reference internal" href="#converting-between-data-types">2.3. Converting Between Data Types</a></li>
-<li><a class="reference internal" href="#math-operators">2.4. Math Operators</a></li>
-<li><a class="reference internal" href="#if">2.5. <code class="docutils literal"><span class="pre">if</span></code></a></li>
-<li><a class="reference internal" href="#if-elif-else">2.6. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a></li>
-<li><a class="reference internal" href="#while-loop">2.7. <code class="docutils literal"><span class="pre">while</span></code> loop</a></li>
-<li><a class="reference internal" href="#for-loop">2.8. <code class="docutils literal"><span class="pre">for</span></code> loop</a></li>
-<li><a class="reference internal" href="#functions">2.9. Functions</a></li>
-<li><a class="reference internal" href="#taking-input-from-user">2.10. Taking Input from User</a></li>
+<li><a class="reference internal" href="#variables-and-data-types">2.1. Variables and Data Types</a><ul>
+<li><a class="reference internal" href="#your-turn">2.1.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#converting-between-data-types">2.2. Converting Between Data Types</a></li>
+<li><a class="reference internal" href="#taking-input-from-user">2.3. Taking Input from User</a><ul>
+<li><a class="reference internal" href="#id1">2.3.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#math-operators">2.4. Math Operators</a><ul>
+<li><a class="reference internal" href="#id2">2.4.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if">2.5. <code class="docutils literal"><span class="pre">if</span></code></a><ul>
+<li><a class="reference internal" href="#id3">2.5.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if-elif-else">2.6. <code class="docutils literal"><span class="pre">if/elif/else</span></code></a><ul>
+<li><a class="reference internal" href="#id4">2.6.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#while-loop">2.7. <code class="docutils literal"><span class="pre">while</span></code> loop</a><ul>
+<li><a class="reference internal" href="#id5">2.7.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-loop">2.8. <code class="docutils literal"><span class="pre">for</span></code> loop</a><ul>
+<li><a class="reference internal" href="#id6">2.8.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#and-or-not">2.9. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code></a><ul>
+<li><a class="reference internal" href="#id7">2.9.1. Your Turn</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">2.10. Functions</a></li>
 <li><a class="reference internal" href="#python-modules">2.11. Python Modules</a></li>
 <li><a class="reference internal" href="#drawing-images-practice">2.12. Drawing Images Practice</a></li>
 <li><a class="reference internal" href="#number-guessing-game">2.13. Number Guessing Game</a></li>
@@ -221,8 +245,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - How the Internet Works Videos' data-toggle="tooltip" >
-    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+  <li id="relations-next" title='Next Chapter - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/UnderlyingTechnology.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -256,7 +280,6 @@
 <h1>2. Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="variables-and-data-types">
 <h2>2.1. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
-<p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
 <p>The fundamental data types that we are concerned about in Python include:</p>
 <ul class="simple">
 <li><strong>int</strong> (integer, such as <code class="docutils literal"><span class="pre">3</span></code> or <code class="docutils literal"><span class="pre">-5</span></code>)</li>
@@ -264,82 +287,72 @@
 <li><strong>str</strong> (string, such as <code class="docutils literal"><span class="pre">&quot;hello&quot;</span></code> or <code class="docutils literal"><span class="pre">'Friday'</span></code> or <code class="docutils literal"><span class="pre">&quot;5&quot;</span></code>)</li>
 <li><strong>bool</strong> (boolean, such as <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>)</li>
 </ul>
-<p>We will use each of the data types given above throughout the course, and it is <strong>really important</strong> that you understand the differences between them. Take a moment now to try the following questions.</p>
-<p><strong>Check Your Understanding</strong></p>
+<div class="section" id="your-turn">
+<h3>2.1.1. Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_data_types_1_1">
             python-review1: What is the data type of <code class="docutils literal"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?
-            <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
+            <li data-component="answer"  id="review_data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="review_data_types_1_1_opt_a">It is not True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
+            <li data-component="answer"  id="review_data_types_1_1_opt_b">integer</li><li data-component="feedback" id="review_data_types_1_1_opt_b">The data is not numeric.</li>
             
-            <li data-component="answer"  id="data_types_1_1_opt_c">float</li><li data-component="feedback" id="data_types_1_1_opt_c">The value is not numeric with a decimal point.</li>
+            <li data-component="answer"  id="review_data_types_1_1_opt_c">float</li><li data-component="feedback" id="review_data_types_1_1_opt_c">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer" data-correct id="data_types_1_1_opt_d">string</li><li data-component="feedback" id="data_types_1_1_opt_d">Great! Strings are enclosed in quotes.</li>
+            <li data-component="answer" data-correct id="review_data_types_1_1_opt_d">string</li><li data-component="feedback" id="review_data_types_1_1_opt_d">Great! Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_data_types_1_2">
             python-review2: What is the data type of <code class="docutils literal"><span class="pre">42</span></code>?
-            <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
+            <li data-component="answer"  id="review_data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="review_data_types_1_2_opt_a">It is not True or False.</li>
             
-            <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
+            <li data-component="answer" data-correct id="review_data_types_1_2_opt_b">integer</li><li data-component="feedback" id="review_data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_2_opt_c">float</li><li data-component="feedback" id="data_types_1_2_opt_c">The value is not numeric with a decimal point.</li>
+            <li data-component="answer"  id="review_data_types_1_2_opt_c">float</li><li data-component="feedback" id="review_data_types_1_2_opt_c">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_2_opt_d">string</li><li data-component="feedback" id="data_types_1_2_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer"  id="review_data_types_1_2_opt_d">string</li><li data-component="feedback" id="review_data_types_1_2_opt_d">Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_data_types_1_3">
             python-review3: What is the data type of <code class="docutils literal"><span class="pre">False</span></code>?
-            <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
+            <li data-component="answer" data-correct id="review_data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="review_data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
+            <li data-component="answer"  id="review_data_types_1_3_opt_b">integer</li><li data-component="feedback" id="review_data_types_1_3_opt_b">The data is not numeric.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_c">float</li><li data-component="feedback" id="data_types_1_3_opt_c">The value is not numeric with a decimal point.</li>
+            <li data-component="answer"  id="review_data_types_1_3_opt_c">float</li><li data-component="feedback" id="review_data_types_1_3_opt_c">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_d">string</li><li data-component="feedback" id="data_types_1_3_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer"  id="review_data_types_1_3_opt_d">string</li><li data-component="feedback" id="review_data_types_1_3_opt_d">Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_data_types_1_4">
             python-review4: What is the data type of <code class="docutils literal"><span class="pre">4.5</span></code>?
-            <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
+            <li data-component="answer"  id="review_data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="review_data_types_1_4_opt_a">It is not True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
+            <li data-component="answer"  id="review_data_types_1_4_opt_b">integer</li><li data-component="feedback" id="review_data_types_1_4_opt_b">The data is not numeric.</li>
             
-            <li data-component="answer" data-correct id="data_types_1_4_opt_c">float</li><li data-component="feedback" id="data_types_1_4_opt_c">Great! The value is numeric with a decimal point.</li>
+            <li data-component="answer" data-correct id="review_data_types_1_4_opt_c">float</li><li data-component="feedback" id="review_data_types_1_4_opt_c">Great! The value is numeric with a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_4_opt_d">string</li><li data-component="feedback" id="data_types_1_4_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer"  id="review_data_types_1_4_opt_d">string</li><li data-component="feedback" id="review_data_types_1_4_opt_d">Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             </div>
-<div class="section" id="checking-data-types">
-<h2>2.2. Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
-<p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal"><span class="pre">5</span></code> with <code class="docutils literal"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal"><span class="pre">&quot;5.3&quot;</span></code>?</p>
-
-<div data-childcomponent="checking_data_types" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=checking_data_types data-lang="python"    data-timelimit=25000   data-audio=''     >
-print( type(5) )
-</textarea>
-</div>
 </div>
 <div class="section" id="converting-between-data-types">
-<h2>2.3. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">str(x)</span></code> to convert <em>x</em> to a string</li>
@@ -347,9 +360,9 @@ print( type(5) )
 <li><code class="docutils literal"><span class="pre">float(x)</span></code> to convert <em>x</em> to a floating point number</li>
 </ul>
 
-<div data-childcomponent="casting_data_types" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_casting_data_types" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=casting_data_types data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_casting_data_types data-lang="python"    data-timelimit=25000   data-audio=''     >
 a = 4         #a is an int
 print( type(a) )
 
@@ -361,9 +374,52 @@ print( type(c) )
 </textarea>
 </div>
 </div>
+<div class="section" id="taking-input-from-user">
+<h2>2.3. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
+<p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">input()</span></code> will always return a string. You will need to convert it to an int or a float if you are expecting a number.</p>
+</div>
+
+<div data-childcomponent="review_input_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_input_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+your_name = input("What is your name?")
+print(your_name)
+</textarea>
+</div>
+
+<div data-childcomponent="review_input_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_input_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def say_hello(some_name):
+    print("Hello there, ", some_name)
+
+your_name = input("What is your name?")
+say_hello(your_name)
+</textarea>
+</div>
+<div class="section" id="id1">
+<h3>2.3.1. Your Turn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The following example is not going to work when you try to run it. Try entering in <code class="docutils literal"><span class="pre">16</span></code>, then <code class="docutils literal"><span class="pre">15</span></code>. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
+
+<div data-childcomponent="review_input_intro_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_input_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Can you figure out what is wrong?'>
+age = input("How old are you?")
+
+if age == 16:
+    print("You can get your driver's license!")
+elif age == 15:
+    print("You can get your learner driver's license.")
+</textarea>
+</div>
+</div>
+</div>
 <div class="section" id="math-operators">
 <h2>2.4. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
-<p>We can do math with Python, but we need to know the operators to use. The following table shows the most frequently used math operators in Python.</p>
+<p>The following table shows the most frequently used Python math operators.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="12%" />
@@ -416,9 +472,11 @@ print( type(c) )
 </tr>
 </tbody>
 </table>
+<div class="section" id="id2">
+<h3>2.4.1. Your Turn<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_1">
+        <div data-component="fillintheblank" id="review_python_math_operators_1">
             <p>What would the following code print?:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
@@ -433,7 +491,7 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_2">
+        <div data-component="fillintheblank" id="review_python_math_operators_2">
             <p>What would the following code print?:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
@@ -448,7 +506,7 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_3">
+        <div data-component="fillintheblank" id="review_python_math_operators_3">
             <p>What would the following code print?:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">//</span> <span class="mi">5</span><span class="p">)</span>
@@ -463,7 +521,7 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_4">
+        <div data-component="fillintheblank" id="review_python_math_operators_4">
             <p>What would the following code print?:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span>
@@ -477,6 +535,7 @@ print( type(c) )
         </div>
         </div>
             </div>
+</div>
 <div class="section" id="if">
 <h2>2.5. <code class="docutils literal"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
@@ -485,9 +544,9 @@ print( type(c) )
 <p class="last">A single equal sign <code class="docutils literal"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 </div>
 
-<div data-childcomponent="if_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_if_intro_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=if_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_if_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 number = 42
 number = number // 4
 
@@ -498,14 +557,50 @@ else:
     print("And now for something completely different...")
 </textarea>
 </div>
+<div class="section" id="id3">
+<h3>2.5.1. Your Turn<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_conditionals_if_mc_1">
+            <p>python-review5: What does the following code print?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The negative number &quot;</span><span class="p">,</span>  <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; is not valid here.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;This is always printed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span>
+<span class="n">This</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">printed</span>
+
+<span class="n">b</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">negative</span> <span class="n">number</span> <span class="o">-</span><span class="mi">10</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">valid</span> <span class="n">here</span>
+<span class="n">This</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">printed</span>
+
+<span class="n">c</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">negative</span> <span class="n">number</span> <span class="o">-</span><span class="mi">10</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">valid</span> <span class="n">here</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_conditionals_if_mc_1_opt_a">Output a</li><li data-component="feedback" id="review_conditionals_if_mc_1_opt_a">Because -10 is less than 0, Python will execute the body of the if-statement here.</li>
+            
+            <li data-component="answer" data-correct id="review_conditionals_if_mc_1_opt_b">Output b</li><li data-component="feedback" id="review_conditionals_if_mc_1_opt_b">Python executes the body of the if-block as well as the statement that follows the if-block.</li>
+            
+            <li data-component="answer"  id="review_conditionals_if_mc_1_opt_c">Output c</li><li data-component="feedback" id="review_conditionals_if_mc_1_opt_c">Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).</li>
+            
+            <li data-component="answer"  id="review_conditionals_if_mc_1_opt_d">It will cause an error because every if must have an else clause.</li><li data-component="feedback" id="review_conditionals_if_mc_1_opt_d">It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).</li>
+            
+
+            </ul>
+            </div>
+            </div>
 </div>
 <div class="section" id="if-elif-else">
 <h2>2.6. <code class="docutils literal"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
 
-<div data-childcomponent="if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=if_elif_else_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_if_elif_else_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
 temp = -3
 
 if temp < -10:
@@ -516,14 +611,77 @@ else:
     print("wear t-shirt")
 </textarea>
 </div>
+<div class="section" id="id4">
+<h3>2.6.1. Your Turn<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_conditionals_mc_1">
+            <p>python-review6: What does the following code print (choose from output a, b, c or nothing)?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;FALSE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_conditionals_mc_1_opt_a">TRUE</li><li data-component="feedback" id="review_conditionals_mc_1_opt_a">TRUE is printed by the if-block, which only executes if the conditional (in this case, 4+5 == 10) is true.  In this case 5+4 is not equal to 10.</li>
+            
+            <li data-component="answer" data-correct id="review_conditionals_mc_1_opt_b">FALSE</li><li data-component="feedback" id="review_conditionals_mc_1_opt_b">Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.</li>
+            
+            <li data-component="answer"  id="review_conditionals_mc_1_opt_c">TRUE on one line and FALSE on the next</li><li data-component="feedback" id="review_conditionals_mc_1_opt_c">Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.</li>
+            
+            <li data-component="answer"  id="review_conditionals_mc_1_opt_d">Nothing will be printed</li><li data-component="feedback" id="review_conditionals_mc_1_opt_d">Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_conditionals_mc_2">
+            <p>python-review7: What does the following code print?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;FALSE&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span> <span class="n">TRUE</span>
+
+<span class="n">b</span><span class="o">.</span>
+   <span class="n">TRUE</span>
+   <span class="n">FALSE</span>
+
+<span class="n">c</span><span class="o">.</span>
+   <span class="n">FALSE</span>
+   <span class="n">TRUE</span>
+<span class="n">d</span><span class="o">.</span>
+   <span class="n">TRUE</span>
+   <span class="n">FALSE</span>
+   <span class="n">TRUE</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_conditionals_mc_2_opt_a">Output a</li><li data-component="feedback" id="review_conditionals_mc_2_opt_a">Although TRUE is printed after the if-else statement completes, both blocks within the if-else statement print something too.  In this case, Python would have had to have skipped both blocks in the if-else statement, which it never would do.</li>
+            
+            <li data-component="answer"  id="review_conditionals_mc_2_opt_b">Output b</li><li data-component="feedback" id="review_conditionals_mc_2_opt_b">Because there is a TRUE printed after the if-else statement ends, Python will always print TRUE as the last statement.</li>
+            
+            <li data-component="answer" data-correct id="review_conditionals_mc_2_opt_c">Output c</li><li data-component="feedback" id="review_conditionals_mc_2_opt_c">Python will print FALSE from within the else-block (because 5+4 does not equal 10), and then print TRUE after the if-else statement completes.</li>
+            
+            <li data-component="answer"  id="review_conditionals_mc_2_opt_d">Output d</li><li data-component="feedback" id="review_conditionals_mc_2_opt_d">To print these three lines, Python would have to execute both blocks in the if-else statement, which it can never do.</li>
+            
+
+            </ul>
+            </div>
+            </div>
 </div>
 <div class="section" id="while-loop">
 <h2>2.7. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
 <p>Recall that we used a <code class="docutils literal"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
-<div data-childcomponent="while_loop_intro" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_while_loop_intro" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=while_loop_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_while_loop_intro data-lang="python"    data-timelimit=25000   data-audio=''     >
 counter = 10
 
 while counter > 0:
@@ -533,45 +691,241 @@ while counter > 0:
 print("Blastoff!")
 </textarea>
 </div>
+<div class="section" id="id5">
+<h3>2.7.1. Your Turn<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that asks the user to enter a password. Keep asking for the password until they enter “sask”.  Once they have successfully typed in “sask”, print out <em>What a great place!</em>.</p>
+
+<div data-childcomponent="review_while_intro_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_while_intro_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+#put your code here!
+</textarea>
+</div>
+</div>
 </div>
 <div class="section" id="for-loop">
 <h2>2.8. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal"><span class="pre">10</span></code> to some other number and try it again)</p>
 
-<div data-childcomponent="for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=for_loop_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_for_loop_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 for counter in range(10):
     print(counter)
 </textarea>
 </div>
 <p>Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:</p>
 
-<div data-childcomponent="for_loop_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_for_loop_intro_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=for_loop_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_for_loop_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 for counter in range(5, 11):
     print(counter)
 </textarea>
 </div>
 <p>One last version of the for loop that we will introduce allows us to go through a <em>list</em> of values, as follows. <em>Please note that there are a bunch of things in this example that you don’t need to understand yet! We’ll get there!</em></p>
 
-<div data-childcomponent="for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=for_loop_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_for_loop_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
 grocery_list = ["apples", "carrots", "milk", "yogurt"]
 for item in grocery_list:
     print("Don't forget to buy the", item)
 </textarea>
 </div>
+<div class="section" id="id6">
+<h3>2.8.1. Your Turn<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question3_4_1">
+            <p>python-review8: In the following code, how many lines does this code print?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_test_question3_4_1_opt_a">1</li><li data-component="feedback" id="review_test_question3_4_1_opt_a">The loop body prints one line, but the body will execute exactly one time for each element in the list [5, 4, 3, 2, 1, 0].</li>
+            
+            <li data-component="answer"  id="review_test_question3_4_1_opt_b">5</li><li data-component="feedback" id="review_test_question3_4_1_opt_b">Although the biggest number in the list is 5, there are actually 6 elements in the list.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question3_4_1_opt_c">6</li><li data-component="feedback" id="review_test_question3_4_1_opt_c">The loop body will execute (and print one line) for each of the 6 elements in the list [5, 4, 3, 2, 1, 0].</li>
+            
+            <li data-component="answer"  id="review_test_question3_4_1_opt_d">10</li><li data-component="feedback" id="review_test_question3_4_1_opt_d">The loop body will not execute more times than the number of elements in the list.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="and-or-not">
+<h2>2.9. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
+<p>There are three <strong>logical operators</strong>: <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, and <code class="docutils literal"><span class="pre">not</span></code>. The
+semantics (meaning) of these operators is similar to their meaning in English.
+For example, <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is true only if <code class="docutils literal"><span class="pre">x</span></code> is greater than 0 <em>and</em>
+at the same time, x is less than 10.  How would you describe this in words?  You would say that x is between 0 and 10, not including the endpoints.</p>
+<p><code class="docutils literal"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <em>either</em> of the conditions is true,
+that is, if the number is divisible by 2 <em>or</em> divisible by 3.  In this case, one, or the other, or both of the parts has to be true for the result to be true.</p>
+<p>Finally, the <code class="docutils literal"><span class="pre">not</span></code> operator negates a boolean expression, so <code class="docutils literal"><span class="pre">not</span>&#160; <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code>
+is true if <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> is false, that is, if <code class="docutils literal"><span class="pre">x</span></code> is less than or equal to
+<code class="docutils literal"><span class="pre">y</span></code>.</p>
+
+<div data-childcomponent="local_operators_example_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=local_operators_example_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+x = 5
+print(x > 0 and x < 10)
+
+n = 25
+print(n % 2 == 0 or n % 3 == 0)
+</textarea>
+</div>
+<div class="section" id="id7">
+<h3>2.9.1. Your Turn<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_1">
+            <p>python-review9: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_1_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_1_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_1_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_1_opt_b">Try again!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_2">
+            <p>python-review10: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_2_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_2_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_2_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_2_opt_b">Try again!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_3">
+            <p>python-review11: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_3_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_3_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_3_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_3_opt_b">Try again!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_4">
+            <p>python-review12: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_4_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_4_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_4_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_4_opt_b">Try again! Notice that we did not ask a full question on the right side of the AND.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_5">
+            <p>python-review13: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_5_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_5_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_5_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_5_opt_b">Try again!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_6">
+            <p>python-review14: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_booleans_practice_quiz_6_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_6_opt_a">Try again!</li>
+            
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_6_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_6_opt_b">Great!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_7">
+            <p>python-review15: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_7_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_7_opt_a">Great!</li>
+            
+            <li data-component="answer"  id="review_booleans_practice_quiz_7_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_7_opt_b">Try again!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_booleans_practice_quiz_8">
+            <p>python-review16: What would the following print?:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_booleans_practice_quiz_8_opt_a">True</li><li data-component="feedback" id="review_booleans_practice_quiz_8_opt_a">Try again!</li>
+            
+            <li data-component="answer" data-correct id="review_booleans_practice_quiz_8_opt_b">False</li><li data-component="feedback" id="review_booleans_practice_quiz_8_opt_b">Great!</li>
+            
+
+            </ul>
+            </div>
+            </div>
 </div>
 <div class="section" id="functions">
-<h2>2.9. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
+<h2>2.10. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Recall that we can create both fruitful and non-fruitful functions. Fruitful means that the function <em>returns</em> a value, whereas non-fruitful functions do not return anything.</p>
 
-<div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_functions_intro_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def say_hello():
     print("Hello there!")
 
@@ -579,53 +933,13 @@ say_hello()
 </textarea>
 </div>
 
-<div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_functions_intro_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 def say_hello(some_name):
     print("Hello there,", some_name)
 
 say_hello("Eli")
-</textarea>
-</div>
-</div>
-<div class="section" id="taking-input-from-user">
-<h2>2.10. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
-<p>If you want the user to type something, you can use the <code class="docutils literal"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">input()</span></code> will always return a string. You will need to convert it to an int or a float if you are expecting a number.</p>
-</div>
-
-<div data-childcomponent="input_intro_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=input_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-your_name = input("What is your name?")
-print(your_name)
-</textarea>
-</div>
-
-<div data-childcomponent="input_intro_2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=input_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
-def say_hello(some_name):
-    print("Hello there, ", some_name)
-
-your_name = input("What is your name?")
-say_hello(your_name)
-</textarea>
-</div>
-<p>The following example is not going to work when you try to run it. Try entering in <code class="docutils literal"><span class="pre">16</span></code>, then <code class="docutils literal"><span class="pre">15</span></code>. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
-
-<div data-childcomponent="input_intro_3" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=input_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Can you figure out what is wrong?'>
-age = input("How old are you?")
-
-if age == 16:
-    print("You can get your driver's license!")
-elif age == 15:
-    print("You can get your learner driver's license.")
 </textarea>
 </div>
 </div>
@@ -740,12 +1054,12 @@ user_guess = -1
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Reeborg.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - How the Internet Works Videos' data-toggle="tooltip" >
-    <a href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Underlying Technology of Computing Devices and the Internet' data-toggle="tooltip" >
+    <a href="../ComputingAndSociety/UnderlyingTechnology.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ComputingAndSociety/Internet/HowTheInternetWorks.html" >Next Section - How the Internet Works Videos</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ComputingAndSociety/UnderlyingTechnology.html" >Next Section - Underlying Technology of Computing Devices and the Internet</a>
 
 <script type="text/javascript">
 
