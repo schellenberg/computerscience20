@@ -198,6 +198,7 @@
 <li><a class="reference internal" href="#id1">3.3. String Methods</a></li>
 <li><a class="reference internal" href="#substitution-cipher">3.4. Substitution Cipher</a></li>
 <li><a class="reference internal" href="#practice-problems">3.5. Practice Problems</a></li>
+<li><a class="reference internal" href="#extra-challenge">3.6. Extra Challenge</a></li>
 </ul>
 </li>
 </ul>
@@ -637,6 +638,21 @@ print(decrypted)
 <h2>3.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.</p>
 </div>
+<div class="section" id="extra-challenge">
+<h2>3.6. Extra Challenge<a class="headerlink" href="#extra-challenge" title="Permalink to this headline">¶</a></h2>
+<p>Hidden in the source code for this page is an encrypted message, created using the same substitution cipher shown above. To find and decrypt it, you need to look through the source code of this page, and analyze the text between the words <code class="docutils literal"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal"><span class="pre">MSGENDS</span></code>. To automate this completely in Python, you can use the requests module, as described earlier on this page. You then need to use string methods to determine the location of where the hidden message begins and ends, so that you know what text to decrypt. To make this a bit more challenging, I’ve added random gibberish throughout the message. To get rid of the gibberish, you need to know that between <code class="docutils literal"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal"><span class="pre">MSGENDS</span></code>, only every 5th letter is part of the actual hidden message.</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="extra_challenge_verification">
+            <p>What is the abbreviation of the contest mentioned in the hidden message?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *ctf *$", "regexFlags": "", "feedback": "Great!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
 </div>
 
 

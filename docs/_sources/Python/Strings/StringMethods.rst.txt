@@ -350,6 +350,17 @@ Practice Problems
 Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.
 
 
+Extra Challenge
+----------------
+
+Hidden in the source code for this page is an encrypted message, created using the same substitution cipher shown above. To find and decrypt it, you need to look through the source code of this page, and analyze the text between the words ``MSGBEGINS:`` and ``MSGENDS``. To automate this completely in Python, you can use the requests module, as described earlier on this page. You then need to use string methods to determine the location of where the hidden message begins and ends, so that you know what text to decrypt. To make this a bit more challenging, I've added random gibberish throughout the message. To get rid of the gibberish, you need to know that between ``MSGBEGINS:`` and ``MSGENDS``, only every 5th letter is part of the actual hidden message.
+
+.. fillintheblank:: extra_challenge_verification
+
+    What is the abbreviation of the contest mentioned in the hidden message?
+
+    - :ctf: Great!
+      :.*: Try again!
 
 .. |hidden_message| raw:: html
 
