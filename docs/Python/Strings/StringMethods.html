@@ -278,6 +278,7 @@ for item in fruit:
 # after you determine what this will print, rename the variable name item to something more helpful for understanding the loop
 </textarea>
 </div>
+<p>The following program has two errors. Can you find and fix them?</p>
 
 <div data-childcomponent="wdtpd_string_manipulation_practice_2" class="runestone explainer ac_section alert alert-warning">
 
@@ -316,11 +317,8 @@ print(foo("banana"))
 </div>
 <div class="section" id="letter-counting">
 <h2>3.2. Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This example is intended to be done together as a class, with the teacher explaining the problem at hand, then building a possible solution with the students.</p>
-</div>
-<p>By traversing through a string, we are able to analyze text for patterns. For example, the code below assigns a variable <code class="docutils literal"><span class="pre">p</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
+<p>By looking at each letter of a peice of text, you can create a <a class="reference external" href="https://en.wikipedia.org/wiki/Frequency_analysis">frequency analysis</a>, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).</p>
+<p>The code below assigns a variable <code class="docutils literal"><span class="pre">paragraph</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
@@ -363,6 +361,19 @@ count(paragraph)
 <li>use the <a class="reference external" href="https://docs.python.org/3/library/functions.html#round">round function</a> to improve the readability of the percentage calculated (round the percentage to 2 decimals)</li>
 <li>change the function so that you can pass in (as an argument) which character you want to count</li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A possible extension to this demonstration is using the <code class="docutils literal"><span class="pre">requests</span></code> module (in Thonny, select Tools -&gt; Manage Packages, then search for and install requests). Using <code class="docutils literal"><span class="pre">requests</span></code> allows you to extract data from websites, such as <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a>, as follows:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># retrieve the full text of The Importance of Being Earnest</span>
+<span class="n">the_url</span> <span class="o">=</span> <span class="s2">&quot;http://www.gutenberg.org/cache/epub/844/pg844.txt&quot;</span>
+<span class="n">paragraph</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">the_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># run the frequency analysis as before</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="id1">
@@ -537,39 +548,32 @@ print(food.index("e"))
 
             </ul>
             </div>
-            </div>
+            <p><!-- MSGBEGINS:yslido vasms doxft l ess psluvg trojow c rinto mumd cho t skrov ygiw gkruch  kooxnd pyliptp chogoy crrant  gramch bnluh lswafq spaql fuxss byled eraw xsoonak fr ast qstiho chufnt txroov  hooif flnoy goow maint  yeskr snogont kfesh  kerz creonk veak bnranki spo oft tfloolm riyy poioft  gud igrawg bac t crqand gmef gdruff dad  briksp bwlel  drennd snoor teoop nslar  clial fimng gnot tgemp gdropq son  swomop hleng wgrahi tumkp stcoy txrund  cloit benw buxg sn oongd ploqoh gleng etil  nor mdampg snozft twoob kdoopi nafxt crcez j ush mzaptg stiymp wieh sxmaf apafti spaash g ift tflasnh skooob mmustn boo y lulng gcav kxoosh  suma bitg koszp skxomp ispumop drzoongx choaoy z oop mbleplt clqek dqrostx logb hoo nk smnanki nusdt sh ipt mprisgp rayt priag sxkoosah reip baand MSGENDS --></p>
+</div>
 <div class="section" id="substitution-cipher">
 <h2>3.4. Substitution Cipher<a class="headerlink" href="#substitution-cipher" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This example is intended to be done together as a class, with the teacher explaining the problem at hand, then building a possible solution with the students.</p>
-</div>
-<p>Write a function that implements a substitution cipher.  In a substitution
-cipher one letter is substituted for another to garble the message.  For
-example A -&gt; Q, B -&gt; T, C -&gt; G etc.  your function should take two
-parameters, the message you want to encrypt, and a string that represents
-the mapping of the 26 letters in the alphabet.  Your function should
-return a string that is the encrypted version of the message.</p>
-<p>You will need to use either the <code class="docutils literal"><span class="pre">find</span></code> or <code class="docutils literal"><span class="pre">index</span></code> string method as part of your solution.</p>
+<p>In a substitution cipher one letter is substituted for another to garble a message. For example, you might use the following table to convert the original (plaintext) message into the encrypted (ciphertext) message:</p>
+<img alt="../../_images/substitution-cipher.png" src="../../_images/substitution-cipher.png" />
+<p>Using this cipher, the plaintext message <em>hello world</em> would turn into the ciphertext message <em>nxqqg tgcqb</em>.</p>
+<p>To practice this idea, you should write a function that implements a substitution cipher. The function should take two parameters: the <em>message</em> you want to encrypt, and a <em>cipher</em> string that represents the mapping of the 26 letters in the alphabet. The should return a string that is the encrypted version of the message.</p>
+<p>You will need to use either the <code class="docutils literal"><span class="pre">find</span></code> or <code class="docutils literal"><span class="pre">index</span></code> string method as part of your solution, since you will need to look for the position of the letter you are trying to encrypt within the alphabet string, then determine which letter is at that same position in the cipher string. You will want to use the accumulator pattern to build the new, encrypted message.</p>
 
 <div data-childcomponent="cipher_encryption_message" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=cipher_encryption_message data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 def encrypt(message, cipher):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
     # delete the line below and replace with your code
     return "an encrypted message"
 
 
-cipher = "badcfehgjilknmporqtsvuxwzy"
+cipher = "ljmbxdenopfqzygwscaikhturv"
 
 encrypted = encrypt('hello world', cipher)
 print(encrypted)
 </textarea>
 </div>
-<p>Write a function that decrypts the message from the previous exercise.  It
-should also take two parameters.  The encrypted message,
-and the mixed up alphabet.  The function should return a string that is
-the same as the original unencrypted message.</p>
+<p>Now that you can encrypt messages, we also want to be able to decrypt them. Write a function that decrypts the message from the previous exercise.  It should also take two parameters: the encrypted message, and the mixed up alphabet.  The function should return a string that is the same as the original unencrypted message.</p>
 
 <div data-childcomponent="cipher_decryption_message" class="runestone explainer ac_section alert alert-warning">
 
@@ -582,7 +586,7 @@ def encrypt(message, cipher):
     # replace this with your encrypt function from the last exercise
     return "an encrypted message"
 
-cipher = "badcfehgjilknmporqtsvuxwzy"
+cipher = "ljmbxdenopfqzygwscaikhturv"
 
 encrypted = encrypt('hello world', cipher)
 print(encrypted)
@@ -597,27 +601,27 @@ print(decrypted)
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cipher</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
     <span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
             <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encrypted</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">pos</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-            <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encrypted</span> <span class="o">+</span> <span class="n">cipher</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+            <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encrypted</span> <span class="o">+</span> <span class="n">cipher</span><span class="p">[</span><span class="n">position</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">encrypted</span>
 
 <span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">,</span> <span class="n">cipher</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
     <span class="n">decrypted</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">encrypted</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">encrypted</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
             <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decrypted</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">pos</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-            <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decrypted</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+            <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decrypted</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">position</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">decrypted</span>
 
 
-<span class="n">cipher</span> <span class="o">=</span> <span class="s2">&quot;badcfehgjilknmporqtsvuxwzy&quot;</span>
+<span class="n">cipher</span> <span class="o">=</span> <span class="s2">&quot;ljmbxdenopfqzygwscaikhturv&quot;</span>
 
 <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="n">cipher</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>

@@ -37,6 +37,8 @@ What Does This Program Do?
     # after you determine what this will print, rename the variable name item to something more helpful for understanding the loop
 
 
+The following program has two errors. Can you find and fix them?
+
 .. activecode:: wdtpd_string_manipulation_practice_2
     :caption: What will this program print?
 
@@ -70,9 +72,9 @@ What Does This Program Do?
 Letter Counting
 ----------------
 
-.. note:: This example is intended to be done together as a class, with the teacher explaining the problem at hand, then building a possible solution with the students.
+By looking at each letter of a peice of text, you can create a `frequency analysis <https://en.wikipedia.org/wiki/Frequency_analysis>`_, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).
 
-By traversing through a string, we are able to analyze text for patterns. For example, the code below assigns a variable ``p`` in the program a triple-quoted string that contains a paragraph of text. The function ``count`` determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter 'e'.  Finally, the function prints an analysis of the text like this::
+The code below assigns a variable ``paragraph`` in the program a triple-quoted string that contains a paragraph of text. The function ``count`` determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter 'e'.  Finally, the function prints an analysis of the text like this::
 
     Your text contains 243 alphabetic characters, of which 109 (44.8%) are 'e'.
 
@@ -112,6 +114,19 @@ By traversing through a string, we are able to analyze text for patterns. For ex
     - improve the print statement to not have extra spaces (you will need to use concatenation)
     - use the `round function <https://docs.python.org/3/library/functions.html#round>`_ to improve the readability of the percentage calculated (round the percentage to 2 decimals)
     - change the function so that you can pass in (as an argument) which character you want to count
+
+
+.. note::
+
+    A possible extension to this demonstration is using the ``requests`` module (in Thonny, select Tools -> Manage Packages, then search for and install requests). Using ``requests`` allows you to extract data from websites, such as `Project Gutenberg <https://www.gutenberg.org/>`_, as follows::
+
+        import requests
+
+        # retrieve the full text of The Importance of Being Earnest
+        the_url = "http://www.gutenberg.org/cache/epub/844/pg844.txt"
+        paragraph = str(requests.get(the_url).content)
+
+        # run the frequency analysis as before
 
 
 String Methods
@@ -238,38 +253,37 @@ You should experiment with these methods so that you understand what they do.  N
       print(s[1] * s.index("n"))
 
 
+|hidden_message|
+
 
 Substitution Cipher
 --------------------
 
-.. note:: This example is intended to be done together as a class, with the teacher explaining the problem at hand, then building a possible solution with the students.
+In a substitution cipher one letter is substituted for another to garble a message. For example, you might use the following table to convert the original (plaintext) message into the encrypted (ciphertext) message:
 
-Write a function that implements a substitution cipher.  In a substitution
-cipher one letter is substituted for another to garble the message.  For
-example A -> Q, B -> T, C -> G etc.  your function should take two
-parameters, the message you want to encrypt, and a string that represents
-the mapping of the 26 letters in the alphabet.  Your function should
-return a string that is the encrypted version of the message.
+.. image:: images/substitution-cipher.png
 
-You will need to use either the ``find`` or ``index`` string method as part of your solution.
+Using this cipher, the plaintext message *hello world* would turn into the ciphertext message *nxqqg tgcqb*.
+
+To practice this idea, you should write a function that implements a substitution cipher. The function should take two parameters: the *message* you want to encrypt, and a *cipher* string that represents the mapping of the 26 letters in the alphabet. The should return a string that is the encrypted version of the message.
+
+You will need to use either the ``find`` or ``index`` string method as part of your solution, since you will need to look for the position of the letter you are trying to encrypt within the alphabet string, then determine which letter is at that same position in the cipher string. You will want to use the accumulator pattern to build the new, encrypted message.
 
 .. activecode:: cipher_encryption_message
 
     def encrypt(message, cipher):
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
         # delete the line below and replace with your code
         return "an encrypted message"
 
 
-    cipher = "badcfehgjilknmporqtsvuxwzy"
+    cipher = "ljmbxdenopfqzygwscaikhturv"
 
     encrypted = encrypt('hello world', cipher)
     print(encrypted)
 
 
-Write a function that decrypts the message from the previous exercise.  It
-should also take two parameters.  The encrypted message,
-and the mixed up alphabet.  The function should return a string that is
-the same as the original unencrypted message.
+Now that you can encrypt messages, we also want to be able to decrypt them. Write a function that decrypts the message from the previous exercise.  It should also take two parameters: the encrypted message, and the mixed up alphabet.  The function should return a string that is the same as the original unencrypted message.
 
 
 .. activecode:: cipher_decryption_message
@@ -282,7 +296,7 @@ the same as the original unencrypted message.
         # replace this with your encrypt function from the last exercise
         return "an encrypted message"
 
-    cipher = "badcfehgjilknmporqtsvuxwzy"
+    cipher = "ljmbxdenopfqzygwscaikhturv"
 
     encrypted = encrypt('hello world', cipher)
     print(encrypted)
@@ -301,27 +315,27 @@ the same as the original unencrypted message.
         def encrypt(message, cipher):
             alphabet = "abcdefghijklmnopqrstuvwxyz"
             encrypted = ''
-            for char in message:
-                if char == ' ':
+            for letter in message:
+                if letter == ' ':
                     encrypted = encrypted + ' '
                 else:
-                    pos = alphabet.index(char)
-                    encrypted = encrypted + cipher[pos]
+                    position = alphabet.index(letter)
+                    encrypted = encrypted + cipher[position]
             return encrypted
 
         def decrypt(encrypted, cipher):
             alphabet = "abcdefghijklmnopqrstuvwxyz"
             decrypted = ''
-            for char in encrypted:
-                if char == ' ':
+            for letter in encrypted:
+                if letter == ' ':
                     decrypted = decrypted + ' '
                 else:
-                    pos = cipher.index(char)
-                    decrypted = decrypted + alphabet[pos]
+                    position = cipher.index(letter)
+                    decrypted = decrypted + alphabet[position]
             return decrypted
 
 
-        cipher = "badcfehgjilknmporqtsvuxwzy"
+        cipher = "ljmbxdenopfqzygwscaikhturv"
 
         encrypted = encrypt('hello world', cipher)
         print(encrypted)
@@ -334,3 +348,9 @@ Practice Problems
 ------------------
 
 Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.
+
+
+
+.. |hidden_message| raw:: html
+
+   <!-- MSGBEGINS:yslido vasms doxft l ess psluvg trojow c rinto mumd cho t skrov ygiw gkruch  kooxnd pyliptp chogoy crrant  gramch bnluh lswafq spaql fuxss byled eraw xsoonak fr ast qstiho chufnt txroov  hooif flnoy goow maint  yeskr snogont kfesh  kerz creonk veak bnranki spo oft tfloolm riyy poioft  gud igrawg bac t crqand gmef gdruff dad  briksp bwlel  drennd snoor teoop nslar  clial fimng gnot tgemp gdropq son  swomop hleng wgrahi tumkp stcoy txrund  cloit benw buxg sn oongd ploqoh gleng etil  nor mdampg snozft twoob kdoopi nafxt crcez j ush mzaptg stiymp wieh sxmaf apafti spaash g ift tflasnh skooob mmustn boo y lulng gcav kxoosh  suma bitg koszp skxomp ispumop drzoongx choaoy z oop mbleplt clqek dqrostx logb hoo nk smnanki nusdt sh ipt mprisgp rayt priag sxkoosah reip baand MSGENDS -->
