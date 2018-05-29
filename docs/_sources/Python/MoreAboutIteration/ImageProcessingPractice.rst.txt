@@ -258,10 +258,10 @@ Write a program that opens an image and uses a nested loop to look at all of the
 
     import image
 
+    img = image.Image("sneakers.jpg")
     width = img.get_width()
     height = img.get_height()
 
-    img = image.Image("sneakers.jpg")
     win = image.ImageWin(width, height)
     img.draw(win)
 
