@@ -199,6 +199,7 @@ Computing and Society
    ComputingAndSociety/HowTheInternetWorksPracticeQuiz.rst
    ComputingAndSociety/HTML.rst
    ComputingAndSociety/CSS.rst
+   ComputingAndSociety/htmlcssquiz.rst
    ComputingAndSociety/DigitalSecurityAndPrivacy.rst
 
 
