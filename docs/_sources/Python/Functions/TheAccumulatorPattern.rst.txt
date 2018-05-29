@@ -211,7 +211,7 @@ Practice Problems
 Estimating Square Roots
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a function called ``my_sqrt`` that will approximate the square root of a number, call it n, by using Newton's algorithm. Newton's approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: new_guess = (1/2) * (old_guess + (n/old_guess)).
+Write a function called ``my_sqrt`` that will approximate the square root of a number, call it n, by using Newton's algorithm. Newton's approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: ``new_guess = (1/2) * (old_guess + (n/old_guess))``.
 
 To be sure you understand how this works, it is a good idea to try out Newton's algorithm by hand at least once! Try estimating the square root of 9 by hand. You will see that it only takes a couple iterations to get really close to the actual value of the square root.
 

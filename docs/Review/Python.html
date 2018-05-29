@@ -226,10 +226,16 @@
 <li><a class="reference internal" href="#id7">2.9.1. Your Turn</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#functions">2.10. Functions</a></li>
+<li><a class="reference internal" href="#functions">2.10. Functions</a><ul>
+<li><a class="reference internal" href="#id8">2.10.1. Your Turn</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#python-modules">2.11. Python Modules</a></li>
 <li><a class="reference internal" href="#drawing-images-practice">2.12. Drawing Images Practice</a></li>
-<li><a class="reference internal" href="#number-guessing-game">2.13. Number Guessing Game</a></li>
+<li><a class="reference internal" href="#image-manipulation-with-nested-loops">2.13. Image Manipulation with Nested Loops</a></li>
+<li><a class="reference internal" href="#strings">2.14. Strings</a></li>
+<li><a class="reference internal" href="#lists">2.15. Lists</a></li>
+<li><a class="reference internal" href="#number-guessing-game">2.16. Number Guessing Game</a></li>
 </ul>
 </li>
 </ul>
@@ -677,7 +683,7 @@ else:
 </div>
 <div class="section" id="while-loop">
 <h2>2.7. <code class="docutils literal"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
-<p>Recall that we used a <code class="docutils literal"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
+<p>We use a <code class="docutils literal"><span class="pre">while</span></code> loop when we don’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
 <div data-childcomponent="review_while_loop_intro" class="runestone explainer ac_section alert alert-warning">
 
@@ -705,7 +711,7 @@ print("Blastoff!")
 </div>
 <div class="section" id="for-loop">
 <h2>2.8. <code class="docutils literal"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
-<p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal"><span class="pre">10</span></code> to some other number and try it again)</p>
+<p>We use a <code class="docutils literal"><span class="pre">for</span></code> loop when we know the number of iterations before the looping begins.</p>
 
 <div data-childcomponent="review_for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -723,7 +729,9 @@ for counter in range(5, 11):
     print(counter)
 </textarea>
 </div>
-<p>One last version of the for loop that we will introduce allows us to go through a <em>list</em> of values, as follows. <em>Please note that there are a bunch of things in this example that you don’t need to understand yet! We’ll get there!</em></p>
+<p>Recall that calling <code class="docutils literal"><span class="pre">range(5,</span> <span class="pre">11)</span></code> creates a list of numbers starting at 5, and going up to (but not including) 11. Although we could accomplish the same thing by specifying the list of numbers ourselves (as in, <code class="docutils literal"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">[5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]:</span></code>), it is cumbersome when counting a large amount.</p>
+<p>Note that if you give a third argument to the <code class="docutils literal"><span class="pre">range(min,</span> <span class="pre">max,</span> <span class="pre">step)</span></code> function, it acts as the amount to step/increase by.</p>
+<p>Although using range allows us to generate a list of numerical values, we can use a for loop to iterate through a list of values involving any data type, as follows.</p>
 
 <div data-childcomponent="review_for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
 
@@ -942,24 +950,82 @@ def say_hello(some_name):
 say_hello("Eli")
 </textarea>
 </div>
-</div>
-<div class="section" id="python-modules">
-<h2>2.11. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
-<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
+<div class="section" id="id8">
+<h3>2.10.1. Your Turn<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 
-<div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review-double-it-positive" class="runestone explainer ac_section alert alert-warning">
+<p>The parameter <code class="docutils literal"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal"><span class="pre">the_number</span></code> is 0, return 0.</p>
+<p><code class="docutils literal"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
+<p><code class="docutils literal"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
+<p><code class="docutils literal"><span class="pre">double_it_positive(-4)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
 
-<textarea data-component="activecode" id=module_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This works, but is not recommended.'>
-from math import *
+<textarea data-component="activecode" id=review-double-it-positive data-lang="python"    data-timelimit=25000   data-audio=''     >
+def double_it_positive(the_number):
+    return 0
 
-print( sqrt(16) )
-print( cos(0) )
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(double_it_positive(5),10,"double_it_positive(5)")
+        self.assertEqual(double_it_positive(11),22,"double_it_positive(11)")
+        self.assertEqual(double_it_positive(0),0,"double_it_positive(0)")
+        self.assertEqual(double_it_positive(-12),-1,"double_it_positive(-12)")
+        self.assertEqual(double_it_positive(-1),-1,"double_it_positive(-1)")
+
+myTests().main()
 </textarea>
 </div>
 
-<div data-childcomponent="module_intro_2" class="runestone explainer ac_section alert alert-warning">
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question5_3_1">
+            python-review17: What is a variable’s scope?
+            <li data-component="answer"  id="review_test_question5_3_1_opt_a">Its value</li><li data-component="feedback" id="review_test_question5_3_1_opt_a">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question5_3_1_opt_b">The area in the code where a variable can be accessed.</li><li data-component="feedback" id="review_test_question5_3_1_opt_b"></li>
+            
+            <li data-component="answer"  id="review_test_question5_3_1_opt_c">Its name</li><li data-component="feedback" id="review_test_question5_3_1_opt_c">The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.</li>
+            
 
-<textarea data-component="activecode" id=module_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='This is the better way to import a module.'>
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question5_3_2">
+            python-review18: What is a local variable?
+            <li data-component="answer" data-correct id="review_test_question5_3_2_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback" id="review_test_question5_3_2_opt_a">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
+            
+            <li data-component="answer"  id="review_test_question5_3_2_opt_b">The same as a parameter</li><li data-component="feedback" id="review_test_question5_3_2_opt_b">While parameters may be considered local variables, functions may also define and use additional local variables.</li>
+            
+            <li data-component="answer"  id="review_test_question5_3_2_opt_c">Another name for any variable</li><li data-component="feedback" id="review_test_question5_3_2_opt_c">Variables that are used outside a function are not local, but rather global variables.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question5_3_3">
+            python-review19: Can you use the same name for a local variable as a global variable?
+            <li data-component="answer"  id="review_test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback" id="review_test_question5_3_3_opt_a">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback" id="review_test_question5_3_3_opt_b">It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
+            
+            <li data-component="answer"  id="review_test_question5_3_3_opt_c">No, it will cause an error.</li><li data-component="feedback" id="review_test_question5_3_3_opt_c">Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="python-modules">
+<h2>2.11. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
+<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables.</p>
+
+<div data-childcomponent="review_module_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_module_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import math
 
 print( math.sqrt(16) )
@@ -967,9 +1033,9 @@ print( math.cos(0) )
 </textarea>
 </div>
 
-<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_module_intro_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=module_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=review_module_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
 import random
 
 print( random.randrange(1, 10) )
@@ -997,17 +1063,509 @@ print( random.randrange(1, 10) )
 </textarea>
 </div>
 </div>
-<div class="section" id="number-guessing-game">
-<h2>2.13. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
-<p>Remember the number guessing game we created in Scratch? The basic premise was as follows:</p>
+<div class="section" id="image-manipulation-with-nested-loops">
+<h2>2.13. Image Manipulation with Nested Loops<a class="headerlink" href="#image-manipulation-with-nested-loops" title="Permalink to this headline">¶</a></h2>
+<img src="../../_static/skflag.png" id="skflag.png"><p>Recall that we were able to manipulate images using a nested loop (a loop inside a loop). Fix the following code, which is missing the nested for loop. Make it display the <em>negative</em> image, which you can calculate by subtracting the original RGB values from 255.</p>
+
+<div data-childcomponent="review_acimg_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=review_acimg_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+import image
+
+img = image.Image("skflag.png")
+width = img.get_width()
+height = img.get_height()
+
+canvas = image.ImageWin(width, height)
+img.draw(canvas)
+
+# create nested loop here
+
+        # inside nested loop, get pixel
+        p = img.get_pixel(col, row)
+
+        # recall that you can access RGB values by calling something like:
+        # new_red = p.get_red()
+
+        # you can create a new pixel as follows
+        new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+        # set the pixel of the original image to the new, transformed value
+        img.set_pixel(col, row, new_pixel)
+
+    # unindent the following line to remove the "animation"
+    img.draw(canvas)
+</textarea>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>2.14. Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<p>Recall that we can access portions of a string by using the indexing operator <code class="docutils literal"><span class="pre">[]</span></code>, and that the index of the leftmost character of the string is 0. Remember as well that strings are immutable (you cannot modify individual characters within a string).</p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_index_test_question_1">
+            <p>python-review20: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_index_test_question_1_opt_a">t</li><li data-component="feedback" id="review_string_index_test_question_1_opt_a">Index locations do not start with 1, they start with 0.</li>
+            
+            <li data-component="answer" data-correct id="review_string_index_test_question_1_opt_b">h</li><li data-component="feedback" id="review_string_index_test_question_1_opt_b">Yes, index locations start with 0.</li>
+            
+            <li data-component="answer"  id="review_string_index_test_question_1_opt_c">c</li><li data-component="feedback" id="review_string_index_test_question_1_opt_c">sentence[-3] would return c, counting from right to left.</li>
+            
+            <li data-component="answer"  id="review_string_index_test_question_1_opt_d">Error, you cannot use the [ ] operator with a string.</li><li data-component="feedback" id="review_string_index_test_question_1_opt_d">[ ] is the index operator</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_index_test_question_2">
+            <p>python-review21: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_string_index_test_question_2_opt_a">tr</li><li data-component="feedback" id="review_string_index_test_question_2_opt_a">Yes, indexing operator has precedence over concatenation.</li>
+            
+            <li data-component="answer"  id="review_string_index_test_question_2_opt_b">ps</li><li data-component="feedback" id="review_string_index_test_question_2_opt_b">p is at location 0, not 2.</li>
+            
+            <li data-component="answer"  id="review_string_index_test_question_2_opt_c">nn</li><li data-component="feedback" id="review_string_index_test_question_2_opt_c">n is at location 5, not 2.</li>
+            
+            <li data-component="answer"  id="review_string_index_test_question_2_opt_d">Error, you cannot use the [ ] operator with the + operator.</li><li data-component="feedback" id="review_string_index_test_question_2_opt_d">[ ] operator returns a string that can be concatenated with another string.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_1">
+            <p>python-review22: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_length_test_question_1_opt_a">11</li><li data-component="feedback" id="review_string_length_test_question_1_opt_a">The blank counts as a character.</li>
+            
+            <li data-component="answer" data-correct id="review_string_length_test_question_1_opt_b">12</li><li data-component="feedback" id="review_string_length_test_question_1_opt_b">Yes, there are 12 characters in the string.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_2">
+            <p>python-review23: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_a">o</li><li data-component="feedback" id="review_string_length_test_question_2_opt_a">Take a look at the index calculation again, len(sentence)-5.</li>
+            
+            <li data-component="answer" data-correct id="review_string_length_test_question_2_opt_b">r</li><li data-component="feedback" id="review_string_length_test_question_2_opt_b">Yes, len(sentence) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_c">s</li><li data-component="feedback" id="review_string_length_test_question_2_opt_c">sentence is at index 11</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_d">Error, len(sentence) is 12 and there is no index 12.</li><li data-component="feedback" id="review_string_length_test_question_2_opt_d">You subtract 5 before using the index operator so it will work.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_3">
+            <p>python-review24: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_string_length_test_question_3_opt_a">c</li><li data-component="feedback" id="review_string_length_test_question_3_opt_a">Yes, 3 characters from the end.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_3_opt_b">k</li><li data-component="feedback" id="review_string_length_test_question_3_opt_b">Count backward 3 characters.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_3_opt_c">s</li><li data-component="feedback" id="review_string_length_test_question_3_opt_c">When expressed with a negative index the last character s is at index -1.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_3_opt_d">Error, negative indices are illegal.</li><li data-component="feedback" id="review_string_length_test_question_3_opt_d">Python does use negative indices to count backward from the end.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_1">
+            <p>python-review25: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_length_test_question_1_opt_a">python</li><li data-component="feedback" id="review_string_length_test_question_1_opt_a">That would be sentence[0:6].</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_1_opt_b">rocks</li><li data-component="feedback" id="review_string_length_test_question_1_opt_b">That would be sentence[7:].</li>
+            
+            <li data-component="answer" data-correct id="review_string_length_test_question_1_opt_c">hon r</li><li data-component="feedback" id="review_string_length_test_question_1_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="review_string_length_test_question_1_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_2">
+            <p>python-review26: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_string_length_test_question_2_opt_a">rockrockrock</li><li data-component="feedback" id="review_string_length_test_question_2_opt_a">Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_b">rock rock rock</li><li data-component="feedback" id="review_string_length_test_question_2_opt_b">Repetition does not add a space.</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_c">rocksrocksrocks</li><li data-component="feedback" id="review_string_length_test_question_2_opt_c">Slicing will not include the character at index 11.  Just up to it (10 in this case).</li>
+            
+            <li data-component="answer"  id="review_string_length_test_question_2_opt_d">Error, you cannot use repetition with slicing.</li><li data-component="feedback" id="review_string_length_test_question_2_opt_d">The slice will happen first, then the repetition.  So it is ok.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_for_loop_by_item_test_question_1">
+            <p>python-review27: How many times is the word HELLO printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_1_opt_a">10</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_1_opt_a">Iteration by item will process once for each item in the sequence.</li>
+            
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_1_opt_b">11</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_1_opt_b">The blank is part of the sequence.</li>
+            
+            <li data-component="answer" data-correct id="review_string_for_loop_by_item_test_question_1_opt_c">12</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_1_opt_c">Yes, there are 12 characters, including the blank.</li>
+            
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_1_opt_d">Error, the for statement needs to use the range function.</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_1_opt_d">The for statement can iterate over a sequence item by item.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_for_loop_by_item_test_question_2">
+            <p>python-review28: How many times is the word HELLO printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_2_opt_a">4</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_2_opt_a">Slice returns a sequence that can be iterated over.</li>
+            
+            <li data-component="answer" data-correct id="review_string_for_loop_by_item_test_question_2_opt_b">5</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_2_opt_b">Yes, The blank is part of the sequence returned by slice</li>
+            
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_2_opt_c">6</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_2_opt_c">Check the result of s[3:8].  It does not include the item at index 8.</li>
+            
+            <li data-component="answer"  id="review_string_for_loop_by_item_test_question_2_opt_d">Error, the for statement cannot use slice.</li><li data-component="feedback" id="review_string_for_loop_by_item_test_question_2_opt_d">Slice returns a sequence.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_accumulator_pattern_test_question_1">
+            <p>python-review29: What is printed by the following statements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
+    <span class="n">another_string</span> <span class="o">=</span> <span class="n">another_string</span> <span class="o">+</span> <span class="n">item</span>
+<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback" id="review_string_accumulator_pattern_test_question_1_opt_a">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
+            
+            <li data-component="answer"  id="review_string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback" id="review_string_accumulator_pattern_test_question_1_opt_b">Look again at the *order* of the concatenation!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_accumulator_pattern_test_question_2">
+            <p>python-review30: What is printed by the following statements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
+    <span class="n">another_string</span> <span class="o">=</span> <span class="n">item</span> <span class="o">+</span> <span class="n">another_string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback" id="review_string_accumulator_pattern_test_question_2_opt_a">Look again at the *order* of the concatenation!</li>
+            
+            <li data-component="answer" data-correct id="review_string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback" id="review_string_accumulator_pattern_test_question_2_opt_b">Yes, the order is reversed due to the order of the concatenation.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_methods_check_understanding1">
+            <p>python-review31: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_string_methods_check_understanding1_opt_a">0</li><li data-component="feedback" id="review_string_methods_check_understanding1_opt_a">There are definitely o and p characters.</li>
+            
+            <li data-component="answer"  id="review_string_methods_check_understanding1_opt_b">2</li><li data-component="feedback" id="review_string_methods_check_understanding1_opt_b">There are 2 o characters but what about p?</li>
+            
+            <li data-component="answer" data-correct id="review_string_methods_check_understanding1_opt_c">3</li><li data-component="feedback" id="review_string_methods_check_understanding1_opt_c">Yes, add the number of o characters and the number of p characters.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_methods_check_understanding2">
+            <p>python-review32: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_string_methods_check_understanding2_opt_a">yyyyy</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_a">Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.</li>
+            
+            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_b">55555</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_b">Close.  5 is not repeated, it is the number of times to repeat.</li>
+            
+            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_c">n</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_c">This expression uses the index of n</li>
+            
+            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_d">Error, you cannot combine all those things together.</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_d">This is fine, the repetition operator used the result of indexing and the index method.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="lists">
+<h2>2.15. Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Recall that for lists:</p>
 <ul class="simple">
-<li>generates a random number from 1 to 100 and stores it in a variable</li>
-<li>repeats the following until the user guesses the number</li>
-<li>gets the user to guess the number (using the <strong>ask</strong> block)</li>
-<li>tells the user if the number is too high or too low</li>
-<li>congratulates the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</li>
+<li><code class="docutils literal"><span class="pre">len</span></code> returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length.</li>
+<li>The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. Also note that you can use the index operator <code class="docutils literal"><span class="pre">[]</span></code> more than once in a row to access things inside the list.</li>
+<li><code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.</li>
+<li>The slice operation we saw with strings also work on lists.</li>
+<li>Unlike strings, lists are <strong>mutable</strong>. This means we can change an item in a list by accessing it directly as part of the assignment statement.</li>
+<li>Just as there are built-in methods for strings, there are built-in methods for lists. Some of the most helpful are <code class="docutils literal"><span class="pre">append()</span></code> (adds an item to the end of a list), <code class="docutils literal"><span class="pre">pop</span></code> (removes and returns the last item), and <code class="docutils literal"><span class="pre">remove()</span></code> (removes first occurrence of an item)</li>
 </ul>
-<p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.</p>
+
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_2_1">
+            <p>python-review33: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_test_question9_2_1_opt_a">4</li><li data-component="feedback" id="review_test_question9_2_1_opt_a">len returns the actual number of items in the list, not the maximum index value.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question9_2_1_opt_b">5</li><li data-component="feedback" id="review_test_question9_2_1_opt_b">Yes, there are 5 items in this list.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_2_2">
+            <p>python-review34: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_test_question9_2_2_opt_a">7</li><li data-component="feedback" id="review_test_question9_2_2_opt_a">Yes, there are 7 items in this list even though two of them happen to also be lists.</li>
+            
+            <li data-component="answer"  id="review_test_question9_2_2_opt_b">8</li><li data-component="feedback" id="review_test_question9_2_2_opt_b">len returns the number of top level items in the list.  It does not count items in sublists.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_3_1">
+            <p>python-review35: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_test_question9_3_1_opt_a">[ ]</li><li data-component="feedback" id="review_test_question9_3_1_opt_a">The empty list is at index 4.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question9_3_1_opt_b">3.14</li><li data-component="feedback" id="review_test_question9_3_1_opt_b">Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.</li>
+            
+            <li data-component="answer"  id="review_test_question9_3_1_opt_c">False</li><li data-component="feedback" id="review_test_question9_3_1_opt_c">False is at index 6.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_3_3">
+            <p>python-review36: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_test_question9_3_3_opt_a">56</li><li data-component="feedback" id="review_test_question9_3_3_opt_a">Indexes start with 0, not 1.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question9_3_3_opt_b">c</li><li data-component="feedback" id="review_test_question9_3_3_opt_b">Yes, the first character of the string at index 2 is c</li>
+            
+            <li data-component="answer"  id="review_test_question9_3_3_opt_c">cat</li><li data-component="feedback" id="review_test_question9_3_3_opt_c">cat is the item at index 2 but then we index into it further.</li>
+            
+            <li data-component="answer"  id="review_test_question9_3_3_opt_d">Error, you cannot have two index values unless you are using slicing.</li><li data-component="feedback" id="review_test_question9_3_3_opt_d">Using more than one index is fine.  You read it from left to right.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_4_1">
+            <p>python-review37: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="mf">3.14</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_test_question9_4_1_opt_a">True</li><li data-component="feedback" id="review_test_question9_4_1_opt_a">Yes, 3.14 is an item in the list a_list.</li>
+            
+            <li data-component="answer"  id="review_test_question9_4_1_opt_b">False</li><li data-component="feedback" id="review_test_question9_4_1_opt_b">There are 7 items in the list, 3.14 is one of them.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_4_2">
+            <p>python-review38: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">57</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_test_question9_4_2_opt_a">True</li><li data-component="feedback" id="review_test_question9_4_2_opt_a">in returns True for top level items only.  57 is in a sublist.</li>
+            
+            <li data-component="answer" data-correct id="review_test_question9_4_2_opt_b">False</li><li data-component="feedback" id="review_test_question9_4_2_opt_b">Yes, 57 is not a top level item in a_list.  It is in a sublist.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_6_1">
+            <p>python-review39: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="review_test_question9_6_1_opt_a">[ [ ], 3.14, False]</li><li data-component="feedback" id="review_test_question9_6_1_opt_a">Yes, the slice starts at index 4 and goes up to and including the last item.</li>
+            
+            <li data-component="answer"  id="review_test_question9_6_1_opt_b">[ [ ], 3.14]</li><li data-component="feedback" id="review_test_question9_6_1_opt_b">By leaving out the upper bound on the slice, we go up to and including the last item.</li>
+            
+            <li data-component="answer"  id="review_test_question9_6_1_opt_c">[ [56, 57, "dog"], [ ], 3.14, False]</li><li data-component="feedback" id="review_test_question9_6_1_opt_c">Index values start at 0.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_1">
+            <p>python-review40: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_list_methods_check_1_opt_a">[4, 2, 8, 6, 5, False, True]</li><li data-component="feedback" id="review_list_methods_check_1_opt_a">True was added first, then False was added last.</li>
+            
+            <li data-component="answer" data-correct id="review_list_methods_check_1_opt_b">[4, 2, 8, 6, 5, True, False]</li><li data-component="feedback" id="review_list_methods_check_1_opt_b">Yes, each item is added to the end of the list.</li>
+            
+            <li data-component="answer"  id="review_list_methods_check_1_opt_c">[True, False, 4, 2, 8, 6, 5]</li><li data-component="feedback" id="review_list_methods_check_1_opt_c">append adds at the end, not the beginning.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_2">
+            <p>python-review41: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_list_methods_check_2_opt_a">[4, 8, 6]</li><li data-component="feedback" id="review_list_methods_check_2_opt_a">pop(2) removes the item at index 2, not the 2 itself.</li>
+            
+            <li data-component="answer"  id="review_list_methods_check_2_opt_b">[2, 6, 5]</li><li data-component="feedback" id="review_list_methods_check_2_opt_b">pop() removes the last item, not the first.</li>
+            
+            <li data-component="answer" data-correct id="review_list_methods_check_2_opt_c">[4, 2, 6]</li><li data-component="feedback" id="review_list_methods_check_2_opt_c">Yes, first the 8 was removed, then the last item, which was 5.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_3">
+            <p>python-review42: What is printed by the following statements?</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a_list</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="review_list_methods_check_3_opt_a">[2, 8, 6, 5]</li><li data-component="feedback" id="review_list_methods_check_3_opt_a">a_list is now the value that was returned from pop(0).</li>
+            
+            <li data-component="answer"  id="review_list_methods_check_3_opt_b">[4, 2, 8, 6, 5]</li><li data-component="feedback" id="review_list_methods_check_3_opt_b">pop(0) changes the list by removing the first item.</li>
+            
+            <li data-component="answer" data-correct id="review_list_methods_check_3_opt_c">4</li><li data-component="feedback" id="review_list_methods_check_3_opt_c">Yes, first the 4 was removed from the list, then returned and assigned to a_list.  The list is lost.</li>
+            
+            <li data-component="answer"  id="review_list_methods_check_3_opt_d">None</li><li data-component="feedback" id="review_list_methods_check_3_opt_d">pop(0) returns the first item in the list so a_list has now been changed.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="number-guessing-game">
+<h2>2.16. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
+<p>To confirm that you can put many of these ideas into practice, see if you can implement a number guessing game in Python that does the following:</p>
+<ul>
+<li><p class="first">generate a random number from 1 to 100 and stores it in a variable</p>
+</li>
+<li><p class="first">repeat the following until the user guesses the number:</p>
+<blockquote>
+<div><ul class="simple">
+<li>get the user to guess the number</li>
+<li>tell the user if the number is too high or too low</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">congratulate the user when they guess the correct number with a message such as “Way to go! You guessed the right number in 9 tries!”</p>
+</li>
+</ul>
 
 <div data-childcomponent="number_guessing_game_review" class="runestone explainer ac_section alert alert-warning">
 

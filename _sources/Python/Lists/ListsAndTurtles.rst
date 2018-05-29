@@ -165,8 +165,7 @@ Suppose our L-System has the following rules::
     X --> F[-X]+X
     F --> FF
 
-This L-system looks very similar to the old L-system, except that we've added
-one change.  We've added the characters ``[`` and ``]``.  The meaning of these
+This L-system looks very similar to the old L-system, except that we've added the characters ``[`` and ``]``.  The meaning of these
 characters adds a very interesting new dimension to our L-Systems.  The ``[``
 character indicates that we want to save the state of our turtle,
 namely its position and its heading (direction the turtle is facing) so that we can come back to this position later.  The ``]`` tells the turtle to warp to the most recently saved position.

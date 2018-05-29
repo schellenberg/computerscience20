@@ -211,7 +211,8 @@ You should experiment with these methods so that you understand what they do.  N
     print(food.index("e"))
 
 
-**Check your understanding**
+Check Your Understanding
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mchoice:: string_methods_check_understanding1
    :answer_a: 0
@@ -250,7 +251,7 @@ You should experiment with these methods so that you understand what they do.  N
    .. code-block:: python
    
       s = "python rocks"
-      print(s[1] * s.index("n"))
+      print(s[1] * s.find("n"))
 
 
 |hidden_message|

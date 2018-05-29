@@ -344,7 +344,7 @@ Your Turn
 ``while`` loop
 --------------
 
-Recall that we used a ``while`` loop in Reeborg when we didn't know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to ``True``. Run the code below. Can you change the code so that it counts **up** from 1 to 10, then says "Here I come!"?
+We use a ``while`` loop when we don't know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to ``True``. Run the code below. Can you change the code so that it counts **up** from 1 to 10, then says "Here I come!"?
 
 .. activecode:: review_while_loop_intro
     :nocodelens:
@@ -371,7 +371,7 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 ``for`` loop
 ------------
 
-When we knew the exact number of iterations required in Reeborg, we used the ``repeat`` command. That command was not part of regular Python -- it was added to keep Reeborg coding as simple as possible. Although I won't explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the ``10`` to some other number and try it again)
+We use a ``for`` loop when we know the number of iterations before the looping begins. 
 
 .. activecode:: review_for_loop_intro_1
     :nocodelens:
@@ -387,7 +387,11 @@ Notice that the loop above repeats 10 times, but begins counting at 0, so the la
     for counter in range(5, 11):
         print(counter)
 
-One last version of the for loop that we will introduce allows us to go through a *list* of values, as follows. *Please note that there are a bunch of things in this example that you don't need to understand yet! We'll get there!*
+Recall that calling ``range(5, 11)`` creates a list of numbers starting at 5, and going up to (but not including) 11. Although we could accomplish the same thing by specifying the list of numbers ourselves (as in, ``for counter in [5, 6, 7, 8, 9, 10]:``), it is cumbersome when counting a large amount.
+
+Note that if you give a third argument to the ``range(min, max, step)`` function, it acts as the amount to step/increase by.
+
+Although using range allows us to generate a list of numerical values, we can use a for loop to iterate through a list of values involving any data type, as follows.
 
 .. activecode:: review_for_loop_intro_3
     :nocodelens:
@@ -577,30 +581,86 @@ Recall that we can create both fruitful and non-fruitful functions. Fruitful mea
 
 
 
+Your Turn
+~~~~~~~~~~
+
+.. activecode:: review-double-it-positive
+    :nocodelens:
+
+    The parameter ``the_number`` needs to be doubled, but only if ``the_number`` is positive. Return the doubled value of the number that is passed in if ``the_number`` is positive. If ``the_number`` is negative, return -1. If ``the_number`` is 0, return 0.
+
+    ``double_it_positive(5) → 10``
+
+    ``double_it_positive(0) → 0``
+
+    ``double_it_positive(-4) → -1``
+    ~~~~
+    def double_it_positive(the_number):
+        return 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(double_it_positive(5),10,"double_it_positive(5)")
+            self.assertEqual(double_it_positive(11),22,"double_it_positive(11)")
+            self.assertEqual(double_it_positive(0),0,"double_it_positive(0)")
+            self.assertEqual(double_it_positive(-12),-1,"double_it_positive(-12)")
+            self.assertEqual(double_it_positive(-1),-1,"double_it_positive(-1)")
+
+    myTests().main()
+
+
+.. mchoice:: review_test_question5_3_1
+   :answer_a: Its value
+   :answer_b: The area in the code where a variable can be accessed.
+   :answer_c: Its name
+   :correct: b
+   :feedback_a: Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.
+   :feedback_b:
+   :feedback_c: The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.
+
+   What is a variable's scope?
+
+.. mchoice:: review_test_question5_3_2
+   :answer_a: A temporary variable that is only used inside a function
+   :answer_b: The same as a parameter
+   :answer_c: Another name for any variable
+   :correct: a
+   :feedback_a: Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.
+   :feedback_b: While parameters may be considered local variables, functions may also define and use additional local variables.
+   :feedback_c: Variables that are used outside a function are not local, but rather global variables.
+
+   What is a local variable?
+
+.. mchoice:: review_test_question5_3_3
+   :answer_a: Yes, and there is no reason not to.
+   :answer_b: Yes, but it is considered bad form.
+   :answer_c: No, it will cause an error.
+   :correct: b
+   :feedback_a: While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.
+   :feedback_b: It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.
+   :feedback_c: Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.
+
+   Can you use the same name for a local variable as a global variable?
+
+
 Python Modules
 ---------------
 
-One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import *```, you made all of the functions in the library tab available to your program. Please note that although we could use the ``from library import *`` syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import. 
+One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. 
 
-.. activecode:: module_intro_1
+.. activecode:: review_module_intro_2
     :nocodelens:
-    :caption: This works, but is not recommended.
-    
-    from math import *
-
-    print( sqrt(16) )
-    print( cos(0) )
-
-.. activecode:: module_intro_2
-    :nocodelens:
-    :caption: This is the better way to import a module.
     
     import math
 
     print( math.sqrt(16) )
     print( math.cos(0) )
 
-.. activecode:: module_intro_3
+.. activecode:: review_module_intro_3
     :nocodelens:
     
     import random
@@ -628,18 +688,490 @@ Once you have completed the shape above, try the following. *Use the code you ma
     # second review shape
 
 
+Image Manipulation with Nested Loops
+-------------------------------------
+
+.. raw:: html
+
+    <img src="../../_static/skflag.png" id="skflag.png">
+
+
+Recall that we were able to manipulate images using a nested loop (a loop inside a loop). Fix the following code, which is missing the nested for loop. Make it display the *negative* image, which you can calculate by subtracting the original RGB values from 255.
+
+.. activecode::  review_acimg_1
+    :nocodelens:
+
+    import image
+
+    img = image.Image("skflag.png")
+    width = img.get_width()
+    height = img.get_height()
+    
+    canvas = image.ImageWin(width, height)
+    img.draw(canvas)
+
+    # create nested loop here
+    
+            # inside nested loop, get pixel
+            p = img.get_pixel(col, row)
+
+            # recall that you can access RGB values by calling something like:
+            # new_red = p.get_red()
+            
+            # you can create a new pixel as follows
+            new_pixel = image.Pixel(new_red, new_green, new_blue)
+
+            # set the pixel of the original image to the new, transformed value
+            img.set_pixel(col, row, new_pixel)
+
+        # unindent the following line to remove the "animation"
+        img.draw(canvas)
+
+
+Strings
+--------
+
+Recall that we can access portions of a string by using the indexing operator ``[]``, and that the index of the leftmost character of the string is 0. Remember as well that strings are immutable (you cannot modify individual characters within a string).
+
+
+.. mchoice:: review_string_index_test_question_1
+   :answer_a: t
+   :answer_b: h
+   :answer_c: c
+   :answer_d: Error, you cannot use the [ ] operator with a string.
+   :correct: b
+   :feedback_a: Index locations do not start with 1, they start with 0.
+   :feedback_b: Yes, index locations start with 0.
+   :feedback_c: sentence[-3] would return c, counting from right to left.
+   :feedback_d: [ ] is the index operator
+
+   What is printed by the following statements?
+      
+   .. code-block:: python
+   
+      sentence = "python rocks"
+      print(sentence[3])
+
+
+.. mchoice:: review_string_index_test_question_2
+   :answer_a: tr
+   :answer_b: ps
+   :answer_c: nn
+   :answer_d: Error, you cannot use the [ ] operator with the + operator.
+   :correct: a
+   :feedback_a: Yes, indexing operator has precedence over concatenation.
+   :feedback_b: p is at location 0, not 2.
+   :feedback_c: n is at location 5, not 2.
+   :feedback_d: [ ] operator returns a string that can be concatenated with another string.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      sentence = "python rocks"
+      print(sentence[2] + sentence[-5])
+
+
+.. mchoice:: review_string_length_test_question_1
+   :answer_a: 11
+   :answer_b: 12
+   :correct: b
+   :feedback_a: The blank counts as a character.
+   :feedback_b: Yes, there are 12 characters in the string.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      sentence = "python rocks"
+      print(len(sentence))
+
+
+.. mchoice:: review_string_length_test_question_2
+   :answer_a: o
+   :answer_b: r
+   :answer_c: s
+   :answer_d: Error, len(sentence) is 12 and there is no index 12.
+   :correct: b
+   :feedback_a: Take a look at the index calculation again, len(sentence)-5.
+   :feedback_b: Yes, len(sentence) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
+   :feedback_c: sentence is at index 11
+   :feedback_d: You subtract 5 before using the index operator so it will work.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      sentence = "python rocks"
+      print(sentence[len(sentence)-5])
+
+
+.. mchoice:: review_string_length_test_question_3
+   :answer_a: c
+   :answer_b: k
+   :answer_c: s
+   :answer_d: Error, negative indices are illegal.
+   :correct: a
+   :feedback_a: Yes, 3 characters from the end.
+   :feedback_b: Count backward 3 characters.
+   :feedback_c: When expressed with a negative index the last character s is at index -1.
+   :feedback_d: Python does use negative indices to count backward from the end.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      sentence = "python rocks"
+      print(sentence[-3])
+
+
+.. mchoice:: review_string_length_test_question_1
+   :answer_a: python
+   :answer_b: rocks
+   :answer_c: hon r
+   :answer_d: Error, you cannot have two numbers inside the [ ].
+   :correct: c
+   :feedback_a: That would be sentence[0:6].
+   :feedback_b: That would be sentence[7:].
+   :feedback_c: Yes, start with the character at index 3 and go up to but not include the character at index 8.
+   :feedback_d: This is called slicing, not indexing.  It requires a start and an end.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+      sentence = "python rocks"
+      print(sentence[3:8])
+
+
+.. mchoice:: review_string_length_test_question_2
+   :answer_a: rockrockrock
+   :answer_b: rock rock rock
+   :answer_c: rocksrocksrocks
+   :answer_d: Error, you cannot use repetition with slicing.
+   :correct: a
+   :feedback_a: Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.
+   :feedback_b: Repetition does not add a space.
+   :feedback_c: Slicing will not include the character at index 11.  Just up to it (10 in this case).
+   :feedback_d: The slice will happen first, then the repetition.  So it is ok.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+      sentence = "python rocks"
+      print(sentence[7:11] * 3)
+
+
+.. mchoice:: review_string_for_loop_by_item_test_question_1
+   :answer_a: 10
+   :answer_b: 11
+   :answer_c: 12
+   :answer_d: Error, the for statement needs to use the range function.
+   :correct: c
+   :feedback_a: Iteration by item will process once for each item in the sequence.
+   :feedback_b: The blank is part of the sequence.
+   :feedback_c: Yes, there are 12 characters, including the blank.
+   :feedback_d: The for statement can iterate over a sequence item by item.
+
+   How many times is the word HELLO printed by the following statements?
+   
+   .. code-block:: python
+
+      s = "python rocks"
+      for ch in s:
+          print("HELLO")
+
+
+.. mchoice:: review_string_for_loop_by_item_test_question_2
+   :answer_a: 4
+   :answer_b: 5
+   :answer_c: 6
+   :answer_d: Error, the for statement cannot use slice.
+   :correct: b
+   :feedback_a: Slice returns a sequence that can be iterated over.
+   :feedback_b: Yes, The blank is part of the sequence returned by slice
+   :feedback_c: Check the result of s[3:8].  It does not include the item at index 8.
+   :feedback_d: Slice returns a sequence.
+
+   How many times is the word HELLO printed by the following statements?
+   
+   .. code-block:: python
+
+      s = "python rocks"
+      for ch in s[3:8]:
+          print("HELLO")
+
+
+.. mchoice:: review_string_accumulator_pattern_test_question_1
+    :answer_a: ball
+    :answer_b: llab
+    :correct: a
+    :feedback_a: Yes, the repeated concatenation will cause another_string to become the same as some_string.
+    :feedback_b: Look again at the *order* of the concatenation!
+
+    What is printed by the following statements:
+
+    .. code-block:: python
+
+        some_string = "ball"
+        another_string = ""
+        for item in some_string:
+            another_string = another_string + item
+        print(another_string)
+
+
+.. mchoice:: review_string_accumulator_pattern_test_question_2
+    :answer_a: ball
+    :answer_b: llab
+    :correct: b
+    :feedback_a: Look again at the *order* of the concatenation!
+    :feedback_b: Yes, the order is reversed due to the order of the concatenation.
+
+    What is printed by the following statements:
+
+    .. code-block:: python
+
+        some_string = "ball"
+        another_string = ""
+        for item in some_string:
+            another_string = item + another_string
+        print(another_string)
+
+
+.. mchoice:: review_string_methods_check_understanding1
+   :answer_a: 0
+   :answer_b: 2
+   :answer_c: 3
+   :correct: c
+   :feedback_a: There are definitely o and p characters.
+   :feedback_b: There are 2 o characters but what about p?
+   :feedback_c: Yes, add the number of o characters and the number of p characters.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      s = "python rocks"
+      print(s.count("o") + s.count("p"))
+
+
+.. mchoice:: review_string_methods_check_understanding2
+   :answer_a: yyyyy
+   :answer_b: 55555
+   :answer_c: n
+   :answer_d: Error, you cannot combine all those things together.
+   :correct: a
+   :feedback_a: Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.
+   :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
+   :feedback_c: This expression uses the index of n
+   :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+      s = "python rocks"
+      print(s[1] * s.find("n"))
+
+
+
+Lists
+------
+
+Recall that for lists:
+
+- ``len`` returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length.
+- The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. Also note that you can use the index operator ``[]`` more than once in a row to access things inside the list.
+- ``in`` and ``not in`` are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.
+- The slice operation we saw with strings also work on lists.
+- Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing it directly as part of the assignment statement.
+- Just as there are built-in methods for strings, there are built-in methods for lists. Some of the most helpful are ``append()`` (adds an item to the end of a list), ``pop`` (removes and returns the last item), and ``remove()`` (removes first occurrence of an item)
+  
+
+.. mchoice:: review_test_question9_2_1
+   :answer_a: 4
+   :answer_b: 5
+   :correct: b
+   :feedback_a: len returns the actual number of items in the list, not the maximum index value.
+   :feedback_b: Yes, there are 5 items in this list.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     a_list = [3, 67, "cat", 3.14, False]
+     print(len(a_list))
+   
+   
+.. mchoice:: review_test_question9_2_2
+   :answer_a: 7
+   :answer_b: 8
+   :correct: a
+   :feedback_a: Yes, there are 7 items in this list even though two of them happen to also be lists.
+   :feedback_b: len returns the number of top level items in the list.  It does not count items in sublists.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+      a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+      print(len(a_list))
+
+
+.. mchoice:: review_test_question9_3_1
+   :answer_a: [ ]
+   :answer_b: 3.14
+   :answer_c: False
+   :correct: b
+   :feedback_a: The empty list is at index 4.
+   :feedback_b: Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.
+   :feedback_c: False is at index 6.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[5])
+
+   
+.. mchoice:: review_test_question9_3_3
+   :answer_a: 56
+   :answer_b: c
+   :answer_c: cat
+   :answer_d: Error, you cannot have two index values unless you are using slicing.
+   :correct: b
+   :feedback_a: Indexes start with 0, not 1.
+   :feedback_b: Yes, the first character of the string at index 2 is c 
+   :feedback_c: cat is the item at index 2 but then we index into it further.
+   :feedback_d: Using more than one index is fine.  You read it from left to right.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[2][0])
+
+
+.. mchoice:: review_test_question9_4_1
+   :answer_a: True
+   :answer_b: False
+   :correct: a
+   :feedback_a: Yes, 3.14 is an item in the list a_list.
+   :feedback_b: There are 7 items in the list, 3.14 is one of them. 
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(3.14 in a_list)
+
+
+.. mchoice:: review_test_question9_4_2
+   :answer_a: True
+   :answer_b: False
+   :correct: b
+   :feedback_a: in returns True for top level items only.  57 is in a sublist.
+   :feedback_b: Yes, 57 is not a top level item in a_list.  It is in a sublist.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(57 in a_list)
+
+
+.. mchoice:: review_test_question9_6_1
+   :answer_a: [ [ ], 3.14, False]
+   :answer_b: [ [ ], 3.14]
+   :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
+   :correct: a
+   :feedback_a: Yes, the slice starts at index 4 and goes up to and including the last item.
+   :feedback_b: By leaving out the upper bound on the slice, we go up to and including the last item.
+   :feedback_c: Index values start at 0.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+   
+     a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(a_list[4:])
+
+
+.. mchoice:: review_list_methods_check_1
+    :answer_a: [4, 2, 8, 6, 5, False, True]
+    :answer_b: [4, 2, 8, 6, 5, True, False]
+    :answer_c: [True, False, 4, 2, 8, 6, 5]
+    :correct: b
+    :feedback_a: True was added first, then False was added last.
+    :feedback_b: Yes, each item is added to the end of the list.
+    :feedback_c: append adds at the end, not the beginning.
+   
+    What is printed by the following statements?
+   
+    .. code-block:: python
+
+        a_list = [4, 2, 8, 6, 5]
+        a_list.append(True)
+        a_list.append(False)
+        print(a_list)
+
+
+.. mchoice:: review_list_methods_check_2
+    :answer_a: [4, 8, 6]
+    :answer_b: [2, 6, 5]
+    :answer_c: [4, 2, 6]
+    :correct: c
+    :feedback_a: pop(2) removes the item at index 2, not the 2 itself.
+    :feedback_b: pop() removes the last item, not the first.
+    :feedback_c: Yes, first the 8 was removed, then the last item, which was 5.
+   
+    What is printed by the following statements?
+   
+    .. code-block:: python
+
+        a_list = [4, 2, 8, 6, 5]
+        temp = a_list.pop(2)
+        temp = a_list.pop()
+        print(a_list)
+
+   
+.. mchoice:: review_list_methods_check_3
+    :answer_a: [2, 8, 6, 5]
+    :answer_b: [4, 2, 8, 6, 5]
+    :answer_c: 4
+    :answer_d: None
+    :correct: c
+    :feedback_a: a_list is now the value that was returned from pop(0).
+    :feedback_b: pop(0) changes the list by removing the first item.
+    :feedback_c: Yes, first the 4 was removed from the list, then returned and assigned to a_list.  The list is lost.
+    :feedback_d: pop(0) returns the first item in the list so a_list has now been changed.
+   
+    What is printed by the following statements?
+   
+    .. code-block:: python
+
+        a_list = [4, 2, 8, 6, 5]
+        a_list = a_list.pop(0)
+        print(a_list)
+
+
 Number Guessing Game
 --------------------
 
-Remember the number guessing game we created in Scratch? The basic premise was as follows:
+To confirm that you can put many of these ideas into practice, see if you can implement a number guessing game in Python that does the following:
 
-- generates a random number from 1 to 100 and stores it in a variable
-- repeats the following until the user guesses the number
-- gets the user to guess the number (using the **ask** block)
-- tells the user if the number is too high or too low
-- congratulates the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
+- generate a random number from 1 to 100 and stores it in a variable
+- repeat the following until the user guesses the number:
 
-We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.
+    - get the user to guess the number
+    - tell the user if the number is too high or too low
+
+- congratulate the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
 
 
 .. activecode:: number_guessing_game_review
