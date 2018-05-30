@@ -62,7 +62,11 @@ To make the same thing work for you, simply replace the ``https://pastebin.com/r
 Python
 ~~~~~~~
 
+The Python pages are set up to reflect the material that I covered in one 65 minute class period. Some of the pages have much more content to cover than others, as some days had work time for the current assignment built into them. In the Getting Started section, I was very explicit about recommending hand-in assignments at certain times (such as 4. Input/Output Assignment), since I've found that setting up students for success on a simple assignment early on is very helpful. Later on in the textbook, however, I've avoided including assignments in the text to give you as much freedom as possible.
 
+I have included What Does This Program Do (WDTPD) questions throughout the Python sections of the textbook. While you can obviously use these however you like, I have found it helpful to zoom in on the textbook and project the questions so that the students can easily see the code. I then give them some time to try to determine what will happen when we click "Run", and have one of the students volunteer their guess. 
+
+If you are confident with the material, I have found that *live coding* with the students is an excellent way to explore new concepts in class. For example, during the :ref:`turtle_races` class period, I would start the class by drawing a description of what we are trying to create on the white board. We would then begin to code a solution together in Thonny. I try to give them as little help as possible, and instead force the group to come up with the logic on their own (though providing leading hints if they are stuck).
 
 
 Computing and Society
@@ -93,7 +97,7 @@ I did not attempt to address this outcome within this textbook, so you will need
 Student-Directed Research
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have finished teaching new Python concepts, the students should have an opportunity to build (or research) a project of their choosing. As mentioned in the indicators for this outcome, if a coding project is chosen, the students can choose to use the language you have been teaching for most of the semester (Python), or spend time learning a language of their choice. 
+Once you have finished teaching new Python concepts, the students should have an opportunity to build (or research) a project of their choosing. As mentioned in the indicators for this outcome, if a coding project is chosen, the students can choose to use the language you have been teaching for most of the semester (Python), or spend time learning a language of their choice. Although the amount of time given to this project will vary from semester to semester, I would suggest reserving at least 2 weeks of class time for the students to work on it.
 
 .. note:: I have had students use each of the resources mentioned below in my computer lab in Saskatoon Public Schools, but your environment may vary. Some of the resources require installation, while others are web based, which may influence the choices you are able to provide the students.
 

@@ -2,6 +2,7 @@
    :prefix: turtle-race
    :start: 1
 
+.. _turtle_races:
 
 Turtle Races
 =============
