@@ -8,7 +8,7 @@ This textbook has been written to support your teaching of Computer Science 20 i
 
 - each page roughly maps to one day's worth of instruction (with the notable exception of the Reeborg unit, which is intended to be approximately a two week unit, during which the students work through the content at their own pace)
 - the Python editor I've chosen to use throughout the book is called `Thonny <http://thonny.org/>`_, which you can download for free. Thonny provides the same experience for the student whether they are on a Mac, PC, or Linux machine, which is a huge advantage when a student uses a different operating system at home and at school. No administrator rights are required to install Thonny, so I simply have the students download and install Thonny on our first day of Python (takes about 5 minutes). Thonny also makes installing Python packages/modules incredibly easy, which is why I have included a few within the text. If you want to extend your Python teaching, or provide an additional challenge for some of your students, you can search on the `Python Package Index <https://pypi.python.org/pypi>`_ for a package that does what you want, and install it easily with Thonny (Tools -> Manage Packages...).
-- I have incorporated `Micro:bit <http://microbit.org/>`_ hardware into some of the Python lessons (primarily in the Python - Micro:bit and More Functions section). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process.
+- I have incorporated `Micro:bit <http://microbit.org/>`_ hardware into some of the Python lessons (primarily in the Python - Micro:bit and More Functions section). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process. If you do not have access to Micro:bits, you can still accomplish the same objectives by exploring functions in more detail, perhaps making use of a module like pygame.
 - if you would like to access the Teachers Only repository of code/quizzes/etc, please send me an email from your school division email address (so that I know it is from a teacher), and I'll give you access to it. My email is schellenberg@gmail.com.
 - if you find errors in the textbook, `please let me know! <https://github.com/sk-opentexts/computerscience20/#contributing-to-the-book>`_
 - if you want to create your own version of this book, you are free to do so. The general process of remixing the book is `documented on the GitHub page that holds the source code of the book <https://github.com/sk-opentexts/computerscience20/#building-the-book-yourself>`_.
@@ -62,22 +62,45 @@ To make the same thing work for you, simply replace the ``https://pastebin.com/r
 Python
 ~~~~~~~
 
-To be added.
+
 
 
 Computing and Society
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To be added.
+**CS1 - Explore the underlying technology of computing devices and the internet, and their impacts on society.**
+
+Although this textbook does not completely fulfill this outcome, the materials included in the Computing and Society section should give you a place to begin your discussions. 
+
+I would suggest using the How Computers Work videos near the beginning of the semester (either during Scratch or Reeborg). My own method is to play one of these videos at the start of the class, followed by a short class discussion about the topic at hand. 
+
+I tend to use the How the Internet Works videos in a very similar fashion as the How Computers Work videos, but later on in the semester. You could do this in whatever order you prefer, as there isn't any prerequisite knowledge for either video series.
+
+I like to use learning basic HTML/CSS as a break from Python for the students, usually right after I've finished up with the image processing unit. The amount of time you spend on this could vary quite a bit from one semester to the next (depending on the cohort of students you are teaching), but would likely be between 3 to 6 class periods.
+
+
+**CS2 - Investigate the impacts of information technologies on privacy, including digital security practices.**
+
+This textbook does not attempt to fulfill this outcome. It is hoped that this outcome can be interwoven into discussions held throughout the semester. Using current events as examples of these issues can be a very helpful way to start a discussion on these topics.
 
 
 Career Exploration
 ~~~~~~~~~~~~~~~~~~
 
-To be added.
+I did not attempt to address this outcome within this textbook, so you will need to fulfill the outcome on your own. If you are teaching in the Saskatoon area, the University of Saskatchewan's Computer Science Department has hosted a career exploration event called Digitized for the last few years (historically held at the start of May).
 
 
 Student-Directed Research
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To be added.
+Once you have finished teaching new Python concepts, the students should have an opportunity to build (or research) a project of their choosing. As mentioned in the indicators for this outcome, if a coding project is chosen, the students can choose to use the language you have been teaching for most of the semester (Python), or spend time learning a language of their choice. 
+
+.. note:: I have had students use each of the resources mentioned below in my computer lab in Saskatoon Public Schools, but your environment may vary. Some of the resources require installation, while others are web based, which may influence the choices you are able to provide the students.
+
+I have found it helpful to dissuade weaker students from attempting to learn a new language, unless the new language is a block based language like `App Inventor <http://appinventor.mit.edu/>`_, `Microsoft MakeCode <https://makecode.com/>`_, `Stencyl <http://www.stencyl.com/>`_, or `GameMaker <https://www.yoyogames.com/gamemaker>`_. 
+
+For students that would like to stick with Python, but try something more graphical, learning `pyGame <https://www.pygame.org>`_ can be a good choice (you might want to suggest looking at a learning resource such as `Invent with Python <http://inventwithpython.com/pygame/>`_ or `Program Arcade Games <http://programarcadegames.com/>`_). pyGame can be installed in Thonny (Tools -> Manage Packages), which makes this easy to explore. If the student would like to build something in Python, but wants to explore additional possibilities, you might want to direct them to the `Python Packaging Index <https://pypi.org/>`_, where they can look up more modules that they can install easily in Thonny. I have had students incorporate weather information, flight arrival/departure times, and more using various Python modules. 
+
+Students that are interested in music might be interested in creating a project using `EarSketch <https://earsketch.gatech.edu>`_ (creating music with Python), or `Sonic Pi <http://sonic-pi.net/>`_ (need to learn a new language, but it is relatively simple, and there are easy to follow tutorials).
+
+If you have some very strong students that are looking for a serious challenge, I have had some students work with `Unity <https://unity3d.com/>`_ or `Unreal Engine <https://www.unrealengine.com>`_, but the learning curve is very, very steep. Students have only been successful with these environments, when they have begun the project at least 2 months before the end of the semester.
