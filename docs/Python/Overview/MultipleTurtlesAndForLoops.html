@@ -425,55 +425,7 @@ friend.</li>
 to the <code class="docutils literal"><span class="pre">for</span></code> statement, to see if there are more items to be handled.</li>
 </ul>
 <p>A codelens demonstration is a good way to help you visualize exactly how the flow of control
-works with the for loop.  Try stepping forward and backward through the program by pressing
-the buttons.  You can see the value of <code class="docutils literal"><span class="pre">name</span></code> change as the loop iterates through the list of friends.</p>
-
-<div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="for-loops-iteration-example-1"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (for-loops-iteration-example-1)</span> </p>
-</div>
-<script type="text/javascript">
-var for-loops-iteration-example-1_trace = {"code": "for name in [\"Joe\", \"Amy\", \"Brad\", \"Angelina\", \"Zuki\", \"Thandi\", \"Paris\"]:\n    print(\"Hi \", name, \"  Please come to my party on Saturday!\")", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Joe"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Joe"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Amy"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Amy"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Brad"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Brad"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Angelina"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Angelina"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Zuki"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Zuki"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Thandi"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Thandi"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\nHi  Thandi   Please come to my party on Saturday!\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"name": "Paris"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\nHi  Thandi   Please come to my party on Saturday!\n"}, {"line": 1, "event": "step_line", "func_name": "<module>", "globals": {"name": "Paris"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\nHi  Thandi   Please come to my party on Saturday!\nHi  Paris   Please come to my party on Saturday!\n"}, {"line": 1, "event": "return", "func_name": "<module>", "globals": {"name": "Paris"}, "ordered_globals": ["name"], "stack_to_render": [], "heap": {}, "stdout": "Hi  Joe   Please come to my party on Saturday!\nHi  Amy   Please come to my party on Saturday!\nHi  Brad   Please come to my party on Saturday!\nHi  Angelina   Please come to my party on Saturday!\nHi  Zuki   Please come to my party on Saturday!\nHi  Thandi   Please come to my party on Saturday!\nHi  Paris   Please come to my party on Saturday!\n"}]};
-var for-loops-iteration-example-1_vis;
-
-$(document).ready(function() {
-    try {
-        for-loops-iteration-example-1_vis = new ExecutionVisualizer('for-loops-iteration-example-1',for-loops-iteration-example-1_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(for-loops-iteration-example-1_vis,'for-loops-iteration-example-1');
-        styleButtons('for-loops-iteration-example-1');
-        allVisualizers.push(for-loops-iteration-example-1_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component for-loops-iteration-example-1_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#for-loops-iteration-example-1_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'for-loops-iteration-example-1'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
-}
-
-
-$(window).resize(function() {
-    if (for-loops-iteration-example-1_vis) {
-        for-loops-iteration-example-1_vis.redrawConnectors();
-    }
-});
-</script>
-</div>
+works with the for loop. Click on the <strong>Show CodeLens</strong> button in the example above. Try stepping forward and backward through the program by pressing the buttons. You can see the value of <code class="docutils literal"><span class="pre">name</span></code> change as the loop iterates through the list of friends.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Although you might not want to worry about this yet, it is <strong>really</strong> useful to know that you can access any specific part of list by providing it’s index value in square brackets, such as <code class="docutils literal"><span class="pre">some_list[2]</span></code> (the first element has an index of 0, the second has an index of 1, etc). Consider the following:</p>

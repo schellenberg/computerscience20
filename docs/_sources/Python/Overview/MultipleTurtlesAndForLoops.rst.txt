@@ -178,14 +178,7 @@ Take a look at the output produced when you press the ``run`` button.  There is 
 
 
 A codelens demonstration is a good way to help you visualize exactly how the flow of control
-works with the for loop.  Try stepping forward and backward through the program by pressing
-the buttons.  You can see the value of ``name`` change as the loop iterates through the list of friends.
-
-.. codelens:: for-loops-iteration-example-1
-
-    for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-        print("Hi ", name, "  Please come to my party on Saturday!")
-
+works with the for loop. Click on the **Show CodeLens** button in the example above. Try stepping forward and backward through the program by pressing the buttons. You can see the value of ``name`` change as the loop iterates through the list of friends.
 
 .. note:: 
 
