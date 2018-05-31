@@ -312,14 +312,14 @@ Let's say that we wanted to increase the amount of green in the image shown abov
 
 .. caution:: 
 
-    The following program (and most of the image processing examples on the following pages) will likely not finish execution before triggering a ``TimeLimitError`` in your web browser. To see the completed version of the image, you may either:
+    There is a chance that the following program will not finish execution before triggering a ``TimeLimitError`` in your web browser. To see the completed version of the image, you may either:
 
     - copy/paste this code into Thonny and execute it there (being sure to save the image file into the same folder as the Python code)
     - unindent (remove all spaces before) the call to ``img.draw(canvas)`` (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)
 
 .. activecode::  increase_color_amount
     :nocodelens:
-    :timelimit: 120000
+    :timelimit: 180000
 
     import image
 
@@ -367,7 +367,7 @@ The program below implements this algorithm using the previous image (skflag.png
 
 .. activecode::  acimg_1
     :nocodelens:
-    :timelimit: 120000
+    :timelimit: 180000
 
     import image
 

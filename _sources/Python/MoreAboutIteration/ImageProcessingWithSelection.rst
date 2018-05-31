@@ -35,6 +35,7 @@ Due to the contrast in the image, we can apply certain effects to only a portion
 
 .. activecode::  isolate_the_moon
     :nocodelens:
+    :timelimit: 180000
 
     # import the module so we can access images
     import image
@@ -107,6 +108,7 @@ To apply an effect to just the left hand side, we can write a program that itera
 
 .. activecode::  grayscale_left_half
     :nocodelens:
+    :timelimit: 180000
 
     # import the module so we can access images
     import image
@@ -186,6 +188,7 @@ When we are copying the smile over to the rooster image, we can adjust where the
 
 .. activecode::  combining_images
     :nocodelens:
+    :timelimit: 180000
 
     # import the module so we can access images
     import image
@@ -272,6 +275,7 @@ Write a program that sets the red intensity of all pixels on the left half of th
 
  .. activecode::  practice_problem_no_red_left_side
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -299,6 +303,7 @@ Write a program that makes the top right quarter of the image be tinted blue (by
 
  .. activecode::  practice_problem_blue_tint_top_right
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -326,6 +331,7 @@ Write a program that changes the colour of the rooster's comb and wattle (the re
 
  .. activecode::  practice_problem_change_rooster_colour
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -353,6 +359,7 @@ Write a program that takes the left side of an image and displays it both on the
 
  .. activecode::  practice_problem_repeat_left_twice
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -380,6 +387,7 @@ Write a program that mirrors an image from left to right around a vertical line 
 
  .. activecode::  practice_problem_mirror_horizontal
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -407,6 +415,7 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
 
  .. activecode::  practice_problem_mirror_vertical
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -434,6 +443,7 @@ Write a program that creates a gradient effect (slowly transitioning from one co
 
 .. activecode::  practice_problem_gradient
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -468,6 +478,7 @@ To make a radial gradient, you need to set a centre point, then for each pixel, 
 
  .. activecode::  practice_problem_radial_gradient
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -482,6 +493,7 @@ To make a radial gradient, you need to set a centre point, then for each pixel, 
     # your code goes here!    
 
     img.draw(win)
+
 
 Acknowledgments
 ~~~~~~~~~~~~~~~~~~

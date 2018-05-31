@@ -659,7 +659,7 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
-<p>The following program (and most of the image processing examples on the following pages) will likely not finish execution before triggering a <code class="docutils literal"><span class="pre">TimeLimitError</span></code> in your web browser. To see the completed version of the image, you may either:</p>
+<p>There is a chance that the following program will not finish execution before triggering a <code class="docutils literal"><span class="pre">TimeLimitError</span></code> in your web browser. To see the completed version of the image, you may either:</p>
 <ul class="last simple">
 <li>copy/paste this code into Thonny and execute it there (being sure to save the image file into the same folder as the Python code)</li>
 <li>unindent (remove all spaces before) the call to <code class="docutils literal"><span class="pre">img.draw(canvas)</span></code> (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)</li>
@@ -668,7 +668,7 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=increase_color_amount data-lang="python"    data-timelimit=120000   data-audio=''     >
+<textarea data-component="activecode" id=increase_color_amount data-lang="python"    data-timelimit=180000   data-audio=''     >
 import image
 
 img = image.Image("sneakers.jpg")
@@ -707,7 +707,7 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 
 <div data-childcomponent="acimg_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=acimg_1 data-lang="python"    data-timelimit=120000   data-audio=''     >
+<textarea data-component="activecode" id=acimg_1 data-lang="python"    data-timelimit=180000   data-audio=''     >
 import image
 
 img = image.Image("skflag.png")

@@ -28,6 +28,7 @@ In a previous lesson, we used code similar to the following, which increases the
 
 .. activecode::  increase_color_amount
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -55,6 +56,7 @@ When we were learning how to draw with the turtle module, we took code that allo
 
 .. activecode::  increase_green_function
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -93,6 +95,7 @@ Notice that in the function, an EmptyImage *of the same size as the original ima
 
     .. activecode::  increase_green_function_2
         :nocodelens:
+        :timelimit: 180000
 
         import image
 
@@ -244,6 +247,7 @@ Create a function called ``red_remover(original_image)`` that performs an image 
 
 .. activecode::  practice_problem_red_remover_function
     :nocodelens:
+    :timelimit: 180000
 
     import image
 
@@ -266,5 +270,6 @@ Look back at the last few sections, and pick 2 image manipulation practice probl
 
 .. activecode::  practice_problem_your_choice
     :nocodelens:
+    :timelimit: 180000
 
     # you will want to use Thonny for this question...
