@@ -319,7 +319,7 @@ Let's say that we wanted to increase the amount of green in the image shown abov
 
 .. activecode::  increase_color_amount
     :nocodelens:
-    :timelimit: 60000
+    :timelimit: 120000
 
     import image
 
@@ -367,7 +367,7 @@ The program below implements this algorithm using the previous image (skflag.png
 
 .. activecode::  acimg_1
     :nocodelens:
-    :timelimit: 60000
+    :timelimit: 120000
 
     import image
 
