@@ -324,11 +324,14 @@ Let's say that we wanted to increase the amount of green in the image shown abov
     import image
 
     img = image.Image("sneakers.jpg")
-    canvas = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    canvas = image.ImageWin(width, height)
     img.draw(canvas)
 
-    for row in range(img.get_height()):
-        for col in range(img.get_width()):
+    for row in range(height):
+        for col in range(width):
             p = img.get_pixel(col, row)
 
             new_red = p.get_red()
@@ -362,7 +365,7 @@ In the RGB color model, we can consider the opposite of the red component as the
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
 ``255-50`` or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.
 
-The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.
+The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take some time to complete (it will execute faster if you run it in Thonny). Also note that instead of using ``col`` and ``row`` as the variable names in the nested loop, ``x`` and ``y`` have been used. In your own programs, use whichever makes more sense to you!
 
 
 .. activecode::  acimg_1
@@ -372,12 +375,15 @@ The program below implements this algorithm using the previous image (skflag.png
     import image
 
     img = image.Image("skflag.png")
-    canvas = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    canvas = image.ImageWin(width, height)
     img.draw(canvas)
 
-    for row in range(img.get_height()):
-        for col in range(img.get_width()):
-            p = img.get_pixel(col, row)
+    for y in range(height):
+        for x in range(width):
+            p = img.get_pixel(x, y)
 
             new_red = 255 - p.get_red()
             new_green = 255 - p.get_green()
@@ -385,7 +391,7 @@ The program below implements this algorithm using the previous image (skflag.png
 
             new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-            img.set_pixel(col, row, new_pixel)
+            img.set_pixel(x, y, new_pixel)
 
         # unindent the following line to remove the "animation"
         img.draw(canvas)
@@ -418,9 +424,7 @@ Try This
 
 - Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.
 
-- Download an image from the internet. Save it in the same location 
-
-.. caution:: If you are using Thonny, be careful to save any image you are experimenting with in the same folder as the Python file you create.
+- Download an image from the internet. Save it in the same folder as the Python script you are executing, then change your script to create the negative of the image you downloaded.
 
 
 Check Your Understanding

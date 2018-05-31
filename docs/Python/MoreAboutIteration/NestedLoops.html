@@ -672,11 +672,14 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 import image
 
 img = image.Image("sneakers.jpg")
-canvas = image.ImageWin(img.get_width(), img.get_height())
+width = img.get_width()
+height = img.get_height()
+
+canvas = image.ImageWin(width, height)
 img.draw(canvas)
 
-for row in range(img.get_height()):
-    for col in range(img.get_width()):
+for row in range(height):
+    for col in range(width):
         p = img.get_pixel(col, row)
 
         new_red = p.get_red()
@@ -703,7 +706,7 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
 <code class="docutils literal"><span class="pre">255-50</span></code> or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.</p>
-<p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take a few seconds to complete.</p>
+<p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take some time to complete (it will execute faster if you run it in Thonny). Also note that instead of using <code class="docutils literal"><span class="pre">col</span></code> and <code class="docutils literal"><span class="pre">row</span></code> as the variable names in the nested loop, <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> have been used. In your own programs, use whichever makes more sense to you!</p>
 
 <div data-childcomponent="acimg_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -711,12 +714,15 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 import image
 
 img = image.Image("skflag.png")
-canvas = image.ImageWin(img.get_width(), img.get_height())
+width = img.get_width()
+height = img.get_height()
+
+canvas = image.ImageWin(width, height)
 img.draw(canvas)
 
-for row in range(img.get_height()):
-    for col in range(img.get_width()):
-        p = img.get_pixel(col, row)
+for y in range(height):
+    for x in range(width):
+        p = img.get_pixel(x, y)
 
         new_red = 255 - p.get_red()
         new_green = 255 - p.get_green()
@@ -724,7 +730,7 @@ for row in range(img.get_height()):
 
         new_pixel = image.Pixel(new_red, new_green, new_blue)
 
-        img.set_pixel(col, row, new_pixel)
+        img.set_pixel(x, y, new_pixel)
 
     # unindent the following line to remove the "animation"
     img.draw(canvas)
@@ -748,12 +754,8 @@ for row in range(img.get_height()):
 <h4 style="text-align: center;">fransaskoisflag.jpg</h4><img src="../../_static/pineapples.jpg" id="pineapples.jpg">
 <h4 style="text-align: center;">pineapples.jpg</h4><ul class="simple">
 <li>Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.</li>
-<li>Download an image from the internet. Save it in the same location</li>
+<li>Download an image from the internet. Save it in the same folder as the Python script you are executing, then change your script to create the negative of the image you downloaded.</li>
 </ul>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">If you are using Thonny, be careful to save any image you are experimenting with in the same folder as the Python file you create.</p>
-</div>
 </div>
 <div class="section" id="id2">
 <h3>1.7.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
