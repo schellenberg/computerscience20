@@ -369,7 +369,6 @@ win = image.ImageWin(width, height)
 
 # draw the original image onto the window
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # use a nested for loop to look at every pixel in the image
 for x in range(width):
@@ -399,8 +398,8 @@ for x in range(width):
         # reassign the pixel value in the image to be the changed version
         img.set_pixel(x, y, new_pixel)
 
-# draw the changed image to the window
-img.draw(win)
+    # draw the changed image to the window (unindent to remove animation)
+    img.draw(win)
 </textarea>
 </div>
 <div class="section" id="id1">
@@ -443,7 +442,6 @@ win = image.ImageWin(width, height)
 
 # draw the original image onto the window
 original_img.draw(win)
-original_img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # use a nested for loop to look at every pixel in the image to add
 for x in range(width_small):
@@ -461,8 +459,8 @@ for x in range(width_small):
             original_img.set_pixel(x, y + 135, this_pixel)
 
 
-# draw the changed image to the window
-original_img.draw(win)
+    # draw the changed image to the window (unindent to remove animation)
+    original_img.draw(win)
 </textarea>
 </div>
 <div class="section" id="id3">
@@ -493,7 +491,6 @@ import image
 img = image.Image("berries.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -521,7 +518,6 @@ import image
 img = image.Image("bird-far.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -549,7 +545,6 @@ import image
 img = image.Image("rooster.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -577,7 +572,6 @@ import image
 img = image.Image("rooster.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -605,7 +599,6 @@ import image
 img = image.Image("berries.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -633,7 +626,6 @@ import image
 img = image.Image("berries.jpg")
 win = image.ImageWin(img.get_width(), img.get_height())
 img.draw(win)
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -662,8 +654,6 @@ height = 255
 
 win = image.ImageWin(width, height)
 img = image.EmptyImage(width, height)
-
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 
@@ -694,8 +684,6 @@ height = 255
 
 win = image.ImageWin(width, height)
 img = image.EmptyImage(width, height)
-
-img.set_delay(1,15)   # set_delay(0) turns off animation
 
 # your code goes here!
 

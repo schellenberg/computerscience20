@@ -125,7 +125,6 @@ To apply an effect to just the left hand side, we can write a program that itera
 
     # draw the original image onto the window
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image
     for x in range(width):
@@ -155,8 +154,8 @@ To apply an effect to just the left hand side, we can write a program that itera
             # reassign the pixel value in the image to be the changed version
             img.set_pixel(x, y, new_pixel)
 
-    # draw the changed image to the window
-    img.draw(win)
+        # draw the changed image to the window (unindent to remove animation)
+        img.draw(win)
 
 
 Try This
@@ -210,7 +209,6 @@ When we are copying the smile over to the rooster image, we can adjust where the
 
     # draw the original image onto the window
     original_img.draw(win)
-    original_img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # use a nested for loop to look at every pixel in the image to add
     for x in range(width_small):
@@ -228,8 +226,8 @@ When we are copying the smile over to the rooster image, we can adjust where the
                 original_img.set_pixel(x, y + 135, this_pixel)
 
 
-    # draw the changed image to the window
-    original_img.draw(win)
+        # draw the changed image to the window (unindent to remove animation)
+        original_img.draw(win)
 
 
 Try This
@@ -282,7 +280,6 @@ Write a program that sets the red intensity of all pixels on the left half of th
     img = image.Image("berries.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -310,7 +307,6 @@ Write a program that makes the top right quarter of the image be tinted blue (by
     img = image.Image("bird-far.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -338,7 +334,6 @@ Write a program that changes the colour of the rooster's comb and wattle (the re
     img = image.Image("rooster.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -366,7 +361,6 @@ Write a program that takes the left side of an image and displays it both on the
     img = image.Image("rooster.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -394,7 +388,6 @@ Write a program that mirrors an image from left to right around a vertical line 
     img = image.Image("berries.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -422,7 +415,6 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
     img = image.Image("berries.jpg")
     win = image.ImageWin(img.get_width(), img.get_height())
     img.draw(win)
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -452,8 +444,6 @@ Write a program that creates a gradient effect (slowly transitioning from one co
 
     win = image.ImageWin(width, height)
     img = image.EmptyImage(width, height)
-    
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
@@ -487,8 +477,6 @@ To make a radial gradient, you need to set a centre point, then for each pixel, 
 
     win = image.ImageWin(width, height)
     img = image.EmptyImage(width, height)
-    
-    img.set_delay(1,15)   # set_delay(0) turns off animation
 
     # your code goes here!    
 
