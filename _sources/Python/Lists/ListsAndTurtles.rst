@@ -186,6 +186,7 @@ behavior.
 
 .. activecode:: list_lsys1
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -227,6 +228,7 @@ so you get an idea of what the kind of drawing the L-System can really make.
 
 .. activecode:: list_lsys2
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -280,6 +282,7 @@ If you run the code below, you will not see much happen. To fix the code below, 
 
 .. activecode:: list_lsys3
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -379,6 +382,7 @@ Here are the rules for an L-system that creates something that resembles a commo
 
 .. activecode:: list_turtle_practice_1
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -406,6 +410,7 @@ Here are the rules for an L-system that creates something that resembles a branc
 
 .. activecode:: list_turtle_practice_2
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -434,6 +439,7 @@ Here are the rules for an L-system that creates something that resembles a symme
 
 .. activecode:: list_turtle_practice_3
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -461,6 +467,7 @@ Here are the rules for an L-system that creates something that resembles seaweed
 
 .. activecode:: list_turtle_practice_4
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
@@ -484,6 +491,7 @@ Experiment by creating your own rules for an L-system. Be sure to use the ``[`` 
 
 .. activecode:: list_turtle_practice_5
     :nocodelens:
+    :timelimit: 180000
 
     import turtle
 
