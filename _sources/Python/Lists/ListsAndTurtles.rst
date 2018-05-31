@@ -372,13 +372,16 @@ Garden Herb
 ~~~~~~~~~~~~
 
 Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.
-   
+
+.. highlight:: none
+
 ::
 
     Axiom: H
     Rule 1: H --> HFX[+H][-H]
     Rule 2: X --> X[-FFF][+FFF]FX
 
+.. highlight:: python
 
 .. activecode:: list_turtle_practice_1
     :nocodelens:
@@ -401,12 +404,15 @@ Branch
 ~~~~~~~~
 
 Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.
-   
+
+.. highlight:: none
+
 ::
 
     Axiom: F
     Rule 1: F --> F[-F]F[+F]F
 
+.. highlight:: python
 
 .. activecode:: list_turtle_practice_2
     :nocodelens:
@@ -429,13 +435,16 @@ Symmetrical Branch
 ~~~~~~~~~~~~~~~~~~~
 
 Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.
-   
+
+.. highlight:: none
+
 ::
 
     Axiom: X
     Rule 1: X --> F[+X][-X]FX
     Rule 2: F --> FF
 
+.. highlight:: python
 
 .. activecode:: list_turtle_practice_3
     :nocodelens:
@@ -458,12 +467,15 @@ Seaweed
 ~~~~~~~~
 
 Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.
-   
+
+.. highlight:: none
+
 ::
 
     Axiom: F
     Rule 1: F --> FF-[-F+F+F]+[+F-F-F]
 
+.. highlight:: python
 
 .. activecode:: list_turtle_practice_4
     :nocodelens:
@@ -479,8 +491,6 @@ Here are the rules for an L-system that creates something that resembles seaweed
     If you iterated through the rules 4 times to create your ``instruction_string``, and used a distance of 10, your code should have created something that looks like the following:
 
     .. image:: images/seaweed.png
-    
-
     
 
 Create Your Own

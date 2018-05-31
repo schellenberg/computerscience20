@@ -611,9 +611,9 @@ draw_l_system(jill, instruction_string, 30, 2)
 <div class="section" id="garden-herb">
 <h3>3.5.1. Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">H</span>
-<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">H</span> <span class="o">--&gt;</span> <span class="n">HFX</span><span class="p">[</span><span class="o">+</span><span class="n">H</span><span class="p">][</span><span class="o">-</span><span class="n">H</span><span class="p">]</span>
-<span class="n">Rule</span> <span class="mi">2</span><span class="p">:</span> <span class="n">X</span> <span class="o">--&gt;</span> <span class="n">X</span><span class="p">[</span><span class="o">-</span><span class="n">FFF</span><span class="p">][</span><span class="o">+</span><span class="n">FFF</span><span class="p">]</span><span class="n">FX</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: H
+Rule 1: H --&gt; HFX[+H][-H]
+Rule 2: X --&gt; X[-FFF][+FFF]FX
 </pre></div>
 </div>
 
@@ -635,8 +635,8 @@ import turtle
 <div class="section" id="branch">
 <h3>3.5.2. Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">F</span>
-<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">F</span><span class="p">]</span><span class="n">F</span><span class="p">[</span><span class="o">+</span><span class="n">F</span><span class="p">]</span><span class="n">F</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: F
+Rule 1: F --&gt; F[-F]F[+F]F
 </pre></div>
 </div>
 
@@ -658,9 +658,9 @@ import turtle
 <div class="section" id="symmetrical-branch">
 <h3>3.5.3. Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">X</span>
-<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">+</span><span class="n">X</span><span class="p">][</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="n">FX</span>
-<span class="n">Rule</span> <span class="mi">2</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: X
+Rule 1: X --&gt; F[+X][-X]FX
+Rule 2: F --&gt; FF
 </pre></div>
 </div>
 
@@ -682,8 +682,8 @@ import turtle
 <div class="section" id="seaweed">
 <h3>3.5.4. Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Axiom</span><span class="p">:</span> <span class="n">F</span>
-<span class="n">Rule</span> <span class="mi">1</span><span class="p">:</span> <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span><span class="o">-</span><span class="p">[</span><span class="o">-</span><span class="n">F</span><span class="o">+</span><span class="n">F</span><span class="o">+</span><span class="n">F</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="o">+</span><span class="n">F</span><span class="o">-</span><span class="n">F</span><span class="o">-</span><span class="n">F</span><span class="p">]</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: F
+Rule 1: F --&gt; FF-[-F+F+F]+[+F-F-F]
 </pre></div>
 </div>
 

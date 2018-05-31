@@ -271,7 +271,7 @@ When you need to check if the player is currently able to perform a certain acti
     print(inventory)
 
 
-Sometimes, the item the player uses might be something they can only use once. For example, after they used the "rooom 1 key", we might want the "room 1 key" to no longer be in the player's inventory. The following code does just that.
+Sometimes, the item the player uses might be something they can only use once. For example, after they used the "room 1 key", we might want the "room 1 key" to no longer be in the player's inventory. The following code does just that.
 
 
 .. activecode:: inventory_example_4
