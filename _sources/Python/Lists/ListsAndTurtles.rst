@@ -107,13 +107,59 @@ If a portion of your list is *itself a list*, you need to check for the entire s
 .. activecode:: turtle_coordinates_2
 
     some_list = [42, 5, [12, 99], 23]
-    print(99 in some_list)          # False
-    print([12, 99] in some_list)    # True
+    print(99 in some_list)          
+    print([12, 99] in some_list)    
 
 
-Consider the following:
+If we wanted to keep track of a collection of coordinates (*x* and *y* pairs), we could do it by creating a list that contains sublists of coordinates. In the list below, three ordered pairs of coordinates are given::
+
+    coordinates = [[0, 0], [10, 20], [150, 80]]
+
+1. *x*: 0, *y*: 0
+2. *x*: 10, *y*: 20
+3. *x*: 150, *y*: 80
+
+To check if a specific x and y pair is in our coordinate list, we can use ``in`` as follows:
 
 .. activecode:: turtle_coordinates_3
+
+    coordinates = [[0, 0], [10, 20], [150, 80]]
+    if [30, 20] in coordinates:
+        print("Yes! This coordinate is in the list!")
+    else:
+        print("No such coordinate is in the list.")    
+
+.. note:: Change the numbers in the ``if`` statement above to an ordered pair that is in the list, then run the code again.
+
+Imagine that you wanted to create a simulation of a turtle walking around a grid world (in other words, the turtle would always turn by 90 degrees). Before each "step" the turtle takes, we will randomly choose to either turn left and move, turn right and move, or move straight ahead. Although we could move any amount for each "step", let's use a step size of 10. The following program implements this world, but is in an infinite loop. The program should automatically time out after running for 20 seconds in the browser (though if you are executing it in Thonny, you will need to press the Stop button).
+
+
+.. activecode:: turtle_coordinates_4
+    :timelimit: 20000
+
+    import turtle
+    import random
+
+    window = turtle.Screen()
+    jennifer = turtle.Turtle()
+
+    while True:
+        # randomly turn either left or right
+        number = random.randrange(1, 101)
+        if number < 33:
+            jennifer.left(90)
+        elif number < 66:
+            jennifer.right(90)
+        # if neither of the above occurred, jennifer will not turn
+
+        # move forward by 10 steps
+        jennifer.forward(10)
+
+Instead of having this program run forever, we would like the turtle to automatically stop the program whenever it walks onto a location that it has been before. In order to do that, we need to keep a list of coordinates that the turtle has been. Since the turtle begins at the origin, we will add [0, 0] to the list before any movement occurs. Since the turtle module keeps track of the turtle location using floating point values, the program will not behave the way you want if you simply store the current x and y positions in the coordinate list. Instead, we will convert the x and y values to be the nearest integer value, and store those in the list. 
+
+After every step that the turtle takes, we need to get the current x and y coordinates, in the form of ``[x, y]``. If this ordered pair appears in the coordinate list, it means that we have been here before and we should end the program. If not, we need to add this ordered pair to the coordinate list and continue moving. The program below implements this behaviour.
+
+.. activecode:: turtle_coordinates_5
 
     import turtle
     import random
@@ -126,10 +172,11 @@ Consider the following:
     while True:
         # randomly turn either left or right
         number = random.randrange(1, 101)
-        if number < 50:
+        if number < 33:
             jennifer.left(90)
-        else:
+        elif number < 66:
             jennifer.right(90)
+        # if neither of the above occurred, jennifer will not turn
 
         # move forward by 10 steps
         jennifer.forward(10)
