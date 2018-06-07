@@ -108,6 +108,7 @@ By convention, files that contain Python programs have names that end with
 
    Source code is another name for:
 
+.. index:: comments
 
 Comments
 --------
@@ -154,6 +155,8 @@ programs much easier for humans to parse.  Use them liberally!
 
    What are comments for?
 
+
+.. index:: variables
 
 Variables
 ---------
@@ -281,12 +284,13 @@ assignment we even give it a value that is of a different type.
      print(day)
 
 
+.. index:: variable names
+
 Variable Names and Keywords
 ---------------------------
 
 **Variable names** can be arbitrarily long. They can contain both letters and
 digits, but they have to begin with a letter or an underscore. You should use long, descriptive variable names. For example, if you were creating a program to calculate how much gas a car uses, a good variable name might be ``litres_per_100_kms``. A bad variable name in that case would be ``l``. Using a single letter as the variable name usually makes your program harder to understand for other people. Although that can be a bit annoying to type out a long variable name the first time, once you have typed it once in Thonny, you should be able to simply type the first few letters of the variable name, then press **Ctrl-Space** to have the rest of the variable name auto-complete for you. *If that doesn't work for you, check Thonny's preferences.*
-
 
 
 The underscore character ( ``_``) can also appear in a name. It is often used in
@@ -318,6 +322,8 @@ of the variable names is illegal.
 ``76trombones`` is illegal because it does not begin with a letter.  ``more$``
 is illegal because it contains an illegal character, the dollar sign. But
 what's wrong with ``class``?
+
+.. index:: Python keywords
 
 It turns out that ``class`` is one of the Python **keywords**. Keywords define
 the language's syntax rules and structure, and they cannot be used as variable
