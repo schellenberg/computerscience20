@@ -9,6 +9,8 @@ Step 8: Asking Questions
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
+.. index:: if
+
 Tutorial
 --------
 

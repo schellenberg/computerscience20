@@ -360,7 +360,7 @@ Hidden in the source code for this page is an encrypted message, created using t
 
     What is the abbreviation of the contest mentioned in the hidden message?
 
-    - :ctf: Great!
+    - :ctf: Way to go!
       :.*: Try again!
 
 .. |hidden_message| raw:: html

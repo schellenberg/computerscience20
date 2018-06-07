@@ -50,6 +50,8 @@ bugs. Some of the problems with Reeborg are:
    it turns its head left.
 
 
+.. index:: debugging
+
 Stepping Through Code
 ~~~~~~~~~~~~~~~~~~~~~
 

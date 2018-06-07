@@ -9,6 +9,8 @@ Step 6: Saving Functions in the Library
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
 
+.. index:: import
+
 Tutorial
 ---------
 

@@ -12,6 +12,7 @@ Step 4: Comments
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
 
+.. index:: comments
 
 Tutorial
 --------

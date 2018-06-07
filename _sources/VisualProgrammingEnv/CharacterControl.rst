@@ -40,6 +40,7 @@ If we want to have a sprite appear larger or smaller than the default size, we c
 
 Drag the block shown above onto the scripts area, and double click it. You should see the current sprite get a bit larger. Experiment by changing the number 10 to different values. *Be sure to try both positive and negative values!*
 
+.. index:: repeat
 
 Repetition
 -------------------------------
@@ -88,6 +89,7 @@ The hesitation in the sprite movement happens because the operating system on yo
 
 If we cannot override this feature of your operating system, how can we improve the WASD movement that we created above? The answer is to use some new blocks that allow us to repeatedly ask the computer whether a particular key is pressed, as described below.
 
+.. index:: if
 
 Movement Using WASD - Version 2
 ------------------------------------------

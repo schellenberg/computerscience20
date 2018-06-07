@@ -27,6 +27,7 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
     :align: left
     :http: https
 
+.. index:: functions
 
 Say Greeting Block
 ------------------

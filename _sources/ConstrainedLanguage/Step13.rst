@@ -9,6 +9,7 @@ Step 13: If/Elif/Else
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
+.. index:: if-elif-else
 
 Tutorial
 ---------

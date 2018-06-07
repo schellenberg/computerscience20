@@ -9,6 +9,8 @@ Step 9: Repeating Instructions
     - **CS20-FP2** Investigate how control structures affect program flow.
     
 
+.. index:: repeat
+
 Tutorial
 --------
 

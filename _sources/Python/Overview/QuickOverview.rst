@@ -22,6 +22,7 @@ What is Python?
 
 Python is a programming language that lets you teach the computer to do what you want. You've already been writing Python programs using Reeborg. Everything you have already learned (with the exception of `repeat`), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.
 
+.. index:: Thonny
 
 Running Python on Your Computer
 -------------------------------
@@ -34,6 +35,8 @@ When using Thonny, you need to understand the difference between the **text edit
 
 .. image:: images/thonny_window.png
 
+
+.. index:: whitespace, syntax error
 
 Whitespace
 -----------
@@ -49,6 +52,8 @@ Just like when you were programming Reeborg, it is **really important to indent 
     print("Yeah, the number is bigger.")
 
 
+.. index:: print
+
 Printing Output
 ---------------
 
@@ -56,6 +61,7 @@ As you saw in the example above, you can ``print()`` things to standard output (
 
 .. note:: There are lots of other ways that a program can produce output, like drawing, turning on LEDs, etc. We will investigate some of these later in the course.
 
+.. index:: variables, data types
 
 Variables and Data Types
 ------------------------
@@ -137,6 +143,8 @@ If you aren't sure what the data type of something is, you can check it using th
     print( type(5) )
 
 
+.. index:: type casting
+
 .. _type_casting_functions:
 
 Converting Between Data Types
@@ -161,6 +169,8 @@ Sometimes you might need to convert from one data type to another. You can use t
     print( type(c) )
    
 
+.. index:: math operators
+
 .. _math_operator_list:
 
 Math Operators
@@ -180,6 +190,8 @@ Symbols   Operations                        Example               Output
 \*\*       Power                            ``5 ** 2``            25
 =======   ==============================    ===============       ======
 
+
+.. index:: if
 
 
 ``if``
@@ -201,6 +213,7 @@ The ``if`` control structure works the same way it did with Reeborg. Run the exa
         print("Michael Jordan is the GOAT (Greatest of All Time)")
 
 
+.. index:: if-elif-else
 
 ``if/elif/else``
 ----------------
@@ -220,6 +233,8 @@ The ``if/elif/else`` control structure works in the exact same way it did when y
         print("wear t-shirt")
 
 
+.. index:: while
+
 ``while`` loop
 --------------
 
@@ -236,6 +251,8 @@ Recall that we used a ``while`` loop in Reeborg when we didn't know the number o
 
     print("Blastoff!")
 
+
+.. index:: for
 
 ``for`` loop
 ------------
@@ -256,6 +273,8 @@ Notice that the loop above repeats 10 times, but begins counting at 0, so the la
     for counter in range(5, 11):
         print(counter)
 
+
+.. index:: lists
 
 Lists
 ------
@@ -290,6 +309,8 @@ If you want to access just one element inside a list, you can specify the locati
     print("Don't forget to buy some", grocery_list[1])
 
 
+.. index:: functions
+
 Functions
 ----------
 
@@ -312,6 +333,8 @@ Just like you were able to teach Reeborg to do new things by creating a new func
 
     say_hello("Eli")
 
+
+.. index:: input
 
 Taking Input from User
 -------------------------
@@ -351,6 +374,8 @@ The following example is not going to work when you try to run it. Try entering 
     elif age == 15:
         print("You can get your learner driver's license.")
 
+
+.. index:: import
 
 Python Modules
 ---------------

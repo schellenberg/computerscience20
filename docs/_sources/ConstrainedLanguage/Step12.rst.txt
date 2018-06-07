@@ -8,6 +8,7 @@ Step 12: While
     - **CS20-CP2** Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.
     - **CS20-FP2** Investigate how control structures affect program flow.
 
+.. index:: while
 
 Tutorial
 ---------

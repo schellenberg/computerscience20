@@ -30,6 +30,8 @@ If you'd prefer to watch a video, `the following video <https://www.youtube.com/
 
 .. _scratch_variables:
 
+.. index:: variables
+
 Variables
 ---------
 
@@ -61,6 +63,7 @@ To demonstrate how using variables really does improve our code, let's add two m
 
 Notice that we are using the **change variable by ** block, instead of the **set variable to** block. This allows us to increase or decrease the value of the variable by some amount, regardless of what the value was before. You should now be able to press the space key to draw a polygon, press the up/down arrows a number of times, then press the space key to draw a different polygon.
 
+.. index:: nested repeat
 
 Nested Repeat Blocks
 --------------------
