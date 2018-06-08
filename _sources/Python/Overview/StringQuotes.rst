@@ -19,6 +19,8 @@ Which Quotes to Use When Creating Strings
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
+.. index:: string quotes
+
 A Bit More Detail About Strings
 --------------------------------
 

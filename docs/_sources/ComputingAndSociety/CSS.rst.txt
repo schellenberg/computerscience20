@@ -18,6 +18,8 @@ Cascading Style Sheets (CSS)
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.
 
 
+.. index:: css
+
 What is CSS For?
 -----------------------
 

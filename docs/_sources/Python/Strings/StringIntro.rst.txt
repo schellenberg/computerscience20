@@ -60,7 +60,7 @@ strings look like numbers. The one exception to this rule is that the ``+`` oper
     print(fruit + bakedGood)
 
 
-
+.. index:: index operator
 
 Index Operator: Working with the Characters of a String
 -------------------------------------------------------
@@ -105,6 +105,7 @@ expression so long as it evaluates to a valid index value.
 Note that indexing returns a *string* --- Python has no special type for a single character.
 It is just a string of length 1.
 
+
 Check Your Understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -128,7 +129,6 @@ Check Your Understanding
       print(sentence[3])
 
 
-
 .. mchoice:: string_index_test_question_2
    :answer_a: tr
    :answer_b: ps
@@ -149,6 +149,7 @@ Check Your Understanding
       print(sentence[2] + sentence[-5])
 
 
+.. index:: len()
 
 Length
 ------
@@ -251,6 +252,7 @@ Check Your Understanding
       print(sentence[-3])
 
 
+.. index:: slice operator
 
 The Slice Operator
 ------------------

@@ -19,6 +19,8 @@ The Time Module and Using a Micro:bit
     - **CS20-FP2** Investigate how control structures affect program flow.
 
 
+.. index:: time.sleep()
+
 Time Module
 ------------
 
@@ -48,6 +50,8 @@ Sometimes, we'd like to wait a bit before running the next command in a Python p
 
     print("All done!")
 
+
+.. index:: micro:bit
 
 Micro:bit Setup
 ----------------

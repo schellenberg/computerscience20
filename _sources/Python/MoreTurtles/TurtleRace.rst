@@ -9,7 +9,7 @@ Turtle Races
 
 .. topic:: Quick Overview of Day
 
-    Use what you know about turtles so far to simulate a basic race between two turtles. If time, may choose to turn this into an interactive game, by controlling the turtles with the micro:bit.
+    Use what you know about turtles and looping structures to simulate a basic race between two turtles.
 
 
 .. reveal:: curriculum_addressed
@@ -18,6 +18,9 @@ Turtle Races
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
+
+
+.. index:: random.randrange()
 
 Random Numbers
 --------------

@@ -61,6 +61,8 @@ Type in your first name and last name when you run the code below. How can you f
     print("Good to see you" + full_name)
 
 
+.. index:: concatenation
+
 Operations on Strings
 ---------------------
 

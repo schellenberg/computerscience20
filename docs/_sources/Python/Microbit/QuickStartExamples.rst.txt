@@ -235,7 +235,8 @@ List of Pre-Defined Images
     - ``Image.SKULL``
     - ``Image.UMBRELLA``
     - ``Image.SNAKE``
-      
+
+
 .. _microbit_setup:
 
 Micro:bit Setup
@@ -261,6 +262,8 @@ For the purposes of this textbook, we will always be using the Micro:bit as an i
 .. note::
     
     If you want to learn more about how to use the Micro:bit without it being hooked up to a computer, you can find out about how to do that on the `Microbit website <http://microbit.org/>`_.
+
+
 
 Flashing the Micro:bit
 ~~~~~~~~~~~~~~~~~~~~~~

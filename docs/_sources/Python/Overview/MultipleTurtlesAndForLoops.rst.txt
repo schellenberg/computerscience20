@@ -137,6 +137,8 @@ Mixed Up Programs
     wn.exitonclick()
 
 
+.. index:: for
+
 The ``for`` Loop
 ----------------
 
@@ -209,8 +211,8 @@ square.  This next program does exactly the same thing but, with the help of the
 
     # the following repeats 4 times
     for i in [0, 1, 2, 3]:
-       alex.forward(50)
-       alex.left(90)
+        alex.forward(50)
+        alex.left(90)
 
     wn.exitonclick()
 
@@ -235,9 +237,9 @@ It is also important to realize that we could have used a ``while`` loop to acco
     # the following repeats 4 times
     counter = 0
     while counter < 4:
-       alex.forward(50)
-       alex.left(90)
-       counter = counter + 1
+        alex.forward(50)
+        alex.left(90)
+        counter = counter + 1
 
     wn.exitonclick()
 
@@ -257,8 +259,8 @@ Thinking back to the for loop version we saw above, the values [0,1,2,3] were pr
 
     # the following repeats 4 times
     for i in [0, 1, 2, 3]:
-       alex.forward(50)
-       alex.left(90)
+        alex.forward(50)
+        alex.left(90)
 
     wn.exitonclick()
 
@@ -276,9 +278,9 @@ take on each color in the list.  We can even take this one step further and use 
     alex = turtle.Turtle()
 
     for some_color in ["yellow", "red", "purple", "blue"]:
-       alex.color(some_color)
-       alex.forward(50)
-       alex.left(90)
+        alex.color(some_color)
+        alex.forward(50)
+        alex.left(90)
 
     wn.exitonclick()
 
@@ -379,6 +381,9 @@ Mixed Up Programs
 
         for number in [5, 4, 3, 2, 1, 0]:
             print("I have", number, "cookies.  I'm going to eat one.")
+
+
+.. index:: range
 
 The Range Function
 -------------------

@@ -71,6 +71,7 @@ Try the following, entering in ``17``. How about ``14``? Can you fix it? *Hint: 
         print("Wow! Already " + age + " years old!")
 
 
+.. index:: easygui_qt
 
 Getting User Input With easygui_qt
 -----------------------------------

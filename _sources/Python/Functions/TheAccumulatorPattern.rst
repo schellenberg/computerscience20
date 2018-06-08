@@ -89,6 +89,8 @@ Here is the same program in codelens.  Step through the function and watch the "
     print("The result of", to_square, "squared is", result)
 
 
+.. index:: accumulator pattern
+
 The General Accumulator Pattern
 --------------------------------
 

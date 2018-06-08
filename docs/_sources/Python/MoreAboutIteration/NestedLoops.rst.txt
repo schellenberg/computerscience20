@@ -54,6 +54,8 @@ In the figure below, the pixel of interest is found at column **c** and row **r*
 .. image:: images/image_pixels.png
 
 
+.. index:: RGB color model
+
 The RGB Color Model
 -------------------
 
@@ -84,6 +86,8 @@ Magenta  255      0        255
 
 .. note:: Search the web for a ``color picker``. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.
 
+
+.. index:: pixel methods
 
 Creating and Manipulating Pixels
 ---------------------------------
@@ -141,6 +145,8 @@ Check Your Understanding
 
    If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
 
+
+.. index:: nested iteration
 
 Nested Iteration
 -----------------
@@ -246,6 +252,8 @@ Try This
 - Adapt the code above to draw a "pinstripe" image. In other words, change the code so that only every other row is colored red. *Hint: recall the modulus % operator.*
 - Can you make it work for every other column (instead of every other row)? How about every 5th row/column?
 
+
+.. index:: image methods
 
 Image Objects
 --------------

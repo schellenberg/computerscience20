@@ -148,6 +148,8 @@ Strings are also objects.  Each string instance has its own attributes and metho
 In this example, ``upper`` is a method that can be invoked on any string object 
 to create a new string in which all the characters are in uppercase.  ``lower`` works in a similar fashion changing all characters in the string to lowercase.  (The original string ``some_string`` remains unchanged.  A new string ``other_string`` is created.)
 
+.. index:: string methods
+
 In addition to ``upper`` and ``lower``, the following table provides a summary of some other useful string methods.  There are a few activecode examples that follow so that you can try them out.
 
 ==========  ==============      ==================================================================

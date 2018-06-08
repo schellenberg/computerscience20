@@ -20,6 +20,8 @@ Boolean Functions and Randomly Walking Turtles
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
 
+.. index:: boolean functions
+
 Boolean Functions
 ------------------
 

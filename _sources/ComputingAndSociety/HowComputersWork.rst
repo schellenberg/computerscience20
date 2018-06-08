@@ -14,6 +14,8 @@ The following videos were created by Code.org, and are released under a Creative
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.
 
 
+.. index:: computers
+
 Introducing How Computers Work
 --------------------------------
 

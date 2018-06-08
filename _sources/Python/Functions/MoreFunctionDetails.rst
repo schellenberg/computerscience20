@@ -49,6 +49,8 @@ Most functions require arguments, values that control how the function does its 
 
 In this example, the arguments to the ``abs`` function are 5 and -5.
 
+.. index:: parameters, arguments
+
 .. note:: The variables inside the function are called **parameters**, and the values that are passed to them when the function is called are **arguments**. For example, when we defined a function like ``def draw_square(some_turtle, side_length):``, ``some_turtle`` and ``side_length`` are parameters. When we call that function, like ``draw_square(tess, 100)``, ``tess`` and ``100`` are arguments. 
 
 Some functions take more than one argument. For example the math module contains a function called ``pow`` which takes two arguments, the base and the exponent.
@@ -80,6 +82,8 @@ return the maximum value sent. The arguments can be either simple values or
 expressions. In the last example, 16 is returned, since it is larger than 11,
 15, and 0.  Note that ``max`` also works on lists of values.
 
+.. index:: fruitful functions
+
 Notice that each of the above functions return values that can be used to build more complex expressions.
 
 So an important difference between these functions and ones like ``draw_square`` or ``draw_rectangle`` is that ``draw_square`` was not executed because we wanted it to compute a value --- on the contrary, we wrote ``draw_square`` because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.
@@ -98,6 +102,7 @@ mathematical function that we will call ``square``.  The square function will ta
 as a parameter and return the result of squaring that number.  Here is the
 black-box diagram with the Python code following.
 
+.. index:: return
 
 .. image:: images/squarefun.png
 
@@ -223,6 +228,8 @@ Check Your Understanding
     def add_em(x, y, z):
         print(x + y + z)
 
+.. index:: variable scope, local variable
+
 Variables and Parameters are Local
 ----------------------------------
 
@@ -263,6 +270,8 @@ value, complete its execution, and then when it is called again next
 time, recover the local variable.  Each call of the function creates
 new local variables, and their lifetimes expire when the function returns
 to the caller.
+
+.. index:: global scope
 
 On the other hand, it is legal for a function to access a global variable.  However, this is considered
 **bad form** by nearly all programmers and should be avoided.  Look at the following,

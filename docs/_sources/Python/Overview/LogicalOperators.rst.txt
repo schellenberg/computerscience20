@@ -8,8 +8,7 @@ Logical Operators
 
 .. topic:: Quick Overview of Day
 
-    Introduce the logical operators ``and``, ``or``, ``not``. Work on practice problems, in which students create programs that utilize logical operators.
-
+    Introduce the logical operators ``and``, ``or``, ``not``. Work on practice problems, in which students create programs that utilize logical operators. Booleans practice quiz.
 
 .. reveal:: curriculum_addressed
     :showtitle: Curriculum Outcomes Addressed In This Section
@@ -19,6 +18,8 @@ Logical Operators
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
+
+.. index:: and, or, not
 
 
 ``and``, ``or``, ``not``
@@ -64,6 +65,8 @@ Check Your Understanding
 
    What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?
 
+
+.. index:: operator precedence
 
 Precedence of Operators
 -----------------------

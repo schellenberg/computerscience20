@@ -124,7 +124,9 @@ Check Your Understanding
         for current_index in range(len(sentence)):
           if current_index % 2 == 0:
               print(sentence[current_index])
-      
+
+
+.. index:: in, not in
 
 The ``in`` and ``not in`` operators
 -----------------------------------
@@ -156,6 +158,7 @@ The ``not in`` operator returns the logical opposite result of ``in``.
     print('x' not in 'apple')
 
 
+.. index:: accumulator pattern
 
 The Accumulator Pattern with Strings
 ------------------------------------

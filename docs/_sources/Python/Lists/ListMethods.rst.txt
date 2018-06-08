@@ -128,6 +128,8 @@ There are two ways to use the ``pop`` method.  The first, with no parameter, wil
 last item of the list.  If you provide a parameter for the position, ``pop`` will remove and return the
 item at that position.  Either way the list is changed.
 
+.. index:: list methods
+
 The following table provides a summary of the list methods shown above.  The column labeled
 `result` gives an explanation as to what the return value is as it relates to the new value of the list.  The word
 **mutator** means that the list is changed by the method but nothing is returned (actually ``None`` is returned).  A **hybrid** method is one that not only changes the list but also returns a value as its result.  Finally, if the result is simply a return, then the list
@@ -334,6 +336,8 @@ The obvious problem here is that we can only add one item to our list. Let's put
     for thing_to_get in shopping_list:
         print(thing_to_get)
 
+.. index:: random.choice()
+
 Shakespearean Insult Generator
 -------------------------------
 
@@ -371,6 +375,8 @@ The following is a simple insult generator, using words found in the works of th
 
     print(the_insult)
 
+
+.. index:: split(), join()
 
 Strings and Lists
 -----------------

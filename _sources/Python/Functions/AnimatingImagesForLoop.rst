@@ -8,7 +8,7 @@ Animating a Micro:bit LED Image with a ``for`` Loop
 
 .. topic:: Quick Overview of Day
 
-    Animate images using a list and a ``for`` loop. Create a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.
+    Animate images using a list and a ``for`` loop. Work time for fruitful and non-fruitful function assignment (likely a Micro:bit assignment).
 
 
 .. reveal:: curriculum_addressed

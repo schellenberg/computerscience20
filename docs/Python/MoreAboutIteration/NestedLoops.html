@@ -294,7 +294,7 @@ that computer scientists like to start counting with 0!  This means that if ther
 <img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
 </div>
 <div class="section" id="the-rgb-color-model">
-<h2>1.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>1.2. The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
 The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
@@ -362,7 +362,7 @@ no basic color.  On the other hand, “White” has maximum values for all three
 </div>
 </div>
 <div class="section" id="creating-and-manipulating-pixels">
-<h2>1.3. Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>1.3. Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
@@ -448,7 +448,7 @@ print(p.get_green(), p.get_blue())
             </div>
 </div>
 <div class="section" id="nested-iteration">
-<h2>1.4. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>1.4. Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
@@ -586,7 +586,7 @@ img.draw(win)
 </div>
 </div>
 <div class="section" id="image-objects">
-<h2>1.6. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>1.6. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">get_width</span></code> and <code class="docutils literal"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">get_pixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal"><span class="pre">set_pixel</span></code>.</p>

@@ -46,6 +46,8 @@ The following code creates an image of the side of a die, and displays it on the
     microbit.display.show(dice)
 
 
+.. index:: concatenation
+
 Although we can figure out what is going on in the above code (each row is separated by a ``:``), it would be nice to improve the readability of creating our own images. One way we can do this is to use concatenation to join a number of strings together. Consider the following:
 
 .. activecode:: concatenation_reminder

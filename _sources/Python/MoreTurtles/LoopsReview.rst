@@ -207,6 +207,8 @@ Mixed Up Programs
    wn.exitonclick()
 
 
+.. index:: turtle methods
+
 .. _turtle_methods_list:
 
 Summary of Turtle Methods

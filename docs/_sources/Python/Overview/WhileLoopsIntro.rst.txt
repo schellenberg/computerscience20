@@ -18,6 +18,9 @@ The ``while`` Statement
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
 
+
+.. index:: while
+
 When we programmed in Reeborg, we used a ``while`` loop whenever we did not know the number of iterations (times the loop would repeat) before hand. This was helpful when we needed to do things like::
 
     while front_is_clear(): 

@@ -8,7 +8,7 @@ Using Lists
 
 .. topic:: Quick Overview of Day
 
-    Lists overview.
+    Creating lists. Checking the length of a list. Access elements of a list using the index operator. Using ``in`` and ``not in``. Taking a slice of a list. Immutability of strings, mutability of lists. For loops with lists.
 
 
 .. reveal:: curriculum_addressed
@@ -70,6 +70,7 @@ As you would expect, we can also assign list values to variables and pass lists 
     new_list = [ numbers, vocabulary ]
     print(new_list)
 
+.. index:: len()
 
 List Length
 -----------
@@ -120,6 +121,7 @@ Check Your Understanding
       print(len(a_list))
 
 
+.. index:: index operator
 
 Accessing Elements
 ------------------
@@ -196,7 +198,7 @@ Check Your Understanding
      a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(a_list[2][0])
 
-
+.. index:: in, not in
    
 List Membership
 ---------------
@@ -245,6 +247,7 @@ Check Your Understanding
      print(57 in a_list)
 
 
+.. index:: slice operator
 
 List Slices
 -----------
@@ -282,6 +285,7 @@ Check Your Understanding
      print(a_list[4:])
 
 
+.. index:: immutable
 
 Strings are Immutable
 ----------------------
@@ -312,6 +316,8 @@ best you can do is create a new string that is a variation on the original.
 The solution here is to concatenate a new first letter onto a slice of
 ``greeting``. This operation has no effect on the original string.
 
+
+.. index:: mutable
 
 Lists are Mutable
 -------------------

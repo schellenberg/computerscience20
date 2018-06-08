@@ -295,7 +295,7 @@ print(abs(-5))
 </textarea>
 </div>
 <p>In this example, the arguments to the <code class="docutils literal"><span class="pre">abs</span></code> function are 5 and -5.</p>
-<div class="admonition note">
+<div class="admonition note" id="index-0">
 <p class="first admonition-title">Note</p>
 <p class="last">The variables inside the function are called <strong>parameters</strong>, and the values that are passed to them when the function is called are <strong>arguments</strong>. For example, when we defined a function like <code class="docutils literal"><span class="pre">def</span> <span class="pre">draw_square(some_turtle,</span> <span class="pre">side_length):</span></code>, <code class="docutils literal"><span class="pre">some_turtle</span></code> and <code class="docutils literal"><span class="pre">side_length</span></code> are parameters. When we call that function, like <code class="docutils literal"><span class="pre">draw_square(tess,</span> <span class="pre">100)</span></code>, <code class="docutils literal"><span class="pre">tess</span></code> and <code class="docutils literal"><span class="pre">100</span></code> are arguments.</p>
 </div>
@@ -328,7 +328,7 @@ print(max(11, 5 * 3, 25 - 9, 0))
 return the maximum value sent. The arguments can be either simple values or
 expressions. In the last example, 16 is returned, since it is larger than 11,
 15, and 0.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
-<p>Notice that each of the above functions return values that can be used to build more complex expressions.</p>
+<p id="index-1">Notice that each of the above functions return values that can be used to build more complex expressions.</p>
 <p>So an important difference between these functions and ones like <code class="docutils literal"><span class="pre">draw_square</span></code> or <code class="docutils literal"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
 <p>Functions that return values are sometimes called <strong>fruitful functions</strong>.
 A function that doesn’t return a value can be simply called a function, or if we want
@@ -339,7 +339,7 @@ to make it extremely clear, a <em>non-fruitful</em> function.</p>
 mathematical function that we will call <code class="docutils literal"><span class="pre">square</span></code>.  The square function will take one number
 as a parameter and return the result of squaring that number.  Here is the
 black-box diagram with the Python code following.</p>
-<img alt="../../_images/squarefun.png" src="../../_images/squarefun.png" />
+<img alt="../../_images/squarefun.png" id="index-2" src="../../_images/squarefun.png" />
 
 <div data-childcomponent="more_function_details_4" class="runestone explainer ac_section alert alert-warning">
 
@@ -533,7 +533,7 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
             </div>
 </div>
 <div class="section" id="variables-and-parameters-are-local">
-<h2>1.3. Variables and Parameters are Local<a class="headerlink" href="#variables-and-parameters-are-local" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>1.3. Variables and Parameters are Local<a class="headerlink" href="#variables-and-parameters-are-local" title="Permalink to this headline">¶</a></h2>
 <p>An assignment statement in a function creates a <strong>local variable</strong> for the
 variable on the left hand side of the assignment operator. It is called local because this variable only
 exists inside the function and you cannot use it outside. For example,
@@ -604,7 +604,7 @@ value, complete its execution, and then when it is called again next
 time, recover the local variable.  Each call of the function creates
 new local variables, and their lifetimes expire when the function returns
 to the caller.</p>
-<p>On the other hand, it is legal for a function to access a global variable.  However, this is considered
+<p id="index-4">On the other hand, it is legal for a function to access a global variable.  However, this is considered
 <strong>bad form</strong> by nearly all programmers and should be avoided.  Look at the following,
 nonsensical variation of the square function.</p>
 

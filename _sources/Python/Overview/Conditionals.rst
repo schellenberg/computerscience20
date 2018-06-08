@@ -90,6 +90,8 @@ What will the following programs output? Why?
     print("I'm a little sleepy.")
 
 
+.. index:: booleans
+
 Booleans
 ---------
 
@@ -121,6 +123,8 @@ The equality operator, ``==``, compares two values and produces a boolean value 
     print(5 == 5)
     print(5 == 6)
 
+.. index:: comparison operators
+
 In the first statement, the two operands are equal, so the expression evaluates
 to ``True``.  In the second statement, 5 is not equal to 6, so we get ``False``.
 
@@ -134,7 +138,7 @@ The ``==`` operator is one of six common **comparison operators**; the others ar
     x >= y               # x is greater than or equal to y
     x <= y               # x is less than or equal to y
 
-We have already been using most of these, but ``!=`` is new to us. We have used ``not`` with Reeborg, but ``not`` switches the value of a boolean expression. Consider the following:
+We have already been using most of these, but ``!=`` is new to us. You should also remember that we used ``not`` with Reeborg, and that ``not`` switches the value of a boolean expression. Consider the following:
 
 .. activecode:: boolean_3
     :nocodelens:

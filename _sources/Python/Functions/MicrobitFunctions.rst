@@ -8,7 +8,7 @@ Fruitful Functions and the Micro:bit
 
 .. topic:: Quick Overview of Day
 
-    Adapt the Micro:bit reaction game from yesterday, and review how the code works. Create a game for the Micro:bit in which the Micro:bit controls a turtle's movement on the screen.
+    WDTPD on variable scope. Functions practice quiz. Micro:bit fruitful functions. 
 
 
 .. reveal:: curriculum_addressed
@@ -336,7 +336,7 @@ Try the following (either by yourself or with a partner):
 A More Involved Micro:bit Function Example
 -------------------------------------------
 
-One of the great things about using functions is that you can use a function without having to know all of the details about how it works. In the following example, you do not need to worry about how the functions work (though you can definitely try to figure them out, if you want to). The important things you need to understand are all inside the ``while True`` loop. We are using two things that you may not have seen before:
+One of the great things about using functions is that you can use a function without having to know all of the details about how it works. In the following example, **you do not need to worry about how the functions work** (though you can definitely try to figure them out, if you want to). The important things you need to understand are all inside the ``while True`` loop. We are using two things that you may not have seen before:
 
 - ``some_list.append("thing")`` adds "thing" to the end of a list. We use this to keep track of the actions the user has made in a list called ``actions``.
 - ``break`` forces the current looping structure to terminate. We use this to exit out of the ``while True`` loop if the user enters in a `secret code <https://en.wikipedia.org/wiki/Konami_Code>`_.

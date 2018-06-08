@@ -18,6 +18,8 @@ The HyperText Markup Language
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.
 
 
+.. index:: html
+
 Introduction to HTML
 -----------------------
 

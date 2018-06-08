@@ -64,10 +64,12 @@ In the code above, try:
 After completing the tasks above, try having the turtle use the following instruction string: ``UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F``
 
 
+.. index:: l-systems
+
 Turtles and Strings and L-Systems
 ---------------------------------
 
-This section describes a much more interested example of string iteration and the accumulator pattern.  Even though it seems like we are doing something that is much more complex, the basic processing is the same as was shown in the previous sections.
+This section describes a much more interesting example of string iteration and the accumulator pattern.  Even though it seems like we are doing something that is much more complex, the basic processing is the same as was shown in the previous sections.
 
 In 1968 Aristid Lindenmayer, a biologist, invented a formal system that
 provides a mathematical description of plant growth known as an

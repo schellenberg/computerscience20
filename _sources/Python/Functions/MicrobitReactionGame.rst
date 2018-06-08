@@ -134,14 +134,19 @@ As you read through the reaction game code, there are a number of things that ma
 
 Although you do not have to follow the structure given above exactly, it does provide a reasonable way to organize your code.
 
+.. index:: constant
+
 Another thing you likely noticed is that I used ALL_CAPS when creating a *constant*. In Python, a constant is just a regular variable (so it behaves the exact same way as any other variable). However, a common convention is to use ALL_CAPITAL_LETTERS_IN_THE_VARIABLE_NAME, which simply reminds us as programmers that this is a variable whose value should never be changed within our code.
+
+.. index:: time.time()
 
 I also used a new function from the ``time`` module in this program. ``time.time()`` returns the number of seconds that have elapsed since the *epoch*, which is how your computer keeps track of what the current time is. To understand what this means, call ``time.time()`` in Thonny's shell a few times. Notice that the number you get back from the function is a really large number, and that it has increased each time you call the function. It is important to realize that the unit of this number is **seconds**. You might find it helpful to uncomment the line containing ``print(time_since_start)`` to help you understand the ``time.time()`` function.
 
 .. note:: The `Python docs section on time <https://docs.python.org/3/library/time.html#epoch>`_ define the epoch as "the point where the time starts, and is platform dependent. For Unix, the epoch is January 1, 1970, 00:00:00 (UTC). To find out what the epoch is on a given platform, look at ``time.gmtime(0)``." 
 
+.. index:: break
 
-The ``break`` command forces the current loop to terminate. In this case, it allows us to exit the ``while True`` infinite loop when one of the players has earned enough points to win the game.
+The ``break`` command forces the nearest enclosing loop to terminate. In this case, it allows us to exit the ``while True`` infinite loop when one of the players has earned enough points to win the game.
 
 
 Adapt the Code

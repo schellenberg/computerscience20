@@ -33,6 +33,8 @@ Draw the shape above. After you have finished drawing your version, share your c
     import turtle
 
 
+.. index:: functions
+
 Functions
 ---------
 
@@ -100,6 +102,8 @@ This function is named ``draw_square``.  It has two parameters --- one to tell
 the function which turtle to move around and the other to tell it the size
 of the square we want drawn.  In the function definition they are called ``some_turtle`` and ``side_length`` respectively.   Make sure you know where the body of the function ends --- it depends on the indentation and the blank lines don't count for
 this purpose!
+
+.. index:: docstrings
 
 .. admonition::  docstrings
 
