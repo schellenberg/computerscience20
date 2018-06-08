@@ -10,17 +10,6 @@ Python Review
 Variables and Data Types
 ------------------------
 
-The fundamental data types that we are concerned about in Python include:
-
-- **int** (integer, such as ``3`` or ``-5``)
-- **float** (floating point number, such as ``1.2`` or ``-4.75``)
-- **str** (string, such as ``"hello"`` or ``'Friday'`` or ``"5"``)
-- **bool** (boolean, such as ``True`` or ``False``) 
-
-
-Your Turn
-~~~~~~~~~~
-
 .. mchoice:: review_data_types_1_1
     :answer_a: boolean
     :answer_b: integer
@@ -77,53 +66,16 @@ Your Turn
 Converting Between Data Types
 -----------------------------
 
-Sometimes you might need to convert from one data type to another. You can use the following functions to **type cast** data:
+.. parsonsprob:: review_type_casting_1
 
-- ``str(x)`` to convert *x* to a string
-- ``int(x)`` to convert *x* to an integer
-- ``float(x)`` to convert *x* to a floating point number
-
-.. activecode:: review_casting_data_types
-    :nocodelens:
-
-    a = 4         #a is an int
-    print( type(a) )
-
-    b = str(a)    #b is the string '4'
-    print( type(b) )
-   
-    c = float(b)  #c is the float 4.0
-    print( type(c) )
+    Construct a block of code that correctly takes in a number from a user, then prints out twice the value that was given.
+    -----
+    number =  input("Please enter a number:")
+    number = float(number)
+    doubled = number * 2
+    print(str(doubled) + " is twice the value of the number you entered.")
 
 
-
-Taking Input from User
--------------------------
-
-If you want the user to type something, you can use the ``input()`` function. Here are a couple examples:
-
-.. note:: ``input()`` will always return a string. You will need to convert it to an int or a float if you are expecting a number.
-
-
-.. activecode:: review_input_intro_1
-    :nocodelens:
-    
-    your_name = input("What is your name?")
-    print(your_name)
-
-
-.. activecode:: review_input_intro_2
-    :nocodelens:
-    
-    def say_hello(some_name):
-        print("Hello there, ", some_name)
-
-    your_name = input("What is your name?")
-    say_hello(your_name)
-
-
-Your Turn
-~~~~~~~~~~
 
 The following example is not going to work when you try to run it. Try entering in ``16``, then ``15``. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? *Hint: think about data types!*
 
@@ -143,23 +95,7 @@ The following example is not going to work when you try to run it. Try entering 
 Math Operators
 --------------
 
-The following table shows the most frequently used Python math operators.
-
-=======   ==============================    ===============       ======
-Symbols   Operations                        Example               Output
-=======   ==============================    ===============       ======
-\+        Addition                          ``1 + 2``             3
-\-        Subtraction                       ``2 - 1``             1
-\*        Multiplication                    ``2 * 2``             4
-/         Division                          ``5 / 2``             2.5
-//        Truncating Division (quotient)    ``5 // 2``            2
-%         Modulo (remainder)                ``5 % 2``             1
-\*\*       Power                            ``5 ** 2``            25
-=======   ==============================    ===============       ======
-
-
-Your Turn
-~~~~~~~~~~
+If you have trouble with any of the following, you might want to look back at the :ref:`math_operator_list` list.
 
 .. fillintheblank:: review_python_math_operators_1
 
@@ -208,98 +144,128 @@ Your Turn
 ``if``
 ----------------
 
-The ``if`` control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to ``number = 23``. How about ``number = 10``? 
-
 .. note:: A single equal sign ``=`` is used to **assign** a value. Two equal signs ``==`` are used when **comparing** a value.
 
-.. activecode:: review_if_intro_1
-    :nocodelens:
-    
-    number = 42
-    number = number // 4
-
-    if number == 10:
-        print("So long and thanks for all the fish.")
-
-    else:
-        print("And now for something completely different...")
-
-
-Your Turn
-~~~~~~~~~~
 
 .. mchoice:: review_conditionals_if_mc_1
-   :answer_a: Output a
-   :answer_b: Output b
-   :answer_c: Output c
-   :answer_d: It will cause an error because every if must have an else clause.
-   :correct: b
-   :feedback_a: Because -10 is less than 0, Python will execute the body of the if-statement here.
-   :feedback_b: Python executes the body of the if-block as well as the statement that follows the if-block.
-   :feedback_c: Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).
-   :feedback_d: It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).
+    :answer_a: Output a
+    :answer_b: Output b
+    :answer_c: Output c
+    :answer_d: It will cause an error because every if must have an else clause.
+    :correct: b
+    :feedback_a: Because -10 is less than 0, Python will execute the body of the if-statement here.
+    :feedback_b: Python executes the body of the if-block as well as the statement that follows the if-block.
+    :feedback_c: Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).
+    :feedback_d: It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).
 
-   What does the following code print?
+    What does the following code print?
 
-   .. code-block:: python
+    .. code-block:: python
      
-     x = -10
-     if x < 0:
-         print("The negative number ",  x, " is not valid here.")
-     print("This is always printed")
+        x = -10
+        if x < 0:
+            print("The negative number ",  x, " is not valid here.")
+        print("This is always printed")
 
-   ::
 
-     a.
-     This is always printed
+    .. highlight:: none
 
-     b.
-     The negative number -10 is not valid here
-     This is always printed
+    .. code-block:: html
 
-     c.
-     The negative number -10 is not valid here
+        a.
+        This is always printed
+
+        b.
+        The negative number -10 is not valid here
+        This is always printed
+
+        c.
+        The negative number -10 is not valid here
+
+    .. highlight:: python
+
+.. mchoice:: review_conditionals_if_mc_2
+    :answer_a: Output a
+    :answer_b: Output b
+    :answer_c: Output c
+    :answer_d: It will cause an error because every if must have an else clause.
+    :correct: d
+    :feedback_a: Try again. Remember that any number of consecutive if statements can evaluate to True.
+    :feedback_b: Try again. Remember that any number of consecutive if statements can evaluate to True.
+    :feedback_c: Try again. It's less than 100!
+    :feedback_d: Great!
+
+    What does the following code print?
+
+    .. code-block:: python
+     
+        number = 64
+
+        if number > 0:
+            print("It's positive!")
+
+        if number > 50:
+            print("It's pretty big.")
+
+        if number > 100:
+            print("It's really big!")
+
+
+
+    .. highlight:: none
+
+    .. code-block:: html
+
+        a.
+        It's positive!
+
+        b.
+        It's positive!
+        It's really big!
+
+        c.
+        It's pretty big.
+
+        d.
+        It's positive!
+        It's pretty big.
+
+    .. highlight:: python
 
 
 ``if/elif/else``
 ----------------
 
-The ``if/elif/else`` control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that **only one of the branches can execute**. Read the code below, and predict what you think the output will be. Then change it to ``temp = 25``. What will the output be now? How about if you change it to ``temp = 5``? What about ``temp = 15``?
-
-.. activecode:: review_if_elif_else_intro
-    :nocodelens:
-    
-    temp = -3
-
-    if temp < -10:
-        print("wear winter jacket")
-    elif temp < 15:
-        print("wear long sleeve shirt")
-    else:
-        print("wear t-shirt")
-
-Your Turn
-~~~~~~~~~~
-
 .. mchoice:: review_conditionals_mc_1
-   :answer_a: TRUE
-   :answer_b: FALSE
-   :answer_c: TRUE on one line and FALSE on the next
-   :answer_d: Nothing will be printed
-   :correct: b
-   :feedback_a: TRUE is printed by the if-block, which only executes if the conditional (in this case, 4+5 == 10) is true.  In this case 5+4 is not equal to 10.
-   :feedback_b: Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.
-   :feedback_c: Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.
-   :feedback_d: Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.
+    :answer_a: Output 1
+    :answer_b: Output 2
+    :answer_c: Output 3
+    :answer_d: Output 4
+    :correct: b
+    :feedback_a: TRUE is printed by the if-block, which only executes if the conditional (in this case, 4+5 == 10) is true.  In this case 5+4 is not equal to 10.
+    :feedback_b: Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.
+    :feedback_c: Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.
+    :feedback_d: Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.
 
-   What does the following code print (choose from output a, b, c or nothing)?
+    What does the following code print (choose from output a, b, c or nothing)?
 
-   .. code-block:: python
+    .. code-block:: python
 
-     if 4 + 5 == 10:
-         print("TRUE")
-     else:
-         print("FALSE")
+        if 4 + 5 == 10:
+            print("TRUE")
+        else:
+            print("FALSE")
+
+    ::
+
+        a.  TRUE
+
+        b.  FALSE
+
+        c.  TRUE
+            FALSE
+
+        d.  Nothing will be printed.
 
 
 .. mchoice:: review_conditionals_mc_2
@@ -340,25 +306,68 @@ Your Turn
          TRUE
 
 
+.. mchoice:: review_conditionals_mc_3
+    :answer_a: Output a
+    :answer_b: Output b
+    :answer_c: Output c
+    :answer_d: Output d
+    :correct: a
+    :feedback_a: Great! Remember that only one branch of an if/elif/else block can execute.
+    :feedback_b: Try again. Remember that only one branch of an if/elif/else block can execute.
+    :feedback_c: Try again. Remember that only one branch of an if/elif/else block can execute.
+    :feedback_d: Try again. Remember that only one branch of an if/elif/else block can execute.
+
+    What does the following code print?
+
+    .. code-block:: python
+     
+        number = 64
+
+        if number > 0:
+            print("It's positive!")
+
+        elif number > 50:
+            print("It's pretty big.")
+
+        elif number > 100:
+            print("It's really big!")
+
+
+
+    .. highlight:: none
+
+    .. code-block:: html
+
+        a.
+        It's positive!
+
+        b.
+        It's positive!
+        It's really big!
+
+        c.
+        It's pretty big.
+
+        d.
+        It's positive!
+        It's pretty big.
+
+    .. highlight:: python
+
+
 
 ``while`` loop
 --------------
 
-We use a ``while`` loop when we don't know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to ``True``. Run the code below. Can you change the code so that it counts **up** from 1 to 10, then says "Here I come!"?
+.. parsonsprob:: review_while_loop_1
 
-.. activecode:: review_while_loop_intro
-    :nocodelens:
-    
+    Construct a block of code that correctly counts from 10 down to 1, then prints Blastoff!
+    -----
     counter = 10
-
     while counter > 0:
         print(counter)
-        counter = counter - 1   #decrease the counter each iteration
-
+        counter = counter - 1
     print("Blastoff!")
-
-Your Turn
-~~~~~~~~~~
 
 Write a program that asks the user to enter a password. Keep asking for the password until they enter "sask".  Once they have successfully typed in "sask", print out *What a great place!*.
 
@@ -371,38 +380,21 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 ``for`` loop
 ------------
 
-We use a ``for`` loop when we know the number of iterations before the looping begins. 
+.. parsonsprob:: review_for_loop_1
 
-.. activecode:: review_for_loop_intro_1
-    :nocodelens:
-    
-    for counter in range(10):
+    Construct a block of code that correctly counts from 1 up to 10, then prints ``Made it!``
+    -----
+    for counter in range(1, 11):
         print(counter)
+    print("Made it!")
 
-Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:
+.. parsonsprob:: review_for_loop_2
 
-.. activecode:: review_for_loop_intro_2
-    :nocodelens:
-    
-    for counter in range(5, 11):
-        print(counter)
-
-Recall that calling ``range(5, 11)`` creates a list of numbers starting at 5, and going up to (but not including) 11. Although we could accomplish the same thing by specifying the list of numbers ourselves (as in, ``for counter in [5, 6, 7, 8, 9, 10]:``), it is cumbersome when counting a large amount.
-
-Note that if you give a third argument to the ``range(min, max, step)`` function, it acts as the amount to step/increase by.
-
-Although using range allows us to generate a list of numerical values, we can use a for loop to iterate through a list of values involving any data type, as follows.
-
-.. activecode:: review_for_loop_intro_3
-    :nocodelens:
-    
-    grocery_list = ["apples", "carrots", "milk", "yogurt"]
-    for item in grocery_list:
-        print("Don't forget to buy the", item)
-
-
-Your Turn
-~~~~~~~~~~
+    Construct a block of code that correctly prints out a greeting for each person, using a for loop.
+    -----
+    people = ["Alice", "Bob", "Eve"]
+    for name in people:
+        print("Hello there, " + name)
 
 .. mchoice:: review_test_question3_4_1
     :answer_a: 1
@@ -425,31 +417,6 @@ Your Turn
 
 ``and``, ``or``, ``not``
 ----------------------------
-
-There are three **logical operators**: ``and``, ``or``, and ``not``. The
-semantics (meaning) of these operators is similar to their meaning in English.
-For example, ``x > 0 and x < 10`` is true only if ``x`` is greater than 0 *and*
-at the same time, x is less than 10.  How would you describe this in words?  You would say that x is between 0 and 10, not including the endpoints.
-
-``n % 2 == 0 or n % 3 == 0`` is true if *either* of the conditions is true,
-that is, if the number is divisible by 2 *or* divisible by 3.  In this case, one, or the other, or both of the parts has to be true for the result to be true.
-
-Finally, the ``not`` operator negates a boolean expression, so ``not  x > y``
-is true if ``x > y`` is false, that is, if ``x`` is less than or equal to
-``y``.
-
-.. activecode:: local_operators_example_1
-
-    x = 5
-    print(x > 0 and x < 10)
-
-    n = 25
-    print(n % 2 == 0 or n % 3 == 0)
-
-
-Your Turn
-~~~~~~~~~~
-
 
 .. mchoice:: review_booleans_practice_quiz_1
     :answer_a: True
@@ -559,30 +526,22 @@ Your Turn
 Functions
 ----------
 
-Recall that we can create both fruitful and non-fruitful functions. Fruitful means that the function *returns* a value, whereas non-fruitful functions do not return anything.
+.. parsonsprob:: review_functions_1
 
-.. activecode:: review_functions_intro_1
-    :nocodelens:
-    
-    def say_hello():
-        print("Hello there!")
-
-    say_hello()
-
-
-.. activecode:: review_functions_intro_2
-    :nocodelens:
-    
-    def say_hello(some_name):
-        print("Hello there,", some_name)
-
-    say_hello("Eli")
-
-
-
-
-Your Turn
-~~~~~~~~~~
+    Construct a function which returns the type of clothing you should wear, based on the parameter temperature. If the temperature is below -10, you will wear a parka and toque. If the temperature is between -10 and 0, wear a toque. If the temperature is greater than 0 but less than 10, wear a sweater. If the temperature is between 10 and 20, wear a t-shirt. If the temperature is greater than 20, wear shorts.
+    -----
+    def wear_the_right_thing(temperature):
+        """Return a suggestion of what to wear, given a temperature."""
+        if temperature < -10:
+            return "parka and toque"
+        elif temperature <= 0:
+            return "toque"
+        elif temperature < 10:
+            return "sweater"
+        elif temperature <= 20:
+            return "t-shirt"
+        else:
+            return "shorts"
 
 .. activecode:: review-double-it-positive
     :nocodelens:
@@ -647,29 +606,33 @@ Your Turn
    Can you use the same name for a local variable as a global variable?
 
 
-Python Modules
----------------
-
-One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. 
-
-.. activecode:: review_module_intro_2
-    :nocodelens:
-    
-    import math
-
-    print( math.sqrt(16) )
-    print( math.cos(0) )
-
-.. activecode:: review_module_intro_3
-    :nocodelens:
-    
-    import random
-
-    print( random.randrange(1, 10) )
-
-
 Drawing Images Practice
 -------------------------
+
+.. image:: images/confusion-5.png
+
+.. parsonsprob:: review_turtle_drawings_1
+
+    Construct a function that draws the image shown above:
+    -----
+    import turtle
+    =====
+    def draw_cross(some_turtle, side_length):
+        """Draws a cross shape with the given some_turtle, with each side being of side_length."""
+    =====
+        for tower in range(4):
+    =====
+            for side in range(3):
+    =====
+                some_turtle.forward(side_length)
+                some_turtle.left(90)
+    =====
+            some_turtle.left(180)
+    =====
+    canvas = turtle.Screen()
+    ramisa = turtle.Turtle()
+    =====
+    draw_cross(ramisa, 50)
 
 Draw the following image. Be sure to define and use at least one function as part of your solution.
 
@@ -694,6 +657,38 @@ Image Manipulation with Nested Loops
 .. raw:: html
 
     <img src="../../_static/skflag.png" id="skflag.png">
+
+
+.. parsonsprob:: review_image_manipulation_1
+
+    Construct a function that draws the *negative* of the image shown above:
+    -----
+    import image
+    =====
+    img = image.Image("skflag.png")
+    =====
+    width = img.get_width()
+    height = img.get_height()
+    =====
+    canvas = image.ImageWin(width, height)
+    img.draw(canvas)
+    =====
+    for x in range(width):
+    =====
+        for y in range(height):
+    =====
+            p = img.get_pixel(x, y)
+    =====
+            r = 255 - p.get_red()
+            g = 255 - p.get_green()
+            b = 255 - p.get_blue()
+    =====
+            new_pixel = image.Pixel(r, g, b)
+    =====
+            img.set_pixel(x, y, new_pixel)
+    =====
+    img.draw(canvas)
+
 
 
 Recall that we were able to manipulate images using a nested loop (a loop inside a loop). Fix the following code, which is missing the nested for loop. Make it display the *negative* image, which you can calculate by subtracting the original RGB values from 255.
