@@ -26,6 +26,6 @@ Try to adapt the solution you made for Step 14 to make it work with this new lak
 
 .. |reeborg_environment_extra| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2019" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2019" target="_blank">Reeborg environment</a>
 
 

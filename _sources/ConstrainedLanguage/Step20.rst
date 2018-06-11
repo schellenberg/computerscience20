@@ -24,5 +24,5 @@ To help you get started with this problem, consider the following question. Imag
 
 .. |reeborg_environment_extra| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2020" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2020" target="_blank">Reeborg environment</a>
 

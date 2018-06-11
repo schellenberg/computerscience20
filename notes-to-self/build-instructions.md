@@ -14,7 +14,7 @@
 If serving the resulting build on GitHub pages, you MUST create a file called `.nojekyll` and save it in the folder you are serving the pages from. This will convince GitHub to include files/folders prepended with an underscore (such as _static).
 
 ### Skulpt build
-For right now, I'm using a customized build of Skulpt, in order to be able to use under_score_separated_variable_names on the website while doing image manipulation. In order to do this, just drag the skulpt.min.js and skulpt-stdlib.js files from this notes-to-self folder into the /docs/_static/ folder.
+For right now, I'm using a customized build of Skulpt, in order to be able to use under_score_separated_variable_names on the website while doing image manipulation. In order to do this, just drag the skulpt.min.js and skulpt-stdlib.js files from this notes-to-self folder into the /docs/_static/ folder. *Note: this shouldn't be required for too much longer, as my customized version of the image library has been incorporated into Skulpt, so manually including a customized build should not be required long term.*
 
 ## Subsequent times
 - [optionally, if you want to set up a virtual env] `workon sk-thinkcs`

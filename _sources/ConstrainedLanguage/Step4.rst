@@ -117,4 +117,4 @@ Recall that the functions discussed so far include:
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%204" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%204" target="_blank">Reeborg environment</a>

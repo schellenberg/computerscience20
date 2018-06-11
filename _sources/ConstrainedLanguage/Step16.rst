@@ -37,4 +37,4 @@ Reeborg has been hired to pick carrots in a number of gardens. Although the gard
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2016" target="_blank">Reeborg environment</a>

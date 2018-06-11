@@ -47,4 +47,4 @@ Give Reeborg the appropriate instructions to make it return home!
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%201" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%201" target="_blank">Reeborg environment</a>

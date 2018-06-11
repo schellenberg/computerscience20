@@ -31,4 +31,4 @@ Write a program to help Reeborg find the lunchbox. The secret is to have Reeborg
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2017" target="_blank">Reeborg environment</a>
+   <a href="/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2017" target="_blank">Reeborg environment</a>
