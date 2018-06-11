@@ -1,7 +1,7 @@
 Computer Science 20 - Saskatchewan
 ----------------------------------
 
-.. caution:: If you run into certificate warnings, or would just like a shorter URL to remember, my personal fork of this project is housed at `cs20.ca <https://cs20.ca/>`_. Please note that this textbook is currently being written, so things will change/be added until the end of June. If you spot any errors, please `let me know! <mailto:schellenberg@gmail.com>`_ 
+.. caution:: This project is being moved to `cs20.ca <https://cs20.ca/>`_, which is where I (Dan Schellenberg) will continue to update/adapt the book. If you would like a version that will not change, Saskatoon Public Schools will host a version of the book as of June 2018 (I will add the link as soon as it is available).
 
 
 Preface

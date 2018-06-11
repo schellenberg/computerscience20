@@ -543,6 +543,8 @@ Functions
         else:
             return "shorts"
 
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+
 .. activecode:: review-double-it-positive
     :nocodelens:
 
@@ -661,7 +663,7 @@ Image Manipulation with Nested Loops
 
 .. parsonsprob:: review_image_manipulation_1
 
-    Construct a function that draws the *negative* of the image shown above:
+    Construct a function that draws the *negative* of the image shown above. *Note*: due to technical limitations with this question, you need to use the *x* coordinate as your outer loop.
     -----
     import image
     =====
@@ -690,44 +692,8 @@ Image Manipulation with Nested Loops
     img.draw(canvas)
 
 
-
-Recall that we were able to manipulate images using a nested loop (a loop inside a loop). Fix the following code, which is missing the nested for loop. Make it display the *negative* image, which you can calculate by subtracting the original RGB values from 255.
-
-.. activecode::  review_acimg_1
-    :nocodelens:
-
-    import image
-
-    img = image.Image("skflag.png")
-    width = img.get_width()
-    height = img.get_height()
-    
-    canvas = image.ImageWin(width, height)
-    img.draw(canvas)
-
-    # create nested loop here
-    
-            # inside nested loop, get pixel
-            p = img.get_pixel(col, row)
-
-            # recall that you can access RGB values by calling something like:
-            # new_red = p.get_red()
-            
-            # you can create a new pixel as follows
-            new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-            # set the pixel of the original image to the new, transformed value
-            img.set_pixel(col, row, new_pixel)
-
-        # unindent the following line to remove the "animation"
-        img.draw(canvas)
-
-
 Strings
 --------
-
-Recall that we can access portions of a string by using the indexing operator ``[]``, and that the index of the leftmost character of the string is 0. Remember as well that strings are immutable (you cannot modify individual characters within a string).
-
 
 .. mchoice:: review_string_index_test_question_1
    :answer_a: t
@@ -820,7 +786,7 @@ Recall that we can access portions of a string by using the indexing operator ``
       print(sentence[-3])
 
 
-.. mchoice:: review_string_length_test_question_1
+.. mchoice:: review_string_length_test_question_4
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
@@ -837,25 +803,6 @@ Recall that we can access portions of a string by using the indexing operator ``
 
       sentence = "python rocks"
       print(sentence[3:8])
-
-
-.. mchoice:: review_string_length_test_question_2
-   :answer_a: rockrockrock
-   :answer_b: rock rock rock
-   :answer_c: rocksrocksrocks
-   :answer_d: Error, you cannot use repetition with slicing.
-   :correct: a
-   :feedback_a: Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.
-   :feedback_b: Repetition does not add a space.
-   :feedback_c: Slicing will not include the character at index 11.  Just up to it (10 in this case).
-   :feedback_d: The slice will happen first, then the repetition.  So it is ok.
-
-   What is printed by the following statements?
-   
-   .. code-block:: python
-
-      sentence = "python rocks"
-      print(sentence[7:11] * 3)
 
 
 .. mchoice:: review_string_for_loop_by_item_test_question_1
@@ -951,38 +898,24 @@ Recall that we can access portions of a string by using the indexing operator ``
       print(s.count("o") + s.count("p"))
 
 
-.. mchoice:: review_string_methods_check_understanding2
-   :answer_a: yyyyy
-   :answer_b: 55555
-   :answer_c: n
-   :answer_d: Error, you cannot combine all those things together.
-   :correct: a
-   :feedback_a: Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.
-   :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
-   :feedback_c: This expression uses the index of n
-   :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+.. parsonsprob:: review_even_letters
 
-   What is printed by the following statements?
-   
-   .. code-block:: python
-   
-      s = "python rocks"
-      print(s[1] * s.find("n"))
-
+    Construct a block of code that correctly creates a function with a single parameter word that returns the even letters of the word, then calls the function and prints the result.
+    -----
+    def even_letters(word):
+        new_word = ''
+        counter = 0
+        for letter in word:
+            if counter % 2 == 0:
+                new_word = new_word + letter
+            counter = counter + 1
+        return new_word
+    changed_word = even_letters("Saskatchewan")
+    print(changed_word)
 
 
 Lists
 ------
-
-Recall that for lists:
-
-- ``len`` returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length.
-- The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. Also note that you can use the index operator ``[]`` more than once in a row to access things inside the list.
-- ``in`` and ``not in`` are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.
-- The slice operation we saw with strings also work on lists.
-- Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing it directly as part of the assignment statement.
-- Just as there are built-in methods for strings, there are built-in methods for lists. Some of the most helpful are ``append()`` (adds an item to the end of a list), ``pop`` (removes and returns the last item), and ``remove()`` (removes first occurrence of an item)
-  
 
 .. mchoice:: review_test_question9_2_1
    :answer_a: 4
@@ -1155,10 +1088,43 @@ Recall that for lists:
         print(a_list)
 
 
+.. note:: The only thing you need to do for this question is to complete the function definition! **You do not need to call the function**, as that will be done automatically for you.
+
+.. activecode:: review_list_overview_practice_problem_3
+    :nocodelens:
+
+    Write a function to count how many odd numbers are in a list.
+
+    **Examples:**
+
+    ``count_odds([1,3,5,7,9]) → 5``
+
+    ``count_odds([1,2,3,4,5]) → 3``
+
+    ``count_odds([2,4,6,8,10]) → 0``
+    ~~~~   
+    def count_odds(a_list):
+        # your code here
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(count_odds([1,3,5,7,9]),5,"count_odds([1,3,5,7,9])")
+          self.assertEqual(count_odds([1,2,3,4,5]),3,"count_odds([-1,-2,-3,-4,-5])")
+          self.assertEqual(count_odds([2,4,6,8,10]),0,"count_odds([2,4,6,8,10])")
+          self.assertEqual(count_odds([0,-1,12,-33]),2,"count_odds([0,-1,12,-33])")
+
+    myTests().main()
+
+
+
 Number Guessing Game
 --------------------
 
-To confirm that you can put many of these ideas into practice, see if you can implement a number guessing game in Python that does the following:
+Implement a number guessing game in Python that does the following:
 
 - generate a random number from 1 to 100 and stores it in a variable
 - repeat the following until the user guesses the number:
@@ -1169,39 +1135,8 @@ To confirm that you can put many of these ideas into practice, see if you can im
 - congratulate the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
 
 
-.. activecode:: number_guessing_game_review
+.. activecode:: review_number_guessing_game
     :caption: Create a number guessing game here!
     
-    # the algorithm for the game can be described as follows
-    # your job is to try to convert the comments into real Python code!
-
-    # have the computer pick a random number between 1 to 100
-
-
-    # create a variable to keep track of the number of guesses taken
-
-
-    # set a variable with an initial value for the users guess, like this:
-    user_guess = -1
-
-    # repeat the following until the user guesses correctly
-
-        # ask the user for their guess
-
-
-        # update the number of guesses variable
-
-
-        # if they guess high, tell them
-
-
-        # if they guess low, tell them
-
-
-    # congratulate the user, telling them how many guesses it took
-
-
-
-
-
+    # your code here!
 

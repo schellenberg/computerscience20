@@ -824,7 +824,11 @@ for name in people:
         return "shorts"
         </pre>
         </div>
-    
+    <div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+
 <div data-childcomponent="review-double-it-positive" class="runestone explainer ac_section alert alert-warning">
 <p>The parameter <code class="docutils literal"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal"><span class="pre">the_number</span></code> is 0, return 0.</p>
 <p><code class="docutils literal"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
@@ -940,7 +944,7 @@ draw_cross(ramisa, 50)
 <img src="../../_static/skflag.png" id="skflag.png">
         <div class="runestone" style="max-width: none;">
         <pre data-component="parsons" id="review_image_manipulation_1">
-        <span data-question>python-review28: Construct a function that draws the *negative* of the image shown above:</span>import image
+        <span data-question>python-review28: Construct a function that draws the *negative* of the image shown above. *Note*: due to technical limitations with this question, you need to use the *x* coordinate as your outer loop.</span>import image
 ---
 img = image.Image("skflag.png")
 ---
@@ -967,42 +971,9 @@ for x in range(width):
 img.draw(canvas)
         </pre>
         </div>
-    <p>Recall that we were able to manipulate images using a nested loop (a loop inside a loop). Fix the following code, which is missing the nested for loop. Make it display the <em>negative</em> image, which you can calculate by subtracting the original RGB values from 255.</p>
-
-<div data-childcomponent="review_acimg_1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=review_acimg_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
-import image
-
-img = image.Image("skflag.png")
-width = img.get_width()
-height = img.get_height()
-
-canvas = image.ImageWin(width, height)
-img.draw(canvas)
-
-# create nested loop here
-
-        # inside nested loop, get pixel
-        p = img.get_pixel(col, row)
-
-        # recall that you can access RGB values by calling something like:
-        # new_red = p.get_red()
-
-        # you can create a new pixel as follows
-        new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-        # set the pixel of the original image to the new, transformed value
-        img.set_pixel(col, row, new_pixel)
-
-    # unindent the following line to remove the "animation"
-    img.draw(canvas)
-</textarea>
-</div>
-</div>
+    </div>
 <div class="section" id="strings">
 <h2>2.12. Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
-<p>Recall that we can access portions of a string by using the indexing operator <code class="docutils literal"><span class="pre">[]</span></code>, and that the index of the leftmost character of the string is 0. Remember as well that strings are immutable (you cannot modify individual characters within a string).</p>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_index_test_question_1">
@@ -1101,40 +1072,20 @@ img.draw(canvas)
             </div>
             
             <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_1">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_4">
             <p>python-review34: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="review_string_length_test_question_1_opt_a">python</li><li data-component="feedback" id="review_string_length_test_question_1_opt_a">That would be sentence[0:6].</li>
+            <li data-component="answer"  id="review_string_length_test_question_4_opt_a">python</li><li data-component="feedback" id="review_string_length_test_question_4_opt_a">That would be sentence[0:6].</li>
             
-            <li data-component="answer"  id="review_string_length_test_question_1_opt_b">rocks</li><li data-component="feedback" id="review_string_length_test_question_1_opt_b">That would be sentence[7:].</li>
+            <li data-component="answer"  id="review_string_length_test_question_4_opt_b">rocks</li><li data-component="feedback" id="review_string_length_test_question_4_opt_b">That would be sentence[7:].</li>
             
-            <li data-component="answer" data-correct id="review_string_length_test_question_1_opt_c">hon r</li><li data-component="feedback" id="review_string_length_test_question_1_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
+            <li data-component="answer" data-correct id="review_string_length_test_question_4_opt_c">hon r</li><li data-component="feedback" id="review_string_length_test_question_4_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
             
-            <li data-component="answer"  id="review_string_length_test_question_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="review_string_length_test_question_1_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_length_test_question_2">
-            <p>python-review35: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-
-            <li data-component="answer" data-correct id="review_string_length_test_question_2_opt_a">rockrockrock</li><li data-component="feedback" id="review_string_length_test_question_2_opt_a">Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.</li>
-            
-            <li data-component="answer"  id="review_string_length_test_question_2_opt_b">rock rock rock</li><li data-component="feedback" id="review_string_length_test_question_2_opt_b">Repetition does not add a space.</li>
-            
-            <li data-component="answer"  id="review_string_length_test_question_2_opt_c">rocksrocksrocks</li><li data-component="feedback" id="review_string_length_test_question_2_opt_c">Slicing will not include the character at index 11.  Just up to it (10 in this case).</li>
-            
-            <li data-component="answer"  id="review_string_length_test_question_2_opt_d">Error, you cannot use repetition with slicing.</li><li data-component="feedback" id="review_string_length_test_question_2_opt_d">The slice will happen first, then the repetition.  So it is ok.</li>
+            <li data-component="answer"  id="review_string_length_test_question_4_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="review_string_length_test_question_4_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
             
 
             </ul>
@@ -1142,7 +1093,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_for_loop_by_item_test_question_1">
-            <p>python-review36: How many times is the word HELLO printed by the following statements?</p>
+            <p>python-review35: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
@@ -1163,7 +1114,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_for_loop_by_item_test_question_2">
-            <p>python-review37: How many times is the word HELLO printed by the following statements?</p>
+            <p>python-review36: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
@@ -1184,7 +1135,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_accumulator_pattern_test_question_1">
-            <p>python-review38: What is printed by the following statements:</p>
+            <p>python-review37: What is printed by the following statements:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
@@ -1203,7 +1154,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_accumulator_pattern_test_question_2">
-            <p>python-review39: What is printed by the following statements:</p>
+            <p>python-review38: What is printed by the following statements:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
@@ -1222,7 +1173,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_methods_check_understanding1">
-            <p>python-review40: What is printed by the following statements?</p>
+            <p>python-review39: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">))</span>
 </pre></div>
@@ -1238,41 +1189,27 @@ img.draw(canvas)
             </ul>
             </div>
             
-            <div class="runestone">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_string_methods_check_understanding2">
-            <p>python-review41: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">))</span>
-</pre></div>
-</div>
-
-            <li data-component="answer" data-correct id="review_string_methods_check_understanding2_opt_a">yyyyy</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_a">Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.</li>
-            
-            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_b">55555</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_b">Close.  5 is not repeated, it is the number of times to repeat.</li>
-            
-            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_c">n</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_c">This expression uses the index of n</li>
-            
-            <li data-component="answer"  id="review_string_methods_check_understanding2_opt_d">Error, you cannot combine all those things together.</li><li data-component="feedback" id="review_string_methods_check_understanding2_opt_d">This is fine, the repetition operator used the result of indexing and the index method.</li>
-            
-
-            </ul>
-            </div>
-            </div>
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" id="review_even_letters">
+        <span data-question>python-review40: Construct a block of code that correctly creates a function with a single parameter word that returns the even letters of the word, then calls the function and prints the result.</span>def even_letters(word):
+    new_word = ''
+    counter = 0
+    for letter in word:
+        if counter % 2 == 0:
+            new_word = new_word + letter
+        counter = counter + 1
+    return new_word
+changed_word = even_letters("Saskatchewan")
+print(changed_word)
+        </pre>
+        </div>
+    </div>
 <div class="section" id="lists">
 <h2>2.13. Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
-<p>Recall that for lists:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">len</span></code> returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length.</li>
-<li>The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. Also note that you can use the index operator <code class="docutils literal"><span class="pre">[]</span></code> more than once in a row to access things inside the list.</li>
-<li><code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.</li>
-<li>The slice operation we saw with strings also work on lists.</li>
-<li>Unlike strings, lists are <strong>mutable</strong>. This means we can change an item in a list by accessing it directly as part of the assignment statement.</li>
-<li>Just as there are built-in methods for strings, there are built-in methods for lists. Some of the most helpful are <code class="docutils literal"><span class="pre">append()</span></code> (adds an item to the end of a list), <code class="docutils literal"><span class="pre">pop</span></code> (removes and returns the last item), and <code class="docutils literal"><span class="pre">remove()</span></code> (removes first occurrence of an item)</li>
-</ul>
 
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_2_1">
-            <p>python-review42: What is printed by the following statements?</p>
+            <p>python-review41: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
 </pre></div>
@@ -1288,7 +1225,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_2_2">
-            <p>python-review43: What is printed by the following statements?</p>
+            <p>python-review42: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
 </pre></div>
@@ -1304,7 +1241,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_3_1">
-            <p>python-review44: What is printed by the following statements?</p>
+            <p>python-review43: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -1322,7 +1259,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_3_3">
-            <p>python-review45: What is printed by the following statements?</p>
+            <p>python-review44: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
@@ -1342,7 +1279,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_4_1">
-            <p>python-review46: What is printed by the following statements?</p>
+            <p>python-review45: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="mf">3.14</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
 </pre></div>
@@ -1358,7 +1295,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_4_2">
-            <p>python-review47: What is printed by the following statements?</p>
+            <p>python-review46: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="mi">57</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
 </pre></div>
@@ -1374,7 +1311,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_test_question9_6_1">
-            <p>python-review48: What is printed by the following statements?</p>
+            <p>python-review47: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
 </pre></div>
@@ -1392,7 +1329,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_1">
-            <p>python-review49: What is printed by the following statements?</p>
+            <p>python-review48: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
@@ -1412,7 +1349,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_2">
-            <p>python-review50: What is printed by the following statements?</p>
+            <p>python-review49: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -1432,7 +1369,7 @@ img.draw(canvas)
             
             <div class="runestone">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="review_list_methods_check_3">
-            <p>python-review51: What is printed by the following statements?</p>
+            <p>python-review50: What is printed by the following statements?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">a_list</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
@@ -1450,10 +1387,40 @@ img.draw(canvas)
 
             </ul>
             </div>
-            </div>
+            <div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+</div>
+
+<div data-childcomponent="review_list_overview_practice_problem_3" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function to count how many odd numbers are in a list.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal"><span class="pre">count_odds([1,3,5,7,9])</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
+<p><code class="docutils literal"><span class="pre">count_odds([1,2,3,4,5])</span> <span class="pre">→</span> <span class="pre">3</span></code></p>
+<p><code class="docutils literal"><span class="pre">count_odds([2,4,6,8,10])</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
+
+<textarea data-component="activecode" id=review_list_overview_practice_problem_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+def count_odds(a_list):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def testOne(self):
+      self.assertEqual(count_odds([1,3,5,7,9]),5,"count_odds([1,3,5,7,9])")
+      self.assertEqual(count_odds([1,2,3,4,5]),3,"count_odds([-1,-2,-3,-4,-5])")
+      self.assertEqual(count_odds([2,4,6,8,10]),0,"count_odds([2,4,6,8,10])")
+      self.assertEqual(count_odds([0,-1,12,-33]),2,"count_odds([0,-1,12,-33])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
 <div class="section" id="number-guessing-game">
 <h2>2.14. Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
-<p>To confirm that you can put many of these ideas into practice, see if you can implement a number guessing game in Python that does the following:</p>
+<p>Implement a number guessing game in Python that does the following:</p>
 <ul>
 <li><p class="first">generate a random number from 1 to 100 and stores it in a variable</p>
 </li>
@@ -1469,36 +1436,10 @@ img.draw(canvas)
 </li>
 </ul>
 
-<div data-childcomponent="number_guessing_game_review" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="review_number_guessing_game" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=number_guessing_game_review data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='Create a number guessing game here!'>
-# the algorithm for the game can be described as follows
-# your job is to try to convert the comments into real Python code!
-
-# have the computer pick a random number between 1 to 100
-
-
-# create a variable to keep track of the number of guesses taken
-
-
-# set a variable with an initial value for the users guess, like this:
-user_guess = -1
-
-# repeat the following until the user guesses correctly
-
-    # ask the user for their guess
-
-
-    # update the number of guesses variable
-
-
-    # if they guess high, tell them
-
-
-    # if they guess low, tell them
-
-
-# congratulate the user, telling them how many guesses it took
+<textarea data-component="activecode" id=review_number_guessing_game data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='Create a number guessing game here!'>
+# your code here!
 </textarea>
 </div>
 </div>
