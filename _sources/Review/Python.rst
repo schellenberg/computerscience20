@@ -582,7 +582,7 @@ Functions
    :answer_c: Its name
    :correct: b
    :feedback_a: Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.
-   :feedback_b:
+   :feedback_b: Great! Remember that a variable defined inside a function "disappears" after the function has finished executing.
    :feedback_c: The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.
 
    What is a variable's scope?
