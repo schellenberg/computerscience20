@@ -188,12 +188,14 @@ If you have trouble with any of the following, you might want to look back at th
     :answer_a: Output a
     :answer_b: Output b
     :answer_c: Output c
-    :answer_d: It will cause an error because every if must have an else clause.
+    :answer_d: Output d
+    :answer_e: It will cause an error because every if must have an else clause.
     :correct: d
     :feedback_a: Try again. Remember that any number of consecutive if statements can evaluate to True.
     :feedback_b: Try again. Remember that any number of consecutive if statements can evaluate to True.
     :feedback_c: Try again. It's less than 100!
     :feedback_d: Great!
+    :feedback_e: Try again. An if statement does not require an else!
 
     What does the following code print?
 
