@@ -1,7 +1,7 @@
 Computer Science 20 - Saskatchewan
 ----------------------------------
 
-.. caution:: This project is being moved to `cs20.ca <https://cs20.ca/>`_, which is where I (Dan Schellenberg) will continue to update/adapt the book. If you would like a version that will not change, Saskatoon Public Schools hosts a version at `opensask.ca <http://opensask.ca>`_.
+.. caution:: This version of the textbook is my (Dan Schellenberg) own personal fork. I will continue to update/adapt the book here. If you would like a version that will not change, Saskatoon Public Schools hosts a version at `opensask.ca <http://opensask.ca>`_.
 
 
 Preface
