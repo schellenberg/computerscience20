@@ -26,4 +26,4 @@ Have Reeborg move around the room and close the windows by using the ``build_wal
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2015" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2015" target="_blank">Reeborg environment</a>

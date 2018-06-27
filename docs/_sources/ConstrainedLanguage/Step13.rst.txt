@@ -104,7 +104,7 @@ Reeborg is jumping hurdles again. This time, however, the hurdles may not all be
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2013" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2013" target="_blank">Reeborg environment</a>
 
 
 If You're Having Trouble (a more detailed explanation)

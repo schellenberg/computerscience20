@@ -32,7 +32,7 @@ Open the |apple_pie_world| and create a solution to this problem!
 
 .. |apple_pie_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/apple-pie.json&name=ApplePie" target="_blank">Apple Pie world</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/apple-pie.json&name=ApplePie" target="_blank">Apple Pie world</a>
 
 
 
@@ -49,7 +49,7 @@ Open the |origin_world| and create a solution to this problem!
 
 .. |origin_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/goToOrigin.json&name=GoToOrigin" target="_blank">Go To Origin Review world</a>
 
 
 
@@ -65,7 +65,7 @@ Open the |hurdle_world| and create a solution to this problem!
 
 .. |hurdle_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/hurdle.json&name=HurdleReview" target="_blank">Hurdle Jump Review World</a>
 
 
 
@@ -85,6 +85,6 @@ Open the |planting_time_world| and create a solution to this problem!
 
 .. |planting_time_world| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=worlds/sk/planting-time.json&name=PlantingTime" target="_blank">Planting Time world</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/planting-time.json&name=PlantingTime" target="_blank">Planting Time world</a>
 
 

@@ -10,8 +10,8 @@ This textbook has been written to support your teaching of Computer Science 20 i
 - the Python editor I've chosen to use throughout the book is called `Thonny <http://thonny.org/>`_, which you can download for free. Thonny provides the same experience for the student whether they are on a Mac, PC, or Linux machine, which is a huge advantage when a student uses a different operating system at home and at school. No administrator rights are required to install Thonny, so I simply have the students download and install Thonny on our first day of Python (takes about 5 minutes). Thonny also makes installing Python packages/modules incredibly easy, which is why I have included a few within the text. If you want to extend your Python teaching, or provide an additional challenge for some of your students, you can search on the `Python Package Index <https://pypi.python.org/pypi>`_ for a package that does what you want, and install it easily with Thonny (Tools -> Manage Packages...).
 - I have incorporated `Micro:bit <http://microbit.org/>`_ hardware into some of the Python lessons (primarily in the Python - Micro:bit and More Functions section). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process. If you do not have access to Micro:bits, you can still accomplish the same objectives by exploring functions in more detail, perhaps making use of a module like pygame.
 - if you would like to access the Teachers Only repository of code/quizzes/etc, please send me an email from your school division email address (so that I know it is from a teacher), and I'll give you access to it. My email is schellenberg@gmail.com.
-- if you find errors in the textbook, `please let me know! <https://github.com/sk-opentexts/computerscience20/#contributing-to-the-book>`_
-- if you want to create your own version of this book, you are free to do so. The general process of remixing the book is `documented on the GitHub page that holds the source code of the book <https://github.com/sk-opentexts/computerscience20/#building-the-book-yourself>`_.
+- if you find errors in the textbook, `please let me know! <https://github.com/schellenberg/computerscience20#contributing-to-the-book>`_
+- if you want to create your own version of this book, you are free to do so. The general process of remixing the book is `documented on the GitHub page that holds the source code of the book <https://github.com/schellenberg/computerscience20#building-the-book-yourself>`_.
 
 
 Scratch
@@ -52,11 +52,11 @@ Creating your own worlds in Reeborg can be time consuming, but once you understa
 
 Note that in order to use the world that you create with your students, you will need to save the world to your computer (Additional Options -> Save world to file). Then you need to give the students a way to access that file. One simple way to do this is to copy/paste the contents of the ``world_name.json`` file into a web service like `pastebin.com <pastebin.com>`_. I have done this with `a simple demo world <https://pastebin.com/yLb3CUzq>`_. Note that to get just the contents of the file, you can click the "raw" button on pastebin, which provides `something like this <https://pastebin.com/raw/yLb3CUzq>`_. You should now be able to use that url to create a link that your students can access. It will look something like this:
 
-    `https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld <https://sk-opentexts.github.io/reeborg?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld>`_
+    `https://reeborg.cs20.ca/?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld <https://reeborg.cs20.ca/?lang=en&mode=python&url=https://pastebin.com/raw/yLb3CUzq&name=DemoExternalWorld>`_
 
 To make the same thing work for you, simply replace the ``https://pastebin.com/raw/yLb3CUzq`` portion of the link with the link to your world, and change ``DemoExternalWorld`` to whatever name you would like to have appear in the Reeborg World Selector menu. **This is similar to how I link to extra worlds in the More Challenges and Second Practice Quiz sections of Reeborg.**
 
-.. note:: Although it does take one extra step, I like to use a url shortening service, such as `bitly.com <https://bitly.com>`_, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into `http://bit.ly/2hI9ejK <http://bit.ly/2hI9ejK>`_
+.. note:: Although it does take one extra step, I like to use a url shortening service, such as `bitly.com <https://bitly.com>`_, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into `http://bit.ly/2Kin79e <http://bit.ly/2Kin79e>`_
 
 
 Python

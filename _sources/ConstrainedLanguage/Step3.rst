@@ -108,4 +108,4 @@ Use the ``move()`` function and the ``turn_left()`` function to make Reeborg wal
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%203" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%203" target="_blank">Reeborg environment</a>

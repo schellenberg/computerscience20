@@ -64,4 +64,4 @@ Reeborg needs to go pick up the newspaper (The **Star** Phoenix) that is sitting
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://sk-opentexts.github.io/reeborg/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%206" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%206" target="_blank">Reeborg environment</a>
