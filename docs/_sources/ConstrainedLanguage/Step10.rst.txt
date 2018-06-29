@@ -26,4 +26,4 @@ You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at th
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2010" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2010" target="_blank">Reeborg environment</a>

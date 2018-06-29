@@ -56,7 +56,7 @@ Create a program to have Reeborg take out the compost, then return to the house.
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2012" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2012" target="_blank">Reeborg environment</a>
 
 
 If You're Having Trouble (a more detailed explanation)

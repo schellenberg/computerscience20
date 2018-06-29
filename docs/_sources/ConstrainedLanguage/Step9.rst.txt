@@ -83,4 +83,4 @@ Adjust the solution you created for Step 8, this time making use of two repeat l
 
 .. |reeborg_environment| raw:: html
 
-   <a href="https://reeborg.cs20.ca//?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%209" target="_blank">Reeborg environment</a>
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%209" target="_blank">Reeborg environment</a>
