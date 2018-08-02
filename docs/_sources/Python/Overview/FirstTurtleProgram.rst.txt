@@ -143,8 +143,8 @@ Mixed Up Programs
 Turtle Methods
 ---------------
 
-An object can have various methods --- things it can do --- and it can also
-have **attributes** --- (sometimes called *properties*).  For example, each
+An object can have various methods (things it can do), and it can also
+have **attributes** (sometimes called *properties*).  For example, each
 turtle has a *color* attribute.  The method invocation  ``alex.color("red")``
 will make alex red and the line that it draws will be red too.
 
