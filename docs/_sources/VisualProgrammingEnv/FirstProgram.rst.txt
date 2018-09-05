@@ -151,9 +151,9 @@ Check Your Understanding
 
 
 .. mchoice:: scratch_broadcast_check_3
-   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.
-   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.
-   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.
+   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 2 seconds, then move 10 steps.
+   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 2 seconds after the sprite stops moving.
+   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 2 seconds.
    :correct: a
    :feedback_a: Yes! Since we are now using a broadcast and wait block, Scratch will pause the execution of the chunk of code that sent the broadcast until all scripts that reacted to the broadcast being sent have finished executing. 
    :feedback_b: No, the broadcast happens before the move, so the sprite will say "Green" before it moves.
