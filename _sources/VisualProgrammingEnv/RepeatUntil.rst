@@ -45,13 +45,13 @@ Tracing Repeat Until With Variables
 
 One way to make sure you understand how a repeat until block works is to try to *trace* code that contains a repeat until block. Tracing code means to try to read the code *in the same order that the computer will read the code*, which might mean repeating some portions of the code.
 
-To practice this skill, consider the code shown below. If you decide to recreate the code below in Scratch, note that you will need to first click on the Data tab, then Make a Variable named *x*. 
+To practice this skill, consider the code shown below. If you decide to recreate the code below in Scratch, note that you will need to first click on the Data tab, then Make a Variable named *x*.
 
 .. image:: images/scratch_tracing_repeat_until.png
 
-.. note:: Teacher Note: Tracing the code with the students using a t-chart on a whiteboard is an excellent way to introduce the idea of tracing code. 
+.. note:: Teacher Note: Tracing the code with the students using a t-chart on a whiteboard is an excellent way to introduce the idea of tracing code.
 
-When we trace through the code shown above, it can be really helpful to use a t-chart to organize our thinking. 
+When we trace through the code shown above, it can be really helpful to use a t-chart to organize our thinking.
 
 +------------+------------+
 | iterations | Value of x |
@@ -106,7 +106,7 @@ Now we need to think through the first iteration of the loop. Before entering th
 |          5 |            |
 +------------+------------+
 
-The arrow on the bottom portion of the repeat until block indicates that the flow of code will return to the beginning of the repeat until block. We now need to confirm once again that the loop will occur again. Since 13 is not greater than 20, we do need to repeat again. 13 is less than 18, so we execute the code block inside the if statement again, which changes x by 3 to make *x* 16. Note that we will never execute both the code in the if portion and the else portion -- we can only ever execute one portion or the other, never both. 
+The arrow on the bottom portion of the repeat until block indicates that the flow of code will return to the beginning of the repeat until block. We now need to confirm once again that the loop will occur again. Since 13 is not greater than 20, we do need to repeat again. 13 is less than 18, so we execute the code block inside the if statement again, which changes x by 3 to make *x* 16. Note that we will never execute both the code in the if portion and the else portion -- we can only ever execute one portion or the other, never both.
 
 +------------+------------+
 | iterations | Value of x |
@@ -142,7 +142,7 @@ The same process happens again. Since 16 is less than 20, the loop continues. Be
 |          5 |            |
 +------------+------------+
 
-Since 19 is less than 20, we enter the loop again. However, when we examine the if statement, since 19 is *not* less than 18, we execute the code inside the else block. We therefore need to set *x* to *x* + 2. This is just another way to say that we will change *x* by 2, so our new value for *x* is 21. You can read the block as "set *x* to be the previous value of *x* plus 2". 
+Since 19 is less than 20, we enter the loop again. However, when we examine the if statement, since 19 is *not* less than 18, we execute the code inside the else block. We therefore need to set *x* to *x* + 2. This is just another way to say that we will change *x* by 2, so our new value for *x* is 21. You can read the block as "set *x* to be the previous value of *x* plus 2".
 
 +------------+------------+
 | iterations | Value of x |
@@ -166,11 +166,11 @@ Once again, before entering the loop, we need to check to see if the repeat unti
 Class Activity: Repeat Until
 -----------------------------
 
-Your teacher will give you a printed copy of the :download:`Practice with Repeat Until Practice handout <handouts/scratch_repeat_until_practice.pdf>`. 
+Your teacher will give you a printed copy of the :download:`Practice with Repeat Until Practice handout <handouts/scratch_repeat_until_practice.pdf>`.
 
 Now that you have seen how to trace the the code contained in a repeat until block, take a few minutes to try to fill in the practice sheet linked to above. After you have completed each question, you may double check your work by recreating the question in Scratch.
 
-.. note:: 
+.. note::
 	**Teacher Note:** Instead of having students recreate the problems in Scratch to check their work, it can be very useful to trace the code together as a class. Writing down a t-chart on a whiteboard is a nice way to talk through problems like these ones.
 
 	If you would like to edit the Repeat Until Practice handout, you can download the :download:`editable Word document <handouts/scratch_repeat_until_practice.docx>`.
@@ -198,6 +198,52 @@ To create the cannonball simulation, we need some variables to represent the spe
 When the space key is pressed, the cannonball will be reset to it's original position (on the left hand side of the screen), and the *xSpeed* and *ySpeed* variables will both be set to 4. The repeat until block condition states that the repeat block should continue until the y position of the sprite is less than -159. *The y position block can be found at the bottom of the Motion tab.* In other words, whatever is inside the repeat block will continue until the cannonball hits the virtual ground level (which we have set to be -159). Finally, we change the x and y coordinates of the sprite by the xSpeed and ySpeed variables. The last block of code in the repeat until is how we simulate gravity. Every iteration of the repeat until loop causes the ySpeed variable to decrease in value. Because we start with a positive ySpeed, the cannonball moves upward when the space key is pressed. Over time, however, the amount that the cannonball is moving up decreases, and then eventually becomes negative (meaning that the ball begins to fall). This allows us to create a simple simulation of parabolic motion.
 
 .. note:: Experiment by changing the initial values given for the xSpeed and ySpeed variables. You may also want to adjust the "gravity" value (initially set at -0.1).
+
+Check Your Understanding
+-------------------------
+
+.. fillintheblank:: scratch_repeat_until_check_1
+
+    What would the value of the Some Number variable be after the following code has executed?
+
+    .. image:: images/scratch_repeat_until_test_yourself1.png
+
+    - :28: Yes! Way to go!
+      :30: No. Remember that 30 is not less than, but equal to, 30.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_repeat_until_check_2
+
+    How many iterations would the following code take to finish it's execution? In other words, how many times would the repeat until block occur?
+
+    .. image:: images/scratch_repeat_until_test_yourself1.png
+
+    - :4: Yes! Way to go!
+      :3: No. Remember that 30 is not less than, but equal to, 30.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_repeat_until_check_3
+
+    How many iterations would the following code take to finish it's execution? In other words, how many times would the repeat until block occur?
+
+    .. image:: images/scratch_repeat_until_test_yourself2.png
+
+    - :3: Yes! Way to go!
+      :4: No. Notice that the "Change Some Number by 3" block is NOT inside an if/else block, so it will happen EVERY iteration.
+      :.*: Try again!
+
+
+.. fillintheblank:: scratch_repeat_until_check_4
+
+    What would the value of the Some Number variable be after the following code has executed?
+
+    .. image:: images/scratch_repeat_until_test_yourself2.png
+
+    - :13: Yes! Way to go!
+      :.*: Try again!
+
 
 
 Practice Problem

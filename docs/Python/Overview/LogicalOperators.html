@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>11. Logical Operators &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -193,7 +205,7 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">11. Logical Operators</a><ul>
-<li><a class="reference internal" href="#and-or-not">11.1. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code></a><ul>
+<li><a class="reference internal" href="#and-or-not">11.1. <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a><ul>
 <li><a class="reference internal" href="#check-your-understanding">11.1.1. Check Your Understanding</a></li>
 </ul>
 </li>
@@ -226,7 +238,7 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops" data-toggle="tooltip">
     <a href="MultipleTurtlesAndForLoops.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -267,33 +279,26 @@
 <h1>11. Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Introduce the logical operators <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code>. Work on practice problems, in which students create programs that utilize logical operators. Booleans practice quiz.</p>
+<p>Introduce the logical operators <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>. Work on practice problems, in which students create programs that utilize logical operators. Booleans practice quiz.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="and-or-not">
-<span id="index-0"></span><h2>11.1. <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, <code class="docutils literal"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
-<p>There are three <strong>logical operators</strong>: <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code>, and <code class="docutils literal"><span class="pre">not</span></code>. The
+<div class="section" id="and-or-not">
+<span id="index-0"></span><h2>11.1. <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
+<p>There are three <strong>logical operators</strong>: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>. The
 semantics (meaning) of these operators is similar to their meaning in English.
-For example, <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is true only if <code class="docutils literal"><span class="pre">x</span></code> is greater than 0 <em>and</em>
+For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is true only if <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than 0 <em>and</em>
 at the same time, x is less than 10.  How would you describe this in words?  You would say that x is between 0 and 10, not including the endpoints.</p>
-<p><code class="docutils literal"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <em>either</em> of the conditions is true,
+<p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <em>either</em> of the conditions is true,
 that is, if the number is divisible by 2 <em>or</em> divisible by 3.  In this case, one, or the other, or both of the parts has to be true for the result to be true.</p>
-<p>Finally, the <code class="docutils literal"><span class="pre">not</span></code> operator negates a boolean expression, so <code class="docutils literal"><span class="pre">not</span>&#160; <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code>
-is true if <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> is false, that is, if <code class="docutils literal"><span class="pre">x</span></code> is less than or equal to
-<code class="docutils literal"><span class="pre">y</span></code>.</p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">not</span></code> operator negates a boolean expression, so <code class="docutils literal notranslate"><span class="pre">not</span>&#160; <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code>
+is true if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> is false, that is, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than or equal to
+<code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 
 <div data-childcomponent="local_operators_example_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=local_operators_example_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=local_operators_example_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 x = 5
 print(x > 0 and x < 10)
 
@@ -304,12 +309,12 @@ print(n % 2 == 0 or n % 3 == 0)
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
 <p>Common Mistake!</p>
-<p class="last">There is a very common mistake that occurs when programmers try to write boolean expressions.  For example, what if we have a variable <code class="docutils literal"><span class="pre">number</span></code> and we want to check to see if its value is 5,6, or 7.  In words we might say: “number equal to 5 or 6 or 7”.  However, if we translate this into Python, <code class="docutils literal"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">7</span></code>, it will not be correct.  The <code class="docutils literal"><span class="pre">or</span></code> operator must join the results of three equality checks.  The correct way to write this is <code class="docutils literal"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">7</span></code>.  This may seem like a lot of typing but it is absolutely necessary.  You cannot take a shortcut.</p>
+<p class="last">There is a very common mistake that occurs when programmers try to write boolean expressions.  For example, what if we have a variable <code class="docutils literal notranslate"><span class="pre">number</span></code> and we want to check to see if its value is 5,6, or 7.  In words we might say: “number equal to 5 or 6 or 7”.  However, if we translate this into Python, <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">7</span></code>, it will not be correct.  The <code class="docutils literal notranslate"><span class="pre">or</span></code> operator must join the results of three equality checks.  The correct way to write this is <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">7</span></code>.  This may seem like a lot of typing but it is absolutely necessary.  You cannot take a shortcut.</p>
 </div>
 <div class="section" id="check-your-understanding">
 <h3>11.1.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_2_1">
             logical-operators1: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?
             <li data-component="answer"  id="test_question6_2_1_opt_a">x &gt; 0 and &lt; 5</li><li data-component="feedback" id="test_question6_2_1_opt_a">Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</li>
@@ -325,7 +330,7 @@ print(n % 2 == 0 or n % 3 == 0)
 </div>
 <div class="section" id="precedence-of-operators">
 <span id="index-1"></span><h2>11.2. Precedence of Operators<a class="headerlink" href="#precedence-of-operators" title="Permalink to this headline">¶</a></h2>
-<p>We have now added a number of additional operators to those we have learned.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
+<p>We have now added a number of additional operators to those we have learned.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal notranslate"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal notranslate"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
 <p>The following table summarizes the precedence discussed so far from highest to lowest.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -373,9 +378,9 @@ print(n % 2 == 0 or n % 3 == 0)
 <div class="section" id="id1">
 <h3>11.2.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question6_3_1">
-            logical-operators2: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: <code class="docutils literal"><span class="pre">5*3</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">4+6==11</span></code>
+            logical-operators2: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: <code class="docutils literal notranslate"><span class="pre">5*3</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">4+6==11</span></code>
             <li data-component="answer" data-correct id="test_question6_3_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback" id="test_question6_3_1_opt_a">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
             
             <li data-component="answer"  id="test_question6_3_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback" id="test_question6_3_1_opt_b">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
@@ -413,7 +418,10 @@ print(n % 2 == 0 or n % 3 == 0)
 
 <div data-childcomponent="under-100" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=under-100 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=under-100 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # your code goes here!
 </textarea>
 </div>
@@ -424,7 +432,10 @@ print(n % 2 == 0 or n % 3 == 0)
 
 <div data-childcomponent="from-saskatchewan" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=from-saskatchewan data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=from-saskatchewan data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # your code goes here!
 </textarea>
 </div>
@@ -435,21 +446,27 @@ print(n % 2 == 0 or n % 3 == 0)
 
 <div data-childcomponent="divisible-by-3-or-5" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=divisible-by-3-or-5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=divisible-by-3-or-5 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # your code goes here!
 </textarea>
 </div>
 </div>
 <div class="section" id="turtle-stuck-in-a-square">
 <h3>11.3.4. Turtle Stuck In a Square<a class="headerlink" href="#turtle-stuck-in-a-square" title="Permalink to this headline">¶</a></h3>
-<p>You have been given some starter code for the problem below. <strong>You only need to change one line of the code, specifically the line containing the while loop.</strong> Replace the word <code class="docutils literal"><span class="pre">something</span></code> with the appropriate boolean questions that will cause the turtle to continue moving until it gets to one of the edges of the square. Each time the program is run, the turtle will pick a new random direction to move. When executed, your program should look something like this:</p>
+<p>You have been given some starter code for the problem below. <strong>You only need to change one line of the code, specifically the line containing the while loop.</strong> Replace the word <code class="docutils literal notranslate"><span class="pre">something</span></code> with the appropriate boolean questions that will cause the turtle to continue moving until it gets to one of the edges of the square. Each time the program is run, the turtle will pick a new random direction to move. When executed, your program should look something like this:</p>
 <img alt="../../_images/stuck_in_square.gif" src="../../_images/stuck_in_square.gif" />
-<p>Note that you can get the current x coordinate of the turtle by calling <code class="docutils literal"><span class="pre">bob.xcor()</span></code>, and the current y coordinate by calling <code class="docutils literal"><span class="pre">bob.ycor()</span></code>. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The vertices of the square have x and y coordinates as shown below:</p>
+<p>Note that you can get the current x coordinate of the turtle by calling <code class="docutils literal notranslate"><span class="pre">bob.xcor()</span></code>, and the current y coordinate by calling <code class="docutils literal notranslate"><span class="pre">bob.ycor()</span></code>. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The vertices of the square have x and y coordinates as shown below:</p>
 <img alt="../../_images/stuck_in_square_coordinates.png" src="../../_images/stuck_in_square_coordinates.png" />
 
 <div data-childcomponent="turtle-stuck-in-square" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle-stuck-in-square data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=turtle-stuck-in-square data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 import random
 
@@ -490,10 +507,10 @@ while something:
 <div class="section" id="question-1">
 <h2>11.5. Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_1">
             <p>logical-operators3: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
@@ -510,10 +527,10 @@ while something:
 <div class="section" id="question-2">
 <h2>11.6. Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_2">
             <p>logical-operators4: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
@@ -530,10 +547,10 @@ while something:
 <div class="section" id="question-3">
 <h2>11.7. Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_3">
             <p>logical-operators5: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
 </pre></div>
@@ -550,10 +567,10 @@ while something:
 <div class="section" id="question-4">
 <h2>11.8. Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_4">
             <p>logical-operators6: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="mi">10</span> <span class="p">)</span>
 </pre></div>
@@ -570,10 +587,10 @@ while something:
 <div class="section" id="question-5">
 <h2>11.9. Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_5">
             <p>logical-operators7: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
 </pre></div>
@@ -590,10 +607,10 @@ while something:
 <div class="section" id="question-6">
 <h2>11.10. Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_6">
             <p>logical-operators8: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
 </pre></div>
@@ -610,10 +627,10 @@ while something:
 <div class="section" id="question-7">
 <h2>11.11. Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_7">
             <p>logical-operators9: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
@@ -630,10 +647,10 @@ while something:
 <div class="section" id="question-8">
 <h2>11.12. Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="booleans_practice_quiz_8">
             <p>logical-operators10: What would the following print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
@@ -652,7 +669,7 @@ while something:
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops' data-toggle="tooltip">
     <a href="MultipleTurtlesAndForLoops.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>

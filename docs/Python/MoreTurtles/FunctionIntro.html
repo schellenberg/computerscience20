@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. Functions Introduction &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -254,26 +266,19 @@
 <h1>3. Functions Introduction<a class="headerlink" href="#functions-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Use <code class="docutils literal"><span class="pre">for</span></code> loops to draw shapes elegantly. Introduce non-fruitful functions in Python. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops to draw shapes elegantly. Introduce non-fruitful functions in Python. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="warmup-problem">
+<div class="section" id="warmup-problem">
 <h2>3.1. Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-5.png" src="../../_images/confusion-5.png" />
 <p>Draw the shape above. After you have finished drawing your version, share your code with another student. Work together to see if you can come up with a more efficient way to draw this shape!</p>
 
 <div data-childcomponent="turtle_confusion_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_confusion_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=turtle_confusion_4 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 </textarea>
 </div>
@@ -282,15 +287,15 @@ import turtle
 <span id="index-0"></span><h2>3.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>In Python, a <strong>function</strong> is a named sequence of statements that belong together.  Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem.</p>
 <p>The syntax for a <strong>function definition</strong> is the same as it was when we wrote functions in Reeborg:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span> <span class="n">parameters</span> <span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span> <span class="n">parameters</span> <span class="p">):</span>
     <span class="n">statements</span>
 </pre></div>
 </div>
 <p>The one part of this function definition that looks different from our Reeborg investigations is the parameters inside the parentheses. The parameters specify what information, if any, you have to provide in order to use the new function.  Another way to say this is that the parameters specify what the function needs to do its work.</p>
 <p>There can be any number of statements inside the function, but they have to be
-indented from the <code class="docutils literal"><span class="pre">def</span></code>. In the examples in this book, we will use the
+indented from the <code class="docutils literal notranslate"><span class="pre">def</span></code>. In the examples in this book, we will use the
 standard indentation of four spaces.</p>
-<p>In a function definition, the keyword in the header is <code class="docutils literal"><span class="pre">def</span></code>, which is
+<p>In a function definition, the keyword in the header is <code class="docutils literal notranslate"><span class="pre">def</span></code>, which is
 followed by the name of the function and some <em>parameters</em> enclosed in
 parentheses. The parameter list may be empty, or it may contain any number of
 parameters separated from one another by commas. In either case, the parentheses are required.</p>
@@ -307,7 +312,10 @@ squares.  It would make sense if we did not have to duplicate all the steps each
 
 <div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=functions_intro_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=functions_intro_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 def draw_square(some_turtle, side_length):
@@ -328,9 +336,9 @@ alex = turtle.Turtle()
 draw_square(alex, 50)
 </textarea>
 </div>
-<p>This function is named <code class="docutils literal"><span class="pre">draw_square</span></code>.  It has two parameters — one to tell
+<p>This function is named <code class="docutils literal notranslate"><span class="pre">draw_square</span></code>.  It has two parameters — one to tell
 the function which turtle to move around and the other to tell it the size
-of the square we want drawn.  In the function definition they are called <code class="docutils literal"><span class="pre">some_turtle</span></code> and <code class="docutils literal"><span class="pre">side_length</span></code> respectively.   Make sure you know where the body of the function ends — it depends on the indentation and the blank lines don’t count for
+of the square we want drawn.  In the function definition they are called <code class="docutils literal notranslate"><span class="pre">some_turtle</span></code> and <code class="docutils literal notranslate"><span class="pre">side_length</span></code> respectively.   Make sure you know where the body of the function ends — it depends on the indentation and the blank lines don’t count for
 this purpose!</p>
 <div class="admonition-docstrings admonition" id="index-1">
 <p class="first admonition-title">docstrings</p>
@@ -338,7 +346,7 @@ this purpose!</p>
 it must be a triple-quoted string), it is called a <strong>docstring</strong>
 and gets special treatment in Python and in some of the programming tools.</p>
 <p>Another way to retrieve this information is to use the interactive
-interpreter, and enter the expression <code class="docutils literal"><span class="pre">&lt;function_name&gt;.__doc__</span></code>, which will retrieve the
+interpreter, and enter the expression <code class="docutils literal notranslate"><span class="pre">&lt;function_name&gt;.__doc__</span></code>, which will retrieve the
 docstring for the function.  So the string you write as documentation at the start of a function is
 retrievable by python tools <em>at runtime</em>.  This is different from comments in your code,
 which are completely eliminated when the program is parsed.</p>
@@ -347,20 +355,23 @@ their functions.</p>
 </div>
 <p>Defining a new function does not make the function run. To do that we need a
 <strong>function call</strong> (also known as a function invocation). We’ve already seen how to call some built-in functions like
-<code class="docutils literal"><span class="pre">print</span></code>, <code class="docutils literal"><span class="pre">range</span></code> and <code class="docutils literal"><span class="pre">int</span></code>. Function calls contain the name of the function to be
+<code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">range</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code>. Function calls contain the name of the function to be
 executed followed by a list of values in parentheses, called <em>arguments</em>, which are assigned
 to the parameters in the function definition.
-So in the  last line of the program, we call the function, and pass <code class="docutils literal"><span class="pre">alex</span></code> as the turtle to be manipulated,
+So in the  last line of the program, we call the function, and pass <code class="docutils literal notranslate"><span class="pre">alex</span></code> as the turtle to be manipulated,
 and 50 as the size of the square we want.</p>
 <p>Once we’ve defined a function, we can call it as often as we like and its
 statements will be executed each time we call it.  In this case, we could use it to get
 one of our turtles to draw a square and then we can move the turtle and have it draw a different square in a
-different location.  Note that we lift the tail so that when <code class="docutils literal"><span class="pre">alex</span></code> moves there is no trace.  We put the tail
-back down before drawing the next square.  Make sure you can identify both calls of the <code class="docutils literal"><span class="pre">draw_square</span></code> function.</p>
+different location.  Note that we lift the tail so that when <code class="docutils literal notranslate"><span class="pre">alex</span></code> moves there is no trace.  We put the tail
+back down before drawing the next square.  Make sure you can identify both calls of the <code class="docutils literal notranslate"><span class="pre">draw_square</span></code> function.</p>
 
 <div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=functions_intro_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=functions_intro_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 def draw_square(some_turtle, side_length):
@@ -388,13 +399,16 @@ alex.pendown()
 draw_square(alex,75)
 </textarea>
 </div>
-<p>In the next example, we’ve changed the <code class="docutils literal"><span class="pre">draw_square</span></code>
-function a little and we get <code class="docutils literal"><span class="pre">tess</span></code> to draw 15 squares with some variations.  Once the function has
+<p>In the next example, we’ve changed the <code class="docutils literal notranslate"><span class="pre">draw_square</span></code>
+function a little and we get <code class="docutils literal notranslate"><span class="pre">tess</span></code> to draw 15 squares with some variations.  Once the function has
 been defined, we can call it as many times as we like with whatever actual parameters we like.</p>
 
 <div data-childcomponent="functions_intro_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=functions_intro_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=functions_intro_3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 def draw_multicolor_square(some_turtle, side_length):
@@ -427,16 +441,16 @@ for i in range(15):
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Even if a function call needs no arguments,
-the parentheses <code class="docutils literal"><span class="pre">(</span> <span class="pre">)</span></code> after the function name are <em>required</em>.  This
+the parentheses <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> after the function name are <em>required</em>.  This
 can lead to a difficult bug:  A function name without the
 parenthesis is a legal expression <em>referring</em> to the function; for example,
-<code class="docutils literal"><span class="pre">print</span></code> and <code class="docutils literal"><span class="pre">alex.penup</span></code>, but they do
+<code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">alex.penup</span></code>, but they do
 not <em>call</em> the associated functions.</p>
 </div>
 <div class="section" id="check-your-understanding">
 <h3>3.2.1. Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_1">
             functions-intro1: Which of the following is a valid function header (first line of a function definition)?
             <li data-component="answer" data-correct id="functions_intro_understanding_1_opt_a">def draw_circle(my_turtle):</li><li data-component="feedback" id="functions_intro_understanding_1_opt_a">A function may take zero or more parameters.  It does not have to have two.  In this case the size of the circle might be specified in the body of the function.</li>
@@ -451,10 +465,10 @@ not <em>call</em> the associated functions.</p>
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_2">
             <p>functions-intro2: What are the parameters of the following function?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">side_length</span><span class="p">)</span>
@@ -474,10 +488,10 @@ not <em>call</em> the associated functions.</p>
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_3">
             <p>functions-intro3: Considering the function below, which of the following statements correctly calls, or invokes, this function (i.e., causes it to run)?  Assume we already have defined a turtle named alex.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">side_length</span><span class="p">)</span>
@@ -499,7 +513,7 @@ not <em>call</em> the associated functions.</p>
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="functions_intro_understanding_4">
             functions-intro4: True or false: A function can be called several times by placing a function call in the body of a loop.
             <li data-component="answer" data-correct id="functions_intro_understanding_4_opt_a">True</li><li data-component="feedback" id="functions_intro_understanding_4_opt_a">Yes, you can call a function multiple times by putting the call in a loop.</li>
@@ -516,12 +530,12 @@ not <em>call</em> the associated functions.</p>
 <div class="section" id="cross">
 <h3>3.3.1. Cross<a class="headerlink" href="#cross" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-5.png" src="../../_images/confusion-5.png" />
-<p>Convert the code you wrote at the start of today’s class into a function. You should be able to call something like <code class="docutils literal"><span class="pre">draw_cross(some_turtle,</span> <span class="pre">side_length)</span></code>.</p>
+<p>Convert the code you wrote at the start of today’s class into a function. You should be able to call something like <code class="docutils literal notranslate"><span class="pre">draw_cross(some_turtle,</span> <span class="pre">side_length)</span></code>.</p>
 </div>
 <div class="section" id="hollow-c">
 <h3>3.3.2. Hollow C<a class="headerlink" href="#hollow-c" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-4.png" src="../../_images/confusion-4.png" />
-<p>Look back to the code you made when you drew a <em>hollow c</em> last class. Adapt your code by creating a function called <code class="docutils literal"><span class="pre">draw_c(a_turtle,</span> <span class="pre">longest_side_length,</span> <span class="pre">width_of_c)</span></code>. You should be able to draw a hollow c by calling the function with something like <code class="docutils literal"><span class="pre">draw_c(tess,</span> <span class="pre">150,</span> <span class="pre">25)</span></code>.</p>
+<p>Look back to the code you made when you drew a <em>hollow c</em> last class. Adapt your code by creating a function called <code class="docutils literal notranslate"><span class="pre">draw_c(a_turtle,</span> <span class="pre">longest_side_length,</span> <span class="pre">width_of_c)</span></code>. You should be able to draw a hollow c by calling the function with something like <code class="docutils literal notranslate"><span class="pre">draw_c(tess,</span> <span class="pre">150,</span> <span class="pre">25)</span></code>.</p>
 </div>
 </div>
 <div class="section" id="turtle-graphics-assignment">

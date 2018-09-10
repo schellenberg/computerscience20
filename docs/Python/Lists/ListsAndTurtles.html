@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. Lists and Turtle Drawing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -257,24 +269,13 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use lists while moving turtles.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-<li><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</li>
-</ul>
-
-    </div>
-    <div class="section" id="check-your-understanding">
+<div class="section" id="check-your-understanding">
 <h2>3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
             <p>lists-and-turtles1: What will be the result of the following code being executed?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
 <span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
@@ -304,10 +305,10 @@
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_2">
             <p>lists-and-turtles2: What will be the result of the following code being executed?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
 <span class="k">def</span> <span class="nf">draw_thing</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">tasks</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
@@ -338,27 +339,33 @@
             </div>
 <div class="section" id="turtle-coordinate-list">
 <h2>3.2. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
-<p>Recall that you can use <code class="docutils literal"><span class="pre">in</span></code> to check for membership in a list as follows:</p>
+<p>Recall that you can use <code class="docutils literal notranslate"><span class="pre">in</span></code> to check for membership in a list as follows:</p>
 
 <div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 some_list = [42, 5, 12, 99, 23]
 print(99 in some_list)
 </textarea>
 </div>
-<p>If a portion of your list is <em>itself a list</em>, you need to check for the entire sublist when using <code class="docutils literal"><span class="pre">in</span></code>.</p>
+<p>If a portion of your list is <em>itself a list</em>, you need to check for the entire sublist when using <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 
 <div data-childcomponent="turtle_coordinates_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=turtle_coordinates_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 some_list = [42, 5, [12, 99], 23]
 print(99 in some_list)
 print([12, 99] in some_list)
 </textarea>
 </div>
 <p>If we wanted to keep track of a collection of coordinates (<em>x</em> and <em>y</em> pairs), we could do it by creating a list that contains sublists of coordinates. In the list below, three ordered pairs of coordinates are given:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">coordinates</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coordinates</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">]]</span>
 </pre></div>
 </div>
 <ol class="arabic simple">
@@ -366,11 +373,14 @@ print([12, 99] in some_list)
 <li><em>x</em>: 10, <em>y</em>: 20</li>
 <li><em>x</em>: 150, <em>y</em>: 80</li>
 </ol>
-<p>To check if a specific x and y pair is in our coordinate list, we can use <code class="docutils literal"><span class="pre">in</span></code> as follows:</p>
+<p>To check if a specific x and y pair is in our coordinate list, we can use <code class="docutils literal notranslate"><span class="pre">in</span></code> as follows:</p>
 
 <div data-childcomponent="turtle_coordinates_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=turtle_coordinates_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 coordinates = [[0, 0], [10, 20], [150, 80]]
 if [30, 20] in coordinates:
     print("Yes! This coordinate is in the list!")
@@ -380,13 +390,16 @@ else:
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Change the numbers in the <code class="docutils literal"><span class="pre">if</span></code> statement above to an ordered pair that is in the list, then run the code again.</p>
+<p class="last">Change the numbers in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement above to an ordered pair that is in the list, then run the code again.</p>
 </div>
 <p>Imagine that you wanted to create a simulation of a turtle walking around a grid world (in other words, the turtle would always turn by 90 degrees). Before each “step” the turtle takes, we will randomly choose to either turn left and move, turn right and move, or move straight ahead. Although we could move any amount for each “step”, let’s use a step size of 10. The following program implements this world, but is in an infinite loop. The program should automatically time out after running for 20 seconds in the browser (though if you are executing it in Thonny, you will need to press the Stop button).</p>
 
 <div data-childcomponent="turtle_coordinates_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_4 data-lang="python"    data-timelimit=20000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=turtle_coordinates_4 data-lang="python" 
+      data-timelimit=20000  data-codelens="true"  
+    data-audio=''   
+          >
 import turtle
 import random
 
@@ -407,11 +420,14 @@ while True:
 </textarea>
 </div>
 <p>Instead of having this program run forever, we would like the turtle to automatically stop the program whenever it walks onto a location that it has been before. In order to do that, we need to keep a list of coordinates that the turtle has been. Since the turtle begins at the origin, we will add [0, 0] to the list before any movement occurs. Since the turtle module keeps track of the turtle location using floating point values, the program will not behave the way you want if you simply store the current x and y positions in the coordinate list. Instead, we will convert the x and y values to be the nearest integer value, and store those in the list.</p>
-<p>After every step that the turtle takes, we need to get the current x and y coordinates, in the form of <code class="docutils literal"><span class="pre">[x,</span> <span class="pre">y]</span></code>. If this ordered pair appears in the coordinate list, it means that we have been here before and we should end the program. If not, we need to add this ordered pair to the coordinate list and continue moving. The program below implements this behaviour.</p>
+<p>After every step that the turtle takes, we need to get the current x and y coordinates, in the form of <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y]</span></code>. If this ordered pair appears in the coordinate list, it means that we have been here before and we should end the program. If not, we need to add this ordered pair to the coordinate list and continue moving. The program below implements this behaviour.</p>
 
 <div data-childcomponent="turtle_coordinates_5" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_coordinates_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=turtle_coordinates_5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 import turtle
 import random
 
@@ -457,30 +473,33 @@ print(history)
 <p>Let’s return to the L-systems we introduced previously and
 introduce a very interesting new feature that requires the use of lists.</p>
 <p>Suppose our L-System has the following rules:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
 <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
 </pre></div>
 </div>
-<p>This L-system looks very similar to the old L-system, except that we’ve added the characters <code class="docutils literal"><span class="pre">[</span></code> and <code class="docutils literal"><span class="pre">]</span></code>.  The meaning of these
-characters adds a very interesting new dimension to our L-Systems.  The <code class="docutils literal"><span class="pre">[</span></code>
+<p>This L-system looks very similar to the old L-system, except that we’ve added the characters <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>.  The meaning of these
+characters adds a very interesting new dimension to our L-Systems.  The <code class="docutils literal notranslate"><span class="pre">[</span></code>
 character indicates that we want to save the state of our turtle,
-namely its position and its heading (direction the turtle is facing) so that we can come back to this position later.  The <code class="docutils literal"><span class="pre">]</span></code> tells the turtle to warp to the most recently saved position.
+namely its position and its heading (direction the turtle is facing) so that we can come back to this position later.  The <code class="docutils literal notranslate"><span class="pre">]</span></code> tells the turtle to warp to the most recently saved position.
 The way that we will accomplish this is to use lists.  We can save the
-heading and position of the turtle as a list of 3 elements, like this: <code class="docutils literal"><span class="pre">[heading,</span> <span class="pre">x,</span>
+heading and position of the turtle as a list of 3 elements, like this: <code class="docutils literal notranslate"><span class="pre">[heading,</span> <span class="pre">x,</span>
 <span class="pre">y]</span></code>.  The index position 0 in the list holds the heading,
 index position 1 in the list holds the x coordinate,
 and index position 2 holds the y coordinate.</p>
-<p>Now, if we create an empty list and every time we see a <code class="docutils literal"><span class="pre">[</span></code> we append a
-list that contains <code class="docutils literal"><span class="pre">[heading,</span> <span class="pre">x,</span> <span class="pre">y]</span></code>, we create a history of saved places
+<p>Now, if we create an empty list and every time we see a <code class="docutils literal notranslate"><span class="pre">[</span></code> we append a
+list that contains <code class="docutils literal notranslate"><span class="pre">[heading,</span> <span class="pre">x,</span> <span class="pre">y]</span></code>, we create a history of saved places
 the turtle has been where the most recently saved location will always be at
-the end of the list.  When we find a <code class="docutils literal"><span class="pre">]</span></code> in the string we use the <code class="docutils literal"><span class="pre">pop</span></code>
+the end of the list.  When we find a <code class="docutils literal notranslate"><span class="pre">]</span></code> in the string we use the <code class="docutils literal notranslate"><span class="pre">pop</span></code>
 function to remove the the most recently appended information.</p>
-<p>Let’s modify our <code class="docutils literal"><span class="pre">draw_l_system</span></code> function to begin to implement this new
+<p>Let’s modify our <code class="docutils literal notranslate"><span class="pre">draw_l_system</span></code> function to begin to implement this new
 behavior.</p>
 
 <div data-childcomponent="list_lsys1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_lsys1 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_lsys1 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 def draw_l_system(some_turtle, instructions, angle, distance):
@@ -521,7 +540,10 @@ so you get an idea of what the kind of drawing the L-System can really make.</p>
 
 <div data-childcomponent="list_lsys2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_lsys2 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_lsys2 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 def draw_l_system(some_turtle, instructions, angle, distance):
@@ -562,20 +584,23 @@ draw_l_system(jill, instruction_string, 30, 2)
 </div>
 <div class="section" id="putting-it-all-together">
 <h2>3.4. Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
-<p>To determine the <code class="docutils literal"><span class="pre">instruction_string</span></code> we used in the last example, we used an axiom of <code class="docutils literal"><span class="pre">X</span></code> and applied the following rules 6 times:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
+<p>To determine the <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code> we used in the last example, we used an axiom of <code class="docutils literal notranslate"><span class="pre">X</span></code> and applied the following rules 6 times:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
 <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
 </pre></div>
 </div>
 <p>If you run the code below, you will not see much happen. To fix the code below, you need to:</p>
 <ul class="simple">
-<li>fix the <code class="docutils literal"><span class="pre">apply_rules</span></code> function so that the rules given above are applied</li>
-<li>fix the call to <code class="docutils literal"><span class="pre">create_l_system</span></code> to use the correct axiom and number_of_iterations</li>
+<li>fix the <code class="docutils literal notranslate"><span class="pre">apply_rules</span></code> function so that the rules given above are applied</li>
+<li>fix the call to <code class="docutils literal notranslate"><span class="pre">create_l_system</span></code> to use the correct axiom and number_of_iterations</li>
 </ul>
 
 <div data-childcomponent="list_lsys3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_lsys3 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_lsys3 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 def apply_rules(letter):
@@ -662,7 +687,7 @@ draw_l_system(jill, instruction_string, 30, 2)
 <div class="section" id="garden-herb">
 <h3>3.5.1. Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: H
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: H
 Rule 1: H --&gt; HFX[+H][-H]
 Rule 2: X --&gt; X[-FFF][+FFF]FX
 </pre></div>
@@ -670,7 +695,10 @@ Rule 2: X --&gt; X[-FFF][+FFF]FX
 
 <div data-childcomponent="list_turtle_practice_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_turtle_practice_1 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_turtle_practice_1 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 # your code here!
@@ -678,7 +706,7 @@ import turtle
 </div>
 
     <div data-component="reveal" id="garden_herb_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
-    <p>If you iterated through the rules 5 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+    <p>If you iterated through the rules 5 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/garden-herb.png" src="../../_images/garden-herb.png" />
 
     </div>
@@ -686,14 +714,17 @@ import turtle
 <div class="section" id="branch">
 <h3>3.5.2. Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: F
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
 Rule 1: F --&gt; F[-F]F[+F]F
 </pre></div>
 </div>
 
 <div data-childcomponent="list_turtle_practice_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_turtle_practice_2 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_turtle_practice_2 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 # your code here!
@@ -701,7 +732,7 @@ import turtle
 </div>
 
     <div data-component="reveal" id="branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
-    <p>If you iterated through the rules 4 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+    <p>If you iterated through the rules 4 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/branch.png" src="../../_images/branch.png" />
 
     </div>
@@ -709,7 +740,7 @@ import turtle
 <div class="section" id="symmetrical-branch">
 <h3>3.5.3. Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: X
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: X
 Rule 1: X --&gt; F[+X][-X]FX
 Rule 2: F --&gt; FF
 </pre></div>
@@ -717,7 +748,10 @@ Rule 2: F --&gt; FF
 
 <div data-childcomponent="list_turtle_practice_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_turtle_practice_3 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_turtle_practice_3 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 # your code here!
@@ -725,7 +759,7 @@ import turtle
 </div>
 
     <div data-component="reveal" id="symmetrical_branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
-    <p>If you iterated through the rules 5 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
+    <p>If you iterated through the rules 5 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/symmetrical-branch.png" src="../../_images/symmetrical-branch.png" />
 
     </div>
@@ -733,14 +767,17 @@ import turtle
 <div class="section" id="seaweed">
 <h3>3.5.4. Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Axiom: F
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
 Rule 1: F --&gt; FF-[-F+F+F]+[+F-F-F]
 </pre></div>
 </div>
 
 <div data-childcomponent="list_turtle_practice_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_turtle_practice_4 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_turtle_practice_4 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 # your code here!
@@ -748,18 +785,21 @@ import turtle
 </div>
 
     <div data-component="reveal" id="seaweed_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide">
-    <p>If you iterated through the rules 4 times to create your <code class="docutils literal"><span class="pre">instruction_string</span></code>, and used a distance of 10, your code should have created something that looks like the following:</p>
+    <p>If you iterated through the rules 4 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 10, your code should have created something that looks like the following:</p>
 <img alt="../../_images/seaweed.png" src="../../_images/seaweed.png" />
 
     </div>
     </div>
 <div class="section" id="create-your-own">
 <h3>3.5.5. Create Your Own<a class="headerlink" href="#create-your-own" title="Permalink to this headline">¶</a></h3>
-<p>Experiment by creating your own rules for an L-system. Be sure to use the <code class="docutils literal"><span class="pre">[</span></code> and <code class="docutils literal"><span class="pre">]</span></code> characters in the rule(s) of your L-system.</p>
+<p>Experiment by creating your own rules for an L-system. Be sure to use the <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code> characters in the rule(s) of your L-system.</p>
 
 <div data-childcomponent="list_turtle_practice_5" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=list_turtle_practice_5 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=list_turtle_practice_5 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import turtle
 
 # your code here!

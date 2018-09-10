@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>5. Tracing Code and Cannonball Motion (Repeat Until) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/clickable.js"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../_static/fitb.js"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/reveal.js"></script>
-    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../_static/timed.js"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/codemirror.js"></script>
     <script type="text/javascript" src="../_static/xml.js"></script>
     <script type="text/javascript" src="../_static/css.js"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/javascript.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/datafile.js"></script>
-    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -197,7 +209,8 @@
 <li><a class="reference internal" href="#tracing-repeat-until-with-variables">5.2. Tracing Repeat Until With Variables</a></li>
 <li><a class="reference internal" href="#class-activity-repeat-until">5.3. Class Activity: Repeat Until</a></li>
 <li><a class="reference internal" href="#cannonball-motion-using-repeat-until">5.4. Cannonball Motion Using Repeat Until</a></li>
-<li><a class="reference internal" href="#practice-problem">5.5. Practice Problem</a></li>
+<li><a class="reference internal" href="#check-your-understanding">5.5. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#practice-problem">5.6. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -250,17 +263,34 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Introduce the <strong>repeat until</strong> block by tracing code with simple variables and conditionals. Use the repeat until block to simulate the motion of a cannon ball (motion repeats until the cannon ball hits the ground).</p>
 </div>
+<p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=_jTHwZCY2CI">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
 
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-</ul>
-
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="_jTHwZCY2CI_vid"></div>
     </div>
-    <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=_jTHwZCY2CI">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
-<iframe src="https://www.youtube.com/embed/_jTHwZCY2CI"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="repeat-until">
+    <script id="_jTHwZCY2CI_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('_jTHwZCY2CI_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('_jTHwZCY2CI_vid', {
+          height: '315',
+          width: '560',
+          videoId: '_jTHwZCY2CI',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <div class="section" id="repeat-until">
 <h2>5.1. Repeat Until<a class="headerlink" href="#repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes, we don’t necessarily know ahead of time how many times we should repeat a block in our code. Perhaps we are shooting a virtual cannon, and we want the cannonball to continue moving until the ball hits the ground. Depending on the values of the forces we are applying to the cannonball (gravity, wind, friction, etc), the number of times that we should repeat the code containing the cannonball motion will change. In these situations, we want to use the <strong>repeat until</strong> block.</p>
 <img alt="../_images/scratch_empty_repeat_until.png" src="../_images/scratch_empty_repeat_until.png" />
@@ -472,12 +502,12 @@
 </div>
 <div class="section" id="class-activity-repeat-until">
 <h2>5.3. Class Activity: Repeat Until<a class="headerlink" href="#class-activity-repeat-until" title="Permalink to this headline">¶</a></h2>
-<p>Your teacher will give you a printed copy of the <a class="reference download internal" href="../_downloads/scratch_repeat_until_practice.pdf" download=""><code class="xref download docutils literal"><span class="pre">Practice</span> <span class="pre">with</span> <span class="pre">Repeat</span> <span class="pre">Until</span> <span class="pre">Practice</span> <span class="pre">handout</span></code></a>.</p>
+<p>Your teacher will give you a printed copy of the <a class="reference download internal" href="../_downloads/scratch_repeat_until_practice.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Practice</span> <span class="pre">with</span> <span class="pre">Repeat</span> <span class="pre">Until</span> <span class="pre">Practice</span> <span class="pre">handout</span></code></a>.</p>
 <p>Now that you have seen how to trace the the code contained in a repeat until block, take a few minutes to try to fill in the practice sheet linked to above. After you have completed each question, you may double check your work by recreating the question in Scratch.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p><strong>Teacher Note:</strong> Instead of having students recreate the problems in Scratch to check their work, it can be very useful to trace the code together as a class. Writing down a t-chart on a whiteboard is a nice way to talk through problems like these ones.</p>
-<p class="last">If you would like to edit the Repeat Until Practice handout, you can download the <a class="reference download internal" href="../_downloads/scratch_repeat_until_practice.docx" download=""><code class="xref download docutils literal"><span class="pre">editable</span> <span class="pre">Word</span> <span class="pre">document</span></code></a>.</p>
+<p class="last">If you would like to edit the Repeat Until Practice handout, you can download the <a class="reference download internal" href="../_downloads/scratch_repeat_until_practice.docx" download=""><code class="xref download docutils literal notranslate"><span class="pre">editable</span> <span class="pre">Word</span> <span class="pre">document</span></code></a>.</p>
 </div>
 </div>
 <div class="section" id="cannonball-motion-using-repeat-until">
@@ -499,8 +529,59 @@
 <p class="last">Experiment by changing the initial values given for the xSpeed and ySpeed variables. You may also want to adjust the “gravity” value (initially set at -0.1).</p>
 </div>
 </div>
+<div class="section" id="check-your-understanding">
+<h2>5.5. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_repeat_until_check_1">
+            <p>scratch-repeat-until1: What would the value of the Some Number variable be after the following code has executed?</p>
+<img alt="../_images/scratch_repeat_until_test_yourself1.png" src="../_images/scratch_repeat_until_test_yourself1.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [28, 28], "feedback": "Yes! Way to go!"}, {"number": [30, 30], "feedback": "No. Remember that 30 is not less than, but equal to, 30."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_repeat_until_check_2">
+            <p>scratch-repeat-until2: How many iterations would the following code take to finish it’s execution? In other words, how many times would the repeat until block occur?</p>
+<img alt="../_images/scratch_repeat_until_test_yourself1.png" src="../_images/scratch_repeat_until_test_yourself1.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [4, 4], "feedback": "Yes! Way to go!"}, {"number": [3, 3], "feedback": "No. Remember that 30 is not less than, but equal to, 30."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_repeat_until_check_3">
+            <p>scratch-repeat-until3: How many iterations would the following code take to finish it’s execution? In other words, how many times would the repeat until block occur?</p>
+<img alt="../_images/scratch_repeat_until_test_yourself2.png" src="../_images/scratch_repeat_until_test_yourself2.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [3, 3], "feedback": "Yes! Way to go!"}, {"number": [4, 4], "feedback": "No. Notice that the \u201cChange Some Number by 3\u201d block is NOT inside an if/else block, so it will happen EVERY iteration."}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="scratch_repeat_until_check_4">
+            <p>scratch-repeat-until4: What would the value of the Some Number variable be after the following code has executed?</p>
+<img alt="../_images/scratch_repeat_until_test_yourself2.png" src="../_images/scratch_repeat_until_test_yourself2.png" />
+<input type="text">
+        <script type="application/json">
+            [[{"number": [13, 13], "feedback": "Yes! Way to go!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
 <div class="section" id="practice-problem">
-<h2>5.5. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<h2>5.6. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Work on your second Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>

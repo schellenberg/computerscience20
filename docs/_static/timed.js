@@ -294,7 +294,7 @@ Timed.prototype.renderSubmitButton = function () {
     this.finishButton = document.createElement("button");
     $(this.finishButton).attr({
         "id": "finish",
-        "class": "btn btn-inverse"
+        "class": "btn btn-primary"
     });
     this.finishButton.textContent = "Finish Exam";
     this.finishButton.addEventListener("click", function () {
@@ -609,7 +609,7 @@ Timed.prototype.tookTimedExam = function () {
 Timed.prototype.finishAssessment = function () {
     $("#relations-next").show(); // show the next page button for now
     $("#relations-prev").show(); // show the previous button for now
-    if (!this.showResults) {
+    if (!this.showFeedback) {  // bje - changed from showResults
         $(this.timedDiv).hide();
         $(this.pauseBtn).hide();
         $(this.timerContainer).hide();

@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>2. Image Processing Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -262,24 +274,14 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use nested loops to practice simple image processing.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="nested-loop-review">
+<div class="section" id="nested-loop-review">
 <h2>2.1. Nested Loop Review<a class="headerlink" href="#nested-loop-review" title="Permalink to this headline">¶</a></h2>
 <p>In the previous section, we used a lot of nested loops, which is a loop inside another loop. Use what you learned from that section to answer the following:</p>
 
         <div class="runestone">
         <div data-component="fillintheblank" id="nested_loops_review_1">
-            <p>In the following code, how many lines does this code print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <p>image-processing-practice1: In the following code, how many lines does this code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
 </pre></div>
@@ -292,10 +294,10 @@
         </div>
         </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="nested_loops_review_2">
-            <p>image-processing-practice1: What is the last line that the following code will print?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <p>image-processing-practice2: What is the last line that the following code will print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
@@ -315,10 +317,10 @@
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="nested_loops_review_3">
-            <p>image-processing-practice2: When you run this code, what will the animation look like?:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+            <p>image-processing-practice3: When you run this code, what will the animation look like?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 
 <span class="n">width</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
@@ -360,7 +362,10 @@
 
 <div data-childcomponent="gray_scale" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=gray_scale data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=gray_scale data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 img = image.Image("skflag.png")
@@ -390,7 +395,7 @@ for y in range(height):
 
     <div data-component="reveal" id="greyscale_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
     <p>One possible solution is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;skflag.png&quot;</span><span class="p">)</span>
 <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
@@ -423,13 +428,16 @@ for y in range(height):
     </div>
 <div class="section" id="black-and-white-threshold">
 <h3>2.2.2. Black and White Threshold<a class="headerlink" href="#black-and-white-threshold" title="Permalink to this headline">¶</a></h3>
-<p>You can create interesting <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the <code class="docutils literal"><span class="pre">skflag.png</span></code> image, it looks like this originally:</p>
+<p>You can create interesting <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the <code class="docutils literal notranslate"><span class="pre">skflag.png</span></code> image, it looks like this originally:</p>
 <img src="../../_static/skflag.png"><p>If you look at every pixel to find the sum of the red, green, and blue values, then insert a black pixel whenever the sum is greater than 200 (or a white pixel if it is not), you will create the following image:</p>
 <img alt="../../_images/threshold-flag.png" src="../../_images/threshold-flag.png" />
 
 <div data-childcomponent="black_white_threshold" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=black_white_threshold data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=black_white_threshold data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 # Be sure to experiment with different threshold values!
@@ -438,7 +446,7 @@ for y in range(height):
 
     <div data-component="reveal" id="threshold_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
     <p>One possible solution is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;skflag.png&quot;</span><span class="p">)</span>
 <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
@@ -485,7 +493,10 @@ for y in range(height):
 
 <div data-childcomponent="practice_problem_red_remover" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_red_remover data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_red_remover data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 img = image.Image("sneakers.jpg")
@@ -514,7 +525,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_color_swapper" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_color_swapper data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_color_swapper data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>
@@ -534,7 +548,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_keep_the_green" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_keep_the_green data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_keep_the_green data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>
@@ -554,7 +571,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_half_red" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_half_red data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_half_red data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>
@@ -574,7 +594,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_combining_colors" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_combining_colors data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_combining_colors data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>
@@ -594,7 +617,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_half_each_color" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_half_each_color data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_half_each_color data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>
@@ -614,7 +640,10 @@ img.draw(win)
 <div>
 <div data-childcomponent="practice_problem_sepia_tone" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_sepia_tone data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_sepia_tone data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # Try to create a solution to this problem
 #   WITHOUT looking back to previous solutions.
 </textarea>

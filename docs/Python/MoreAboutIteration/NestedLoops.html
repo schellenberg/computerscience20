@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>1. Nested Loops and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -265,25 +277,41 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="image-processing-introduction">
+<div class="section" id="image-processing-introduction">
 <h2>1.1. Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Before starting this section, you will want to install the <code class="docutils literal"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
+<p>Before starting this section, you will want to install the <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools -&gt; Manage packages…, then type in <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
 <p class="last"><strong>Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!</strong></p>
 </div>
 <p>The following video (created by Code.org) describes how images are represented using binary digits, as well as an overview of how image filters work. It is a great introduction to the image filtering that follows.</p>
-<iframe src="https://www.youtube.com/embed/15aqFQQVBWU"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><p>Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="15aqFQQVBWU_vid"></div>
+    </div>
+    <script id="15aqFQQVBWU_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('15aqFQQVBWU_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('15aqFQQVBWU_vid', {
+          height: '315',
+          width: '560',
+          videoId: '15aqFQQVBWU',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p>Two dimensional tables have both rows and columns.  You have probably seen many tables like this if you have used a
 spreadsheet program.  Another object that is organized in rows and columns is a digital image.  In this section we will
 explore how iteration allows us to manipulate these images.</p>
 <p>A <strong>digital image</strong> is a finite collection of small, discrete picture elements called <strong>pixels</strong>.  These pixels are organized in a two-dimensional grid.  Each pixel represents the smallest amount of picture information that is
@@ -358,16 +386,16 @@ no basic color.  On the other hand, “White” has maximum values for all three
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Search the web for a <code class="docutils literal"><span class="pre">color</span> <span class="pre">picker</span></code>. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.</p>
+<p class="last">Search the web for a <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">picker</span></code>. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.</p>
 </div>
 </div>
 <div class="section" id="creating-and-manipulating-pixels">
 <span id="index-1"></span><h2>1.3. Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
-a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal"><span class="pre">Image</span></code> and <code class="docutils literal"><span class="pre">Pixel</span></code>.</p>
+a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal notranslate"><span class="pre">Image</span></code> and <code class="docutils literal notranslate"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
-that allow us to ask for the intensity values.  They are called <code class="docutils literal"><span class="pre">get_red</span></code>, <code class="docutils literal"><span class="pre">get_green</span></code>, and <code class="docutils literal"><span class="pre">get_blue</span></code>.  In addition, we can ask a
-pixel to change an intensity value using its <code class="docutils literal"><span class="pre">set_red</span></code>, <code class="docutils literal"><span class="pre">set_green</span></code>, and <code class="docutils literal"><span class="pre">set_blue</span></code> methods.</p>
+that allow us to ask for the intensity values.  They are called <code class="docutils literal notranslate"><span class="pre">get_red</span></code>, <code class="docutils literal notranslate"><span class="pre">get_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">get_blue</span></code>.  In addition, we can ask a
+pixel to change an intensity value using its <code class="docutils literal notranslate"><span class="pre">set_red</span></code>, <code class="docutils literal notranslate"><span class="pre">set_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">set_blue</span></code> methods.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -381,32 +409,32 @@ pixel to change an intensity value using its <code class="docutils literal"><spa
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">Pixel(r,</span> <span class="pre">g,</span> <span class="pre">b)</span></code></td>
-<td><code class="docutils literal"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">image.Pixel(20,</span> <span class="pre">100,</span> <span class="pre">50)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Pixel(r,</span> <span class="pre">g,</span> <span class="pre">b)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">image.Pixel(20,</span> <span class="pre">100,</span> <span class="pre">50)</span></code></td>
 <td>Create a new pixel with 20 red, 100 green, and 50 blue.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">get_red()</span></code></td>
-<td><code class="docutils literal"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">p.get_red()</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">get_red()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">p.get_red()</span></code></td>
 <td>Return the red component intensity.</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">get_green()</span></code></td>
-<td><code class="docutils literal"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">p.get_green()</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">get_green()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">p.get_green()</span></code></td>
 <td>Return the green component intensity.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">get_blue()</span></code></td>
-<td><code class="docutils literal"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">p.get_blue()</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">get_blue()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">p.get_blue()</span></code></td>
 <td>Return the blue component intensity.</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">set_red()</span></code></td>
-<td><code class="docutils literal"><span class="pre">p.set_red(100)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">set_red()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">p.set_red(100)</span></code></td>
 <td>Set the red component intensity to 100.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">set_green()</span></code></td>
-<td><code class="docutils literal"><span class="pre">p.set_green(45)</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">set_green()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">p.set_green(45)</span></code></td>
 <td>Set the green component intensity to 45.</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">set_blue()</span></code></td>
-<td><code class="docutils literal"><span class="pre">p.set_blue(156)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">set_blue()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">p.set_blue(156)</span></code></td>
 <td>Set the blue component intensity to 156.</td>
 </tr>
 </tbody>
@@ -417,7 +445,10 @@ the same as the current amount of green.</p>
 
 <div data-childcomponent="pixelex1a" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=pixelex1a data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=pixelex1a data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import image
 
 p = image.Pixel(45, 76, 200)
@@ -431,7 +462,7 @@ print(p.get_green(), p.get_blue())
 <div class="section" id="check-your-understanding">
 <h3>1.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_1_1">
             image-processing-nested-loops1: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
             <li data-component="answer" data-correct id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback" id="test_question7_8_1_1_opt_a">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
@@ -455,28 +486,31 @@ to do this is to use <strong>nested iteration</strong>.</p>
 <p>Nested iteration simply means that we will place one iteration construct inside of another.  We will call these two
 iterations the <strong>outer iteration</strong> and the <strong>inner iteration</strong>.
 To see how this works, consider the iteration below.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We have seen this enough times to know that the value of <code class="docutils literal"><span class="pre">i</span></code> will be 0, then 1, then 2, and so on up to 4.
-The <code class="docutils literal"><span class="pre">print</span></code> will be performed once for each pass.
-However, the body of the loop can contain any statements, including another iteration (another <code class="docutils literal"><span class="pre">for</span></code> statement).  For example,</p>
+<p>We have seen this enough times to know that the value of <code class="docutils literal notranslate"><span class="pre">i</span></code> will be 0, then 1, then 2, and so on up to 4.
+The <code class="docutils literal notranslate"><span class="pre">print</span></code> will be performed once for each pass.
+However, the body of the loop can contain any statements, including another iteration (another <code class="docutils literal notranslate"><span class="pre">for</span></code> statement).  For example,</p>
 
 <div data-childcomponent="nested1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=nested1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=nested1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 for i in range(5):
     for j in range(3):
         print(i, j)
 </textarea>
 </div>
-<p>The <code class="docutils literal"><span class="pre">for</span> <span class="pre">i</span></code> iteration is the <cite>outer iteration</cite> and the <code class="docutils literal"><span class="pre">for</span> <span class="pre">j</span></code> iteration is the <cite>inner iteration</cite>.  Each pass through
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span></code> iteration is the <cite>outer iteration</cite> and the <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">j</span></code> iteration is the <cite>inner iteration</cite>.  Each pass through
 the outer iteration will result in the complete processing of the inner iteration from beginning to end.  This means that
-the output from this nested iteration will show that for each value of <code class="docutils literal"><span class="pre">i</span></code>, all values of <code class="docutils literal"><span class="pre">j</span></code> will occur.</p>
-<p>Note that the value of <code class="docutils literal"><span class="pre">i</span></code> stays the same while the value of <code class="docutils literal"><span class="pre">j</span></code> changes.  The inner iteration, in effect, is moving “faster” than the outer iteration.</p>
+the output from this nested iteration will show that for each value of <code class="docutils literal notranslate"><span class="pre">i</span></code>, all values of <code class="docutils literal notranslate"><span class="pre">j</span></code> will occur.</p>
+<p>Note that the value of <code class="docutils literal notranslate"><span class="pre">i</span></code> stays the same while the value of <code class="docutils literal notranslate"><span class="pre">j</span></code> changes.  The inner iteration, in effect, is moving “faster” than the outer iteration.</p>
 <p>Another way to see this in more detail is to examine the behavior with codelens.  Step through the iterations to see the
-flow of control as it occurs with the nested iteration.  Again, for every value of <code class="docutils literal"><span class="pre">i</span></code>, all of the values of <code class="docutils literal"><span class="pre">j</span></code> will occur.  You can see that the inner iteration completes before going on to the next pass of the outer iteration.</p>
+flow of control as it occurs with the nested iteration.  Again, for every value of <code class="docutils literal notranslate"><span class="pre">i</span></code>, all of the values of <code class="docutils literal notranslate"><span class="pre">j</span></code> will occur.  You can see that the inner iteration completes before going on to the next pass of the outer iteration.</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
@@ -525,10 +559,10 @@ $(window).resize(function() {
 </script>
 </div>
 <p>Our goal with image processing is to visit each pixel.  We will use an iteration to process each <cite>row</cite>.  Within that iteration, we will use a nested iteration to process each <cite>column</cite>.  The result is a nested iteration, similar to the one
-seen above, where the outer <code class="docutils literal"><span class="pre">for</span></code> loop processes the rows, from 0 up to but not including the height of the image.
-The inner <code class="docutils literal"><span class="pre">for</span></code> loop will process each column of a row, again from 0 up to but not including the width of the image.</p>
+seen above, where the outer <code class="docutils literal notranslate"><span class="pre">for</span></code> loop processes the rows, from 0 up to but not including the height of the image.
+The inner <code class="docutils literal notranslate"><span class="pre">for</span></code> loop will process each column of a row, again from 0 up to but not including the width of the image.</p>
 <p>The resulting code will look like the following.  We are now free to do anything we wish to each pixel in the image.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
 
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
@@ -539,11 +573,14 @@ The inner <code class="docutils literal"><span class="pre">for</span></code> loo
 </div>
 <div class="section" id="creating-an-empty-image">
 <h2>1.5. Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:</p>
+<p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal notranslate"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:</p>
 
 <div data-childcomponent="empty_image_demo" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=empty_image_demo data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=empty_image_demo data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import image
 
 width = 400
@@ -555,11 +592,14 @@ img = image.EmptyImage(width, height)
 img.draw(win)
 </textarea>
 </div>
-<p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal"><span class="pre">set_pixel</span></code> function inside of a nested for loop.</p>
+<p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal notranslate"><span class="pre">set_pixel</span></code> function inside of a nested for loop.</p>
 
 <div data-childcomponent="change_empty_image_to_red" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=change_empty_image_to_red data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=change_empty_image_to_red data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import image
 
 width = 400
@@ -588,8 +628,8 @@ img.draw(win)
 <div class="section" id="image-objects">
 <span id="index-3"></span><h2>1.6. Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
-<p>We can ask an image object to return its size using the <code class="docutils literal"><span class="pre">get_width</span></code> and <code class="docutils literal"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal"><span class="pre">get_pixel</span></code> and change the pixel at
-a particular location using <code class="docutils literal"><span class="pre">set_pixel</span></code>.</p>
+<p>We can ask an image object to return its size using the <code class="docutils literal notranslate"><span class="pre">get_width</span></code> and <code class="docutils literal notranslate"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> and change the pixel at
+a particular location using <code class="docutils literal notranslate"><span class="pre">set_pixel</span></code>.</p>
 <p>The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
 different depending on whether you are using an image file or creating an empty image.</p>
 <table border="1" class="docutils">
@@ -605,40 +645,43 @@ different depending on whether you are using an image file or creating an empty 
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">Image(filename)</span></code></td>
-<td><code class="docutils literal"><span class="pre">img</span> <span class="pre">=</span> <span class="pre">image.Image(&quot;skflag.png&quot;)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Image(filename)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">img</span> <span class="pre">=</span> <span class="pre">image.Image(&quot;skflag.png&quot;)</span></code></td>
 <td>Create an Image object from the file skflag.png.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">EmptyImage()</span></code></td>
-<td><code class="docutils literal"><span class="pre">img</span> <span class="pre">=</span> <span class="pre">image.EmptyImage(100,</span> <span class="pre">200)</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">EmptyImage()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">img</span> <span class="pre">=</span> <span class="pre">image.EmptyImage(100,</span> <span class="pre">200)</span></code></td>
 <td>Create an Image object that has all white pixels</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">get_width()</span></code></td>
-<td><code class="docutils literal"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">img.get_width()</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">get_width()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">img.get_width()</span></code></td>
 <td>Return the width of the image in pixels.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">get_height()</span></code></td>
-<td><code class="docutils literal"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">img.get_height()</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">get_height()</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">img.get_height()</span></code></td>
 <td>Return the height of the image in pixels.</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">get_pixel(col,</span> <span class="pre">row)</span></code></td>
-<td><code class="docutils literal"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">img.get_pixel(35,</span> <span class="pre">86)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">get_pixel(col,</span> <span class="pre">row)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">img.get_pixel(35,</span> <span class="pre">86)</span></code></td>
 <td>Return the pixel at column 35, row 86.</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">set_pixel(col,</span> <span class="pre">row,</span> <span class="pre">p)</span></code></td>
-<td><code class="docutils literal"><span class="pre">img.set_pixel(100,</span> <span class="pre">50,</span> <span class="pre">mp)</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">set_pixel(col,</span> <span class="pre">row,</span> <span class="pre">p)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">img.set_pixel(100,</span> <span class="pre">50,</span> <span class="pre">mp)</span></code></td>
 <td>Set the pixel at column 100, row 50 to be mp (where mp is of the Pixel data type).</td>
 </tr>
 </tbody>
 </table>
-<p>Consider the image shown below.  Assume that the image is stored in a file called <code class="docutils literal"><span class="pre">skflag.png</span></code>.  Line 2 opens the
-file and uses the contents to create an image object that is referred to by <code class="docutils literal"><span class="pre">img</span></code>.  Once we have an image object,
+<p>Consider the image shown below.  Assume that the image is stored in a file called <code class="docutils literal notranslate"><span class="pre">skflag.png</span></code>.  Line 2 opens the
+file and uses the contents to create an image object that is referred to by <code class="docutils literal notranslate"><span class="pre">img</span></code>.  Once we have an image object,
 we can use the methods described above to access information about the image or to get a specific pixel and check
 on its basic color intensities.</p>
 <img src="../../_static/skflag.png" id="skflag.png">
 <div data-childcomponent="pixelex1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=pixelex1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=pixelex1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import image
 img = image.Image("skflag.png")
 
@@ -650,54 +693,25 @@ print(p.get_red(), p.get_green(), p.get_blue())
 </textarea>
 </div>
 <p>When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
+pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
 </div>
 <div class="section" id="image-processing-with-an-existing-image">
 <h2>1.7. Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="increasing-a-color">
 <h3>1.7.1. Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
-<img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
+<img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal notranslate"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
-<p>There is a chance that the following program will not finish execution before triggering a <code class="docutils literal"><span class="pre">TimeLimitError</span></code> in your web browser. To see the completed version of the image, you may either:</p>
+<p>There is a chance that the following program will not finish execution before triggering a <code class="docutils literal notranslate"><span class="pre">TimeLimitError</span></code> in your web browser. To see the completed version of the image, you may either:</p>
 <ul class="last simple">
 <li>copy/paste this code into Thonny and execute it there (being sure to save the image file into the same folder as the Python code)</li>
-<li>unindent (remove all spaces before) the call to <code class="docutils literal"><span class="pre">img.draw(canvas)</span></code> (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)</li>
+<li>unindent (remove all spaces before) the call to <code class="docutils literal notranslate"><span class="pre">img.draw(canvas)</span></code> (this will remove the animation, as the you only draw the completely transformed image, instead of the altered version after one completed loop)</li>
 </ul>
 </div>
-
-<div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=increase_color_amount data-lang="python"    data-timelimit=180000   data-audio=''     >
-import image
-
-img = image.Image("sneakers.jpg")
-width = img.get_width()
-height = img.get_height()
-
-canvas = image.ImageWin(width, height)
-img.draw(canvas)
-
-for row in range(height):
-    for col in range(width):
-        p = img.get_pixel(col, row)
-
-        new_red = p.get_red()
-        new_green = p.get_green() + 50
-        new_blue = p.get_blue()
-
-        new_pixel = image.Pixel(new_red, new_green, new_blue)
-
-        img.set_pixel(col, row, new_pixel)
-
-    # unindent the following line to remove the "animation"
-    img.draw(canvas)
-</textarea>
-</div>
-<p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal"><span class="pre">get_width()</span></code> and <code class="docutils literal"><span class="pre">get_height()</span></code> functions to create a window that is the same size as the image.</p>
+<p>Let’s take a closer look at the code.  After importing the image module, we create an image object called <code class="docutils literal notranslate"><span class="pre">img</span></code> that represents a typical digital photo. We use the <code class="docutils literal notranslate"><span class="pre">get_width()</span></code> and <code class="docutils literal notranslate"><span class="pre">get_height()</span></code> functions to create a window that is the same size as the image.</p>
 <p>Lines 8 and 9 create the nested iteration that we discussed earlier.  This allows us to process each pixel in the image.
 Line 10 gets an individual pixel at the current location of the nested loop.</p>
-<p>Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the <code class="docutils literal"><span class="pre">new_red</span></code>, <code class="docutils literal"><span class="pre">new_green</span></code>, and <code class="docutils literal"><span class="pre">new_blue</span></code> values, we can create a new pixel (Line 15).</p>
+<p>Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the <code class="docutils literal notranslate"><span class="pre">new_red</span></code>, <code class="docutils literal notranslate"><span class="pre">new_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">new_blue</span></code> values, we can create a new pixel (Line 15).</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
 </div>
 <div class="section" id="negative-images">
@@ -705,12 +719,15 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
-<code class="docutils literal"><span class="pre">255-50</span></code> or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.</p>
-<p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take some time to complete (it will execute faster if you run it in Thonny). Also note that instead of using <code class="docutils literal"><span class="pre">col</span></code> and <code class="docutils literal"><span class="pre">row</span></code> as the variable names in the nested loop, <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> have been used. In your own programs, use whichever makes more sense to you!</p>
+<code class="docutils literal notranslate"><span class="pre">255-50</span></code> or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.</p>
+<p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take some time to complete (it will execute faster if you run it in Thonny). Also note that instead of using <code class="docutils literal notranslate"><span class="pre">col</span></code> and <code class="docutils literal notranslate"><span class="pre">row</span></code> as the variable names in the nested loop, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> have been used. In your own programs, use whichever makes more sense to you!</p>
 
 <div data-childcomponent="acimg_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=acimg_1 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=acimg_1 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 img = image.Image("skflag.png")
@@ -742,13 +759,13 @@ for y in range(height):
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal notranslate"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
 </div>
 <div class="section" id="id1">
 <h3>1.7.3. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Change the name of the file in the <code class="docutils literal"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal"><span class="pre">pineapples.jpg</span></code>):</li>
+<li>Change the name of the file in the <code class="docutils literal notranslate"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal notranslate"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal notranslate"><span class="pre">pineapples.jpg</span></code>):</li>
 </ul>
 <img src="../../_static/fransaskoisflag.jpg" id="fransaskoisflag.jpg">
 <h4 style="text-align: center;">fransaskoisflag.jpg</h4><img src="../../_static/pineapples.jpg" id="pineapples.jpg">
@@ -760,15 +777,15 @@ for y in range(height):
 <div class="section" id="id2">
 <h3>1.7.4. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_1">
             <p>image-processing-nested-loops2: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span>
 
 <span class="mi">0</span> <span class="mi">0</span>
 <span class="mi">0</span> <span class="mi">1</span>
@@ -815,16 +832,16 @@ for y in range(height):
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question7_8_3_2">
             <p>image-processing-nested-loops3: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
 <span class="n">new_green</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
 <span class="n">new_blue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>with the lines:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
 <span class="n">new_green</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">new_blue</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>

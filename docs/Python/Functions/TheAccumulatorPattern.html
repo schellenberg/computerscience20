@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. The Accumulator Pattern &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -257,17 +269,7 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Introduce the accumulator pattern with numbers.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="squaring-a-number-with-the-accumulator-pattern">
+<div class="section" id="squaring-a-number-with-the-accumulator-pattern">
 <h2>3.1. Squaring a Number with the Accumulator Pattern<a class="headerlink" href="#squaring-a-number-with-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
 <p>In a previous example, we wrote a function that computes the square of a number.  The algorithm we used
 in the function was simple: multiply the number by itself.
@@ -276,7 +278,7 @@ of multiplication.</p>
 <p>If you want to multiply two numbers together, the most basic approach is to think of it as repeating the process of
 adding one number to itself.  The number of repetitions is where the second number comes into play.  For example, if we
 wanted to multiply three and five, we could think about it as adding three to itself five times.  Three plus three is six, plus three is nine, plus three is 12, and finally plus three is 15.  Generalizing this, if we want to implement
-the idea of squaring a number, call it <code class="docutils literal"><span class="pre">n</span></code>, we would add <code class="docutils literal"><span class="pre">n</span></code> to itself <code class="docutils literal"><span class="pre">n</span></code> times.</p>
+the idea of squaring a number, call it <code class="docutils literal notranslate"><span class="pre">n</span></code>, we would add <code class="docutils literal notranslate"><span class="pre">n</span></code> to itself <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Teacher note: A nice introduction to this lesson is to either demonstrate the process of multiplication by repeated addition on the whiteboard, or having the students work through a question on their own.</p>
@@ -285,13 +287,16 @@ the idea of squaring a number, call it <code class="docutils literal"><span clas
 precisely why we have variables in a program.  This means that we will need some variable
 to remember the “running total”.  It should be initialized with a value of zero.  Then, we need to <strong>update</strong> the “running total” the correct number of times.  For each repetition, we’ll want
 to update the running total by adding the number to it.</p>
-<p>In words we could say it this way.  To square the value of <code class="docutils literal"><span class="pre">n</span></code>, we will repeat the process of updating a running total <code class="docutils literal"><span class="pre">n</span></code> times.  To update the running total, we take the old value of the “running total” and add <code class="docutils literal"><span class="pre">n</span></code>.  That sum becomes the new value of the “running total”.</p>
+<p>In words we could say it this way.  To square the value of <code class="docutils literal notranslate"><span class="pre">n</span></code>, we will repeat the process of updating a running total <code class="docutils literal notranslate"><span class="pre">n</span></code> times.  To update the running total, we take the old value of the “running total” and add <code class="docutils literal notranslate"><span class="pre">n</span></code>.  That sum becomes the new value of the “running total”.</p>
 <p>Here is the program in Python.  Note that the heading of the function definition is the same as it was before.  All that has changed
 is the details of how the squaring is done.  This is a great example of “black box” design.  We can change out the details inside of the box and still use the function exactly as we did before.</p>
 
 <div data-childcomponent="sq_accum1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=sq_accum1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=sq_accum1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def square(original_number):
     running_total = 0
     for counter in range(original_number):
@@ -304,14 +309,14 @@ result = square(to_square)
 print("The result of", to_square, "squared is", result)
 </textarea>
 </div>
-<p>In the program above, notice that the variable <code class="docutils literal"><span class="pre">running_total</span></code> starts out with a value of 0.  Next, the iteration is performed <code class="docutils literal"><span class="pre">original_number</span></code> times.  Inside the for loop, the update occurs. <code class="docutils literal"><span class="pre">running_total</span></code> is reassigned a new value which is the old value plus the value of <code class="docutils literal"><span class="pre">original_number</span></code>.</p>
+<p>In the program above, notice that the variable <code class="docutils literal notranslate"><span class="pre">running_total</span></code> starts out with a value of 0.  Next, the iteration is performed <code class="docutils literal notranslate"><span class="pre">original_number</span></code> times.  Inside the for loop, the update occurs. <code class="docutils literal notranslate"><span class="pre">running_total</span></code> is reassigned a new value which is the old value plus the value of <code class="docutils literal notranslate"><span class="pre">original_number</span></code>.</p>
 <p>This pattern of iterating the updating of a variable is commonly
 referred to as the <strong>accumulator pattern</strong>.  We refer to the variable as the <strong>accumulator</strong>.  This pattern will come up over and over again.  Remember that the key
 to making it work successfully is to <strong>be sure to initialize the variable before you start the iteration</strong>.
 Once inside the iteration, it is required that you update the accumulator.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">What would happen if we put the assignment <code class="docutils literal"><span class="pre">running_total</span> <span class="pre">=</span> <span class="pre">0</span></code> inside the for statement?  Not sure? Try it and find out.</p>
+<p class="last">What would happen if we put the assignment <code class="docutils literal notranslate"><span class="pre">running_total</span> <span class="pre">=</span> <span class="pre">0</span></code> inside the for statement?  Not sure? Try it and find out.</p>
 </div>
 <p>Here is the same program in codelens.  Step through the function and watch the “running total” accumulate the result.</p>
 
@@ -364,7 +369,7 @@ $(window).resize(function() {
 </div>
 <div class="section" id="the-general-accumulator-pattern">
 <span id="index-0"></span><h2>3.2. The General Accumulator Pattern<a class="headerlink" href="#the-general-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">initialize</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">initialize</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
 <span class="n">repeat</span><span class="p">:</span>
     <span class="n">modify</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
 
@@ -374,10 +379,10 @@ $(window).resize(function() {
 <div class="section" id="check-your-understanding">
 <h3>3.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_4_1">
             <p>accumulator-pattern1: Consider the following code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">running_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
         <span class="n">running_total</span> <span class="o">=</span> <span class="n">running_total</span> <span class="o">+</span> <span class="n">x</span>
@@ -401,7 +406,7 @@ instruction in the loop?</p>
             </div>
             
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="question5_4_1p">
+        <pre data-component="parsons" id="question5_4_1p"      >
         <span data-question>accumulator-pattern2: Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</span>n = int(input('How many odd numbers would
 you like to add together?'))
 the_sum = 0
@@ -419,66 +424,75 @@ print(the_sum)
 </div>
 <div class="section" id="applying-the-accumulator-pattern">
 <h2>3.3. Applying the Accumulator Pattern<a class="headerlink" href="#applying-the-accumulator-pattern" title="Permalink to this headline">¶</a></h2>
-<p>Use the accumulator pattern to write a fruitful function <code class="docutils literal"><span class="pre">sum_to(n)</span></code> that returns the sum of all integer numbers up to and including n. So <code class="docutils literal"><span class="pre">sum_to(10)</span></code> would be <code class="docutils literal"><span class="pre">1+2+3...+10</span></code> which would return the value 55.</p>
+<p>Use the accumulator pattern to write a fruitful function <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> that returns the sum of all integer numbers up to and including n. So <code class="docutils literal notranslate"><span class="pre">sum_to(10)</span></code> would be <code class="docutils literal notranslate"><span class="pre">1+2+3...+10</span></code> which would return the value 55.</p>
 
 <div data-childcomponent="sum_to_accumulator" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=sum_to_accumulator data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=sum_to_accumulator data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 # if you aren't sure how to use the accumulator pattern, scroll up!
 </textarea>
 </div>
-<p>Now that you have written a solution for the <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function, let’s test it a bit. You might want to do the following in Thonny, rather than your browser, as it will cause your browser to become unresponsive while the program is working.</p>
-<p>Although our accumulator pattern worked just fine when we passed in a number like 10, let’s see what happens if we crank that number up a bit. Try 100. How about 1000? Let’s keep going, and try 10000. Continue to add on one more zero, then running the code again. Depending on the speed of your computer, there will come a point where you begin to notice a distinct pause before your program prints an answer. Why is this? By looking at your code, you should realize that the loop must repeat by the number you pass into the function, so when we pass in 100, the loop repeats 100 times. Is there any way we can write a better <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function?</p>
+<p>Now that you have written a solution for the <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> function, let’s test it a bit. You might want to do the following in Thonny, rather than your browser, as it will cause your browser to become unresponsive while the program is working.</p>
+<p>Although our accumulator pattern worked just fine when we passed in a number like 10, let’s see what happens if we crank that number up a bit. Try 100. How about 1000? Let’s keep going, and try 10000. Continue to add on one more zero, then running the code again. Depending on the speed of your computer, there will come a point where you begin to notice a distinct pause before your program prints an answer. Why is this? By looking at your code, you should realize that the loop must repeat by the number you pass into the function, so when we pass in 100, the loop repeats 100 times. Is there any way we can write a better <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> function?</p>
 <p>There’s a famous story (no one really knows if it’s true) about the mathematician Carl Friedrich Gauss, from when the mathematician was only in grade school (in the late 18th century). Gauss’ teacher wanted a break from dealing with his students, so he assigned them a simple, but tedious problem; find the sum of the integers from 1 to 100. The teacher expected to have a few minutes of peace and quiet, but Gauss thought briefly, and astonished his teacher by correctly answering the question without doing the tedious task of summing all the values together.</p>
 <p>How did he do it? He noticed a pattern, as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">100</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">100</span>
 </pre></div>
 </div>
 <p>Writing the terms in the opposite order will still provide the same result:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>If we combine the two ideas together, you get the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">1</span>   <span class="o">+</span> <span class="mi">2</span>  <span class="o">+</span> <span class="mi">3</span>  <span class="o">+</span> <span class="mi">4</span>  <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">100</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="mi">1</span>   <span class="o">+</span> <span class="mi">2</span>  <span class="o">+</span> <span class="mi">3</span>  <span class="o">+</span> <span class="mi">4</span>  <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">100</span>
 <span class="n">the_sum</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">98</span> <span class="o">+</span> <span class="mi">97</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">+</span> <span class="mi">2</span>  <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>If you add each of the values vertically, you notice that what you get is the sum of 101 added 100 times:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">101</span> <span class="o">+</span> <span class="mi">101</span> <span class="o">+</span> <span class="mi">101</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">101</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">101</span> <span class="o">+</span> <span class="mi">101</span> <span class="o">+</span> <span class="mi">101</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">101</span>
 </pre></div>
 </div>
 <p>This can be written as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span>
 </pre></div>
 </div>
 <p>Dividing by 2:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>Writing this more generically to work for any number, the formula becomes:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[S=\frac{n(n+1)}{2}\]</div>
-<p>Now that you understand Gauss’ pattern for finding the sum of a series, rewrite the <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function you created above, this time using the formula!</p>
+<p>Now that you understand Gauss’ pattern for finding the sum of a series, rewrite the <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> function you created above, this time using the formula!</p>
 
 <div data-childcomponent="sum_to_formula" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=sum_to_formula data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=sum_to_formula data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 # use the formula given above
 </textarea>
 </div>
-<p>To be sure you understand why we bothered to learn another way to create the <code class="docutils literal"><span class="pre">sum_to(n)</span></code> function, test out the function with ridiculously large numbers. Notice that with this version of the function, the solution can be calculated dramatically faster. This is another example of why black-box function design is helpful: if an optimized version of the function is found, it can be implemented without affecting any of the code that calls that function.</p>
+<p>To be sure you understand why we bothered to learn another way to create the <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> function, test out the function with ridiculously large numbers. Notice that with this version of the function, the solution can be calculated dramatically faster. This is another example of why black-box function design is helpful: if an optimized version of the function is found, it can be implemented without affecting any of the code that calls that function.</p>
 </div>
 <div class="section" id="practice-problems">
 <h2>3.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="estimating-square-roots">
 <h3>3.4.1. Estimating Square Roots<a class="headerlink" href="#estimating-square-roots" title="Permalink to this headline">¶</a></h3>
-<p>Write a function called <code class="docutils literal"><span class="pre">my_sqrt</span></code> that will approximate the square root of a number, call it n, by using Newton’s algorithm. Newton’s approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: <code class="docutils literal"><span class="pre">new_guess</span> <span class="pre">=</span> <span class="pre">(1/2)</span> <span class="pre">*</span> <span class="pre">(old_guess</span> <span class="pre">+</span> <span class="pre">(n/old_guess))</span></code>.</p>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">my_sqrt</span></code> that will approximate the square root of a number, call it n, by using Newton’s algorithm. Newton’s approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: <code class="docutils literal notranslate"><span class="pre">new_guess</span> <span class="pre">=</span> <span class="pre">(1/2)</span> <span class="pre">*</span> <span class="pre">(old_guess</span> <span class="pre">+</span> <span class="pre">(n/old_guess))</span></code>.</p>
 <p>To be sure you understand how this works, it is a good idea to try out Newton’s algorithm by hand at least once! Try estimating the square root of 9 by hand. You will see that it only takes a couple iterations to get really close to the actual value of the square root.</p>
 <p>Be sure to test your square root function with a variety of numbers, and check with a calculator to see how well your function is performing!</p>
 
 <div data-childcomponent="my-sqrt" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=my-sqrt data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=my-sqrt data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def my_sqrt(n, number_of_guesses):
     # your code here
 </textarea>
@@ -490,19 +504,16 @@ def my_sqrt(n, number_of_guesses):
     </div>
 <div class="section" id="approximating-pi">
 <h3>3.4.2. Approximating Pi<a class="headerlink" href="#approximating-pi" title="Permalink to this headline">¶</a></h3>
-<p>Write a function called <code class="docutils literal"><span class="pre">my_pi()</span></code> that will return an approximation of PI (3.14159…). Use the <a class="reference external" href="http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80">Leibniz approximation</a>, which shows that you can approximate 1/4 of PI with the following series:</p>
-<div class="math">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">my_pi()</span></code> that will return an approximation of PI (3.14159…). Use the <a class="reference external" href="http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80">Leibniz approximation</a>, which shows that you can approximate 1/4 of PI with the following series:</p>
+<div class="math notranslate nohighlight">
 \[1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\cdots =\frac{\pi}{4}\]</div>
 
-    <div data-component="reveal" id="reveal_my_sqrt_hint"   data-showtitle="Need a hint?" data-hidetitle="Hide Hint">
-    <p>You might find it helpful to look back at the <a class="reference internal" href="WritingFruitfulFunctionsPractice.html#is-even-fruitful-function"><span class="std std-ref">Is Even</span></a> fruitful function that you created when we started practicing fruitful functions. For the Leibniz approximation, depending on whether you are on an odd or even time through the loop, you will need to either add or subtract…</p>
-<p>Remember that you will need to add 2 to the denominator every time through the loop, whether you were adding or subtracting.</p>
-
-    </div>
-    
 <div data-childcomponent="my-pi" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=my-pi data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=my-pi data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def my_pi():
     # your code here
 </textarea>
@@ -510,8 +521,8 @@ def my_pi():
 </div>
 <div class="section" id="finding-a-natural-logarithm">
 <h3>3.4.3. Finding A Natural Logarithm<a class="headerlink" href="#finding-a-natural-logarithm" title="Permalink to this headline">¶</a></h3>
-<p>Write a function called <code class="docutils literal"><span class="pre">ln2()</span></code> that will return an approximation of ln(2). You can calculate an approximation of the natural logarithm of 2 with the following series:</p>
-<div class="math">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">ln2()</span></code> that will return an approximation of ln(2). You can calculate an approximation of the natural logarithm of 2 with the following series:</p>
+<div class="math notranslate nohighlight">
 \[ln(2)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\]</div>
 
     <div data-component="reveal" id="reveal_ln2_hint"   data-showtitle="Need a hint?" data-hidetitle="Hide Hint">
@@ -522,7 +533,10 @@ def my_pi():
     
 <div data-childcomponent="ln2_practice_problem" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ln2_practice_problem data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=ln2_practice_problem data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def ln2():
     # your code here
 </textarea>

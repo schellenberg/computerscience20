@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>2. Writing Fruitful Functions Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -256,24 +268,17 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Warmup drawing problem. WDTPD questions about functions. Students practice writing fruitful functions.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="warmup-problem">
+<div class="section" id="warmup-problem">
 <h2>2.1. Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-25.png" src="../../_images/confusion-25.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
 
 <div data-childcomponent="turtle_confusion_practice_25" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_confusion_practice_25 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=turtle_confusion_practice_25 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 </textarea>
 </div>
@@ -289,7 +294,10 @@ import turtle
 
 <div data-childcomponent="wdtpd_functions_5" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_functions_5 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_functions_5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 def foo():
     print(a)
 
@@ -300,7 +308,10 @@ foo()
 
 <div data-childcomponent="wdtpd_functions_6" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_functions_6 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_functions_6 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 def foo():
     a = a + 1
     print(a)
@@ -309,51 +320,10 @@ a = 10
 foo()
 </textarea>
 </div>
-
-<div data-childcomponent="wdtpd_functions_7" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_functions_7 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
-def doubler(some_number):
-    new_value = some_number * 2
-    return new_value
-
-initial_value = 15
-new_value = doubler(15)
-print(new_value)
-</textarea>
-</div>
-
-<div data-childcomponent="wdtpd_functions_8" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_functions_8 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
-def greeting(first_name, last_name):
-    message = "Hello there, " + first_name + " " + last_name + "!"
-    return message
-
-first = "Sherlock"
-last = "Holmes"
-print(greeting(first, last))
-</textarea>
-</div>
-
-<div data-childcomponent="wdtpd_functions_9" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=wdtpd_functions_9 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
-def is_big(number):
-    if number > 42:
-        return True
-    else:
-        return False
-
-my_number = 50
-result = is_big(my_number)
-print(result)
-</textarea>
-</div>
 </div>
 <div class="section" id="practice-problems">
 <h2>2.3. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal notranslate"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -362,13 +332,16 @@ print(result)
 <h3>2.3.1. Area of rectangle<a class="headerlink" href="#area-of-rectangle" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="rectangle-area" class="runestone explainer ac_section alert alert-warning">
-<p>The parameters <code class="docutils literal"><span class="pre">length</span></code> and <code class="docutils literal"><span class="pre">width</span></code> represent the lengths of the sides of a rectangle. Calculate the area of the rectangle with the given values, and return the result.</p>
+<p>The parameters <code class="docutils literal notranslate"><span class="pre">length</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code> represent the lengths of the sides of a rectangle. Calculate the area of the rectangle with the given values, and return the result.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">rectangle_area(5,</span> <span class="pre">10)</span> <span class="pre">→</span> <span class="pre">50</span></code></p>
-<p><code class="docutils literal"><span class="pre">rectangle_area(1,</span> <span class="pre">10)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
-<p><code class="docutils literal"><span class="pre">rectangle_area(2,</span> <span class="pre">6)</span> <span class="pre">→</span> <span class="pre">12</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rectangle_area(5,</span> <span class="pre">10)</span> <span class="pre">→</span> <span class="pre">50</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rectangle_area(1,</span> <span class="pre">10)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rectangle_area(2,</span> <span class="pre">6)</span> <span class="pre">→</span> <span class="pre">12</span></code></p>
 
-<textarea data-component="activecode" id=rectangle-area data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=rectangle-area data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def rectangle_area(length, width):
     return 0
 
@@ -424,11 +397,14 @@ myTests().main()
 </table>
 <p>The square and round brackets denote closed and open intervals. A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C, but 80 gets grade B.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">letter_grade(83)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_grade(73)</span> <span class="pre">→</span> <span class="pre">&quot;C&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_grade(80)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(83)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(73)</span> <span class="pre">→</span> <span class="pre">&quot;C&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(80)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
 
-<textarea data-component="activecode" id=letter-grade data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=letter-grade data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def letter_grade(exam_grade):
     return "A"
 
@@ -455,13 +431,16 @@ myTests().main()
 <h3>2.3.3. Find the Smallest<a class="headerlink" href="#find-the-smallest" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="find-min" class="runestone explainer ac_section alert alert-warning">
-<p>The function find_min(a, b, c) will take three numbers as parameters and return the <em>smallest</em> value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the <code class="docutils literal"><span class="pre">min</span></code> function in this solution.</p>
+<p>The function find_min(a, b, c) will take three numbers as parameters and return the <em>smallest</em> value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the <code class="docutils literal notranslate"><span class="pre">min</span></code> function in this solution.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">5,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
-<p><code class="docutils literal"><span class="pre">find_min(4,</span> <span class="pre">-7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">-7</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">find_min(4,</span> <span class="pre">7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">find_min(4,</span> <span class="pre">5,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">find_min(4,</span> <span class="pre">-7,</span> <span class="pre">5)</span> <span class="pre">→</span> <span class="pre">-7</span></code></p>
 
-<textarea data-component="activecode" id=find-min data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=find-min data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def find_min(a, b, c):
     return a
 
@@ -486,13 +465,16 @@ myTests().main()
 <span id="is-even-fruitful-function"></span><h3>2.3.4. Is Even<a class="headerlink" href="#is-even" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="is-even" class="runestone explainer ac_section alert alert-warning">
-<p>The function is_even(number) will return <code class="docutils literal"><span class="pre">True</span></code> if the number passed in is even, and <code class="docutils literal"><span class="pre">False</span></code> if it is odd. Hint: You might want to look back at the <a class="reference internal" href="../Overview/QuickOverview.html#math-operator-list"><span class="std std-ref">Math Operators</span></a> list.</p>
+<p>The function is_even(number) will return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the number passed in is even, and <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is odd. Hint: You might want to look back at the <a class="reference internal" href="../Overview/QuickOverview.html#math-operator-list"><span class="std std-ref">Math Operators</span></a> list.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">is_even(4)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">is_even(-4)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">is_even(5)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">is_even(4)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">is_even(-4)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">is_even(5)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
 
-<textarea data-component="activecode" id=is-even data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=is-even data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def is_even(number):
     return False
 
@@ -527,11 +509,14 @@ myTests().main()
 </div>
 </div></blockquote>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">leap_year(2001)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
-<p><code class="docutils literal"><span class="pre">leap_year(2020)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
-<p><code class="docutils literal"><span class="pre">leap_year(1900)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">leap_year(2001)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">leap_year(2020)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">leap_year(1900)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
 
-<textarea data-component="activecode" id=leap-year data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=leap-year data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def leap_year(year):
     return False
 
@@ -554,11 +539,14 @@ myTests().main()
 </div>
 <div class="section" id="using-your-is-even-function">
 <h3>2.3.6. Using Your Is Even Function<a class="headerlink" href="#using-your-is-even-function" title="Permalink to this headline">¶</a></h3>
-<p>Write a program that continues to take in a number from the user until the number given is NOT even. For example, the user might enter 4, 10, 42, 5. The program would only stop when the non-even number 5 is entered. You need to use the <code class="docutils literal"><span class="pre">is_even</span></code> function you defined above.</p>
+<p>Write a program that continues to take in a number from the user until the number given is NOT even. For example, the user might enter 4, 10, 42, 5. The program would only stop when the non-even number 5 is entered. You need to use the <code class="docutils literal notranslate"><span class="pre">is_even</span></code> function you defined above.</p>
 
 <div data-childcomponent="using-is-even" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=using-is-even data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=using-is-even data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # your code here!
 </textarea>
 </div>

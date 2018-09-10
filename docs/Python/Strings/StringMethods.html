@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. String Methods &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -254,17 +266,7 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>WDTPD string questions. Practice problems with string manipulation. Introduction to additional string methods. Time to catch up on any string practice problems not completed on previous days.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="what-does-this-program-do">
+<div class="section" id="what-does-this-program-do">
 <h2>3.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -274,7 +276,10 @@
 
 <div data-childcomponent="wdtpd_string_manipulation_practice_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 fruit = "grapefruit"
 for item in fruit:
     print(item)
@@ -286,7 +291,10 @@ for item in fruit:
 
 <div data-childcomponent="wdtpd_string_manipulation_practice_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 fruit = "grapefruit"
 for counter in len(fruit):
     print(fruit[item])
@@ -295,7 +303,10 @@ for counter in len(fruit):
 
 <div data-childcomponent="wdtpd_string_manipulation_practice_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 sentence = "saskatoon saskatchewan"
 for current_index in range(len(sentence)):
   if current_index % 4 == 0:
@@ -305,7 +316,10 @@ for current_index in range(len(sentence)):
 
 <div data-childcomponent="wdtpd_string_manipulation_practice_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_practice_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 def foo(text):
     count = 0
     for c in text:
@@ -322,14 +336,17 @@ print(foo("banana"))
 <div class="section" id="letter-counting">
 <h2>3.2. Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this headline">¶</a></h2>
 <p>By looking at each letter of a peice of text, you can create a <a class="reference external" href="https://en.wikipedia.org/wiki/Frequency_analysis">frequency analysis</a>, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).</p>
-<p>The code below assigns a variable <code class="docutils literal"><span class="pre">paragraph</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
+<p>The code below assigns a variable <code class="docutils literal notranslate"><span class="pre">paragraph</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal notranslate"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
 
 <div data-childcomponent="letter_counting_demo" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=letter_counting_demo data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=letter_counting_demo data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def count(paragraph):
     lows = "abcdefghijklmnopqrstuvwxyz"
     ups =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -368,8 +385,8 @@ count(paragraph)
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>A possible extension to this demonstration is using the <code class="docutils literal"><span class="pre">requests</span></code> module (in Thonny, select Tools -&gt; Manage Packages, then search for and install requests). Using <code class="docutils literal"><span class="pre">requests</span></code> allows you to extract data from websites, such as <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a>, as follows:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<p>A possible extension to this demonstration is using the <code class="docutils literal notranslate"><span class="pre">requests</span></code> module (in Thonny, select Tools -&gt; Manage Packages, then search for and install requests). Using <code class="docutils literal notranslate"><span class="pre">requests</span></code> allows you to extract data from websites, such as <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a>, as follows:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="c1"># retrieve the full text of The Importance of Being Earnest</span>
 <span class="n">the_url</span> <span class="o">=</span> <span class="s2">&quot;http://www.gutenberg.org/cache/epub/844/pg844.txt&quot;</span>
@@ -382,12 +399,15 @@ count(paragraph)
 </div>
 <div class="section" id="id1">
 <h2>3.3. String Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We previously saw that each turtle instance has its own attributes and a number of methods that can be applied to the instance.  For example, we wrote <code class="docutils literal"><span class="pre">tess.right(90)</span></code> when we wanted the turtle object <code class="docutils literal"><span class="pre">tess</span></code> to perform the <code class="docutils literal"><span class="pre">right</span></code> method to turn to the right 90 degrees.  The “dot notation” is the way we connect the name of an object to the name of a method it can perform.</p>
+<p>We previously saw that each turtle instance has its own attributes and a number of methods that can be applied to the instance.  For example, we wrote <code class="docutils literal notranslate"><span class="pre">tess.right(90)</span></code> when we wanted the turtle object <code class="docutils literal notranslate"><span class="pre">tess</span></code> to perform the <code class="docutils literal notranslate"><span class="pre">right</span></code> method to turn to the right 90 degrees.  The “dot notation” is the way we connect the name of an object to the name of a method it can perform.</p>
 <p>Strings are also objects.  Each string instance has its own attributes and methods.  The most important attribute of the string is the collection of characters.  There are a wide variety of methods.  Try the following program.</p>
 
 <div data-childcomponent="string_methods_example1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_methods_example1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_methods_example1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 some_string = "Hello, World"
 print(some_string.upper())
 
@@ -395,9 +415,9 @@ other_string = some_string.lower()
 print(other_string)
 </textarea>
 </div>
-<p>In this example, <code class="docutils literal"><span class="pre">upper</span></code> is a method that can be invoked on any string object
-to create a new string in which all the characters are in uppercase.  <code class="docutils literal"><span class="pre">lower</span></code> works in a similar fashion changing all characters in the string to lowercase.  (The original string <code class="docutils literal"><span class="pre">some_string</span></code> remains unchanged.  A new string <code class="docutils literal"><span class="pre">other_string</span></code> is created.)</p>
-<p id="index-0">In addition to <code class="docutils literal"><span class="pre">upper</span></code> and <code class="docutils literal"><span class="pre">lower</span></code>, the following table provides a summary of some other useful string methods.  There are a few activecode examples that follow so that you can try them out.</p>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">upper</span></code> is a method that can be invoked on any string object
+to create a new string in which all the characters are in uppercase.  <code class="docutils literal notranslate"><span class="pre">lower</span></code> works in a similar fashion changing all characters in the string to lowercase.  (The original string <code class="docutils literal notranslate"><span class="pre">some_string</span></code> remains unchanged.  A new string <code class="docutils literal notranslate"><span class="pre">other_string</span></code> is created.)</p>
+<p id="index-0">In addition to <code class="docutils literal notranslate"><span class="pre">upper</span></code> and <code class="docutils literal notranslate"><span class="pre">lower</span></code>, the following table provides a summary of some other useful string methods.  There are a few activecode examples that follow so that you can try them out.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
@@ -477,7 +497,10 @@ to create a new string in which all the characters are in uppercase.  <code clas
 
 <div data-childcomponent="string_methods_example2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_methods_example2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_methods_example2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 some_string = "    Hello, World    "
 
 els = some_string.count("l")
@@ -494,7 +517,10 @@ print(news)
 
 <div data-childcomponent="string_methods_example3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_methods_example3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_methods_example3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 food = "banana bread"
 print(food.capitalize())
 
@@ -516,10 +542,10 @@ print(food.index("e"))
 <div class="section" id="check-your-understanding">
 <h3>3.3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_methods_check_understanding1">
             <p>string-methods1: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -534,10 +560,10 @@ print(food.index("e"))
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_methods_check_understanding2">
             <p>string-methods2: What is printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -562,11 +588,14 @@ print(food.index("e"))
 <img alt="../../_images/substitution-cipher.png" src="../../_images/substitution-cipher.png" />
 <p>Using this cipher, the plaintext message <em>hello world</em> would turn into the ciphertext message <em>nxqqg tgcqb</em>.</p>
 <p>To practice this idea, you should write a function that implements a substitution cipher. The function should take two parameters: the <em>message</em> you want to encrypt, and a <em>cipher</em> string that represents the mapping of the 26 letters in the alphabet. The should return a string that is the encrypted version of the message.</p>
-<p>You will need to use either the <code class="docutils literal"><span class="pre">find</span></code> or <code class="docutils literal"><span class="pre">index</span></code> string method as part of your solution, since you will need to look for the position of the letter you are trying to encrypt within the alphabet string, then determine which letter is at that same position in the cipher string. You will want to use the accumulator pattern to build the new, encrypted message.</p>
+<p>You will need to use either the <code class="docutils literal notranslate"><span class="pre">find</span></code> or <code class="docutils literal notranslate"><span class="pre">index</span></code> string method as part of your solution, since you will need to look for the position of the letter you are trying to encrypt within the alphabet string, then determine which letter is at that same position in the cipher string. You will want to use the accumulator pattern to build the new, encrypted message.</p>
 
 <div data-childcomponent="cipher_encryption_message" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=cipher_encryption_message data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=cipher_encryption_message data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def encrypt(message, cipher):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     # delete the line below and replace with your code
@@ -583,7 +612,10 @@ print(encrypted)
 
 <div data-childcomponent="cipher_decryption_message" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=cipher_decryption_message data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=cipher_decryption_message data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def decrypt(encrypted, cipher):
     # delete the line below and replace with your code
     return "a decrypted message"
@@ -604,7 +636,7 @@ print(decrypted)
 
     <div data-component="reveal" id="substitution_cipher_solution"   data-showtitle="Reveal Solution" data-hidetitle="Hide">
     <p>One possible solution is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cipher</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cipher</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
     <span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
@@ -645,11 +677,11 @@ print(decrypted)
 </div>
 <div class="section" id="extra-challenge">
 <h2>3.6. Extra Challenge<a class="headerlink" href="#extra-challenge" title="Permalink to this headline">¶</a></h2>
-<p>Hidden in the source code for this page is an encrypted message, created using the same substitution cipher shown above. To find and decrypt it, you need to look through the source code of this page, and analyze the text between the words <code class="docutils literal"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal"><span class="pre">MSGENDS</span></code>. To automate this completely in Python, you can use the requests module, as described earlier on this page. You then need to use string methods to determine the location of where the hidden message begins and ends, so that you know what text to decrypt. To make this a bit more challenging, I’ve added random gibberish throughout the message. To get rid of the gibberish, you need to know that between <code class="docutils literal"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal"><span class="pre">MSGENDS</span></code>, only every 5th letter is part of the actual hidden message.</p>
+<p>Hidden in the source code for this page is an encrypted message, created using the same substitution cipher shown above. To find and decrypt it, you need to look through the source code of this page, and analyze the text between the words <code class="docutils literal notranslate"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal notranslate"><span class="pre">MSGENDS</span></code>. To automate this completely in Python, you can use the requests module, as described earlier on this page. You then need to use string methods to determine the location of where the hidden message begins and ends, so that you know what text to decrypt. To make this a bit more challenging, I’ve added random gibberish throughout the message. To get rid of the gibberish, you need to know that between <code class="docutils literal notranslate"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal notranslate"><span class="pre">MSGENDS</span></code>, only every 5th letter is part of the actual hidden message.</p>
 
         <div class="runestone">
         <div data-component="fillintheblank" id="extra_challenge_verification">
-            <p>What is the abbreviation of the contest mentioned in the hidden message?</p>
+            <p>string-methods3: What is the abbreviation of the contest mentioned in the hidden message?</p>
 <input type="text">
         <script type="application/json">
             [[{"regex": "^ *ctf *$", "regexFlags": "", "feedback": "Way to go!"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "Try again!"}]]

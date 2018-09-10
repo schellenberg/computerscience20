@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>4. Functions and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -255,23 +267,16 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use nested loops to practice simple image processing.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="image-conversion-with-functions">
+<div class="section" id="image-conversion-with-functions">
 <h2>4.1. Image Conversion with Functions<a class="headerlink" href="#image-conversion-with-functions" title="Permalink to this headline">¶</a></h2>
 <p>In a previous lesson, we used code similar to the following, which increases the amount of green in an image:</p>
 
 <div data-childcomponent="increase_color_amount" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=increase_color_amount data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=increase_color_amount data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 img = image.Image("sneakers.jpg")
@@ -298,7 +303,10 @@ for row in range(img.get_height()):
 
 <div data-childcomponent="increase_green_function" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=increase_green_function data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=increase_green_function data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 def increase_green(original_image, amount_of_green_to_add):
@@ -328,14 +336,17 @@ converted_img = increase_green(img, 50)
 converted_img.draw(win)
 </textarea>
 </div>
-<p>Notice that in the function, an EmptyImage <em>of the same size as the original image</em> was created. We then iterate through every pixel in the original image, extract the RGB values from each pixel, increase the amount in the green channel, then set the corresponding pixel in the <strong>new</strong> image (the one that began as an EmptyImage). Because this is a fruitful function (which returns a image object), we can set the result to a variable, which is called <code class="docutils literal"><span class="pre">converted_img</span></code> below.</p>
+<p>Notice that in the function, an EmptyImage <em>of the same size as the original image</em> was created. We then iterate through every pixel in the original image, extract the RGB values from each pixel, increase the amount in the green channel, then set the corresponding pixel in the <strong>new</strong> image (the one that began as an EmptyImage). Because this is a fruitful function (which returns a image object), we can set the result to a variable, which is called <code class="docutils literal notranslate"><span class="pre">converted_img</span></code> below.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>If you’d like the function to animate while it runs, you can rewrite the function to have a parameter for the ImageWin to draw to, as follows:</p>
 
 <div data-childcomponent="increase_green_function_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=increase_green_function_2 data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=increase_green_function_2 data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 def increase_green(original_image, amount_of_green_to_add, the_window):
@@ -371,11 +382,11 @@ converted_img.draw(win)
 </div>
 <div class="section" id="controlling-image-manipulation-with-micro-bit">
 <h2>4.2. Controlling Image Manipulation with Micro:bit<a class="headerlink" href="#controlling-image-manipulation-with-micro-bit" title="Permalink to this headline">¶</a></h2>
-<p>Now that we can organize our image manipulation code using functions, it makes it simple to call these image manipulation functions when a specific event occurs. For example, we might want to call the <code class="docutils literal"><span class="pre">increase_green</span></code> function when the A button on the Micro:bit is pressed. To make things more interesting, we will first get the accelerometer value on the x axis (to determine how much the Micro:bit is tilted to the left or right), and use the resulting value as the <code class="docutils literal"><span class="pre">amount_of_green_to_add</span></code> argument we pass to the <code class="docutils literal"><span class="pre">increase_green</span></code> function. Since the accelerometer value will be negative when the Micro:bit is tilted to the left, if we press the A button while tilting to the left, we will remove green from the image. If the Micro:bit is tilted to the right, the accelerometer value will be positive, so we will add green to the image.</p>
+<p>Now that we can organize our image manipulation code using functions, it makes it simple to call these image manipulation functions when a specific event occurs. For example, we might want to call the <code class="docutils literal notranslate"><span class="pre">increase_green</span></code> function when the A button on the Micro:bit is pressed. To make things more interesting, we will first get the accelerometer value on the x axis (to determine how much the Micro:bit is tilted to the left or right), and use the resulting value as the <code class="docutils literal notranslate"><span class="pre">amount_of_green_to_add</span></code> argument we pass to the <code class="docutils literal notranslate"><span class="pre">increase_green</span></code> function. Since the accelerometer value will be negative when the Micro:bit is tilted to the left, if we press the A button while tilting to the left, we will remove green from the image. If the Micro:bit is tilted to the right, the accelerometer value will be positive, so we will add green to the image.</p>
 <p>Rather than have the second button sit idle, we will execute a different image manipulation function when the B button is pressed. For this example, I chose to take the negative of the image when the B button is pressed.</p>
-<p>Finally, it would be nice to have a way to end the program when we are done playing with images. To accomplish this, I created a <code class="docutils literal"><span class="pre">still_playing</span></code> variable and set it to <code class="docutils literal"><span class="pre">True</span></code>. When you flip the Micro:bit over (so the LEDs are facing the ground), the z axis becomes positive, and we change the <code class="docutils literal"><span class="pre">still_playing</span></code> variable to be <code class="docutils literal"><span class="pre">False</span></code>. This causes the loop to exit, ending our program.</p>
+<p>Finally, it would be nice to have a way to end the program when we are done playing with images. To accomplish this, I created a <code class="docutils literal notranslate"><span class="pre">still_playing</span></code> variable and set it to <code class="docutils literal notranslate"><span class="pre">True</span></code>. When you flip the Micro:bit over (so the LEDs are facing the ground), the z axis becomes positive, and we change the <code class="docutils literal notranslate"><span class="pre">still_playing</span></code> variable to be <code class="docutils literal notranslate"><span class="pre">False</span></code>. This causes the loop to exit, ending our program.</p>
 <p>Before running the following program in Thonny, be sure to save this image in the same folder as your Python code:</p>
-<img src="../../_static/sneakers.jpg"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+<img src="../../_static/sneakers.jpg"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
 <span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="k">def</span> <span class="nf">increase_green</span><span class="p">(</span><span class="n">original_image</span><span class="p">,</span> <span class="n">amount_of_green_to_add</span><span class="p">):</span>
@@ -454,11 +465,14 @@ converted_img.draw(win)
 <h4 style="text-align: center;">sneakers.jpg</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
 <h4 style="text-align: center;">rooster.jpg</h4><div class="section" id="red-remover-function">
 <h3>4.3.1. Red Remover Function<a class="headerlink" href="#red-remover-function" title="Permalink to this headline">¶</a></h3>
-<p>Create a function called <code class="docutils literal"><span class="pre">red_remover(original_image)</span></code> that performs an image manipulation and returns the changed image. The function remove all of the red channel, but leave the green and blue amounts unchanged.</p>
+<p>Create a function called <code class="docutils literal notranslate"><span class="pre">red_remover(original_image)</span></code> that performs an image manipulation and returns the changed image. The function remove all of the red channel, but leave the green and blue amounts unchanged.</p>
 
 <div data-childcomponent="practice_problem_red_remover_function" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_red_remover_function data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_red_remover_function data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 import image
 
 def red_remover(original_image):
@@ -480,7 +494,10 @@ converted_img.draw(win)
 
 <div data-childcomponent="practice_problem_your_choice" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_your_choice data-lang="python"    data-timelimit=180000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_your_choice data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''   
+          >
 # you will want to use Thonny for this question...
 </textarea>
 </div>

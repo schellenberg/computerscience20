@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>12. The Time Module and Using a Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -262,22 +274,16 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Learn about the time module. Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-</ul>
-
-    </div>
-    <div class="section" id="time-module">
+<div class="section" id="time-module">
 <span id="index-0"></span><h2>12.1. Time Module<a class="headerlink" href="#time-module" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes, we’d like to wait a bit before running the next command in a Python program. To do this, we can <code class="docutils literal"><span class="pre">import</span> <span class="pre">time</span></code>, then use the <code class="docutils literal"><span class="pre">sleep()</span></code> function. An example is below:</p>
+<p>Sometimes, we’d like to wait a bit before running the next command in a Python program. To do this, we can <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">time</span></code>, then use the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function. An example is below:</p>
 
 <div data-childcomponent="time-sleep-1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=time-sleep-1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=time-sleep-1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # How to Pause in Python
 
 import time
@@ -289,7 +295,10 @@ print("second thing")
 
 <div data-childcomponent="time-sleep-2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=time-sleep-2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=time-sleep-2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # Another Pausing Program
 
 import time
@@ -325,8 +334,8 @@ print("All done!")
 <div class="section" id="flashing-the-micro-bit">
 <h3>12.2.3. Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
 <p>While your Micro:bit is connected to your computer via USB, it is possible to send instructions to the Micro:bit using serial commands. In order to do this, we first need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). <strong>You should only have to do this once</strong>, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.</p>
-<p>To flash your Micro:bit, first connect your Micro:bit to your computer via USB. Now download the <a class="reference download internal" href="../../_downloads/bitio.hex" download=""><code class="xref download docutils literal"><span class="pre">bitio.hex</span></code></a> file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder), as shown below.</p>
-<img alt="../../_images/flash-microbit.gif" src="../../_images/flash-microbit.gif" />
+<p>To flash your Micro:bit, first connect your Micro:bit to your computer via USB. Now download the <a class="reference download internal" href="../../_downloads/bitio.hex" download=""><code class="xref download docutils literal notranslate"><span class="pre">bitio.hex</span></code></a> file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder), as shown below.</p>
+<img alt="../../_images/flash-microbit1.gif" src="../../_images/flash-microbit1.gif" />
 <p>You should now see an I/O image on the LED grid of the Micro:bit, which tells you that your Micro:bit is ready to communicate with Python (though you still need to install a module in Thonny, as described below).</p>
 <img alt="../../_images/bitio1.png" src="../../_images/bitio1.png" />
 <div class="admonition note">
@@ -336,13 +345,13 @@ print("All done!")
 </div>
 <div class="section" id="installing-the-micro-bit-module-in-thonny">
 <h3>12.2.4. Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
-<p>In order to communicate with the microbit in Python, you need to install the <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> package in Thonny. To do that, go to Tools -&gt; Manage packages…, type in <code class="docutils literal"><span class="pre">cs20-microbitio</span></code> into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
+<p>In order to communicate with the microbit in Python, you need to install the <code class="docutils literal notranslate"><span class="pre">cs20-microbitio</span></code> package in Thonny. To do that, go to Tools -&gt; Manage packages…, type in <code class="docutils literal notranslate"><span class="pre">cs20-microbitio</span></code> into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
 </div>
 </div>
 <div class="section" id="using-the-micro-bit">
 <h2>12.3. Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this headline">¶</a></h2>
 <p>Once you have done that, try running the code below:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Hey there, CS20&quot;</span><span class="p">)</span>
 </pre></div>
@@ -371,7 +380,7 @@ print("All done!")
 <div class="section" id="displaying-single-characters">
 <h2>12.4. Displaying Single Characters<a class="headerlink" href="#displaying-single-characters" title="Permalink to this headline">¶</a></h2>
 <p>If we wanted to display the letters from the word “SASK” one at a time, there are a number of different ways we could do it. Our first thought might be to do something like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -380,7 +389,7 @@ print("All done!")
 </pre></div>
 </div>
 <p>Although this technically works, when you run this code, you will notice that the letters flash on the LED grid <em>very</em> quickly. To slow this down a bit, we can use the time module we experimented with above. Consider the following version:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
@@ -393,7 +402,7 @@ print("All done!")
 </pre></div>
 </div>
 <p>This works much better! We can now see each letter appear on the screen then pause for half a second before the next letter appears. However, you will notice that we are essentially repeating the same instruction four times in a row. We can improve the code using a for loop to perform the repetition, as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">]:</span>
@@ -405,7 +414,7 @@ print("All done!")
 <div class="section" id="drawing-with-a-turtle">
 <h2>12.5. Drawing with a Turtle<a class="headerlink" href="#drawing-with-a-turtle" title="Permalink to this headline">¶</a></h2>
 <p>The examples above used the Micro:bit as an output device, as we sent instructions telling the Micro:bit to change what the LED grid was displaying. We can also use the Micro:bit as an input device. One of the built in ways of taking input from the Micro:bit is the accelerometer. An accelerometer allows us to detect the orientation of the device (in other words, whether it is tilted in the <em>x</em>, <em>y</em> or <em>z</em> axis). The following example checks the <em>x</em> axis to detect whether the device has been tilted left or right. To help you understand the values that are sent back to Python, I have printed out the value of x (note that in order to concatenate the x value, I had to convert it’s data type to a string).</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -418,7 +427,7 @@ print("All done!")
 </pre></div>
 </div>
 <p>To use the accelerometer data from the Micro:bit to control a turtle, we can adapt the program as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">turtle</span>
 

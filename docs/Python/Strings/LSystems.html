@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>4. Turtle Drawing and Strings (L-Systems) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -262,19 +274,9 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Turtle drawing by interpreting strings. L-Systems to generate strings. Draw interesting patterns using L-System strings.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="controlling-a-turtle-with-strings">
+<div class="section" id="controlling-a-turtle-with-strings">
 <h2>4.1. Controlling a Turtle With Strings<a class="headerlink" href="#controlling-a-turtle-with-strings" title="Permalink to this headline">¶</a></h2>
-<p>By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string <code class="docutils literal"><span class="pre">FF+F-FF</span></code> might make a turtle:</p>
+<p>By combining what we know about moving turtles on the screen, and what we have learned about traversing strings, we can now write a program that controls the movement of a turtle based on a string. For example, the string <code class="docutils literal notranslate"><span class="pre">FF+F-FF</span></code> might make a turtle:</p>
 <ul class="simple">
 <li>move forward by some distance twice in a row</li>
 <li>turn right by some angle</li>
@@ -282,11 +284,14 @@
 <li>turn left by some angle</li>
 <li>move forward twice in a row</li>
 </ul>
-<p>To turn a string like <code class="docutils literal"><span class="pre">FF+F-FF</span></code> into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.</p>
+<p>To turn a string like <code class="docutils literal notranslate"><span class="pre">FF+F-FF</span></code> into a set of instructions that our turtle can execute, we need to look at each character of the string, one at a time. We can do this easily with a for loop, as you can see in the following example.</p>
 
 <div data-childcomponent="string_turtle_movement_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_turtle_movement_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_turtle_movement_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 import turtle
 
 canvas = turtle.Screen()
@@ -309,10 +314,10 @@ for task in instructions:
 <p>In the code above, try:</p>
 <ul class="simple">
 <li>changing the instruction string to have the turtle draw a different image</li>
-<li>adding three additional possible instruction for the turtle. Any <code class="docutils literal"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal"><span class="pre">F</span></code> moves forward). A <code class="docutils literal"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
+<li>adding three additional possible instruction for the turtle. Any <code class="docutils literal notranslate"><span class="pre">B</span></code> in the string should be interpreted as an instruction to move backwards (by the same amount as <code class="docutils literal notranslate"><span class="pre">F</span></code> moves forward). A <code class="docutils literal notranslate"><span class="pre">U</span></code> should cause the turtle to pick up it’s pen (so it doesn’t draw as it moves). A <code class="docutils literal notranslate"><span class="pre">D</span></code> should cause the turtle should put down it’s pen (so that it draws as it moves).</li>
 <li>increasing the speed of the turtle</li>
 </ul>
-<p>After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
+<p>After completing the tasks above, try having the turtle use the following instruction string: <code class="docutils literal notranslate"><span class="pre">UBBBBBBDF-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F</span></code></p>
 </div>
 </div>
 <div class="section" id="turtles-and-strings-and-l-systems">
@@ -346,13 +351,13 @@ are complete, the string contains a set of instructions.  Our plan is to let the
 </tbody>
 </table>
 <p>Each rule set contains an axiom which represents the starting point in the transformations that will follow.  The rules are of the form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">left</span> <span class="n">hand</span> <span class="n">side</span> <span class="o">-&gt;</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">left</span> <span class="n">hand</span> <span class="n">side</span> <span class="o">-&gt;</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span>
 </pre></div>
 </div>
 <p>where the left hand side is a single symbol and the right hand side is a sequence of symbols.  You can think of both sides as being simple strings.
 The way the rules are used is to replace occurrences of the left hand side with the corresponding right hand side.</p>
 <p>Now let’s look at these simple rules in action, starting with the string A:</p>
-<div class="highlight-html"><div class="highlight"><pre><span></span>A
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>A
 B      Apply Rule 1  (A is replaced by B)
 AB     Apply Rule 2  (B is replaced by AB)
 BAB    Apply Rule 1 to A then Rule 2 to B
@@ -375,7 +380,10 @@ above.</p>
 
 <div data-childcomponent="string_l_systems_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_l_systems_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_l_systems_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def apply_rules(letter):
     """Apply rules to an individual letter, and return the result."""
     # Rule 1
@@ -412,12 +420,12 @@ def create_l_system(number_of_iterations, axiom):
 print(create_l_system(4, "A"))
 </textarea>
 </div>
-<p>Try running the example above with different values for the <code class="docutils literal"><span class="pre">number_of_iterations</span></code>
+<p>Try running the example above with different values for the <code class="docutils literal notranslate"><span class="pre">number_of_iterations</span></code>
 parameter.  You should see that for values 1, 2, 3, and 4, the strings generated follow the
 example above exactly.</p>
 <p>One of the nice things about the program above is that if you want to
 implement a different set of rules, you don’t need to re-write the entire
-program. All you need to do is re-write the <code class="docutils literal"><span class="pre">apply_rules</span></code> function.</p>
+program. All you need to do is re-write the <code class="docutils literal notranslate"><span class="pre">apply_rules</span></code> function.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Suppose you had the following rules:</p>
@@ -478,8 +486,8 @@ L-system has just one rule:</p>
 </tr>
 </tbody>
 </table>
-<p>Here is the <code class="docutils literal"><span class="pre">apply_rules</span></code> function for this L-system.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">apply_rules</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
+<p>Here is the <code class="docutils literal notranslate"><span class="pre">apply_rules</span></code> function for this L-system.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">apply_rules</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Apply rules to an individual letter, and return the result.&quot;&quot;&quot;</span>
     <span class="c1"># Rule 1</span>
     <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span>
@@ -498,17 +506,17 @@ couple of times on your own just to see.</p>
 <p>The last step is to take the final string and turn it into a picture.  Let’s
 assume that we are always going to go forward or backward by 5 units.  In
 addition we will also assume that when the turtle turns left or right we’ll
-turn by 60 degrees.  Now look at the string <code class="docutils literal"><span class="pre">F-F++F-F</span></code>.  <em>This is the string we used to draw a simple image at the start of this section!</em>  At this point its not a very exciting
+turn by 60 degrees.  Now look at the string <code class="docutils literal notranslate"><span class="pre">F-F++F-F</span></code>.  <em>This is the string we used to draw a simple image at the start of this section!</em>  At this point its not a very exciting
 drawing, but once we expand it a few times it will get a lot more interesting.</p>
 <p>To create a Python function to draw a string we will write a function called
-<code class="docutils literal"><span class="pre">draw_l_system</span></code>  The function will take four parameters:</p>
+<code class="docutils literal notranslate"><span class="pre">draw_l_system</span></code>  The function will take four parameters:</p>
 <ul class="simple">
 <li>A turtle to do the drawing</li>
 <li>An expanded string that contains the results of expanding the rules above.</li>
 <li>An angle to turn</li>
 <li>A distance to move forward or backward</li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_l_system</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">instructions</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">distance</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_l_system</span><span class="p">(</span><span class="n">some_turtle</span><span class="p">,</span> <span class="n">instructions</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">distance</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">instructions</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">task</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span>
             <span class="n">some_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
@@ -524,7 +532,10 @@ drawing, but once we expand it a few times it will get a lot more interesting.</
 
 <div data-childcomponent="string_l_systems_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_l_systems_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=string_l_systems_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 def apply_rules(letter):
@@ -593,7 +604,7 @@ draw_l_system(jill, instruction_string, 60, 5)
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Try some different angles and segment lengths to see how the drawing changes. Start with 90 degrees, and experiment from there. You might want to use Thonny when experimenting, since Thonny makes it easy to end a program at any point. Using <code class="docutils literal"><span class="pre">window.tracer(10)</span></code> will also greatly speed up your programs.</p>
+<p class="last">Try some different angles and segment lengths to see how the drawing changes. Start with 90 degrees, and experiment from there. You might want to use Thonny when experimenting, since Thonny makes it easy to end a program at any point. Using <code class="docutils literal notranslate"><span class="pre">window.tracer(10)</span></code> will also greatly speed up your programs.</p>
 </div>
 </div>
 <div class="section" id="practice-problems">
@@ -608,13 +619,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="50%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">L</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">L</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -622,7 +633,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -636,13 +650,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="54%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -650,7 +664,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -664,13 +681,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="54%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -678,7 +695,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -692,13 +712,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="40%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FX</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FX</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -706,7 +726,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_4 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -720,13 +743,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FXF--FF--FF</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FXF--FF--FF</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -734,7 +757,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_5" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_5 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_5 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -748,10 +774,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">F-F-F-F-F</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">F-F-F-F-F</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></td>
 <td>Rule 1</td>
 </tr>
 </tbody>
@@ -759,7 +785,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_6" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_6 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_6 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>
@@ -774,13 +803,13 @@ draw_l_system(jill, instruction_string, 60, 5)
 <col width="44%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">L--F--L--F</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">L--F--L--F</span></code></td>
 <td>Axiom</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></td>
 <td>Rule 1</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></td>
 <td>Rule 2</td>
 </tr>
 </tbody>
@@ -788,7 +817,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 
 <div data-childcomponent="strings_l_systems_practice_7" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=strings_l_systems_practice_7 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=strings_l_systems_practice_7 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # adapt the template code given above to draw this image
 </textarea>
 </div>

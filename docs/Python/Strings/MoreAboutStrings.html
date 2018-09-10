@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>2. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -194,11 +206,11 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">2. String Traversal (by index), and the Accumulator Pattern with Strings</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">2.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">2.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index</a><ul>
+<li><a class="reference internal" href="#traversal-and-the-for-loop-by-index">2.2. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index</a><ul>
 <li><a class="reference internal" href="#check-your-understanding">2.2.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-in-and-not-in-operators">2.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
+<li><a class="reference internal" href="#the-in-and-not-in-operators">2.3. The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
 <li><a class="reference internal" href="#the-accumulator-pattern-with-strings">2.4. The Accumulator Pattern with Strings</a><ul>
 <li><a class="reference internal" href="#id1">2.4.1. Check Your Understanding</a></li>
 </ul>
@@ -260,19 +272,9 @@
 <h1>2. String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
+<p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="what-does-this-program-do">
+<div class="section" id="what-does-this-program-do">
 <h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -282,7 +284,10 @@
 
 <div data-childcomponent="wdtpd_string_manipulation_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 title = "Pirates of the Caribbean"
 print(title[1])
 </textarea>
@@ -290,7 +295,10 @@ print(title[1])
 
 <div data-childcomponent="wdtpd_string_manipulation_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 title = "Pirates of the Caribbean"
 print(title[-3])
 </textarea>
@@ -298,7 +306,10 @@ print(title[-3])
 
 <div data-childcomponent="wdtpd_string_manipulation_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 title = "Pirates of the Caribbean"
 print(title[2:6])
 </textarea>
@@ -306,7 +317,10 @@ print(title[2:6])
 
 <div data-childcomponent="wdtpd_string_manipulation_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     data-caption='What will this program print?'>
+<textarea data-component="activecode" id=wdtpd_string_manipulation_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+         data-caption='What will this program print?' >
 fruit = "pineapple"
 for poorly_named_variable in fruit:
     print(poorly_named_variable)
@@ -314,8 +328,8 @@ for poorly_named_variable in fruit:
 </div>
 </div>
 <div class="section" id="traversal-and-the-for-loop-by-index">
-<h2>2.2. Traversal and the <code class="docutils literal"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
-<p>It is also possible to use the <code class="docutils literal"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
+<h2>2.2. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
 These positions can be used together with the indexing operator to access the individual
 characters in the string.</p>
 <p>Consider the following codelens example.</p>
@@ -366,14 +380,17 @@ $(window).resize(function() {
 });
 </script>
 </div>
-<p>The index positions in “apple” are 0,1,2,3 and 4.  This is exactly the same sequence of integers returned by <code class="docutils literal"><span class="pre">range(5)</span></code>.  The first time through the for loop, <code class="docutils literal"><span class="pre">current_index</span></code> will be 0 and the “a” will be printed.  Then, <code class="docutils literal"><span class="pre">current_index</span></code> will be reassigned to 1 and “p” will be displayed.  This will repeat for all the range values up to but not including 5.  Since “e” has index 4, this will be exactly right to show all
+<p>The index positions in “apple” are 0,1,2,3 and 4.  This is exactly the same sequence of integers returned by <code class="docutils literal notranslate"><span class="pre">range(5)</span></code>.  The first time through the for loop, <code class="docutils literal notranslate"><span class="pre">current_index</span></code> will be 0 and the “a” will be printed.  Then, <code class="docutils literal notranslate"><span class="pre">current_index</span></code> will be reassigned to 1 and “p” will be displayed.  This will repeat for all the range values up to but not including 5.  Since “e” has index 4, this will be exactly right to show all
 of the characters.</p>
-<p>In order to make the iteration more general, we can use the <code class="docutils literal"><span class="pre">len</span></code> function to provide the bound for <code class="docutils literal"><span class="pre">range</span></code>.  This is a very common pattern for traversing any sequence by position.  Make sure you understand why the range function behaves
-correctly when using <code class="docutils literal"><span class="pre">len</span></code> of the string as its parameter value.</p>
+<p>In order to make the iteration more general, we can use the <code class="docutils literal notranslate"><span class="pre">len</span></code> function to provide the bound for <code class="docutils literal notranslate"><span class="pre">range</span></code>.  This is a very common pattern for traversing any sequence by position.  Make sure you understand why the range function behaves
+correctly when using <code class="docutils literal notranslate"><span class="pre">len</span></code> of the string as its parameter value.</p>
 
 <div data-childcomponent="string_for_loop_by_index_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_for_loop_by_index_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_for_loop_by_index_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 fruit = "apple"
 for current_index in range(len(fruit)):
     print(fruit[current_index])
@@ -383,7 +400,7 @@ for current_index in range(len(fruit)):
 traversal by changing the sequence of index values.  Recall that we can create ranges that count down as well as up so the following code will print the characters from right to left.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Remember that when using the <code class="docutils literal"><span class="pre">range()</span></code> function with three arguments, the arguments are interpreted as <code class="docutils literal"><span class="pre">starting_number</span></code>, <code class="docutils literal"><span class="pre">ending_number</span></code>, and <code class="docutils literal"><span class="pre">amount_to_step_by</span></code>. The range function begins at the <code class="docutils literal"><span class="pre">starting_number</span></code>, and goes up to, but not including, the <code class="docutils literal"><span class="pre">ending_number</span></code>.</p>
+<p class="last">Remember that when using the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function with three arguments, the arguments are interpreted as <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>, and <code class="docutils literal notranslate"><span class="pre">amount_to_step_by</span></code>. The range function begins at the <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, and goes up to, but not including, the <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>.</p>
 </div>
 
 <div class="runestone" style="max-width: none;">
@@ -432,14 +449,14 @@ $(window).resize(function() {
 });
 </script>
 </div>
-<p>Trace the values of <code class="docutils literal"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
+<p>Trace the values of <code class="docutils literal notranslate"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
 <div class="section" id="check-your-understanding">
 <h3>2.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1">
             <p>string-acc1: How many times is the letter o printed by the following statements?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">current_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)):</span>
   <span class="k">if</span> <span class="n">current_index</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
       <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="n">current_index</span><span class="p">])</span>
@@ -460,12 +477,15 @@ $(window).resize(function() {
             </div>
 </div>
 <div class="section" id="the-in-and-not-in-operators">
-<span id="index-0"></span><h2>2.3. The <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
+<span id="index-0"></span><h2>2.3. The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
 
 <div data-childcomponent="string_in_not_in_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_in_not_in_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_in_not_in_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 print('p' in 'apple')
 print('i' in 'apple')
 print('ap' in 'apple')
@@ -478,31 +498,40 @@ like to think about these edge cases quite carefully!)</em></p>
 
 <div data-childcomponent="string_in_not_in_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_in_not_in_2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_in_not_in_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 print('a' in 'a')
 print('apple' in 'apple')
 print('' in 'a')
 print('' in 'apple')
 </textarea>
 </div>
-<p>The <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operator returns the logical opposite result of <code class="docutils literal"><span class="pre">in</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operator returns the logical opposite result of <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 
 <div data-childcomponent="string_in_not_in_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_in_not_in_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_in_not_in_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 print('x' not in 'apple')
 </textarea>
 </div>
 </div>
 <div class="section" id="the-accumulator-pattern-with-strings">
 <span id="index-1"></span><h2>2.4. The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
-<p>Combining the <code class="docutils literal"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal"><span class="pre">+</span></code> and the accumulator pattern, we can
+<p>Combining the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal notranslate"><span class="pre">+</span></code> and the accumulator pattern, we can
 write a function that removes all the vowels from a string.  The idea is to start with a string and iterate over each character, checking to see if the character is a vowel.  As we process the characters, we will build up a new string consisting of only the nonvowel characters.  To do this, we use the accumulator pattern.</p>
 <p>Remember that the accumulator pattern allows us to keep a “running total”.  With strings, we are not accumulating a numeric total.  Instead we are accumulating characters onto a string.</p>
 
 <div data-childcomponent="string_accumulator_pattern_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=string_accumulator_pattern_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=string_accumulator_pattern_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def remove_vowels(original_string):
     vowels = "aeiouAEIOU"
     string_without_vowels = ""
@@ -515,8 +544,8 @@ print(remove_vowels("compsci"))
 print(remove_vowels("aAbEefIijOopUus"))
 </textarea>
 </div>
-<p>Line 5 uses the <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> operator to check whether the current character is not in the string <code class="docutils literal"><span class="pre">vowels</span></code>. The alternative to using this operator would be to write a very large <code class="docutils literal"><span class="pre">if</span></code> statement that checks each of the individual vowel characters.  Note we would need to use logical <code class="docutils literal"><span class="pre">and</span></code> to be sure that the character is not any of the vowels.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span>  <span class="ow">and</span>
+<p>Line 5 uses the <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operator to check whether the current character is not in the string <code class="docutils literal notranslate"><span class="pre">vowels</span></code>. The alternative to using this operator would be to write a very large <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that checks each of the individual vowel characters.  Note we would need to use logical <code class="docutils literal notranslate"><span class="pre">and</span></code> to be sure that the character is not any of the vowels.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span>  <span class="ow">and</span>
    <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;o&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;u&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;A&#39;</span>  <span class="ow">and</span>
    <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;E&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;I&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;O&#39;</span>  <span class="ow">and</span>
    <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span>
@@ -524,11 +553,11 @@ print(remove_vowels("aAbEefIijOopUus"))
      <span class="n">string_without_vowels</span> <span class="o">=</span> <span class="n">string_without_vowels</span> <span class="o">+</span> <span class="n">each_char</span>
 </pre></div>
 </div>
-<p>Look carefully at line 6 in the above program (<code class="docutils literal"><span class="pre">string_without_vowels</span> <span class="pre">=</span> <span class="pre">string_without_vowels</span> <span class="pre">+</span> <span class="pre">each_char</span></code>).  We will do this for every character that is not a vowel.  This should look
+<p>Look carefully at line 6 in the above program (<code class="docutils literal notranslate"><span class="pre">string_without_vowels</span> <span class="pre">=</span> <span class="pre">string_without_vowels</span> <span class="pre">+</span> <span class="pre">each_char</span></code>).  We will do this for every character that is not a vowel.  This should look
 very familiar.  As we were describing earlier, it is an example of the accumulator pattern, this time using a string to “accumulate” the final result.
-In words it says that the new value of <code class="docutils literal"><span class="pre">string_without_vowels</span></code> will be the old value of <code class="docutils literal"><span class="pre">string_without_vowels</span></code> concatenated with
-the value of <code class="docutils literal"><span class="pre">each_char</span></code>.  We are building the result string character by character.</p>
-<p>Take a close look also at the initialization of <code class="docutils literal"><span class="pre">string_without_vowels</span></code>.  We start with an empty string and then begin adding
+In words it says that the new value of <code class="docutils literal notranslate"><span class="pre">string_without_vowels</span></code> will be the old value of <code class="docutils literal notranslate"><span class="pre">string_without_vowels</span></code> concatenated with
+the value of <code class="docutils literal notranslate"><span class="pre">each_char</span></code>.  We are building the result string character by character.</p>
+<p>Take a close look also at the initialization of <code class="docutils literal notranslate"><span class="pre">string_without_vowels</span></code>.  We start with an empty string and then begin adding
 new characters to the end.</p>
 <p>Step through the function using codelens to see the accumulator variable grow.</p>
 
@@ -581,10 +610,10 @@ $(window).resize(function() {
 <div class="section" id="id1">
 <h3>2.4.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1">
             <p>string-acc2: What is printed by the following statements:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
     <span class="n">another_string</span> <span class="o">=</span> <span class="n">another_string</span> <span class="o">+</span> <span class="n">item</span>
@@ -600,10 +629,10 @@ $(window).resize(function() {
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2">
             <p>string-acc3: What is printed by the following statements:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
     <span class="n">another_string</span> <span class="o">=</span> <span class="n">item</span> <span class="o">+</span> <span class="n">another_string</span>
@@ -637,24 +666,24 @@ $(window).resize(function() {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>1</td>
-<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
 </tr>
 <tr class="row-odd"><td>2</td>
-<td><code class="docutils literal"><span class="pre">&quot;a&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;b&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;ab&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></td>
 </tr>
 <tr class="row-even"><td>3</td>
-<td><code class="docutils literal"><span class="pre">&quot;l&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;ab&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;lab&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></td>
 </tr>
 <tr class="row-odd"><td>4</td>
-<td><code class="docutils literal"><span class="pre">&quot;l&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;lab&quot;</span></code></td>
-<td><code class="docutils literal"><span class="pre">&quot;llab&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;llab&quot;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -662,7 +691,7 @@ $(window).resize(function() {
     </div>
     
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="string_accumulator_patten_parsons_1">
+        <pre data-component="parsons" id="string_accumulator_patten_parsons_1"      >
         <span data-question>string-acc4: Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, ``new_word`` is printed, and will have the same value as ``original_word``.</span>original_word = "clockwork"
 new_word = ""
 for letter in original_word:
@@ -684,13 +713,16 @@ print(new_word)
 </div>
 
 <div data-childcomponent="practice_problem_string_more_info_1" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
+<p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal notranslate"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal notranslate"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssaon&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssacea&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">even_letters(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ruhies&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssaon&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssacea&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ruhies&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_string_more_info_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def even_letters(word):
     return ""
 
@@ -713,8 +745,8 @@ myTests().main()
 </div>
 
     <div data-component="reveal" id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint">
-    <p>Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a <code class="docutils literal"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">range()</span></code> style loop. The accumulator pattern will look something like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_letters</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <p>Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">range()</span></code> style loop. The accumulator pattern will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_letters</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
     <span class="n">new_word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
         <span class="c1"># add a question here...</span>
@@ -733,13 +765,16 @@ myTests().main()
 </div>
 
 <div data-childcomponent="practice_problem_string_more_info_2" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with a single parameter <code class="docutils literal"><span class="pre">word</span></code> that returns the <code class="docutils literal"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
+<p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the <code class="docutils literal notranslate"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nootaksaS&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nawehctaksaS&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">reverse_me(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;sredirhguoR&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nootaksaS&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nawehctaksaS&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;sredirhguoR&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_string_more_info_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def reverse_me(word):
     return ""
 
@@ -769,13 +804,16 @@ myTests().main()
 </div>
 
 <div data-childcomponent="practice_problem_string_more_info_3" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function with two parameters, <code class="docutils literal"><span class="pre">word</span></code> and <code class="docutils literal"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
+<p>Create a function with two parameters, <code class="docutils literal notranslate"><span class="pre">word</span></code> and <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal notranslate"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatoon&quot;,</span> <span class="pre">&quot;o&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Saskatn&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;Saskatchewan&quot;,</span> <span class="pre">&quot;a&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssktchewn&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">letter_destroyer(&quot;roughriders&quot;,</span> <span class="pre">&quot;r&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;oughides&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;Saskatoon&quot;,</span> <span class="pre">&quot;o&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Saskatn&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;Saskatchewan&quot;,</span> <span class="pre">&quot;a&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssktchewn&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;roughriders&quot;,</span> <span class="pre">&quot;r&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;oughides&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_string_more_info_3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def letter_destroyer(word, letter_to_destroy):
     return ""
 
@@ -805,13 +843,16 @@ myTests().main()
 </div>
 
 <div data-childcomponent="practice_problem_string_more_info_4" class="runestone explainer ac_section alert alert-warning">
-<p>Create a function that takes in a single parameter <code class="docutils literal"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal"><span class="pre">t</span></code> in “Saskatoon”).</p>
+<p>Create a function that takes in a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal notranslate"><span class="pre">t</span></code> in “Saskatoon”).</p>
 <p><strong>Examples:</strong></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;Naomi&quot;)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
-<p><code class="docutils literal"><span class="pre">qwerty_finder(&quot;bunnyhug&quot;)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;Naomi&quot;)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;bunnyhug&quot;)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_4 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_string_more_info_4 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def qwerty_finder(word):
     return ""
 

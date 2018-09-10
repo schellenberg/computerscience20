@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Step 13: If/Elif/Else &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/clickable.js"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../_static/fitb.js"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/reveal.js"></script>
-    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../_static/timed.js"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/codemirror.js"></script>
     <script type="text/javascript" src="../_static/xml.js"></script>
     <script type="text/javascript" src="../_static/css.js"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/javascript.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/datafile.js"></script>
-    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -211,7 +223,7 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Step 14: The <code class="docutils literal"><span class="pre">not</span></code> Keyword' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - Step 14: The <code class="docutils literal notranslate"><span class="pre">not</span></code> Keyword' data-toggle="tooltip" >
     <a href="Step14.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -244,22 +256,12 @@
   
   <div class="section" id="step-13-if-elif-else">
 <h1>Step 13: If/Elif/Else<a class="headerlink" href="#step-13-if-elif-else" title="Permalink to this headline">¶</a></h1>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-CP2</strong> Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="tutorial">
+<div class="section" id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
 <p>Reeborg lives in Canada where it not only can rain or be sunny, but snow
 can also be falling. Let’s suppose that only one of those can happen at a time. Then,
 Reeborg could be faced with the following choices:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">it_rains</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">it_rains</span><span class="p">():</span>
     <span class="n">play_indoors</span><span class="p">()</span>
 <span class="k">elif</span> <span class="n">it_snows</span><span class="p">():</span>
     <span class="n">go_skiing</span><span class="p">()</span>
@@ -267,16 +269,16 @@ Reeborg could be faced with the following choices:</p>
     <span class="n">go_swimming</span><span class="p">()</span> <span class="c1"># assuming it is warm!</span>
 </pre></div>
 </div>
-<p>Notice the use of <code class="docutils literal"><span class="pre">elif</span></code> (which means “else if”) for choice 2. If we took into account other
+<p>Notice the use of <code class="docutils literal notranslate"><span class="pre">elif</span></code> (which means “else if”) for choice 2. If we took into account other
 possible weather phenomena, like hail, thunder, fog, drizzle, etc., we
-could add other choices using additional <code class="docutils literal"><span class="pre">elif:</span> <span class="pre">...</span></code> code blocks.</p>
+could add other choices using additional <code class="docutils literal notranslate"><span class="pre">elif:</span> <span class="pre">...</span></code> code blocks.</p>
 <p>Here is a graphical representation of the choices that Reeborg faces:</p>
 <div class="figure align-center">
 <img alt="../_images/elif.jpg" src="../_images/elif.jpg" />
 </div>
 <p>In Step 10, you wrote a program to make Reeborg jump hurdles. Your program was likely
 something like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
     <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
         <span class="n">turn_left</span><span class="p">()</span>
 
@@ -291,7 +293,7 @@ something like this:</p>
 <p>Although this code works fine for the hurdle world you were given, <strong>it would fail if the hurdles were not spaced evenly apart</strong>.</p>
 <p>Here’s a program skeleton that should work for the world we mentioned above,
 provided you fill in the missing pieces. <em>Note: You may find the `done` function (which tells Reeborg to stop doing anything) helpful here.</em></p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
      <span class="c1"># suitable definition</span>
 
 <span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
@@ -306,14 +308,14 @@ provided you fill in the missing pieces. <em>Note: You may find the `done` funct
      <span class="n">run_jump_or_finish</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Note the structure of the <code class="docutils literal"><span class="pre">if/elif/else</span></code> statements; as is mentioned above,
+<p>Note the structure of the <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> statements; as is mentioned above,
 you should see that it gives three independent choices: <strong>only one of them
 will be executed</strong>.</p>
 </div>
 <div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Open Step 13 on the <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2013" target="_blank">Reeborg environment</a>, and copy/paste the following code to begin your solution:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
      <span class="c1"># suitable definition</span>
 
 <span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
@@ -329,13 +331,13 @@ will be executed</strong>.</p>
 </pre></div>
 </div>
 <img alt="../_images/step13.png" src="../_images/step13.png" />
-<p>Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a <code class="docutils literal"><span class="pre">repeat</span></code> loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You <strong>must</strong> use an <code class="docutils literal"><span class="pre">if/elif/else</span></code> structure in your program.</p>
+<p>Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a <code class="docutils literal notranslate"><span class="pre">repeat</span></code> loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You <strong>must</strong> use an <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> structure in your program.</p>
 </div>
 <div class="section" id="if-you-re-having-trouble-a-more-detailed-explanation">
 <h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
-<p>A series of <code class="docutils literal"><span class="pre">if/elif/</span> <span class="pre">...</span> <span class="pre">/else</span></code> statements is equivalent to
-inserting the <strong>first</strong> code block that evaluates to <code class="docutils literal"><span class="pre">True</span></code>. Thus:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<p>A series of <code class="docutils literal notranslate"><span class="pre">if/elif/</span> <span class="pre">...</span> <span class="pre">/else</span></code> statements is equivalent to
+inserting the <strong>first</strong> code block that evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Thus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
     <span class="n">do_1</span><span class="p">()</span>
 <span class="k">elif</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">do_2</span><span class="p">()</span>
@@ -346,11 +348,11 @@ inserting the <strong>first</strong> code block that evaluates to <code class="d
 </pre></div>
 </div>
 <p>is equivalent to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">do_2</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_2</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>whereas:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
     <span class="n">do_1</span><span class="p">()</span>
 <span class="k">elif</span> <span class="kc">False</span><span class="p">:</span>
     <span class="n">do_2</span><span class="p">()</span>
@@ -361,7 +363,7 @@ inserting the <strong>first</strong> code block that evaluates to <code class="d
 </pre></div>
 </div>
 <p>is equivalent to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">do_4</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_4</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>etc.</p>
@@ -378,12 +380,12 @@ inserting the <strong>first</strong> code block that evaluates to <code class="d
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Step12.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Step 14: The <code class="docutils literal"><span class="pre">not</span></code> Keyword' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - Step 14: The <code class="docutils literal notranslate"><span class="pre">not</span></code> Keyword' data-toggle="tooltip" >
     <a href="Step14.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step14.html" >Next Section - Step 14: The <code class="docutils literal"><span class="pre">not</span></code> Keyword</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Step14.html" >Next Section - Step 14: The <code class="docutils literal notranslate"><span class="pre">not</span></code> Keyword</a>
 
 <script type="text/javascript">
 

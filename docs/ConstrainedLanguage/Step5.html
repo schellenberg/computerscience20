@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Step 5: Defining New Functions &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/clickable.js"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../_static/fitb.js"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/reveal.js"></script>
-    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../_static/timed.js"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/codemirror.js"></script>
     <script type="text/javascript" src="../_static/xml.js"></script>
     <script type="text/javascript" src="../_static/css.js"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../_static/javascript.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
     <script type="text/javascript" src="../_static/datafile.js"></script>
-    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -194,7 +206,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Step 5: Defining New Functions</a><ul>
 <li><a class="reference internal" href="#tutorial">Tutorial</a><ul>
-<li><a class="reference internal" href="#how-to-think-about-def">How to think about <code class="docutils literal"><span class="pre">def</span></code></a></li>
+<li><a class="reference internal" href="#how-to-think-about-def">How to think about <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
@@ -246,46 +258,37 @@
   
   <div class="section" id="step-5-defining-new-functions">
 <h1>Step 5: Defining New Functions<a class="headerlink" href="#step-5-defining-new-functions" title="Permalink to this headline">¶</a></h1>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-CP2</strong> Use common coding techniques to enhance code elegance and troubleshoot errors throughout Computer Science 20.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="tutorial">
+<div class="section" id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
 <p>After completing the last step, you have realized that having Reeborg make
 three left turns in a row gives the same final result as if it were to
 make a single right turn. It was probably becoming quite
-tedious to have to write three <code class="docutils literal"><span class="pre">turn_left()</span></code> instructions each time
+tedious to have to write three <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code> instructions each time
 you want to have Reeborg turn right. Wouldn’t it be nicer if you could
-simply write <code class="docutils literal"><span class="pre">turn_right()</span></code>?</p>
-<p>Just as we can call built-in functions like <code class="docutils literal"><span class="pre">turn_left()</span></code> and <code class="docutils literal"><span class="pre">move()</span></code>, we can create our own functions as well. We can define a new Python function as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_well_chosen_name</span> <span class="p">():</span>
+simply write <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>?</p>
+<p>Just as we can call built-in functions like <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code> and <code class="docutils literal notranslate"><span class="pre">move()</span></code>, we can create our own functions as well. We can define a new Python function as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_well_chosen_name</span> <span class="p">():</span>
     <span class="c1"># some lines of code</span>
     <span class="c1"># indented at the same level</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">def</span></code> is the first Python <strong>keyword</strong> we have encountered. Keywords are words that
+<p><code class="docutils literal notranslate"><span class="pre">def</span></code> is the first Python <strong>keyword</strong> we have encountered. Keywords are words that
 have a special meaning in a given programming language.
-Notice how a colon <code class="docutils literal"><span class="pre">:</span></code> precedes what
+Notice how a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> precedes what
 is known as a <em>block of code</em>, and the indented portion that follows is the  <em>body</em> of the
 function. It is <strong>required</strong> in Python to <em>indent</em> such blocks of code
 with the same number of spaces at the beginning of each line which, as a side-effect, makes it easy to identify the function body for a human reader.</p>
 <p>Let’s write our first Python function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
     <span class="n">turn_left</span><span class="p">()</span>
     <span class="n">turn_left</span><span class="p">()</span>
     <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>That’s it! You will now be able to avoid having to write three
-<code class="docutils literal"><span class="pre">turn_left()</span></code> functions in a row to simulate a right turn!</p>
+<code class="docutils literal notranslate"><span class="pre">turn_left()</span></code> functions in a row to simulate a right turn!</p>
 <div class="section" id="how-to-think-about-def">
-<h3>How to think about <code class="docutils literal"><span class="pre">def</span></code><a class="headerlink" href="#how-to-think-about-def" title="Permalink to this headline">¶</a></h3>
+<h3>How to think about <code class="docutils literal notranslate"><span class="pre">def</span></code><a class="headerlink" href="#how-to-think-about-def" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Please note that this simplified explanation does not take into account what is known
@@ -297,7 +300,7 @@ here’s a more detailed explanation which will help you to not only
 understand how functions work, but also other Python construct that
 involve blocks of code.</p>
 <p>Suppose we have the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>  <span class="c1"># begin of code block follows</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>  <span class="c1"># begin of code block follows</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>   <span class="c1"># end of code block</span>
@@ -308,7 +311,7 @@ involve blocks of code.</p>
 </pre></div>
 </div>
 <p>This is equivalent to the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span> <span class="c1"># define a function</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="c1"># define a function</span>
  <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>
@@ -323,10 +326,10 @@ involve blocks of code.</p>
  <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>In other words, <code class="docutils literal"><span class="pre">def</span></code> defines a name that we can use as a synonym
+<p>In other words, <code class="docutils literal notranslate"><span class="pre">def</span></code> defines a name that we can use as a synonym
 for all the code that appears inside the code block, and whenever we see
 the synonym being <strong>called</strong> [that is, the name appears followed by
-<code class="docutils literal"><span class="pre">()</span></code>], we can think of it as being equivalent to inserting the code
+<code class="docutils literal notranslate"><span class="pre">()</span></code>], we can think of it as being equivalent to inserting the code
 block <em>as is</em> at that location.</p>
 </div>
 </div>
@@ -334,7 +337,7 @@ block <em>as is</em> at that location.</p>
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Open Step 5 on the <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%205" target="_blank">Reeborg environment</a>.</p>
 <img alt="../_images/step5.png" src="../_images/step5.png" />
-<p>Reeborg wants to pick some strawberries in its garden. Reeborg’s garden has a very strange shape, as you’ve seen above. Define a <code class="docutils literal"><span class="pre">pick_two_berries()</span></code> function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!</p>
+<p>Reeborg wants to pick some strawberries in its garden. Reeborg’s garden has a very strange shape, as you’ve seen above. Define a <code class="docutils literal notranslate"><span class="pre">pick_two_berries()</span></code> function that picks up two strawberries and puts them on the ground. Use it four times as part of your solution. As always, be sure to use comments and whitespace to increase the readability of your solution!</p>
 </div>
 </div>
 

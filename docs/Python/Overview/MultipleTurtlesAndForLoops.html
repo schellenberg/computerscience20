@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>10. Multiple Turtles and for Loops &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -192,12 +204,12 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops</a><ul>
+<li><a class="reference internal" href="#">10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops</a><ul>
 <li><a class="reference internal" href="#instances-a-herd-of-turtles">10.1. Instances — A Herd of Turtles</a><ul>
 <li><a class="reference internal" href="#mixed-up-programs">10.1.1. Mixed Up Programs</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-for-loop">10.2. The <code class="docutils literal"><span class="pre">for</span></code> Loop</a></li>
+<li><a class="reference internal" href="#the-for-loop">10.2. The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
 <li><a class="reference internal" href="#iteration-simplifies-our-turtle-program">10.3. Iteration Simplifies our Turtle Program</a><ul>
 <li><a class="reference internal" href="#id1">10.3.1. Mixed Up Programs</a></li>
 </ul>
@@ -256,22 +268,12 @@
 <div class="container" id="main-content">
   
   <div class="section" id="multiple-turtles-and-for-loops">
-<h1>10. Multiple Turtles and <code class="docutils literal"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this headline">¶</a></h1>
+<h1>10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal"><span class="pre">for</span></code> loop, and use the <code class="docutils literal"><span class="pre">range()</span></code> function to simplify the creation of large for loops.</p>
+<p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, and use the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function to simplify the creation of large for loops.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP4</strong> Investigate one-dimensional arrays and their applications.</li>
-</ul>
-
-    </div>
-    <div class="section" id="instances-a-herd-of-turtles">
+<div class="section" id="instances-a-herd-of-turtles">
 <h2>10.1. Instances — A Herd of Turtles<a class="headerlink" href="#instances-a-herd-of-turtles" title="Permalink to this headline">¶</a></h2>
 <p>Just like we can have many different integers in a program, we can have many
 turtles.  Each of them is an independent object, and we call each one an <strong>instance</strong> of the Turtle type (class).  Each instance has its own
@@ -282,7 +284,10 @@ completes a triangle:</p>
 
 <div data-childcomponent="for-loops-1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=for-loops-1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=for-loops-1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # Set up the window and its attributes
 import turtle
 wn = turtle.Screen()
@@ -341,7 +346,7 @@ ideas. They’re not always explicit in the code.</li>
 <h3>10.1.1. Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
 
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="for-loops-parsons-1">
+        <pre data-component="parsons" id="for-loops-parsons-1"      >
         <span data-question>intro-for-loops1: The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left, <img src="../../_static/parsons/TwoTurtles1.png" width="150" align="left" hspace="10" vspace="5" />.  The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.   Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
 wn = turtle.Screen()
 ---
@@ -365,7 +370,7 @@ wn.exitonclick()
         </div>
     
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="for-loops-parsons-2">
+        <pre data-component="parsons" id="for-loops-parsons-2"      >
         <span data-question>intro-for-loops2: The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, <img src="../../_static/parsons/TwoTurtlesL.png" width="150" align="left" hspace="10" vspace="5" />.  The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.  Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
 ---
 wn = turtle.Screen()
@@ -388,7 +393,7 @@ wn.exitonclick()
     </div>
 </div>
 <div class="section" id="the-for-loop">
-<span id="index-0"></span><h2>10.2. The <code class="docutils literal"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>10.2. The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we drew a square yesterday, it was quite tedious.  We had to move then turn, move
 then turn, etc. etc. four times.  If we were drawing a hexagon, or an octogon,
 or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.</p>
@@ -400,14 +405,17 @@ message for each friend.</p>
 
 <div data-childcomponent="for-loops-2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=for-loops-2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=for-loops-2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
     print("Hi", name, "Please come to my party on Saturday!")
 </textarea>
 </div>
-<p>Take a look at the output produced when you press the <code class="docutils literal"><span class="pre">run</span></code> button.  There is one line printed for each friend.  Here’s how it works:</p>
+<p>Take a look at the output produced when you press the <code class="docutils literal notranslate"><span class="pre">run</span></code> button.  There is one line printed for each friend.  Here’s how it works:</p>
 <ul class="simple">
-<li><strong>name</strong> in this <code class="docutils literal"><span class="pre">for</span></code> statement is called the <strong>loop variable</strong>.</li>
+<li><strong>name</strong> in this <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is called the <strong>loop variable</strong>.</li>
 <li>The list of names in the square brackets is called a Python <strong>list</strong>.
 Lists are very useful.  We will have much more to say about them later.</li>
 <li>Line 2  is the <strong>loop body</strong>.  The loop body is always
@@ -419,17 +427,17 @@ called the <strong>terminating condition</strong> of the loop), the loop has fin
 Program execution continues at the next statement after the loop body.</li>
 <li>If there are items still to be processed, the loop variable is updated to
 refer to the next item in the list.  This means, in this case, that the loop
-body is executed here 7 times, and each time <code class="docutils literal"><span class="pre">name</span></code> will refer to a different
+body is executed here 7 times, and each time <code class="docutils literal notranslate"><span class="pre">name</span></code> will refer to a different
 friend.</li>
 <li>At the end of each execution of the body of the loop, Python returns
-to the <code class="docutils literal"><span class="pre">for</span></code> statement, to see if there are more items to be handled.</li>
+to the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement, to see if there are more items to be handled.</li>
 </ul>
 <p>A codelens demonstration is a good way to help you visualize exactly how the flow of control
-works with the for loop. Click on the <strong>Show CodeLens</strong> button in the example above. Try stepping forward and backward through the program by pressing the buttons. You can see the value of <code class="docutils literal"><span class="pre">name</span></code> change as the loop iterates through the list of friends.</p>
+works with the for loop. Click on the <strong>Show CodeLens</strong> button in the example above. Try stepping forward and backward through the program by pressing the buttons. You can see the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> change as the loop iterates through the list of friends.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Although you might not want to worry about this yet, it is <strong>really</strong> useful to know that you can access any specific part of list by providing it’s index value in square brackets, such as <code class="docutils literal"><span class="pre">some_list[2]</span></code> (the first element has an index of 0, the second has an index of 1, etc). Consider the following:</p>
-<div class="last highlight-python"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Malindu&quot;</span><span class="p">,</span> <span class="s2">&quot;Michelle&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Eli&quot;</span><span class="p">,</span> <span class="s2">&quot;Bree&quot;</span><span class="p">]</span>
+<p>Although you might not want to worry about this yet, it is <strong>really</strong> useful to know that you can access any specific part of list by providing it’s index value in square brackets, such as <code class="docutils literal notranslate"><span class="pre">some_list[2]</span></code> (the first element has an index of 0, the second has an index of 1, etc). Consider the following:</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Malindu&quot;</span><span class="p">,</span> <span class="s2">&quot;Michelle&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Eli&quot;</span><span class="p">,</span> <span class="s2">&quot;Bree&quot;</span><span class="p">]</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># prints James</span>
 <span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># prints Zoe</span>
@@ -444,7 +452,10 @@ square.  This next program does exactly the same thing but, with the help of the
 
 <div data-childcomponent="ch03_for1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch03_for1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=ch03_for1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 # setup the drawing environment
@@ -464,11 +475,14 @@ deal here.  What is much more important is that we’ve found a “repeating
 pattern” of statements, and we reorganized our program to repeat the pattern.
 Finding the chunks and somehow getting our programs arranged around those
 chunks is a vital skill when learning <em>How to think like a computer scientist</em>.</p>
-<p>It is also important to realize that we could have used a <code class="docutils literal"><span class="pre">while</span></code> loop to accomplish the same drawing, and a version that does just that is below:</p>
+<p>It is also important to realize that we could have used a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to accomplish the same drawing, and a version that does just that is below:</p>
 
 <div data-childcomponent="ch03_for123" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch03_for123 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=ch03_for123 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 # setup the drawing environment
@@ -490,7 +504,10 @@ wn.exitonclick()
 
 <div data-childcomponent="ch03_forcolor" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ch03_forcolor data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=ch03_forcolor data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 # setup the drawing environment
@@ -505,12 +522,15 @@ for i in [0, 1, 2, 3]:
 wn.exitonclick()
 </textarea>
 </div>
-<p>In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  <code class="docutils literal"><span class="pre">some_color</span></code> will
-take on each color in the list.  We can even take this one step further and use the value of <code class="docutils literal"><span class="pre">some_color</span></code> as part of the computation.</p>
+<p>In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  <code class="docutils literal notranslate"><span class="pre">some_color</span></code> will
+take on each color in the list.  We can even take this one step further and use the value of <code class="docutils literal notranslate"><span class="pre">some_color</span></code> as part of the computation.</p>
 
 <div data-childcomponent="colorlist" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=colorlist data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=colorlist data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 
 # setup the drawing environment
@@ -525,12 +545,12 @@ for some_color in ["yellow", "red", "purple", "blue"]:
 wn.exitonclick()
 </textarea>
 </div>
-<p>In this case, the value of <code class="docutils literal"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
+<p>In this case, the value of <code class="docutils literal notranslate"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal notranslate"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal notranslate"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
 <div class="section" id="id1">
 <h3>10.3.1. Mixed Up Programs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="3_8">
+        <pre data-component="parsons" id="3_8"      >
         <span data-question>intro-for-loops3: The following program uses a turtle to draw a triangle as shown to the left, <img src="../../_static/parsons/TurtleTriangle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
 ---
 wn = turtle.Screen()
@@ -548,7 +568,7 @@ wn.exitonclick()
         </div>
     
         <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="3_9">
+        <pre data-component="parsons" id="3_9"      >
         <span data-question>intro-for-loops4: The following program uses a turtle to draw a rectangle as shown to the left, <img src="../../_static/parsons/TurtleRect.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p></span>import turtle
 wn = turtle.Screen()
 carlos = turtle.Turtle()
@@ -568,10 +588,10 @@ wn.exitonclick()
         </div>
     <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_1">
             <p>intro-for-loops5: In the following code, how many lines does this code print?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -588,7 +608,7 @@ wn.exitonclick()
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_2">
             intro-for-loops6: How does python know what statements are contained in the loop body?
             <li data-component="answer" data-correct id="test_question3_4_2_opt_a">They are indented to the same degree from the loop header.</li><li data-component="feedback" id="test_question3_4_2_opt_a">The loop body can have any number of lines, all indented from the loop header.</li>
@@ -601,10 +621,10 @@ wn.exitonclick()
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question3_4_3">
             <p>intro-for-loops7: In the following code, what is the value of number the second time Python executes the loop?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -625,12 +645,12 @@ wn.exitonclick()
 <div class="section" id="the-range-function">
 <span id="index-1"></span><h2>10.4. The Range Function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">¶</a></h2>
 <p>It turns out that generating lists with a specific number of integers is a very common thing to do, especially when you
-want to write simple <code class="docutils literal"><span class="pre">for</span> <span class="pre">loop</span></code> controlled iteration.  Even though you can use any four items, or any four integers for that matter, the conventional thing to do is to use a list of integers starting with 0.
+want to write simple <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> controlled iteration.  Even though you can use any four items, or any four integers for that matter, the conventional thing to do is to use a list of integers starting with 0.
 In fact, these lists are so popular that Python gives us special built-in
-<code class="docutils literal"><span class="pre">range</span></code> objects
+<code class="docutils literal notranslate"><span class="pre">range</span></code> objects
 that can deliver a sequence of values to
-the <code class="docutils literal"><span class="pre">for</span></code> loop.  When called with one parameter, the sequence provided by <code class="docutils literal"><span class="pre">range</span></code> always starts with 0.  If you ask for <code class="docutils literal"><span class="pre">range(4)</span></code>, then you will get 4 values starting with 0.  In other words, 0, 1, 2, and finally 3.  Notice that 4 is not included since we started with 0.  Likewise, <code class="docutils literal"><span class="pre">range(10)</span></code> provides 10 values, 0 through 9.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.  When called with one parameter, the sequence provided by <code class="docutils literal notranslate"><span class="pre">range</span></code> always starts with 0.  If you ask for <code class="docutils literal notranslate"><span class="pre">range(4)</span></code>, then you will get 4 values starting with 0.  In other words, 0, 1, 2, and finally 3.  Notice that 4 is not included since we started with 0.  Likewise, <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> provides 10 values, 0 through 9.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="c1"># Executes the body with i = 0, then 1, then 2, then 3</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="c1"># sets x to each of ... [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
@@ -641,7 +661,7 @@ the <code class="docutils literal"><span class="pre">for</span></code> loop.  Wh
 <p class="last">Computer scientists like to count from 0!</p>
 </div>
 <p>So to repeat something four times, a good Python programmer would do this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">alex</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
     <span class="n">alex</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 </pre></div>
@@ -661,7 +681,10 @@ the <code class="docutils literal"><span class="pre">for</span></code> loop.  Wh
 
 <div data-childcomponent="practice_problem_turtle_for_loops_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_turtle_for_loops_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_turtle_for_loops_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # Drawing Regular Polygons
 
 import turtle
@@ -682,7 +705,10 @@ import turtle
 
 <div data-childcomponent="practice_problem_turtle_for_loops_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_turtle_for_loops_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_turtle_for_loops_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # Drawing a Star
 
 import turtle
@@ -697,7 +723,10 @@ import turtle
 
 <div data-childcomponent="practice_problem_turtle_for_loops_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=practice_problem_turtle_for_loops_3 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=practice_problem_turtle_for_loops_3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 # Drawing a Clock
 
 import turtle

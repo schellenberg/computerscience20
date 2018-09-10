@@ -90,7 +90,7 @@ ClickableArea.prototype.renderNewElements = function () {
     // wrapper function for generating everything
     this.containerDiv = document.createElement("div");
     this.containerDiv.appendChild(this.question);
-    $(this.containerDiv).addClass("alert alert-warning");
+    $(this.containerDiv).addClass(this.origElem.getAttribute("class"));
 
     this.newDiv = document.createElement("div");
     var newContent = $(this.origElem).html();
@@ -365,7 +365,7 @@ ClickableArea.prototype.renderFeedback = function () {
 
     if (this.correct) {
         $(this.feedBackDiv).html("You are Correct!");
-        $(this.feedBackDiv).attr("class", "alert alert-success");
+        $(this.feedBackDiv).attr("class", "alert alert-info");
 
     } else {
         $(this.feedBackDiv).html("Incorrect. You clicked on " + this.correctNum + " of the " + this.correctArray.length.toString() + " correct elements and " + this.incorrectNum + " of the " + this.incorrectArray.length.toString() + " incorrect elements. " + this.feedback);

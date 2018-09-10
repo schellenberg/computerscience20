@@ -2,85 +2,98 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>1. Fruitful Functions and Variable Scope &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modal-basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/p5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/webglinteractive.css" type="text/css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/clickable.js"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="../../_static/fitb.js"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../../_static/reveal.js"></script>
-    <script type="text/javascript" src="../../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../../_static/parsons.js"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js"></script>
-    <script type="text/javascript" src="../../_static/timed.js"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js"></script>
-    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="../../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../../_static/codemirror.js"></script>
     <script type="text/javascript" src="../../_static/xml.js"></script>
     <script type="text/javascript" src="../../_static/css.js"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/python.js"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js"></script>
     <script type="text/javascript" src="../../_static/javascript.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js"></script>
     <script type="text/javascript" src="../../_static/clike.js"></script>
     <script type="text/javascript" src="../../_static/timed_activecode.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../../_static/timed.js"></script>
+    <script type="text/javascript" src="../../_static/clickable.js"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../../_static/codelens.js"></script>
     <script type="text/javascript" src="../../_static/datafile.js"></script>
-    <script type="text/javascript" src="../../_static/showEval.js"></script>
     <script type="text/javascript" src="../../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../../_static/fitb.js"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../../_static/parsons.js"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../../_static/poll.js"></script>
+    <script type="text/javascript" src="../../_static/reveal.js"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../../_static/showEval.js"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../_static/Blob.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
@@ -117,13 +130,12 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.0.5';
+  eBookConfig.runestone_version = '3.2.4';
 </script>
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -260,24 +272,17 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). Discuss local and global scope. Work on practice problems, in which students create functions that return values.</p>
 </div>
-
-    <div data-component="reveal" id="curriculum_addressed"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide">
-    <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-</ul>
-
-    </div>
-    <div class="section" id="warmup-problem">
+<div class="section" id="warmup-problem">
 <h2>1.1. Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-16.png" src="../../_images/confusion-16.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
 
 <div data-childcomponent="turtle_confusion_practice_16" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=turtle_confusion_practice_16 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=turtle_confusion_practice_16 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import turtle
 </textarea>
 </div>
@@ -288,22 +293,28 @@ import turtle
 
 <div data-childcomponent="more_function_details_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=more_function_details_1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 print(abs(5))
 
 print(abs(-5))
 </textarea>
 </div>
-<p>In this example, the arguments to the <code class="docutils literal"><span class="pre">abs</span></code> function are 5 and -5.</p>
+<p>In this example, the arguments to the <code class="docutils literal notranslate"><span class="pre">abs</span></code> function are 5 and -5.</p>
 <div class="admonition note" id="index-0">
 <p class="first admonition-title">Note</p>
-<p class="last">The variables inside the function are called <strong>parameters</strong>, and the values that are passed to them when the function is called are <strong>arguments</strong>. For example, when we defined a function like <code class="docutils literal"><span class="pre">def</span> <span class="pre">draw_square(some_turtle,</span> <span class="pre">side_length):</span></code>, <code class="docutils literal"><span class="pre">some_turtle</span></code> and <code class="docutils literal"><span class="pre">side_length</span></code> are parameters. When we call that function, like <code class="docutils literal"><span class="pre">draw_square(tess,</span> <span class="pre">100)</span></code>, <code class="docutils literal"><span class="pre">tess</span></code> and <code class="docutils literal"><span class="pre">100</span></code> are arguments.</p>
+<p class="last">The variables inside the function are called <strong>parameters</strong>, and the values that are passed to them when the function is called are <strong>arguments</strong>. For example, when we defined a function like <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">draw_square(some_turtle,</span> <span class="pre">side_length):</span></code>, <code class="docutils literal notranslate"><span class="pre">some_turtle</span></code> and <code class="docutils literal notranslate"><span class="pre">side_length</span></code> are parameters. When we call that function, like <code class="docutils literal notranslate"><span class="pre">draw_square(tess,</span> <span class="pre">100)</span></code>, <code class="docutils literal notranslate"><span class="pre">tess</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> are arguments.</p>
 </div>
-<p>Some functions take more than one argument. For example the math module contains a function called <code class="docutils literal"><span class="pre">pow</span></code> which takes two arguments, the base and the exponent.</p>
+<p>Some functions take more than one argument. For example the math module contains a function called <code class="docutils literal notranslate"><span class="pre">pow</span></code> which takes two arguments, the base and the exponent.</p>
 
 <div data-childcomponent="more_function_details_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=more_function_details_2 data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 import math
 print(math.pow(2, 3))
 
@@ -314,36 +325,42 @@ print(math.pow(7, 2))
 <p class="first admonition-title">Note</p>
 <p class="last">Of course, we have already seen that raising a base to an exponent can be done with the ** operator.</p>
 </div>
-<p>Another built-in function that takes more than one argument is <code class="docutils literal"><span class="pre">max</span></code>.</p>
+<p>Another built-in function that takes more than one argument is <code class="docutils literal notranslate"><span class="pre">max</span></code>.</p>
 
 <div data-childcomponent="more_function_details_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=more_function_details_3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 print(max(7, 11))
 print(max(4, 1, 17, 2, 12))
 print(max(11, 5 * 3, 25 - 9, 0))
 </textarea>
 </div>
-<p><code class="docutils literal"><span class="pre">max</span></code> can be sent any number of arguments, separated by commas, and will
+<p><code class="docutils literal notranslate"><span class="pre">max</span></code> can be sent any number of arguments, separated by commas, and will
 return the maximum value sent. The arguments can be either simple values or
 expressions. In the last example, 16 is returned, since it is larger than 11,
-15, and 0.  Note that <code class="docutils literal"><span class="pre">max</span></code> also works on lists of values.</p>
+15, and 0.  Note that <code class="docutils literal notranslate"><span class="pre">max</span></code> also works on lists of values.</p>
 <p id="index-1">Notice that each of the above functions return values that can be used to build more complex expressions.</p>
-<p>So an important difference between these functions and ones like <code class="docutils literal"><span class="pre">draw_square</span></code> or <code class="docutils literal"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
+<p>So an important difference between these functions and ones like <code class="docutils literal notranslate"><span class="pre">draw_square</span></code> or <code class="docutils literal notranslate"><span class="pre">draw_rectangle</span></code> is that <code class="docutils literal notranslate"><span class="pre">draw_square</span></code> was not executed because we wanted it to compute a value — on the contrary, we wrote <code class="docutils literal notranslate"><span class="pre">draw_square</span></code> because we wanted it to execute a sequence of steps that caused the turtle to draw a specific shape.</p>
 <p>Functions that return values are sometimes called <strong>fruitful functions</strong>.
 A function that doesn’t return a value can be simply called a function, or if we want
 to make it extremely clear, a <em>non-fruitful</em> function.</p>
 <p>Fruitful functions still allow the user to provide information (arguments).  However there is now an additional piece of data that is returned from the function.</p>
 <img alt="../../_images/blackboxfun.png" src="../../_images/blackboxfun.png" />
 <p>How do we write our own fruitful function?  Let’s start by creating a very simple
-mathematical function that we will call <code class="docutils literal"><span class="pre">square</span></code>.  The square function will take one number
+mathematical function that we will call <code class="docutils literal notranslate"><span class="pre">square</span></code>.  The square function will take one number
 as a parameter and return the result of squaring that number.  Here is the
 black-box diagram with the Python code following.</p>
 <img alt="../../_images/squarefun.png" id="index-2" src="../../_images/squarefun.png" />
 
 <div data-childcomponent="more_function_details_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=more_function_details_4 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=more_function_details_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def square(original_number):
     squared_value = original_number * original_number
     return squared_value
@@ -356,14 +373,14 @@ print("The result of", to_square, "squared is", result)
 <p>The <strong>return</strong> statement is followed by an expression which is evaluated.  Its
 result is returned to the caller as the “fruit” of calling this function.
 Because the return statement can contain any Python expression we could have
-avoided creating the <strong>temporary variable</strong> <code class="docutils literal"><span class="pre">squared_value</span></code> and simply used
-<code class="docutils literal"><span class="pre">return</span> <span class="pre">original_number</span> <span class="pre">*</span> <span class="pre">original_number</span></code>.
+avoided creating the <strong>temporary variable</strong> <code class="docutils literal notranslate"><span class="pre">squared_value</span></code> and simply used
+<code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">original_number</span> <span class="pre">*</span> <span class="pre">original_number</span></code>.
 Try modifying the square function above to see that this works just the same.
-On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal"><span class="pre">squared_value</span></code> in the program above makes debugging easier.  These temporary variables are examples of <strong>local variables</strong>, which will be explained further in the next section.</p>
+On the other hand, using <strong>temporary variables</strong> like <code class="docutils literal notranslate"><span class="pre">squared_value</span></code> in the program above makes debugging easier.  These temporary variables are examples of <strong>local variables</strong>, which will be explained further in the next section.</p>
 <p>Notice something important here. The name of the variable we pass as an
-argument — <code class="docutils literal"><span class="pre">to_square</span></code> — has nothing to do with the name of the formal parameter
-— <code class="docutils literal"><span class="pre">original_number</span></code>.  It is as if  <code class="docutils literal"><span class="pre">original_number</span> <span class="pre">=</span> <span class="pre">to_square</span></code> is executed when <code class="docutils literal"><span class="pre">square</span></code> is called. It doesn’t matter what the value was named in
-the caller. In <code class="docutils literal"><span class="pre">square</span></code>, it’s name is <code class="docutils literal"><span class="pre">original_number</span></code>.  You can see this very clearly in
+argument — <code class="docutils literal notranslate"><span class="pre">to_square</span></code> — has nothing to do with the name of the formal parameter
+— <code class="docutils literal notranslate"><span class="pre">original_number</span></code>.  It is as if  <code class="docutils literal notranslate"><span class="pre">original_number</span> <span class="pre">=</span> <span class="pre">to_square</span></code> is executed when <code class="docutils literal notranslate"><span class="pre">square</span></code> is called. It doesn’t matter what the value was named in
+the caller. In <code class="docutils literal notranslate"><span class="pre">square</span></code>, it’s name is <code class="docutils literal notranslate"><span class="pre">original_number</span></code>.  You can see this very clearly in
 codelens, where the <strong>global variables</strong> (variables defined outside of any function) and the local variables for the square function are in separate boxes.</p>
 <p>As you step through the example in codelens below, notice that the <strong>return</strong> statement not only causes the function to return a value, but it also returns the flow of control back to the place in the program where the function call was made.</p>
 <div class="admonition note">
@@ -430,11 +447,11 @@ of code.</p>
 <p>When you click on the forward button, notice that the red arrow moves to line 5, skipping lines 2 and 3 of the function (and
 the light green arrow has now appeared on line 1).  Why is this?
 The answer is that function definition is not the same as function execution.  Lines 2
-and 3 will not be executed until the function is called on line 6.  Line 1 defines the function and the name <code class="docutils literal"><span class="pre">square</span></code> is added to the
-global variables, but that is all the <code class="docutils literal"><span class="pre">def</span></code> does at that point.  The body of the function will be executed later.  Continue to click
-the forward button to see how the flow of control moves from the call, back up to the body of the function, and then finally back to line 7, after the function has returned its value and the value has been assigned to <code class="docutils literal"><span class="pre">result</span></code>.</p>
-<p>Finally, there is one more aspect of function return values that should be noted.  All Python functions return the value <code class="docutils literal"><span class="pre">None</span></code> unless there is an explicit return statement with
-a value other than <code class="docutils literal"><span class="pre">None.</span></code>
+and 3 will not be executed until the function is called on line 6.  Line 1 defines the function and the name <code class="docutils literal notranslate"><span class="pre">square</span></code> is added to the
+global variables, but that is all the <code class="docutils literal notranslate"><span class="pre">def</span></code> does at that point.  The body of the function will be executed later.  Continue to click
+the forward button to see how the flow of control moves from the call, back up to the body of the function, and then finally back to line 7, after the function has returned its value and the value has been assigned to <code class="docutils literal notranslate"><span class="pre">result</span></code>.</p>
+<p>Finally, there is one more aspect of function return values that should be noted.  All Python functions return the value <code class="docutils literal notranslate"><span class="pre">None</span></code> unless there is an explicit return statement with
+a value other than <code class="docutils literal notranslate"><span class="pre">None.</span></code>
 Consider the following common mistake made by beginning Python
 programmers.  As you step through this example, pay very close attention to the return
 value in the local variables listing.  Then look at what is printed when the
@@ -488,14 +505,14 @@ $(window).resize(function() {
 </div>
 <p>The problem with this function is that even though it prints the value of the square, that value will not be returned to the place
 where the call was made.  Since line 6 uses the return value as the right hand side of an assignment statement, the evaluation of the
-function will be <code class="docutils literal"><span class="pre">None</span></code>.  In this case, <code class="docutils literal"><span class="pre">result</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
+function will be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  In this case, <code class="docutils literal notranslate"><span class="pre">result</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
 <div class="section" id="check-your-understanding">
 <h3>1.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_1">
             <p>variable-scope1: What is wrong with the following function definition:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;the answer is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
@@ -513,10 +530,10 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_2_2">
             <p>variable-scope2: What will the following function return?</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -537,7 +554,7 @@ function will be <code class="docutils literal"><span class="pre">None</span></c
 <p>An assignment statement in a function creates a <strong>local variable</strong> for the
 variable on the left hand side of the assignment operator. It is called local because this variable only
 exists inside the function and you cannot use it outside. For example,
-consider again the <code class="docutils literal"><span class="pre">square</span></code> function:</p>
+consider again the <code class="docutils literal notranslate"><span class="pre">square</span></code> function:</p>
 
 <div class="runestone" style="max-width: none;">
 <div class="alert alert-warning cd_section">
@@ -586,10 +603,10 @@ $(window).resize(function() {
 </script>
 </div>
 <p>If you press the ‘last &gt;&gt;’ button you will see an error message.
-When we try to use <code class="docutils literal"><span class="pre">squared_value</span></code> on line 6 (outside the function) Python looks for a global
-variable named <code class="docutils literal"><span class="pre">squared_value</span></code> but does not find one.  This results in the
-error: <code class="docutils literal"><span class="pre">Name</span> <span class="pre">Error:</span> <span class="pre">'squared_value'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined.</span></code></p>
-<p>The variable <code class="docutils literal"><span class="pre">squared_value</span></code> only exists while the function is being executed —
+When we try to use <code class="docutils literal notranslate"><span class="pre">squared_value</span></code> on line 6 (outside the function) Python looks for a global
+variable named <code class="docutils literal notranslate"><span class="pre">squared_value</span></code> but does not find one.  This results in the
+error: <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">Error:</span> <span class="pre">'squared_value'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined.</span></code></p>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">squared_value</span></code> only exists while the function is being executed —
 we call this its <strong>lifetime</strong>.
 When the execution of the function terminates (returns),
 the local variables  are destroyed.  Codelens helps you  visualize this
@@ -597,7 +614,7 @@ because the local variables disappear after the function returns.  Go back and s
 statements paying particular attention to the variables that are created when the function is called.
 Note when they are subsequently destroyed as the function returns.</p>
 <p>Formal parameters are also local and act like local variables.
-For example, the lifetime of <code class="docutils literal"><span class="pre">original_number</span></code> begins when <code class="docutils literal"><span class="pre">square</span></code> is
+For example, the lifetime of <code class="docutils literal notranslate"><span class="pre">original_number</span></code> begins when <code class="docutils literal notranslate"><span class="pre">square</span></code> is
 called, and its lifetime ends when the function completes its execution.</p>
 <p>So it is not possible for a function to set some local variable to a
 value, complete its execution, and then when it is called again next
@@ -610,7 +627,10 @@ nonsensical variation of the square function.</p>
 
 <div data-childcomponent="badsquare_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=badsquare_1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=badsquare_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
 def bad_square(original_number):
     squared_value = original_number ** power
     return squared_value
@@ -620,17 +640,17 @@ result = bad_square(10)
 print(result)
 </textarea>
 </div>
-<p>Although the <code class="docutils literal"><span class="pre">bad_square</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
+<p>Although the <code class="docutils literal notranslate"><span class="pre">bad_square</span></code> function works, it is silly and poorly written.  We have done it here to illustrate
 an important rule about how variables are looked up in Python.
 First, Python looks at the variables that are defined as local variables in
 the function.  We call this the <strong>local scope</strong>.  If the variable name is not
 found in the local scope, then Python looks at the global variables,
 or <strong>global scope</strong>.  This is exactly the case illustrated in the code above.
-<code class="docutils literal"><span class="pre">power</span></code> is not found locally in <code class="docutils literal"><span class="pre">bad_square</span></code> but it does exist globally.
+<code class="docutils literal notranslate"><span class="pre">power</span></code> is not found locally in <code class="docutils literal notranslate"><span class="pre">bad_square</span></code> but it does exist globally.
 The appropriate way to write this function would be to pass power as a parameter.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For practice, you should rewrite the bad_square example above to have a second parameter called <code class="docutils literal"><span class="pre">power</span></code>.</p>
+<p class="last">For practice, you should rewrite the bad_square example above to have a second parameter called <code class="docutils literal notranslate"><span class="pre">power</span></code>.</p>
 </div>
 <p>There is another variation on this theme of local versus global variables.  Assignment statements in the local function cannot
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
@@ -682,11 +702,11 @@ $(window).resize(function() {
 });
 </script>
 </div>
-<p>Now step through the code.  What do you notice about the values of variable <code class="docutils literal"><span class="pre">power</span></code>
-in the local scope compared to the variable <code class="docutils literal"><span class="pre">power</span></code> in the global scope?</p>
-<p>The value of <code class="docutils literal"><span class="pre">power</span></code> in the local scope was different than the global scope.
-That is because in this example <code class="docutils literal"><span class="pre">power</span></code> was used on the left hand side of the
-assignment statement <code class="docutils literal"><span class="pre">power</span> <span class="pre">=</span> <span class="pre">p</span></code>.  When a variable name is used on the
+<p>Now step through the code.  What do you notice about the values of variable <code class="docutils literal notranslate"><span class="pre">power</span></code>
+in the local scope compared to the variable <code class="docutils literal notranslate"><span class="pre">power</span></code> in the global scope?</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">power</span></code> in the local scope was different than the global scope.
+That is because in this example <code class="docutils literal notranslate"><span class="pre">power</span></code> was used on the left hand side of the
+assignment statement <code class="docutils literal notranslate"><span class="pre">power</span> <span class="pre">=</span> <span class="pre">p</span></code>.  When a variable name is used on the
 left hand side of an assignment statement Python creates a local variable.
 When a local variable has the same name as a global variable we say that the
 local shadows the global.  A <strong>shadow</strong> means that the global variable cannot
@@ -695,11 +715,11 @@ another good reason not to use global variables. As you can see,
 it makes your code confusing and difficult to
 understand.</p>
 <p>To cement all of these ideas even further lets look at one final example.
-Inside the <code class="docutils literal"><span class="pre">square</span></code> function we are going to make an assignment to the
-parameter <code class="docutils literal"><span class="pre">original_number</span></code>  <strong>There’s no good reason to do this</strong> other than to emphasize
-the fact that the parameter <code class="docutils literal"><span class="pre">original_number</span></code> is a local variable.  If you step through
-the example in codelens you will see that although <code class="docutils literal"><span class="pre">original_number</span></code> is 0 in the local
-variables for <code class="docutils literal"><span class="pre">square</span></code>, the <code class="docutils literal"><span class="pre">original_number</span></code> in the global scope remains 2.  This is confusing
+Inside the <code class="docutils literal notranslate"><span class="pre">square</span></code> function we are going to make an assignment to the
+parameter <code class="docutils literal notranslate"><span class="pre">original_number</span></code>  <strong>There’s no good reason to do this</strong> other than to emphasize
+the fact that the parameter <code class="docutils literal notranslate"><span class="pre">original_number</span></code> is a local variable.  If you step through
+the example in codelens you will see that although <code class="docutils literal notranslate"><span class="pre">original_number</span></code> is 0 in the local
+variables for <code class="docutils literal notranslate"><span class="pre">square</span></code>, the <code class="docutils literal notranslate"><span class="pre">original_number</span></code> in the global scope remains 2.  This is confusing
 to many beginning programmers who think that an assignment to a
 formal parameter will cause a change to the value of the variable that was
 used as the actual parameter, especially when the two share the same name.
@@ -754,7 +774,7 @@ $(window).resize(function() {
 <div class="section" id="id1">
 <h3>1.3.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_1">
             variable-scope3: What is a variable’s scope?
             <li data-component="answer"  id="test_question5_3_1_opt_a">Its value</li><li data-component="feedback" id="test_question5_3_1_opt_a">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
@@ -767,7 +787,7 @@ $(window).resize(function() {
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_2">
             variable-scope4: What is a local variable?
             <li data-component="answer" data-correct id="test_question5_3_2_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback" id="test_question5_3_2_opt_a">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
@@ -780,7 +800,7 @@ $(window).resize(function() {
             </ul>
             </div>
             
-            <div class="runestone">
+            <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question5_3_3">
             variable-scope5: Can you use the same name for a local variable as a global variable?
             <li data-component="answer"  id="test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback" id="test_question5_3_3_opt_a">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
@@ -796,7 +816,7 @@ $(window).resize(function() {
 </div>
 <div class="section" id="practice-problems">
 <h2>1.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have to return</strong> the correct value – using <code class="docutils literal"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
+<p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have to return</strong> the correct value – using <code class="docutils literal notranslate"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -805,12 +825,15 @@ $(window).resize(function() {
 <h3>1.4.1. Double It<a class="headerlink" href="#double-it" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="double-it" class="runestone explainer ac_section alert alert-warning">
-<p>The parameter <code class="docutils literal"><span class="pre">the_number</span></code> needs to be doubled. Return the doubled value of the number that is passed in.</p>
-<p><code class="docutils literal"><span class="pre">double_it(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
-<p><code class="docutils literal"><span class="pre">double_it(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
-<p><code class="docutils literal"><span class="pre">double_it(-4)</span> <span class="pre">→</span> <span class="pre">-8</span></code></p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled. Return the doubled value of the number that is passed in.</p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it(-4)</span> <span class="pre">→</span> <span class="pre">-8</span></code></p>
 
-<textarea data-component="activecode" id=double-it data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=double-it data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def double_it(the_number):
     return 0
 
@@ -833,12 +856,15 @@ myTests().main()
 <h3>1.4.2. Double It Positive<a class="headerlink" href="#double-it-positive" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="double-it-positive" class="runestone explainer ac_section alert alert-warning">
-<p>The parameter <code class="docutils literal"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal"><span class="pre">the_number</span></code> is 0, return 0.</p>
-<p><code class="docutils literal"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
-<p><code class="docutils literal"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
-<p><code class="docutils literal"><span class="pre">double_it_positive(-4)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is 0, return 0.</p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">double_it_positive(-4)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
 
-<textarea data-component="activecode" id=double-it-positive data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=double-it-positive data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def double_it_positive(the_number):
     return 0
 
@@ -862,12 +888,15 @@ myTests().main()
 <h3>1.4.3. Wear the Right Thing<a class="headerlink" href="#wear-the-right-thing" title="Permalink to this headline">¶</a></h3>
 
 <div data-childcomponent="wear-the-right-thing" class="runestone explainer ac_section alert alert-warning">
-<p>Write a function which returns the type of clothing you should wear, based on the parameter <code class="docutils literal"><span class="pre">temperature</span></code>. If the <code class="docutils literal"><span class="pre">temperature</span></code> is below -10, you will wear a parka and toque (return “parka and toque”). If the <code class="docutils literal"><span class="pre">temperature</span></code> is between -10 and 0, wear a toque (return “toque”). If the <code class="docutils literal"><span class="pre">temperature</span></code> is greater than 0 but less than 10, wear a sweater (return “sweater”). If the <code class="docutils literal"><span class="pre">temperature</span></code> is between 10 and 20, wear a t-shirt (return “t-shirt”). If the <code class="docutils literal"><span class="pre">temperature</span></code> is greater than 20, wear shorts (return “shorts”).</p>
-<p><code class="docutils literal"><span class="pre">wear_the_right_thing(25)</span> <span class="pre">→</span> <span class="pre">&quot;shorts&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">wear_the_right_thing(-25)</span> <span class="pre">→</span> <span class="pre">&quot;parka</span> <span class="pre">and</span> <span class="pre">toque&quot;</span></code></p>
-<p><code class="docutils literal"><span class="pre">wear_the_right_thing(-5)</span> <span class="pre">→</span> <span class="pre">&quot;toque&quot;</span></code></p>
+<p>Write a function which returns the type of clothing you should wear, based on the parameter <code class="docutils literal notranslate"><span class="pre">temperature</span></code>. If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is below -10, you will wear a parka and toque (return “parka and toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between -10 and 0, wear a toque (return “toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 0 but less than 10, wear a sweater (return “sweater”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between 10 and 20, wear a t-shirt (return “t-shirt”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 20, wear shorts (return “shorts”).</p>
+<p><code class="docutils literal notranslate"><span class="pre">wear_the_right_thing(25)</span> <span class="pre">→</span> <span class="pre">&quot;shorts&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">wear_the_right_thing(-25)</span> <span class="pre">→</span> <span class="pre">&quot;parka</span> <span class="pre">and</span> <span class="pre">toque&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">wear_the_right_thing(-5)</span> <span class="pre">→</span> <span class="pre">&quot;toque&quot;</span></code></p>
 
-<textarea data-component="activecode" id=wear-the-right-thing data-lang="python"    data-timelimit=25000   data-audio=''     >
+<textarea data-component="activecode" id=wear-the-right-thing data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
 def wear_the_right_thing(temperature):
     return "some clothes"
 
