@@ -21,7 +21,7 @@ Introduction to Scratch (Broadcasts)
 Introduction
 ----------------------------
 
-Welcome here! The goal of this course is to teach you how to problem solve, and we will be using the concepts of Computer Science to achieve that goal. By the end of the semester, you will be able to confidently solve problems by writing computer programs. In other words, you will be able to control what the computer does by writing algorithms (a series of steps). 
+Welcome here! The goal of this course is to teach you how to problem solve, and we will be using the concepts of Computer Science to achieve that goal. By the end of the semester, you will be able to confidently solve problems by writing computer programs. In other words, you will be able to control what the computer does by writing algorithms (a series of steps).
 
 Although we will eventually get to writing plain text into a file to create computer programs, that process can be a bit intimidating. To help you understand what you are able to teach a computer to do, we will follow the following process:
 
@@ -43,7 +43,7 @@ If you'd prefer to watch a video describing how to create your first Scratch pro
     :align: left
     :http: https
 
-Now that you have an account, let's make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project. 
+Now that you have an account, let's make your first computer program of the semester! Click the Create button on the top of the Scratch website to create a new project.
 
 .. image:: images/scratch_create.png
 
@@ -55,7 +55,7 @@ In the project view, the screen is divided into a number of panes, including the
 
     You may want to spend some time exploring the environment with the students before you actually create the first program.
 
-For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage. 
+For our first program, let's create a simple conversation between two sprites. To do this, you'll need to add a second sprite to the project. You do this in a number of ways, each of which have an icon at the top of the sprite list pane. You can hover over each of the images with your mouse to discover what they represent. For now, use the "Choose Sprite from Library" icon to add an additional sprite to the stage.
 
 .. image:: images/scratch_add_new_sprite_from_library.png
 
@@ -85,7 +85,7 @@ The character on the right side of the stage should have the a script similar to
 
 .. image:: images/scratch_goTo_2.png
 
-.. note:: 
+.. note::
   Notice that Scratch uses the Cartesian plane (the xy grid system you learned in math class), and that the origin is directly in the centre of the stage, as shown below:
 
   .. image:: images/scratch_coordinate_plane.png
@@ -133,27 +133,27 @@ Check Your Understanding
    What would happen when you click the green flag, given the code below?
 
    .. image:: images/scratch_broadcast_check_1.png
-   
-   
+
+
 .. mchoice:: scratch_broadcast_check_2
    :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.
    :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.
    :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.
    :correct: c
-   :feedback_a: No, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute. In other words, Scratch will not wait for the broadcast to be resolved before completing the rest of the chunk of code (in this case, the move 10 steps block). 
+   :feedback_a: No, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute. In other words, Scratch will not wait for the broadcast to be resolved before completing the rest of the chunk of code (in this case, the move 10 steps block).
    :feedback_b: No, both the say "Green" block and the move 10 steps block will happen simultaneously.
    :feedback_c: Yes, sending the broadcast will will cause the second chunk of blocks to execute, but will not stop the first chunk of code from continuing to execute.
 
    What would happen when you click the green flag, given the code below?
 
    .. image:: images/scratch_broadcast_check_2.png
-   
+
 
 
 .. mchoice:: scratch_broadcast_check_3
-   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 2 seconds, then move 10 steps.
-   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 2 seconds after the sprite stops moving.
-   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 2 seconds.
+   :answer_a: The current sprite would say "Go" for 1 second, say "Green!" for 1 second, then move 10 steps.
+   :answer_b: The current sprite would say "Go" for 1 second, move 10 steps, then say "Green!" for 1 second after the sprite stops moving.
+   :answer_c: The current sprite would say "Go" for 1 second, then simultaneously move 10 steps and say "Green!" for 1 second.
    :correct: a
    :feedback_a: Yes! Since we are now using a broadcast and wait block, Scratch will pause the execution of the chunk of code that sent the broadcast until all scripts that reacted to the broadcast being sent have finished executing. 
    :feedback_b: No, the broadcast happens before the move, so the sprite will say "Green" before it moves.
@@ -162,7 +162,7 @@ Check Your Understanding
    What would happen when you click the green flag, given the code below?
 
    .. image:: images/scratch_broadcast_check_3.png
-   
+
 
 
 Practice Problem
