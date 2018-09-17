@@ -18,10 +18,7 @@ Number Guessing Game (Pair Programming)
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
 
-
-.. warning:: This is just a stub, to give a sense of what should go here. It will be written up properly soon...
-
-This will be your first foray into pair programming. One of you should be at the keyboard and mouse, while the other partner is helping discuss the ideas. Switch roles every 10 minutes. 
+This will be your first foray into pair programming. One of you should be at the keyboard and mouse, while the other partner is helping discuss the ideas. Switch roles every 10 minutes.
 
 .. sidebar:: Teacher Note
 
@@ -38,7 +35,7 @@ For this assignment, you will create a game that does the following:
 - tells the user if the number is too high or too low
 - congratulates the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
 
-When you complete the basic functionality, put up your hand and I'll tell you how you can make it even better! 
+When you complete the basic functionality, put up your hand and I'll tell you how you can make it even better!
 
 If the description above doesn't make sense to you, here's a `short video <https://www.youtube.com/watch?v=BoSNTdrd24I>`_  of what the basic number guessing game might look like:
 
@@ -59,6 +56,3 @@ Extras that can be added to the basic game:
 - STILL too high/low, if the guess is above/below the actual number multiple times in a row
 - only allow specific number of attempts before ending the game
 - CPU/human reverse roles
-
-
-
