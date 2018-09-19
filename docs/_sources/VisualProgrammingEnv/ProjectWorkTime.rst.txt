@@ -70,7 +70,7 @@ Check Your Understanding
 
     .. image:: images/scratch_practice_quiz_4.png
 
-    - :3: Yes! Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block. 
+    - :3: Yes! Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block.
       :6: No. Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block.
       :2: No. Since the execution of the script will only pause until the sound is completed for the 'until done' blocks, you will only hear the two 'until done' blocks and the final play sound block.
       :.*: Try again!
@@ -86,7 +86,7 @@ Check Your Understanding
     - :60: Yes! Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
       :30: No. Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
       :5: No. Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. You can think of this as multiplying the nested loop values.
-      :.*: Try again! Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times. 
+      :.*: Try again! Since the 'move 10 steps' is inside a nested loop, there will be 2 times that it is repeated 3 times.
 
 
 
@@ -112,3 +112,48 @@ Check Your Understanding
       :5: No. Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
       :.*: Try again! Since the 'set x to x + 3' is outside the if/else block, it will occur regardless of whether 'x' is less than or 10.
 
+
+.. fillintheblank:: scratch_practice_quiz_8
+
+    Given the code below, what would be the value of the "My Number" variable after this code has executed?
+
+    .. image:: images/set_change_test_yourself1.png
+
+    - :99: Yes! Remember that "change" simply adds some amount to the current value of the variable.
+      :.*: Try again! Remember that "change" simply adds some amount to the current value of the variable.
+
+.. fillintheblank:: scratch_practice_quiz_9
+
+    Given the code below, what would be the value of the "My Number" variable after this code has executed?
+
+    .. image:: images/set_change_test_yourself2.png
+
+    - :50: Yes! Remember that "set" makes the current value of the variable into a specific value, regardless of what it was previously.
+      :.*: Try again! Remember that "set" makes the current value of the variable into a specific value, regardless of what it was previously.
+
+.. fillintheblank:: scratch_practice_quiz_10
+
+    Given the code below, what would be the value of the "My Number" variable after this code has executed?
+
+    .. image:: images/set_change_test_yourself3.png
+
+    - :30: Yes! Remember that "set" makes the current value of the variable into a specific value, regardless of what it was previously.
+      :.*: Try again! Remember that "set" makes the current value of the variable into a specific value, regardless of what it was previously.
+
+.. fillintheblank:: scratch_practice_quiz_11
+
+    Given the code below, what would be the value of the "My Number" variable after this code has executed?
+
+    .. image:: images/set_change_test_yourself4.png
+
+    - :96: Yes! Remember that if you use a variable within a new set/change statement, the variable contains it's previous value (in this case, 88).
+      :.*: Try again! Remember that if you use a variable within a new set/change statement, the variable contains it's previous value (in this case, 88).
+
+.. fillintheblank:: scratch_practice_quiz_12
+
+    Given the code below, what would be the value of the "My Number" variable after this code has executed?
+
+    .. image:: images/set_change_test_yourself5.png
+
+    - :12: Yes! Remember that only one branch of an if/else block can occur, but statements outside the if/else will execute no matter what.
+      :.*: Try again! Remember that only one branch of an if/else block can occur, but statements outside the if/else will execute no matter what.
