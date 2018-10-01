@@ -14,7 +14,7 @@ More Challenges
     - **CS20-FP2** Investigate how control structures affect program flow.
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.
 
-If you have finished off all of steps 1 - 17, and are waiting for your classmates to catch up, take a look at the following challenges. Some of them will require you to do a fair bit of thinking before you begin to code! You will likely find it helpful to think them through with paper/pencil before attempting to write out a solution on the computer.
+If you have finished off all of steps 1 - 20, and are waiting for your classmates to catch up, take a look at the following challenges. Some of them will require you to do a fair bit of thinking before you begin to code! You will likely find it helpful to think them through with paper/pencil before attempting to write out a solution on the computer.
 
 
 Star Towers - Version 1
@@ -40,7 +40,7 @@ When your program is done, the ending world should look like this:
 Star Towers - Version 2
 ------------------------
 
-This time Reeborg wants to build star towers in a cave. There are stalactites on the roof of the cave of differing length, so Reeborg wants to make its towers as tall as it can without bumping into them. Like last time, write a program that creates a Star Tower at Reeborg’s starting position, and every other x-position after that (odd x-values). The height of each Star Tower should allow for one empty square beneath the stalactites. 
+This time Reeborg wants to build star towers in a cave. There are stalactites on the roof of the cave of differing length, so Reeborg wants to make its towers as tall as it can without bumping into them. Like last time, write a program that creates a Star Tower at Reeborg’s starting position, and every other x-position after that (odd x-values). The height of each Star Tower should allow for one empty square beneath the stalactites.
 
 Open the |star_tower2| to implement your solution!
 

@@ -47,7 +47,7 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 The complete list of functions (questions) that Reeborg can answer is as follows:
 
 =================   ============
-Question/Function   Explanation 
+Question/Function   Explanation
 =================   ============
 at_goal()           Returns True if Reeborg is on a goal tile (flag, home, or green tile), False otherwise.
 front_is_clear()    Returns True if there is no obstacle (wall, etc) in front of Reeborg, False otherwise.
@@ -59,25 +59,25 @@ carries_object()    Returns True if Reeborg is currently carrying at least one o
 is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.
 =================   ============
 
-.. admonition:: For educators
-
-    The function ``object_here()`` returns a list of object types (as strings)
-    found at a given location.  For example, if there are stars and dandelions
-    at the same location, ``object_here()`` could return ``["star", "dandelion"]``
-    or ``["dandelion", "star"]``. If no object is present, an empty list is
-    returned.  As you likely already know, Python treats an empty list as
-    being equivalent to ``False`` in an ``if`` statement, and a non-empty
-    list as equivalent to ``True``.
-
-    If many objects could potentially be found in a given world, and we
-    are interested in only one object type, we can specify it as a function
-    argument::
-
-        if object_here("dandelion"):
-            take("dandelion")
-
-    ``object_here("dandelion")`` will either return an empty list or the list
-    ``["dandelion"]``.
+.. .. admonition:: For educators
+..
+..     The function ``object_here()`` returns a list of object types (as strings)
+..     found at a given location.  For example, if there are stars and dandelions
+..     at the same location, ``object_here()`` could return ``["star", "dandelion"]``
+..     or ``["dandelion", "star"]``. If no object is present, an empty list is
+..     returned.  As you likely already know, Python treats an empty list as
+..     being equivalent to ``False`` in an ``if`` statement, and a non-empty
+..     list as equivalent to ``True``.
+..
+..     If many objects could potentially be found in a given world, and we
+..     are interested in only one object type, we can specify it as a function
+..     argument::
+..
+..         if object_here("dandelion"):
+..             take("dandelion")
+..
+..     ``object_here("dandelion")`` will either return an empty list or the list
+..     ``["dandelion"]``.
 
 
 Your Turn

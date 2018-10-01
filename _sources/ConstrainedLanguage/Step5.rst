@@ -24,7 +24,7 @@ Just as we can call built-in functions like ``turn_left()`` and ``move()``, we c
 
 .. code-block:: python
 
-    def some_well_chosen_name ():
+    def some_well_chosen_name():
         # some lines of code
         # indented at the same level
 
@@ -114,4 +114,3 @@ Reeborg wants to pick some strawberries in its garden. Reeborg's garden has a ve
 .. |reeborg_environment| raw:: html
 
    <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%205" target="_blank">Reeborg environment</a>
-

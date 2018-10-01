@@ -262,7 +262,7 @@ which is the same as  <code class="docutils literal notranslate"><span class="pr
 <p>When you solved Step 10, you created a program to have Reeborg jump hurdles.</p>
 <img alt="../_images/hurdles2.png" src="../_images/hurdles2.png" />
 <p>As part of your solution for the above world, you may have created a function similar to the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
      <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
          <span class="c1"># something</span>
      <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
@@ -275,7 +275,7 @@ which is the same as  <code class="docutils literal notranslate"><span class="pr
 <p>Consider the three code samples below, paying close attention to where the <code class="docutils literal notranslate"><span class="pre">not</span></code> keyword occur <strong>and</strong> to what is actually included in each code block.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># first choice:</span>
 
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
      <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
          <span class="c1"># something</span>
      <span class="k">elif</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
@@ -285,7 +285,7 @@ which is the same as  <code class="docutils literal notranslate"><span class="pr
 
 <span class="c1"># second choice ... trickier</span>
 
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
      <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
          <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
              <span class="c1"># something</span>
@@ -296,7 +296,7 @@ which is the same as  <code class="docutils literal notranslate"><span class="pr
 
 <span class="c1"># third choice:</span>
 
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
+<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
      <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
          <span class="k">if</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
              <span class="c1"># something</span>

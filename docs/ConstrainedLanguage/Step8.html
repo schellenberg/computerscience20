@@ -323,25 +323,6 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 </tr>
 </tbody>
 </table>
-<div class="admonition-for-educators admonition">
-<p class="first admonition-title">For educators</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">object_here()</span></code> returns a list of object types (as strings)
-found at a given location.  For example, if there are stars and dandelions
-at the same location, <code class="docutils literal notranslate"><span class="pre">object_here()</span></code> could return <code class="docutils literal notranslate"><span class="pre">[&quot;star&quot;,</span> <span class="pre">&quot;dandelion&quot;]</span></code>
-or <code class="docutils literal notranslate"><span class="pre">[&quot;dandelion&quot;,</span> <span class="pre">&quot;star&quot;]</span></code>. If no object is present, an empty list is
-returned.  As you likely already know, Python treats an empty list as
-being equivalent to <code class="docutils literal notranslate"><span class="pre">False</span></code> in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and a non-empty
-list as equivalent to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>If many objects could potentially be found in a given world, and we
-are interested in only one object type, we can specify it as a function
-argument:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">(</span><span class="s2">&quot;dandelion&quot;</span><span class="p">):</span>
-    <span class="n">take</span><span class="p">(</span><span class="s2">&quot;dandelion&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p class="last"><code class="docutils literal notranslate"><span class="pre">object_here(&quot;dandelion&quot;)</span></code> will either return an empty list or the list
-<code class="docutils literal notranslate"><span class="pre">[&quot;dandelion&quot;]</span></code>.</p>
-</div>
 </div>
 <div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>

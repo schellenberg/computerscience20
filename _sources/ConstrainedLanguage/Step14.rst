@@ -24,7 +24,7 @@ As part of your solution for the above world, you may have created a function si
 
 .. code-block:: python
 
-   def run_jump_or_finish ():
+   def run_jump_or_finish():
         if at_goal():
             # something
         elif front_is_clear():
@@ -40,7 +40,7 @@ Consider the three code samples below, paying close attention to where the ``not
 
    # first choice:
 
-   def run_jump_or_finish ():
+   def run_jump_or_finish():
         if at_goal():
             # something
         elif not front_is_clear():
@@ -50,7 +50,7 @@ Consider the three code samples below, paying close attention to where the ``not
 
    # second choice ... trickier
 
-   def run_jump_or_finish ():
+   def run_jump_or_finish():
         if not at_goal():
             if front_is_clear():
                 # something
@@ -61,7 +61,7 @@ Consider the three code samples below, paying close attention to where the ``not
 
    # third choice:
 
-   def run_jump_or_finish ():
+   def run_jump_or_finish():
         if not at_goal():
             if not front_is_clear():
                 # something
@@ -102,5 +102,3 @@ Use a ``while`` statement (looking for the banana object) and an ``if/else`` to 
 .. |reeborg_environment| raw:: html
 
    <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014" target="_blank">Reeborg environment</a>
-
-
