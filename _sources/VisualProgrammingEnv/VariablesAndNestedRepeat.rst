@@ -39,9 +39,9 @@ When we drew a variety of regular polygons in the last section, we found that th
 
 .. image:: images/scratch_polygon_repeat.png
 
-The code above will draw a triangle, and as we discovered previously, if we were to change the two circled 3's into 4's, the code would draw a square (4-sided polygon) instead. In this situation, it would be really nice to have some way to easily set the value of both circled numbers to be the same thing. In other words, it would be great to be able to change the value of one to be a 5, and have the other automatically be a 5 as well. If we could do this, we would be able to draw any regular polygon by simply changing one number. 
+The code above will draw a triangle, and as we discovered previously, if we were to change the two circled 3's into 4's, the code would draw a square (4-sided polygon) instead. In this situation, it would be really nice to have some way to easily set the value of both circled numbers to be the same thing. In other words, it would be great to be able to change the value of one to be a 5, and have the other automatically be a 5 as well. If we could do this, we would be able to draw any regular polygon by simply changing one number.
 
-In order to create code that behaves in the manner described above, we need to introduce the idea of a **variable**. You have learned about variables in math class. In mathematics, they are just a symbol that can hold any number. In computer science, a variable is a container that can hold any number, but can also hold any other type of information (words, lists of numbers, video, sound, etc). In this situation, all we need a variable to hold is a number. 
+In order to create code that behaves in the manner described above, we need to introduce the idea of a **variable**. You have learned about variables in math class. In mathematics, they are just a symbol that can hold any number. In computer science, a variable is a container that can hold any number, but can also hold any other type of information (words, lists of numbers, video, sound, etc). In this situation, all we need a variable to hold is a number.
 
 To create a variable in Scratch, click on the Data tab, then click Make a Variable. Be sure to use useful names for your variables. For example, *Number of Sides* would be a useful, descriptive variable name for this example.
 
@@ -127,21 +127,10 @@ Check Your Understanding
       :.*: Try again! Hint: What is the block that encloses everything?
 
 
-.. fillintheblank:: scratch_nested_repeat_check_4
-
-    Given the code below, how many times would the script below say "Hooray" when you click the green flag?
-
-    .. image:: images/scratch_nested_loops_check3.png
-
-    - :0: Yes! Since everything is inside a repeat -1 block, it will not happen at all. Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
-      :8: No. What is the block that encloses everything? Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
-      :.*: Try again! Hint: What is the block that encloses everything? Scratch interprets a negative number in a repeat block the same way as it interprets a 0.
-
 
 Practice Problem
 ------------------
 
-Work on your first Scratch assignment, for any remaining time. 
+Work on your first Scratch assignment, for any remaining time.
 
 .. note:: If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.
-
