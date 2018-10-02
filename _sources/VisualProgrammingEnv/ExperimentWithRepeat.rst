@@ -86,15 +86,19 @@ Check Your Understanding
 Drawing Regular Polygons
 ------------------------
 
+.. note::
+
+	To allow your Scratch character to access the Pen tab, you may need to click on the "Add Extensions" button (on the bottom left of the screen), then click on the Pen button.
+
 Every sprite in Scratch has the ability to draw with a virtual pen that they are holding at all times. This allows each sprite to leave a trail that shows where they have walked. In order to do this, you need to use the **pen down** block from the Pen tab, then have your sprite move. Explore this by trying the following:
 
 .. image:: images/scratch_pen_down.png
 
-To remove the path you have drawn, double click on the **clear** block in the Pen tab. 
+To remove the path you have drawn, double click on the **clear** block in the Pen tab.
 
 .. topic:: Your Turn 1
 
-    Now that you know how to draw on the stage, see if you can draw a square using only the **pen down**, **move __ steps** and **turn __ degrees** blocks. 
+    Now that you know how to draw on the stage, see if you can draw a square using only the **pen down**, **move __ steps** and **turn __ degrees** blocks.
 
 For many students, the first square they draw would be with code that looks like this:
 
@@ -107,8 +111,8 @@ Although this does create a square, notice that there is code that is repeated m
 .. topic:: Your Turn 2
 
     Adapt the code above to allow you to draw the following regular polygon shapes: triangle (3 sides), pentagon (5 sides), hexagon (6 sides), octagon (8 sides). Set up your project so that pressing the *t* key draws a triangle, *s* draws a square, *p* draws a pentagon, etc.
-    
-    |regularPolygonImages| 
+
+    |regularPolygonImages|
 
     If you complete the regular polygons before the rest of your classmates, try to draw a circle and a five sided star.
 
@@ -118,7 +122,7 @@ Although this does create a square, notice that there is code that is repeated m
 
 .. |extraShapes| image:: images/scratch_extra_shapes.png
 
-Although you may have used a guess and check method to determine the angles used to draw the shapes above, there is a pattern we can use to draw these shapes. Notice the angles that you used in order to draw the shapes: 
+Although you may have used a guess and check method to determine the angles used to draw the shapes above, there is a pattern we can use to draw these shapes. Notice the angles that you used in order to draw the shapes:
 
 +------------+---------+-------------+
 | Shape      | Sides   | Angle Used  |
@@ -142,8 +146,6 @@ Although you may have used a guess and check method to determine the angles used
 Practice Problem
 ------------------
 
-Work on your first Scratch assignment, for any remaining time. 
+Work on your first Scratch assignment, for any remaining time.
 
 .. note:: If your teacher did not assign you a project, you may want to consider making a short story to practice your Scratch skills. Be sure to utilize broadcasts, repeat blocks, and if-then blocks.
-
-
