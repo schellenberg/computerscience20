@@ -90,6 +90,9 @@ Drawing Regular Polygons
 
 	To allow your Scratch character to access the Pen tab, you may need to click on the "Add Extensions" button (on the bottom left of the screen), then click on the Pen button.
 
+  .. image:: images/scratch_add_extension.png
+
+
 Every sprite in Scratch has the ability to draw with a virtual pen that they are holding at all times. This allows each sprite to leave a trail that shows where they have walked. In order to do this, you need to use the **pen down** block from the Pen tab, then have your sprite move. Explore this by trying the following:
 
 .. image:: images/scratch_pen_down.png

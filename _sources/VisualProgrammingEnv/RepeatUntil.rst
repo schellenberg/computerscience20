@@ -181,15 +181,21 @@ Cannonball Motion Using Repeat Until
 
 Let's use the repeat until block to create a simulation of a cannonball being shot. First, we need to make a cannonball. To do this, click on the paintbrush beside New sprite (under the stage):
 
-.. image:: images/scratch_paint_new_sprite.png
+.. image:: images/scratch_paint_new_sprite.gif
 
 The process of creating the cannonball sprite is shown in the short animation below. There are a few things you should be aware of:
 
-- using "Convert to vector" before doing any drawing is very important! Do this every time to make sure the quality of your graphics is as high as possible. *Your teacher might decide to go into more depth about the difference between vector and bitmap graphics.*
 - when drawing the circle, you can hold down the shift key to force the ellipse to remain circular.
-- setting the costume center (the last thing done in the animation below) is absolutely necessary! If you neglect to do this, your cannonball will behave in very strange ways (since the calculations about the x and y coordinates of the sprite are based on the costume center point).
+- be sure that your cannonball is **directly** above the center point marker on the canvas (this is easier to see if you zoom in once or twice)
 
 .. image:: images/scratch_paint_cannonball_sprite.gif
+
+.. note::
+
+	In the previous version of Scratch (Scratch 2), you would have needed to:
+
+  - use "Convert to vector" before doing any drawing. *Your teacher might decide to go into more depth about the difference between vector and bitmap graphics.*
+  - set the costume center (since the calculations about the x and y coordinates of the sprite are based on the costume center point).
 
 To create the cannonball simulation, we need some variables to represent the speed at which the cannonball is traveling. Click on the Data tab, and make two variables: **xSpeed** and **ySpeed**. Then create a script that looks like the following:
 
