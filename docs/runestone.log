@@ -24158,3 +24158,97 @@ Aborted!
 ----------------------------------------
 Exception happened during processing of request from ('127.0.0.1', 59565)
 Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 696, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 775, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /ConstrainedLanguage/Step18.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/activecode.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/codemirror.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/clickable.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/pytutor.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/modal-basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/fitb.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/dragndrop.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/user-highlights.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/matrixeq.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/p5.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/parsons.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/js_lib/prettify.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/poll.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/showEval.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/tabbedstuff.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_static/datafile.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:18] "GET /_images/step18.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /ConstrainedLanguage/Step2.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_images/step2.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_images/object_on_ground.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:27] "GET /_images/objects_required_here.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:29] "GET /ConstrainedLanguage/Step3.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:29] "GET /_images/pause_button.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_images/step_button.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_images/stop_button.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_images/step3.gif HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /ConstrainedLanguage/Step4.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:30] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:31] "GET /_images/step4.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:32] "GET /ConstrainedLanguage/Step5.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:32] "GET /_images/step5.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /ConstrainedLanguage/Step6.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_images/library.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:34] "GET /_images/step6.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:35] "GET /ConstrainedLanguage/Step7.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:35] "GET /_images/think.gif HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:35] "GET /_images/step7.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:37] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:42] "GET /ComputingAndSociety/HowComputersWork.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:42] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:42] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:42] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:42:42] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /ConstrainedLanguage/Step8.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_images/step8.png HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2018 08:43:51] "GET /_images/if.jpg HTTP/1.1" 200 -
+
+Aborted!
