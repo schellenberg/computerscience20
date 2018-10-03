@@ -266,30 +266,8 @@
 <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=_jTHwZCY2CI">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
-    <div id="_jTHwZCY2CI_vid"></div>
+        <div id="_jTHwZCY2CI_vid" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="_jTHwZCY2CI" data-video-divid="_jTHwZCY2CI_vid" data-video-start="0" data-video-end="-1" ></div>
     </div>
-    <script id="_jTHwZCY2CI_script">
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var ytScriptTag = document.getElementById('_jTHwZCY2CI_script');
-      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('_jTHwZCY2CI_vid', {
-          height: '315',
-          width: '560',
-          videoId: '_jTHwZCY2CI',
-          events: {
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-    </script>
     <div class="section" id="repeat-until">
 <h2>5.1. Repeat Until<a class="headerlink" href="#repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes, we don’t necessarily know ahead of time how many times we should repeat a block in our code. Perhaps we are shooting a virtual cannon, and we want the cannonball to continue moving until the ball hits the ground. Depending on the values of the forces we are applying to the cannonball (gravity, wind, friction, etc), the number of times that we should repeat the code containing the cannonball motion will change. In these situations, we want to use the <strong>repeat until</strong> block.</p>
@@ -513,14 +491,22 @@
 <div class="section" id="cannonball-motion-using-repeat-until">
 <h2>5.4. Cannonball Motion Using Repeat Until<a class="headerlink" href="#cannonball-motion-using-repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Let’s use the repeat until block to create a simulation of a cannonball being shot. First, we need to make a cannonball. To do this, click on the paintbrush beside New sprite (under the stage):</p>
-<img alt="../_images/scratch_paint_new_sprite.png" src="../_images/scratch_paint_new_sprite.png" />
+<img alt="../_images/scratch_paint_new_sprite.gif" src="../_images/scratch_paint_new_sprite.gif" />
 <p>The process of creating the cannonball sprite is shown in the short animation below. There are a few things you should be aware of:</p>
 <ul class="simple">
-<li>using “Convert to vector” before doing any drawing is very important! Do this every time to make sure the quality of your graphics is as high as possible. <em>Your teacher might decide to go into more depth about the difference between vector and bitmap graphics.</em></li>
 <li>when drawing the circle, you can hold down the shift key to force the ellipse to remain circular.</li>
-<li>setting the costume center (the last thing done in the animation below) is absolutely necessary! If you neglect to do this, your cannonball will behave in very strange ways (since the calculations about the x and y coordinates of the sprite are based on the costume center point).</li>
+<li>be sure that your cannonball is <strong>directly</strong> above the center point marker on the canvas (this is easier to see if you zoom in once or twice)</li>
 </ul>
 <img alt="../_images/scratch_paint_cannonball_sprite.gif" src="../_images/scratch_paint_cannonball_sprite.gif" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<blockquote>
+<div>In the previous version of Scratch (Scratch 2), you would have needed to:</div></blockquote>
+<ul class="last simple">
+<li>use “Convert to vector” before doing any drawing. <em>Your teacher might decide to go into more depth about the difference between vector and bitmap graphics.</em></li>
+<li>set the costume center (since the calculations about the x and y coordinates of the sprite are based on the costume center point).</li>
+</ul>
+</div>
 <p>To create the cannonball simulation, we need some variables to represent the speed at which the cannonball is traveling. Click on the Data tab, and make two variables: <strong>xSpeed</strong> and <strong>ySpeed</strong>. Then create a script that looks like the following:</p>
 <img alt="../_images/scratch_cannonball_motion.png" src="../_images/scratch_cannonball_motion.png" />
 <p>When the space key is pressed, the cannonball will be reset to it’s original position (on the left hand side of the screen), and the <em>xSpeed</em> and <em>ySpeed</em> variables will both be set to 4. The repeat until block condition states that the repeat block should continue until the y position of the sprite is less than -159. <em>The y position block can be found at the bottom of the Motion tab.</em> In other words, whatever is inside the repeat block will continue until the cannonball hits the virtual ground level (which we have set to be -159). Finally, we change the x and y coordinates of the sprite by the xSpeed and ySpeed variables. The last block of code in the repeat until is how we simulate gravity. Every iteration of the repeat until loop causes the ySpeed variable to decrease in value. Because we start with a positive ySpeed, the cannonball moves upward when the space key is pressed. Over time, however, the amount that the cannonball is moving up decreases, and then eventually becomes negative (meaning that the ball begins to fall). This allows us to create a simple simulation of parabolic motion.</p>

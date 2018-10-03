@@ -40,7 +40,7 @@ Creating A Button Sprite
 
 The first step in creating a start screen is to create buttons. To do this, we will once again paint a new sprite. Begin by clicking the "Paint New Sprite" button:
 
-.. image:: images/scratch_paint_new_sprite.png
+.. image:: images/scratch_paint_new_sprite.gif
 
 Follow the steps below to create your button sprite (if these instructions are not enough for you to understand the process, you should watch the video above):
 

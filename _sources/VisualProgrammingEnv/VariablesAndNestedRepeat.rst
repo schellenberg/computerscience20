@@ -43,7 +43,7 @@ The code above will draw a triangle, and as we discovered previously, if we were
 
 In order to create code that behaves in the manner described above, we need to introduce the idea of a **variable**. You have learned about variables in math class. In mathematics, they are just a symbol that can hold any number. In computer science, a variable is a container that can hold any number, but can also hold any other type of information (words, lists of numbers, video, sound, etc). In this situation, all we need a variable to hold is a number.
 
-To create a variable in Scratch, click on the Data tab, then click Make a Variable. Be sure to use useful names for your variables. For example, *Number of Sides* would be a useful, descriptive variable name for this example.
+To create a variable in Scratch, click on the Variables tab, then click Make a Variable. Be sure to use useful names for your variables. For example, *Number of Sides* would be a useful, descriptive variable name for this example.
 
 .. image:: images/scratch_make_a_variable.png
 

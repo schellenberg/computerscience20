@@ -45,11 +45,18 @@ Throughout this section, we will explore some of the built-in variables availabl
 Tempo
 -------------
 
-One of the built-in variables that Scratch allows us to use is a tempo variable. You can find it in the Sound tab. To display the temp on the stage, you can click on the check box beside the variable name in the Sound tab. We can either set the tempo to a specific number of bpm (beats per minute), or change the tempo by some amount. Consider the code below:
+.. note::
+
+	To allow your Scratch character to access the Music tab, you may need to click on the "Add Extensions" button (on the bottom left of the screen), then click on the Music button.
+
+  .. image:: images/scratch_add_extension.png
+
+
+One of the built-in variables that Scratch allows us to use is a tempo variable. You can find it in the Music tab. To display the temp on the stage, you can click on the check box beside the variable name in the Music tab. We can either set the tempo to a specific number of bpm (beats per minute), or change the tempo by some amount. Consider the code below:
 
 .. image:: images/scratch_tempo_variable.png
 
-Before running this code yourself, try to figure out what the value of tempo will be after the code is executed. You can see that the tempo will be reset to 60 bpm at the start of the code, then we change the tempo within the nested loop by 20 bpm. How many times will the "change tempo by 20 block" be called? Since there is a repeat 3 block inside a repeat 2 block, the "change tempo" block will be called 6 times. We can therefore determine that the value of tempo after the code has executed will be 180 bpm (since we need to add 20 bpm 6 times). 
+Before running this code yourself, try to figure out what the value of tempo will be after the code is executed. You can see that the tempo will be reset to 60 bpm at the start of the code, then we change the tempo within the nested loop by 20 bpm. How many times will the "change tempo by 20 block" be called? Since there is a repeat 3 block inside a repeat 2 block, the "change tempo" block will be called 6 times. We can therefore determine that the value of tempo after the code has executed will be 180 bpm (since we need to add 20 bpm 6 times).
 
 
 Check Your Understanding
@@ -91,7 +98,7 @@ Since we don't want the wait time to always be the same, we need to create a var
 
 .. image:: images/scratch_timer_game_1.png
 
-To show the built-in timer variable on the stage, open the Sensing tab and click the checkbox beside the timer variable. Although you don't want to have the timer on the stage in the final version of the game, it can be helpful while creating the game. Notice that every time you click on the flag, the timer resets to 0. If you wanted to begin the game using something other than the flag being clicked, you could use the "reset timer" block in the Sensing tab. 
+To show the built-in timer variable on the stage, open the Sensing tab and click the checkbox beside the timer variable. Although you don't want to have the timer on the stage in the final version of the game, it can be helpful while creating the game. Notice that every time you click on the flag, the timer resets to 0. If you wanted to begin the game using something other than the flag being clicked, you could use the "reset timer" block in the Sensing tab.
 
 In order to determine if the user is "close enough" to the time to wait, we need to consider what happens if they are slightly above, or slightly below the wait time. For example, assume that the wait time was supposed to be 5 seconds. We would like the user to "win" if they press a key within half a second of the wait time. If the user presses the key half a second **too late**, at 5.5 seconds, we can simply subtract the timer value from the wait time:
 
@@ -115,7 +122,7 @@ We can use absolute value in Scratch to find the distance away (always positive)
 
 .. image:: images/scratch_math_operators_1.png
 
-Click on the word *sqrt*, and select *abs*, which is short for absolute value. We can now create code that executes when a key is pressed, and checks to see if the user pressed a key within half a second before or after the expected wait time. 
+Click on the word *sqrt*, and select *abs*, which is short for absolute value. We can now create code that executes when a key is pressed, and checks to see if the user pressed a key within half a second before or after the expected wait time.
 
 .. image:: images/scratch_timer_game_2.png
 
