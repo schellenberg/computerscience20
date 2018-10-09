@@ -70,7 +70,7 @@ Question 3 - Loops and If
     Reeborg is standing in a world in which every location square has 3 carrots, which looks like this:
 
     .. image:: images/practice_quiz_start.png
-    
+
     The following code is then executed::
 
         repeat 8:
@@ -86,15 +86,25 @@ Question 3 - Loops and If
       :.*: Try again!
 
 
+.. reveal:: reveal_practice_quiz_q3
+    :showtitle: Tracing Help
+    :hidetitle: Hide Help
+
+    If you have spent time tracing this code on your own, and still cannot come up with the correct solution, you may find it helpful to |reeborgq3|. You can copy/paste the code above into the world, and step through the code one line at a time.
+
+.. |reeborgq3| raw:: html
+
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/second-practice-quiz-q3.json&name=PracticeQuizQ3" target="_blank">open this world in the Reeborg environment</a>
+
 Question 4 - Loops and If/Else
 ------------------------------
 
 .. fillintheblank:: reeborg_while_repeat_if_else
-    
+
     Reeborg is holding a large handful of carrots, and is planning to plant them as he walks around a world that looks like this:
 
     .. image:: images/quiz_if_else_start.png
-    
+
     The following code is then executed::
 
         repeat 7:
@@ -109,7 +119,16 @@ Question 4 - Loops and If/Else
     - :1: Great!
       :2: Careful! Remember that the `else` does not include `move`.
       :.*: Try again!
-      
+
+.. reveal:: reveal_practice_quiz_q4
+    :showtitle: Tracing Help
+    :hidetitle: Hide Help
+
+    If you have spent time tracing this code on your own, and still cannot come up with the correct solution, you may find it helpful to |reeborgq4|. You can copy/paste the code above into the world, and step through the code one line at a time.
+
+.. |reeborgq4| raw:: html
+
+   <a href="https://reeborg.cs20.ca/?lang=en&mode=python&url=worlds/sk/second-practice-quiz-q4.json&name=PracticeQuizQ4" target="_blank">open this world in the Reeborg environment</a>
 
 Question 5 - Mirror Image
 -------------------------
@@ -137,7 +156,7 @@ Open the |alcove1| and create a solution to this problem!
         def turn_right():
             repeat 3:
                 turn_left()
-                
+
         def move_daisy():
             take()
             turn_around()
@@ -161,7 +180,7 @@ Open the |alcove1| and create a solution to this problem!
                 turn_left()
             if front_is_clear():
                 move()
-    
+
 
 .. |alcove1| raw:: html
 
@@ -200,7 +219,7 @@ Open the |alcove2| and create a solution to this problem!
             turn_around()
             move()
             turn_around()
-            
+
         def move_daisy():
             take()
             turn_around()
