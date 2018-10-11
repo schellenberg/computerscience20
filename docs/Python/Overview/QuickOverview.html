@@ -277,30 +277,8 @@
 <p>If you’d prefer to watch a video describing some important features of Python, <a class="reference external" href="https://www.youtube.com/watch?v=d97kS830e-c">the following video</a> demonstrates the same ideas as what I’ve described in text below.</p>
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
-    <div id="d97kS830e-c_vid"></div>
+        <div id="d97kS830e-c_vid" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="d97kS830e-c" data-video-divid="d97kS830e-c_vid" data-video-start="0" data-video-end="-1" ></div>
     </div>
-    <script id="d97kS830e-c_script">
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var ytScriptTag = document.getElementById('d97kS830e-c_script');
-      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('d97kS830e-c_vid', {
-          height: '315',
-          width: '560',
-          videoId: 'd97kS830e-c',
-          events: {
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-    </script>
     <div class="section" id="what-is-python">
 <h2>1.1. What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
 <p>Python is a programming language that lets you teach the computer to do what you want. You’ve already been writing Python programs using Reeborg. Everything you have already learned (with the exception of <cite>repeat</cite>), works in regular Python. Using regular Python allows us to start exploring other ways our programs can produce output, and take input.</p>
@@ -636,6 +614,32 @@ print("Don't forget to buy some", grocery_list[1])
 <div class="section" id="functions">
 <span id="index-11"></span><h2>1.14. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
+
+<div data-childcomponent="functions_overview_intro_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_overview_intro_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
+def say_hello():
+    print("Hello there!")
+
+say_hello()
+</textarea>
+</div>
+
+<div data-childcomponent="functions_overview_intro_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=functions_overview_intro_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          >
+def say_hello(some_name):
+    print("Hello there,", some_name)
+
+say_hello("Eli")
+</textarea>
+</div>
 </div>
 <div class="section" id="taking-input-from-user">
 <span id="index-12"></span><h2>1.15. Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>

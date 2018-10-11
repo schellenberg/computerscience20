@@ -27,9 +27,9 @@ Python is a programming language that lets you teach the computer to do what you
 Running Python on Your Computer
 -------------------------------
 
-There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to `download Thonny <http://thonny.org/>`_. Go download Thonny now. It doesn't require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well. 
+There are many different ways to install Python on your computer (in fact, some version of Python might already be installed on your computer). However, one of the easiest ways to get Python working on your computer (Windows, Mac or Linux) is to `download Thonny <http://thonny.org/>`_. Go download Thonny now. It doesn't require administrative rights to install, so you should be able to install it in your school computer lab (double check with your teacher that they are okay with this first!). You may want to install Thonny at home as well.
 
-For each of the code segments that you see on this page, you can either run them directly in your web browser **OR** you can copy/paste the code into Thonny to run it. 
+For each of the code segments that you see on this page, you can either run them directly in your web browser **OR** you can copy/paste the code into Thonny to run it.
 
 When using Thonny, you need to understand the difference between the **text editor** and the **shell** (also known as the interpreter). If you want to save your code to use again later, you should type your code into the text editor, which will prompt you to save your file somewhere on disk when you press the Run Current Script button (or press F5). The output of your code will show up in the shell (underneath the text editor). You can also type in any Python code you'd like into the shell, which is a handy way to try out new things in Python.
 
@@ -73,7 +73,7 @@ The fundamental data types that we are concerned about in Python include:
 - **int** (integer, such as ``3`` or ``-5``)
 - **float** (floating point number, such as ``1.2`` or ``-4.75``)
 - **str** (string, such as ``"hello"`` or ``'Friday'`` or ``"5"``)
-- **bool** (boolean, such as ``True`` or ``False``) 
+- **bool** (boolean, such as ``True`` or ``False``)
 
 We will use each of the data types given above throughout the course, and it is **really important** that you understand the differences between them. Take a moment now to try the following questions.
 
@@ -117,7 +117,7 @@ We will use each of the data types given above throughout the course, and it is 
     :feedback_d: Strings are enclosed in quotes.
 
     What is the data type of ``True``?
-   
+
 .. mchoice:: data_types_1_4
     :answer_a: boolean
     :answer_b: integer
@@ -164,10 +164,10 @@ Sometimes you might need to convert from one data type to another. You can use t
 
     b = str(a)    #b is the string '4'
     print( type(b) )
-   
+
     c = float(b)  #c is the float 4.0
     print( type(c) )
-   
+
 
 .. index:: math operators
 
@@ -197,13 +197,13 @@ Symbols   Operations                        Example               Output
 ``if``
 ----------------
 
-The ``if`` control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to ``number = 23``. How about ``number = 10``? 
+The ``if`` control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to ``number = 23``. How about ``number = 10``?
 
 .. note:: A single equal sign ``=`` is used to **assign** a value. Two equal signs ``==`` are used when **comparing** a value.
 
 .. activecode:: if_intro_1
     :nocodelens:
-    
+
     number = 42
 
     if number == 42:
@@ -222,7 +222,7 @@ The ``if/elif/else`` control structure works in the exact same way it did when y
 
 .. activecode:: if_elif_else_intro
     :nocodelens:
-    
+
     temp = -3
 
     if temp < -10:
@@ -242,7 +242,7 @@ Recall that we used a ``while`` loop in Reeborg when we didn't know the number o
 
 .. activecode:: while_loop_intro
     :nocodelens:
-    
+
     counter = 10
 
     while counter > 0:
@@ -261,7 +261,7 @@ When we knew the exact number of iterations required in Reeborg, we used the ``r
 
 .. activecode:: for_loop_intro_1
     :nocodelens:
-    
+
     for counter in range(10):
         print(counter)
 
@@ -269,7 +269,7 @@ Notice that the loop above repeats 10 times, but begins counting at 0, so the la
 
 .. activecode:: for_loop_intro_2
     :nocodelens:
-    
+
     for counter in range(5, 11):
         print(counter)
 
@@ -282,7 +282,7 @@ Lists
 How does the range function above work? What it does is create a **list** of numbers, which allows us to save more than one value into the same variable. For example, when we called ``range(5, 11)`` above, Python created a list with the numbers 5, 6, 7, 8, 9, 10. If we had wanted to create that list ourselves, we could have done something like this:
 
 .. code-block:: python
-    
+
     number_list = [5, 6, 7, 8, 9, 10]
 
 We can put any data type inside of the list, so it would also be okay to make a list like:
@@ -291,11 +291,11 @@ We can put any data type inside of the list, so it would also be okay to make a 
 
     number_list = [5, "happy", 2.5, True]
 
-If we create our own list, we can still iterate through it using a for loop. For example, if you were keeping track of which groceries you wanted to buy at the store, you might put all the items you want to buy into a list, then print out each of them. 
+If we create our own list, we can still iterate through it using a for loop. For example, if you were keeping track of which groceries you wanted to buy at the store, you might put all the items you want to buy into a list, then print out each of them.
 
 .. activecode:: list_intro_3
     :nocodelens:
-    
+
     grocery_list = ["apples", "carrots", "milk", "yogurt"]
     for item in grocery_list:
         print("Don't forget to buy the", item)
@@ -304,7 +304,7 @@ If you want to access just one element inside a list, you can specify the locati
 
 .. activecode:: list_intro_4
     :nocodelens:
-    
+
     grocery_list = ["apples", "carrots", "milk", "yogurt"]
     print("Don't forget to buy some", grocery_list[1])
 
@@ -316,18 +316,18 @@ Functions
 
 Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:
 
-.. activecode:: functions_intro_1
+.. activecode:: functions_overview_intro_1
     :nocodelens:
-    
+
     def say_hello():
         print("Hello there!")
 
     say_hello()
 
 
-.. activecode:: functions_intro_2
+.. activecode:: functions_overview_intro_2
     :nocodelens:
-    
+
     def say_hello(some_name):
         print("Hello there,", some_name)
 
@@ -346,14 +346,14 @@ If you want the user to type something, you can use the ``input()`` function. He
 
 .. activecode:: input_intro_1
     :nocodelens:
-    
+
     your_name = input("What is your name?")
     print(your_name)
 
 
 .. activecode:: input_intro_2
     :nocodelens:
-    
+
     def say_hello(some_name):
         print("Hello there, ", some_name)
 
@@ -366,7 +366,7 @@ The following example is not going to work when you try to run it. Try entering 
 .. activecode:: input_intro_3
     :nocodelens:
     :caption: Can you figure out what is wrong?
-    
+
     age = input("How old are you?")
 
     if age == 16:
@@ -380,12 +380,12 @@ The following example is not going to work when you try to run it. Try entering 
 Python Modules
 ---------------
 
-One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import *```, you made all of the functions in the library tab available to your program. Please note that although we could use the ``from library import *`` syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import. 
+One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import *```, you made all of the functions in the library tab available to your program. Please note that although we could use the ``from library import *`` syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.
 
 .. activecode:: module_intro_1
     :nocodelens:
     :caption: This works, but is not recommended.
-    
+
     from math import *
 
     print( sqrt(16) )
@@ -394,7 +394,7 @@ One of the great things about Python is that there are a lot of modules that ext
 .. activecode:: module_intro_2
     :nocodelens:
     :caption: This is the better way to import a module.
-    
+
     import math
 
     print( math.sqrt(16) )
@@ -402,7 +402,7 @@ One of the great things about Python is that there are a lot of modules that ext
 
 .. activecode:: module_intro_3
     :nocodelens:
-    
+
     import random
 
     print( random.randrange(1, 10) )
@@ -424,7 +424,7 @@ We are going to try to implement this game in Python. **Please note: you will li
 
 .. activecode:: number_guessing_game_attempt
     :caption: Create a number guessing game here!
-    
+
     # the algorithm for the game can be described as follows
     # your job is to try to convert the comments into real Python code!
 
@@ -452,9 +452,3 @@ We are going to try to implement this game in Python. **Please note: you will li
 
 
     # congratulate the user, telling them how many guesses it took
-
-
-
-
-
-
