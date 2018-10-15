@@ -398,7 +398,7 @@ The following example is not going to work when you try to run it. Can you figur
 Practice Problems
 ------------------
 
-Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!
 
 .. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string! You might want to look back at :ref:`type_casting_functions`.
 
@@ -410,6 +410,7 @@ Write a program that will compute the area of a circle.  Prompt the user to ente
    
 .. activecode:: practice_problem_variables_data_types_1
     :nocodelens:
+    :enabledownload:
 
     # Area of a Circle Calculator
     # Put Your Name Here
@@ -447,6 +448,7 @@ Write a program that will compute the area of a rectangle.  Prompt the user to e
    
 .. activecode:: practice_problem_variables_data_types_2
     :nocodelens:
+    :enabledownload:
 
     # Area of a Rectangle Calculator
     # Put Your Name Here
@@ -486,6 +488,7 @@ Write a program that will compute the Litres per Kilometers (l/100km) that a car
 
 .. activecode:: practice_problem_variables_data_types_3
     :nocodelens:
+    :enabledownload:
 
     # Gas Mileage Calculator
     # Put Your Name Here

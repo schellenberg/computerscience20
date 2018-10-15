@@ -226,7 +226,7 @@ Mad Libs Practice Problem
 
 .. highlight:: none
 
-You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use easygui_qt in your program.*
+You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use easygui_qt in your program.*
 
 To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.
 

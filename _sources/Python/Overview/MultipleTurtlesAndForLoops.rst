@@ -419,7 +419,7 @@ So to repeat something four times, a good Python programmer would do this:
 Practice Problems
 ------------------
 
-Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!
 
 You might find the Python Documentation for the turtle module to be helpful: `https://docs.python.org/3/library/turtle.html <https://docs.python.org/3/library/turtle.html>`_.
 

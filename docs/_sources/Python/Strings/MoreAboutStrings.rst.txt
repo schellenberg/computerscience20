@@ -283,7 +283,7 @@ Check Your Understanding
 Practice Problems
 ------------------
 
-Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!
 
 **Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.**
 

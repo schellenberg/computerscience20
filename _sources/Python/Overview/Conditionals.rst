@@ -154,7 +154,7 @@ When asking the computer a question with a boolean expression, a common error is
 Practice Problems
 ------------------
 
-Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, copy/paste your finished code into Thonny and save your solution into your Computer Science 20 folder when you finish!
+Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!
 
 .. note:: Remember that every time you take ``input()`` from the user, the data type of that input will be a string! Sometimes you need to convert what the user enters into a number.
 
