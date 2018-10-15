@@ -433,6 +433,7 @@ Create a program that uses for loops to make a turtle draw regular polygons (reg
    
 .. activecode:: practice_problem_turtle_for_loops_1
     :nocodelens:
+    :enabledownload:
 
     # Drawing Regular Polygons
 
@@ -456,6 +457,7 @@ One run of the program might produce a star that looks like the following:
 
 .. activecode:: practice_problem_turtle_for_loops_2
     :nocodelens:
+    :enabledownload:
 
     # Drawing a Star
 
@@ -473,6 +475,7 @@ You might need to explore the `Turtle documentation on the Python Docs website <
 
 .. activecode:: practice_problem_turtle_for_loops_3
     :nocodelens:
+    :enabledownload:
 
     # Drawing a Clock
 

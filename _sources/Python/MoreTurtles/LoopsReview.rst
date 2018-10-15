@@ -256,8 +256,9 @@ Let's draw the image three different ways:
 
 .. note:: Getting a solution to this problem is great, but consider whether you have chosen the most *elegant* solution you can. After you have completed your solution, it might be a good idea to compare your solution with what your classmates came up with.
 
-.. activecode:: turtle_confusion_4
+.. activecode:: hollow_c_practice_problem
     :nocodelens:
+    :enabledownload:
 
     import turtle
 
@@ -279,3 +280,8 @@ Other than that, surprise me with your creativity!
 - You may want to investigate controlling your turtle with keyboard commands. See `this section of the Python Docs Reference <http://docs.python.org/dev/py3k/library/turtle.html#using-screen-events>`_ 
 - use other features of the turtle module by exploring the `Python Docs for turtle <http://docs.python.org/dev/py3k/library/turtle.html>`_
 
+.. activecode:: open_ended_drawing_practice_problem
+    :nocodelens:
+    :enabledownload:
+
+    import turtle

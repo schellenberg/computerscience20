@@ -97,6 +97,7 @@ Counting Up
 Write a program that will print out the numbers 1 to 100.
 
 .. activecode:: while_intro_4
+    :enabledownload:
 
     #put your code here!
 
@@ -107,6 +108,7 @@ Counting Down
 Write a program that counts down from 20 to 1, then prints *Blastoff!*.
 
 .. activecode:: while_intro_5
+    :enabledownload:
 
     #put your code here!
 
@@ -117,6 +119,7 @@ Kinda Password
 Write a program that asks the user to enter a password. Keep asking for the password until they enter "sask".  Once they have successfully typed in "sask", print out *What a great place!*.
 
 .. activecode:: while_intro_6
+    :enabledownload:
 
     #put your code here!
 

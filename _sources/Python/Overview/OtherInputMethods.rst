@@ -260,6 +260,7 @@ Remember to use a comment header at the top of your program!
 
 .. activecode:: second_input_output_assignment_scratch_work_area
     :nocodelens:
+    :enabledownload:
 
     # Madlibs
     # Put Your Name Here

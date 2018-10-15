@@ -326,6 +326,7 @@ Modify the program given below so that before it creates the window, it prompts 
 
 .. activecode:: practice_problem_turtle_intro_1
     :nocodelens:
+    :enabledownload:
 
     # Color Selection
 
@@ -410,6 +411,7 @@ Create a program that uses the turtle module to draw a square. The user should b
 
 .. activecode:: practice_problem_turtle_intro_2
     :nocodelens:
+    :enabledownload:
 
     # Color Selection
 

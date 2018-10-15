@@ -166,6 +166,7 @@ Write a program that can either add or subtract two numbers. You should first as
    
 .. activecode:: practice_problem_conditionals_1
     :nocodelens:
+    :enabledownload:
 
     # Add/Subtract Two Numbers
     # Put Your Name Here
@@ -225,6 +226,7 @@ Write a program that asks the user if they want to find the area of a rectangle,
    
 .. activecode:: practice_problem_conditionals_2
     :nocodelens:
+    :enabledownload:
 
     # Area Calculator
     # Put Your Name Here

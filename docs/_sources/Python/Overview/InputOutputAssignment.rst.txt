@@ -99,6 +99,7 @@ As this is the first Python assignment you are going to submit, the following no
 
 .. activecode:: first_input_output_assignment_scratch_work_area
     :nocodelens:
+    :enabledownload:
 
     # Temperature Conversion Assignment
     # Put Your Name Here

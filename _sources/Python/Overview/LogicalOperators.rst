@@ -129,6 +129,7 @@ Write a program that takes in a number from the user, and correctly prints eithe
 
 .. activecode:: under-100
     :nocodelens:
+    :enabledownload:
 
     # your code goes here!
 
@@ -140,6 +141,7 @@ Write a program that asks the user which province they live in. If the province 
 
 .. activecode:: from-saskatchewan
     :nocodelens:
+    :enabledownload:
 
     # your code goes here!
 
@@ -151,6 +153,7 @@ Write a program that asks the user to enter a number. You should print out a mes
 
 .. activecode:: divisible-by-3-or-5
     :nocodelens:
+    :enabledownload:
 
     # your code goes here!
 
@@ -169,6 +172,7 @@ Note that you can get the current x coordinate of the turtle by calling ``bob.xc
 
 .. activecode:: turtle-stuck-in-square
     :nocodelens:
+    :enabledownload:
 
     import turtle
     import random
