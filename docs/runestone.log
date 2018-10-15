@@ -26733,3 +26733,386 @@ Traceback (most recent call last):
     self.process_request(request, client_address)
   File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
     self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 10:27:17] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58019)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+
+Aborted!
+127.0.0.1 - - [15/Oct/2018 14:57:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/matrixeq.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/p5.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/parsons.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/js_lib/prettify.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/tabbedstuff.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58829)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58831)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58832)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58833)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/runestone-custom-sphinx-bootstrap.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/runestonebase.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/activecode.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/clike.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/timed_activecode.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/animationbase.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/mchoice.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/timedmc.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/timed.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/clickable.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/timedclickable.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/d3.v2.min.js HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58847)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/jquery.ba-bbq.min.js HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58848)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:15] "GET /_static/jquery.jsPlumb-1.3.10-all-min.js HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58849)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:57:16] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:16] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:57:16] code 404, message File not found
+127.0.0.1 - - [15/Oct/2018 14:57:16] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /Python/Overview/QuickOverview.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/matrixeq.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/p5.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58867)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/parsons.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/js_lib/prettify.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/poll.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/showEval.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/tabbedstuff.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:49] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/activecode.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/clike.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/timed_activecode.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/animationbase.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/mchoice.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/timedmc.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58885)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:58:50] "GET /_static/images/ui-icons_222222_256x240.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:58:52] code 404, message File not found
+127.0.0.1 - - [15/Oct/2018 14:58:52] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2018 14:58:52] code 404, message File not found
+127.0.0.1 - - [15/Oct/2018 14:58:52] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /Python/Overview/VariablesAndDataTypes.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_images/thonny_shell.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_images/thonny_editor.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58897)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Oct/2018 14:59:12] "GET /_images/refdiagram1.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:13] "GET /_static/images/ui-bg_flat_75_ffffff_40x100.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:13] "GET /_static/images/ui-bg_glass_75_e6e6e6_1x400.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:20] "GET /Python/Overview/VariablesAndDataTypes.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/bootstrap-3.0.0/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/accessibility.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/activecode.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/codemirror.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/clickable.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/pytutor.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/modal-basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/datafile.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/dragndrop.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/fitb.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/matrixeq.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/p5.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/parsons.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/js_lib/prettify.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/poll.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2018 14:59:21] "GET /_static/showEval.css HTTP/1.1" 200 -
