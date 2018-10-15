@@ -496,7 +496,7 @@ Write a program that will compute the Litres per Kilometers (l/100km) that a car
 
 **Do not look** at this sample solution unless you have already finished creating your own solution!
 
-.. reveal:: reveal_solution_practice_problem_variables_data_types_2
+.. reveal:: reveal_solution_practice_problem_variables_data_types_3
     :showtitle: Reveal Solution
     :hidetitle: Hide Solution
 
