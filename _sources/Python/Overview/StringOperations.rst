@@ -103,7 +103,7 @@ other has to be an integer.
 
     print("Go" * 6)
 
-    name = "Packers"
+    name = "Riders"
     print(name * 3)
 
     print(name + "Go" * 3)
