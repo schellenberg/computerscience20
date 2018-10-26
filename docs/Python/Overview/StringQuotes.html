@@ -370,6 +370,20 @@ interesting_quotes = 'There's a lot of people who have said interesting things. 
 print(interesting_quotes)
 </textarea>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Another alternative to concatenating strings together is to use f-strings (formatted string literals). An f-string allows you to easily create a string that has the <em>value</em> of variables inserted into it. To create an f-string, you simply put the letter <code class="docutils literal notranslate"><span class="pre">f</span></code> before the quotes that begin the string. This tells Python that it should look for variable names inside the string, and if it finds any, it will replace them with the value of that variable. For Python to find the variable, you must enclose the variable inside curly brackets, like <code class="docutils literal notranslate"><span class="pre">{some_variable}</span></code>. Consider this example of using an f-string:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Eli&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;Hello, </span><span class="si">{name}</span><span class="s2">. I heard you just turned </span><span class="si">{age}</span><span class="s2">!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+
+<span class="c1"># this code will print the following:</span>
+<span class="c1"># Hello, Eli. I heard you just turned 14!</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="assignment-work-time">
 <h2>7.3. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>

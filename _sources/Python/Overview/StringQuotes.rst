@@ -108,6 +108,19 @@ Can you fix the error in the following programs?
     print(interesting_quotes)
 
 
+.. note:: 
+
+    Another alternative to concatenating strings together is to use f-strings (formatted string literals). An f-string allows you to easily create a string that has the *value* of variables inserted into it. To create an f-string, you simply put the letter ``f`` before the quotes that begin the string. This tells Python that it should look for variable names inside the string, and if it finds any, it will replace them with the value of that variable. For Python to find the variable, you must enclose the variable inside curly brackets, like ``{some_variable}``. Consider this example of using an f-string::
+
+        name = "Eli"
+        age = 14
+
+        greeting = f"Hello, {name}. I heard you just turned {age}!"
+        print(greeting)
+
+        # this code will print the following:
+        # Hello, Eli. I heard you just turned 14!
+
 
 Assignment Work Time
 ---------------------

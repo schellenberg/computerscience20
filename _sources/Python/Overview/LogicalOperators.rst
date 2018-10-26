@@ -213,7 +213,7 @@ Booleans Practice Quiz
 To confirm you are feeling confident with booleans and logical operators, try to answer the following:
 
 Question 1
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_1
     :answer_a: True
@@ -230,7 +230,7 @@ Question 1
 
 
 Question 2
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_2
     :answer_a: True
@@ -247,7 +247,7 @@ Question 2
 
 
 Question 3
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_3
     :answer_a: True
@@ -264,7 +264,7 @@ Question 3
 
 
 Question 4
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_4
     :answer_a: True
@@ -281,7 +281,7 @@ Question 4
 
 
 Question 5
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_5
     :answer_a: True
@@ -298,7 +298,7 @@ Question 5
       
 
 Question 6
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_6
     :answer_a: True
@@ -315,7 +315,7 @@ Question 6
       
 
 Question 7
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_7
     :answer_a: True
@@ -332,7 +332,7 @@ Question 7
 
 
 Question 8
------------
+~~~~~~~~~~~
 
 .. mchoice:: booleans_practice_quiz_8
     :answer_a: True
