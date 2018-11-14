@@ -247,6 +247,7 @@ Create a function called ``red_remover(original_image)`` that performs an image 
 
 .. activecode::  practice_problem_red_remover_function
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import image
@@ -270,6 +271,7 @@ Look back at the last few sections, and pick 2 image manipulation practice probl
 
 .. activecode::  practice_problem_your_choice
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # you will want to use Thonny for this question...

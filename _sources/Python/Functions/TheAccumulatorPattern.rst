@@ -220,6 +220,7 @@ To be sure you understand how this works, it is a good idea to try out Newton's 
 Be sure to test your square root function with a variety of numbers, and check with a calculator to see how well your function is performing!
 
 .. activecode:: my-sqrt
+    :enabledownload:
 
     def my_sqrt(n, number_of_guesses):
         # your code here
@@ -251,6 +252,7 @@ Write a function called ``my_pi()`` that will return an approximation of PI (3.1
     Remember that you will need to add 2 to the denominator every time through the loop, whether you were adding or subtracting.
 
 .. activecode:: my-pi
+    :enabledownload:
 
     def my_pi():
         # your code here
@@ -272,6 +274,7 @@ Write a function called ``ln2()`` that will return an approximation of ln(2). Yo
     Remember that you will need to add 1 to the denominator every time through the loop, whether you were adding or subtracting.
 
 .. activecode:: ln2_practice_problem
+    :enabledownload:
 
     def ln2():
         # your code here

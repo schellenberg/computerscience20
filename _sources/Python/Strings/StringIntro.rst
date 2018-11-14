@@ -297,7 +297,7 @@ There is no Index Out Of Range exception for a slice. A slice is forgiving and s
 Check Your Understanding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. mchoice:: string_length_test_question_1
+.. mchoice:: string_slice_test_question_1
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
@@ -318,7 +318,7 @@ Check Your Understanding
 
 
 
-.. mchoice:: string_length_test_question_2
+.. mchoice:: string_slice_test_question_2
    :answer_a: rockrockrock
    :answer_b: rock rock rock
    :answer_c: rocksrocksrocks
@@ -435,6 +435,7 @@ Create a program that takes in the name of a cat, then prints out a hello messag
    
 .. activecode:: practice_problem_string_into_1
     :nocodelens:
+    :enabledownload:
 
     # Hello message to a cat
 
@@ -446,6 +447,7 @@ In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings 
     
 .. activecode:: practice_problem_string_into_2
     :nocodelens:
+    :enabledownload:
 
     prefixes = "JKLMNOPQ"
     suffix = "ack"
@@ -463,6 +465,7 @@ First Letter of a Word
 
 .. activecode:: practice_problem_string_into_3
     :nocodelens:
+    :enabledownload:
 
     Create a function with a single parameter ``word`` that returns ``True`` if the ``word`` begins with the letter "t" or "c".
 
@@ -500,6 +503,7 @@ Password Length
 
 .. activecode:: practice_problem_string_into_4
     :nocodelens:
+    :enabledownload:
 
     Create a function with a single parameter ``password`` that returns ``True`` if the ``password`` is between 8 and 32 characters (inclusive), and ``False`` otherwise. *Please note there is much more to a strong password than just the length of the string!*
 
@@ -552,6 +556,7 @@ To be sure you understand the challenge, consider the following example:
 
 .. activecode:: practice_problem_string_into_5
     :nocodelens:
+    :enabledownload:
 
     # Remove the Start and End
 

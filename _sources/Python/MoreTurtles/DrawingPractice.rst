@@ -32,6 +32,7 @@ Define a function similar to ``draw_square(my_turtle, side_length)`` and call it
 
 .. activecode:: practice_problems_1
     :nocodelens:
+    :enabledownload:
 
     import turtle
 
@@ -49,6 +50,7 @@ Draw the shape above. Depending on how you defined the function in the problem a
 
 .. activecode:: practice_problems_2
     :nocodelens:
+    :enabledownload:
 
     import turtle
 
@@ -62,6 +64,7 @@ Draw the shape above. Depending on how you defined your earlier function(s) in t
 
 .. activecode:: practice_problems_3
     :nocodelens:
+    :enabledownload:
 
     import turtle
 
@@ -75,6 +78,7 @@ Draw the shape above. Think carefully about how you might be able to draw this e
 
 .. activecode:: practice_problems_4
     :nocodelens:
+    :enabledownload:
 
     import turtle
 

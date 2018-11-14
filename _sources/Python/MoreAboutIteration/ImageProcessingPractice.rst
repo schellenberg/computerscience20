@@ -257,6 +257,7 @@ Write a program that opens an image and uses a nested loop to look at all of the
 
 .. activecode::  practice_problem_red_remover
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import image
@@ -287,6 +288,7 @@ Write a program that sets the red value to the original green value, the green v
 
  .. activecode::  practice_problem_color_swapper
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 
@@ -306,6 +308,7 @@ Write a program that keeps only the green values of all pixels in the image.
 
  .. activecode::  practice_problem_keep_the_green
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 
@@ -325,6 +328,7 @@ Write a program that sets each pixel's red intensity to be half of the original 
 
  .. activecode::  practice_problem_half_red
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 
@@ -344,6 +348,7 @@ Write a program that sets each pixel's blue intensity to be an eighth of the ori
 
  .. activecode::  practice_problem_combining_colors
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 
@@ -363,6 +368,7 @@ Write a program that sets each pixel's RGB intensities to be half of their origi
 
  .. activecode::  practice_problem_half_each_color
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 
@@ -382,6 +388,7 @@ Write a program that converts an image using a sepia filter (`Sepia Tone <https:
 
  .. activecode::  practice_problem_sepia_tone
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     # Try to create a solution to this problem 

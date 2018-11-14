@@ -432,6 +432,7 @@ Here are the rules for an L-system that creates something that resembles a commo
 
 .. activecode:: list_turtle_practice_1
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import turtle
@@ -463,6 +464,7 @@ Here are the rules for an L-system that creates something that resembles a branc
 
 .. activecode:: list_turtle_practice_2
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import turtle
@@ -495,6 +497,7 @@ Here are the rules for an L-system that creates something that resembles a symme
 
 .. activecode:: list_turtle_practice_3
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import turtle
@@ -526,6 +529,7 @@ Here are the rules for an L-system that creates something that resembles seaweed
 
 .. activecode:: list_turtle_practice_4
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import turtle
@@ -548,6 +552,7 @@ Experiment by creating your own rules for an L-system. Be sure to use the ``[`` 
 
 .. activecode:: list_turtle_practice_5
     :nocodelens:
+    :enabledownload:
     :timelimit: 180000
 
     import turtle

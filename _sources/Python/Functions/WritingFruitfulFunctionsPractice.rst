@@ -115,7 +115,7 @@ Area of rectangle
 ~~~~~~~~~~~~~~~~~~
 
 .. activecode:: rectangle-area
-    :nocodelens:
+    :enabledownload:
 
     The parameters ``length`` and ``width`` represent the lengths of the sides of a rectangle. Calculate the area of the rectangle with the given values, and return the result. 
 
@@ -150,7 +150,7 @@ Letter Grade
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. activecode:: letter-grade
-    :nocodelens:
+    :enabledownload:
 
     Write a function that returns the letter grade, given an exam mark as the parameter. The grading scheme is:
 
@@ -199,7 +199,7 @@ Find the Smallest
 ~~~~~~~~~~~~~~~~~~
 
 .. activecode:: find-min
-    :nocodelens:
+    :enabledownload:
 
     The function find_min(a, b, c) will take three numbers as parameters and return the *smallest* value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the ``min`` function in this solution.
 
@@ -235,7 +235,7 @@ Is Even
 ~~~~~~~~~~~~~~~~~~
 
 .. activecode:: is-even
-    :nocodelens:
+    :enabledownload:
 
     The function is_even(number) will return ``True`` if the number passed in is even, and ``False`` if it is odd. Hint: You might want to look back at the :ref:`math_operator_list` list.
 
@@ -271,7 +271,7 @@ Leap Year
 ~~~~~~~~~~~~~~~~~~
 
 .. activecode:: leap-year
-    :nocodelens:
+    :enabledownload:
 
     A year is a leap year if it is divisible by 4 unless it is a century that is not divisible by 400. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise. The following pseudocode determines whether a year is a leap year or a common year in the Gregorian calendar (from `Wikipedia <http://en.wikipedia.org/wiki/Leap_year#Algorithm>`_):
 
@@ -315,6 +315,6 @@ Using Your Is Even Function
 Write a program that continues to take in a number from the user until the number given is NOT even. For example, the user might enter 4, 10, 42, 5. The program would only stop when the non-even number 5 is entered. You need to use the ``is_even`` function you defined above.
 
 .. activecode:: using-is-even
-    :nocodelens:
+    :enabledownload:
 
     # your code here!

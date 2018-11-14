@@ -295,6 +295,7 @@ Even Letters of a Word
 
 .. activecode:: practice_problem_string_more_info_1
     :nocodelens:
+    :enabledownload:
 
     Create a function with a single parameter ``word`` that returns the even letters of the ``word`` (the first letter is even, since we start counting our index values at 0). For example, given the ``word`` "Saskatoon", the function should return "Ssaon".
 
@@ -345,6 +346,7 @@ Reverse Me
 
 .. activecode:: practice_problem_string_more_info_2
     :nocodelens:
+    :enabledownload:
 
     Create a function with a single parameter ``word`` that returns the ``word`` spelled backwards. For example, if the ``word`` was "Saskatoon", the function should return "nootaksaS".
 
@@ -384,6 +386,7 @@ Letter Destroyer
 
 .. activecode:: practice_problem_string_more_info_3
     :nocodelens:
+    :enabledownload:
 
     Create a function with two parameters, ``word`` and ``letter_to_destroy``. The function should return the ``word``, but without any of the occurrences of the ``letter_to_destroy`` in the string. For example, if the ``word`` was "Saskatoon", and the ``letter_to_destroy`` was 'o', the function should return "Saskatn".
 
@@ -423,6 +426,7 @@ QWERTY Finder
 
 .. activecode:: practice_problem_string_more_info_4
     :nocodelens:
+    :enabledownload:
 
     Create a function that takes in a single parameter ``word`` and returns the location of the first occurrence of one of the following letters: "qwerty". If none of these letters exist in the word, have the function return -1. For example, if the ``word`` was "Saskatoon", the function should return 5 (the index value for the ``t`` in "Saskatoon").
 

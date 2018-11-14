@@ -256,7 +256,7 @@ Question 7
 Question 8
 ~~~~~~~~~~~~~
 
-.. fillintheblank:: functions_practice_quiz_7
+.. fillintheblank:: functions_practice_quiz_8
 
     What will the following program print?::
 

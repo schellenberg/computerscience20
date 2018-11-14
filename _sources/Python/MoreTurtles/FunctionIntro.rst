@@ -293,6 +293,11 @@ Cross
 
 Convert the code you wrote at the start of today's class into a function. You should be able to call something like ``draw_cross(some_turtle, side_length)``.
 
+.. activecode:: cross_practice_problem_function
+    :nocodelens:
+    :enabledownload:
+
+    import turtle
 
 Hollow C
 ~~~~~~~~~
@@ -301,6 +306,11 @@ Hollow C
 
 Look back to the code you made when you drew a *hollow c* last class. Adapt your code by creating a function called ``draw_c(a_turtle, longest_side_length, width_of_c)``. You should be able to draw a hollow c by calling the function with something like ``draw_c(tess, 150, 25)``.
 
+.. activecode:: hollow_c_practice_problem_function
+    :nocodelens:
+    :enabledownload:
+
+    import turtle
 
 Turtle Graphics Assignment
 ---------------------------

@@ -524,6 +524,7 @@ Those Shakespearean insults sting a bit. Let's cheer everyone up by creating a r
 
 
 .. activecode:: list_methods_practice_3
+    :enabledownload:
 
     # your code goes here!
 
@@ -534,6 +535,7 @@ Averaging Random Integer List
 Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.
 
 .. activecode:: list_methods_practice_4
+    :enabledownload:
 
     # your code goes here!
 
@@ -552,6 +554,7 @@ a. ``count``
 
 
 .. activecode:: list_methods_practice_5
+    :enabledownload:
 
     def count(thing_to_find, list_to_look_in):
         # your code goes here!

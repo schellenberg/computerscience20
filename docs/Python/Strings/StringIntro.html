@@ -559,7 +559,47 @@ print(fruit[3:99])
 </div>
 <div class="section" id="id2">
 <h3>1.5.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_slice_test_question_1">
+            <p>string-exploration6: What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
 </div>
+
+            <li data-component="answer"  id="string_slice_test_question_1_opt_a">python</li><li data-component="feedback" id="string_slice_test_question_1_opt_a">That would be sentence[0:6].</li>
+            
+            <li data-component="answer"  id="string_slice_test_question_1_opt_b">rocks</li><li data-component="feedback" id="string_slice_test_question_1_opt_b">That would be sentence[7:].</li>
+            
+            <li data-component="answer" data-correct id="string_slice_test_question_1_opt_c">hon r</li><li data-component="feedback" id="string_slice_test_question_1_opt_c">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
+            
+            <li data-component="answer"  id="string_slice_test_question_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback" id="string_slice_test_question_1_opt_d">This is called slicing, not indexing.  It requires a start and an end.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_slice_test_question_2">
+            <p>string-exploration7: What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="string_slice_test_question_2_opt_a">rockrockrock</li><li data-component="feedback" id="string_slice_test_question_2_opt_a">Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.</li>
+            
+            <li data-component="answer"  id="string_slice_test_question_2_opt_b">rock rock rock</li><li data-component="feedback" id="string_slice_test_question_2_opt_b">Repetition does not add a space.</li>
+            
+            <li data-component="answer"  id="string_slice_test_question_2_opt_c">rocksrocksrocks</li><li data-component="feedback" id="string_slice_test_question_2_opt_c">Slicing will not include the character at index 11.  Just up to it (10 in this case).</li>
+            
+            <li data-component="answer"  id="string_slice_test_question_2_opt_d">Error, you cannot use repetition with slicing.</li><li data-component="feedback" id="string_slice_test_question_2_opt_d">The slice will happen first, then the repetition.  So it is ok.</li>
+            
+
+            </ul>
+            </div>
+            </div>
 </div>
 <div class="section" id="traversal-and-the-for-loop-by-item">
 <h2>1.6. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this headline">¶</a></h2>
@@ -664,7 +704,7 @@ Note that it is only possible to process the characters one at a time from left 
 <div data-childcomponent="practice_problem_string_into_1" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_string_into_1 data-lang="python" 
-      data-timelimit=25000    
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''   
           >
 # Hello message to a cat
@@ -678,7 +718,7 @@ Note that it is only possible to process the characters one at a time from left 
 <div data-childcomponent="practice_problem_string_into_2" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_string_into_2 data-lang="python" 
-      data-timelimit=25000    
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''   
           >
 prefixes = "JKLMNOPQ"
@@ -705,7 +745,7 @@ for letter in prefixes:
 <p><code class="docutils literal notranslate"><span class="pre">starts_with_tc(&quot;warman&quot;)</span> <span class="pre">→</span> <span class="pre">False</span></code></p>
 
 <textarea data-component="activecode" id=practice_problem_string_into_3 data-lang="python" 
-      data-timelimit=25000    
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''   
           >
 def starts_with_tc(word):
@@ -743,7 +783,7 @@ myTests().main()
 <p><code class="docutils literal notranslate"><span class="pre">password_length(&quot;cray-topnotch-tampa-anthem-trial&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
 
 <textarea data-component="activecode" id=practice_problem_string_into_4 data-lang="python" 
-      data-timelimit=25000    
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''   
           >
 def password_length(password):
@@ -786,7 +826,7 @@ myTests().main()
 <div data-childcomponent="practice_problem_string_into_5" class="runestone explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=practice_problem_string_into_5 data-lang="python" 
-      data-timelimit=25000    
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''   
           >
 # Remove the Start and End

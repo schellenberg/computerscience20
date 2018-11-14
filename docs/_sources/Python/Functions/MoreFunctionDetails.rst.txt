@@ -405,6 +405,7 @@ Double It
 
 .. activecode:: double-it
     :nocodelens:
+    :enabledownload:
 
     The parameter ``the_number`` needs to be doubled. Return the doubled value of the number that is passed in.
 
@@ -436,6 +437,7 @@ Double It Positive
 
 .. activecode:: double-it-positive
     :nocodelens:
+    :enabledownload:
 
     The parameter ``the_number`` needs to be doubled, but only if ``the_number`` is positive. Return the doubled value of the number that is passed in if ``the_number`` is positive. If ``the_number`` is negative, return -1. If ``the_number`` is 0, return 0.
 
@@ -469,6 +471,7 @@ Wear the Right Thing
 
 .. activecode:: wear-the-right-thing
     :nocodelens:
+    :enabledownload:
 
     Write a function which returns the type of clothing you should wear, based on the parameter ``temperature``. If the ``temperature`` is below -10, you will wear a parka and toque (return "parka and toque"). If the ``temperature`` is between -10 and 0, wear a toque (return "toque"). If the ``temperature`` is greater than 0 but less than 10, wear a sweater (return "sweater"). If the ``temperature`` is between 10 and 20, wear a t-shirt (return "t-shirt"). If the ``temperature`` is greater than 20, wear shorts (return "shorts").
 

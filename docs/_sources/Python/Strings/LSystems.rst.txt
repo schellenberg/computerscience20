@@ -341,6 +341,7 @@ Use the following axiom and rules to create the Hilbert curve. Use an angle of 9
 
 .. activecode:: strings_l_systems_practice_1
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -359,6 +360,7 @@ Use the following axiom and rules to create the dragon curve. Use an angle of 90
 
 .. activecode:: strings_l_systems_practice_2
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -377,6 +379,7 @@ Use the following axiom and rules to create the arrowhead curve. Use an angle of
 
 .. activecode:: strings_l_systems_practice_3
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -395,6 +398,7 @@ Use the following axiom and rules to create the Peano-Gosper curve. Use an angle
 
 .. activecode:: strings_l_systems_practice_4
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -413,6 +417,7 @@ Use the following axiom and rules to create the Sierpinski Triangle. Use an angl
 
 .. activecode:: strings_l_systems_practice_5
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -431,6 +436,7 @@ Use the following axiom and rules to create a snowflake shape. Use an angle of 7
 
 .. activecode:: strings_l_systems_practice_6
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 
@@ -451,6 +457,7 @@ Use the following axiom and rules to create an interesting shape. Use an angle o
 
 .. activecode:: strings_l_systems_practice_7
     :nocodelens:
+    :enabledownload:
 
     # adapt the template code given above to draw this image
 

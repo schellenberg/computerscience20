@@ -423,6 +423,7 @@ Warmup
 Create a list called ``my_list`` with the following six items: ``76, 92.3, "hello", True, 4, 76``. Print out the list to make sure it is doing what you intend.
 
 .. activecode:: list_overview_practice_problem_1
+    :enabledownload:
     
     # your code goes here!
 
@@ -435,6 +436,7 @@ Make it Fun
 
 .. activecode:: list_overview_practice_problem_6
     :nocodelens:
+    :enabledownload:
 
     Write a function to replace the first element of a list with the word ``"fun"``, and then return the altered list. You can assume that the list will always have at least one element.
 
@@ -469,6 +471,7 @@ Sum of Squares
 
 .. activecode:: list_overview_practice_problem_2
     :nocodelens:
+    :enabledownload:
 
     Write a function ``sum_of_squares(a_list)`` that computes the sum of the squares of the numbers in the list ``a_list``.  For example, ``sum_of_squares([2, 3, 4])`` should return 29, which is the sum of 4+9+16.
 
@@ -505,6 +508,7 @@ Count Odd Numbers
 
 .. activecode:: list_overview_practice_problem_3
     :nocodelens:
+    :enabledownload:
 
     Write a function to count how many odd numbers are in a list.
 
@@ -541,6 +545,7 @@ Count Words with Length 5
 
 .. activecode:: list_overview_practice_problem_4
     :nocodelens:
+    :enabledownload:
 
     Write a function to count how many words in a list have a length of 5.
 
@@ -575,6 +580,7 @@ Look For "saskatchewan"
 
 .. activecode:: list_overview_practice_problem_5
     :nocodelens:
+    :enabledownload:
 
     Write a function to check if the word "saskatchewan" shows up somewhere in a list. If it does, return ``True``. If it doesn't, return ``False``.
 
