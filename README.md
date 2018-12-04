@@ -12,3 +12,5 @@ If you want to create your own version of the book, you are welcome to do so! Th
 
 1.  ``pip install -r requirements.txt``  -- should install everything you need for you, though I'd recommend creating a virtualenv first (detailed in the build-instructions.md file)
 2.  ``runestone build`` -- will build the html and put it in ``./docs/`` directory (if you have cloned this project on GitHub, that should automatically update your GitHub Pages output with your changes)
+
+For a more comprehensive overview of what you need to do to get a fork of the textbook going, [follow the instructions I created when getting another teacher set up](notes-to-self/how-to-fork-the-textbook.rst) to create a French fork of the textbook.
