@@ -56,8 +56,8 @@ strings look like numbers. The one exception to this rule is that the ``+`` oper
     :nocanvas:
 
     fruit = "banana"
-    bakedGood = " nut bread"
-    print(fruit + bakedGood)
+    baked_good = " nut bread"
+    print(fruit + baked_good)
 
 
 .. index:: index operator
