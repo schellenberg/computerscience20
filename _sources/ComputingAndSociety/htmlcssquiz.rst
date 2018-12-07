@@ -106,7 +106,7 @@ HTML and CSS Practice Quiz
 
 .. mchoice:: html_quiz_q8
   :correct: a
-  :answer_a: &lt;image src="image.gif" alt="A Saskatchewan flag picture."&gt;
+  :answer_a: &lt;img src="image.gif" alt="A Saskatchewan flag picture."&gt;
   :answer_b: &lt;img href="image.gif" alt="A Saskatchewan flag picture."&gt;
   :answer_c: &lt;img src="image.gif"&gt;
   :answer_d: &lt;img alt="A Saskatchewan flag picture."&gt;image.gif&lt;/img&gt;
