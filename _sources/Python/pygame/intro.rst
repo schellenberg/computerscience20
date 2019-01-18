@@ -49,4 +49,7 @@ Basics
 - drawing simple shapes (line, circle, ellipse, rect) ``pygame.draw.rect(DISPLAYSURF, RED, (200, 150, 100, 50))``
 - load an image ``pygame.image.load('cat.png')``, then display it in the loop ``DISPLAYSURF.blit(catImg, (catx, caty))``
 - FPS clock
+    - declare an FPS constant, something like ``FPS = 30``
+    - create a clock, like ``fpsClock = pygame.time.Clock()``
+    - at the end of the game loop, make the clock update by ``fpsClock.tick(FPS)``
 - playing sounds
