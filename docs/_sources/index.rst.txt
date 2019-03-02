@@ -167,7 +167,6 @@ Student-Directed Research
 :::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Student-Directed Research
    :maxdepth: 1
 
    StudentResearch/ProjectOverview.rst
@@ -187,7 +186,6 @@ Computing and Society
 :::::::::::::::::::::
 
 .. toctree::
-   :caption: Computing and Society
    :maxdepth: 1
 
    ComputingAndSociety/UnderlyingTechnology.rst
@@ -204,7 +202,6 @@ Career Exploration
 ::::::::::::::::::
 
 .. toctree::
-   :caption: Career Exploration
    :maxdepth: 1
 
    CareerExploration/Research.rst
@@ -214,7 +211,6 @@ Appendices
 ::::::::::
 
 .. toctree::
-   :caption: Appendices
    :maxdepth: 1
 
    Python/EasyGUI/Reference.rst

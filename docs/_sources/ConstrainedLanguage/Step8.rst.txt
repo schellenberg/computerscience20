@@ -59,26 +59,6 @@ carries_object()    Returns True if Reeborg is currently carrying at least one o
 is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.
 =================   ============
 
-.. .. admonition:: For educators
-..
-..     The function ``object_here()`` returns a list of object types (as strings)
-..     found at a given location.  For example, if there are stars and dandelions
-..     at the same location, ``object_here()`` could return ``["star", "dandelion"]``
-..     or ``["dandelion", "star"]``. If no object is present, an empty list is
-..     returned.  As you likely already know, Python treats an empty list as
-..     being equivalent to ``False`` in an ``if`` statement, and a non-empty
-..     list as equivalent to ``True``.
-..
-..     If many objects could potentially be found in a given world, and we
-..     are interested in only one object type, we can specify it as a function
-..     argument::
-..
-..         if object_here("dandelion"):
-..             take("dandelion")
-..
-..     ``object_here("dandelion")`` will either return an empty list or the list
-..     ``["dandelion"]``.
-
 
 Your Turn
 ---------

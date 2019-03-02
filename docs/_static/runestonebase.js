@@ -34,20 +34,28 @@ RunestoneBase.prototype.logBookEvent = function (eventInfo) {
     eventInfo.course = eBookConfig.course;
     eventInfo.timezoneoffset = (new Date()).getTimezoneOffset()/60
     if (eBookConfig.useRunestoneServices && eBookConfig.logLevel > 0) {
-        jQuery.get(eBookConfig.ajaxURL + 'hsblog', eventInfo); // Log the run event
+        var post_return = jQuery.post(eBookConfig.ajaxURL + 'hsblog', eventInfo,
+                                      null, 'json');
     }
     console.log("logging event " + JSON.stringify(eventInfo));
+    return post_return;
 };
 
 RunestoneBase.prototype.logRunEvent = function (eventInfo) {
     eventInfo.course = eBookConfig.course;
-    eventInfo.timezoneoffset = (new Date()).getTimezoneOffset()/60    
+    eventInfo.timezoneoffset = (new Date()).getTimezoneOffset()/60
     if ( this.forceSave || (! 'to_save' in eventInfo) ) {
         eventInfo.save_code = "True"
     }
     if (eBookConfig.useRunestoneServices && eBookConfig.logLevel > 0) {
         jQuery.post(eBookConfig.ajaxURL + 'runlog', eventInfo) // Log the run event
-            .done((function() {this.forceSave = false; }).bind(this))
+            .done((function(data, status, whatever) {
+                data = JSON.parse(data);
+                if (data.message) {
+                    alert(data.message);
+                }
+                this.forceSave = false;
+            }).bind(this))
             .fail((function() {alert("WARNING:  Your code was not saved!  Please Try again.");
                 this.forceSave = true; }).bind(this))
     }
@@ -98,7 +106,7 @@ RunestoneBase.prototype.shouldUseServer = function (data) {
     if (data.correct === "T" || localStorage.length === 0 || this.graderactive === true) {
         return true;
     }
-    let ex = localStorage.getItem(eBookConfig.email + ":" + this.divid + "-given");
+    let ex = localStorage.getItem(this.localStorageKey());
     if (ex === null) {
         return true;
     }
@@ -108,7 +116,7 @@ RunestoneBase.prototype.shouldUseServer = function (data) {
     } catch (err){
         // error while parsing; likely due to bad value stored in storage
         console.log(err.message);
-        localStorage.removeItem(eBookConfig.email + ":" + this.divid + "-given");
+        localStorage.removeItem(this.localStorageKey());
         // definitely don't want to use local storage here
         return true;
     }
@@ -120,3 +128,9 @@ RunestoneBase.prototype.shouldUseServer = function (data) {
     return serverDate >= storageDate;
 
 };
+
+
+// Return the key which to be used when accessing local storage.
+RunestoneBase.prototype.localStorageKey = function () {
+    return eBookConfig.email + ":" + this.divid + "-given";
+}
