@@ -78,7 +78,7 @@ Open Step 9 on the |reeborg_environment|.
 
 .. image:: images/step9.png
 
-Adjust the solution you created for Step 8, this time making use of two repeat loops. The world doesn't change from Step 8, but your solution should be much nicer. Remember to use comments and whitespace to increase the readability of your solution!
+Adjust the solution you created for Step 8, this time making use of at least two repeat loops. The world doesn't change from Step 8, but your solution should be much nicer. Remember to use comments and whitespace to increase the readability of your solution!
 
 
 .. |reeborg_environment| raw:: html
