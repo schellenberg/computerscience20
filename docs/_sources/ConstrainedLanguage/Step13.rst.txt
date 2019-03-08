@@ -69,7 +69,8 @@ provided you fill in the missing pieces. *Note: You may find the `done` function
         else:
             # something
 
-    repeat 42:  #we can replace this with a while after the next step...
+    #we can replace this repeat with while after the next step...
+    repeat 42:
         run_jump_or_finish()
 
 Note the structure of the ``if/elif/else`` statements; as is mentioned above,
