@@ -58,10 +58,10 @@ provided you fill in the missing pieces. *Note: You may find the `done` function
 
 .. code-block:: python
 
-   def jump_over_hurdle():
+    def jump_over_hurdle():
         # suitable definition
 
-   def run_jump_or_finish ():
+    def run_jump_or_finish ():
         if at_goal():
             # something
         elif front_is_clear():
@@ -84,10 +84,10 @@ Open Step 13 on the |reeborg_environment|, and copy/paste the following code to 
 
 .. code-block:: python
 
-   def jump_over_hurdle():
+    def jump_over_hurdle():
         # suitable definition
 
-   def run_jump_or_finish ():
+    def run_jump_or_finish ():
         if at_goal():
             done()  #tells Reeborg to stop
         elif front_is_clear():
@@ -95,7 +95,7 @@ Open Step 13 on the |reeborg_environment|, and copy/paste the following code to 
         else:
             # something
 
-    repeat 42:  #we can replace this with a while after the next step...
+    repeat 42:
         run_jump_or_finish()
 
 .. image:: images/step13.png

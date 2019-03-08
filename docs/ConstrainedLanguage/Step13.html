@@ -294,18 +294,18 @@ something like this:</p>
 <p>Here’s a program skeleton that should work for the world we mentioned above,
 provided you fill in the missing pieces. <em>Note: You may find the `done` function (which tells Reeborg to stop doing anything) helpful here.</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
-     <span class="c1"># suitable definition</span>
+    <span class="c1"># suitable definition</span>
 
 <span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
-     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
+    <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
+        <span class="c1"># something</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="c1"># something</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># something</span>
 
- <span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after the next step...</span>
-     <span class="n">run_jump_or_finish</span><span class="p">()</span>
+<span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after the next step...</span>
+    <span class="n">run_jump_or_finish</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Note the structure of the <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> statements; as is mentioned above,
@@ -316,18 +316,18 @@ will be executed</strong>.</p>
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Open Step 13 on the <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2013" target="_blank">Reeborg environment</a>, and copy/paste the following code to begin your solution:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
-     <span class="c1"># suitable definition</span>
+    <span class="c1"># suitable definition</span>
 
 <span class="k">def</span> <span class="nf">run_jump_or_finish</span> <span class="p">():</span>
-     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="n">done</span><span class="p">()</span>  <span class="c1">#tells Reeborg to stop</span>
-     <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
+    <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
+        <span class="n">done</span><span class="p">()</span>  <span class="c1">#tells Reeborg to stop</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="c1"># something</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># something</span>
 
- <span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>  <span class="c1">#we can replace this with a while after the next step...</span>
-     <span class="n">run_jump_or_finish</span><span class="p">()</span>
+<span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>
+    <span class="n">run_jump_or_finish</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../_images/step13.png" src="../_images/step13.png" />
