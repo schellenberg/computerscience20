@@ -71,7 +71,7 @@ If you want to, you can save yourself a few keystrokes by renaming the library t
     lib.turn_around()
 
 
-.. caution:: Although you may see it in some tutorials, you should avoid using import statements like ``from library import *``. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.
+.. caution:: Although you may see it in some tutorials, you should avoid using wildcard import statements like ``from library import *``. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.
 
 
 Your Turn
