@@ -280,11 +280,36 @@ well.</p>
 <img alt="../_images/library.png" src="../_images/library.png" />
 <p>Then, when you want to use the functions defined in your library, you will
 simply type <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span></code> (followed by the function names, separated
-by commas) on its own line in the Python Code editor. For example, if you have defined <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> in the library, you could type <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, and you would now be able to use the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function anywhere in your code.</p>
-<p>If you end up saving a large number of functions in the library, you will want to know that you can use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> to import <strong>all</strong> of the functions in the library. The <cite>*</cite> is called a wildcard character, and in this case tells Python to import all functions it can find in the library.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We use the <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span></code> command during our Reeborg explorations, which allows you to simply type in <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>. Later in the course, we will switch to using the <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">library</span></code> command, which will require you to type <code class="docutils literal notranslate"><span class="pre">library.turn_right()</span></code> to call the function.</p>
+by commas) on its own line in the Python Code editor. For example, if you have defined <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> in the library, you could type <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, and you would now be able to use the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function anywhere in your code. See the example below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import functions from the library tab</span>
+<span class="kn">from</span> <span class="nn">library</span> <span class="k">import</span> <span class="n">turn_right</span><span class="p">,</span> <span class="n">turn_around</span>
+
+<span class="c1"># when you want to use the functions</span>
+<span class="n">turn_right</span><span class="p">()</span>
+<span class="n">turn_around</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you end up saving a large number of functions into the library, you may also import <strong>all</strong> of the functions in the library by calling <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">library</span></code>. When you do this, however, be aware that you then need to specify where the function is coming from when you call it. For example, if we had defined <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> in the library, we would call the function using <code class="docutils literal notranslate"><span class="pre">library.turn_right()</span></code>. See the example below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import functions from the library tab</span>
+<span class="kn">import</span> <span class="nn">library</span>
+
+<span class="c1"># when you want to use the function</span>
+<span class="n">library</span><span class="o">.</span><span class="n">turn_right</span><span class="p">()</span>
+<span class="n">library</span><span class="o">.</span><span class="n">turn_around</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you want to, you can save yourself a few keystrokes by renaming the library tab when you import it. Consider the following example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import functions from the library tab</span>
+<span class="kn">import</span> <span class="nn">library</span> <span class="k">as</span> <span class="nn">lib</span>
+
+<span class="c1"># when you want to use the function</span>
+<span class="n">lib</span><span class="o">.</span><span class="n">turn_right</span><span class="p">()</span>
+<span class="n">lib</span><span class="o">.</span><span class="n">turn_around</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Although you may see it in some tutorials, you should avoid using import statements like <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code>. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.</p>
 </div>
 </div>
 <div class="section" id="your-turn">

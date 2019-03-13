@@ -41,15 +41,37 @@ well.
 
 Then, when you want to use the functions defined in your library, you will
 simply type ``from library import`` (followed by the function names, separated
-by commas) on its own line in the Python Code editor. For example, if you have defined ``turn_right()`` in the library, you could type ``from library import turn_right``, and you would now be able to use the ``turn_right()`` function anywhere in your code.
+by commas) on its own line in the Python Code editor. For example, if you have defined ``turn_right()`` in the library, you could type ``from library import turn_right``, and you would now be able to use the ``turn_right()`` function anywhere in your code. See the example below::
 
-If you end up saving a large number of functions in the library, you will want to know that you can use ``from library import *`` to import **all** of the functions in the library. The `*` is called a wildcard character, and in this case tells Python to import all functions it can find in the library.
+    # import functions from the library tab
+    from library import turn_right, turn_around
 
-.. note:: 
+    # when you want to use the functions
+    turn_right()
+    turn_around()
 
-    We use the ``from library import`` command during our Reeborg explorations, which allows you to simply type in ``turn_right()``. Later in the course, we will switch to using the ``import library`` command, which will require you to type ``library.turn_right()`` to call the function.
+
+If you end up saving a large number of functions into the library, you may also import **all** of the functions in the library by calling ``import library``. When you do this, however, be aware that you then need to specify where the function is coming from when you call it. For example, if we had defined ``turn_right()`` in the library, we would call the function using ``library.turn_right()``. See the example below::
+
+    # import functions from the library tab
+    import library
+
+    # when you want to use the function
+    library.turn_right()
+    library.turn_around()
 
 
+If you want to, you can save yourself a few keystrokes by renaming the library tab when you import it. Consider the following example::
+
+    # import functions from the library tab
+    import library as lib
+
+    # when you want to use the function
+    lib.turn_right()
+    lib.turn_around()
+
+
+.. caution:: Although you may see it in some tutorials, you should avoid using import statements like ``from library import *``. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.
 
 
 Your Turn
