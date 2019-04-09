@@ -271,13 +271,16 @@ Question 4
     :answer_b: False
     :correct: a
     :feedback_a: Great!
-    :feedback_b: Try again!
+    :feedback_b: Try again! Notice that the part after the "and" isn't a full question...
 
     What would the following print?::
 
         a = 6
         b = 10
-        print( a == 6 and 10 )
+        if a == 6 and 10:
+            print("True")
+        else:
+            print("False")
 
 
 Question 5
