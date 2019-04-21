@@ -32,10 +32,6 @@ The world will look something like this at the start:
 
 .. image:: images/star_tower1_start.png
 
-When your program is done, the ending world should look like this:
-
-.. image:: images/star_tower1_end.png
-
 
 Star Towers - Version 2
 ------------------------
