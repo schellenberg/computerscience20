@@ -279,7 +279,10 @@ Write a program that sets the red intensity of all pixels on the left half of th
     import image
 
     img = image.Image("berries.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    
@@ -307,7 +310,10 @@ Write a program that makes the top right quarter of the image be tinted blue (by
     import image
 
     img = image.Image("sneakers.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    
@@ -335,7 +341,10 @@ Write a program that changes the colour of the rooster's comb and wattle (the re
     import image
 
     img = image.Image("rooster.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    
@@ -363,7 +372,10 @@ Write a program that takes the left side of an image and displays it both on the
     import image
 
     img = image.Image("giraffe.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    
@@ -391,7 +403,10 @@ Write a program that mirrors an image from left to right around a vertical line 
     import image
 
     img = image.Image("giraffe.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    
@@ -419,7 +434,10 @@ Write a program that mirrors an image from top to bottom around a horizontal lin
     import image
 
     img = image.Image("giraffe.jpg")
-    win = image.ImageWin(img.get_width(), img.get_height())
+    width = img.get_width()
+    height = img.get_height()
+
+    win = image.ImageWin(width, height)
     img.draw(win)
 
     # your code goes here!    

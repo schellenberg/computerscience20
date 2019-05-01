@@ -1302,11 +1302,14 @@ Parsons.prototype.initializeLines = function(text) {
 	for (var i = 0; i < textBlocks.length; i++) {
 		var textBlock = textBlocks[i];
 
-		// Figure out options based on the #option 
+		// Figure out options based on the #option and #option=value syntax
 		// Remove the options from the code
-		// only options are #paired or #distractor
 		var options = {};
-		textBlock = textBlock.replace(/#(paired|distractor)/, function(mystring, arg1) {
+		textBlock = textBlock.replace(/#(\w+)=(\w+)/, function(mystring, arg1, arg2) {
+			options[arg1] = arg2;
+			return ""
+		});
+		textBlock = textBlock.replace(/#(\w+)/, function(mystring, arg1) {
 			options[arg1] = true;
 			return ""
 		});
@@ -1413,29 +1416,17 @@ Parsons.prototype.initializeAreas = function(sourceBlocks, answerBlocks, options
 	// Establish the width and height of the droppable areas
 	var item, maxFunction;
 	areaHeight = 6;
-	var height_add = 0;
-	if(this.options.numbered != undefined) {
-		height_add = 1;
-	}
 	if (this.options.language == "natural") {
 		areaWidth = 300;
 		maxFunction = function(item) {
 			item.width(areaWidth - 22);
-			var addition = 3.8;
-			if (item.outerHeight(true) != 38)
-				addition = 2.1*(item.outerHeight(true)-38)/21;
-			areaHeight += (item.outerHeight(true)+height_add*addition);
-
+			areaHeight += item.outerHeight(true);
 		};
 	} else {
 		areaWidth = 0;
 		maxFunction = function(item) {
-			var addition = 3.8;
-			if (item.outerHeight(true) != 38)
-				addition = 2.1;
-			areaHeight += (item.outerHeight(true)+height_add*addition);
+			areaHeight += item.outerHeight(true);
 			areaWidth = Math.max(areaWidth, item.outerWidth(true));
-			
 		};
 	}
 	for (i = 0; i < blocks.length; i++) {
@@ -1444,7 +1435,6 @@ Parsons.prototype.initializeAreas = function(sourceBlocks, answerBlocks, options
 	this.areaWidth = areaWidth;
 	if(this.options.numbered != undefined) {
 		this.areaWidth += 25;
-		//areaHeight += (blocks.length);
 	}
 	this.areaHeight = areaHeight;
 	$(this.sourceArea).css({
@@ -1817,7 +1807,7 @@ Parsons.prototype.adaptBlocks = function(input) {
 	var nBlocksToCombine = 0;
 	var nDistractors = distractors.length;
 	var nToRemove = 0;
-	this.pairDistractors = true;
+	this.pairDistractors = false;
 
 	var giveIndentation = false;
 	if(lastestAttemptCount < 2) { // 1 Try
@@ -1825,7 +1815,6 @@ Parsons.prototype.adaptBlocks = function(input) {
 		this.limitDistractors = false;
 	} else if(lastestAttemptCount < 4) { // 2-3 Tries
 		// Do nothing they are doing normal
-		this.pairDistractors = true;
 	} else if(lastestAttemptCount < 6) { // 4-5 Tries
 		// pair distractors
 		this.pairDistractors = true;
