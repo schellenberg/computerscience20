@@ -474,7 +474,7 @@ Write a program that creates a gradient effect (slowly transitioning from one co
 
     img.draw(win)
 
-.. reveal:: mirror_vertical_solution
+.. reveal:: gradient_solution
     :showtitle: Solution Image
 
     Your program should create an image that looks similar to the following:
