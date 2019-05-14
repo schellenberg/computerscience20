@@ -281,7 +281,7 @@ Question 8
 An Accelerometer Fruitful Function
 ----------------------------------
 
-Let's adapt the code above to use a fruitful function. We will make a function called ``horizontal_tilt()`` that returns either "left", "right", or None. 
+Let's adapt the code above to use a fruitful function. We will make a function called ``horizontal_tilt()`` that returns either "left", "right", or "flat". 
 
 
 .. code-block:: python
