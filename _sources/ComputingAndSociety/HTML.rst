@@ -131,7 +131,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
 
    <h1>Embedded Images</h1>
    <p>Images are inline elements because they fit in the flow
-   <img src="/computerscience20/_static/skflag.png">
+   <img src="/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
    <p>This image uses a <em>relative path</em>, which means
    that there isn't a http:// at the start of the path.</p>
@@ -140,10 +140,10 @@ The image tag has a new component to it called an attribute.  In general tags ca
    :language: html
 
    <p>Images are inline elements because they fit in the flow
-   <img src="http://cs20.ca/_static/skflag.png">
+   <img src="https://cs20.ca/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
    <p>This image uses an <em>absolute path</em>, which means
-   that there is a http:// at the start of the path.</p>
+   that there is a https:// at the start of the path.</p>
 
 
 .. note:: If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your ``skflag.png`` image is saved in the same folder as your ``index.html`` file, you can just use something like ``<img src="skflag.png">``.
