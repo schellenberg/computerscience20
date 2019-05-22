@@ -35,7 +35,7 @@ An HTML document then just contains a series of these balanced tags.
 
     When experimenting with HTML, you can simply use a web based environment (like the one you are in right now), but it can be very instructive to experiment with how to do this with files on your computer as well. For any of the examples given below, you can simply create a text file on your computer, type some HTML, then make sure you save the file as ``something.html``. The .html extension is very important, as it allows your computer to identify what type of content is contained within the file. After the file is saved, open it using your web browser of choice (Chrome, Edge, Firefox, etc.).
 
-    When creating the text file on your computer, be sure to use a plain text editor (something like Notepad, not Word!). I recommend using `Atom <https://atom.io/>`_, as it works the same for Windows/Mac/Linux, is free, and doesn't require admin rights to install in a lab setting.
+    When creating the text file on your computer, be sure to use a plain text editor (something like Notepad, not Word!). I recommend using `VS Code <https://code.visualstudio.com/>`_, as it works the same for Windows/Mac/Linux, is free, and doesn't require admin rights to install in a lab setting.
 
 
 
