@@ -172,7 +172,7 @@ The last basic tag to cover in this section is the link tag ``a``.  In fact the 
 
 Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
 
-.. note:: Due to a rendering error within ActiveCode, <a> tags will look like regular links, but will not function properly. To see the result of an <a> tag in action, I recommend doing these demonstrations using a text editor (such as Atom), and viewing the page in your browser.
+.. note:: Due to a rendering error within ActiveCode, <a> tags will look like regular links, but will not function properly. To see the result of an <a> tag in action, I recommend doing these demonstrations using a text editor (such as VS Code), and viewing the page in your browser.
 
 
 Links can also be used to navigate within the same page.  to do this you use one ``a`` tag to create
@@ -371,8 +371,8 @@ Embedding audio in your webpage allows you to link to various files containing m
    :language: html
 
     <audio controls>
-        <source src="/computerscience20/_static/battleThemeA.mp3" type="audio/mpeg">
-        <source src="/computerscience20/_static/battleThemeA.ogg" type="audio/ogg">
+        <source src="/_static/battleThemeA.mp3" type="audio/mpeg">
+        <source src="/_static/battleThemeA.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
 
@@ -388,8 +388,8 @@ Embedding video in your webpage allows you to link to various files containing m
    :language: html
 
     <video height=300 width=400 controls>
-        <source src="/computerscience20/_static/run-cycle.mp4" type="video/mp4">
-        <source src="/computerscience20/_static/run-cycle.ogg" type="video/ogg">
+        <source src="/_static/run-cycle.mp4" type="video/mp4">
+        <source src="/_static/run-cycle.ogg" type="video/ogg">
         Your browser does not support the video element.
     </video>
 
@@ -408,7 +408,7 @@ IFrames allow you to embed a webpage within another webpage.  The activecode exa
     Open up YouTube, find a video, then copy/paste the iframe embed code here!
 
 
-.. note::  Although you can certainly do the following practice problems here in the textbook, you might find it useful to make an HTML page in an text editor (such as Atom), then solve each of the following problems inside of that file.
+.. note::  Although you can certainly do the following practice problems here in the textbook, you might find it useful to make an HTML page in an text editor (such as VS Code), then solve each of the following problems inside of that file.
 
 
 Practice Problems
