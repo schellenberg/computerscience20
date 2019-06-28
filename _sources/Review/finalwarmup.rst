@@ -6,10 +6,16 @@ Python Warmup
 =================
 
 
+Create a function for each of the following, and copy/paste your final version into a Python file (in Thonny) called warmup.py. Note that you do NOT need to call the function, as that will be done for you when you click the Run button.
+
+**For each Python question, be sure to use well-commented code when appropriate, 
+and demonstrate as much of your knowledge as much as possible.**
+
+
 Letter Grade
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. activecode:: letter-grade
+.. activecode:: letter-grade-final-warmup
     :nocodelens:
 
     Write a function that returns the letter grade, given an exam mark as the parameter. The grading scheme is:
