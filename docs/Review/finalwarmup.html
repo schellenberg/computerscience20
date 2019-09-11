@@ -243,8 +243,73 @@
   
   <div class="section" id="python-warmup">
 <h1>Python Warmup<a class="headerlink" href="#python-warmup" title="Permalink to this headline">¶</a></h1>
+<p>Create a function for each of the following, and copy/paste your final version into a Python file (in Thonny) called warmup.py. Note that you do NOT need to call the function, as that will be done for you when you click the Run button.</p>
+<p><strong>For each Python question, be sure to use well-commented code when appropriate,
+and demonstrate as much of your knowledge as much as possible.</strong></p>
 <div class="section" id="letter-grade">
 <h2>Letter Grade<a class="headerlink" href="#letter-grade" title="Permalink to this headline">¶</a></h2>
+
+<div data-childcomponent="letter-grade-final-warmup" class="runestone explainer ac_section alert alert-warning">
+<p>Write a function that returns the letter grade, given an exam mark as the parameter. The grading scheme is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Letter Grade</th>
+<th class="head">Interval</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>A</td>
+<td>&gt;= 90</td>
+</tr>
+<tr class="row-odd"><td>B</td>
+<td>[80, 90)</td>
+</tr>
+<tr class="row-even"><td>C</td>
+<td>[70, 80)</td>
+</tr>
+<tr class="row-odd"><td>D</td>
+<td>[60, 70)</td>
+</tr>
+<tr class="row-even"><td>F</td>
+<td>&lt; 60</td>
+</tr>
+</tbody>
+</table>
+<p>The square and round brackets denote closed and open intervals. A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C, but 80 gets grade B.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(83)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(73)</span> <span class="pre">→</span> <span class="pre">&quot;C&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">letter_grade(80)</span> <span class="pre">→</span> <span class="pre">&quot;B&quot;</span></code></p>
+
+<textarea data-component="activecode" id=letter-grade-final-warmup data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+def letter_grade(exam_grade):
+    return "A"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(letter_grade(83),"B","letter_grade(83)")
+        self.assertEqual(letter_grade(75),"C","letter_grade(75)")
+        self.assertEqual(letter_grade(80),"B","letter_grade(80)")
+        self.assertEqual(letter_grade(90),"A","letter_grade(90)")
+        self.assertEqual(letter_grade(89.9),"B","letter_grade(89.9)")
+        self.assertEqual(letter_grade(55),"F","letter_grade(55)")
+        self.assertEqual(letter_grade(45),"F","letter_grade(45)")
+        self.assertEqual(letter_grade(69.7),"D","letter_grade(69.7)")
+
+myTests().main()
+</textarea>
+</div>
 </div>
 <div class="section" id="find-the-smallest">
 <h2>Find the Smallest<a class="headerlink" href="#find-the-smallest" title="Permalink to this headline">¶</a></h2>
