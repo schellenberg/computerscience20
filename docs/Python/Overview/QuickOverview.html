@@ -692,7 +692,7 @@ elif age == 15:
 </div>
 <div class="section" id="python-modules">
 <span id="index-13"></span><h2>1.16. Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
-<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
+<p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, you made the <code class="docutils literal notranslate"><span class="pre">turn_right</span></code> function defined in the library tab available to your program. Consider the following ways you can use to import modules in Python.</p>
 
 <div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
 
@@ -700,7 +700,7 @@ elif age == 15:
       data-timelimit=25000    
     data-audio=''     
          data-caption='This works, but is not recommended.' >
-from math import *
+from math import sqrt, cos
 
 print( sqrt(16) )
 print( cos(0) )

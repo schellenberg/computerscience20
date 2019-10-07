@@ -380,13 +380,13 @@ The following example is not going to work when you try to run it. Try entering 
 Python Modules
 ---------------
 
-One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import *```, you made all of the functions in the library tab available to your program. Please note that although we could use the ``from library import *`` syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.
+One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed ``from library import turn_right``, you made the ``turn_right`` function defined in the library tab available to your program. Consider the following ways you can use to import modules in Python.
 
 .. activecode:: module_intro_1
     :nocodelens:
     :caption: This works, but is not recommended.
 
-    from math import *
+    from math import sqrt, cos
 
     print( sqrt(16) )
     print( cos(0) )
