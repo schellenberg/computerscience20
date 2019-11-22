@@ -161,6 +161,7 @@ Python - Lists
    Python/Lists/ListOverview.rst
    Python/Lists/ListMethods.rst
    Python/Lists/ListsAndTurtles.rst
+   Python/Lists/RecamanSequence.rst
 
 
 Student-Directed Research

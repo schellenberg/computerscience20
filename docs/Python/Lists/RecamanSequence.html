@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4. Recamán Sequence Visualization &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
+    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
+    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
+    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
+    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
+    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Project Overview" href="../../StudentResearch/ProjectOverview.html" />
+    <link rel="prev" title="3. Lists and Turtle Drawing" href="ListsAndTurtles.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.4.4';
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">ActiveCode Work Area</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">4. Recamán Sequence Visualization</a><ul>
+<li><a class="reference internal" href="#sequence-description">4.1. Sequence Description</a></li>
+<li><a class="reference internal" href="#generating-the-sequence-in-python">4.2. Generating the Sequence in Python</a></li>
+<li><a class="reference internal" href="#visualizing-the-sequence">4.3. Visualizing the Sequence</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 3. Lists and Turtle Drawing" data-toggle="tooltip">
+    <a href="ListsAndTurtles.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Project Overview' data-toggle="tooltip" >
+    <a href="../../StudentResearch/ProjectOverview.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="recaman-sequence-visualization">
+<h1>4. Recamán Sequence Visualization<a class="headerlink" href="#recaman-sequence-visualization" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Quick Overview of Day</p>
+<p>Introduce the Recamán sequence. Use turtles to make a visualization of the sequence.</p>
+</div>
+<div class="section" id="sequence-description">
+<h2>4.1. Sequence Description<a class="headerlink" href="#sequence-description" title="Permalink to this headline">¶</a></h2>
+<p>The first few values of the sequence are as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">11.</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://oeis.org/A005132">Recamán sequence</a> is generated by the following rules:</p>
+<ul>
+<li><p class="first">begin at 0</p>
+</li>
+<li><p class="first">each step (change) in the sequence will be one larger than the last step</p>
+</li>
+<li><p class="first">to get to the next number in the sequence, you will either add or subtract the step size, based on the following criteria:</p>
+<blockquote>
+<div><ul class="simple">
+<li>if subtracting creates a number that is positive, and that you have not yet seen in the sequence, do it</li>
+<li>if you cannot subtract based on the rule above, add instead</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>For the first few values in the sequence, the thought process for applying the rules would be something like:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="10%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Change Amount</th>
+<th class="head">Current Value</th>
+<th class="head">Explanation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>starting value</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>1</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">-1</span></code>, which is a negative value</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>3</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">-1</span></code>, which is a negative value</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>6</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">0</span></code>, which is already in the sequence</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>2</td>
+<td>able to subtract, since <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">-</span> <span class="pre">4</span> <span class="pre">=</span> <span class="pre">2</span></code>, which is both positive and a number that has not yet been used in the sequence</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>7</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">-3</span></code>, which is a negative value</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>13</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">-</span> <span class="pre">6</span> <span class="pre">=</span> <span class="pre">1</span></code>, which is already in the sequence</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>20</td>
+<td>had to add, since subtracting <code class="docutils literal notranslate"><span class="pre">13</span> <span class="pre">-</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">6</span></code>, which is already in the sequence</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>12</td>
+<td>able to subtract, since <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">-</span> <span class="pre">8</span> <span class="pre">=</span> <span class="pre">12</span></code>, which is both positive and a number that has not yet been used in the sequence</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="generating-the-sequence-in-python">
+<h2>4.2. Generating the Sequence in Python<a class="headerlink" href="#generating-the-sequence-in-python" title="Permalink to this headline">¶</a></h2>
+<p>To generate the sequence in Python, we need to keep track of which numbers have already appeared in the sequence. This can be done easily by using a list. Recall that you can add a number to the end of a list using the <code class="docutils literal notranslate"><span class="pre">append</span></code> method, so you might call <code class="docutils literal notranslate"><span class="pre">numbers_used.append(current)</span></code>, as shown below.</p>
+
+<div data-childcomponent="appending_reminder" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=appending_reminder data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+          >
+numbers_used = [0, 1, 3]
+numbers_used.append(6)
+print(numbers_used)
+</textarea>
+</div>
+<p>Say you wanted to generate the sequence for first 10 steps. To do this, initialize a variable to hold the current number we are at in the sequence. You also need to create an empty list to keep track of all the numbers we have seen before. When checking to see if you have used a number in the sequence already, you can ask if the number is <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> the list.</p>
+
+<div data-childcomponent="generating_recaman_sequence" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=generating_recaman_sequence data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+          >
+current = 0
+numbers_used = []
+
+for step_size in range(0, 10):
+    backwards_step = current - step_size
+    forwards_step = current + step_size
+    if backwards_step > 0 and backwards_step not in numbers_used:
+        current = backwards_step
+    else:
+        current = forwards_step
+
+    numbers_used.append(current)
+    print(current)
+</textarea>
+</div>
+</div>
+<div class="section" id="visualizing-the-sequence">
+<h2>4.3. Visualizing the Sequence<a class="headerlink" href="#visualizing-the-sequence" title="Permalink to this headline">¶</a></h2>
+<p>We can use the turtle module to visualize the sequence. In order to explore the following code, you might want to copy/paste this into Thonny.</p>
+<p>To start exploring this, consider the following:</p>
+<ul class="simple">
+<li>run the code as it is first. What do you think it would look like if we increased the <code class="docutils literal notranslate"><span class="pre">MAX_STEP</span></code> to 20? Tell one other person what your guess is, then update the <code class="docutils literal notranslate"><span class="pre">MAX_STEP</span></code> variable to be 20, and re-run the code. Did it do what you expected?</li>
+<li>as you increase the size of the <code class="docutils literal notranslate"><span class="pre">MAX_STEP</span></code> variable, you might find it useful to decrease the <code class="docutils literal notranslate"><span class="pre">SCALE</span></code> variable</li>
+</ul>
+
+<div data-childcomponent="recaman_visualization" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=recaman_visualization data-lang="python" 
+      data-timelimit=180000    
+    data-audio=''     
+          >
+import turtle
+
+canvas = turtle.Screen()
+# canvas.tracer(10)
+
+pen = turtle.Turtle()
+
+# move to the bottom of the screen
+pen.penup()
+pen.goto(0, -175)
+pen.pendown()
+pen.speed(0)
+
+# initialize variables
+step_size = 0
+MAX_STEP = 10
+SCALE = 3
+numbers_used = []
+current = 0
+
+for step_size in range(0, MAX_STEP):
+    # go backward if you can
+    backward_step = current - step_size
+    if backward_step > 0 and backward_step not in numbers_used:
+        current = backward_step
+        pen.color("red")
+
+    # if you can't go backward, go forward
+    else:
+        current = current + step_size
+        pen.color("black")
+
+    pen.circle(current * SCALE)
+
+    numbers_used.append(current)
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 3. Lists and Turtle Drawing' data-toggle="tooltip">
+    <a href="ListsAndTurtles.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="ListsAndTurtles.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Project Overview' data-toggle="tooltip" >
+    <a href="../../StudentResearch/ProjectOverview.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../../StudentResearch/ProjectOverview.html" >Next Section - Project Overview</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
