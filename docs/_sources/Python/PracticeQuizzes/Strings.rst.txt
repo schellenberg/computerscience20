@@ -2,6 +2,7 @@
    :prefix: strings-quiz
    :start: 1
 
+.. _strings_practice_quiz:
 
 Strings Practice Quiz
 ================================

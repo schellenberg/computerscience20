@@ -2,9 +2,10 @@
    :prefix: boolean-quiz
    :start: 1
 
+.. _booleans_practice_quiz:
 
 Booleans Practice Quiz
-================================
+=======================
 
 .. reveal:: curriculum_addressed
     :showtitle: Curriculum Outcomes Addressed In This Section

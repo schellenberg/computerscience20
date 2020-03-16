@@ -2,6 +2,7 @@
    :prefix: loops-quiz
    :start: 1
 
+.. _loops_practice_quiz:
 
 Loops Practice Quiz
 ================================

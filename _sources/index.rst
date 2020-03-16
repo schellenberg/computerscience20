@@ -164,6 +164,17 @@ Python - Lists
    Python/Lists/RecamanSequence.rst
 
 
+Python Practice Quizzes
+:::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   Python/PracticeQuizzes/Booleans.rst
+   Python/PracticeQuizzes/Loops.rst
+   Python/PracticeQuizzes/Functions.rst
+
+
 Student-Directed Research
 :::::::::::::::::::::::::
 

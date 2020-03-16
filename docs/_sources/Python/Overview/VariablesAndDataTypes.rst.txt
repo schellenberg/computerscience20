@@ -484,7 +484,7 @@ Write a program that will compute the area of a rectangle.  Prompt the user to e
 Car Gas Usage
 ~~~~~~~~~~~~~
 
-Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Promp the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. *Note: If you aren't sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km*.
+Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Prompt the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. *Note: If you aren't sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km*.
 
 .. activecode:: practice_problem_variables_data_types_3
     :nocodelens:
