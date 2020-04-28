@@ -87,7 +87,9 @@ Like any document HTML documents may have several layers of headings.  In fact y
    :language: html
 
    <h1>Level one</h1>
+
    <h2>Level two</h2>
+
    <h3>Level three</h3>
 
 
@@ -130,11 +132,13 @@ The image tag has a new component to it called an attribute.  In general tags ca
    :language: html
 
    <h1>Embedded Images</h1>
-   <p>Images are inline elements because they fit in the flow
-   <img src="/_static/skflag.png">
-   of a paragraph without causing extra line breaks.</p>
-   <p>This image uses a <em>relative path</em>, which means
-   that there isn't a http:// at the start of the path.</p>
+
+      <p>Images are inline elements because they fit in the flow
+      <img src="/_static/skflag.png">
+      of a paragraph without causing extra line breaks.</p>
+
+      <p>This image uses a <em>relative path</em>, which means
+      that there isn't a http:// at the start of the path.</p>
 
 .. activecode:: html_img2
    :language: html
@@ -142,6 +146,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
    <p>Images are inline elements because they fit in the flow
    <img src="https://cs20.ca/_static/skflag.png">
    of a paragraph without causing extra line breaks.</p>
+   
    <p>This image uses an <em>absolute path</em>, which means
    that there is a https:// at the start of the path.</p>
 
@@ -166,8 +171,9 @@ The last basic tag to cover in this section is the link tag ``a``.  In fact the 
    :language: html
 
    <h1>Links make the web!</h1>
-   <p>Links are another inline element.  You can read about links and their attributes on
-   <a href="http://www.w3schools.com/tags/tag_a.asp">the w3schools website</a>.</p>
+
+      <p>Links are another inline element.  You can read about links and their attributes on
+      <a href="http://www.w3schools.com/tags/tag_a.asp">the w3schools website</a>.</p>
 
 
 Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
@@ -189,16 +195,15 @@ Making text bold or italic and other formatting is easy in HTML as well.  The fo
    :language: html
 
    <html>
-   <body>
-
-   <p><b>This text is bold</b></p>
-   <p><strong>This text is strong</strong></p>
-   <p><i>This text is italic</i></p>
-   <p><em>This text is emphasized</em></p>
-   <p><code>This is computer output</code></p>
-   <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
-   <p>This <br /> forces <br /> a <br /> line break </p>
-   </body>
+      <body>
+         <p><b>This text is bold</b></p>
+         <p><strong>This text is strong</strong></p>
+         <p><i>This text is italic</i></p>
+         <p><em>This text is emphasized</em></p>
+         <p><code>This is computer output</code></p>
+         <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+         <p>This <br /> forces <br /> a <br /> line break </p>
+      </body>
    </html>
 
 You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.
@@ -212,14 +217,13 @@ You can mix and match these styles in all kinds of ways.  Try making a superscri
    :feedback: Block elements start on a new line and take up the full width available.
 
    &lt;html&gt;
-   :click-incorrect:&lt;body&gt;:endclick:
-
-   :click-correct:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
-   :click-correct:&lt;p&gt;:endclick:Hello World!   This is :click-incorrect:&lt;b&gt;:endclick:me&lt;/b&gt; :click-incorrect:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
-   :click-correct:&lt;p&gt;:endclick:This is my second paragraph
-   :click-incorrect:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
-   :click-incorrect:&lt;/p&gt;:endclick:
-   &lt;/body&gt;
+      :click-incorrect:&lt;body&gt;:endclick:
+         :click-correct:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
+            :click-correct:&lt;p&gt;:endclick:Hello World!   This is :click-incorrect:&lt;b&gt;:endclick:me&lt;/b&gt; :click-incorrect:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
+            :click-correct:&lt;p&gt;:endclick:This is my second paragraph
+            :click-incorrect:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
+            :click-incorrect:&lt;/p&gt;:endclick:
+      &lt;/body&gt;
    &lt;/html&gt;
 
 
@@ -229,14 +233,13 @@ You can mix and match these styles in all kinds of ways.  Try making a superscri
    :feedback: Inline elements do not start on a new line and only take as much width as needed.
 
     &lt;html&gt;
-    &lt;body&gt;
-    :click-incorrect:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
-    &lt;p&gt;Hello World!  This is :click-correct:&lt;b&gt;:endclick:me&lt;/b&gt; :click-correct:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
-
-    :click-incorrect:&lt;p&gt;:endclick:This is my second paragraph
-    :click-correct:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
-    &lt;/p&gt;
-    &lt;/body&gt;
+      &lt;body&gt;
+         :click-incorrect:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
+            &lt;p&gt;Hello World!  This is :click-correct:&lt;b&gt;:endclick:me&lt;/b&gt; :click-correct:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
+            :click-incorrect:&lt;p&gt;:endclick:This is my second paragraph
+            :click-correct:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
+            &lt;/p&gt;
+      &lt;/body&gt;
     &lt;/html&gt;
 
 
@@ -251,8 +254,8 @@ Unordered Lists
    :language: html
 
    <ul>
-   <li>This is an unordered list</li>
-   <li>The <code>li</code> tags come between two <code>ul</code> tags
+      <li>This is an unordered list</li>
+      <li>The <code>li</code> tags come between two <code>ul</code> tags</li>
    </ul>
 
 
@@ -263,9 +266,9 @@ Ordered Lists
    :language: html
 
    <ol>
-   <li>This is an ordered list</li>
-   <li>The <code>li</code> tags come between two <code>ol</code> tags
-   <li>Notice that the <code>li</code> tags are used for both.
+      <li>This is an ordered list</li>
+      <li>The <code>li</code> tags come between two <code>ol</code> tags</li>
+      <li>Notice that the <code>li</code> tags are used for both ordered and unordered lists.</li>
    </ol>
 
 The ``ol`` tag can also have a ``type`` attribute, so it could look something like ``<ol type="1">``.  The ``type`` attribute can be one of the following values:
@@ -288,14 +291,15 @@ Lists can be inside of other lists. This is true for most HTML tags.
    :language: html
 
    <ol>
-   <li>This is an ordered list</li>
-   <li>The <code>li</code> tags come between two <code>ol</code> tags
-   <li>Notice that the <code>li</code> tags are used for both.
-   <ul>
-   <li>This is an unordered list</li>
-   <li>The <code>li</code> tags come between two <code>ul</code> tags</li>
-   </ul>
-   <li>You can mix and match lists like this as deeply as you want.</li>
+      <li>This is an ordered list</li>
+      <li>The <code>li</code> tags come between two <code>ol</code> tags</li>
+      <li>Notice that the <code>li</code> tags are used for both ordered and unordered lists.
+         <ul>
+            <li>This is an unordered list</li>
+            <li>The <code>li</code> tags come between two <code>ul</code> tags</li>
+         </ul>
+      </li>
+      <li>You can mix and match lists like this as deeply as you want.</li>
    </ol>
 
 

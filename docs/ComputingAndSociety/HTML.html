@@ -331,7 +331,9 @@
     data-audio=''     
           >
 &lt;h1&gt;Level one&lt;/h1&gt;
+
 &lt;h2&gt;Level two&lt;/h2&gt;
+
 &lt;h3&gt;Level three&lt;/h3&gt;
 </textarea>
 </div>
@@ -371,11 +373,13 @@
     data-audio=''     
           >
 &lt;h1&gt;Embedded Images&lt;/h1&gt;
-&lt;p&gt;Images are inline elements because they fit in the flow
-&lt;img src=&quot;/_static/skflag.png&quot;&gt;
-of a paragraph without causing extra line breaks.&lt;/p&gt;
-&lt;p&gt;This image uses a &lt;em&gt;relative path&lt;/em&gt;, which means
-that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
+
+   &lt;p&gt;Images are inline elements because they fit in the flow
+   &lt;img src=&quot;/_static/skflag.png&quot;&gt;
+   of a paragraph without causing extra line breaks.&lt;/p&gt;
+
+   &lt;p&gt;This image uses a &lt;em&gt;relative path&lt;/em&gt;, which means
+   that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
 </textarea>
 </div>
 
@@ -388,6 +392,7 @@ that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
 &lt;p&gt;Images are inline elements because they fit in the flow
 &lt;img src=&quot;https://cs20.ca/_static/skflag.png&quot;&gt;
 of a paragraph without causing extra line breaks.&lt;/p&gt;
+
 &lt;p&gt;This image uses an &lt;em&gt;absolute path&lt;/em&gt;, which means
 that there is a https:// at the start of the path.&lt;/p&gt;
 </textarea>
@@ -411,8 +416,9 @@ that there is a https:// at the start of the path.&lt;/p&gt;
     data-audio=''     
           >
 &lt;h1&gt;Links make the web!&lt;/h1&gt;
-&lt;p&gt;Links are another inline element.  You can read about links and their attributes on
-&lt;a href=&quot;http://www.w3schools.com/tags/tag_a.asp&quot;&gt;the w3schools website&lt;/a&gt;.&lt;/p&gt;
+
+   &lt;p&gt;Links are another inline element.  You can read about links and their attributes on
+   &lt;a href=&quot;http://www.w3schools.com/tags/tag_a.asp&quot;&gt;the w3schools website&lt;/a&gt;.&lt;/p&gt;
 </textarea>
 </div>
 <p>Try clicking on the link in the example above.  What happens?  How do you get back?   Don’t worry, you can always just reload this page.</p>
@@ -436,16 +442,15 @@ a link that will jump to the target anywhere else on the page using <code class=
     data-audio=''     
           >
 &lt;html&gt;
-&lt;body&gt;
-
-&lt;p&gt;&lt;b&gt;This text is bold&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;This text is strong&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;i&gt;This text is italic&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This text is emphasized&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;This is computer output&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This is&lt;sub&gt; subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;This &lt;br /&gt; forces &lt;br /&gt; a &lt;br /&gt; line break &lt;/p&gt;
-&lt;/body&gt;
+   &lt;body&gt;
+      &lt;p&gt;&lt;b&gt;This text is bold&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;This text is strong&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;i&gt;This text is italic&lt;/i&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;em&gt;This text is emphasized&lt;/em&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;code&gt;This is computer output&lt;/code&gt;&lt;/p&gt;
+      &lt;p&gt;This is&lt;sub&gt; subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;&lt;/p&gt;
+      &lt;p&gt;This &lt;br /&gt; forces &lt;br /&gt; a &lt;br /&gt; line break &lt;/p&gt;
+   &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
@@ -455,14 +460,13 @@ a link that will jump to the target anywhere else on the page using <code class=
 <div class="runestone">
 <div data-component="clickablearea" class="runestone alert alert-warning" id="blockelem"   >
 <span data-question>html1: Click on the beginning tag for all block elements in the example.</span><span data-feedback>Block elements start on a new line and take up the full width available.</span><pre>&lt;html&gt;
-<span data-incorrect>&lt;body&gt;</span>
-
-<span data-correct>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
-<span data-correct>&lt;p&gt;</span>Hello World!   This is <span data-incorrect>&lt;b&gt;</span>me&lt;/b&gt; <span data-incorrect>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
-<span data-correct>&lt;p&gt;</span>This is my second paragraph
-<span data-incorrect>&lt;a href="home.html"&gt;</span>Click here for my homepage&lt;/a&gt;
-<span data-incorrect>&lt;/p&gt;</span>
-&lt;/body&gt;
+   <span data-incorrect>&lt;body&gt;</span>
+      <span data-correct>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
+         <span data-correct>&lt;p&gt;</span>Hello World!   This is <span data-incorrect>&lt;b&gt;</span>me&lt;/b&gt; <span data-incorrect>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
+         <span data-correct>&lt;p&gt;</span>This is my second paragraph
+         <span data-incorrect>&lt;a href="home.html"&gt;</span>Click here for my homepage&lt;/a&gt;
+         <span data-incorrect>&lt;/p&gt;</span>
+   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
 </div>
@@ -471,14 +475,13 @@ a link that will jump to the target anywhere else on the page using <code class=
 <div class="runestone">
 <div data-component="clickablearea" class="runestone alert alert-warning" id="inlineelem"   >
 <span data-question>html2: Click on the beginning tag for all inline elements in the example.</span><span data-feedback>Inline elements do not start on a new line and only take as much width as needed.</span><pre> &lt;html&gt;
- &lt;body&gt;
- <span data-incorrect>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
- &lt;p&gt;Hello World!  This is <span data-correct>&lt;b&gt;</span>me&lt;/b&gt; <span data-correct>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
-
- <span data-incorrect>&lt;p&gt;</span>This is my second paragraph
- <span data-correct>&lt;a href="home.html"&gt;</span>Click here for my homepage&lt;/a&gt;
- &lt;/p&gt;
- &lt;/body&gt;
+   &lt;body&gt;
+      <span data-incorrect>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
+         &lt;p&gt;Hello World!  This is <span data-correct>&lt;b&gt;</span>me&lt;/b&gt; <span data-correct>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
+         <span data-incorrect>&lt;p&gt;</span>This is my second paragraph
+         <span data-correct>&lt;a href="home.html"&gt;</span>Click here for my homepage&lt;/a&gt;
+         &lt;/p&gt;
+   &lt;/body&gt;
  &lt;/html&gt;</pre>
 
 </div>
@@ -496,8 +499,8 @@ a link that will jump to the target anywhere else on the page using <code class=
     data-audio=''     
           >
 &lt;ul&gt;
-&lt;li&gt;This is an unordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags
+   &lt;li&gt;This is an unordered list&lt;/li&gt;
+   &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
 &lt;/ul&gt;
 </textarea>
 </div>
@@ -512,9 +515,9 @@ a link that will jump to the target anywhere else on the page using <code class=
     data-audio=''     
           >
 &lt;ol&gt;
-&lt;li&gt;This is an ordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags
-&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.
+   &lt;li&gt;This is an ordered list&lt;/li&gt;
+   &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags&lt;/li&gt;
+   &lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both ordered and unordered lists.&lt;/li&gt;
 &lt;/ol&gt;
 </textarea>
 </div>
@@ -539,14 +542,15 @@ a link that will jump to the target anywhere else on the page using <code class=
     data-audio=''     
           >
 &lt;ol&gt;
-&lt;li&gt;This is an ordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags
-&lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both.
-&lt;ul&gt;
-&lt;li&gt;This is an unordered list&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;You can mix and match lists like this as deeply as you want.&lt;/li&gt;
+   &lt;li&gt;This is an ordered list&lt;/li&gt;
+   &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags&lt;/li&gt;
+   &lt;li&gt;Notice that the &lt;code&gt;li&lt;/code&gt; tags are used for both ordered and unordered lists.
+      &lt;ul&gt;
+         &lt;li&gt;This is an unordered list&lt;/li&gt;
+         &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;You can mix and match lists like this as deeply as you want.&lt;/li&gt;
 &lt;/ol&gt;
 </textarea>
 </div>
