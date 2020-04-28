@@ -11,7 +11,7 @@ Making a Start Screen (Repeat, If/Else, Broadcast)
     Use a combination of the **forever**, **broadcast**, and **if/else** blocks to make a simple start screen. Make multiple costumes for the button sprites to provide visual feedback when the user is hovering over the button.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_start_screen
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -1,7 +1,7 @@
 Step 17: Solving a Maze
 =============================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_step17
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -11,7 +11,7 @@ Drawing Polygons - Part 2 (Variables and Nested Repeat)
     Use **variables** to improve the polygon drawing from last lesson. Refactor the code from yesterday so a regular polygon with any number of sides can be drawn with the same code. Explore interesting shapes using **nested loops** (a loop inside another loop).
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_nested_loops
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

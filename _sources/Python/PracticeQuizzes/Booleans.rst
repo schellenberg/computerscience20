@@ -7,7 +7,7 @@
 Booleans Practice Quiz
 =======================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_boolean_quiz
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-FP2** Investigate how control structures affect program flow.

@@ -11,7 +11,7 @@ Input/Output Assignment
     Go over practice problem(s) from last day. Work on a first Python assignment, focused on input/output, data types and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_input_output_assn
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -11,7 +11,7 @@ String Index, Length, Slicing and Traversal
     Explore string operators, index values, length of strings, string slicing, and traversing a string using a for loop (by item).
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_string_exploration
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

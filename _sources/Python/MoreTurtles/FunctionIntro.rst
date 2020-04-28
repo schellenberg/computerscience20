@@ -11,7 +11,7 @@ Functions Introduction
     Use ``for`` loops to draw shapes elegantly. Introduce non-fruitful functions in Python. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_functions_intro
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

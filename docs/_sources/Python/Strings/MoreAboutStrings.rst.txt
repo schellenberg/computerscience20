@@ -11,7 +11,7 @@ String Traversal (by index), and the Accumulator Pattern with Strings
     WDTPD string questions. Explore string traversal (for loop by index), ``in`` and ``not in`` operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_string_accumulator_pattern
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

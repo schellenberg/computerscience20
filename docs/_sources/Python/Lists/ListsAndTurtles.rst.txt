@@ -10,7 +10,7 @@ Lists and Turtle Drawing
     Use lists while moving turtles.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_lists_and_turtles
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

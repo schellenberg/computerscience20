@@ -8,7 +8,7 @@ How the Internet Works Practice Quiz
 
 The following quiz reviews the ideas from the *How the Internet Works* videos created by Code.org.
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_how_the_internet_works_practice_quiz
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.

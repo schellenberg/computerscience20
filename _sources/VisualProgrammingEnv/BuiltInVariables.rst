@@ -11,7 +11,7 @@ Built-In Variables (Tempo, Answer and Timer)
     Explore some of the built-in variables available in Scratch, including **tempo**, **answer** and **timer**. Introduce the **join** operator to concatenate strings, and the **abs** operator to calculate the absolute value of a number.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_variables
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

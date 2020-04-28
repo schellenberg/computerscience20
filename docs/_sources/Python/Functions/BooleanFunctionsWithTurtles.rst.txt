@@ -11,7 +11,7 @@ Boolean Functions and Randomly Walking Turtles
     Introduce the idea of Boolean functions (which return either True or False). Demonstrate two Boolean functions relating to turtle graphics.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_boolean_functions
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

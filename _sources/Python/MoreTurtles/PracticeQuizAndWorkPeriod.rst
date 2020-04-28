@@ -11,7 +11,7 @@ Loops Practice Quiz and Assignment Work Period
     Use ``for`` loops and functions to draw one shape elegantly. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_loops_practice_quiz_and_wdtpd
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

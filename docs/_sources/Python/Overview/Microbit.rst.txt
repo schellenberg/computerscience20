@@ -11,7 +11,7 @@ The Time Module and Using a Micro:bit
     Learn about the time module. Learn how to use a BBC Micro:bit to sense the physical world, and send output to the LED grid of the Micro:bit.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_intro_to_microbits
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

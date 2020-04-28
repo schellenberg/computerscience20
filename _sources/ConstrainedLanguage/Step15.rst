@@ -1,7 +1,7 @@
 Step 15: It's Going to Rain
 ===============================================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_step15
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

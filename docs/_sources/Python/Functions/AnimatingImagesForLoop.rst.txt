@@ -11,7 +11,7 @@ Animating a Micro:bit LED Image with a ``for`` Loop
     Animate images using a list and a ``for`` loop. Work time for fruitful and non-fruitful function assignment (likely a Micro:bit assignment).
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_microbit_for
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

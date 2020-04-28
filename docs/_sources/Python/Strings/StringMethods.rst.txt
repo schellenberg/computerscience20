@@ -11,7 +11,7 @@ String Methods
     WDTPD string questions. Practice problems with string manipulation. Introduction to additional string methods. Time to catch up on any string practice problems not completed on previous days.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_string_methods
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

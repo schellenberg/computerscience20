@@ -10,7 +10,7 @@ Logical Operators
 
     Introduce the logical operators ``and``, ``or``, ``not``. Work on practice problems, in which students create programs that utilize logical operators. Booleans practice quiz.
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_logical_operators
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

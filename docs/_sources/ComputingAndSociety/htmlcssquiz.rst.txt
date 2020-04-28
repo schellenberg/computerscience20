@@ -6,7 +6,7 @@
 HTML and CSS Practice Quiz
 =============================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_html_css_quiz
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.

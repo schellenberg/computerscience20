@@ -11,7 +11,7 @@ Using Lists
     Creating lists. Checking the length of a list. Access elements of a list using the index operator. Using ``in`` and ``not in``. Taking a slice of a list. Immutability of strings, mutability of lists. For loops with lists.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_lists_overview
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

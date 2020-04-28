@@ -11,7 +11,7 @@ Tracing Code and Cannonball Motion (Repeat Until)
     Introduce the **repeat until** block by tracing code with simple variables and conditionals. Use the repeat until block to simulate the motion of a cannon ball (motion repeats until the cannon ball hits the ground).
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_repeat_until
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

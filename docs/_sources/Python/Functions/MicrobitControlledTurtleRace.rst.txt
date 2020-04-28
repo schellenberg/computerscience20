@@ -11,7 +11,7 @@ Micro:bit Controlled Turtle Race
     WDTPD function questions. Explore using the Micro:bit buttons and accelerometer to control a turtle's movement on the screen.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_microbit_race
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

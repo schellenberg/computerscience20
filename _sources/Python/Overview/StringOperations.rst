@@ -11,7 +11,7 @@ String Operators and Assignment Work Time
     Explore how the ``+`` and ``*`` operators work on strings. Continue to work on the first Python assignment, focused on input/output, data types and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_intro_to_string_operators
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

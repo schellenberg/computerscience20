@@ -12,7 +12,7 @@ Cascading Style Sheets (CSS)
     Experiment with CSS (Cascading Style Sheets).
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_css
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.

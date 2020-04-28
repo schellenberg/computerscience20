@@ -11,7 +11,7 @@ Nested Loops and Image Processing
     Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_image_processing_nested_loops
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

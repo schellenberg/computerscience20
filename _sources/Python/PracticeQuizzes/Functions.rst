@@ -7,7 +7,7 @@
 Functions Practice Quiz
 ================================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_functions_quiz
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-FP3** Construct and utilize functions to create reusable pieces of code.

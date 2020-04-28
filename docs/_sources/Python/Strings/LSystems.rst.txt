@@ -11,7 +11,7 @@ Turtle Drawing and Strings (L-Systems)
     Turtle drawing by interpreting strings. L-Systems to generate strings. Draw interesting patterns using L-System strings.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_l_systems
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

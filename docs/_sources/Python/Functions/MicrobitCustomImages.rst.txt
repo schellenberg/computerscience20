@@ -11,7 +11,7 @@ Micro:bit Custom Images
     Learn how to create your own custom Micro:bit images. Continue working on creating a Micro:bit game, making sure to create at least one fruitful and one non-fruitful function.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_microbit_images
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

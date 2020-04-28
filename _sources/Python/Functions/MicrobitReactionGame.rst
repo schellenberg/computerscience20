@@ -11,7 +11,7 @@ Reaction Game with Micro:bit
     Play Micro:bit reaction game, and discuss how the code works. Add features to the game, if time.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_microbit_game
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -11,7 +11,7 @@ Chase the Mouse and Drawing Polygons (Repeat and If/Else)
     Use a **forever** block combined with an **if/else** block to make a character follow the mouse, then make a sound when it reaches the mouse cursor. Introduce the pen in Scratch, and use it to draw regular polygons with the **repeat** block.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_conditionals
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

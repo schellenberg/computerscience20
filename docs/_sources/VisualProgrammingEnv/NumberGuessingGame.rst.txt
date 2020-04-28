@@ -11,7 +11,7 @@ Number Guessing Game (Pair Programming)
     In this pair programming activity, you will create a number guessing game that uses many of the concepts we've learned.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_pair_programming
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

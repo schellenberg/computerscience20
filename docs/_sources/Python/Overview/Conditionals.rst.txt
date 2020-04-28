@@ -11,7 +11,7 @@ Conditionals
     Go over practice problems from last day. Give more details about boolean expressions. Practice some Python problems with input/output and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_conditionals
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

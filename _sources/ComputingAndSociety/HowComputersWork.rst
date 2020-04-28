@@ -8,7 +8,7 @@ How Computers Work Videos
 
 The following videos were created by Code.org, and are released under a Creative Commons BY-NC-ND license. Showing these videos at the start of class (one per day) for a number of days can be a really nice way to start some conversations about the technology of the devices we use every day.
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_how_computers_work
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CS1** Explore the underlying technology of computing devices and the Internet, and their impacts on society.

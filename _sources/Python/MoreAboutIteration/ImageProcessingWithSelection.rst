@@ -11,7 +11,7 @@ Image Processing With Conditionals
     Use nested loops to practice simple image processing, this time including conditionals to control when certain effects are done.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_image_processing_conditionals
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

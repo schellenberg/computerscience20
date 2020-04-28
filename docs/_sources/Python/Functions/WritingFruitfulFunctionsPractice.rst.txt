@@ -11,7 +11,7 @@ Writing Fruitful Functions Practice
     Warmup drawing problem. WDTPD questions about functions. Students practice writing fruitful functions.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_fruitful_functions
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

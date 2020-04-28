@@ -11,7 +11,7 @@ Fruitful Functions and Variable Scope
     Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). Discuss local and global scope. Work on practice problems, in which students create functions that return values.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_variable_scope
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -6,7 +6,7 @@ Step 4: Comments
      Write your computer programs to make them easy for **people** to
      read and understand.
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_step4
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

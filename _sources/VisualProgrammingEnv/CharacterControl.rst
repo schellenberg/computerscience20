@@ -11,7 +11,7 @@ Controlling a Character with WASD (Repetition and Conditionals)
     Introduce the **repeat** block by having a sprite shrink before disappearing. Demonstrate simple event-driven programming by moving a sprite with WASD using the **when key pressed** block. Use the **forever** block, combined with the **if-then** block to improve the motion of the sprite.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_wasd
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

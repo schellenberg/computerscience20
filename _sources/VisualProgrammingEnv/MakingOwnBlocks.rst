@@ -10,7 +10,7 @@ Making Your Own Blocks (Functions)
 
     Define your own blocks in Scratch. Create a block that says a random greeting (no argument required), then create a block that draws a polygon with a certain number of sides (argument required).
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_functions
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

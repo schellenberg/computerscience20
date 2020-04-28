@@ -11,7 +11,7 @@ Which Quotes to Use When Creating Strings
     Triple quoted strings can span multiple lines, and contain other types of quotes. Work on a Python assignment, focused on input/output of strings, and conditionals.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_string_quotes
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

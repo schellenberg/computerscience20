@@ -11,7 +11,7 @@ The ``while`` Statement
     Explore how the ``while`` loop works in Python. Learn how to use the debug functions of Thonny. Continue to work on the current Python assignment, focused on input/output and string concatenation.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_intro_to_while_loops
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

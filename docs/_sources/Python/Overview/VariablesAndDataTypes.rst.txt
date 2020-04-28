@@ -11,7 +11,7 @@ Variables, Data Types, and User Input
     Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_python_variables
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -11,7 +11,7 @@ Functions and Image Processing
     Use nested loops to practice simple image processing.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_image_processing_functions
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

@@ -11,7 +11,7 @@ Student Directed Project
     Work periods to put the concepts learned so far into practice. You can choose to create anything you'd like, so long as the project you choose demonstrates that you understand the ideas we've studied.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_scratch_student_project
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

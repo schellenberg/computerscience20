@@ -11,7 +11,7 @@ List Methods
     Explore methods that allow you to manipulate lists.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_list_methods
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

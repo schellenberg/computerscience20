@@ -1,7 +1,7 @@
 Step 12: While
 =================
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_step12
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.

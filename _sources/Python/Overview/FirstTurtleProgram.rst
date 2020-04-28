@@ -11,7 +11,7 @@ Our First Turtle Program
     Learn how to do basic drawing in Python using the turtle module.
 
 
-.. reveal:: curriculum_addressed
+.. reveal:: curriculum_addressed_first_turtle_day
     :showtitle: Curriculum Outcomes Addressed In This Section
 
     - **CS20-CP1** Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.
