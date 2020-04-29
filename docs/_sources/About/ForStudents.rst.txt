@@ -1,5 +1,5 @@
 How to Use This Textbook - For Students
-=======================================
+==========================================
 
 Programming is not a "spectator sport". It is something you do, something you participate in.
 

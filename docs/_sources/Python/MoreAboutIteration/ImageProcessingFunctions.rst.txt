@@ -26,7 +26,7 @@ Image Conversion with Functions
 
 In a previous lesson, we used code similar to the following, which increases the amount of green in an image:
 
-.. activecode::  increase_color_amount
+.. activecode::  increase_color_amount_now_with_functions
     :nocodelens:
     :timelimit: 180000
 
@@ -54,7 +54,7 @@ In a previous lesson, we used code similar to the following, which increases the
 
 When we were learning how to draw with the turtle module, we took code that allowed us to draw a square, and converted it into a function. In a similar fashion, we can convert our image manipulation code into a function, and call it whenever we would like to manipulate some image. In the code shown below, I have created a function that takes in an image and a number representing the amount to add to the green colour channel, then increases the amount of green for each pixel, and finally returns the changed image.
 
-.. activecode::  increase_green_function
+.. activecode::  increase_green_function_another
     :nocodelens:
     :timelimit: 180000
 
@@ -93,7 +93,7 @@ Notice that in the function, an EmptyImage *of the same size as the original ima
 
     If you'd like the function to animate while it runs, you can rewrite the function to have a parameter for the ImageWin to draw to, as follows:
 
-    .. activecode::  increase_green_function_2
+    .. activecode::  increase_green_function_2_another
         :nocodelens:
         :timelimit: 180000
 

@@ -243,7 +243,7 @@ Write a function called ``my_pi()`` that will return an approximation of PI (3.1
 
 .. .. image:: images/leibniz_pi_formula.png
 
-.. reveal:: reveal_my_sqrt_hint
+.. reveal:: reveal_my_pi_hint
     :showtitle: Need a hint?
     :hidetitle: Hide Hint
 

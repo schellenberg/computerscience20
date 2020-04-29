@@ -31,7 +31,7 @@ Remember that variables created inside of a function have **local scope** (can o
 What will the following programs output? Why?
 
 
-.. activecode:: wdtpd_functions_7
+.. activecode:: wdtpd_functions_microbit_1
     :caption: What will this program print?
 
     def a(x):
@@ -50,7 +50,7 @@ What will the following programs output? Why?
     a(5)
 
 
-.. activecode:: wdtpd_functions_8
+.. activecode:: wdtpd_functions_microbit_2
     :caption: What will this program print?
 
     def a(x):
@@ -62,7 +62,7 @@ What will the following programs output? Why?
     print(x)
 
 
-.. activecode:: wdtpd_functions_9
+.. activecode:: wdtpd_functions_microbit_3
     :caption: What will this program print?
 
     def a(x):
@@ -75,7 +75,7 @@ What will the following programs output? Why?
     print(x)
 
 
-.. activecode:: wdtpd_functions_10
+.. activecode:: wdtpd_functions_microbit_4
     :caption: What will this program print?
 
     def a(x):
