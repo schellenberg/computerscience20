@@ -27,7 +27,7 @@ Warmup Problem
 
 Draw the shape above. After you have finished drawing your version, share your code with another student. Work together to see if you can come up with a more efficient way to draw this shape!
 
-.. activecode:: turtle_confusion_4
+.. activecode:: turtle_confusion_4_intro
     :nocodelens:
 
     import turtle

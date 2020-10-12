@@ -298,7 +298,9 @@ so you get an idea of what the kind of drawing the L-System can really make.
             elif task == ']':
                 new_info = saved_info_list.pop()
                 some_turtle.setheading(new_info[0])
+                some_turtle.penup()
                 some_turtle.goto(new_info[1], new_info[2])
+                some_turtle.pendown()
 
     # setup for drawing
     window = turtle.Screen()
