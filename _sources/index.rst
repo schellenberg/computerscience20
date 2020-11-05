@@ -173,6 +173,8 @@ Python Practice Quizzes
    Python/PracticeQuizzes/Booleans.rst
    Python/PracticeQuizzes/Loops.rst
    Python/PracticeQuizzes/Functions.rst
+   Python/PracticeQuizzes/Strings.rst
+   Python/PracticeQuizzes/Lists.rst
 
 
 Student-Directed Research
