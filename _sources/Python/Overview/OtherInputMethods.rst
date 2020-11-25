@@ -201,13 +201,13 @@ There are many more methods you can use with easygui_qt. You may want to look in
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |                                          Function                                         |                    What it Returns                     |
 +===========================================================================================+========================================================+
-| ``easy.get_string("Some prompt/question:")``                                              | returns a string (or None if cancelled)                |
+| ``easy.get_string("Some question:")``                                                     | returns a string (or None if cancelled)                |
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_integer("Some prompt/question:")``                                             | returns an int (or None if cancelled)                  |
+| ``easy.get_integer("Some question:")``                                                    | returns an int (or None if cancelled)                  |
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_float("Some prompt/question:")``                                               | returns a float (or None if cancelled)                 |
+| ``easy.get_float("Some question:")``                                                      | returns a float (or None if cancelled)                 |
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_yes_or_no("Some prompt/question:")``                                           | returns a ``True`` or ``False`` (or None if cancelled) |
+| ``easy.get_yes_or_no("Some question:")``                                                  | returns a ``True`` or ``False`` (or None if cancelled) |
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
 | ``easy.show_message("Some message.")``                                                    | doesn't return anything                                |
 +-------------------------------------------------------------------------------------------+--------------------------------------------------------+
