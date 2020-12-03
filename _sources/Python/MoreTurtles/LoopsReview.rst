@@ -65,8 +65,8 @@ What will the following programs output? Why?
     alex = turtle.Turtle()
     alex.pensize(3)
 
-    for aColor in ["blue", "red", "orange"]:
-        alex.color(aColor)
+    for some_color in ["blue", "red", "orange"]:
+        alex.color(some_color)
         alex.forward(200)
         alex.left(120)
 
