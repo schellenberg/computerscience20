@@ -159,17 +159,17 @@ Question 10
 
     In the following code, what does this code print?::
 
-        def applyRule(character):
-            newCharacter = ""
+        def apply_rule(character):
+            new_character = ""
             if character == "X":
-                newCharacter = "X+YF+"
+                new_character = "X+YF+"
             elif character == "Y":
-                newCharacter = "-FX-Y"
+                new_character = "-FX-Y"
             else:
-                newCharacter = character
-            return newCharacter
+                new_character = character
+            return new_character
 
-        print(applyRule("Y"))
+        print(apply_rule("Y"))
 
 
     - :-FX-Y: Great!
@@ -185,24 +185,23 @@ Question 11
 
     In the following code, what does this code print?::
 
-        def applyRule(character):
-            newCharacter = ""
+        def apply_rule(character):
+            new_character = ""
             if character == "X":
-                newCharacter = "X+YF+"
+                new_character = "X+YF+"
             elif character == "Y":
-                newCharacter = "-FX-Y"
+                new_character = "-FX-Y"
             else:
-                newCharacter = character
-            return newCharacter
+                new_character = character
+            return new_character
 
-        def processString(aString):
-            newString = ""
-            for character in aString:
-                newString = newString + applyRule(character)
-            return newString
+        def process_string(some_string):
+            new_string = ""
+            for character in some_string:
+                new_string = new_string + apply_rule(character)
+            return new_string
 
-        print(processString("XZY"))
-
+        print(process_string("XZY"))
 
     - :X+YF+Z-FX-Y: Great!
       :.*: Try again!
