@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. Fruitful Functions and the Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. Micro:bit Custom Images" href="MicrobitCustomImages.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -220,13 +182,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 1. Micro:bit Controlled Turtle Race" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>Micro:bit Controlled Turtle Race" data-toggle="tooltip">
     <a href="MicrobitControlledTurtleRace.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 3. Micro:bit Custom Images' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3. </span>Micro:bit Custom Images' data-toggle="tooltip" >
     <a href="MicrobitCustomImages.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -258,37 +220,41 @@
 <div class="container" id="main-content">
   
   <div class="section" id="fruitful-functions-and-the-micro-bit">
-<h1>2. Fruitful Functions and the Micro:bit<a class="headerlink" href="#fruitful-functions-and-the-micro-bit" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Fruitful Functions and the Micro:bit<a class="headerlink" href="#fruitful-functions-and-the-micro-bit" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>WDTPD on variable scope. Functions practice quiz. Micro:bit fruitful functions.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_microbit_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_microbit_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-<li><strong>CS20-FP4</strong> Investigate one-dimensional arrays and their applications.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</p></li>
+<li><p><strong>CS20-FP4</strong> Investigate one-dimensional arrays and their applications.</p></li>
 </ul>
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <p>Remember that variables created inside of a function have <strong>local scope</strong> (can only be used inside that function), whereas variables created outside of a function have <strong>global scope</strong> (can be accessed from anywhere).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+<p class="admonition-title">Note</p>
+<p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
 
-<div data-childcomponent="wdtpd_functions_microbit_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_functions_microbit_1 data-question_label="2.1.1">
+<div id=wdtpd_functions_microbit_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_functions_microbit_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_functions_microbit_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 def a(x):
     print("A start, x =",x)
     b(x + 1)
@@ -305,13 +271,18 @@ def c(x):
 a(5)
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_functions_microbit_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_functions_microbit_2 data-question_label="2.1.2">
+<div id=wdtpd_functions_microbit_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_functions_microbit_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_functions_microbit_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 def a(x):
     x = x + 1
 
@@ -321,13 +292,18 @@ a(x)
 print(x)
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_functions_microbit_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_functions_microbit_3 data-question_label="2.1.3">
+<div id=wdtpd_functions_microbit_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_functions_microbit_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_functions_microbit_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 def a(x):
     x = x + 1
     return x
@@ -338,13 +314,18 @@ a(x)
 print(x)
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_functions_microbit_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_functions_microbit_4 data-question_label="2.1.4">
+<div id=wdtpd_functions_microbit_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_functions_microbit_4 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_functions_microbit_4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 def a(x):
     x = x + 1
     return x
@@ -356,12 +337,13 @@ print(x)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="functions-practice-quiz">
-<h2>2.2. Functions Practice Quiz<a class="headerlink" href="#functions-practice-quiz" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Functions Practice Quiz<a class="headerlink" href="#functions-practice-quiz" title="Permalink to this headline">¶</a></h2>
 <p>To confirm that you understand the ideas behind using functions, you should try the <a class="reference internal" href="../PracticeQuizzes/Functions.html#functions-practice-quiz"><span class="std std-ref">Functions Practice Quiz</span></a> using only your brain (in other words, try to figure out what will happen <em>without</em> running the code).</p>
 </div>
 <div class="section" id="an-accelerometer-fruitful-function">
-<h2>2.3. An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
 <p>Let’s adapt the code above to use a fruitful function. We will make a function called <code class="docutils literal notranslate"><span class="pre">horizontal_tilt()</span></code> that returns either “left”, “right”, or “flat”.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -379,39 +361,39 @@ print(x)
         <span class="k">return</span> <span class="s2">&quot;flat&quot;</span>
 
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">horizontal_tilt_direction</span> <span class="o">=</span> <span class="n">horizontal_tilt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted right.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tilted right.&quot;</span><span class="p">)</span>
 
     <span class="k">elif</span> <span class="n">horizontal_tilt_direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Tilted left.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tilted left.&quot;</span><span class="p">)</span>
 
     <span class="k">else</span><span class="p">:</span>
         <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flat!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flat!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Notice that in the <code class="docutils literal notranslate"><span class="pre">horizontal_tilt</span></code> function, an if/elif/else structure is used. Since one (and only one) branch of the if/elif/else <em>must</em> occur, we are guaranteed to return either “right”, “left”, or “flat”. The parameter <code class="docutils literal notranslate"><span class="pre">sensitivity_amount</span></code> in the function definition allows the user of the function to easily set how sensitive their program is to the tilting of the micro:bit.</p>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop, we start by calling the <code class="docutils literal notranslate"><span class="pre">horizontal_tilt</span></code> function, so we will call the function many times per second.</p>
 </div>
 <div class="section" id="adapt-the-code">
-<h2>2.4. Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
 <p>Try the following (either by yourself or with a partner):</p>
 <ul class="simple">
-<li>create a fruitful function <code class="docutils literal notranslate"><span class="pre">vertical_tilt(sensitivity_amount)</span></code> that uses <code class="docutils literal notranslate"><span class="pre">get_y</span></code> and returns either “forward”, “backward”, or None</li>
-<li>create a fruitful function <code class="docutils literal notranslate"><span class="pre">held_up_down(sensitivity_amount)</span></code> that uses <code class="docutils literal notranslate"><span class="pre">get_z</span></code> and returns either “up”, “down”, or None</li>
+<li><p>create a fruitful function <code class="docutils literal notranslate"><span class="pre">vertical_tilt(sensitivity_amount)</span></code> that uses <code class="docutils literal notranslate"><span class="pre">get_y</span></code> and returns either “forward”, “backward”, or None</p></li>
+<li><p>create a fruitful function <code class="docutils literal notranslate"><span class="pre">held_up_down(sensitivity_amount)</span></code> that uses <code class="docutils literal notranslate"><span class="pre">get_z</span></code> and returns either “up”, “down”, or None</p></li>
 </ul>
 </div>
 <div class="section" id="a-more-involved-micro-bit-function-example">
-<h2>2.5. A More Involved Micro:bit Function Example<a class="headerlink" href="#a-more-involved-micro-bit-function-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>A More Involved Micro:bit Function Example<a class="headerlink" href="#a-more-involved-micro-bit-function-example" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about using functions is that you can use a function without having to know all of the details about how it works. In the following example, <strong>you do not need to worry about how the functions work</strong> (though you can definitely try to figure them out, if you want to). The important things you need to understand are all inside the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop. We are using two things that you may not have seen before:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">some_list.append(&quot;thing&quot;)</span></code> adds “thing” to the end of a list. We use this to keep track of the actions the user has made in a list called <code class="docutils literal notranslate"><span class="pre">actions</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">break</span></code> forces the current looping structure to terminate. We use this to exit out of the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop if the user enters in a <a class="reference external" href="https://en.wikipedia.org/wiki/Konami_Code">secret code</a>.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">some_list.append(&quot;thing&quot;)</span></code> adds “thing” to the end of a list. We use this to keep track of the actions the user has made in a list called <code class="docutils literal notranslate"><span class="pre">actions</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">break</span></code> forces the current looping structure to terminate. We use this to exit out of the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop if the user enters in a <a class="reference external" href="https://en.wikipedia.org/wiki/Konami_Code">secret code</a>.</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -452,7 +434,7 @@ print(x)
 <span class="sd">    Return True if the pattern is found, False if it is not.&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">action_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="kc">False</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">action_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">action_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span> <span class="ow">and</span>
                 <span class="n">action_list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="ow">and</span> <span class="n">action_list</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="ow">and</span>
@@ -462,45 +444,45 @@ print(x)
 
 
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="c1"># remember what the action was last time through the loop</span>
     <span class="n">last_action</span> <span class="o">=</span> <span class="n">current_action</span>
     <span class="n">current_action</span> <span class="o">=</span> <span class="n">get_konami_action</span><span class="p">(</span><span class="mi">700</span><span class="p">)</span>
 
     <span class="c1"># is this a &quot;new&quot; action?</span>
-    <span class="k">if</span> <span class="n">current_action</span> <span class="o">!=</span> <span class="n">last_action</span> <span class="ow">and</span> <span class="n">current_action</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">current_action</span> <span class="o">!=</span> <span class="n">last_action</span> <span class="ow">and</span> <span class="n">current_action</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_action</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">konami_code</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
         <span class="k">break</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Easter egg time!!!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Easter egg time!!!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If your class doesn’t have access to Micro:bits, you will be working on an assignment that focuses on creating fruitful and non-fruitful functions.</p>
+<p class="admonition-title">Note</p>
+<p>If your class doesn’t have access to Micro:bits, you will be working on an assignment that focuses on creating fruitful and non-fruitful functions.</p>
 </div>
 </div>
 <div class="section" id="micro-bit-game-assignment">
-<h2>2.6. Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Use the examples we’ve done as a starting point, and come up with your own game that uses the Micro:bit and functions! You are welcome to combine the turtle module as well. At a minimum, your game must:</p>
 <ul class="simple">
-<li>use at least one fruitful function (that you have created). You are welcome to use the fruitful functions shown in our demos, but you need to create at least one of your own!</li>
-<li>use at least one non-fruitful function (that you have created).</li>
+<li><p>use at least one fruitful function (that you have created). You are welcome to use the fruitful functions shown in our demos, but you need to create at least one of your own!</p></li>
+<li><p>use at least one non-fruitful function (that you have created).</p></li>
 </ul>
 <p>Some ideas of things you might want to try creating include:</p>
 <ul class="simple">
-<li>“guess the time” game (in which a number of seconds is displayed on the Micro:bit, and the user needs to try to press a button as close to the correct amount of time as possible)</li>
-<li>bop-it game (display an A or B, and user needs to press the correct button. User gets more points the faster they can press the correct button. The game ends if the user presses the wrong button, or after a certain number of clicks.)</li>
-<li>have an “object” (led) fall from the top of the screen. The user needs to catch the object, and can move left/right by using the buttons or accelerometer. If they do not catch the object, the game ends.</li>
-<li>create a morse code visualizer, in which the user can type in a message, and the Micro:bit will display the message by flashing the LEDs using morse code. Another option would be to have the Micro:bit flash AND play beeps on your headphones (<a class="reference external" href="https://makecode.microbit.org/projects/hack-your-headphones/make">see how to connect your headphones to the Micro:bit</a>)</li>
-<li><ul class="first">
-<li>dice rolling simulator, in which a random number is displayed on the Micro:bit, and used in the program you have running in Thonny</li>
+<li><p>“guess the time” game (in which a number of seconds is displayed on the Micro:bit, and the user needs to try to press a button as close to the correct amount of time as possible)</p></li>
+<li><p>bop-it game (display an A or B, and user needs to press the correct button. User gets more points the faster they can press the correct button. The game ends if the user presses the wrong button, or after a certain number of clicks.)</p></li>
+<li><p>have an “object” (led) fall from the top of the screen. The user needs to catch the object, and can move left/right by using the buttons or accelerometer. If they do not catch the object, the game ends.</p></li>
+<li><p>create a morse code visualizer, in which the user can type in a message, and the Micro:bit will display the message by flashing the LEDs using morse code. Another option would be to have the Micro:bit flash AND play beeps on your headphones (<a class="reference external" href="https://makecode.microbit.org/projects/hack-your-headphones/make">see how to connect your headphones to the Micro:bit</a>)</p></li>
+<li><ul>
+<li><p>dice rolling simulator, in which a random number is displayed on the Micro:bit, and used in the program you have running in Thonny</p></li>
 </ul>
 </li>
-<li>anything else you can dream up!</li>
+<li><p>anything else you can dream up!</p></li>
 </ul>
 </div>
 </div>
@@ -508,19 +490,19 @@ print(x)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 1. Micro:bit Controlled Turtle Race' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>Micro:bit Controlled Turtle Race' data-toggle="tooltip">
     <a href="MicrobitControlledTurtleRace.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="MicrobitControlledTurtleRace.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 3. Micro:bit Custom Images' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">3. </span>Micro:bit Custom Images' data-toggle="tooltip" >
     <a href="MicrobitCustomImages.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="MicrobitCustomImages.html" >Next Section - 3. Micro:bit Custom Images</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="MicrobitCustomImages.html" >Next Section - <span class="section-number">3. </span>Micro:bit Custom Images</a>
 
 <script type="text/javascript">
 

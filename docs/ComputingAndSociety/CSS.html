@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cascading Style Sheets (CSS) &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="HTML and CSS Practice Quiz" href="htmlcssquiz.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -270,13 +232,13 @@
   <div class="section" id="cascading-style-sheets-css">
 <h1>Cascading Style Sheets (CSS)<a class="headerlink" href="#cascading-style-sheets-css" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Experiment with CSS (Cascading Style Sheets).</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_css"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_css"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CS1</strong> Explore the underlying technology of computing devices and the Internet, and their impacts on society.</li>
+<li><p><strong>CS20-CS1</strong> Explore the underlying technology of computing devices and the Internet, and their impacts on society.</p></li>
 </ul>
 
     </div>
@@ -307,18 +269,22 @@
 <h2>Including CSS in Your Page<a class="headerlink" href="#including-css-in-your-page" title="Permalink to this headline">¶</a></h2>
 <p>There are three ways to include CSS in your html document.</p>
 <ul class="simple">
-<li>You can add a style attribute to a tag.  This should not be used very often, if ever!</li>
-<li>You can embed your CSS in your file inside a <code class="docutils literal notranslate"><span class="pre">style</span></code> tag.  We’ll use this method in this book for convenience.</li>
-<li>You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the method normally used by web developers because it achieves the greatest amount of separation between the content and how the content looks.</li>
+<li><p>You can add a style attribute to a tag.  This should not be used very often, if ever!</p></li>
+<li><p>You can embed your CSS in your file inside a <code class="docutils literal notranslate"><span class="pre">style</span></code> tag.  We’ll use this method in this book for convenience.</p></li>
+<li><p>You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the method normally used by web developers because it achieves the greatest amount of separation between the content and how the content looks.</p></li>
 </ul>
 <p>Lets now look at a complete example:</p>
 
-<div data-childcomponent="css_rule_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_rule_1 data-question_label="1">
+<div id=css_rule_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_rule_1 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_rule_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -337,6 +303,7 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>There are several things to notice about the example above.  First the <code class="docutils literal notranslate"><span class="pre">h1</span></code> selector matches all of the h1 tags in the document.  But it does not match the <code class="docutils literal notranslate"><span class="pre">h2</span></code> or the <code class="docutils literal notranslate"><span class="pre">p</span></code> tags.  If you want to change the style of the paragraph you need to add another rule.  Lets try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.</p>
 <p><strong>One thing to be careful about is to remember the semi-colons after the values.  If you forget a semi-colon, then your rule will not work.</strong></p>
 </div>
@@ -344,9 +311,9 @@
 <h2>How to Specify a Color<a class="headerlink" href="#how-to-specify-a-color" title="Permalink to this headline">¶</a></h2>
 <p>There are three different ways to specify the color.</p>
 <ul class="simple">
-<li>by name, like blue, red, green.  You can see a complete list of <a class="reference external" href="http://www.w3schools.com/cssref/css_colors.asp">color names</a> on the w3schools website.</li>
-<li>using an RGB value like <code class="docutils literal notranslate"><span class="pre">rgb(255,0,0)</span></code></li>
-<li>using a HEX value like <code class="docutils literal notranslate"><span class="pre">#ff0000</span></code></li>
+<li><p>by name, like blue, red, green.  You can see a complete list of <a class="reference external" href="http://www.w3schools.com/cssref/css_colors.asp">color names</a> on the w3schools website.</p></li>
+<li><p>using an RGB value like <code class="docutils literal notranslate"><span class="pre">rgb(255,0,0)</span></code></p></li>
+<li><p>using a HEX value like <code class="docutils literal notranslate"><span class="pre">#ff0000</span></code></p></li>
 </ul>
 <p>To simplify matters, just search the web for <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">picker</span></code>, choose the color you want to use, then copy/paste the RBG or HEX value into your CSS.</p>
 </div>
@@ -354,19 +321,23 @@
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>CSS has the following properties which we can use to change the background.</p>
 <ul class="simple">
-<li>background-color</li>
-<li>background-image</li>
-<li>background-repeat</li>
-<li>background-attachment</li>
-<li>background-position</li>
+<li><p>background-color</p></li>
+<li><p>background-image</p></li>
+<li><p>background-repeat</p></li>
+<li><p>background-attachment</p></li>
+<li><p>background-position</p></li>
 </ul>
 
-<div data-childcomponent="css_bkgrd_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_bkgrd_1 data-question_label="2">
+<div id=css_bkgrd_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_bkgrd_1 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_bkgrd_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -389,21 +360,22 @@
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="text">
 <h2>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>text-color</li>
-<li>text-align</li>
-<li>text-decoration</li>
-<li>text-transformation</li>
+<li><p>text-color</p></li>
+<li><p>text-align</p></li>
+<li><p>text-decoration</p></li>
+<li><p>text-transformation</p></li>
 </ul>
 </div>
 <div class="section" id="font">
 <h2>Font<a class="headerlink" href="#font" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>font-family</li>
-<li>font-style</li>
-<li>font-size</li>
+<li><p>font-family</p></li>
+<li><p>font-style</p></li>
+<li><p>font-size</p></li>
 </ul>
 </div>
 <div class="section" id="using-an-id-attribute-in-a-rule">
@@ -411,12 +383,16 @@
 <p>Another common situation is that you have one particular paragraph that you want to have in a different color.  You cannot just use a selector that matches the p tag as that will match all of the p tags.  So in this case we need to somehow mark a particular paragraph so that we can have a selector that selects that paragraph and only that paragraph.  This is where the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute is used.    Any html tag can have an id attribute, which serves as a <strong>unique identifier</strong> for that tag.  In fact, the value of the id attribute must be unique throughout the file.</p>
 <p>In the example below we have two rules.  One that changes the text to blue in all paragraphs.  The second rule changes the font-size to 18pt for the paragraph that has the identifier of “abc456”  The hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> is very important to this rule as it tells the css matcher that what comes after that hashtag must match the id attribute of some element.  So, in fact the p is redundant in this example, and you could remove the p from the beginning of the selector and the rule would still work.  In fact, you should try that now.</p>
 
-<div data-childcomponent="css_ids" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_ids data-question_label="3">
+<div id=css_ids_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_ids data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_ids_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -438,6 +414,7 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>What do you think will happen if you change the second rule so that it sets the color to red?   If you said that it will keep the first paragraph’s color blue but change the second to red, your are correct.  Why does the second rule over-rule the first?  Because the second rule is more specific.  You might have thought it was because of the order of the rules, but in fact you can change the order of the two rules and try it and you will see that you still get the same result.</p>
 </div>
 <div class="section" id="using-the-class-attribute-in-a-rule">
@@ -448,12 +425,16 @@
 <p>To select any element that matches a particular class you use the <code class="docutils literal notranslate"><span class="pre">.</span></code> before the name of the class.  So <code class="docutils literal notranslate"><span class="pre">.high</span></code> will match any tags that have the attribute <code class="docutils literal notranslate"><span class="pre">class=high</span></code>.</p>
 <p>Returning to our HTML table example we have some rows that are “odd” and some that are “even”.  Lets make a short table and style the odd and even rows differently.</p>
 
-<div data-childcomponent="css_classes" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_classes data-question_label="4">
+<div id=css_classes_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_classes data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_classes_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -476,13 +457,14 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>Now for some additional practice lets make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. <a class="reference external" href="http://www.w3schools.com/css/css_table.asp">This page</a> gives you a complete rundown on how to style tables.</p>
 </div>
 <div class="section" id="extra-for-experts-information">
 <h2>Extra for Experts Information<a class="headerlink" href="#extra-for-experts-information" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Although the following information can be really interesting, it can also cause frustration for students. This additional information might be useful for students who are moving quickly through the initial HTML/CSS content. For those that want to learn even more, you might want to look at a website like <a class="reference external" href="https://www.w3schools.com/">w3schools.com</a>, or just search the web for something like “css navbar”.</p>
+<p class="admonition-title">Note</p>
+<p>Although the following information can be really interesting, it can also cause frustration for students. This additional information might be useful for students who are moving quickly through the initial HTML/CSS content. For those that want to learn even more, you might want to look at a website like <a class="reference external" href="https://www.w3schools.com/">w3schools.com</a>, or just search the web for something like “css navbar”.</p>
 </div>
 <div class="section" id="external-css-files">
 <h3>External CSS Files<a class="headerlink" href="#external-css-files" title="Permalink to this headline">¶</a></h3>
@@ -495,25 +477,29 @@
 <h3>The CSS Box Model<a class="headerlink" href="#the-css-box-model" title="Permalink to this headline">¶</a></h3>
 <p>Before we go any further it is important to stop and think a bit about how the browser renders the html into the browser window.  As the browser reads each html tag, it must figure out where on the page it belongs.  For the most part, the browser flows each tag from top to bottom and from left to right.  As we have mentioned, block elements start on a new line, and inline elements flow from left to right, fitting within the horizontal size of the page or else going on to the next line.</p>
 <p>All HTML elements can be thought of simply as boxes.  In fact that is exactly how the browser thinks of them as it begins the process of rendering the page.  When doing web page design and layout it is very common to hear designers talk about the CSS box model.  Figure 1 illustrates the different components that go into the box model.</p>
-<div class="figure" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../_images/box-model.gif" src="../_images/box-model.gif" />
-<p class="caption"><span class="caption-text">Figure used in accordance with w3schools fair use policy</span></p>
+<p class="caption"><span class="caption-text">Figure used in accordance with w3schools fair use policy</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The different parts of the box model are defined as follows:</p>
 <ul class="simple">
-<li>Content:  The actual text or image content of an html tag</li>
-<li>Padding:  The space between the content and the border.</li>
-<li>Border:  This can be an actual drawn border or it can be invisible</li>
-<li>Margin: The space outside the border between this box and the boxes next to it in each direction.</li>
+<li><p>Content:  The actual text or image content of an html tag</p></li>
+<li><p>Padding:  The space between the content and the border.</p></li>
+<li><p>Border:  This can be an actual drawn border or it can be invisible</p></li>
+<li><p>Margin: The space outside the border between this box and the boxes next to it in each direction.</p></li>
 </ul>
 <p>Lets try a simple example:</p>
 
-<div data-childcomponent="css_boxmodel" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_boxmodel data-question_label="5">
+<div id=css_boxmodel_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_boxmodel data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_boxmodel_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -535,15 +521,16 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>As a bit of review, add a rule to the example above to make the margin for the second Hello world to be 5px.  What does this tell you about how margins work?</p>
 <p>The size of content area itself can also be controlled using the following properties:</p>
 <ul class="simple">
-<li>height</li>
-<li>max-height</li>
-<li>min-height</li>
-<li>width</li>
-<li>max-width</li>
-<li>min-width</li>
+<li><p>height</p></li>
+<li><p>max-height</p></li>
+<li><p>min-height</p></li>
+<li><p>width</p></li>
+<li><p>max-width</p></li>
+<li><p>min-width</p></li>
 </ul>
 <p>Each of these properties can be specified in terms of pixels (px), points (pt), or as a percentage.  In addition the auto keyword can be used, which is the default and allows the browser to figure out the proper height and width.</p>
 </div>
@@ -552,12 +539,16 @@
 <p>When you use height and width with a <strong>container</strong> element, such as one of the semantic elements, it is very useful to know about the overflow property.  What if you set your height so small that the content does not fit?  The <a class="reference external" href="http://www.w3schools.com/cssref/pr_pos_overflow.asp">overflow</a> property tells you how to handle that.</p>
 <p>Here is an example activecode for you to experiment with:</p>
 
-<div data-childcomponent="css_overflow" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_overflow data-question_label="6">
+<div id=css_overflow_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_overflow data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_overflow_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -587,29 +578,34 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>The possible values for the overflow property are:</p>
 <ul class="simple">
-<li>visible</li>
-<li>hidden</li>
-<li>scroll</li>
-<li>auto</li>
+<li><p>visible</p></li>
+<li><p>hidden</p></li>
+<li><p>scroll</p></li>
+<li><p>auto</p></li>
 </ul>
 <p>Give them a try in the example above and see what happens.</p>
 <div class="admonition-greeking admonition">
-<p class="first admonition-title">Greeking</p>
-<p class="last">You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with “Lorum Ipsum,” so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.</p>
+<p class="admonition-title">Greeking</p>
+<p>You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with “Lorum Ipsum,” so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.</p>
 </div>
 </div>
 <div class="section" id="pseudo-classes">
 <h3>Pseudo-classes<a class="headerlink" href="#pseudo-classes" title="Permalink to this headline">¶</a></h3>
 <p>A pseudo-class can be used to define a special state for an element on your webpage that is used when some condition is met. A simple example of this is creating a link that looks like a button.</p>
 
-<div data-childcomponent="css_pseudo_classes" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=css_pseudo_classes data-question_label="7">
+<div id=css_pseudo_classes_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=css_pseudo_classes data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="css_pseudo_classes_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;head&gt;
       &lt;style&gt;
@@ -633,6 +629,7 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 </div>
 </div>

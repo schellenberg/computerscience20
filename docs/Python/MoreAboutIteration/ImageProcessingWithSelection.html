@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. Image Processing With Conditionals &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. Functions and Image Processing" href="ImageProcessingFunctions.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -238,13 +200,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 2. Image Processing Practice" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2. </span>Image Processing Practice" data-toggle="tooltip">
     <a href="ImageProcessingPractice.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 4. Functions and Image Processing' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4. </span>Functions and Image Processing' data-toggle="tooltip" >
     <a href="ImageProcessingFunctions.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -276,33 +238,37 @@
 <div class="container" id="main-content">
   
   <div class="section" id="image-processing-with-conditionals">
-<h1>3. Image Processing With Conditionals<a class="headerlink" href="#image-processing-with-conditionals" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Image Processing With Conditionals<a class="headerlink" href="#image-processing-with-conditionals" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Use nested loops to practice simple image processing, this time including conditionals to control when certain effects are done.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_image_processing_conditionals"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_image_processing_conditionals"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</p></li>
 </ul>
 
     </div>
     <div class="section" id="applying-an-effect-based-on-pixel-colour">
-<h2>3.1. Applying an Effect Based on Pixel Colour<a class="headerlink" href="#applying-an-effect-based-on-pixel-colour" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Applying an Effect Based on Pixel Colour<a class="headerlink" href="#applying-an-effect-based-on-pixel-colour" title="Permalink to this headline">¶</a></h2>
 <p>Say you had an image that looked like this:</p>
 <img src="../../_static/moon.jpg" id="moon.jpg">
 <h4 style="text-align: center;">moon.jpg</h4><p>Due to the contrast in the image, we can apply certain effects to only a portion of the image. For example, we could turn the sky (which is currently black) into another colour, while leaving the moon itself untouched. The following code turns the sky a light gray colour.</p>
 
-<div data-childcomponent="isolate_the_moon" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=isolate_the_moon data-question_label="3.1.1">
+<div id=isolate_the_moon_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=isolate_the_moon data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="isolate_the_moon_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # import the module so we can access images
 import image
 
@@ -350,28 +316,33 @@ for x in range(width):
 img.draw(win)
 </textarea>
 </div>
+</div>
 <div class="section" id="try-this">
-<h3>3.1.1. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <p>Adapt the code above to:</p>
 <ul class="simple">
-<li>change the color of the sky to a different colour (something other than gray)</li>
-<li>instead of changing the sky, adapt the program to tint the moon slightly blue</li>
-<li>switch the image to be <code class="docutils literal notranslate"><span class="pre">bird-far.jpg</span></code>, then change the program so that all of the sky is “erased” (turned white), while the bird itself is left alone</li>
+<li><p>change the color of the sky to a different colour (something other than gray)</p></li>
+<li><p>instead of changing the sky, adapt the program to tint the moon slightly blue</p></li>
+<li><p>switch the image to be <code class="docutils literal notranslate"><span class="pre">bird-far.jpg</span></code>, then change the program so that all of the sky is “erased” (turned white), while the bird itself is left alone</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="applying-an-effect-to-an-area-of-an-image">
-<h2>3.2. Applying an Effect to an Area of an Image<a class="headerlink" href="#applying-an-effect-to-an-area-of-an-image" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Applying an Effect to an Area of an Image<a class="headerlink" href="#applying-an-effect-to-an-area-of-an-image" title="Permalink to this headline">¶</a></h2>
 <p>You might want to affect only one area of an image. For example, perhaps you want to make the left half of the following image grayscale, but leave the right half of the image unchanged.</p>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg">
 <h4 style="text-align: center;">sneakers.jpg</h4><p>To apply an effect to just the left hand side, we can write a program that iterates through every pixel, but only apply the grayscale effect if the x coordinate is in the left half of the image. Here is a program that does just that:</p>
 
-<div data-childcomponent="grayscale_left_half" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=grayscale_left_half data-question_label="3.2.1">
+<div id=grayscale_left_half_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=grayscale_left_half data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="grayscale_left_half_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # import the module so we can access images
 import image
 
@@ -420,29 +391,34 @@ for x in range(width):
     img.draw(win)
 </textarea>
 </div>
+</div>
 <div class="section" id="id1">
-<h3>3.2.1. Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.1. </span>Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Adapt the code above to:</p>
 <ul class="simple">
-<li>adapt the program so that the left half of the image remains unchanged, but the right of the image is converted to grayscale</li>
-<li>adapt the program so that the bottom half of the image is converted to grayscale</li>
-<li>change the program so that the animation of the pixel manipulation goes from top to bottom (instead of left to right)</li>
+<li><p>adapt the program so that the left half of the image remains unchanged, but the right of the image is converted to grayscale</p></li>
+<li><p>adapt the program so that the bottom half of the image is converted to grayscale</p></li>
+<li><p>change the program so that the animation of the pixel manipulation goes from top to bottom (instead of left to right)</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="combining-images">
-<h2>3.3. Combining Images<a class="headerlink" href="#combining-images" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Combining Images<a class="headerlink" href="#combining-images" title="Permalink to this headline">¶</a></h2>
 <p>If you want to combine two images together, you need to copy the pixel information from one image onto the pixel information of the other image. For example, if we want to have the smile emoji below show up in the image of the rooster, we need to look through each of the pixels in the smile image to see if we are looking at a white background pixel, or part of the image that we should be copying over to the rooster image. <em>Note that to make this example simpler, the teeth in the smile emoji have been turned slightly off-white, and the color of the emoji has been changed so that the yellow value of the emoji is (248, 216, 102). This allows us to check whether a pixel is white by simply checking if all of the rgb values are above a threshold of 250.</em></p>
 <img src="../../_static/emoji/smile.png" id="smile.png">
 <h4 style="text-align: center;">smile.png</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
 <h4 style="text-align: center;">rooster.jpg</h4><p>When we are copying the smile over to the rooster image, we can adjust where the smile should appear by adding/subtracting some value from x or y when we call <code class="docutils literal notranslate"><span class="pre">original_image.set_pixel()</span></code> on line 36.</p>
 
-<div data-childcomponent="combining_images" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=combining_images data-question_label="3.3.1">
+<div id=combining_images_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=combining_images data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="combining_images_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # import the module so we can access images
 import image
 
@@ -484,32 +460,37 @@ for x in range(width_small):
     original_img.draw(win)
 </textarea>
 </div>
+</div>
 <div class="section" id="id3">
-<h3>3.3.1. Try This<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>Try This<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Adapt the code above to:</p>
 <ul class="simple">
-<li>adapt the program the smile shows up on top of the rooster’s head</li>
+<li><p>adapt the program the smile shows up on top of the rooster’s head</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>3.4. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>For the following problems, use one of the images from the examples above, or one of these new ones:</p>
 <img src="../../_static/bird-far.jpg" id="bird-far.jpg">
 <h4 style="text-align: center;">bird-far.jpg</h4><img src="../../_static/berries.jpg" id="berries.jpg">
 <h4 style="text-align: center;">berries.jpg</h4><img src="../../_static/giraffe.jpg" id="giraffe.jpg">
 <h4 style="text-align: center;">giraffe.jpg</h4><img src="../../_static/emoji/no-med.png" id="ban.png">
 <h4 style="text-align: center;">ban.png</h4><div class="section" id="no-red-left-side">
-<h3>3.4.1. No Red Left Side<a class="headerlink" href="#no-red-left-side" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.1. </span>No Red Left Side<a class="headerlink" href="#no-red-left-side" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that sets the red intensity of all pixels on the left half of the picture to be 0. On the right side of the picture, the red intensity should remain the same as the original value. The green and blue intensities should remain the same as the original for all parts of the image.</p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_no_red_left_side" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_no_red_left_side data-question_label="3.4.1.1">
+<div id=practice_problem_no_red_left_side_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_no_red_left_side data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_no_red_left_side_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("berries.jpg")
@@ -524,25 +505,30 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="no_red_left_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="no_red_left_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you are using the berries.jpg image, your solution should look something like this:</p>
 <img alt="../../_images/no-red-left-side-solution.png" src="../../_images/no-red-left-side-solution.png" />
 
     </div>
     </div>
 <div class="section" id="blue-tint-top-right">
-<h3>3.4.2. Blue Tint Top Right<a class="headerlink" href="#blue-tint-top-right" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.2. </span>Blue Tint Top Right<a class="headerlink" href="#blue-tint-top-right" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that makes the top right quarter of the image be tinted blue (by increasing the amount of blue in that area of the image).</p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_blue_tint_top_right" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_blue_tint_top_right data-question_label="3.4.2.1">
+<div id=practice_problem_blue_tint_top_right_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_blue_tint_top_right data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_blue_tint_top_right_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("sneakers.jpg")
@@ -557,25 +543,30 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="blue_tint_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="blue_tint_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you are using the sneakers.jpg image, your solution should look something like this:</p>
 <img alt="../../_images/blue-tint-solution.png" src="../../_images/blue-tint-solution.png" />
 
     </div>
     </div>
 <div class="section" id="change-the-rooster-colour">
-<h3>3.4.3. Change the Rooster Colour<a class="headerlink" href="#change-the-rooster-colour" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.3. </span>Change the Rooster Colour<a class="headerlink" href="#change-the-rooster-colour" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that changes the colour of the rooster’s comb and wattle (the red stuff on the rooster’s head) from red to blue. <em>Note that your program will likely only partially work. That is okay! The edges of the converted parts of the image do not need to be clean.</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_change_rooster_colour" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_change_rooster_colour data-question_label="3.4.3.1">
+<div id=practice_problem_change_rooster_colour_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_change_rooster_colour data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_change_rooster_colour_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("rooster.jpg")
@@ -590,25 +581,30 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="rooster_color_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="rooster_color_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you changed the rooster from red to blue, your solution should look something like this:</p>
 <img alt="../../_images/change-rooster-color-solution.png" src="../../_images/change-rooster-color-solution.png" />
 
     </div>
     </div>
 <div class="section" id="repeat-left-twice">
-<h3>3.4.4. Repeat Left Twice<a class="headerlink" href="#repeat-left-twice" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4. </span>Repeat Left Twice<a class="headerlink" href="#repeat-left-twice" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that takes the left side of an image and displays it both on the left half, and the right half, of the image. In other words, replace the right side of the image with a copy of the left side of the image.</p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_repeat_left_twice" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_repeat_left_twice data-question_label="3.4.4.1">
+<div id=practice_problem_repeat_left_twice_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_repeat_left_twice data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_repeat_left_twice_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("giraffe.jpg")
@@ -623,25 +619,30 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="left_twice_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="left_twice_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you are using the giraffe.jpg image, your solution should look something like this:</p>
 <img alt="../../_images/left-twice-solution.png" src="../../_images/left-twice-solution.png" />
 
     </div>
     </div>
 <div class="section" id="mirror-horizontal">
-<h3>3.4.5. Mirror Horizontal<a class="headerlink" href="#mirror-horizontal" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.5. </span>Mirror Horizontal<a class="headerlink" href="#mirror-horizontal" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that mirrors an image from left to right around a vertical line of symmetry in the middle of the image. <em>Hint: you’ll need to figure out how far away from the line of symmetry you are…</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_mirror_horizontal" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_mirror_horizontal data-question_label="3.4.5.1">
+<div id=practice_problem_mirror_horizontal_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_mirror_horizontal data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_mirror_horizontal_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("giraffe.jpg")
@@ -656,25 +657,30 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="mirror_horizontal_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="mirror_horizontal_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you are using the giraffe.jpg image, your solution should look something like this:</p>
 <img alt="../../_images/mirror-horizontal-solution.png" src="../../_images/mirror-horizontal-solution.png" />
 
     </div>
     </div>
 <div class="section" id="mirror-vertical">
-<h3>3.4.6. Mirror Vertical<a class="headerlink" href="#mirror-vertical" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.6. </span>Mirror Vertical<a class="headerlink" href="#mirror-vertical" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that mirrors an image from top to bottom around a horizontal line of symmetry in the middle of the image. <em>Hint: you’ll need to figure out how far away from the line of symmetry you are…</em></p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_mirror_vertical" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_mirror_vertical data-question_label="3.4.6.1">
+<div id=practice_problem_mirror_vertical_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_mirror_vertical data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_mirror_vertical_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 img = image.Image("giraffe.jpg")
@@ -689,24 +695,29 @@ img.draw(win)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 
-    <div data-component="reveal" id="mirror_vertical_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="mirror_vertical_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you are using the giraffe.jpg image, your solution should look something like this:</p>
 <img alt="../../_images/mirror-vertical-solution.png" src="../../_images/mirror-vertical-solution.png" />
 
     </div>
     </div>
 <div class="section" id="gradient">
-<h3>3.4.7. Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.7. </span>Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that creates a gradient effect (slowly transitioning from one color to another). Begin with all red and no green, and <strong>after each pass of the inner loop</strong>, decrease the red and increase the green by some amount. The blue intensity can be set to 0 for all pixels.</p>
 
-<div data-childcomponent="practice_problem_gradient" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_gradient data-question_label="3.4.7.1">
+<div id=practice_problem_gradient_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_gradient data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_gradient_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 width = 255
@@ -720,26 +731,31 @@ img = image.EmptyImage(width, height)
 img.draw(win)
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="gradient_solution"   data-showtitle="Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="gradient_solution"   data-showtitle="Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>Your program should create an image that looks similar to the following:</p>
 <img alt="../../_images/gradient.png" src="../../_images/gradient.png" />
 
     </div>
     </div>
 <div class="section" id="radial-gradient-extra-challenge">
-<h3>3.4.8. Radial Gradient (Extra Challenge)<a class="headerlink" href="#radial-gradient-extra-challenge" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.8. </span>Radial Gradient (Extra Challenge)<a class="headerlink" href="#radial-gradient-extra-challenge" title="Permalink to this headline">¶</a></h3>
 <p>If you want to try something even more challenging, see if you can create a radial gradient. Radial gradients look like this:</p>
 <img alt="../../_images/radial-gradient.png" src="../../_images/radial-gradient.png" />
 <p>To make a radial gradient, you need to set a centre point, then for each pixel, calculate the distance between the current pixel and the centre point. You might find it helpful to create a <code class="docutils literal notranslate"><span class="pre">distance</span></code> function that takes in the coordinates of two points <code class="docutils literal notranslate"><span class="pre">x1</span></code>, <code class="docutils literal notranslate"><span class="pre">y1</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">y2</span></code>, and returns the distance between the two points (think Pythagorean theorem). Use the distance from the centre point as one of the RGB values when looping through each pixel. To create the image above, each pixel used an R value of 150, a G value of 50, and the distance from the centre point as the B value.</p>
 <blockquote>
 <div>
-<div data-childcomponent="practice_problem_radial_gradient" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_radial_gradient data-question_label="3.4.8.1">
+<div id=practice_problem_radial_gradient_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_radial_gradient data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_radial_gradient_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import image
 
 width = 255
@@ -753,10 +769,11 @@ img = image.EmptyImage(width, height)
 img.draw(win)
 </textarea>
 </div>
+</div>
 </div></blockquote>
 </div>
 <div class="section" id="acknowledgments">
-<h3>3.4.9. Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.9. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Emoji artwork is provided by <a class="reference external" href="https://www.emojione.com/">EmojiOne</a> EmojiOne and is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY 4.0</a>.</p>
 </div>
 </div>
@@ -765,19 +782,19 @@ img.draw(win)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 2. Image Processing Practice' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">2. </span>Image Processing Practice' data-toggle="tooltip">
     <a href="ImageProcessingPractice.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="ImageProcessingPractice.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 4. Functions and Image Processing' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">4. </span>Functions and Image Processing' data-toggle="tooltip" >
     <a href="ImageProcessingFunctions.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingFunctions.html" >Next Section - 4. Functions and Image Processing</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ImageProcessingFunctions.html" >Next Section - <span class="section-number">4. </span>Functions and Image Processing</a>
 
 <script type="text/javascript">
 

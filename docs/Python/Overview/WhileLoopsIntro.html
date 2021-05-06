@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. The while Statement &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="9. Our First Turtle Program" href="FirstTurtleProgram.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -221,13 +183,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 7. Which Quotes to Use When Creating Strings" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7. </span>Which Quotes to Use When Creating Strings" data-toggle="tooltip">
     <a href="StringQuotes.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 9. Our First Turtle Program' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">9. </span>Our First Turtle Program' data-toggle="tooltip" >
     <a href="FirstTurtleProgram.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -259,17 +221,17 @@
 <div class="container" id="main-content">
   
   <div class="section" id="the-while-statement">
-<h1>8. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement<a class="headerlink" href="#the-while-statement" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement<a class="headerlink" href="#the-while-statement" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Explore how the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop works in Python. Learn how to use the debug functions of Thonny. Continue to work on the current Python assignment, focused on input/output and string concatenation.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_intro_to_while_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_intro_to_while_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
 </ul>
 
     </div>
@@ -283,68 +245,45 @@
 <img alt="../../_images/while_flow.png" src="../../_images/while_flow.png" />
 <p>A short example of a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement follows.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For these introductory examples, we know the number of iterations (times the loop repeats) <em>before</em> the code executes. Later on, we will practice while loops in which we do not know the number of iterations ahead of time.</p>
+<p class="admonition-title">Note</p>
+<p>For these introductory examples, we know the number of iterations (times the loop repeats) <em>before</em> the code executes. Later on, we will practice while loops in which we do not know the number of iterations ahead of time.</p>
 </div>
 
-<div data-childcomponent="while_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_1 data-question_label="8.1">
+<div id=while_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 i = 0
 while (i < 5):
     print(i)
     i = i + 1
 </textarea>
 </div>
+</div>
 <p>It may be helpful to view the code above using codelens:</p>
 
 <div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="while_intro_1_codelens"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (while_intro_1_codelens)</span> </p>
-</div>
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="8.2">
+        <div class="pytutorVisualizer" id="while_intro_1_codelens"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 8.2 (while_intro_1_codelens)</span> </p>
+    </div>
+
 <script type="text/javascript">
-var while_intro_1_codelens_trace = {"code": "i = 0\nwhile (i < 5):\n    print(i)\n    i = i + 1", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}]};
 var while_intro_1_codelens_vis;
 
-$(document).ready(function() {
-    try {
-        while_intro_1_codelens_vis = new ExecutionVisualizer('while_intro_1_codelens',while_intro_1_codelens_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(while_intro_1_codelens_vis,'while_intro_1_codelens');
-        styleButtons('while_intro_1_codelens');
-        allVisualizers.push(while_intro_1_codelens_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component while_intro_1_codelens_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#while_intro_1_codelens_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'while_intro_1_codelens'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
+if (allTraceData === undefined) {
+   var allTraceData = {};
 }
 
-
-$(window).resize(function() {
-    if (while_intro_1_codelens_vis) {
-        while_intro_1_codelens_vis.redrawConnectors();
-    }
-});
+allTraceData["while_intro_1_codelens"] = {"code": "i = 0\nwhile (i < 5):\n    print(i)\n    i = i + 1", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 0}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 2}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 3}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 4}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"i": 5}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": "0\n1\n2\n3\n4\n"}]};
 </script>
 </div>
 <p>You can do something similar to the codelens feature above using Thonny. First, click on <em>View -&gt; Variables</em> to see the values of variables while your code runs.</p>
@@ -352,26 +291,31 @@ $(window).resize(function() {
 <p>Copy/paste the while loop code from above into the Thonny text editor. Now press the <em>Debug current script</em> button. Thonny will now highlight the next line it will evaluate. You can control the debugger using the <em>Step over</em>, <em>Step into</em>, and <em>Step out</em> buttons. For now, have Thonny go through the code by pressing <strong>Step into</strong> (or press the keyboard shortcut <strong>F7</strong>).</p>
 <img alt="../../_images/debug_mode_in_thonny_high_quality.gif" src="../../_images/debug_mode_in_thonny_high_quality.gif" />
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Using a visualization tool like codelens or Thonny’s debugger can really help you build a mental model of how Python works. Whenever you encounter a piece of Python code that you do not understand, your first reaction should be to run the code in one of these environments to help yourself figure out how it works!</p>
+<p class="admonition-title">Note</p>
+<p>Using a visualization tool like codelens or Thonny’s debugger can really help you build a mental model of how Python works. Whenever you encounter a piece of Python code that you do not understand, your first reaction should be to run the code in one of these environments to help yourself figure out how it works!</p>
 </div>
 <p>The following code is just slightly different from the version above. Can you spot the difference? Before you run the code, try to figure out what it will print. Will it be the same as the first version?</p>
 
-<div data-childcomponent="while_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_2 data-question_label="8.3">
+<div id=while_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 i = 0
 while (i < 5):
     i = i + 1
     print(i)
 </textarea>
 </div>
+</div>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Though Python’s <code class="docutils literal notranslate"><span class="pre">while</span></code> is very close to the English “while”,
+<p class="admonition-title">Warning</p>
+<p>Though Python’s <code class="docutils literal notranslate"><span class="pre">while</span></code> is very close to the English “while”,
 there is an important difference:  In English “while X, do Y”,
 we usually assume that immediately after X becomes false, we stop
 with Y.  In Python there is <em>not</em> an immediate stop:  After the
@@ -380,63 +324,83 @@ the <em>whole</em> body, even if the condition becomes false in the middle of th
 </div>
 <p>What will the following code do? <em>Note: it might be better to run this in Thonny, rather than here in your browser…</em></p>
 
-<div data-childcomponent="while_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_3 data-question_label="8.4">
+<div id=while_intro_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 while True:
     print("hello")
 </textarea>
 </div>
+</div>
 <div class="section" id="practice-problems">
-<h2>8.1. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="counting-up">
-<h3>8.1.1. Counting Up<a class="headerlink" href="#counting-up" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.1. </span>Counting Up<a class="headerlink" href="#counting-up" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will print out the numbers 1 to 100.</p>
 
-<div data-childcomponent="while_intro_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_4 data-question_label="8.1.1.1">
+<div id=while_intro_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_4 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_4_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 #put your code here!
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="counting-down">
-<h3>8.1.2. Counting Down<a class="headerlink" href="#counting-down" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.2. </span>Counting Down<a class="headerlink" href="#counting-down" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that counts down from 20 to 1, then prints <em>Blastoff!</em>.</p>
 
-<div data-childcomponent="while_intro_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_5 data-question_label="8.1.2.1">
+<div id=while_intro_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_5 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_5_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 #put your code here!
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="kinda-password">
-<h3>8.1.3. Kinda Password<a class="headerlink" href="#kinda-password" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.3. </span>Kinda Password<a class="headerlink" href="#kinda-password" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that asks the user to enter a password. Keep asking for the password until they enter “sask”.  Once they have successfully typed in “sask”, print out <em>What a great place!</em>.</p>
 
-<div data-childcomponent="while_intro_6" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_intro_6 data-question_label="8.1.3.1">
+<div id=while_intro_6_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_intro_6 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="while_intro_6_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 #put your code here!
 </textarea>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="assignment-work-time">
-<h2>8.2. Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
 <p>Please spend the rest of the class continuing to work on your current Python assignment (likely a string input/output assignment like Madlibs, or something similar).</p>
 </div>
 </div>
@@ -444,19 +408,19 @@ while True:
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 7. Which Quotes to Use When Creating Strings' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">7. </span>Which Quotes to Use When Creating Strings' data-toggle="tooltip">
     <a href="StringQuotes.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="StringQuotes.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 9. Our First Turtle Program' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">9. </span>Our First Turtle Program' data-toggle="tooltip" >
     <a href="FirstTurtleProgram.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="FirstTurtleProgram.html" >Next Section - 9. Our First Turtle Program</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="FirstTurtleProgram.html" >Next Section - <span class="section-number">9. </span>Our First Turtle Program</a>
 
 <script type="text/javascript">
 

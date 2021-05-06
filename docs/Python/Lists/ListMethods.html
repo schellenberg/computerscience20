@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. List Methods &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. Lists and Turtle Drawing" href="ListsAndTurtles.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -234,13 +196,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 1. Using Lists" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>Using Lists" data-toggle="tooltip">
     <a href="ListOverview.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 3. Lists and Turtle Drawing' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3. </span>Lists and Turtle Drawing' data-toggle="tooltip" >
     <a href="ListsAndTurtles.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -272,121 +234,160 @@
 <div class="container" id="main-content">
   
   <div class="section" id="list-methods">
-<h1>2. List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Explore methods that allow you to manipulate lists.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_list_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_list_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-<li><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</p></li>
+<li><p><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</p></li>
 </ul>
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+<p class="admonition-title">Note</p>
+<p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p>What will the following programs output? Why?</p>
 
-<div data-childcomponent="wdtpd_lists_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_1 data-question_label="2.1.1">
+<div id=wdtpd_lists_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_1 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", 3.14, False]
 print(len(a_list))
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_2 data-question_label="2.1.2">
+<div id=wdtpd_lists_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_2 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(len(a_list))
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_3 data-question_label="2.1.3">
+<div id=wdtpd_lists_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_3 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(a_list[5])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_4 data-question_label="2.1.4">
+<div id=wdtpd_lists_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_4 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(a_list[2][0])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_5 data-question_label="2.1.5">
+<div id=wdtpd_lists_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_5 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_5_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [4, 2, 8, 6, 5]
 a_list[2] = True
 print(a_list)
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_6" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_6 data-question_label="2.1.6">
+<div id=wdtpd_lists_6_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_6 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_6_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(a_list[3][2])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_lists_7" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_lists_7 data-question_label="2.1.7">
+<div id=wdtpd_lists_7_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_lists_7 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_lists_7_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 a_list = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(a_list[3][2][2])
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="id1">
-<h2>2.2. List Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>List Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>The dot operator can also be used to access built-in methods of list objects.
 <code class="docutils literal notranslate"><span class="pre">append</span></code> is a list method which adds the argument passed to it to the end of
 the list. Continuing with this example, we show several other list methods.  Many of them are
 easy to understand.</p>
 
-<div data-childcomponent="list_methods_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_1 data-question_label="2.2.1">
+<div id=list_methods_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 my_list = []
 my_list.append(5)
 my_list.append(27)
@@ -415,6 +416,7 @@ print(last_item)
 print(my_list)
 </textarea>
 </div>
+</div>
 <p>There are two ways to use the <code class="docutils literal notranslate"><span class="pre">pop</span></code> method.  The first, with no parameter, will remove and return the
 last item of the list.  If you provide a parameter for the position, <code class="docutils literal notranslate"><span class="pre">pop</span></code> will remove and return the
 item at that position.  Either way the list is changed.</p>
@@ -423,65 +425,65 @@ item at that position.  Either way the list is changed.</p>
 <strong>mutator</strong> means that the list is changed by the method but nothing is returned (actually <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned).  A <strong>hybrid</strong> method is one that not only changes the list but also returns a value as its result.  Finally, if the result is simply a return, then the list
 is unchanged by the method.</p>
 <p>Be sure to experiment with these methods to gain a better understanding of what they do.</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="12%" />
-<col width="17%" />
-<col width="14%" />
-<col width="57%" />
+<col style="width: 12%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 57%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Method</th>
-<th class="head">Parameters</th>
-<th class="head">Result</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Parameters</p></th>
+<th class="head"><p>Result</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>append</td>
-<td>item</td>
-<td>mutator</td>
-<td>Adds a new item to the end of a list</td>
+<tbody>
+<tr class="row-even"><td><p>append</p></td>
+<td><p>item</p></td>
+<td><p>mutator</p></td>
+<td><p>Adds a new item to the end of a list</p></td>
 </tr>
-<tr class="row-odd"><td>insert</td>
-<td>position, item</td>
-<td>mutator</td>
-<td>Inserts a new item at the position given</td>
+<tr class="row-odd"><td><p>insert</p></td>
+<td><p>position, item</p></td>
+<td><p>mutator</p></td>
+<td><p>Inserts a new item at the position given</p></td>
 </tr>
-<tr class="row-even"><td>pop</td>
-<td>none</td>
-<td>hybrid</td>
-<td>Removes and returns the last item</td>
+<tr class="row-even"><td><p>pop</p></td>
+<td><p>none</p></td>
+<td><p>hybrid</p></td>
+<td><p>Removes and returns the last item</p></td>
 </tr>
-<tr class="row-odd"><td>pop</td>
-<td>position</td>
-<td>hybrid</td>
-<td>Removes and returns the item at position</td>
+<tr class="row-odd"><td><p>pop</p></td>
+<td><p>position</p></td>
+<td><p>hybrid</p></td>
+<td><p>Removes and returns the item at position</p></td>
 </tr>
-<tr class="row-even"><td>sort</td>
-<td>none</td>
-<td>mutator</td>
-<td>Modifies a list to be sorted</td>
+<tr class="row-even"><td><p>sort</p></td>
+<td><p>none</p></td>
+<td><p>mutator</p></td>
+<td><p>Modifies a list to be sorted</p></td>
 </tr>
-<tr class="row-odd"><td>reverse</td>
-<td>none</td>
-<td>mutator</td>
-<td>Modifies a list to be in reverse order</td>
+<tr class="row-odd"><td><p>reverse</p></td>
+<td><p>none</p></td>
+<td><p>mutator</p></td>
+<td><p>Modifies a list to be in reverse order</p></td>
 </tr>
-<tr class="row-even"><td>index</td>
-<td>item</td>
-<td>return idx</td>
-<td>Returns the position of first occurrence of item</td>
+<tr class="row-even"><td><p>index</p></td>
+<td><p>item</p></td>
+<td><p>return idx</p></td>
+<td><p>Returns the position of first occurrence of item</p></td>
 </tr>
-<tr class="row-odd"><td>count</td>
-<td>item</td>
-<td>return ct</td>
-<td>Returns the number of occurrences of item</td>
+<tr class="row-odd"><td><p>count</p></td>
+<td><p>item</p></td>
+<td><p>return ct</p></td>
+<td><p>Returns the number of occurrences of item</p></td>
 </tr>
-<tr class="row-even"><td>remove</td>
-<td>item</td>
-<td>mutator</td>
-<td>Removes the first occurrence of item</td>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>item</p></td>
+<td><p>mutator</p></td>
+<td><p>Removes the first occurrence of item</p></td>
 </tr>
 </tbody>
 </table>
@@ -490,12 +492,16 @@ can be found in the <a class="reference external" href="http://docs.python.org/p
 <p>It is important to remember that methods like <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">sort</span></code>,
 and <code class="docutils literal notranslate"><span class="pre">reverse</span></code> all return <code class="docutils literal notranslate"><span class="pre">None</span></code>.  This means that re-assigning <code class="docutils literal notranslate"><span class="pre">my_list</span></code> to the result of sorting <code class="docutils literal notranslate"><span class="pre">my_list</span></code> will result in losing the entire list.  Calls like these will likely never appear as part of an assignment statement (see line 8 below).</p>
 
-<div data-childcomponent="list_methods_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_2 data-question_label="2.2.2">
+<div id=list_methods_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 my_list = []
 my_list.append(5)
 my_list.append(27)
@@ -507,65 +513,66 @@ my_list = my_list.sort()   #probably an error
 print(my_list)
 </textarea>
 </div>
+</div>
 <div class="section" id="check-your-understanding">
-<h3>2.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="list_methods_check_1">
-            <p>list-methods1: What is printed by the following statements?</p>
+            <ul data-component="multiplechoice" data-question_label="2.2.1.1" data-multipleanswers="false"  id="list_methods_check_1"  style="visibility: hidden;">
+            <p>list-methods10: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="list_methods_check_1_opt_a">[4, 2, 8, 6, 5, False, True]</li><li data-component="feedback" id="list_methods_check_1_opt_a">True was added first, then False was added last.</li>
+            <li data-component="answer"  id="list_methods_check_1_opt_a">[4, 2, 8, 6, 5, False, True]</li><li data-component="feedback">True was added first, then False was added last.</li>
             
-            <li data-component="answer" data-correct id="list_methods_check_1_opt_b">[4, 2, 8, 6, 5, True, False]</li><li data-component="feedback" id="list_methods_check_1_opt_b">Yes, each item is added to the end of the list.</li>
+            <li data-component="answer" data-correct id="list_methods_check_1_opt_b">[4, 2, 8, 6, 5, True, False]</li><li data-component="feedback">Yes, each item is added to the end of the list.</li>
             
-            <li data-component="answer"  id="list_methods_check_1_opt_c">[True, False, 4, 2, 8, 6, 5]</li><li data-component="feedback" id="list_methods_check_1_opt_c">append adds at the end, not the beginning.</li>
+            <li data-component="answer"  id="list_methods_check_1_opt_c">[True, False, 4, 2, 8, 6, 5]</li><li data-component="feedback">append adds at the end, not the beginning.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="list_methods_check_2">
-            <p>list-methods2: What is printed by the following statements?</p>
+            <ul data-component="multiplechoice" data-question_label="2.2.1.2" data-multipleanswers="false"  id="list_methods_check_2"  style="visibility: hidden;">
+            <p>list-methods11: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="list_methods_check_2_opt_a">[4, 8, 6]</li><li data-component="feedback" id="list_methods_check_2_opt_a">pop(2) removes the item at index 2, not the 2 itself.</li>
+            <li data-component="answer"  id="list_methods_check_2_opt_a">[4, 8, 6]</li><li data-component="feedback">pop(2) removes the item at index 2, not the 2 itself.</li>
             
-            <li data-component="answer"  id="list_methods_check_2_opt_b">[2, 6, 5]</li><li data-component="feedback" id="list_methods_check_2_opt_b">pop() removes the last item, not the first.</li>
+            <li data-component="answer"  id="list_methods_check_2_opt_b">[2, 6, 5]</li><li data-component="feedback">pop() removes the last item, not the first.</li>
             
-            <li data-component="answer" data-correct id="list_methods_check_2_opt_c">[4, 2, 6]</li><li data-component="feedback" id="list_methods_check_2_opt_c">Yes, first the 8 was removed, then the last item, which was 5.</li>
+            <li data-component="answer" data-correct id="list_methods_check_2_opt_c">[4, 2, 6]</li><li data-component="feedback">Yes, first the 8 was removed, then the last item, which was 5.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="list_methods_check_3">
-            <p>list-methods3: What is printed by the following statements?</p>
+            <ul data-component="multiplechoice" data-question_label="2.2.1.3" data-multipleanswers="false"  id="list_methods_check_3"  style="visibility: hidden;">
+            <p>list-methods12: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">a_list</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="list_methods_check_3_opt_a">[2, 8, 6, 5]</li><li data-component="feedback" id="list_methods_check_3_opt_a">a_list is now the value that was returned from pop(0).</li>
+            <li data-component="answer"  id="list_methods_check_3_opt_a">[2, 8, 6, 5]</li><li data-component="feedback">a_list is now the value that was returned from pop(0).</li>
             
-            <li data-component="answer"  id="list_methods_check_3_opt_b">[4, 2, 8, 6, 5]</li><li data-component="feedback" id="list_methods_check_3_opt_b">pop(0) changes the list by removing the first item.</li>
+            <li data-component="answer"  id="list_methods_check_3_opt_b">[4, 2, 8, 6, 5]</li><li data-component="feedback">pop(0) changes the list by removing the first item.</li>
             
-            <li data-component="answer" data-correct id="list_methods_check_3_opt_c">4</li><li data-component="feedback" id="list_methods_check_3_opt_c">Yes, first the 4 was removed from the list, then returned and assigned to a_list.  The list is lost.</li>
+            <li data-component="answer" data-correct id="list_methods_check_3_opt_c">4</li><li data-component="feedback">Yes, first the 4 was removed from the list, then returned and assigned to a_list.  The list is lost.</li>
             
-            <li data-component="answer"  id="list_methods_check_3_opt_d">None</li><li data-component="feedback" id="list_methods_check_3_opt_d">pop(0) returns the first item in the list so a_list has now been changed.</li>
+            <li data-component="answer"  id="list_methods_check_3_opt_d">None</li><li data-component="feedback">pop(0) returns the first item in the list so a_list has now been changed.</li>
             
 
             </ul>
@@ -573,40 +580,54 @@ print(my_list)
             </div>
 </div>
 <div class="section" id="inventory-example">
-<h2>2.3. Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this headline">¶</a></h2>
 <p>If you were making a computer game, and you needed to keep track of what items the player was currently holding, using a list would be a good choice. At the beginning of the game, you might create an empty list, if the player begins the game without any items.</p>
 
-<div data-childcomponent="inventory_example_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=inventory_example_1 data-question_label="2.3.1">
+<div id=inventory_example_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=inventory_example_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="inventory_example_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 inventory = []
 print(inventory)
 </textarea>
 </div>
+</div>
 <p>If the player obtains a new item, the new item should be added to the list. The easiest way to do this is to use the built-in <code class="docutils literal notranslate"><span class="pre">.append()</span></code> method.</p>
 
-<div data-childcomponent="inventory_example_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=inventory_example_2 data-question_label="2.3.2">
+<div id=inventory_example_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=inventory_example_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="inventory_example_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 inventory = []
 inventory.append("room 1 key")
 print(inventory)
 </textarea>
 </div>
+</div>
 <p>When you need to check if the player is currently able to perform a certain action, such as opening a locked door, you simply need to check if an item is in the inventory list.</p>
 
-<div data-childcomponent="inventory_example_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=inventory_example_3 data-question_label="2.3.3">
+<div id=inventory_example_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=inventory_example_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="inventory_example_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 inventory = []
 
 # after the player does something to find the key...
@@ -622,14 +643,19 @@ else:
 print(inventory)
 </textarea>
 </div>
+</div>
 <p>Sometimes, the item the player uses might be something they can only use once. For example, after they used the “room 1 key”, we might want the “room 1 key” to no longer be in the player’s inventory. The following code does just that.</p>
 
-<div data-childcomponent="inventory_example_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=inventory_example_4 data-question_label="2.3.4">
+<div id=inventory_example_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=inventory_example_4 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="inventory_example_4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 inventory = []
 
 # after the player does something to find the key
@@ -649,35 +675,45 @@ else:
 print(inventory)
 </textarea>
 </div>
+</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Change the code above so you append a <code class="docutils literal notranslate"><span class="pre">book</span></code> instead of a <code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">1</span> <span class="pre">key</span></code>, then run the code again.</p>
+<p class="admonition-title">Note</p>
+<p>Change the code above so you append a <code class="docutils literal notranslate"><span class="pre">book</span></code> instead of a <code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">1</span> <span class="pre">key</span></code>, then run the code again.</p>
 </div>
 </div>
 <div class="section" id="shopping-list">
-<h2>2.4. Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this headline">¶</a></h2>
 <p>Say you want to make a list of things to buy when you go to the store. You could do something like this:</p>
 
-<div data-childcomponent="shopping_list_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=shopping_list_1 data-question_label="2.4.1">
+<div id=shopping_list_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=shopping_list_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="shopping_list_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 shopping_list = []
 item = input("Please enter an item to add to your shopping list:")
 shopping_list.append(item)
 print(shopping_list)
 </textarea>
 </div>
+</div>
 <p>The obvious problem here is that we can only add one item to our list. Let’s put that logic into an infinite loop, so that we can continue to add items until we enter the word <code class="docutils literal notranslate"><span class="pre">quit</span></code>:</p>
 
-<div data-childcomponent="shopping_list_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=shopping_list_2 data-question_label="2.4.2">
+<div id=shopping_list_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=shopping_list_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="shopping_list_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 shopping_list = []
 
 while True:
@@ -699,16 +735,21 @@ for thing_to_get in shopping_list:
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="shakespearean-insult-generator">
-<span id="index-1"></span><h2>2.5. Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">2.5. </span>Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this headline">¶</a></h2>
 <p>By importing other modules, you can add additional methods that can be used on lists. One example of this is from the <code class="docutils literal notranslate"><span class="pre">random</span></code> module, which provides a <code class="docutils literal notranslate"><span class="pre">choice</span></code> method that takes in a string, and returns one element of the list at random. Consider the following, which will pick a random name each time the code is executed:</p>
 
-<div data-childcomponent="shakespeare_insult_example_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=shakespeare_insult_example_1 data-question_label="2.5.1">
+<div id=shakespeare_insult_example_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=shakespeare_insult_example_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="shakespeare_insult_example_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import random
 
 name_list = ["Carl", "Christy", "Braden", "Lanae"]
@@ -716,14 +757,19 @@ name_list = ["Carl", "Christy", "Braden", "Lanae"]
 print(random.choice(name_list))
 </textarea>
 </div>
+</div>
 <p>The following is a simple insult generator, using words found in the works of the great bard.</p>
 
-<div data-childcomponent="shakespeare_insult_example_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=shakespeare_insult_example_2 data-question_label="2.5.2">
+<div id=shakespeare_insult_example_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=shakespeare_insult_example_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="shakespeare_insult_example_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # Shakespeare Insult Kit
 # Idea from http://www.pangloss.com/seidel/shake_rule.html
 # Original concept attributed to Jerry Maguire, an English teacher at Center Grove High School in Greenwood, Indiana
@@ -745,50 +791,65 @@ print(the_insult)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="strings-and-lists">
-<span id="index-2"></span><h2>2.6. Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2><span class="section-number">2.6. </span>Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this headline">¶</a></h2>
 <p>Two of the most useful methods on strings involve lists of
 strings. The <code class="docutils literal notranslate"><span class="pre">split</span></code> method
 breaks a string into a list of words.  By
 default, any number of whitespace characters is considered a word boundary.</p>
 
-<div data-childcomponent="string_lists_split1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_lists_split1 data-question_label="2.6.1">
+<div id=string_lists_split1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_lists_split1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_lists_split1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 song = "The rain in Spain..."
 word_list = song.split()
 print(word_list)
 </textarea>
 </div>
+</div>
 <p>An optional argument called a <strong>delimiter</strong> can be used to specify which
 characters to use as word boundaries. The following example uses the string
 <code class="docutils literal notranslate"><span class="pre">ai</span></code> as the delimiter:</p>
 
-<div data-childcomponent="string_lists_split2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_lists_split2 data-question_label="2.6.2">
+<div id=string_lists_split2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_lists_split2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_lists_split2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 song = "The rain in Spain..."
 word_list = song.split('ai')
 print(word_list)
 </textarea>
+</div>
 </div>
 <p>Notice that the delimiter doesn’t appear in the result.</p>
 <p>The inverse of the <code class="docutils literal notranslate"><span class="pre">split</span></code> method is <code class="docutils literal notranslate"><span class="pre">join</span></code>.  You choose a
 desired <strong>separator</strong> string, (often called the <em>glue</em>)
 and join the list with the glue between each of the elements.</p>
 
-<div data-childcomponent="string_lists_join" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_lists_join data-question_label="2.6.3">
+<div id=string_lists_join_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_lists_join data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_lists_join_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 word_list = ["red", "blue", "green"]
 glue = ';'
 s = glue.join(word_list)
@@ -799,30 +860,31 @@ print("***".join(word_list))
 print("".join(word_list))
 </textarea>
 </div>
+</div>
 <p>The list that you glue together (<code class="docutils literal notranslate"><span class="pre">word_list</span></code> in this example) is not modified.  Also,
 you can use empty glue or multi-character strings as glue.</p>
 <div class="section" id="id2">
-<h3>2.6.1. Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="list_methods_check_4">
-            <p>list-methods4: What is printed by the following statements?</p>
+            <ul data-component="multiplechoice" data-question_label="2.6.1.1" data-multipleanswers="false"  id="list_methods_check_4"  style="visibility: hidden;">
+            <p>list-methods24: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Edgar Allan Poe&quot;</span>
 <span class="n">name_list</span> <span class="o">=</span> <span class="n">my_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">a_name</span> <span class="ow">in</span> <span class="n">name_list</span><span class="p">:</span>
     <span class="n">some_string</span> <span class="o">=</span> <span class="n">some_string</span> <span class="o">+</span> <span class="n">a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">some_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">some_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="list_methods_check_4_opt_a">Poe</li><li data-component="feedback" id="list_methods_check_4_opt_a">Three characters but not the right ones.  name_list is the list of names.</li>
+            <li data-component="answer"  id="list_methods_check_4_opt_a">Poe</li><li data-component="feedback">Three characters but not the right ones.  name_list is the list of names.</li>
             
-            <li data-component="answer"  id="list_methods_check_4_opt_b">EdgarAllanPoe</li><li data-component="feedback" id="list_methods_check_4_opt_b">Too many characters in this case.  There should be a single letter from each name.</li>
+            <li data-component="answer"  id="list_methods_check_4_opt_b">EdgarAllanPoe</li><li data-component="feedback">Too many characters in this case.  There should be a single letter from each name.</li>
             
-            <li data-component="answer" data-correct id="list_methods_check_4_opt_c">EAP</li><li data-component="feedback" id="list_methods_check_4_opt_c">Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.</li>
+            <li data-component="answer" data-correct id="list_methods_check_4_opt_c">EAP</li><li data-component="feedback">Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.</li>
             
-            <li data-component="answer"  id="list_methods_check_4_opt_d">William Shakespeare</li><li data-component="feedback" id="list_methods_check_4_opt_d">That does not make any sense.</li>
+            <li data-component="answer"  id="list_methods_check_4_opt_d">William Shakespeare</li><li data-component="feedback">That does not make any sense.</li>
             
 
             </ul>
@@ -830,28 +892,33 @@ you can use empty glue or multi-character strings as glue.</p>
             </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>2.7. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="appending-to-a-list">
-<h3>2.7.1. Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.1. </span>Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this headline">¶</a></h3>
 <p>Create an empty list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>. Now append the following items (one item at a time): 76, 92.3, “hello”, True, 4, 76.</p>
 
-<div data-childcomponent="list_methods_practice_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_practice_1 data-question_label="2.7.1.1">
+<div id=list_methods_practice_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_practice_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_practice_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # your code goes here!
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="methods_practice_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide" >
+    <div data-component="reveal" id="methods_practice_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide"  style="visibility: hidden;">
     <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">92.3</span><span class="p">)</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
-<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>
 </pre></div>
@@ -860,94 +927,113 @@ you can use empty glue or multi-character strings as glue.</p>
     </div>
     </div>
 <div class="section" id="list-methods-practice">
-<h3>2.7.2. List Methods Practice<a class="headerlink" href="#list-methods-practice" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.2. </span>List Methods Practice<a class="headerlink" href="#list-methods-practice" title="Permalink to this headline">¶</a></h3>
 <p>Given <code class="docutils literal notranslate"><span class="pre">my_list</span></code> below, write Python statements to do the following:</p>
 <ol class="loweralpha simple">
-<li>Append “apple” and 76 to the list.</li>
-<li>Insert the value “cat” at position 3.</li>
-<li>Insert the value 99 at the start of the list.</li>
-<li>Find the index of “hello”.</li>
-<li>Count the number of 76s in the list.</li>
-<li>Remove the first occurrence of 76 from the list.</li>
-<li>Remove the last element from the list, and print it’s value.</li>
+<li><p>Append “apple” and 76 to the list.</p></li>
+<li><p>Insert the value “cat” at position 3.</p></li>
+<li><p>Insert the value 99 at the start of the list.</p></li>
+<li><p>Find the index of “hello”.</p></li>
+<li><p>Count the number of 76s in the list.</p></li>
+<li><p>Remove the first occurrence of 76 from the list.</p></li>
+<li><p>Remove the last element from the list, and print it’s value.</p></li>
 </ol>
 
-<div data-childcomponent="list_methods_practice_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_practice_2 data-question_label="2.7.2.1">
+<div id=list_methods_practice_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_practice_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_practice_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 my_list = [76, 92.3, 'hello', True, 4, 76]
 
 # add your code below
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="methods_practice_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide" >
-    <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span> <span class="mf">92.3</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">76</span><span class="p">]</span>
+    <div data-component="reveal" id="methods_practice_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span> <span class="mf">92.3</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">76</span><span class="p">]</span>
 
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)</span>         <span class="c1"># a</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>              <span class="c1"># a</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">)</span>        <span class="c1"># b</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>           <span class="c1"># c</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>   <span class="c1"># d</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">76</span><span class="p">))</span>        <span class="c1"># e</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>   <span class="c1"># d</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">76</span><span class="p">))</span>        <span class="c1"># e</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>              <span class="c1"># f</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>            <span class="c1"># g</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>            <span class="c1"># g</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 </div>
 
     </div>
     </div>
 <div class="section" id="compliment-generator">
-<h3>2.7.3. Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.3. </span>Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
 <p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal notranslate"><span class="pre">great</span></code> <code class="docutils literal notranslate"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal notranslate"><span class="pre">great</span></code> into a list called <code class="docutils literal notranslate"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal notranslate"><span class="pre">friend``into</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">called</span> <span class="pre">``second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
 
-<div data-childcomponent="list_methods_practice_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_practice_3 data-question_label="2.7.3.1">
+<div id=list_methods_practice_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_practice_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_practice_3_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # your code goes here!
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="averaging-random-integer-list">
-<h3>2.7.4. Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.4. </span>Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
 <p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
 
-<div data-childcomponent="list_methods_practice_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_practice_4 data-question_label="2.7.4.1">
+<div id=list_methods_practice_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_practice_4 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_practice_4_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # your code goes here!
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="writing-your-own-methods">
-<h3>2.7.5. Writing Your Own Methods<a class="headerlink" href="#writing-your-own-methods" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.5. </span>Writing Your Own Methods<a class="headerlink" href="#writing-your-own-methods" title="Permalink to this headline">¶</a></h3>
 <p>Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Write Python functions that work like the following:</p>
 <ol class="loweralpha simple">
-<li><code class="docutils literal notranslate"><span class="pre">count</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">in</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">reverse</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">index</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">insert</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert</span></code></p></li>
 </ol>
 
-<div data-childcomponent="list_methods_practice_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_methods_practice_5 data-question_label="2.7.5.1">
+<div id=list_methods_practice_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_methods_practice_5 data-lang="python" 
-      data-timelimit=25000  data-codelens="true" data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_methods_practice_5_editor" 
+      data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def count(thing_to_find, list_to_look_in):
     # your code goes here!
 
@@ -958,23 +1044,24 @@ def count(thing_to_find, list_to_look_in):
 </div>
 </div>
 </div>
+</div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 1. Using Lists' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>Using Lists' data-toggle="tooltip">
     <a href="ListOverview.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="ListOverview.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 3. Lists and Turtle Drawing' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">3. </span>Lists and Turtle Drawing' data-toggle="tooltip" >
     <a href="ListsAndTurtles.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="ListsAndTurtles.html" >Next Section - 3. Lists and Turtle Drawing</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ListsAndTurtles.html" >Next Section - <span class="section-number">3. </span>Lists and Turtle Drawing</a>
 
 <script type="text/javascript">
 

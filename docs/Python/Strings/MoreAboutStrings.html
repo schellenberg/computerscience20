@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. String Methods" href="StringMethods.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -231,13 +193,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 1. String Index, Length, Slicing and Traversal" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>String Index, Length, Slicing and Traversal" data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 3. String Methods' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3. </span>String Methods' data-toggle="tooltip" >
     <a href="StringMethods.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -269,125 +231,117 @@
 <div class="container" id="main-content">
   
   <div class="section" id="string-traversal-by-index-and-the-accumulator-pattern-with-strings">
-<h1>2. String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_string_accumulator_pattern"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_string_accumulator_pattern"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</p></li>
 </ul>
 
     </div>
     <div class="section" id="what-does-this-program-do">
-<h2>2.1. What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+<p class="admonition-title">Note</p>
+<p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
 </div>
 <p><strong>What will the following programs output? Why?</strong></p>
 
-<div data-childcomponent="wdtpd_string_manipulation_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_string_manipulation_1 data-question_label="2.1.1">
+<div id=wdtpd_string_manipulation_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_string_manipulation_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[1])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_string_manipulation_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_string_manipulation_2 data-question_label="2.1.2">
+<div id=wdtpd_string_manipulation_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_string_manipulation_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[-3])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_string_manipulation_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_string_manipulation_3 data-question_label="2.1.3">
+<div id=wdtpd_string_manipulation_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_string_manipulation_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[2:6])
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="wdtpd_string_manipulation_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=wdtpd_string_manipulation_4 data-question_label="2.1.4">
+<div id=wdtpd_string_manipulation_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=wdtpd_string_manipulation_4 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-         data-caption='What will this program print?' >
+</div>
+<textarea data-lang="python" id="wdtpd_string_manipulation_4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static 
+     style="visibility: hidden;">
 fruit = "pineapple"
 for poorly_named_variable in fruit:
     print(poorly_named_variable)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="traversal-and-the-for-loop-by-index">
-<h2>2.2. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
 These positions can be used together with the indexing operator to access the individual
 characters in the string.</p>
 <p>Consider the following codelens example.</p>
 
 <div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="string_for_loop_by_index_1"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (string_for_loop_by_index_1)</span> </p>
-</div>
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.2.1">
+        <div class="pytutorVisualizer" id="string_for_loop_by_index_1"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.2.1 (string_for_loop_by_index_1)</span> </p>
+    </div>
+
 <script type="text/javascript">
-var string_for_loop_by_index_1_trace = {"code": "fruit = \"apple\"\nfor current_index in range(5):\n    current_char = fruit[current_index]\n    print(current_char)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple"}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\ne\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\ne\n"}]};
 var string_for_loop_by_index_1_vis;
 
-$(document).ready(function() {
-    try {
-        string_for_loop_by_index_1_vis = new ExecutionVisualizer('string_for_loop_by_index_1',string_for_loop_by_index_1_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(string_for_loop_by_index_1_vis,'string_for_loop_by_index_1');
-        styleButtons('string_for_loop_by_index_1');
-        allVisualizers.push(string_for_loop_by_index_1_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component string_for_loop_by_index_1_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#string_for_loop_by_index_1_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'string_for_loop_by_index_1'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
+if (allTraceData === undefined) {
+   var allTraceData = {};
 }
 
-
-$(window).resize(function() {
-    if (string_for_loop_by_index_1_vis) {
-        string_for_loop_by_index_1_vis.redrawConnectors();
-    }
-});
+allTraceData["string_for_loop_by_index_1"] = {"code": "fruit = \"apple\"\nfor current_index in range(5):\n    current_char = fruit[current_index]\n    print(current_char)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple"}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "a"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "p"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "l"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\ne\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4, "current_char": "e"}, "ordered_globals": ["fruit", "current_index", "current_char"], "stack_to_render": [], "heap": {}, "stdout": "a\np\np\nl\ne\n"}]};
 </script>
 </div>
 <p>The index positions in “apple” are 0,1,2,3 and 4.  This is exactly the same sequence of integers returned by <code class="docutils literal notranslate"><span class="pre">range(5)</span></code>.  The first time through the for loop, <code class="docutils literal notranslate"><span class="pre">current_index</span></code> will be 0 and the “a” will be printed.  Then, <code class="docutils literal notranslate"><span class="pre">current_index</span></code> will be reassigned to 1 and “p” will be displayed.  This will repeat for all the range values up to but not including 5.  Since “e” has index 4, this will be exactly right to show all
@@ -395,91 +349,68 @@ of the characters.</p>
 <p>In order to make the iteration more general, we can use the <code class="docutils literal notranslate"><span class="pre">len</span></code> function to provide the bound for <code class="docutils literal notranslate"><span class="pre">range</span></code>.  This is a very common pattern for traversing any sequence by position.  Make sure you understand why the range function behaves
 correctly when using <code class="docutils literal notranslate"><span class="pre">len</span></code> of the string as its parameter value.</p>
 
-<div data-childcomponent="string_for_loop_by_index_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_for_loop_by_index_2 data-question_label="2.2.2">
+<div id=string_for_loop_by_index_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_for_loop_by_index_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_for_loop_by_index_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 fruit = "apple"
 for current_index in range(len(fruit)):
     print(fruit[current_index])
 </textarea>
 </div>
+</div>
 <p>You may also note that iteration by position allows the programmer to control the direction of the
 traversal by changing the sequence of index values.  Recall that we can create ranges that count down as well as up so the following code will print the characters from right to left.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Remember that when using the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function with three arguments, the arguments are interpreted as <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>, and <code class="docutils literal notranslate"><span class="pre">amount_to_step_by</span></code>. The range function begins at the <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, and goes up to, but not including, the <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>.</p>
+<p class="admonition-title">Note</p>
+<p>Remember that when using the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function with three arguments, the arguments are interpreted as <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>, and <code class="docutils literal notranslate"><span class="pre">amount_to_step_by</span></code>. The range function begins at the <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, and goes up to, but not including, the <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>.</p>
 </div>
 
 <div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="string_for_loop_by_index_3"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (string_for_loop_by_index_3)</span> </p>
-</div>
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.2.3">
+        <div class="pytutorVisualizer" id="string_for_loop_by_index_3"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.2.3 (string_for_loop_by_index_3)</span> </p>
+    </div>
+
 <script type="text/javascript">
-var string_for_loop_by_index_3_trace = {"code": "fruit = \"apple\"\nfor current_index in range(len(fruit)-1, -1, -1):\n    print(fruit[current_index])", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple"}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\na\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\na\n"}]};
 var string_for_loop_by_index_3_vis;
 
-$(document).ready(function() {
-    try {
-        string_for_loop_by_index_3_vis = new ExecutionVisualizer('string_for_loop_by_index_3',string_for_loop_by_index_3_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(string_for_loop_by_index_3_vis,'string_for_loop_by_index_3');
-        styleButtons('string_for_loop_by_index_3');
-        allVisualizers.push(string_for_loop_by_index_3_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component string_for_loop_by_index_3_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#string_for_loop_by_index_3_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'string_for_loop_by_index_3'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
+if (allTraceData === undefined) {
+   var allTraceData = {};
 }
 
-
-$(window).resize(function() {
-    if (string_for_loop_by_index_3_vis) {
-        string_for_loop_by_index_3_vis.redrawConnectors();
-    }
-});
+allTraceData["string_for_loop_by_index_3"] = {"code": "fruit = \"apple\"\nfor current_index in range(len(fruit)-1, -1, -1):\n    print(fruit[current_index])", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple"}, "ordered_globals": ["fruit"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 4}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 3}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 2}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 1}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\n"}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\na\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"fruit": "apple", "current_index": 0}, "ordered_globals": ["fruit", "current_index"], "stack_to_render": [], "heap": {}, "stdout": "e\nl\np\np\na\n"}]};
 </script>
 </div>
 <p>Trace the values of <code class="docutils literal notranslate"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
 <div class="section" id="check-your-understanding">
-<h3>2.2.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1">
-            <p>string-acc1: How many times is the letter o printed by the following statements?</p>
+            <ul data-component="multiplechoice" data-question_label="2.2.1.1" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1"  style="visibility: hidden;">
+            <p>string-acc8: How many times is the letter o printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">current_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)):</span>
   <span class="k">if</span> <span class="n">current_index</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-      <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="n">current_index</span><span class="p">])</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="n">current_index</span><span class="p">])</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_a">0</li><li data-component="feedback" id="string_for_loop_by_index_test_question_1_opt_a">The for loop visits each index but the selection only prints some of them.</li>
+            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_a">0</li><li data-component="feedback">The for loop visits each index but the selection only prints some of them.</li>
             
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_b">1</li><li data-component="feedback" id="string_for_loop_by_index_test_question_1_opt_b">o is at positions 4 and 8</li>
+            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_b">1</li><li data-component="feedback">o is at positions 4 and 8</li>
             
-            <li data-component="answer" data-correct id="string_for_loop_by_index_test_question_1_opt_c">2</li><li data-component="feedback" id="string_for_loop_by_index_test_question_1_opt_c">Yes, it will print all the characters in even index positions and the o character appears both times in an even location.</li>
+            <li data-component="answer" data-correct id="string_for_loop_by_index_test_question_1_opt_c">2</li><li data-component="feedback">Yes, it will print all the characters in even index positions and the o character appears both times in an even location.</li>
             
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_d">Error, the for statement cannot have an if inside.</li><li data-component="feedback" id="string_for_loop_by_index_test_question_1_opt_d">The for statement can have any statements inside, including if as well as for.</li>
+            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_d">Error, the for statement cannot have an if inside.</li><li data-component="feedback">The for statement can have any statements inside, including if as well as for.</li>
             
 
             </ul>
@@ -487,61 +418,80 @@ $(window).resize(function() {
             </div>
 </div>
 <div class="section" id="the-in-and-not-in-operators">
-<span id="index-0"></span><h2>2.3. The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">2.3. </span>The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
 
-<div data-childcomponent="string_in_not_in_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_in_not_in_1 data-question_label="2.3.1">
+<div id=string_in_not_in_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_in_not_in_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_in_not_in_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 print('p' in 'apple')
 print('i' in 'apple')
 print('ap' in 'apple')
 print('pa' in 'apple')
 </textarea>
 </div>
+</div>
 <p>Note that a string is a substring of itself, and the empty string is a
 substring of any other string. <em>(Also note that computer scientists
 like to think about these edge cases quite carefully!)</em></p>
 
-<div data-childcomponent="string_in_not_in_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_in_not_in_2 data-question_label="2.3.2">
+<div id=string_in_not_in_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_in_not_in_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_in_not_in_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 print('a' in 'a')
 print('apple' in 'apple')
 print('' in 'a')
 print('' in 'apple')
 </textarea>
 </div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operator returns the logical opposite result of <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 
-<div data-childcomponent="string_in_not_in_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_in_not_in_3 data-question_label="2.3.3">
+<div id=string_in_not_in_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_in_not_in_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_in_not_in_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 print('x' not in 'apple')
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="the-accumulator-pattern-with-strings">
-<span id="index-1"></span><h2>2.4. The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">2.4. </span>The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
 <p>Combining the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal notranslate"><span class="pre">+</span></code> and the accumulator pattern, we can
 write a function that removes all the vowels from a string.  The idea is to start with a string and iterate over each character, checking to see if the character is a vowel.  As we process the characters, we will build up a new string consisting of only the nonvowel characters.  To do this, we use the accumulator pattern.</p>
 <p>Remember that the accumulator pattern allows us to keep a “running total”.  With strings, we are not accumulating a numeric total.  Instead we are accumulating characters onto a string.</p>
 
-<div data-childcomponent="string_accumulator_pattern_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=string_accumulator_pattern_1 data-question_label="2.4.1">
+<div id=string_accumulator_pattern_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=string_accumulator_pattern_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="string_accumulator_pattern_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def remove_vowels(original_string):
     vowels = "aeiouAEIOU"
     string_without_vowels = ""
@@ -553,6 +503,7 @@ def remove_vowels(original_string):
 print(remove_vowels("compsci"))
 print(remove_vowels("aAbEefIijOopUus"))
 </textarea>
+</div>
 </div>
 <p>Line 5 uses the <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operator to check whether the current character is not in the string <code class="docutils literal notranslate"><span class="pre">vowels</span></code>. The alternative to using this operator would be to write a very large <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that checks each of the individual vowel characters.  Note we would need to use logical <code class="docutils literal notranslate"><span class="pre">and</span></code> to be sure that the character is not any of the vowels.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span>  <span class="ow">and</span> <span class="n">each_char</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span>  <span class="ow">and</span>
@@ -572,167 +523,149 @@ new characters to the end.</p>
 <p>Step through the function using codelens to see the accumulator variable grow.</p>
 
 <div class="runestone" style="max-width: none;">
-<div class="alert alert-warning cd_section">
-<div id="string_accumulator_pattern_2"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (string_accumulator_pattern_2)</span> </p>
-</div>
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.4.2">
+        <div class="pytutorVisualizer" id="string_accumulator_pattern_2"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.4.2 (string_accumulator_pattern_2)</span> </p>
+    </div>
+
 <script type="text/javascript">
-var string_accumulator_pattern_2_trace = {"code": "def remove_vowels(original_string):\n    vowels = \"aeiouAEIOU\"\n    string_without_vowels = \"\"\n    for each_char in original_string:\n        if each_char not in vowels:\n            string_without_vowels = string_without_vowels + each_char\n    return string_without_vowels\n\nprint(remove_vowels(\"compsci\"))", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU"}, "ordered_varnames": ["original_string", "vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": ""}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i", "__return__": "cmpsc"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": "cmpsc\n"}]};
 var string_accumulator_pattern_2_vis;
 
-$(document).ready(function() {
-    try {
-        string_accumulator_pattern_2_vis = new ExecutionVisualizer('string_accumulator_pattern_2',string_accumulator_pattern_2_trace,
-                                    {embeddedMode: true,
-                                    verticalStack: false,
-                                    heightChangeCallback: redrawAllVisualizerArrows,
-                                    codeDivWidth: 500,
-                                    lang : 'py3'
-                                    });
-        attachLoggers(string_accumulator_pattern_2_vis,'string_accumulator_pattern_2');
-        styleButtons('string_accumulator_pattern_2');
-        allVisualizers.push(string_accumulator_pattern_2_vis);
-    } catch (e) {
-        console.log("Failed to Initialize CodeLens component string_accumulator_pattern_2_vis" );
-        console.log(e.toString());
-    }
-
-});
-
-$(document).ready(function() {
-    $("#string_accumulator_pattern_2_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'string_accumulator_pattern_2'});
-    });
-});
-
-if (allVisualizers === undefined) {
-   var allVisualizers = [];
+if (allTraceData === undefined) {
+   var allTraceData = {};
 }
 
-
-$(window).resize(function() {
-    if (string_accumulator_pattern_2_vis) {
-        string_accumulator_pattern_2_vis.redrawConnectors();
-    }
-});
+allTraceData["string_accumulator_pattern_2"] = {"code": "def remove_vowels(original_string):\n    vowels = \"aeiouAEIOU\"\n    string_without_vowels = \"\"\n    for each_char in original_string:\n        if each_char not in vowels:\n            string_without_vowels = string_without_vowels + each_char\n    return string_without_vowels\n\nprint(remove_vowels(\"compsci\"))", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU"}, "ordered_varnames": ["original_string", "vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": ""}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i", "__return__": "cmpsc"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": "cmpsc\n"}]};
 </script>
 </div>
 <div class="section" id="id1">
-<h3>2.4.1. Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1">
-            <p>string-acc2: What is printed by the following statements:</p>
+            <ul data-component="multiplechoice" data-question_label="2.4.1.1" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1"  style="visibility: hidden;">
+            <p>string-acc14: What is printed by the following statements:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
     <span class="n">another_string</span> <span class="o">=</span> <span class="n">another_string</span> <span class="o">+</span> <span class="n">item</span>
-<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_a">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
+            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
             
-            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_1_opt_b">Look again at the *order* of the concatenation!</li>
+            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2">
-            <p>string-acc3: What is printed by the following statements:</p>
+            <ul data-component="multiplechoice" data-question_label="2.4.1.2" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2"  style="visibility: hidden;">
+            <p>string-acc15: What is printed by the following statements:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
     <span class="n">another_string</span> <span class="o">=</span> <span class="n">item</span> <span class="o">+</span> <span class="n">another_string</span>
-<span class="k">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback" id="string_accumulator_pattern_test_question_2_opt_a">Look again at the *order* of the concatenation!</li>
+            <li data-component="answer"  id="string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
             
-            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback" id="string_accumulator_pattern_test_question_2_opt_b">Yes, the order is reversed due to the order of the concatenation.</li>
+            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback">Yes, the order is reversed due to the order of the concatenation.</li>
             
 
             </ul>
             </div>
             
-    <div data-component="reveal" id="reveal_string_manipulation_reversed_order_of_concatenation"   data-showtitle="Need Help?" data-hidetitle="Hide Help" >
+    <div data-component="reveal" id="reveal_string_manipulation_reversed_order_of_concatenation"   data-showtitle="Need Help?" data-hidetitle="Hide Help"  style="visibility: hidden;">
     <p>Consider the following table, which shows the values of the variables as the code iterates:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="17%" />
-<col width="22%" />
-<col width="24%" />
-<col width="37%" />
+<col style="width: 17%" />
+<col style="width: 22%" />
+<col style="width: 24%" />
+<col style="width: 37%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">iteration</th>
-<th class="head">item</th>
-<th class="head">another_string</th>
-<th class="head">item + another_string</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>iteration</p></th>
+<th class="head"><p>item</p></th>
+<th class="head"><p>another_string</p></th>
+<th class="head"><p>item + another_string</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>1</td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></p></td>
 </tr>
-<tr class="row-odd"><td>2</td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></p></td>
 </tr>
-<tr class="row-even"><td>3</td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></td>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></p></td>
 </tr>
-<tr class="row-odd"><td>4</td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></td>
-<td><code class="docutils literal notranslate"><span class="pre">&quot;llab&quot;</span></code></td>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;l&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;lab&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;llab&quot;</span></code></p></td>
 </tr>
 </tbody>
 </table>
 
     </div>
     
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="string_accumulator_patten_parsons_1"      >
-        <span data-question>string-acc4: Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, ``new_word`` is printed, and will have the same value as ``original_word``.</span>original_word = "clockwork"
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="string_accumulator_patten_parsons_1" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, <code class="docutils literal notranslate"><span class="pre">new_word</span></code> is printed, and will have the same value as <code class="docutils literal notranslate"><span class="pre">original_word</span></code>.</p>
+
+        </div>
+        <pre  data-question_label="2.4.1.3"         style="visibility: hidden;">
+        original_word = "clockwork"
 new_word = ""
 for letter in original_word:
     new_word = new_word + letter
 print(new_word)
         </pre>
         </div>
+        </div>
     </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>2.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
 <div class="section" id="even-letters-of-a-word">
-<h3>2.5.1. Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+<p class="admonition-title">Note</p>
+<p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_more_info_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_string_more_info_1 data-question_label="2.5.1.1">
+<div id=practice_problem_string_more_info_1_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal notranslate"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal notranslate"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssaon&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssacea&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">even_letters(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ruhies&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_1 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_string_more_info_1_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def even_letters(word):
     return ""
 
@@ -753,8 +686,9 @@ class myTests(TestCaseGui):
 myTests().main()
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint" >
+    <div data-component="reveal" id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint"  style="visibility: hidden;">
     <p>Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">range()</span></code> style loop. The accumulator pattern will look something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_letters</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
     <span class="n">new_word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -768,23 +702,27 @@ myTests().main()
     </div>
     </div>
 <div class="section" id="reverse-me">
-<h3>2.5.2. Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.2. </span>Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+<p class="admonition-title">Note</p>
+<p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_more_info_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_string_more_info_2 data-question_label="2.5.2.1">
+<div id=practice_problem_string_more_info_2_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the <code class="docutils literal notranslate"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nootaksaS&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Saskatchewan&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;nawehctaksaS&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">reverse_me(&quot;Roughriders&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;sredirhguoR&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_2 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_string_more_info_2_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def reverse_me(word):
     return ""
 
@@ -806,24 +744,29 @@ myTests().main()
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="letter-destroyer">
-<h3>2.5.3. Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.3. </span>Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+<p class="admonition-title">Note</p>
+<p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_more_info_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_string_more_info_3 data-question_label="2.5.3.1">
+<div id=practice_problem_string_more_info_3_question class="ac_question col-md-12">
 <p>Create a function with two parameters, <code class="docutils literal notranslate"><span class="pre">word</span></code> and <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal notranslate"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;Saskatoon&quot;,</span> <span class="pre">&quot;o&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Saskatn&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;Saskatchewan&quot;,</span> <span class="pre">&quot;a&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;Ssktchewn&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">letter_destroyer(&quot;roughriders&quot;,</span> <span class="pre">&quot;r&quot;)</span> <span class="pre">→</span> <span class="pre">&quot;oughides&quot;</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_3 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_string_more_info_3_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def letter_destroyer(word, letter_to_destroy):
     return ""
 
@@ -845,24 +788,29 @@ myTests().main()
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="qwerty-finder">
-<h3>2.5.4. QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.4. </span>QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
+<p class="admonition-title">Note</p>
+<p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div data-childcomponent="practice_problem_string_more_info_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_string_more_info_4 data-question_label="2.5.4.1">
+<div id=practice_problem_string_more_info_4_question class="ac_question col-md-12">
 <p>Create a function that takes in a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal notranslate"><span class="pre">t</span></code> in “Saskatoon”).</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;Saskatoon&quot;)</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;Naomi&quot;)</span> <span class="pre">→</span> <span class="pre">-1</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">qwerty_finder(&quot;bunnyhug&quot;)</span> <span class="pre">→</span> <span class="pre">4</span></code></p>
 
-<textarea data-component="activecode" id=practice_problem_string_more_info_4 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_string_more_info_4_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 def qwerty_finder(word):
     return ""
 
@@ -886,23 +834,24 @@ myTests().main()
 </div>
 </div>
 </div>
+</div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 1. String Index, Length, Slicing and Traversal' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>String Index, Length, Slicing and Traversal' data-toggle="tooltip">
     <a href="StringIntro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="StringIntro.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 3. String Methods' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">3. </span>String Methods' data-toggle="tooltip" >
     <a href="StringMethods.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="StringMethods.html" >Next Section - 3. String Methods</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="StringMethods.html" >Next Section - <span class="section-number">3. </span>String Methods</a>
 
 <script type="text/javascript">
 

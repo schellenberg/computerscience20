@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>9. Our First Turtle Program &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="10. Multiple Turtles and for Loops" href="MultipleTurtlesAndForLoops.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -226,13 +188,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 8. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">8. </span>The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement" data-toggle="tooltip">
     <a href="WhileLoopsIntro.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops' data-toggle="tooltip" >
     <a href="MultipleTurtlesAndForLoops.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -264,17 +226,17 @@
 <div class="container" id="main-content">
   
   <div class="section" id="our-first-turtle-program">
-<h1>9. Our First Turtle Program<a class="headerlink" href="#our-first-turtle-program" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Our First Turtle Program<a class="headerlink" href="#our-first-turtle-program" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Learn how to do basic drawing in Python using the turtle module.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_first_turtle_day"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_first_turtle_day"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
 </ul>
 
     </div>
@@ -292,12 +254,16 @@ After line 4 you will have a straight line going from the center of the
 drawing canvas towards the right.  After line 6, you will have a canvas with a
 turtle and a half drawn rectangle.  Press the run button to try it and see.</p>
 
-<div data-childcomponent="turtle_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_intro_1 data-question_label="9.1">
+<div id=turtle_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_intro_1 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_intro_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle               # allows us to use the turtles library
 window = turtle.Screen()    # creates a graphics window
 alex = turtle.Turtle()      # create a turtle named alex
@@ -306,12 +272,13 @@ alex.left(90)               # turn by 90 degrees
 alex.forward(75)            # complete the second side of a rectangle
 </textarea>
 </div>
+</div>
 <div class="admonition-try-this admonition">
-<p class="first admonition-title"><strong>Try This!</strong></p>
-<p class="last">Modify the program above by adding the commands necessary to have <em>alex</em> complete the rectangle.</p>
+<p class="admonition-title"><strong>Try This!</strong></p>
+<p>Modify the program above by adding the commands necessary to have <em>alex</em> complete the rectangle.</p>
 </div>
 <div class="section" id="understanding-a-turtle-program">
-<h2>9.1. Understanding a Turtle Program<a class="headerlink" href="#understanding-a-turtle-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Understanding a Turtle Program<a class="headerlink" href="#understanding-a-turtle-program" title="Permalink to this headline">¶</a></h2>
 <p>Here are a couple of things you’ll need to understand about the turtle program we wrote above.</p>
 <p>The first line tells Python to load a <strong>module</strong> named <code class="docutils literal notranslate"><span class="pre">turtle</span></code>.  That module
 brings us two new types that we can use: the <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> type, and the
@@ -332,25 +299,31 @@ the methods invoked belong to and refer to the object <code class="docutils lite
 <p><strong>Check your understanding</strong></p>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle_intro_check_1">
-            first-turtle1: Which direction does the Turtle face when it is created?
-            <li data-component="answer"  id="turtle_intro_check_1_opt_a">North</li><li data-component="feedback" id="turtle_intro_check_1_opt_a">Some turtle systems start with the turtle facing north, but not this one.</li>
+            <ul data-component="multiplechoice" data-question_label="9.1.1" data-multipleanswers="false"  id="turtle_intro_check_1"  style="visibility: hidden;">
+            <p>first-turtle2: Which direction does the Turtle face when it is created?</p>
+
+            <li data-component="answer"  id="turtle_intro_check_1_opt_a">North</li><li data-component="feedback">Some turtle systems start with the turtle facing north, but not this one.</li>
             
-            <li data-component="answer"  id="turtle_intro_check_1_opt_b">South</li><li data-component="feedback" id="turtle_intro_check_1_opt_b">No, look at the first example with a turtle.  Which direction does the turtle move?</li>
+            <li data-component="answer"  id="turtle_intro_check_1_opt_b">South</li><li data-component="feedback">No, look at the first example with a turtle.  Which direction does the turtle move?</li>
             
-            <li data-component="answer" data-correct id="turtle_intro_check_1_opt_c">East</li><li data-component="feedback" id="turtle_intro_check_1_opt_c">Yes, the turtle starts out facing east.</li>
+            <li data-component="answer" data-correct id="turtle_intro_check_1_opt_c">East</li><li data-component="feedback">Yes, the turtle starts out facing east.</li>
             
-            <li data-component="answer"  id="turtle_intro_check_1_opt_d">West</li><li data-component="feedback" id="turtle_intro_check_1_opt_d">No, look at the first example with a turtle.  Which direction does the turtle move?</li>
+            <li data-component="answer"  id="turtle_intro_check_1_opt_d">West</li><li data-component="feedback">No, look at the first example with a turtle.  Which direction does the turtle move?</li>
             
 
             </ul>
             </div>
             <div class="section" id="mixed-up-programs">
-<h3>9.1.1. Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="turtle_intro_parsons_1"      >
-        <span data-question>first-turtle2: The following program uses a turtle to draw a capital L as shown in the picture, <img src="../../_static/parsons/TurtleL4.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  Remember that the turtle starts off facing east when it is created.  The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="turtle_intro_parsons_1" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a capital L as shown in the picture, &lt;img src=”../../_static/parsons/TurtleL4.png” width=”150” align=”left” hspace=”10” vspace=”5” /&gt; but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  Remember that the turtle starts off facing east when it is created.  The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  &lt;br /&gt;&lt;br /&gt;&lt;p&gt;Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on &lt;i&gt;Check Me&lt;/i&gt; to see if you are right. You will be told if any of the lines are in the wrong order.&lt;/p&gt;</p>
+
+        </div>
+        <pre  data-question_label="9.1.1.1"         style="visibility: hidden;">
+        import turtle
 window = turtle.Screen()
 ella = turtle.Turtle()
 ---
@@ -361,10 +334,16 @@ ella.left(90)
 ella.forward(75)
         </pre>
         </div>
+        </div>
     
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="turtle_intro_parsons_2"      >
-        <span data-question>first-turtle3: The following program uses a turtle to draw a checkmark as shown to the left, <img src="../../_static/parsons/TurtleCheckmark4.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should turn to face southeast, draw a line that is 75 pixels long, then turn to face northeast, and draw a line that is 150 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  Northeast is between north and east. Southeast is between south and east. <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="turtle_intro_parsons_2" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a checkmark as shown to the left, &lt;img src=”../../_static/parsons/TurtleCheckmark4.png” width=”150” align=”left” hspace=”10” vspace=”5” /&gt; but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should turn to face southeast, draw a line that is 75 pixels long, then turn to face northeast, and draw a line that is 150 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  Northeast is between north and east. Southeast is between south and east. &lt;br /&gt;&lt;br /&gt;&lt;p&gt;Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on &lt;i&gt;Check Me&lt;/i&gt; to see if you are right. You will be told if any of the lines are in the wrong order.&lt;/p&gt;</p>
+
+        </div>
+        <pre  data-question_label="9.1.1.2"         style="visibility: hidden;">
+        import turtle
 ---
 window = turtle.Screen()
 ---
@@ -377,20 +356,27 @@ maria.left(90)
 maria.forward(150)
         </pre>
         </div>
+        </div>
     
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="turtle_intro_parsons_3"      >
-        <span data-question>first-turtle4: The <img src="../../_static/parsons/TurtleLineToWest.png" width="150" align="left" hspace="10" vspace="5" /> following program uses a turtle to draw a single line to the west as shown to the left, but the program lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should then turn to face west and draw a line that is 75 pixels long.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="turtle_intro_parsons_3" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The &lt;img src=”../../_static/parsons/TurtleLineToWest.png” width=”150” align=”left” hspace=”10” vspace=”5” /&gt; following program uses a turtle to draw a single line to the west as shown to the left, but the program lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should then turn to face west and draw a line that is 75 pixels long.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on &lt;i&gt;Check Me&lt;/i&gt; to see if you are right. You will be told if any of the lines are in the wrong order.&lt;/p&gt;</p>
+
+        </div>
+        <pre  data-question_label="9.1.1.3"         style="visibility: hidden;">
+        import turtle
 window = turtle.Screen()
 jamal = turtle.Turtle()
 jamal.left(180)
 jamal.forward(75)
         </pre>
         </div>
+        </div>
     </div>
 </div>
 <div class="section" id="turtle-methods">
-<h2>9.2. Turtle Methods<a class="headerlink" href="#turtle-methods" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Turtle Methods<a class="headerlink" href="#turtle-methods" title="Permalink to this headline">¶</a></h2>
 <p>An object can have various methods (things it can do), and it can also
 have <strong>attributes</strong> (sometimes called <em>properties</em>).  For example, each
 turtle has a <em>color</em> attribute.  The method invocation  <code class="docutils literal notranslate"><span class="pre">alex.color(&quot;red&quot;)</span></code>
@@ -402,12 +388,16 @@ current <strong>state</strong>.   Similarly, the window object has a background 
 window objects.  In the example below, we show just show a couple and have only commented those
 lines that are different from the previous example.  Note also that we have decided to call our turtle object <em>tess</em>, and have changed the name of the Screen object to be <em>wn</em>.</p>
 
-<div data-childcomponent="turtle_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_intro_2 data-question_label="9.2.1">
+<div id=turtle_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_intro_2 data-lang="python" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_intro_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 wn = turtle.Screen()
@@ -424,6 +414,7 @@ tess.forward(50)
 wn.exitonclick()                # wait for a user click on the canvas
 </textarea>
 </div>
+</div>
 <p>The last line plays a very important role. The <em>wn</em> variable refers to the window shown
 above. When we invoke its <code class="docutils literal notranslate"><span class="pre">exitonclick</span></code> method, the program pauses execution and waits for the user to click the mouse somewhere in the window.
 When this click event occurs, the response is to close the turtle window and
@@ -432,11 +423,11 @@ exit (stop execution of) the Python program.</p>
 screen until we click on it.</p>
 </div>
 <div class="section" id="check-your-understanding">
-<h2>9.3. Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle_intro_check_2">
-            <p>first-turtle5: Consider the following code:</p>
+            <ul data-component="multiplechoice" data-question_label="9.3.1" data-multipleanswers="false"  id="turtle_intro_check_2"  style="visibility: hidden;">
+            <p>first-turtle7: Consider the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 <span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
 <span class="n">alex</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
@@ -447,67 +438,74 @@ screen until we click on it.</p>
 </div>
 <p>What does the line “import turtle” do?</p>
 
-            <li data-component="answer"  id="turtle_intro_check_2_opt_a">It creates a new turtle object that can be used for drawing.</li><li data-component="feedback" id="turtle_intro_check_2_opt_a">The line &quotalex = turtle.Turtle()&quot is what actually creates the turtle object.</li>
+            <li data-component="answer"  id="turtle_intro_check_2_opt_a">It creates a new turtle object that can be used for drawing.</li><li data-component="feedback">The line &quotalex = turtle.Turtle()&quot is what actually creates the turtle object.</li>
             
-            <li data-component="answer" data-correct id="turtle_intro_check_2_opt_b">It defines the module turtle which will allow you to create a Turtle object and draw with it.</li><li data-component="feedback" id="turtle_intro_check_2_opt_b">This line imports the module called turtle, which has all the built in functions for drawing on the screen with the Turtle object.</li>
+            <li data-component="answer" data-correct id="turtle_intro_check_2_opt_b">It defines the module turtle which will allow you to create a Turtle object and draw with it.</li><li data-component="feedback">This line imports the module called turtle, which has all the built in functions for drawing on the screen with the Turtle object.</li>
             
-            <li data-component="answer"  id="turtle_intro_check_2_opt_c">It makes the turtle draw half of a rectangle on the screen.</li><li data-component="feedback" id="turtle_intro_check_2_opt_c">This functionality is performed with the lines: &quotalex.forward(150)&quot, &quotlex.left(90)&quot, and &quotalex.forward(75)&quot</li>
+            <li data-component="answer"  id="turtle_intro_check_2_opt_c">It makes the turtle draw half of a rectangle on the screen.</li><li data-component="feedback">This functionality is performed with the lines: &quotalex.forward(150)&quot, &quotlex.left(90)&quot, and &quotalex.forward(75)&quot</li>
             
-            <li data-component="answer"  id="turtle_intro_check_2_opt_d">Nothing, it is unnecessary.</li><li data-component="feedback" id="turtle_intro_check_2_opt_d">If we leave it out, Python will give an error saying that it does not know about the name &quotturtle&quot when it reaches the line &quotwn = turtle.Screen()&quot</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle_intro_check_3">
-            first-turtle6: Why do we type <code class="docutils literal notranslate"><span class="pre">turtle.Turtle()</span></code> to get a new Turtle object?
-            <li data-component="answer"  id="turtle_intro_check_3_opt_a">This is simply for clarity.  It would also work to just type "Turtle()" instead of "turtle.Turtle()".</li><li data-component="feedback" id="turtle_intro_check_3_opt_a">We must specify the name of the module where Python can find the Turtle object.</li>
-            
-            <li data-component="answer"  id="turtle_intro_check_3_opt_b">The period (.) is what tells Python that we want to invoke a new object.</li><li data-component="feedback" id="turtle_intro_check_3_opt_b">The period separates the module name from the object name.  The parentheses at the end are what tell Python to invoke a new object.</li>
-            
-            <li data-component="answer" data-correct id="turtle_intro_check_3_opt_c">The first "turtle" (before the period) tells Python that we are referring to the turtle module, which is where the object "Turtle" is found.</li><li data-component="feedback" id="turtle_intro_check_3_opt_c">Yes, the Turtle type is defined in the module turtle.  Remember that Python is case sensitive and Turtle is different from turtle.</li>
+            <li data-component="answer"  id="turtle_intro_check_2_opt_d">Nothing, it is unnecessary.</li><li data-component="feedback">If we leave it out, Python will give an error saying that it does not know about the name &quotturtle&quot when it reaches the line &quotwn = turtle.Screen()&quot</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle_intro_check_4">
-            first-turtle7: True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.
-            <li data-component="answer" data-correct id="turtle_intro_check_4_opt_a">True</li><li data-component="feedback" id="turtle_intro_check_4_opt_a">In this chapter you saw one named alex and one named tess, but any legal variable name is allowed.</li>
+            <ul data-component="multiplechoice" data-question_label="9.3.2" data-multipleanswers="false"  id="turtle_intro_check_3"  style="visibility: hidden;">
+            <p>first-turtle8: Why do we type <code class="docutils literal notranslate"><span class="pre">turtle.Turtle()</span></code> to get a new Turtle object?</p>
+
+            <li data-component="answer"  id="turtle_intro_check_3_opt_a">This is simply for clarity.  It would also work to just type "Turtle()" instead of "turtle.Turtle()".</li><li data-component="feedback">We must specify the name of the module where Python can find the Turtle object.</li>
             
-            <li data-component="answer"  id="turtle_intro_check_4_opt_b">False</li><li data-component="feedback" id="turtle_intro_check_4_opt_b">A variable, including one referring to a Turtle object, can have whatever name you choose as long as it follows the naming conventions from Chapter 2.</li>
+            <li data-component="answer"  id="turtle_intro_check_3_opt_b">The period (.) is what tells Python that we want to invoke a new object.</li><li data-component="feedback">The period separates the module name from the object name.  The parentheses at the end are what tell Python to invoke a new object.</li>
+            
+            <li data-component="answer" data-correct id="turtle_intro_check_3_opt_c">The first "turtle" (before the period) tells Python that we are referring to the turtle module, which is where the object "Turtle" is found.</li><li data-component="feedback">Yes, the Turtle type is defined in the module turtle.  Remember that Python is case sensitive and Turtle is different from turtle.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle_intro_check_5">
-            <p>first-turtle8: Which of the following code would produce the following image?</p>
+            <ul data-component="multiplechoice" data-question_label="9.3.3" data-multipleanswers="false"  id="turtle_intro_check_4"  style="visibility: hidden;">
+            <p>first-turtle9: True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.</p>
+
+            <li data-component="answer" data-correct id="turtle_intro_check_4_opt_a">True</li><li data-component="feedback">In this chapter you saw one named alex and one named tess, but any legal variable name is allowed.</li>
+            
+            <li data-component="answer"  id="turtle_intro_check_4_opt_b">False</li><li data-component="feedback">A variable, including one referring to a Turtle object, can have whatever name you choose as long as it follows the naming conventions from Chapter 2.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="9.3.4" data-multipleanswers="false"  id="turtle_intro_check_5"  style="visibility: hidden;">
+            <p>first-turtle10: Which of the following code would produce the following image?</p>
 <a class="reference internal image-reference" href="../../_images/turtleTest1.png"><img alt="long line to north with shorter line to west on top" src="../../_images/turtleTest1.png" style="width: 150px;" /></a>
 
-            <li data-component="answer"  id="turtle_intro_check_5_opt_a"><img src="../../_static/parsons/test1Alt1.png" alt="right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback" id="turtle_intro_check_5_opt_a">This code would turn the turtle to the south before drawing</li>
+            <li data-component="answer"  id="turtle_intro_check_5_opt_a"><img src="../../_static/parsons/test1Alt1.png" alt="right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the south before drawing</li>
             
-            <li data-component="answer"  id="turtle_intro_check_5_opt_b"><img src="../../_static/parsons/test1Alt2.png" alt="left turn of 180 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback" id="turtle_intro_check_5_opt_b">This code would turn the turtle to the west before drawing</li>
+            <li data-component="answer"  id="turtle_intro_check_5_opt_b"><img src="../../_static/parsons/test1Alt2.png" alt="left turn of 180 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the west before drawing</li>
             
-            <li data-component="answer"  id="turtle_intro_check_5_opt_c"><img src="../../_static/parsons/test1Alt3.png" alt="left turn of 270 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback" id="turtle_intro_check_5_opt_c">This code would turn the turtle to the south before drawing</li>
+            <li data-component="answer"  id="turtle_intro_check_5_opt_c"><img src="../../_static/parsons/test1Alt3.png" alt="left turn of 270 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the south before drawing</li>
             
-            <li data-component="answer"  id="turtle_intro_check_5_opt_d"><img src="../../_static/parsons/test1Alt4v2.png" alt="right turn of 270 degrees before drawing, draw a line 150 pixels long, turn right 90, and draw a line 75 pixels long"></li><li data-component="feedback" id="turtle_intro_check_5_opt_d">This code is almost correct, but the short end would be facing east instead of west.</li>
+            <li data-component="answer"  id="turtle_intro_check_5_opt_d"><img src="../../_static/parsons/test1Alt4v2.png" alt="right turn of 270 degrees before drawing, draw a line 150 pixels long, turn right 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code is almost correct, but the short end would be facing east instead of west.</li>
             
-            <li data-component="answer" data-correct id="turtle_intro_check_5_opt_e"><img src="../../_static/parsons/test1correct.png" alt="left turn of 90 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback" id="turtle_intro_check_5_opt_e">Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.</li>
+            <li data-component="answer" data-correct id="turtle_intro_check_5_opt_e"><img src="../../_static/parsons/test1correct.png" alt="left turn of 90 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.</li>
             
 
             </ul>
             </div>
             </div>
 <div class="section" id="more-mixed-up-programs">
-<h2>9.4. More Mixed Up Programs!<a class="headerlink" href="#more-mixed-up-programs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>More Mixed Up Programs!<a class="headerlink" href="#more-mixed-up-programs" title="Permalink to this headline">¶</a></h2>
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="turtle_intro_parsons_4"      >
-        <span data-question>first-turtle9: The following program uses a turtle to draw a capital L in white on a blue background as shown to the left, <img src="../../_static/parsons/BlueTurtleL.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up and create the turtle and set the pen size to 10.  The turtle should then turn to face south, draw a line that is 150 pixels long, turn to face east, and draw a line that is 75 pixels long.   Finally, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="turtle_intro_parsons_4" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a capital L in white on a blue background as shown to the left, &lt;img src=”../../_static/parsons/BlueTurtleL.png” width=”150” align=”left” hspace=”10” vspace=”5” /&gt; but the lines are mixed up.  The program should do all necessary set-up and create the turtle and set the pen size to 10.  The turtle should then turn to face south, draw a line that is 150 pixels long, turn to face east, and draw a line that is 75 pixels long.   Finally, set the window to close when the user clicks in it.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on &lt;i&gt;Check Me&lt;/i&gt; to see if you are right. You will be told if any of the lines are in the wrong order.&lt;/p&gt;</p>
+
+        </div>
+        <pre  data-question_label="9.4.1"         style="visibility: hidden;">
+        import turtle
 wn = turtle.Screen()
 ---
 wn.bgcolor("blue")
@@ -524,10 +522,16 @@ jamal.forward(75)
 wn.exitonclick()
         </pre>
         </div>
+        </div>
     
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" id="turtle_intro_parsons_5"      >
-        <span data-question>first-turtle10: The following program uses a turtle to draw a capital T in white on a green background as shown to the left, <img src="../../_static/parsons/TurtleT.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, and set the pen size to 10.  After that the turtle should turn to face north, draw a line that is 150 pixels long, turn to face west, and draw a line that is 50 pixels long.  Next, the turtle should turn 180 degrees and draw a line that is 100 pixels long.  Finally, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p></span>import turtle
+        <div class="runestone" style="max-width: none;"> 
+        <div data-component="parsons" id="turtle_intro_parsons_5" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a capital T in white on a green background as shown to the left, &lt;img src=”../../_static/parsons/TurtleT.png” width=”150” align=”left” hspace=”10” vspace=”5”/&gt; but the lines are mixed up.  The program should do all necessary set-up, create the turtle, and set the pen size to 10.  After that the turtle should turn to face north, draw a line that is 150 pixels long, turn to face west, and draw a line that is 50 pixels long.  Next, the turtle should turn 180 degrees and draw a line that is 100 pixels long.  Finally, set the window to close when the user clicks in it.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on &lt;i&gt;Check Me&lt;/i&gt; to see if you are right. You will be told if any of the lines are in the wrong order.&lt;/p&gt;</p>
+
+        </div>
+        <pre  data-question_label="9.4.2"         style="visibility: hidden;">
+        import turtle
 wn = turtle.Screen()
 wn.bgcolor("green")
 jamal = turtle.Turtle()
@@ -546,35 +550,40 @@ jamal.forward(100)
 wn.exitonclick()
         </pre>
         </div>
+        </div>
     </div>
 <div class="section" id="practice-problems">
-<h2>9.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p>You might find the Python Documentation for the turtle module to be helpful: <a class="reference external" href="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</a></p>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Be sure that you DO NOT save any file as <code class="docutils literal notranslate"><span class="pre">turtle.py</span></code>. If you do, when you call <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">turtle</span></code>, Python looks for a file called turtle.py, which means that it will import the turtle.py file you just saved. You will get an error when attempting to create a Screen() or Turtle() object, as these will not actually be defined.</p>
+<p class="admonition-title">Caution</p>
+<p>Be sure that you DO NOT save any file as <code class="docutils literal notranslate"><span class="pre">turtle.py</span></code>. If you do, when you call <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">turtle</span></code>, Python looks for a file called turtle.py, which means that it will import the turtle.py file you just saved. You will get an error when attempting to create a Screen() or Turtle() object, as these will not actually be defined.</p>
 </div>
 <div class="section" id="color-selection">
-<h3>9.5.1. Color Selection<a class="headerlink" href="#color-selection" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.5.1. </span>Color Selection<a class="headerlink" href="#color-selection" title="Permalink to this headline">¶</a></h3>
 <p>Modify the program given below so that before it creates the window, it prompts the user to enter the desired background color. It should store the user’s response in a variable, and modify the color of the window according to the user’s wishes. Do similar changes to allow the user to set the turtle bree’s color as well.</p>
 <p>(Hint: you can find a list of permitted color names at <a class="reference external" href="https://www.w3schools.com/colors/colors_names.asp">https://www.w3schools.com/colors/colors_names.asp</a> .  It includes some quite unusual ones, like “PeachPuff” and “HotPink”.)</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>If you are running your code in Thonny, the order of your instructions matters a lot, since a window will open up in front of the main Thonny window (whereas in the browser, the window is just a canvas on the webpage). You might want to ask the user questions <em>before</em> creating a Screen() to draw on. Although you can use something like <code class="docutils literal notranslate"><span class="pre">easygui_qt</span></code> to ask the questions with pop-up windows, there is also a <code class="docutils literal notranslate"><span class="pre">screen.textinput(&quot;Window</span> <span class="pre">name&quot;,</span> <span class="pre">&quot;Question</span> <span class="pre">to</span> <span class="pre">ask&quot;)</span></code> function built into the turtle module that will cause a pop-up window to appear. You need to use the name of your turtle.Screen() instance when calling the <code class="docutils literal notranslate"><span class="pre">textinput</span></code> function. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">canvas</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
 <span class="n">question</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">textinput</span><span class="p">(</span><span class="s2">&quot;Window name&quot;</span><span class="p">,</span> <span class="s2">&quot;Question to ask&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="last">Be aware, however, that the <code class="docutils literal notranslate"><span class="pre">textinput()</span></code> function will not work in the browser version of Python.</p>
+<p>Be aware, however, that the <code class="docutils literal notranslate"><span class="pre">textinput()</span></code> function will not work in the browser version of Python.</p>
 </div>
 
-<div data-childcomponent="practice_problem_turtle_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_turtle_intro_1 data-question_label="9.5.1.1">
+<div id=practice_problem_turtle_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_turtle_intro_1 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_turtle_intro_1_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # Color Selection
 
 import turtle
@@ -594,9 +603,10 @@ bree.right(60)
 bree.forward(100)
 </textarea>
 </div>
+</div>
 <p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
 
-    <div data-component="reveal" id="reveal_solution_practice_problem_turtle_intro_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution" >
+    <div data-component="reveal" id="reveal_solution_practice_problem_turtle_intro_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
     <p>The following solution will work well in the browser, where a text input box appears automatically when you call the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Color Selection</span>
 
@@ -645,22 +655,26 @@ bree.forward(100)
     </div>
     </div>
 <div class="section" id="drawing-any-size-of-square">
-<h3>9.5.2. Drawing any Size of Square<a class="headerlink" href="#drawing-any-size-of-square" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.5.2. </span>Drawing any Size of Square<a class="headerlink" href="#drawing-any-size-of-square" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses the turtle module to draw a square. The user should be able to set a number of options each time the code runs, so the program should ask the user for:</p>
 <ul class="simple">
-<li>the width of the turtles pen</li>
-<li>the turtle color</li>
-<li>the length of the sides of the square that will be drawn</li>
-<li>the background color to use</li>
+<li><p>the width of the turtles pen</p></li>
+<li><p>the turtle color</p></li>
+<li><p>the length of the sides of the square that will be drawn</p></li>
+<li><p>the background color to use</p></li>
 </ul>
 <p><em>Hint:</em> your input from the user will return a string, but the turtles <code class="docutils literal notranslate"><span class="pre">pensize</span></code> method expects its argument to be an <code class="docutils literal notranslate"><span class="pre">int</span></code>.  That means you need to convert the string to an int before you pass it to <code class="docutils literal notranslate"><span class="pre">pensize</span></code>.</p>
 
-<div data-childcomponent="practice_problem_turtle_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=practice_problem_turtle_intro_2 data-question_label="9.5.2.1">
+<div id=practice_problem_turtle_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=practice_problem_turtle_intro_2 data-lang="python" 
-      data-timelimit=25000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="practice_problem_turtle_intro_2_editor" 
+      data-timelimit=25000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 # Color Selection
 
 import turtle
@@ -669,23 +683,24 @@ import turtle
 </div>
 </div>
 </div>
+</div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 8. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">8. </span>The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement' data-toggle="tooltip">
     <a href="WhileLoopsIntro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="WhileLoopsIntro.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops' data-toggle="tooltip" >
     <a href="MultipleTurtlesAndForLoops.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="MultipleTurtlesAndForLoops.html" >Next Section - 10. Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="MultipleTurtlesAndForLoops.html" >Next Section - <span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops</a>
 
 <script type="text/javascript">
 

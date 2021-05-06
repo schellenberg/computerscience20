@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The HyperText Markup Language &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cascading Style Sheets (CSS)" href="CSS.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -275,13 +237,13 @@
   <div class="section" id="the-hypertext-markup-language">
 <h1>The HyperText Markup Language<a class="headerlink" href="#the-hypertext-markup-language" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Experiment with HTML (HyperText Markup Language).</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_html"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_html"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CS1</strong> Explore the underlying technology of computing devices and the Internet, and their impacts on society.</li>
+<li><p><strong>CS20-CS1</strong> Explore the underlying technology of computing devices and the Internet, and their impacts on society.</p></li>
 </ul>
 
     </div>
@@ -292,9 +254,9 @@
 <p>HTML uses a set of tags to annotate (mark up) the document.  The tags all look like this: <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">tagname</span> <span class="pre">&gt;</span></code> and they are balanced so that at the end of the content for that tag there is <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">tagname</span> <span class="pre">&gt;</span></code>. Notice that the closing tag contains a slash at the beginning to differentiate itself from an opening tag.</p>
 <p>An HTML document then just contains a series of these balanced tags.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>When experimenting with HTML, you can simply use a web based environment (like the one you are in right now), but it can be very instructive to experiment with how to do this with files on your computer as well. For any of the examples given below, you can simply create a text file on your computer, type some HTML, then make sure you save the file as <code class="docutils literal notranslate"><span class="pre">something.html</span></code>. The .html extension is very important, as it allows your computer to identify what type of content is contained within the file. After the file is saved, open it using your web browser of choice (Chrome, Edge, Firefox, etc.).</p>
-<p class="last">When creating the text file on your computer, be sure to use a plain text editor (something like Notepad, not Word!). I recommend using <a class="reference external" href="https://code.visualstudio.com/">VS Code</a>, as it works the same for Windows/Mac/Linux, is free, and doesn’t require admin rights to install in a lab setting.</p>
+<p>When creating the text file on your computer, be sure to use a plain text editor (something like Notepad, not Word!). I recommend using <a class="reference external" href="https://code.visualstudio.com/">VS Code</a>, as it works the same for Windows/Mac/Linux, is free, and doesn’t require admin rights to install in a lab setting.</p>
 </div>
 </div>
 <div class="section" id="my-first-heading">
@@ -303,12 +265,16 @@
 <p>Another paragraph of text.</p>
 <p>The HTML for this document is as follows:</p>
 
-<div data-childcomponent="html_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_1 data-question_label="1">
+<div id=html_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_1 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Test Page&lt;/title&gt;
@@ -321,6 +287,7 @@
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>If you click the render button you will see the HTML in the example above in a special output window that mimics your browser.  Try changing the text of one of the paragraphs and click run again.   Try changing the <code class="docutils literal notranslate"><span class="pre">h1</span></code> tag to <code class="docutils literal notranslate"><span class="pre">h2</span></code>  Don’t forget to change both the opening and closing tags.   I have indented the HTML for you so you can see the opening and closing tags more clearly.  A web browser does not care about indentation one bit; you can get rid of all of the indentation, or put everything on one line and the page will still look the same.</p>
 <p>Before we move on to talk more about specific HTML tags its useful to think about the page that is produced and the structure of the page.  You get a sense of the structure from the indentation I have provided, but its useful to look at this from another perspective.  Figure 2 illustrates a “tree view” of an HTML page.</p>
 <img alt="../_images/tree.svg" src="../_images/tree.svg" /><p>This tree is upside down with how we usually think of a tree, but in computer science we put the “root” of the tree at the top.  So the root of this tree is the html tag.  The html tag has two <strong>children</strong>, the head and the body.  The head has one child, which is the head tag.  The html tag is the <strong>parent</strong> of the head tag.  The body has three children, the h1 tag and two p tags.  You may also find it helpful to think of this as an outline, although you would have to rotate the picture 90 degrees counter clockwise to get the orientation into outline form.  We will see how this tree structure of an html page is useful later on if/when we start to use CSS and Javascript.</p>
@@ -331,12 +298,16 @@
 <h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
 <p>Like any document HTML documents may have several layers of headings.  In fact you can have heading levels from 1 to 6 in an HTML document.</p>
 
-<div data-childcomponent="html_headings" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_headings data-question_label="2">
+<div id=html_headings_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_headings data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_headings_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;h1&gt;Level one&lt;/h1&gt;
 
 &lt;h2&gt;Level two&lt;/h2&gt;
@@ -344,10 +315,12 @@
 &lt;h3&gt;Level three&lt;/h3&gt;
 </textarea>
 </div>
+</div>
 <p>Now modify the example above to add the next three levels of headings.  What do you notice?  What happens if you add a level 7 heading?   What happens if you close an h2 tag with an h1 or an h3?</p>
 
-    <div data-component="reveal" id="reveal_heading"   data-showtitle="Show" data-hidetitle="Hide" >
-    As you might expect, the headings continue to get smaller as you go from 1 to 6.  But when you go to level 7 the text gets bigger.  This is because the web browser is written so that it just ignores any tags that it does not know about.  This is somewhat of a disadvantage as you don’t get any error messages, things just look wrong, and you have to figure out why.
+    <div data-component="reveal" id="reveal_heading"   data-showtitle="Show" data-hidetitle="Hide"  style="visibility: hidden;">
+    <p>As you might expect, the headings continue to get smaller as you go from 1 to 6.  But when you go to level 7 the text gets bigger.  This is because the web browser is written so that it just ignores any tags that it does not know about.  This is somewhat of a disadvantage as you don’t get any error messages, things just look wrong, and you have to figure out why.</p>
+
     </div>
     <p>Another aspect of the heading tag is that it is what we call a <strong>block</strong> tag.  Notice that each heading appears on its own line.  Thats pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some <strong>inline</strong> tags that do not each appear on their own line.</p>
 </div>
@@ -355,16 +328,21 @@
 <h3>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h3>
 <p>Paragraphs are another funamental element of documents.  Paragraphs are also another example of a block element in that each paragraph gets its own space and is separated from other html elements by blank lines in the document.</p>
 
-<div data-childcomponent="html_paragraph" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_paragraph data-question_label="3">
+<div id=html_paragraph_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_paragraph data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_paragraph_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;p&gt;This is a short sentence.&lt;/p&gt;
 &lt;p&gt;This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? &lt;/p&gt;
 &lt;p&gt;Level this is a short sentence&lt;/p&gt;
 </textarea>
+</div>
 </div>
 <p>What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?</p>
 </div>
@@ -373,12 +351,16 @@
 <p>Images are another common element of a document or a web page.  To include an image in a document you must use an <code class="docutils literal notranslate"><span class="pre">img</span></code> tag.  Image tags are an example of an <strong>inline</strong> element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.</p>
 <p>The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute.</p>
 
-<div data-childcomponent="html_img1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_img1 data-question_label="4">
+<div id=html_img1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_img1 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_img1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;h1&gt;Embedded Images&lt;/h1&gt;
 
    &lt;p&gt;Images are inline elements because they fit in the flow
@@ -389,13 +371,18 @@
    that there isn&#x27;t a http:// at the start of the path.&lt;/p&gt;
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="html_img2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_img2 data-question_label="5">
+<div id=html_img2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_img2 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_img2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;p&gt;Images are inline elements because they fit in the flow
 &lt;img src=&quot;https://cs20.ca/_static/skflag.png&quot;&gt;
 of a paragraph without causing extra line breaks.&lt;/p&gt;
@@ -404,9 +391,10 @@ of a paragraph without causing extra line breaks.&lt;/p&gt;
 that there is a https:// at the start of the path.&lt;/p&gt;
 </textarea>
 </div>
+</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your <code class="docutils literal notranslate"><span class="pre">skflag.png</span></code> image is saved in the same folder as your <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file, you can just use something like <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;skflag.png&quot;&gt;</span></code>.</p>
+<p class="admonition-title">Note</p>
+<p>If you are working on creating a basic webpage on your local computer, you can easily link to other files, images, etc. by saving them all in the same folder. If your <code class="docutils literal notranslate"><span class="pre">skflag.png</span></code> image is saved in the same folder as your <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file, you can just use something like <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;skflag.png&quot;&gt;</span></code>.</p>
 </div>
 <p>Try modifying the example above so that shows a different image. You will want to use a search engine to find the URL of an image file, then copy/paste it into the example above.</p>
 <p>You can also change the height and width of  an image by using a <code class="docutils literal notranslate"><span class="pre">height=</span></code> attribute or a <code class="docutils literal notranslate"><span class="pre">width=</span></code> attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.</p>
@@ -416,22 +404,27 @@ that there is a https:// at the start of the path.&lt;/p&gt;
 <h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
 <p>The last basic tag to cover in this section is the link tag <code class="docutils literal notranslate"><span class="pre">a</span></code>.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an <code class="docutils literal notranslate"><span class="pre">img</span></code> tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute on the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.   The text that you will click on goes between the opening <code class="docutils literal notranslate"><span class="pre">a</span></code> tag and the closing <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p>
 
-<div data-childcomponent="html_link" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_link data-question_label="6">
+<div id=html_link_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_link data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_link_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;h1&gt;Links make the web!&lt;/h1&gt;
 
    &lt;p&gt;Links are another inline element.  You can read about links and their attributes on
    &lt;a href=&quot;http://www.w3schools.com/tags/tag_a.asp&quot;&gt;the w3schools website&lt;/a&gt;.&lt;/p&gt;
 </textarea>
 </div>
+</div>
 <p>Try clicking on the link in the example above.  What happens?  How do you get back?   Don’t worry, you can always just reload this page.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Due to a rendering error within ActiveCode, &lt;a&gt; tags will look like regular links, but will not function properly. To see the result of an &lt;a&gt; tag in action, I recommend doing these demonstrations using a text editor (such as VS Code), and viewing the page in your browser.</p>
+<p class="admonition-title">Note</p>
+<p>Due to a rendering error within ActiveCode, &lt;a&gt; tags will look like regular links, but will not function properly. To see the result of an &lt;a&gt; tag in action, I recommend doing these demonstrations using a text editor (such as VS Code), and viewing the page in your browser.</p>
 </div>
 <p>Links can also be used to navigate within the same page.  to do this you use one <code class="docutils literal notranslate"><span class="pre">a</span></code> tag to create
 an anchor point on the page using the name attribute like this:  <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">name=&quot;target&quot;&gt;I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">target&lt;/a&gt;</span></code>  You can create
@@ -442,12 +435,16 @@ a link that will jump to the target anywhere else on the page using <code class=
 <h2>Simple Text Formatting<a class="headerlink" href="#simple-text-formatting" title="Permalink to this headline">¶</a></h2>
 <p>Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.</p>
 
-<div data-childcomponent="html_fmt" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=html_fmt data-question_label="7">
+<div id=html_fmt_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=html_fmt data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="html_fmt_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
    &lt;body&gt;
       &lt;p&gt;&lt;b&gt;This text is bold&lt;/b&gt;&lt;/p&gt;
@@ -461,12 +458,13 @@ a link that will jump to the target anywhere else on the page using <code class=
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <p>You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.</p>
 <p><strong>Check your Understanding</strong></p>
 
 <div class="runestone">
-<div data-component="clickablearea" class="runestone alert alert-warning" id="blockelem"   >
-<span data-question>html1: Click on the beginning tag for all block elements in the example.</span><span data-feedback>Block elements start on a new line and take up the full width available.</span><pre>&lt;html&gt;
+<div data-component="clickablearea" class="runestone alert alert-warning" id="blockelem" data-question_label="8"     style="visibility: hidden;">
+<span data-question>html8: Click on the beginning tag for all block elements in the example.</span><span data-feedback>Block elements start on a new line and take up the full width available.</span><pre>&lt;html&gt;
    <span data-incorrect>&lt;body&gt;</span>
       <span data-correct>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
          <span data-correct>&lt;p&gt;</span>Hello World!   This is <span data-incorrect>&lt;b&gt;</span>me&lt;/b&gt; <span data-incorrect>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
@@ -480,8 +478,8 @@ a link that will jump to the target anywhere else on the page using <code class=
 </div>
 
 <div class="runestone">
-<div data-component="clickablearea" class="runestone alert alert-warning" id="inlineelem"   >
-<span data-question>html2: Click on the beginning tag for all inline elements in the example.</span><span data-feedback>Inline elements do not start on a new line and only take as much width as needed.</span><pre> &lt;html&gt;
+<div data-component="clickablearea" class="runestone alert alert-warning" id="inlineelem" data-question_label="9"     style="visibility: hidden;">
+<span data-question>html9: Click on the beginning tag for all inline elements in the example.</span><span data-feedback>Inline elements do not start on a new line and only take as much width as needed.</span><pre> &lt;html&gt;
    &lt;body&gt;
       <span data-incorrect>&lt;h1&gt;</span>Welcome to my Page&lt;/h1&gt;
          &lt;p&gt;Hello World!  This is <span data-correct>&lt;b&gt;</span>me&lt;/b&gt; <span data-correct>&lt;img src="me.jpg"&gt;</span> &lt;/p&gt;
@@ -499,12 +497,16 @@ a link that will jump to the target anywhere else on the page using <code class=
 <div class="section" id="unordered-lists">
 <h3>Unordered Lists<a class="headerlink" href="#unordered-lists" title="Permalink to this headline">¶</a></h3>
 
-<div data-childcomponent="advhtml_ul" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=advhtml_ul data-question_label="10">
+<div id=advhtml_ul_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=advhtml_ul data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="advhtml_ul_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;ul&gt;
    &lt;li&gt;This is an unordered list&lt;/li&gt;
    &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ul&lt;/code&gt; tags&lt;/li&gt;
@@ -512,15 +514,20 @@ a link that will jump to the target anywhere else on the page using <code class=
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="ordered-lists">
 <h3>Ordered Lists<a class="headerlink" href="#ordered-lists" title="Permalink to this headline">¶</a></h3>
 
-<div data-childcomponent="advhtml_ol" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=advhtml_ol data-question_label="11">
+<div id=advhtml_ol_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=advhtml_ol data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="advhtml_ol_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;ol&gt;
    &lt;li&gt;This is an ordered list&lt;/li&gt;
    &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags&lt;/li&gt;
@@ -528,13 +535,14 @@ a link that will jump to the target anywhere else on the page using <code class=
 &lt;/ol&gt;
 </textarea>
 </div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ol</span></code> tag can also have a <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute, so it could look something like <code class="docutils literal notranslate"><span class="pre">&lt;ol</span> <span class="pre">type=&quot;1&quot;&gt;</span></code>.  The <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute can be one of the following values:</p>
 <ul class="simple">
-<li>1 This will cause the list to be numbered with numbers</li>
-<li>A This will cause the list to be ordered with upper case letters</li>
-<li>a This will cause the list to be ordered with lower case letters</li>
-<li>I This will cause the list to be ordered with upper case roman numerals</li>
-<li>i This will cause the list to be ordered with lower case roman numerals</li>
+<li><p>1 This will cause the list to be numbered with numbers</p></li>
+<li><p>A This will cause the list to be ordered with upper case letters</p></li>
+<li><p>a This will cause the list to be ordered with lower case letters</p></li>
+<li><p>I This will cause the list to be ordered with upper case roman numerals</p></li>
+<li><p>i This will cause the list to be ordered with lower case roman numerals</p></li>
 </ul>
 <p>Try it yourself.</p>
 </div>
@@ -542,12 +550,16 @@ a link that will jump to the target anywhere else on the page using <code class=
 <h3>Nesting Lists<a class="headerlink" href="#nesting-lists" title="Permalink to this headline">¶</a></h3>
 <p>Lists can be inside of other lists. This is true for most HTML tags.</p>
 
-<div data-childcomponent="advhtml_nested" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=advhtml_nested data-question_label="12">
+<div id=advhtml_nested_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=advhtml_nested data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="advhtml_nested_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;ol&gt;
    &lt;li&gt;This is an ordered list&lt;/li&gt;
    &lt;li&gt;The &lt;code&gt;li&lt;/code&gt; tags come between two &lt;code&gt;ol&lt;/code&gt; tags&lt;/li&gt;
@@ -562,22 +574,27 @@ a link that will jump to the target anywhere else on the page using <code class=
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="tables">
 <h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Tables are used when we need to show information in a traditional grid format. Here is a complete example that illustrates the use of the following table specific tags</p>
 <ul class="simple">
-<li>table  – This is the main tag for a table</li>
-<li>tr  – every row in a table starts with a tr tag</li>
-<li>td – every column in a row is delineated by a <code class="docutils literal notranslate"><span class="pre">td</span></code> tag</li>
-<li>th – You can use the <code class="docutils literal notranslate"><span class="pre">th</span></code> tag in place of the <code class="docutils literal notranslate"><span class="pre">td</span></code> tag in the first row to make headings</li>
+<li><p>table  – This is the main tag for a table</p></li>
+<li><p>tr  – every row in a table starts with a tr tag</p></li>
+<li><p>td – every column in a row is delineated by a <code class="docutils literal notranslate"><span class="pre">td</span></code> tag</p></li>
+<li><p>th – You can use the <code class="docutils literal notranslate"><span class="pre">th</span></code> tag in place of the <code class="docutils literal notranslate"><span class="pre">td</span></code> tag in the first row to make headings</p></li>
 </ul>
 
-<div data-childcomponent="advhtml_table" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=advhtml_table data-question_label="13">
+<div id=advhtml_table_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=advhtml_table data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="advhtml_table_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
  &lt;table&gt;
  &lt;caption&gt;Table of Scores&lt;/caption&gt;
  &lt;tr&gt;
@@ -613,14 +630,15 @@ a link that will jump to the target anywhere else on the page using <code class=
  &lt;/table&gt;
 </textarea>
 </div>
+</div>
 <p>There are many attributes you can use with the various table tags.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">table</span></code>
-* begins the table element</li>
-<li><code class="docutils literal notranslate"><span class="pre">td</span></code>
-* colspan  – if you have a particular table where you need an extra wide column in some rows you can make a cell of your table span more than one column using the colspan attribute.  Its value is the number of columns.</li>
-<li><code class="docutils literal notranslate"><span class="pre">tr</span></code>
-* rowspan – If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table</span></code>
+* begins the table element</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">td</span></code>
+* colspan  – if you have a particular table where you need an extra wide column in some rows you can make a cell of your table span more than one column using the colspan attribute.  Its value is the number of columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tr</span></code>
+* rowspan – If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.</p></li>
 </ul>
 <p>Experiment with a table.  What kinds of tags can you include inside each <code class="docutils literal notranslate"><span class="pre">td</span></code>?  Can you make a table inside another table?</p>
 </div>
@@ -628,12 +646,16 @@ a link that will jump to the target anywhere else on the page using <code class=
 <h3>Audio<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h3>
 <p>Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:</p>
 
-<div data-childcomponent="audio_demo" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=audio_demo data-question_label="14">
+<div id=audio_demo_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=audio_demo data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="audio_demo_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
  &lt;audio controls&gt;
      &lt;source src=&quot;/_static/battleThemeA.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
      &lt;source src=&quot;/_static/battleThemeA.ogg&quot; type=&quot;audio/ogg&quot;&gt;
@@ -641,18 +663,23 @@ a link that will jump to the target anywhere else on the page using <code class=
  &lt;/audio&gt;
 </textarea>
 </div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">controls</span></code> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <code class="docutils literal notranslate"><span class="pre">source</span></code> tags inside the <code class="docutils literal notranslate"><span class="pre">audio</span></code> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
 </div>
 <div class="section" id="video">
 <h3>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h3>
 <p>Embedding video in your webpage allows you to link to various files containing movies.</p>
 
-<div data-childcomponent="video_demo" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=video_demo data-question_label="15">
+<div id=video_demo_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=video_demo data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="video_demo_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
  &lt;video height=300 width=400 controls&gt;
      &lt;source src=&quot;/_static/run-cycle.mp4&quot; type=&quot;video/mp4&quot;&gt;
      &lt;source src=&quot;/_static/run-cycle.ogg&quot; type=&quot;video/ogg&quot;&gt;
@@ -660,148 +687,194 @@ a link that will jump to the target anywhere else on the page using <code class=
  &lt;/video&gt;
 </textarea>
 </div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">controls</span></code> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <code class="docutils literal notranslate"><span class="pre">source</span></code> tags inside the <code class="docutils literal notranslate"><span class="pre">video</span></code> tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
 </div>
 <div class="section" id="iframes">
 <h3>IFrames<a class="headerlink" href="#iframes" title="Permalink to this headline">¶</a></h3>
 <p>IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page. If you wanted to embed a YouTube video onto a webpage, you would copy/paste the iframe element from YouTube into your HTML.</p>
 
-<div data-childcomponent="iframe_example" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=iframe_example data-question_label="16">
+<div id=iframe_example_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=iframe_example data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="iframe_example_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
  Open up YouTube, find a video, then copy/paste the iframe embed code here!
 </textarea>
 </div>
+</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Although you can certainly do the following practice problems here in the textbook, you might find it useful to make an HTML page in an text editor (such as VS Code), then solve each of the following problems inside of that file.</p>
+<p class="admonition-title">Note</p>
+<p>Although you can certainly do the following practice problems here in the textbook, you might find it useful to make an HTML page in an text editor (such as VS Code), then solve each of the following problems inside of that file.</p>
 </div>
 </div>
 </div>
 <div class="section" id="practice-problems">
 <h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Make a little webpage to tell me a little about yourself.  Use at least three levels of headings and some paragraphs.</li>
+<li><p>Make a little webpage to tell me a little about yourself.  Use at least three levels of headings and some paragraphs.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_1 data-question_label="17">
+<div id=ex_html_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_1 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="2">
-<li>You can copy the URL of almost any image in a browser by right clicking on the image and choosing “copy image URL”  or something similar.  Write an html page in the activecode window for this exercise that includes a header element giving a title to some image you find,  then include the image in the page, sized appropriately,  and a paragraph that describes the image.</li>
+<li><p>You can copy the URL of almost any image in a browser by right clicking on the image and choosing “copy image URL”  or something similar.  Write an html page in the activecode window for this exercise that includes a header element giving a title to some image you find,  then include the image in the page, sized appropriately,  and a paragraph that describes the image.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_2 data-question_label="18">
+<div id=ex_html_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_2 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="3">
-<li>Make an outline that has capital roman numerals at the highest level of the outline.  and lower case roman numerals for the second level items.  List three new concepts we have covered in this class at the first level, and for each of those list two or three key points.</li>
+<li><p>Make an outline that has capital roman numerals at the highest level of the outline.  and lower case roman numerals for the second level items.  List three new concepts we have covered in this class at the first level, and for each of those list two or three key points.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_3 data-question_label="19">
+<div id=ex_html_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_3 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="4">
-<li>Make a webpage that links to four of your favorite websites.</li>
+<li><p>Make a webpage that links to four of your favorite websites.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_4 data-question_label="20">
+<div id=ex_html_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_4 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="5">
-<li>Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.</li>
+<li><p>Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_5 data-question_label="21">
+<div id=ex_html_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_5 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_5_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="6">
-<li>Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.</li>
+<li><p>Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_6" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_6 data-question_label="22">
+<div id=ex_html_6_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_6 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_6_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 <ol class="arabic simple" start="7">
-<li>Make a webpage with five different images. Each image should have a title.</li>
+<li><p>Make a webpage with five different images. Each image should have a title.</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_7" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_7 data-question_label="23">
+<div id=ex_html_7_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_7 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_7_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
 <ol class="arabic simple" start="8">
-<li>Make a webpage with an image that when clicked will link to a search engine of your choice</li>
+<li><p>Make a webpage with an image that when clicked will link to a search engine of your choice</p></li>
 </ol>
 
-<div data-childcomponent="ex_html_8" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ex_html_8 data-question_label="24">
+<div id=ex_html_8_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=ex_html_8 data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="htmlmixed" id="ex_html_8_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 &lt;html&gt;
 
 &lt;/html&gt;
 </textarea>
+</div>
 </div>
 </div>
 </div>

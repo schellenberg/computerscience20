@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How to Use This Textbook - For Teachers &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Acknowledgments" href="Acknowledgments.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -263,44 +225,44 @@
   <div class="section" id="how-to-use-this-textbook-for-teachers">
 <h1>How to Use This Textbook - For Teachers<a class="headerlink" href="#how-to-use-this-textbook-for-teachers" title="Permalink to this headline">¶</a></h1>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">This version of the textbook is my (Dan Schellenberg) own personal fork. I will continue to update/adapt the book here. If you would like a version that will not change, Saskatoon Public Schools hosts a version at <a class="reference external" href="http://opensask.ca">opensask.ca</a>.</p>
+<p class="admonition-title">Caution</p>
+<p>This version of the textbook is my (Dan Schellenberg) own personal fork. I will continue to update/adapt the book here. If you would like a version that will not change, Saskatoon Public Schools hosts a version at <a class="reference external" href="http://opensask.ca">opensask.ca</a>.</p>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This textbook has been written to support your teaching of Computer Science 20 in Saskatchewan, and I have attempted to tie everything into the curricular outcomes of the course. There are a few important things you should know:</p>
 <ul class="simple">
-<li>each page roughly maps to one day’s worth of instruction (with the notable exception of the Reeborg unit, which is intended to be approximately a two week unit, during which the students work through the content at their own pace)</li>
-<li>the Python editor I’ve chosen to use throughout the book is called <a class="reference external" href="http://thonny.org/">Thonny</a>, which you can download for free. Thonny provides the same experience for the student whether they are on a Mac, PC, or Linux machine, which is a huge advantage when a student uses a different operating system at home and at school. No administrator rights are required to install Thonny, so I simply have the students download and install Thonny on our first day of Python (takes about 5 minutes). Thonny also makes installing Python packages/modules incredibly easy, which is why I have included a few within the text. If you want to extend your Python teaching, or provide an additional challenge for some of your students, you can search on the <a class="reference external" href="https://pypi.python.org/pypi">Python Package Index</a> for a package that does what you want, and install it easily with Thonny (Tools -&gt; Manage Packages…).</li>
-<li>I have incorporated <a class="reference external" href="http://microbit.org/">Micro:bit</a> hardware into some of the Python lessons (primarily in the Python - Micro:bit and More Functions section). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process. If you do not have access to Micro:bits, you can still accomplish the same objectives by exploring functions in more detail, perhaps making use of a module like pygame.</li>
-<li>if you would like to access the Teachers Only repository of code/quizzes/etc, please send me an email from your school division email address (so that I know it is from a teacher), and I’ll give you access to it. My email is <a class="reference external" href="mailto:schellenberg&#37;&#52;&#48;gmail&#46;com">schellenberg<span>&#64;</span>gmail<span>&#46;</span>com</a>.</li>
-<li>if you find errors in the textbook, <a class="reference external" href="https://github.com/schellenberg/computerscience20#contributing-to-the-book">please let me know!</a></li>
-<li>if you want to create your own version of this book, you are free to do so. The general process of remixing the book is <a class="reference external" href="https://github.com/schellenberg/computerscience20#building-the-book-yourself">documented on the GitHub page that holds the source code of the book</a>.</li>
+<li><p>each page roughly maps to one day’s worth of instruction (with the notable exception of the Reeborg unit, which is intended to be approximately a two week unit, during which the students work through the content at their own pace)</p></li>
+<li><p>the Python editor I’ve chosen to use throughout the book is called <a class="reference external" href="http://thonny.org/">Thonny</a>, which you can download for free. Thonny provides the same experience for the student whether they are on a Mac, PC, or Linux machine, which is a huge advantage when a student uses a different operating system at home and at school. No administrator rights are required to install Thonny, so I simply have the students download and install Thonny on our first day of Python (takes about 5 minutes). Thonny also makes installing Python packages/modules incredibly easy, which is why I have included a few within the text. If you want to extend your Python teaching, or provide an additional challenge for some of your students, you can search on the <a class="reference external" href="https://pypi.python.org/pypi">Python Package Index</a> for a package that does what you want, and install it easily with Thonny (Tools -&gt; Manage Packages…).</p></li>
+<li><p>I have incorporated <a class="reference external" href="http://microbit.org/">Micro:bit</a> hardware into some of the Python lessons (primarily in the Python - Micro:bit and More Functions section). Students have been very engaged with the Micro:bit, and although I am teaching them the same concepts as I would be without using an additional piece of hardware, they are much more excited about the process. If you do not have access to Micro:bits, you can still accomplish the same objectives by exploring functions in more detail, perhaps making use of a module like pygame.</p></li>
+<li><p>if you would like to access the Teachers Only repository of code/quizzes/etc, please send me an email from your school division email address (so that I know it is from a teacher), and I’ll give you access to it. My email is <a class="reference external" href="mailto:schellenberg&#37;&#52;&#48;gmail&#46;com">schellenberg<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p></li>
+<li><p>if you find errors in the textbook, <a class="reference external" href="https://github.com/schellenberg/computerscience20#contributing-to-the-book">please let me know!</a></p></li>
+<li><p>if you want to create your own version of this book, you are free to do so. The general process of remixing the book is <a class="reference external" href="https://github.com/schellenberg/computerscience20#building-the-book-yourself">documented on the GitHub page that holds the source code of the book</a>.</p></li>
 </ul>
 <div class="section" id="scratch">
 <h3>Scratch<a class="headerlink" href="#scratch" title="Permalink to this headline">¶</a></h3>
 <p>For the Scratch unit, most days tended to be set up as:</p>
 <ul class="simple">
-<li>teacher led demonstration of the concepts, with the students following along by building the demonstration on their computer during the demonstration</li>
-<li>any time remaining at the end of the demonstration for the day is spent working on the current Scratch assignment (I used three Scratch assignemnts – one per week)</li>
+<li><p>teacher led demonstration of the concepts, with the students following along by building the demonstration on their computer during the demonstration</p></li>
+<li><p>any time remaining at the end of the demonstration for the day is spent working on the current Scratch assignment (I used three Scratch assignemnts – one per week)</p></li>
 </ul>
 <p>During the semester I was creating this textbook, the number of days spent on Scratch were as follows:</p>
 <ol class="arabic simple">
-<li>Introduction to Scratch (Broadcasts)</li>
-<li>Controlling a Character with WASD (Repetition and Conditionals)</li>
-<li>Chase the Mouse and Drawing Polygons (Repeat and If/Else)</li>
-<li>Drawing Polygons - Part 2 (Variables and Nested Repeat)</li>
-<li>Tracing Code and Cannonball Motion (Repeat Until)</li>
-<li>Making a Start Screen (Repeat, If/Else, Broadcast)</li>
-<li>Project Work Period</li>
-<li>Timing Issues and Dodging Game (Broadcasts and Variables)</li>
-<li>Built-In Variables (Tempo, Answer and Timer)</li>
-<li>Project Work Period</li>
-<li>Number Guessing Game (Pair Programming)</li>
-<li>Making Your Own Blocks (Functions)</li>
-<li>Number Guessing Game (Pair Programming)</li>
-<li>Student Directed Project Work Period</li>
-<li>Student Directed Project Work Period</li>
+<li><p>Introduction to Scratch (Broadcasts)</p></li>
+<li><p>Controlling a Character with WASD (Repetition and Conditionals)</p></li>
+<li><p>Chase the Mouse and Drawing Polygons (Repeat and If/Else)</p></li>
+<li><p>Drawing Polygons - Part 2 (Variables and Nested Repeat)</p></li>
+<li><p>Tracing Code and Cannonball Motion (Repeat Until)</p></li>
+<li><p>Making a Start Screen (Repeat, If/Else, Broadcast)</p></li>
+<li><p>Project Work Period</p></li>
+<li><p>Timing Issues and Dodging Game (Broadcasts and Variables)</p></li>
+<li><p>Built-In Variables (Tempo, Answer and Timer)</p></li>
+<li><p>Project Work Period</p></li>
+<li><p>Number Guessing Game (Pair Programming)</p></li>
+<li><p>Making Your Own Blocks (Functions)</p></li>
+<li><p>Number Guessing Game (Pair Programming)</p></li>
+<li><p>Student Directed Project Work Period</p></li>
+<li><p>Student Directed Project Work Period</p></li>
 </ol>
 </div>
 <div class="section" id="reeborg">
@@ -310,11 +272,12 @@
 <p>Creating your own worlds in Reeborg can be time consuming, but once you understand the process, it works quite well. The general procedure is to select “Additional Options”, then click “Edit world”. Creating a simple world (that doesn’t change each time you open it), you can simply use the graphical world editor on the Reeborg website. If you want to make a world that changes, you can use Python or JavaScript to change certain portions of the world when it is loaded. To find out much more information about how to create worlds, you might want to <a class="reference external" href="https://aroberge.gitbooks.io/reeborg-s-world-advanced-world-creation/content/included/chapter1.html">read the guide created by André Roberge</a> (the creator of Reeborg).</p>
 <p>Note that in order to use the world that you create with your students, you will need to save the world to your computer (Additional Options -&gt; Save world to file). Then you need to give the students a way to access that file. One simple way to do this is to copy/paste the contents of the <code class="docutils literal notranslate"><span class="pre">world_name.json</span></code> file into a web service like <a class="reference external" href="pastebin.com">pastebin.com</a>. I have done this with <a class="reference external" href="https://pastebin.com/yLb3CUzq">a simple demo world</a>. Note that to get just the contents of the file, you can click the “raw” button on pastebin, which provides <a class="reference external" href="https://pastebin.com/raw/yLb3CUzq">something like this</a>. You should now be able to use that url to create a link that your students can access. It will look something like this:</p>
 <blockquote>
-<div><a class="reference external" href="https://reeborg.cs20.ca/?lang=en&amp;mode=python&amp;url=https://pastebin.com/raw/yLb3CUzq&amp;name=DemoExternalWorld">https://reeborg.cs20.ca/?lang=en&amp;mode=python&amp;url=https://pastebin.com/raw/yLb3CUzq&amp;name=DemoExternalWorld</a></div></blockquote>
+<div><p><a class="reference external" href="https://reeborg.cs20.ca/?lang=en&amp;mode=python&amp;url=https://pastebin.com/raw/yLb3CUzq&amp;name=DemoExternalWorld">https://reeborg.cs20.ca/?lang=en&amp;mode=python&amp;url=https://pastebin.com/raw/yLb3CUzq&amp;name=DemoExternalWorld</a></p>
+</div></blockquote>
 <p>To make the same thing work for you, simply replace the <code class="docutils literal notranslate"><span class="pre">https://pastebin.com/raw/yLb3CUzq</span></code> portion of the link with the link to your world, and change <code class="docutils literal notranslate"><span class="pre">DemoExternalWorld</span></code> to whatever name you would like to have appear in the Reeborg World Selector menu. <strong>This is similar to how I link to extra worlds in the More Challenges and Second Practice Quiz sections of Reeborg.</strong></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Although it does take one extra step, I like to use a url shortening service, such as <a class="reference external" href="https://bitly.com">bitly.com</a>, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into <a class="reference external" href="http://bit.ly/2Kin79e">http://bit.ly/2Kin79e</a></p>
+<p class="admonition-title">Note</p>
+<p>Although it does take one extra step, I like to use a url shortening service, such as <a class="reference external" href="https://bitly.com">bitly.com</a>, which allows you to take that long url and make it into something easier for students (and you!) to type. The url above is shortened into <a class="reference external" href="http://bit.ly/2Kin79e">http://bit.ly/2Kin79e</a></p>
 </div>
 </div>
 <div class="section" id="python">
@@ -341,8 +304,8 @@
 <h3>Student-Directed Research<a class="headerlink" href="#student-directed-research" title="Permalink to this headline">¶</a></h3>
 <p>Once you have finished teaching new Python concepts, the students should have an opportunity to build (or research) a project of their choosing. As mentioned in the indicators for this outcome, if a coding project is chosen, the students can choose to use the language you have been teaching for most of the semester (Python), or spend time learning a language of their choice. Although the amount of time given to this project will vary from semester to semester, I would suggest reserving at least 2 weeks of class time for the students to work on it.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">I have had students use each of the resources mentioned below in my computer lab in Saskatoon Public Schools, but your environment may vary. Some of the resources require installation, while others are web based, which may influence the choices you are able to provide the students.</p>
+<p class="admonition-title">Note</p>
+<p>I have had students use each of the resources mentioned below in my computer lab in Saskatoon Public Schools, but your environment may vary. Some of the resources require installation, while others are web based, which may influence the choices you are able to provide the students.</p>
 </div>
 <p>I have found it helpful to dissuade weaker students from attempting to learn a new language, unless the new language is a block based language like <a class="reference external" href="http://appinventor.mit.edu/">App Inventor</a>, <a class="reference external" href="https://makecode.com/">Microsoft MakeCode</a>, <a class="reference external" href="http://www.stencyl.com/">Stencyl</a>, or <a class="reference external" href="https://www.yoyogames.com/gamemaker">GameMaker</a>.</p>
 <p>For students that would like to stick with Python, but try something more graphical, learning <a class="reference external" href="https://www.pygame.org">pyGame</a> can be a good choice (you might want to suggest looking at a learning resource such as <a class="reference external" href="http://inventwithpython.com/pygame/">Invent with Python</a> or <a class="reference external" href="http://programarcadegames.com/">Program Arcade Games</a>). pyGame can be installed in Thonny (Tools -&gt; Manage Packages), which makes this easy to explore. If the student would like to build something in Python, but wants to explore additional possibilities, you might want to direct them to the <a class="reference external" href="https://pypi.org/">Python Packaging Index</a>, where they can look up more modules that they can install easily in Thonny. I have had students incorporate weather information, flight arrival/departure times, and more using various Python modules.</p>

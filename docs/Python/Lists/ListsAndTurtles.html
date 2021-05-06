@@ -1,113 +1,75 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. Lists and Turtle Drawing &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fitb.css?v=3BA0E63E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../../_static/dragndrop.css?v=B9BAA0D1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../../_static/Blob.js?v=AEC2447"></script>
-    <script type="text/javascript" src="../../_static/reveal.js?v=112CBFA2"></script>
-    <script type="text/javascript" src="../../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../../_static/mchoice.js?v=8329CA55"></script>
-    <script type="text/javascript" src="../../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../../_static/shortanswer.js?v=5EB6170D"></script>
-    <script type="text/javascript" src="../../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../../_static/bookfuncs.js?v=BAE6E360"></script>
-    <script type="text/javascript" src="../../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../../_static/activecode-i18n.en.js?v=3FBAE230"></script>
-    <script type="text/javascript" src="../../_static/skulpt.min.js?v=DC7AC815"></script>
-    <script type="text/javascript" src="../../_static/skulpt-stdlib.js?v=48A5D93E"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../../_static/activecode.js?v=9FA573E1"></script>
-    <script type="text/javascript" src="../../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../../_static/dragndrop.js?v=2B6403E8"></script>
-    <script type="text/javascript" src="../../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../../_static/poll.js?v=6C59AE9F"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/runestonebase.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=5A173BAB"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. Recamán Sequence Visualization" href="RecamanSequence.html" />
@@ -130,7 +92,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '3.4.4';
+  eBookConfig.runestone_version = '5.6.1';
 </script>
 
 
@@ -226,13 +188,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 2. List Methods" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2. </span>List Methods" data-toggle="tooltip">
     <a href="ListMethods.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 4. Recamán Sequence Visualization' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4. </span>Recamán Sequence Visualization' data-toggle="tooltip" >
     <a href="RecamanSequence.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -264,27 +226,27 @@
 <div class="container" id="main-content">
   
   <div class="section" id="lists-and-turtle-drawing">
-<h1>3. Lists and Turtle Drawing<a class="headerlink" href="#lists-and-turtle-drawing" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Lists and Turtle Drawing<a class="headerlink" href="#lists-and-turtle-drawing" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
+<p class="topic-title">Quick Overview of Day</p>
 <p>Use lists while moving turtles.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_lists_and_turtles"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide" >
+    <div data-component="reveal" id="curriculum_addressed_lists_and_turtles"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
-<li><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</li>
-<li><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</li>
-<li><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</li>
-<li><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</li>
-<li><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</li>
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP3</strong> Construct and utilize functions to create reusable pieces of code.</p></li>
+<li><p><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</p></li>
 </ul>
 
     </div>
     <div class="section" id="check-your-understanding">
-<h2>3.1. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_1">
+            <ul data-component="multiplechoice" data-question_label="3.1.1" data-multipleanswers="false"  id="test_question_turtle_lists_1"  style="visibility: hidden;">
             <p>lists-and-turtles1: What will be the result of the following code being executed?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
@@ -304,20 +266,20 @@
 </div>
 <img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
 
-            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_a">Nice!</li>
+            <li data-component="answer" data-correct id="test_question_turtle_lists_1_opt_a">Option 1</li><li data-component="feedback">Nice!</li>
             
-            <li data-component="answer"  id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_b">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_b">Option 2</li><li data-component="feedback">Try again.</li>
             
-            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_c">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_c">Option 3</li><li data-component="feedback">Try again.</li>
             
-            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_1_opt_d">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_1_opt_d">Error, will not run.</li><li data-component="feedback">Try again.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="test_question_turtle_lists_2">
+            <ul data-component="multiplechoice" data-question_label="3.1.2" data-multipleanswers="false"  id="test_question_turtle_lists_2"  style="visibility: hidden;">
             <p>lists-and-turtles2: What will be the result of the following code being executed?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
@@ -336,62 +298,76 @@
 </div>
 <img alt="../../_images/turtle-list-options.png" src="../../_images/turtle-list-options.png" />
 
-            <li data-component="answer"  id="test_question_turtle_lists_2_opt_a">Option 1</li><li data-component="feedback" id="test_question_turtle_lists_2_opt_a">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_2_opt_a">Option 1</li><li data-component="feedback">Try again.</li>
             
-            <li data-component="answer" data-correct id="test_question_turtle_lists_2_opt_b">Option 2</li><li data-component="feedback" id="test_question_turtle_lists_2_opt_b">Nice!</li>
+            <li data-component="answer" data-correct id="test_question_turtle_lists_2_opt_b">Option 2</li><li data-component="feedback">Nice!</li>
             
-            <li data-component="answer"  id="test_question_turtle_lists_2_opt_c">Option 3</li><li data-component="feedback" id="test_question_turtle_lists_2_opt_c">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_2_opt_c">Option 3</li><li data-component="feedback">Try again.</li>
             
-            <li data-component="answer"  id="test_question_turtle_lists_2_opt_d">Error, will not run.</li><li data-component="feedback" id="test_question_turtle_lists_2_opt_d">Try again.</li>
+            <li data-component="answer"  id="test_question_turtle_lists_2_opt_d">Error, will not run.</li><li data-component="feedback">Try again.</li>
             
 
             </ul>
             </div>
             </div>
 <div class="section" id="turtle-coordinate-list">
-<h2>3.2. Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Turtle Coordinate List<a class="headerlink" href="#turtle-coordinate-list" title="Permalink to this headline">¶</a></h2>
 <p>Recall that you can use <code class="docutils literal notranslate"><span class="pre">in</span></code> to check for membership in a list as follows:</p>
 
-<div data-childcomponent="turtle_coordinates_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_coordinates_1 data-question_label="3.2.1">
+<div id=turtle_coordinates_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_coordinates_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_coordinates_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 some_list = [42, 5, 12, 99, 23]
 print(99 in some_list)
 </textarea>
 </div>
+</div>
 <p>If a portion of your list is <em>itself a list</em>, you need to check for the entire sublist when using <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 
-<div data-childcomponent="turtle_coordinates_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_coordinates_2 data-question_label="3.2.2">
+<div id=turtle_coordinates_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_coordinates_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_coordinates_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 some_list = [42, 5, [12, 99], 23]
 print(99 in some_list)
 print([12, 99] in some_list)
 </textarea>
+</div>
 </div>
 <p>If we wanted to keep track of a collection of coordinates (<em>x</em> and <em>y</em> pairs), we could do it by creating a list that contains sublists of coordinates. In the list below, three ordered pairs of coordinates are given:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coordinates</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">]]</span>
 </pre></div>
 </div>
 <ol class="arabic simple">
-<li><em>x</em>: 0, <em>y</em>: 0</li>
-<li><em>x</em>: 10, <em>y</em>: 20</li>
-<li><em>x</em>: 150, <em>y</em>: 80</li>
+<li><p><em>x</em>: 0, <em>y</em>: 0</p></li>
+<li><p><em>x</em>: 10, <em>y</em>: 20</p></li>
+<li><p><em>x</em>: 150, <em>y</em>: 80</p></li>
 </ol>
 <p>To check if a specific x and y pair is in our coordinate list, we can use <code class="docutils literal notranslate"><span class="pre">in</span></code> as follows:</p>
 
-<div data-childcomponent="turtle_coordinates_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_coordinates_3 data-question_label="3.2.3">
+<div id=turtle_coordinates_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_coordinates_3 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_coordinates_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 coordinates = [[0, 0], [10, 20], [150, 80]]
 if [30, 20] in coordinates:
     print("Yes! This coordinate is in the list!")
@@ -399,18 +375,23 @@ else:
     print("No such coordinate is in the list.")
 </textarea>
 </div>
+</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Change the numbers in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement above to an ordered pair that is in the list, then run the code again.</p>
+<p class="admonition-title">Note</p>
+<p>Change the numbers in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement above to an ordered pair that is in the list, then run the code again.</p>
 </div>
 <p>Imagine that you wanted to create a simulation of a turtle walking around a grid world (in other words, the turtle would always turn by 90 degrees). Before each “step” the turtle takes, we will randomly choose to either turn left and move, turn right and move, or move straight ahead. Although we could move any amount for each “step”, let’s use a step size of 10. The following program implements this world, but is in an infinite loop. The program should automatically time out after running for 20 seconds in the browser (though if you are executing it in Thonny, you will need to press the Stop button).</p>
 
-<div data-childcomponent="turtle_coordinates_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_coordinates_4 data-question_label="3.2.4">
+<div id=turtle_coordinates_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_coordinates_4 data-lang="python" 
-      data-timelimit=20000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_coordinates_4_editor" 
+      data-timelimit=20000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 import random
 
@@ -430,15 +411,20 @@ while True:
     jennifer.forward(10)
 </textarea>
 </div>
+</div>
 <p>Instead of having this program run forever, we would like the turtle to automatically stop the program whenever it walks onto a location that it has been before. In order to do that, we need to keep a list of coordinates that the turtle has been. Since the turtle begins at the origin, we will add [0, 0] to the list before any movement occurs. Since the turtle module keeps track of the turtle location using floating point values, the program will not behave the way you want if you simply store the current x and y positions in the coordinate list. Instead, we will convert the x and y values to be the nearest integer value, and store those in the list.</p>
 <p>After every step that the turtle takes, we need to get the current x and y coordinates, in the form of <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y]</span></code>. If this ordered pair appears in the coordinate list, it means that we have been here before and we should end the program. If not, we need to add this ordered pair to the coordinate list and continue moving. The program below implements this behaviour.</p>
 
-<div data-childcomponent="turtle_coordinates_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=turtle_coordinates_5 data-question_label="3.2.5">
+<div id=turtle_coordinates_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=turtle_coordinates_5 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="turtle_coordinates_5_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 import random
 
@@ -479,8 +465,9 @@ print(history)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="the-return-of-l-systems">
-<h2>3.3. The Return of L-Systems<a class="headerlink" href="#the-return-of-l-systems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>The Return of L-Systems<a class="headerlink" href="#the-return-of-l-systems" title="Permalink to this headline">¶</a></h2>
 <p>Let’s return to the L-systems we introduced previously and
 introduce a very interesting new feature that requires the use of lists.</p>
 <p>Suppose our L-System has the following rules:</p>
@@ -505,12 +492,16 @@ function to remove the the most recently appended information.</p>
 <p>Let’s modify our <code class="docutils literal notranslate"><span class="pre">draw_l_system</span></code> function to begin to implement this new
 behavior.</p>
 
-<div data-childcomponent="list_lsys1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_lsys1 data-question_label="3.3.1">
+<div id=list_lsys1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_lsys1 data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_lsys1_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 def draw_l_system(some_turtle, instructions, angle, distance):
@@ -542,6 +533,7 @@ instruction_string = "FF[-F[-X]+X]+F[-X]+X"
 draw_l_system(jill, instruction_string, 60, 20)
 </textarea>
 </div>
+</div>
 <p>When we run this example we can see that the picture is not very interesting,
 but notice what gets printed out, and how the saved information about the
 turtle gets added and removed from the end of the list.  In the next example
@@ -549,12 +541,16 @@ we’ll make use of the information from the list to save and restore the
 turtle’s position and heading when needed.  We’ll use a longer example here
 so you get an idea of what the kind of drawing the L-System can really make.</p>
 
-<div data-childcomponent="list_lsys2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_lsys2 data-question_label="3.3.2">
+<div id=list_lsys2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_lsys2 data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_lsys2_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 def draw_l_system(some_turtle, instructions, angle, distance):
@@ -595,8 +591,9 @@ draw_l_system(jill, instruction_string, 30, 2)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="putting-it-all-together">
-<h2>3.4. Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
 <p>To determine the <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code> we used in the last example, we used an axiom of <code class="docutils literal notranslate"><span class="pre">X</span></code> and applied the following rules 6 times:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
 <span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
@@ -604,16 +601,20 @@ draw_l_system(jill, instruction_string, 30, 2)
 </div>
 <p>If you run the code below, you will not see much happen. To fix the code below, you need to:</p>
 <ul class="simple">
-<li>fix the <code class="docutils literal notranslate"><span class="pre">apply_rules</span></code> function so that the rules given above are applied</li>
-<li>fix the call to <code class="docutils literal notranslate"><span class="pre">create_l_system</span></code> to use the correct axiom and number_of_iterations</li>
+<li><p>fix the <code class="docutils literal notranslate"><span class="pre">apply_rules</span></code> function so that the rules given above are applied</p></li>
+<li><p>fix the call to <code class="docutils literal notranslate"><span class="pre">create_l_system</span></code> to use the correct axiom and number_of_iterations</p></li>
 </ul>
 
-<div data-childcomponent="list_lsys3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_lsys3 data-question_label="3.4.1">
+<div id=list_lsys3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_lsys3 data-lang="python" 
-      data-timelimit=180000    
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_lsys3_editor" 
+      data-timelimit=180000     
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 def apply_rules(letter):
@@ -690,15 +691,16 @@ jill.left(90)
 draw_l_system(jill, instruction_string, 30, 2)
 </textarea>
 </div>
+</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Once you have the code working, try it out with a larger number of iterations. You may also want to try this example with different values for the angle and distance parameters.</p>
+<p class="admonition-title">Note</p>
+<p>Once you have the code working, try it out with a larger number of iterations. You may also want to try this example with different values for the angle and distance parameters.</p>
 </div>
 </div>
 <div class="section" id="practice-problems">
-<h2>3.5. Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="garden-herb">
-<h3>3.5.1. Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.5.1. </span>Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: H
 Rule 1: H --&gt; HFX[+H][-H]
@@ -706,52 +708,62 @@ Rule 2: X --&gt; X[-FFF][+FFF]FX
 </pre></div>
 </div>
 
-<div data-childcomponent="list_turtle_practice_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_turtle_practice_1 data-question_label="3.5.1.1">
+<div id=list_turtle_practice_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_turtle_practice_1 data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_turtle_practice_1_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 # your code here!
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="garden_herb_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="garden_herb_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you iterated through the rules 5 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/garden-herb.png" src="../../_images/garden-herb.png" />
 
     </div>
     </div>
 <div class="section" id="branch">
-<h3>3.5.2. Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.5.2. </span>Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
 Rule 1: F --&gt; F[-F]F[+F]F
 </pre></div>
 </div>
 
-<div data-childcomponent="list_turtle_practice_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_turtle_practice_2 data-question_label="3.5.2.1">
+<div id=list_turtle_practice_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_turtle_practice_2 data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_turtle_practice_2_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 # your code here!
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you iterated through the rules 4 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/branch.png" src="../../_images/branch.png" />
 
     </div>
     </div>
 <div class="section" id="symmetrical-branch">
-<h3>3.5.3. Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.5.3. </span>Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: X
 Rule 1: X --&gt; F[+X][-X]FX
@@ -759,64 +771,79 @@ Rule 2: F --&gt; FF
 </pre></div>
 </div>
 
-<div data-childcomponent="list_turtle_practice_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_turtle_practice_3 data-question_label="3.5.3.1">
+<div id=list_turtle_practice_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_turtle_practice_3 data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_turtle_practice_3_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 # your code here!
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="symmetrical_branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="symmetrical_branch_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you iterated through the rules 5 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 5, your code should have created something that looks like the following:</p>
 <img alt="../../_images/symmetrical-branch.png" src="../../_images/symmetrical-branch.png" />
 
     </div>
     </div>
 <div class="section" id="seaweed">
-<h3>3.5.4. Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.5.4. </span>Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
 Rule 1: F --&gt; FF-[-F+F+F]+[+F-F-F]
 </pre></div>
 </div>
 
-<div data-childcomponent="list_turtle_practice_4" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_turtle_practice_4 data-question_label="3.5.4.1">
+<div id=list_turtle_practice_4_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_turtle_practice_4 data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_turtle_practice_4_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 # your code here!
 </textarea>
 </div>
+</div>
 
-    <div data-component="reveal" id="seaweed_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide" >
+    <div data-component="reveal" id="seaweed_image"   data-showtitle="Reveal Solution Image" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>If you iterated through the rules 4 times to create your <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code>, and used a distance of 10, your code should have created something that looks like the following:</p>
 <img alt="../../_images/seaweed.png" src="../../_images/seaweed.png" />
 
     </div>
     </div>
 <div class="section" id="create-your-own">
-<h3>3.5.5. Create Your Own<a class="headerlink" href="#create-your-own" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.5.5. </span>Create Your Own<a class="headerlink" href="#create-your-own" title="Permalink to this headline">¶</a></h3>
 <p>Experiment by creating your own rules for an L-system. Be sure to use the <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code> characters in the rule(s) of your L-system.</p>
 
-<div data-childcomponent="list_turtle_practice_5" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_turtle_practice_5 data-question_label="3.5.5.1">
+<div id=list_turtle_practice_5_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=list_turtle_practice_5 data-lang="python" 
-      data-timelimit=180000   data-enabledownload="true" 
-    data-audio=''     
-          >
+</div>
+<textarea data-lang="python" id="list_turtle_practice_5_editor" 
+      data-timelimit=180000   data-enabledownload="true"  
+    data-audio=''      
+           data-wasm=/_static 
+     style="visibility: hidden;">
 import turtle
 
 # your code here!
 </textarea>
+</div>
 </div>
 </div>
 </div>
@@ -825,19 +852,19 @@ import turtle
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 2. List Methods' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">2. </span>List Methods' data-toggle="tooltip">
     <a href="ListMethods.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="ListMethods.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 4. Recamán Sequence Visualization' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">4. </span>Recamán Sequence Visualization' data-toggle="tooltip" >
     <a href="RecamanSequence.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="RecamanSequence.html" >Next Section - 4. Recamán Sequence Visualization</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="RecamanSequence.html" >Next Section - <span class="section-number">4. </span>Recamán Sequence Visualization</a>
 
 <script type="text/javascript">
 
