@@ -1,6 +1,9 @@
 .. qnum::
    :prefix: quick-overview
    :start: 1
+   
+Quick Python Overview
+==========================
 
 .. reveal:: curriculum_addressed_intro_to_python
     :showtitle: Curriculum Outcomes Addressed In This Section
@@ -9,8 +12,6 @@
     - **CS20-FP1** Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.
     - **CS20-FP2** Investigate how control structures affect program flow.
 
-Quick Python Overview
-==========================
 
 .. note:: In today's quick exploration of Python, you will see some things that you do not understand. That is okay. We will go into each of the ideas in much more detail as the semester progresses, but it is really helpful to see a large overview before we get into the details of each section.
 
