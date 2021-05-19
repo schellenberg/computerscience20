@@ -100,7 +100,7 @@ Now type in ``cs20-easygui`` into the Search box (be sure to spell it *exactly*)
 
 .. note:: The ``cs20-easygui`` package attempts to install ``easygui_qt``, along with it's prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be ``sip``, then ``PyQt5``, then ``easygui_qt``.
 
-.. warning:: Some users are reporting errors while installing ``cs20-easygui`` on Windows machines (as of May 2021). I am investigating why this might be happening, though I haven't been able to replicate the error on my school machines. Until the error is fixed, you could try installing ``PyQt5`` *without* installing ``sip`` first (as it seems that installing ``sip`` is the cause of the issue). Then install ``easygui_qt``. As a last resort, you could install Microsoft Visual C++ (seems like way more work than should be required, but a teacher confirmed this fixed the error that occured when attempting to install sip).
+.. warning:: Some users are reporting errors while installing ``cs20-easygui`` on Windows machines (as of May 2021). While I investigate why this is happening, you can use the following workaround. In Thonny, click on Tools -> Open System Shell..., then type in ``pip install --only-binary :all: cs20-easygui``. Although you might see a warning about your pip version being out of date, it *should* install easygui_qt correctly.
 
 Get String From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~
