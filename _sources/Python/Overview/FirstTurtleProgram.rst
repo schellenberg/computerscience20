@@ -108,7 +108,7 @@ Mixed Up Programs
    The following program uses a turtle to draw a capital L as shown in the picture to the left of this text, 
    but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  Remember that the turtle starts off facing east when it is created.  The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  
       
-   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    window = turtle.Screen()
@@ -129,7 +129,7 @@ Mixed Up Programs
    
    The following program uses a turtle to draw a checkmark as shown to the left, but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should turn to face southeast, draw a line that is 75 pixels long, then turn to face northeast, and draw a line that is 150 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  Northeast is between north and east. Southeast is between south and east. 
    
-   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    =====
@@ -151,7 +151,7 @@ Mixed Up Programs
    
    The following program uses a turtle to draw a single line to the west as shown to the left, but the program lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should then turn to face west and draw a line that is 75 pixels long.
    
-   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    window = turtle.Screen()
@@ -280,7 +280,7 @@ More Mixed Up Programs!
    
    The following program uses a turtle to draw a capital L in white on a blue background as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle and set the pen size to 10.  The turtle should then turn to face south, draw a line that is 150 pixels long, turn to face east, and draw a line that is 75 pixels long.   Finally, set the window to close when the user clicks in it.
    
-   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    wn = turtle.Screen()
@@ -305,7 +305,7 @@ More Mixed Up Programs!
    
    The following program uses a turtle to draw a capital T in white on a green background as shown to the left, but the lines are mixed up.  The program should do all necessary set-up, create the turtle, and set the pen size to 10.  After that the turtle should turn to face north, draw a line that is 150 pixels long, turn to face west, and draw a line that is 50 pixels long.  Next, the turtle should turn 180 degrees and draw a line that is 100 pixels long.  Finally, set the window to close when the user clicks in it.
    
-   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+   Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    wn = turtle.Screen()

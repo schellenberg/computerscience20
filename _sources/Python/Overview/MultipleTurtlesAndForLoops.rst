@@ -100,7 +100,7 @@ Mixed Up Programs
     
     The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.   Finally, it should set the window to close when the user clicks in it.
 
-    Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+    Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
     -----
     import turtle
     wn = turtle.Screen()
@@ -130,7 +130,7 @@ Mixed Up Programs
     
     The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.
 
-    Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
+    Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
     -----
     import turtle
     =====
@@ -311,7 +311,7 @@ Mixed Up Programs
     
     The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.
    
-    Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
+    Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
     -----
     import turtle 
     =====         
@@ -334,7 +334,7 @@ Mixed Up Programs
     
     The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.
 
-    Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
+    Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
     -----
     import turtle          
     wn = turtle.Screen()
