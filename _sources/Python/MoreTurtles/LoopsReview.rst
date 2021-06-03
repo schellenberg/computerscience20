@@ -245,7 +245,7 @@ stamp       None          Leaves an impression of a turtle shape at the current 
 shape       shape name    Should be 'arrow', 'classic', 'turtle', 'circle' or 'square'
 ==========  ==========  =========================
 
-As we have seen previously, you can read about even more options on the `Python Docs Website <http://docs.python.org/dev/py3k/library/turtle.html>`_.  
+As we have seen previously, you can read about even more options on the `Python Docs Website <https://docs.python.org/3/library/turtle.html>`_.  
 
 Practice Problems
 ------------------
@@ -284,8 +284,8 @@ Other than that, surprise me with your creativity!
 **Extras for Experts (things to try if you finish before your classmates)**
 
 - use the Micro:bit to control your program is some way. Perhaps pressing the *a* button draws something different than the *b* button. Maybe tilting the Micro:bit makes different things happen. Be creative!
-- You may want to investigate controlling your turtle with keyboard commands. See `this section of the Python Docs Reference <http://docs.python.org/dev/py3k/library/turtle.html#using-screen-events>`_ 
-- use other features of the turtle module by exploring the `Python Docs for turtle <http://docs.python.org/dev/py3k/library/turtle.html>`_
+- You may want to investigate controlling your turtle with keyboard commands. See `this section of the Python Docs Reference <https://docs.python.org/3/library/turtle.html#using-screen-events>`_ 
+- use other features of the turtle module by exploring the `Python Docs for turtle <https://docs.python.org/3/library/turtle.html>`_
 
 .. activecode:: open_ended_drawing_practice_problem
     :nocodelens:
