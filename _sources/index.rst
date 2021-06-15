@@ -232,12 +232,12 @@ Appendices
    Python/Microbit/QuickStartExamples.rst
 
 
-Labs
-::::::::::
+.. Labs
+.. ::::::::::
 
-.. toctree::
-   :maxdepth: 1
+.. .. toctree::
+..    :maxdepth: 1
 
-   Labs/pygame.rst
-   Labs/networkzero.rst
+..    Labs/pygame.rst
+..    Labs/networkzero.rst
 

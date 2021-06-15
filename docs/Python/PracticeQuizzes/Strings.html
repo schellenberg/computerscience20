@@ -232,7 +232,7 @@
 
         <div class="runestone">
         <div data-component="fillintheblank" data-question_label="1" id="strings_practice_quiz_1"  style="visibility: hidden;">
-            <p>strings-quiz1: In the following code, how many lines does this code print?:</p>
+            <p>strings-quiz1: In the following code, what does this code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -307,12 +307,12 @@
         <div data-component="fillintheblank" data-question_label="5" id="strings_practice_quiz_5"  style="visibility: hidden;">
             <p>strings-quiz5: In the following code, what does this code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Walter Murray Collegiate Institute&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
 </pre></div>
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*urra\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*urray\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*Murra\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*lter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*lter\\s+Mu\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*alter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
         </script>
 
         </div>
@@ -432,9 +432,9 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">apply_rule</span><span class="p">(</span><span class="n">character</span><span class="p">):</span>
     <span class="n">new_character</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">if</span> <span class="n">character</span> <span class="o">==</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span>
-        <span class="n">new_character</span> <span class="o">=</span> <span class="s2">&quot;X+YF+&quot;</span>
+        <span class="n">new_character</span> <span class="o">=</span> <span class="s2">&quot;XYF&quot;</span>
     <span class="k">elif</span> <span class="n">character</span> <span class="o">==</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span>
-        <span class="n">new_character</span> <span class="o">=</span> <span class="s2">&quot;-FX-Y&quot;</span>
+        <span class="n">new_character</span> <span class="o">=</span> <span class="s2">&quot;FXY&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">new_character</span> <span class="o">=</span> <span class="n">character</span>
     <span class="k">return</span> <span class="n">new_character</span>
@@ -450,7 +450,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*X+YF+Z-FX-Y\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*XYFZFXY\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
         </script>
 
         </div>
