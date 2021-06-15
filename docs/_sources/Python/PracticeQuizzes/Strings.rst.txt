@@ -162,9 +162,9 @@ Question 10
         def apply_rule(character):
             new_character = ""
             if character == "X":
-                new_character = "X+YF+"
+                new_character = "XYF"
             elif character == "Y":
-                new_character = "-FX-Y"
+                new_character = "FXY"
             else:
                 new_character = character
             return new_character
@@ -172,7 +172,7 @@ Question 10
         print(apply_rule("Y"))
 
 
-    - :-FX-Y: Great!
+    - :FXY: Great!
       :.*: Try again!
 
 
@@ -201,7 +201,7 @@ Question 11
                 new_string = new_string + apply_rule(character)
             return new_string
 
-        print(process_string("XZY"))
+            print(process_string("XZY"))
 
     - :XYFZFXY: Great!
       :.*: Try again!
