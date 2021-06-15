@@ -15,7 +15,7 @@ Question 1
 
 .. fillintheblank:: strings_practice_quiz_1
 
-    In the following code, how many lines does this code print?::
+    In the following code, what does this code print?::
 
         sentence = "python rocks"
         print(sentence[5])
