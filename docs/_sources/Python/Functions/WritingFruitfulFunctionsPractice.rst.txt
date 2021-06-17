@@ -224,6 +224,7 @@ Find the Smallest
             self.assertEqual(find_min(4, 5, 5),4,"find_min(4, 5, 5)")
             self.assertEqual(find_min(4, 4, 4),4,"find_min(4, 4, 4)")
             self.assertEqual(find_min(-2, -6, -100),-100,"find_min(-2, -6, -100)")
+            self.assertEqual(find_min(-2, -100, -6),-100,"find_min(-2, -100, -6)")
             self.assertEqual(find_min(4, -7, 5),-7,"find_min(4, -7, 5)")
             self.assertEqual(find_min(-4, 7, -5),-5,"find_min(-4, 7, -5)")
 
