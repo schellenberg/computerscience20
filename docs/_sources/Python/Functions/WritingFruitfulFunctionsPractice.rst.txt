@@ -263,6 +263,7 @@ Is Even
             self.assertEqual(is_even(-5),False,"is_even(-5)")
             self.assertEqual(is_even(0),True,"is_even(0)")
             self.assertEqual(is_even(513),False,"is_even(513)")
+            self.assertEqual(is_even(1235518),True,"is_even(1235518)")
 
     myTests().main()
 

@@ -221,7 +221,7 @@ Check Your Understanding
 
 .. fillintheblank:: scratch_repeat_until_check_2
 
-    How many iterations would the following code take to finish it's execution? In other words, how many times would the repeat until block occur?
+    How many iterations would the following code take to finish it's execution? In other words, how many times would the *repeat until* block occur?
 
     .. image:: images/scratch_repeat_until_test_yourself1.png
 
@@ -232,7 +232,7 @@ Check Your Understanding
 
 .. fillintheblank:: scratch_repeat_until_check_3
 
-    How many iterations would the following code take to finish it's execution? In other words, how many times would the repeat until block occur?
+    How many iterations would the following code take to finish it's execution? In other words, how many times would the *repeat until* block occur?
 
     .. image:: images/scratch_repeat_until_test_yourself2.png
 
