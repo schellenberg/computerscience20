@@ -122,8 +122,8 @@ Check Your Understanding
 
         sentence = "python rocks"
         for current_index in range(len(sentence)):
-          if current_index % 2 == 0:
-              print(sentence[current_index])
+            if current_index % 2 == 0:
+                print(sentence[current_index])
 
 
 .. index:: in, not in

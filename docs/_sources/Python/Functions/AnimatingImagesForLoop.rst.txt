@@ -37,9 +37,9 @@ Let's pick a few of the :ref:`microbit_predefined_images`), and have them show i
     alex = turtle.Turtle()
 
     for some_color in ["yellow", "red", "purple", "blue"]:
-       alex.color(some_color)
-       alex.forward(50)
-       alex.left(90)
+        alex.color(some_color)
+        alex.forward(50)
+        alex.left(90)
 
 
 We could have rewritten the code above to store the list in a variable, like this:
@@ -56,9 +56,9 @@ We could have rewritten the code above to store the list in a variable, like thi
     color_list = ["yellow", "red", "purple", "blue"]
 
     for some_color in color_list:
-       alex.color(some_color)
-       alex.forward(50)
-       alex.left(90)
+        alex.color(some_color)
+        alex.forward(50)
+        alex.left(90)
 
 We are going to use the same idea, but now we will create a list of images that we can display on the Micro:bit. Remember that we can display a single image by doing something like:
 
