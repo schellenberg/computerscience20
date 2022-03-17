@@ -101,7 +101,7 @@ Question 4 - Loops and If/Else
 
 .. fillintheblank:: reeborg_while_repeat_if_else
 
-    Reeborg is holding a large handful of carrots, and is planning to plant them as he walks around a world that looks like this:
+    Reeborg is holding a large handful of carrots, and is planning to plant them as it walks around a world that looks like this:
 
     .. image:: images/quiz_if_else_start.png
 
