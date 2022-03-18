@@ -43,7 +43,7 @@ Can you spot the error in the following example? How could you fix it?
 
     name = input("What is your name? ")
     if name == sarah:
-      print("Hi Sarah! Good to see you!")
+        print("Hi Sarah! Good to see you!")
 
 
 .. activecode:: wdtpd_input_output_first_assn_3

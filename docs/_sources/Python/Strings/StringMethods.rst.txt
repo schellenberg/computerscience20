@@ -51,8 +51,8 @@ The following program has two errors. Can you find and fix them?
 
     sentence = "saskatoon saskatchewan"
     for current_index in range(len(sentence)):
-      if current_index % 4 == 0:
-          print(sentence[current_index])
+        if current_index % 4 == 0:
+            print(sentence[current_index])
 
 .. activecode:: wdtpd_string_manipulation_practice_4
     :caption: What will this program print?

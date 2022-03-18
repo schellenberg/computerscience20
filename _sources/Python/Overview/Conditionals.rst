@@ -36,13 +36,13 @@ What will the following programs output? Why?
     number = number + 10
 
     if number == 10:
-      print("The number is assigned a value of 10")
+        print("The number is assigned a value of 10")
 
     if number == 20:
-      print("The number is assigned a value of 20")
+        print("The number is assigned a value of 20")
 
     if number == 30:
-      print("The number is assigned a value of 30")
+        print("The number is assigned a value of 30")
 
 
 .. activecode:: wdtpd_conditionals_2
@@ -53,9 +53,9 @@ What will the following programs output? Why?
     name = "Zoe"
 
     if age == 15:
-      print("Almost old enough to drive on your own.")
+        print("Almost old enough to drive on your own.")
     else:
-      print("Either older or younger than 15")
+        print("Either older or younger than 15")
 
 
 .. activecode:: wdtpd_conditionals_3
@@ -66,11 +66,11 @@ What will the following programs output? Why?
     name = "Zoe"
 
     if age == 15:
-      print("Almost old enough to drive on your own.")
+        print("Almost old enough to drive on your own.")
     elif name == "Zoe":
-      print("Hi Zoe! Good to see you!")
+        print("Hi Zoe! Good to see you!")
     else:
-      print("Either older or younger than 15")
+        print("Either older or younger than 15")
 
 
 .. activecode:: wdtpd_conditionals_4
@@ -81,11 +81,11 @@ What will the following programs output? Why?
     name = "Zoe"
 
     if name == "Eli":
-      print("Good to see you again!")
+        print("Good to see you again!")
     elif age == 16:
-      print("You can drive!")
+        print("You can drive!")
     else:
-      print("It's been awhile!")
+        print("It's been awhile!")
 
     print("I'm a little sleepy.")
 

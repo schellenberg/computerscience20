@@ -3,7 +3,7 @@
    :start: 1
 
 
-Logical Operators
+Logical Operators 
 ===============================
 
 .. topic:: Quick Overview of Day
