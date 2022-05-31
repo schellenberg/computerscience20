@@ -196,7 +196,6 @@ You should experiment with these methods so that you understand what they do.  N
 
 .. activecode:: string_methods_example3
 
-
     food = "banana bread"
     print(food.capitalize())
 
@@ -213,6 +212,13 @@ You should experiment with these methods so that you understand what they do.  N
     print(food.rfind("b"))
 
     print(food.index("e"))
+
+
+.. activecode:: string_methods_example4
+
+    sentence = "Hello there Computer Science 20"
+    words = sentence.split()
+    print(words)
 
 
 Check Your Understanding
