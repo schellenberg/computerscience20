@@ -72,7 +72,7 @@ What will the following programs output? Why?
         return new_value
         
     initial_value = 15
-    new_value = doubler(15)
+    new_value = doubler(initial_value)
     print(new_value)
 
 
