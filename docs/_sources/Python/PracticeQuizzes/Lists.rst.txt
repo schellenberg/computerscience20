@@ -36,7 +36,7 @@ Question 2
         stuff = [12, True, "test", 2.71, "ok", 8]
         print(stuff[1:4])
 
-    - :[True, "test", 2.71]: Great!
+    - :\[True, "test", 2.71\]: Great!
       :.*: Try again! Don't forget that when you print a subset of a list, it will be a list, so it will look something like ["stuff", "goes", "here"].
 
 
