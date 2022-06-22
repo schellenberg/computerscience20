@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2. Writing Fruitful Functions Practice &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -224,14 +202,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="writing-fruitful-functions-practice">
+  <section id="writing-fruitful-functions-practice">
 <h1><span class="section-number">2. </span>Writing Fruitful Functions Practice<a class="headerlink" href="#writing-fruitful-functions-practice" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Warmup drawing problem. WDTPD questions about functions. Students practice writing fruitful functions.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_fruitful_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_fruitful_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -240,12 +218,12 @@
 </ul>
 
     </div>
-    <div class="section" id="warmup-problem">
+    <section id="warmup-problem">
 <h2><span class="section-number">2.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-25.png" src="../../_images/confusion-25.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_confusion_practice_25 data-question_label="2.1.1">
 <div id=turtle_confusion_practice_25_question class="ac_question col-md-12">
 
@@ -253,14 +231,14 @@
 <textarea data-lang="python" id="turtle_confusion_practice_25_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="what-does-this-program-do">
+</section>
+<section id="what-does-this-program-do">
 <h2><span class="section-number">2.2. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <p>Remember that variables created inside of a function have <strong>local scope</strong> (can only be used inside that function), whereas variables created outside of a function have <strong>global scope</strong> (can be accessed from anywhere).</p>
 <div class="admonition note">
@@ -269,7 +247,7 @@ import turtle
 </div>
 <p>What will the following programs output? Why?</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_5 data-question_label="2.2.1">
 <div id=wdtpd_functions_5_question class="ac_question col-md-12">
 
@@ -277,7 +255,7 @@ import turtle
 <textarea data-lang="python" id="wdtpd_functions_5_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def foo():
     print(a)
@@ -288,7 +266,7 @@ foo()
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_6 data-question_label="2.2.2">
 <div id=wdtpd_functions_6_question class="ac_question col-md-12">
 
@@ -296,7 +274,7 @@ foo()
 <textarea data-lang="python" id="wdtpd_functions_6_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def foo():
     a = a + 1
@@ -308,7 +286,7 @@ foo()
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_7 data-question_label="2.2.3">
 <div id=wdtpd_functions_7_question class="ac_question col-md-12">
 
@@ -316,7 +294,7 @@ foo()
 <textarea data-lang="python" id="wdtpd_functions_7_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def doubler(some_number):
     new_value = some_number * 2
@@ -329,7 +307,7 @@ print(new_value)
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_8 data-question_label="2.2.4">
 <div id=wdtpd_functions_8_question class="ac_question col-md-12">
 
@@ -337,7 +315,7 @@ print(new_value)
 <textarea data-lang="python" id="wdtpd_functions_8_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def greeting(first_name, last_name):
     message = "Hello there, " + first_name + " " + last_name + "!"
@@ -350,7 +328,7 @@ print(greeting(first, last))
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_9 data-question_label="2.2.5">
 <div id=wdtpd_functions_9_question class="ac_question col-md-12">
 
@@ -358,7 +336,7 @@ print(greeting(first, last))
 <textarea data-lang="python" id="wdtpd_functions_9_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def is_big(number):
     if number > 42:
@@ -372,18 +350,18 @@ print(result)
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="practice-problems">
+</section>
+<section id="practice-problems">
 <h2><span class="section-number">2.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have</strong> to return the correct value – using <code class="docutils literal notranslate"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
-<div class="section" id="area-of-rectangle">
+<section id="area-of-rectangle">
 <h3><span class="section-number">2.3.1. </span>Area of rectangle<a class="headerlink" href="#area-of-rectangle" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=rectangle-area data-question_label="2.3.1.1">
 <div id=rectangle-area_question class="ac_question col-md-12">
 <p>The parameters <code class="docutils literal notranslate"><span class="pre">length</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code> represent the lengths of the sides of a rectangle. Calculate the area of the rectangle with the given values, and return the result.</p>
@@ -396,7 +374,7 @@ print(result)
 <textarea data-lang="python" id="rectangle-area_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def rectangle_area(length, width):
     return 0
@@ -418,11 +396,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="letter-grade">
+</section>
+<section id="letter-grade">
 <h3><span class="section-number">2.3.2. </span>Letter Grade<a class="headerlink" href="#letter-grade" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=letter-grade data-question_label="2.3.2.1">
 <div id=letter-grade_question class="ac_question col-md-12">
 <p>Write a function that returns the letter grade, given an exam mark as the parameter. The grading scheme is:</p>
@@ -464,7 +442,7 @@ myTests().main()
 <textarea data-lang="python" id="letter-grade_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def letter_grade(exam_grade):
     return "A"
@@ -488,11 +466,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="find-the-smallest">
+</section>
+<section id="find-the-smallest">
 <h3><span class="section-number">2.3.3. </span>Find the Smallest<a class="headerlink" href="#find-the-smallest" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=find-min data-question_label="2.3.3.1">
 <div id=find-min_question class="ac_question col-md-12">
 <p>The function find_min(a, b, c) will take three numbers as parameters and return the <em>smallest</em> value. If more than one number is tied for the smallest, still return that smallest number. Note that you cannot use the <code class="docutils literal notranslate"><span class="pre">min</span></code> function in this solution.</p>
@@ -505,7 +483,7 @@ myTests().main()
 <textarea data-lang="python" id="find-min_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def find_min(a, b, c):
     return a
@@ -528,11 +506,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="is-even">
+</section>
+<section id="is-even">
 <span id="is-even-fruitful-function"></span><h3><span class="section-number">2.3.4. </span>Is Even<a class="headerlink" href="#is-even" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=is-even data-question_label="2.3.4.1">
 <div id=is-even_question class="ac_question col-md-12">
 <p>The function is_even(number) will return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the number passed in is even, and <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is odd. Hint: You might want to look back at the <a class="reference internal" href="../Overview/QuickOverview.html#math-operator-list"><span class="std std-ref">Math Operators</span></a> list.</p>
@@ -545,7 +523,7 @@ myTests().main()
 <textarea data-lang="python" id="is-even_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def is_even(number):
     return False
@@ -568,11 +546,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="leap-year">
+</section>
+<section id="leap-year">
 <h3><span class="section-number">2.3.5. </span>Leap Year<a class="headerlink" href="#leap-year" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=leap-year data-question_label="2.3.5.1">
 <div id=leap-year_question class="ac_question col-md-12">
 <p>A year is a leap year if it is divisible by 4 unless it is a century that is not divisible by 400. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise. The following pseudocode determines whether a year is a leap year or a common year in the Gregorian calendar (from <a class="reference external" href="http://en.wikipedia.org/wiki/Leap_year#Algorithm">Wikipedia</a>):</p>
@@ -593,7 +571,7 @@ myTests().main()
 <textarea data-lang="python" id="leap-year_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def leap_year(year):
     return False
@@ -615,12 +593,12 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="using-your-is-even-function">
+</section>
+<section id="using-your-is-even-function">
 <h3><span class="section-number">2.3.6. </span>Using Your Is Even Function<a class="headerlink" href="#using-your-is-even-function" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that continues to take in a number from the user until the number given is NOT even. For example, the user might enter 4, 10, 42, 5. The program would only stop when the non-even number 5 is entered. You need to use the <code class="docutils literal notranslate"><span class="pre">is_even</span></code> function you defined above.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=using-is-even data-question_label="2.3.6.1">
 <div id=using-is-even_question class="ac_question col-md-12">
 
@@ -628,15 +606,15 @@ myTests().main()
 <textarea data-lang="python" id="using-is-even_editor" 
       data-timelimit=25000  data-codelens="true" data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # your code here!
 </textarea>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

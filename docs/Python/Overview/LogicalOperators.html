@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>11. Logical Operators &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -229,14 +207,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="logical-operators">
+  <section id="logical-operators">
 <h1><span class="section-number">11. </span>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Introduce the logical operators <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>. Work on practice problems, in which students create programs that utilize logical operators. Booleans practice quiz.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_logical_operators"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_logical_operators"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -245,7 +223,7 @@
 </ul>
 
     </div>
-    <div class="section" id="and-or-not">
+    <section id="and-or-not">
 <span id="index-0"></span><h2><span class="section-number">11.1. </span><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
 <p>There are three <strong>logical operators</strong>: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>. The
 semantics (meaning) of these operators is similar to their meaning in English.
@@ -257,7 +235,7 @@ that is, if the number is divisible by 2 <em>or</em> divisible by 3.  In this ca
 is true if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> is false, that is, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than or equal to
 <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=local_operators_example_1 data-question_label="11.1.1">
 <div id=local_operators_example_1_question class="ac_question col-md-12">
 
@@ -265,7 +243,7 @@ is true if <code class="docutils literal notranslate"><span class="pre">x</span>
 <textarea data-lang="python" id="local_operators_example_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 x = 5
 print(x > 0 and x < 10)
@@ -280,25 +258,25 @@ print(n % 2 == 0 or n % 3 == 0)
 <p>Common Mistake!</p>
 <p>There is a very common mistake that occurs when programmers try to write boolean expressions.  For example, what if we have a variable <code class="docutils literal notranslate"><span class="pre">number</span></code> and we want to check to see if its value is 5,6, or 7.  In words we might say: “number equal to 5 or 6 or 7”.  However, if we translate this into Python, <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">7</span></code>, it will not be correct.  The <code class="docutils literal notranslate"><span class="pre">or</span></code> operator must join the results of three equality checks.  The correct way to write this is <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">6</span> <span class="pre">or</span> <span class="pre">number</span> <span class="pre">==</span> <span class="pre">7</span></code>.  This may seem like a lot of typing but it is absolutely necessary.  You cannot take a shortcut.</p>
 </div>
-<div class="section" id="check-your-understanding">
+<section id="check-your-understanding">
 <h3><span class="section-number">11.1.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="11.1.1.1" data-multipleanswers="false"  id="test_question6_2_1"  style="visibility: hidden;">
-            <p>logical-operators2: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="11.1.1.1" data-multipleanswers="false"  id="test_question6_2_1"  style="visibility: hidden;">
+    <p>logical-operators2: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?</p>
 
-            <li data-component="answer"  id="test_question6_2_1_opt_a">x &gt; 0 and &lt; 5</li><li data-component="feedback">Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</li>
-            
-            <li data-component="answer"  id="test_question6_2_1_opt_b">x &gt; 0 or x &lt; 5</li><li data-component="feedback">Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be True.</li>
-            
-            <li data-component="answer" data-correct id="test_question6_2_1_opt_c">x &gt; 0 and x &lt; 5</li><li data-component="feedback">Yes, with an and keyword both expressions must be true so the number must be greater than 0 an less than 5 for this expression to be true. Although most other programming languages do not allow this mathematical syntax, in Python, you could also write 0 &lt; x &lt; 5.</li>
-            
+    <li data-component="answer"  id="test_question6_2_1_opt_a">x &gt; 0 and &lt; 5</li><li data-component="feedback">Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</li>
+    
+    <li data-component="answer"  id="test_question6_2_1_opt_b">x &gt; 0 or x &lt; 5</li><li data-component="feedback">Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be True.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question6_2_1_opt_c">x &gt; 0 and x &lt; 5</li><li data-component="feedback">Yes, with an and keyword both expressions must be true so the number must be greater than 0 an less than 5 for this expression to be true. Although most other programming languages do not allow this mathematical syntax, in Python, you could also write 0 &lt; x &lt; 5.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="precedence-of-operators">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="precedence-of-operators">
 <span id="index-1"></span><h2><span class="section-number">11.2. </span>Precedence of Operators<a class="headerlink" href="#precedence-of-operators" title="Permalink to this headline">¶</a></h2>
 <p>We have now added a number of additional operators to those we have learned.  It is important to understand how these operators relate to the others with respect to operator precedence.  Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal notranslate"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal notranslate"><span class="pre">and</span></code> will be done last.  Although many programmers might place parenthesis around the two relational expressions, it is not necessary.</p>
 <p>The following table summarizes the precedence discussed so far from highest to lowest.</p>
@@ -345,27 +323,27 @@ print(n % 2 == 0 or n % 3 == 0)
 </tr>
 </tbody>
 </table>
-<div class="section" id="id1">
+<section id="id1">
 <h3><span class="section-number">11.2.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="11.2.1.1" data-multipleanswers="false"  id="test_question6_3_1"  style="visibility: hidden;">
-            <p>logical-operators3: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: <code class="docutils literal notranslate"><span class="pre">5*3</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">4+6==11</span></code></p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="11.2.1.1" data-multipleanswers="false"  id="test_question6_3_1"  style="visibility: hidden;">
+    <p>logical-operators3: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: <code class="docutils literal notranslate"><span class="pre">5*3</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">4+6==11</span></code></p>
 
-            <li data-component="answer" data-correct id="test_question6_3_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
-            
-            <li data-component="answer"  id="test_question6_3_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
-            
-            <li data-component="answer"  id="test_question6_3_1_opt_c">((((5*3) &gt; 10) and 4)+6) == 11</li><li data-component="feedback">This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.</li>
-            
-            <li data-component="answer"  id="test_question6_3_1_opt_d">((5*3) &gt; (10 and (4+6))) == 11</li><li data-component="feedback">This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question6_3_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
+    
+    <li data-component="answer"  id="test_question6_3_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
+    
+    <li data-component="answer"  id="test_question6_3_1_opt_c">((((5*3) &gt; 10) and 4)+6) == 11</li><li data-component="feedback">This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.</li>
+    
+    <li data-component="answer"  id="test_question6_3_1_opt_d">((5*3) &gt; (10 and (4+6))) == 11</li><li data-component="feedback">This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.</li>
+    
 
-            </ul>
-            </div>
-            <p>Here is an animation for the above expression:</p>
+    </ul>
+    </div>
+    <p>Here is an animation for the above expression:</p>
 
-<div data-component="showeval" data-question_label="11.2.1.2" class="runestone explainer alert alert-warning" id="se_tq631" data-tracemode="true" >
+<div data-component="showeval" data-question_label="11.2.1.2" class="runestone explainer" id="se_tq631" data-tracemode="true" >
     <button class="btn btn-success" id="se_tq631_nextStep">Next Step</button>
     <button class="btn btn-default" id ="se_tq631_reset">Reset</button>
     <div class="evalCont" style="background-color: #FDFDFD;">5 * 3 > 10 and 4 + 6 == 11<br />
@@ -378,15 +356,15 @@ print(n % 2 == 0 or n % 3 == 0)
     raw_steps["se_tq631"] = ['{{5 * 3}}{{15}} > 10 and 4 + 6 == 11', '{{15 > 10}}{{True}} and 4 + 6 == 11', 'True and {{4 + 6}}{{10}} == 11', 'True and {{10 == 11}}{{False}}', '{{True and False}}{{False}}'];
     </script>
 </div>
-</div>
-</div>
-<div class="section" id="practice-problems">
+</section>
+</section>
+<section id="practice-problems">
 <h2><span class="section-number">11.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="under-100">
+<section id="under-100">
 <h3><span class="section-number">11.3.1. </span>Under 100<a class="headerlink" href="#under-100" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that takes in a number from the user, and correctly prints either “That number is between 1 to 100” or “That number is not between 1 to 100”. <em>You may only use a single if/else block to solve this problem</em>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=under-100 data-question_label="11.3.1.1">
 <div id=under-100_question class="ac_question col-md-12">
 
@@ -394,18 +372,18 @@ print(n % 2 == 0 or n % 3 == 0)
 <textarea data-lang="python" id="under-100_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # your code goes here!
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="from-saskatchewan">
+</section>
+<section id="from-saskatchewan">
 <h3><span class="section-number">11.3.2. </span>From Saskatchewan<a class="headerlink" href="#from-saskatchewan" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that asks the user which province they live in. If the province isn’t “saskatchewan”, print out “You should come visit Saskatchewan sometime!”. <em>You must use at least one logical operator in your solution</em>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=from-saskatchewan data-question_label="11.3.2.1">
 <div id=from-saskatchewan_question class="ac_question col-md-12">
 
@@ -413,18 +391,18 @@ print(n % 2 == 0 or n % 3 == 0)
 <textarea data-lang="python" id="from-saskatchewan_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # your code goes here!
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="divisible-by-3-or-5">
+</section>
+<section id="divisible-by-3-or-5">
 <h3><span class="section-number">11.3.3. </span>Divisible by 3 or 5<a class="headerlink" href="#divisible-by-3-or-5" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that asks the user to enter a number. You should print out a message to the user, either “That number is divisible by either 3 or 5”, or “That number is not divisible by either 3 or 5”. <em>Be sure to consider the data type of the input you are taking in from the user. Use a single if/else block to solve this problem.</em></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=divisible-by-3-or-5 data-question_label="11.3.3.1">
 <div id=divisible-by-3-or-5_question class="ac_question col-md-12">
 
@@ -432,21 +410,21 @@ print(n % 2 == 0 or n % 3 == 0)
 <textarea data-lang="python" id="divisible-by-3-or-5_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # your code goes here!
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="turtle-stuck-in-a-square">
+</section>
+<section id="turtle-stuck-in-a-square">
 <h3><span class="section-number">11.3.4. </span>Turtle Stuck In a Square<a class="headerlink" href="#turtle-stuck-in-a-square" title="Permalink to this headline">¶</a></h3>
 <p>You have been given some starter code for the problem below. <strong>You only need to change one line of the code, specifically the line containing the while loop.</strong> Replace the word <code class="docutils literal notranslate"><span class="pre">something</span></code> with the appropriate boolean questions that will cause the turtle to continue moving until it gets to one of the edges of the square. Each time the program is run, the turtle will pick a new random direction to move. When executed, your program should look something like this:</p>
 <img alt="../../_images/stuck_in_square.gif" src="../../_images/stuck_in_square.gif" />
 <p>Note that you can get the current x coordinate of the turtle by calling <code class="docutils literal notranslate"><span class="pre">bob.xcor()</span></code>, and the current y coordinate by calling <code class="docutils literal notranslate"><span class="pre">bob.ycor()</span></code>. Also remember that the turtle begins at the origin (0, 0), which is in the center of the screen. The vertices of the square have x and y coordinates as shown below:</p>
 <img alt="../../_images/stuck_in_square_coordinates.png" src="../../_images/stuck_in_square_coordinates.png" />
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle-stuck-in-square data-question_label="11.3.4.1">
 <div id=turtle-stuck-in-square_question class="ac_question col-md-12">
 
@@ -454,7 +432,7 @@ print(n % 2 == 0 or n % 3 == 0)
 <textarea data-lang="python" id="turtle-stuck-in-square_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 import random
@@ -488,13 +466,13 @@ while something:
 </textarea>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="booleans-practice-quiz">
+</section>
+</section>
+<section id="booleans-practice-quiz">
 <h2><span class="section-number">11.4. </span>Booleans Practice Quiz<a class="headerlink" href="#booleans-practice-quiz" title="Permalink to this headline">¶</a></h2>
 <p>To confirm that you understand the boolean variables, you should try the <a class="reference internal" href="../PracticeQuizzes/Booleans.html#booleans-practice-quiz"><span class="std std-ref">Booleans Practice Quiz</span></a> using only your brain (in other words, try to figure out what will happen <em>without</em> running the code).</p>
-</div>
-</div>
+</section>
+</section>
 
 
   

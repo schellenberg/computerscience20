@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2. Variables, Data Types, and User Input &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -226,21 +204,21 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="variables-data-types-and-user-input">
+  <section id="variables-data-types-and-user-input">
 <h1><span class="section-number">2. </span>Variables, Data Types, and User Input<a class="headerlink" href="#variables-data-types-and-user-input" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Give more details about variables. Reinforce the idea of data types. Practice some Python problems with simple input/output.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_python_variables"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_python_variables"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
+    <section id="what-does-this-program-do">
 <h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <p>Remember the we learned four primitive data types in our overview of Python. They are:</p>
 <ul class="simple">
@@ -255,7 +233,7 @@
 </div>
 <p>For the following examples, consider the data type of each variable. What will the program output? Why?</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_variable_assignment_1 data-question_label="2.1.1">
 <div id=wdtpd_variable_assignment_1_question class="ac_question col-md-12">
 
@@ -263,7 +241,7 @@
 <textarea data-lang="python" id="wdtpd_variable_assignment_1_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 x = 4
 y = 3 + x
@@ -272,7 +250,7 @@ print(x + y)
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_variable_assignment_3 data-question_label="2.1.2">
 <div id=wdtpd_variable_assignment_3_question class="ac_question col-md-12">
 
@@ -280,7 +258,7 @@ print(x + y)
 <textarea data-lang="python" id="wdtpd_variable_assignment_3_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 x = 4
 y = 3
@@ -291,7 +269,7 @@ print(x + y)
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_variable_assignment_2 data-question_label="2.1.3">
 <div id=wdtpd_variable_assignment_2_question class="ac_question col-md-12">
 
@@ -299,7 +277,7 @@ print(x + y)
 <textarea data-lang="python" id="wdtpd_variable_assignment_2_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 x = 4
 y = 3
@@ -308,8 +286,8 @@ print(y + z)
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="using-thonny">
+</section>
+<section id="using-thonny">
 <h2><span class="section-number">2.2. </span>Using Thonny<a class="headerlink" href="#using-thonny" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways to use Thonny: <em>shell mode</em> and <em>program
 mode</em>. In shell mode, you type Python expressions into the <strong>Python shell</strong>,
@@ -336,23 +314,23 @@ the following contents:</p>
 </div>
 <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.2.1" data-multipleanswers="false"  id="source_code_check"  style="visibility: hidden;">
-            <p>python-variables4: Source code is another name for:</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.2.1" data-multipleanswers="false"  id="source_code_check"  style="visibility: hidden;">
+    <p>python-variables4: Source code is another name for:</p>
 
-            <li data-component="answer" data-correct id="source_code_check_opt_a">the instructions in a program, stored in a file.</li><li data-component="feedback">The file that contains the instructions written in the high level language is called the source code file.</li>
-            
-            <li data-component="answer"  id="source_code_check_opt_b">the language that you are programming in (e.g., Python).</li><li data-component="feedback">This language is simply called the programming language, or simply the language.</li>
-            
-            <li data-component="answer"  id="source_code_check_opt_c">the environment/tool in which you are programming.</li><li data-component="feedback">The environment may be called the IDE, or integrated development environment, though not always.</li>
-            
-            <li data-component="answer"  id="source_code_check_opt_d">the number (or "code") that you must input at the top of each program to tell the computer how to execute your program.</li><li data-component="feedback">There is no such number that you must type in at the start of your program.</li>
-            
+    <li data-component="answer" data-correct='yes' id="source_code_check_opt_a">the instructions in a program, stored in a file.</li><li data-component="feedback">The file that contains the instructions written in the high level language is called the source code file.</li>
+    
+    <li data-component="answer"  id="source_code_check_opt_b">the language that you are programming in (e.g., Python).</li><li data-component="feedback">This language is simply called the programming language, or simply the language.</li>
+    
+    <li data-component="answer"  id="source_code_check_opt_c">the environment/tool in which you are programming.</li><li data-component="feedback">The environment may be called the IDE, or integrated development environment, though not always.</li>
+    
+    <li data-component="answer"  id="source_code_check_opt_d">the number (or "code") that you must input at the top of each program to tell the computer how to execute your program.</li><li data-component="feedback">There is no such number that you must type in at the start of your program.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-<div class="section" id="comments">
+    </ul>
+    </div>
+    </section>
+<section id="comments">
 <span id="index-0"></span><h2><span class="section-number">2.3. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <p>As programs get bigger and more complicated, they get more difficult to read.
 Formal languages (e.g. programming languages) are dense, and it is often difficult to look at a piece of code and figure out what it is doing, or why.
@@ -363,7 +341,7 @@ reader - it is completely ignored by the interpreter.
 In Python, the <code class="docutils literal notranslate"><span class="pre">#</span></code> token starts a comment.  The rest of the line is ignored.
 <strong>Every program you write should start with a comment header</strong>, which could look something like this:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=comment_header_example data-question_label="2.3.1">
 <div id=comment_header_example_question class="ac_question col-md-12">
 
@@ -371,7 +349,7 @@ In Python, the <code class="docutils literal notranslate"><span class="pre">#</s
 <textarea data-lang="python" id="comment_header_example_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 #---------------------------------------------------
 # First Python Program
@@ -392,23 +370,23 @@ are also ignored by the interpreter, but comments and blank lines can make your
 programs much easier for humans to parse.  Use them liberally!</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.3.2" data-multipleanswers="false"  id="comment_check"  style="visibility: hidden;">
-            <p>python-variables6: What are comments for?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.3.2" data-multipleanswers="false"  id="comment_check"  style="visibility: hidden;">
+    <p>python-variables6: What are comments for?</p>
 
-            <li data-component="answer"  id="comment_check_opt_a">To tell the computer what you mean in your program.</li><li data-component="feedback">Comments are ignored by the computer.</li>
-            
-            <li data-component="answer" data-correct id="comment_check_opt_b">For the people who are reading your code to know, in natural language, what the program is doing.</li><li data-component="feedback">The computer ignores comments.  It's for the humans that will "consume" your program.</li>
-            
-            <li data-component="answer"  id="comment_check_opt_c">Nothing, they are extraneous information that is not needed.</li><li data-component="feedback">Comments can provide much needed information for anyone reading the program.</li>
-            
-            <li data-component="answer"  id="comment_check_opt_d">Nothing in a short program.  They are only needed for really large programs.</li><li data-component="feedback">Even small programs benefit from comments.</li>
-            
+    <li data-component="answer"  id="comment_check_opt_a">To tell the computer what you mean in your program.</li><li data-component="feedback">Comments are ignored by the computer.</li>
+    
+    <li data-component="answer" data-correct='yes' id="comment_check_opt_b">For the people who are reading your code to know, in natural language, what the program is doing.</li><li data-component="feedback">The computer ignores comments.  It's for the humans that will "consume" your program.</li>
+    
+    <li data-component="answer"  id="comment_check_opt_c">Nothing, they are extraneous information that is not needed.</li><li data-component="feedback">Comments can provide much needed information for anyone reading the program.</li>
+    
+    <li data-component="answer"  id="comment_check_opt_d">Nothing in a short program.  They are only needed for really large programs.</li><li data-component="feedback">Even small programs benefit from comments.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-<div class="section" id="variables">
+    </ul>
+    </div>
+    </section>
+<section id="variables">
 <span id="index-1"></span><h2><span class="section-number">2.4. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <p>One of the most powerful features of a programming language is the ability to
 manipulate <strong>variables</strong>. A variable is a name that refers to a value.</p>
@@ -444,7 +422,7 @@ This diagram shows the result of executing the assignment statements shown above
 that is currently linked to the variable.  In other words, evaluating a variable will give you the value that is referred to
 by the variable.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=variables_example_1 data-question_label="2.4.1">
 <div id=variables_example_1_question class="ac_question col-md-12">
 
@@ -452,7 +430,7 @@ by the variable.</p>
 <textarea data-lang="python" id="variables_example_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 message = "What's up, Doc?"
 n = 17
@@ -467,7 +445,7 @@ print(pi)
 <p>In each case the result is the value of the variable.</p>
 <p>Variables also have types; again, we can ask the interpreter what they are.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=variables_example_2 data-question_label="2.4.2">
 <div id=variables_example_2_question class="ac_question col-md-12">
 
@@ -475,7 +453,7 @@ print(pi)
 <textarea data-lang="python" id="variables_example_2_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 message = "What's up, Doc?"
 n = 17
@@ -502,15 +480,15 @@ calculations!</p>
 You’ll notice we change the value of <code class="docutils literal notranslate"><span class="pre">day</span></code> three times, and on the third
 assignment we even give it a value that is of a different type.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.4.3">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="2.4.3">
         <div class="pytutorVisualizer" id="variables_example_3"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.4.3 (variables_example_3)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var variables_example_3_vis;
 
 if (allTraceData === undefined) {
@@ -522,9 +500,9 @@ allTraceData["variables_example_3"] = {"code": "day = \"Thursday\"\nprint(day)\n
 </div>
 <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.4.4" data-multipleanswers="false"  id="variables_check_1"  style="visibility: hidden;">
-            <p>python-variables10: What is printed when the following statements execute?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.4.4" data-multipleanswers="false"  id="variables_check_1"  style="visibility: hidden;">
+    <p>python-variables10: What is printed when the following statements execute?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="s2">&quot;Thursday&quot;</span>
 <span class="n">day</span> <span class="o">=</span> <span class="mf">32.5</span>
 <span class="n">day</span> <span class="o">=</span> <span class="mi">19</span>
@@ -532,19 +510,19 @@ allTraceData["variables_example_3"] = {"code": "day = \"Thursday\"\nprint(day)\n
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="variables_check_1_opt_a">Nothing is printed. A runtime error occurs.</li><li data-component="feedback">It is legal to change the type of data that a variable holds in Python.</li>
-            
-            <li data-component="answer"  id="variables_check_1_opt_b">Thursday</li><li data-component="feedback">This is the first value assigned to the variable day, but the next statements reassign that variable to new values.</li>
-            
-            <li data-component="answer"  id="variables_check_1_opt_c">32.5</li><li data-component="feedback">This is the second value assigned to the variable day, but the next statement reassigns that variable to a new value.</li>
-            
-            <li data-component="answer" data-correct id="variables_check_1_opt_d">19</li><li data-component="feedback">The variable day will contain the last value assigned to it when it is printed.</li>
-            
+    <li data-component="answer"  id="variables_check_1_opt_a">Nothing is printed. A runtime error occurs.</li><li data-component="feedback">It is legal to change the type of data that a variable holds in Python.</li>
+    
+    <li data-component="answer"  id="variables_check_1_opt_b">Thursday</li><li data-component="feedback">This is the first value assigned to the variable day, but the next statements reassign that variable to new values.</li>
+    
+    <li data-component="answer"  id="variables_check_1_opt_c">32.5</li><li data-component="feedback">This is the second value assigned to the variable day, but the next statement reassigns that variable to a new value.</li>
+    
+    <li data-component="answer" data-correct='yes' id="variables_check_1_opt_d">19</li><li data-component="feedback">The variable day will contain the last value assigned to it when it is printed.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-<div class="section" id="variable-names-and-keywords">
+    </ul>
+    </div>
+    </section>
+<section id="variable-names-and-keywords">
 <span id="index-2"></span><h2><span class="section-number">2.5. </span>Variable Names and Keywords<a class="headerlink" href="#variable-names-and-keywords" title="Permalink to this headline">¶</a></h2>
 <p><strong>Variable names</strong> can be arbitrarily long. They can contain both letters and
 digits, but they have to begin with a letter or an underscore. You should use long, descriptive variable names. For example, if you were creating a program to calculate how much gas a car uses, a good variable name might be <code class="docutils literal notranslate"><span class="pre">litres_per_100_kms</span></code>. A bad variable name in that case would be <code class="docutils literal notranslate"><span class="pre">l</span></code>. Using a single letter as the variable name usually makes your program harder to understand for other people. Although that can be a bit annoying to type out a long variable name the first time, once you have typed it once in Thonny, you should be able to simply type the first few letters of the variable name, then press <strong>Ctrl-Space</strong> to have the rest of the variable name auto-complete for you. <em>If that doesn’t work for you, check Thonny’s preferences.</em></p>
@@ -636,12 +614,12 @@ of your variable names and you don’t know why, see if it is on this list.</p>
 <p><strong>Programmers generally choose names for their variables that are meaningful to
 the human readers of the program — they help the programmer document, or
 remember, what the variable is used for.</strong></p>
-</div>
-<div class="section" id="user-input">
+</section>
+<section id="user-input">
 <h2><span class="section-number">2.6. </span>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
 <p>If you want the user to type something, you can use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function. <code class="docutils literal notranslate"><span class="pre">input()</span></code> will <strong>always return a string</strong>. You will need to convert it to an int or a float if you are expecting a number.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=input_demo_1 data-question_label="2.6.1">
 <div id=input_demo_1_question class="ac_question col-md-12">
 
@@ -649,7 +627,7 @@ remember, what the variable is used for.</strong></p>
 <textarea data-lang="python" id="input_demo_1_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 your_school = input("What school do you attend?")
 print(your_school)
@@ -658,7 +636,7 @@ print(your_school)
 </div>
 <p>The following example is not going to work when you try to run it. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=input_demo_2 data-question_label="2.6.2">
 <div id=input_demo_2_question class="ac_question col-md-12">
 
@@ -666,7 +644,7 @@ print(your_school)
 <textarea data-lang="python" id="input_demo_2_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 current_year = input("What is the current year?")
 grad_year = input("What year will you graduate from high school?")
@@ -679,7 +657,7 @@ print("You will graduate in", year_difference, "years.")
 </div>
 <p><strong>Do not look</strong> at this sample solution unless you have spent time attempting to create your own solution!</p>
 
-    <div data-component="reveal" id="reveal_solution_input_demo_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="reveal_solution_input_demo_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
     <p>This is one possible solution:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">current_year</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the current year?&quot;</span><span class="p">)</span>
 <span class="n">grad_year</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What year will you graduate from high school?&quot;</span><span class="p">)</span>
@@ -695,19 +673,19 @@ print("You will graduate in", year_difference, "years.")
 </div>
 
     </div>
-    </div>
-<div class="section" id="practice-problems">
+    </section>
+<section id="practice-problems">
 <h2><span class="section-number">2.7. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. Be sure that you know how to do the question with paper/pencil before you attempt to write a solution in Python! You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Remember that every time you take <code class="docutils literal notranslate"><span class="pre">input()</span></code> from the user, the data type of that input will be a string! You might want to look back at <a class="reference internal" href="QuickOverview.html#type-casting-functions"><span class="std std-ref">Converting Between Data Types</span></a>.</p>
 </div>
-<div class="section" id="area-of-a-circle">
+<section id="area-of-a-circle">
 <h3><span class="section-number">2.7.1. </span>Area of a Circle<a class="headerlink" href="#area-of-a-circle" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the area of a circle.  Prompt the user to enter the radius and print a nice message back to the user with the answer.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_variables_data_types_1 data-question_label="2.7.1.1">
 <div id=practice_problem_variables_data_types_1_question class="ac_question col-md-12">
 
@@ -715,7 +693,7 @@ print("You will graduate in", year_difference, "years.")
 <textarea data-lang="python" id="practice_problem_variables_data_types_1_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Area of a Circle Calculator
 # Put Your Name Here
@@ -727,7 +705,7 @@ print("You will graduate in", year_difference, "years.")
 </div>
 <p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
 
-    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="reveal_solution_practice_problem_variables_data_types_1"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
     <p>This is one possible solution:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Area of a Circle Calculator</span>
 <span class="c1"># Dan Schellenberg</span>
@@ -745,12 +723,12 @@ print("You will graduate in", year_difference, "years.")
 </div>
 
     </div>
-    </div>
-<div class="section" id="area-of-a-rectangle">
+    </section>
+<section id="area-of-a-rectangle">
 <h3><span class="section-number">2.7.2. </span>Area of a Rectangle<a class="headerlink" href="#area-of-a-rectangle" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle. Print a nice message with the answer.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_variables_data_types_2 data-question_label="2.7.2.1">
 <div id=practice_problem_variables_data_types_2_question class="ac_question col-md-12">
 
@@ -758,7 +736,7 @@ print("You will graduate in", year_difference, "years.")
 <textarea data-lang="python" id="practice_problem_variables_data_types_2_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Area of a Rectangle Calculator
 # Put Your Name Here
@@ -770,7 +748,7 @@ print("You will graduate in", year_difference, "years.")
 </div>
 <p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
 
-    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="reveal_solution_practice_problem_variables_data_types_2"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
     <p>This is one possible solution:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Area of a Rectangle Calculator</span>
 <span class="c1"># Dan Schellenberg</span>
@@ -789,12 +767,12 @@ print("You will graduate in", year_difference, "years.")
 </div>
 
     </div>
-    </div>
-<div class="section" id="car-gas-usage">
+    </section>
+<section id="car-gas-usage">
 <h3><span class="section-number">2.7.3. </span>Car Gas Usage<a class="headerlink" href="#car-gas-usage" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that will compute the Litres per Kilometers (l/100km) that a car uses. Prompt the user to enter the number of kilometers driven, and the number of litres used. Print a nice message with the answer in liters/100kms. <em>Note: If you aren’t sure how to calculate L/100km, you should try to calculate it by hand before writing a program. To help you check your work, if you drove 500km, and used 35L of gas, you should calculate using 7 L/100km</em>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_variables_data_types_3 data-question_label="2.7.3.1">
 <div id=practice_problem_variables_data_types_3_question class="ac_question col-md-12">
 
@@ -802,7 +780,7 @@ print("You will graduate in", year_difference, "years.")
 <textarea data-lang="python" id="practice_problem_variables_data_types_3_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Gas Mileage Calculator
 # Put Your Name Here
@@ -814,7 +792,7 @@ print("You will graduate in", year_difference, "years.")
 </div>
 <p><strong>Do not look</strong> at this sample solution unless you have already finished creating your own solution!</p>
 
-    <div data-component="reveal" id="reveal_solution_practice_problem_variables_data_types_3"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="reveal_solution_practice_problem_variables_data_types_3"   data-showtitle="Reveal Solution" data-hidetitle="Hide Solution"  style="visibility: hidden;">
     <p>This is one possible solution:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gas Mileage Calculator</span>
 <span class="c1"># Dan Schellenberg</span>
@@ -834,17 +812,17 @@ print("You will graduate in", year_difference, "years.")
 </div>
 
     </div>
-    </div>
-<div class="section" id="if-you-finish-early">
+    </section>
+<section id="if-you-finish-early">
 <h3><span class="section-number">2.7.4. </span>If You Finish Early<a class="headerlink" href="#if-you-finish-early" title="Permalink to this headline">¶</a></h3>
 <p>If you completed all the questions above before the end of class, you might want to try one of the following extra challenges:</p>
 <ul class="simple">
 <li><p>making a calculator for a more complicated math problem.</p></li>
 <li><p>you look at the clock and it is exactly 2pm. You set an alarm to go off in 51 hours. At what time does the alarm go off? Write a Python program to solve the general version of this problem. Ask the user for the time now (in hours), and ask for the number of hours to wait. Your program should output what the time will be on the clock when the alarm goes off. Note: You might want to look back at <a class="reference internal" href="QuickOverview.html#math-operator-list"><span class="std std-ref">Math Operators</span></a>.</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>11. Making Your Own Blocks (Functions) &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -216,14 +194,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="making-your-own-blocks-functions">
+  <section id="making-your-own-blocks-functions">
 <h1><span class="section-number">11. </span>Making Your Own Blocks (Functions)<a class="headerlink" href="#making-your-own-blocks-functions" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Define your own blocks in Scratch. Create a block that says a random greeting (no argument required), then create a block that draws a polygon with a certain number of sides (argument required).</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_scratch_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_scratch_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -234,14 +212,14 @@
     </div>
     <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=mXH0WTfA5eo">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
 
-    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
         <div id="mXH0WTfA5eo" data-component="youtube" class="align-left youtube-video"
             data-video-height="315" data-question_label="11.1"
             data-video-width="560" data-video-videoid="mXH0WTfA5eo"
             data-video-divid="mXH0WTfA5eo" data-video-start="0"
             data-video-end="-1" ></div>
     </div>
-    <div class="section" id="say-greeting-block">
+    <section id="say-greeting-block">
 <span id="index-0"></span><h2><span class="section-number">11.1. </span>Say Greeting Block<a class="headerlink" href="#say-greeting-block" title="Permalink to this headline">¶</a></h2>
 <p>At this point in our exploration of Scratch, we have learned how to use a large number of different blocks. What do we do, however, when we would like to have some functionality that isn’t built into Scratch? As it turns out, we can create our own blocks, and use them just like the built in blocks! This is an incredibly powerful idea in Computer Science, and in most languages is called creating your own functions (we will explore how to do this in another language soon!).</p>
 <p>Perhaps we would like to have a block that would say a greeting, choosing one at random from a number of different languages. For this example, we will have our block choose from one of the following greetings:</p>
@@ -300,8 +278,8 @@
 <img alt="../_images/scratch_greeting_multiple_languages.png" src="../_images/scratch_greeting_multiple_languages.png" />
 <p>Once this new block has been defined, we can call it like any other built-in block. To do this, simply drag the block in from the More Blocks tab. We can now have our sprite say hello in a random language when many different events occur, without having to duplicate our code over and over.</p>
 <img alt="../_images/scratch_calling_new_block.png" src="../_images/scratch_calling_new_block.png" />
-</div>
-<div class="section" id="draw-polygon-block">
+</section>
+<section id="draw-polygon-block">
 <h2><span class="section-number">11.2. </span>Draw Polygon Block<a class="headerlink" href="#draw-polygon-block" title="Permalink to this headline">¶</a></h2>
 <p>If you inspect the built-in blocks available to us in Scratch, you will notice that there are two different types of blocks.</p>
 <img alt="../_images/scratch_arguments_on_blocks.png" src="../_images/scratch_arguments_on_blocks.png" />
@@ -316,16 +294,16 @@
 <img alt="../_images/scratch_adding_parameters_to_block.gif" src="../_images/scratch_adding_parameters_to_block.gif" />
 <p>Now that we have set up our drawing polygon block, you can use it like any other scratch block. For example, if you wanted to have a pentagon drawn when the user presses the space key, you would simply choose a 5 sided polygon, and pick a side length for the drawing.</p>
 <img alt="../_images/scrach_using_polygon_block.png" src="../_images/scrach_using_polygon_block.png" />
-</div>
-<div class="section" id="practice-problem">
+</section>
+<section id="practice-problem">
 <h2><span class="section-number">11.3. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Work on your current Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your teacher did not assign you a project, you should explore the Scratch website to discover what types of projects are possible. Now try to create the most impressive project you can, making sure you demonstrate your understanding of the main topics shown so far (broadcasts, repetition, if/else, and variables).</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
   

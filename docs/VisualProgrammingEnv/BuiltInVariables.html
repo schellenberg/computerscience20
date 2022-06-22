@@ -3,61 +3,39 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>9. Built-In Variables (Tempo, Answer and Timer) &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -93,7 +71,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -222,14 +200,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="built-in-variables-tempo-answer-and-timer">
+  <section id="built-in-variables-tempo-answer-and-timer">
 <h1><span class="section-number">9. </span>Built-In Variables (Tempo, Answer and Timer)<a class="headerlink" href="#built-in-variables-tempo-answer-and-timer" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore some of the built-in variables available in Scratch, including <strong>tempo</strong>, <strong>answer</strong> and <strong>timer</strong>. Introduce the <strong>join</strong> operator to concatenate strings, and the <strong>abs</strong> operator to calculate the absolute value of a number.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_scratch_variables"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_scratch_variables"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -239,22 +217,22 @@
     </div>
     <p>If you’d prefer to watch a video, <a class="reference external" href="https://www.youtube.com/watch?v=bguswVWu2kY">the following video</a> demonstrates the same ideas I’ve described in text below.</p>
 
-    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
         <div id="bguswVWu2kY" data-component="youtube" class="align-left youtube-video"
             data-video-height="315" data-question_label="9.1"
             data-video-width="560" data-video-videoid="bguswVWu2kY"
             data-video-divid="bguswVWu2kY" data-video-start="0"
             data-video-end="-1" ></div>
     </div>
-    <div class="section" id="identifying-built-in-variables">
+    <section id="identifying-built-in-variables">
 <h2><span class="section-number">9.1. </span>Identifying Built-In Variables<a class="headerlink" href="#identifying-built-in-variables" title="Permalink to this headline">¶</a></h2>
 <p>We have been using variables to keep track of values that change throughout our program. When we built the dodging game, we created a variable for both the basketball speed and the watermelon speed, since both sprites changed speed throughout the duration of the game. Creating our own variables is incredibly powerful, but for certain things, Scratch provides us built-in variables that we can use. When we create a variable, we can use it by dragging in a block from the Data tab that looks like this:</p>
 <img alt="../_images/scratch_variable_block.png" src="../_images/scratch_variable_block.png" />
 <p>If we look through the tabs of blocks, we can find many other blocks that look similar to this. For example, in the Motion tab, we find three built-in variables:</p>
 <img alt="../_images/scratch_motion_variables.png" src="../_images/scratch_motion_variables.png" />
 <p>Throughout this section, we will explore some of the built-in variables available in Scratch.</p>
-</div>
-<div class="section" id="tempo">
+</section>
+<section id="tempo">
 <h2><span class="section-number">9.2. </span>Tempo<a class="headerlink" href="#tempo" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -266,10 +244,10 @@
 <p>One of the built-in variables that Scratch allows us to use is a tempo variable. You can find it in the Music tab. To display the temp on the stage, you can click on the check box beside the variable name in the Music tab. We can either set the tempo to a specific number of bpm (beats per minute), or change the tempo by some amount. Consider the code below:</p>
 <img alt="../_images/scratch_tempo_variable.png" src="../_images/scratch_tempo_variable.png" />
 <p>Before running this code yourself, try to figure out what the value of tempo will be after the code is executed. You can see that the tempo will be reset to 60 bpm at the start of the code, then we change the tempo within the nested loop by 20 bpm. How many times will the “change tempo by 20 block” be called? Since there is a repeat 3 block inside a repeat 2 block, the “change tempo” block will be called 6 times. We can therefore determine that the value of tempo after the code has executed will be 180 bpm (since we need to add 20 bpm 6 times).</p>
-<div class="section" id="check-your-understanding">
+<section id="check-your-understanding">
 <h3><span class="section-number">9.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-        <div class="runestone">
+        <div class="runestone ">
         <div data-component="fillintheblank" data-question_label="9.2.1.1" id="scratch_tempo_check"  style="visibility: hidden;">
             <p>scratch-variables2: What would the value of tempo if we were to move the “change tempo by 20” block as shown?</p>
 <img alt="../_images/scratch_tempo_variable_2.png" src="../_images/scratch_tempo_variable_2.png" />
@@ -280,9 +258,9 @@
 
         </div>
         </div>
-            </div>
-</div>
-<div class="section" id="answer">
+            </section>
+</section>
+<section id="answer">
 <h2><span class="section-number">9.3. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h2>
 <p>If we want to get information from the user, Scratch gives us a useful “ask and wait” block that you can find in the Sensing tab. We can react to the user input by checking if they entered a certain value. For example, in the script below, we say <em>Hello</em> if the user enters the name Dan, and <em>Go away!</em> otherwise.</p>
 <img alt="../_images/scratch_ask_block_1.png" src="../_images/scratch_ask_block_1.png" />
@@ -290,8 +268,8 @@
 <img alt="../_images/scratch_ask_block_2.png" src="../_images/scratch_ask_block_2.png" />
 <p>If we would like to allow more than one name to trigger the Hello message, we can use the “or block” found in the Operators tab. This allows us to check for more than one condition. The script below will say hello to either Dan or Zoe, but will say go away to anyone else.</p>
 <img alt="../_images/scratch_ask_block_3.png" src="../_images/scratch_ask_block_3.png" />
-</div>
-<div class="section" id="timer">
+</section>
+<section id="timer">
 <h2><span class="section-number">9.4. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline">¶</a></h2>
 <p>Let’s create a simple game, in which the user has to try to press a key after a certain number of seconds. If the user is close, congratulate them. If they are not close, tell them to try again.</p>
 <p>Since we don’t want the wait time to always be the same, we need to create a variable that we can use instead of a specific number. After creating the variable, have the computer pick a random number to use for the wait time, and tell the user how long they need to wait.</p>
@@ -316,16 +294,16 @@
 <p class="admonition-title">Note</p>
 <p>An nice extension to this game is to have the game tell the user how far away they were from the expected wait time. If you do this in a separate say block <em>after</em> the initial “Nice” or “Not quite” blocks, you may need to create another variable to keep track of when the key was actually pressed.</p>
 </div>
-</div>
-<div class="section" id="practice-problem">
+</section>
+<section id="practice-problem">
 <h2><span class="section-number">9.5. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Work on your current Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your teacher did not assign you a project, you should explore the Scratch website to discover what types of projects are possible. Now try to create the most impressive project you can, making sure you demonstrate your understanding of the main topics shown so far (broadcasts, repetition, if/else, and variables).</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
   

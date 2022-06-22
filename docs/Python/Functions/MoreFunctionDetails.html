@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1. Fruitful Functions and Variable Scope &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -228,14 +206,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="fruitful-functions-and-variable-scope">
+  <section id="fruitful-functions-and-variable-scope">
 <h1><span class="section-number">1. </span>Fruitful Functions and Variable Scope<a class="headerlink" href="#fruitful-functions-and-variable-scope" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). Discuss local and global scope. Work on practice problems, in which students create functions that return values.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_variable_scope"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_variable_scope"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -244,12 +222,12 @@
 </ul>
 
     </div>
-    <div class="section" id="warmup-problem">
+    <section id="warmup-problem">
 <h2><span class="section-number">1.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-16.png" src="../../_images/confusion-16.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_confusion_practice_16 data-question_label="1.1.1">
 <div id=turtle_confusion_practice_16_question class="ac_question col-md-12">
 
@@ -257,18 +235,18 @@
 <textarea data-lang="python" id="turtle_confusion_practice_16_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="functions-that-return-values">
+</section>
+<section id="functions-that-return-values">
 <h2><span class="section-number">1.2. </span>Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h2>
 <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number (defined as the distance of a number from zero on a number line), you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_1 data-question_label="1.2.1">
 <div id=more_function_details_1_question class="ac_question col-md-12">
 
@@ -276,7 +254,7 @@ import turtle
 <textarea data-lang="python" id="more_function_details_1_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print(abs(5))
 
@@ -291,7 +269,7 @@ print(abs(-5))
 </div>
 <p>Some functions take more than one argument. For example the math module contains a function called <code class="docutils literal notranslate"><span class="pre">pow</span></code> which takes two arguments, the base and the exponent.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_2 data-question_label="1.2.2">
 <div id=more_function_details_2_question class="ac_question col-md-12">
 
@@ -299,7 +277,7 @@ print(abs(-5))
 <textarea data-lang="python" id="more_function_details_2_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import math
 print(math.pow(2, 3))
@@ -314,7 +292,7 @@ print(math.pow(7, 2))
 </div>
 <p>Another built-in function that takes more than one argument is <code class="docutils literal notranslate"><span class="pre">max</span></code>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_3 data-question_label="1.2.3">
 <div id=more_function_details_3_question class="ac_question col-md-12">
 
@@ -322,7 +300,7 @@ print(math.pow(7, 2))
 <textarea data-lang="python" id="more_function_details_3_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print(max(7, 11))
 print(max(4, 1, 17, 2, 12))
@@ -347,7 +325,7 @@ as a parameter and return the result of squaring that number.  Here is the
 black-box diagram with the Python code following.</p>
 <img alt="../../_images/squarefun.png" id="index-2" src="../../_images/squarefun.png" />
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_4 data-question_label="1.2.4">
 <div id=more_function_details_4_question class="ac_question col-md-12">
 
@@ -355,7 +333,7 @@ black-box diagram with the Python code following.</p>
 <textarea data-lang="python" id="more_function_details_4_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def square(original_number):
     squared_value = original_number * original_number
@@ -388,15 +366,15 @@ we will see later where it makes sense to have a return statement even when othe
 follow, and the further statements are <em>not</em> executed.</p>
 </div>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.2.5">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.2.5">
         <div class="pytutorVisualizer" id="more_function_details_codelens_square"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.2.5 (more_function_details_codelens_square)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var more_function_details_codelens_square_vis;
 
 if (allTraceData === undefined) {
@@ -426,15 +404,15 @@ programmers.  As you step through this example, pay very close attention to the 
 value in the local variables listing.  Then look at what is printed when the
 function returns.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.2.6">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.2.6">
         <div class="pytutorVisualizer" id="more_function_details_codelens_square_bad"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.2.6 (more_function_details_codelens_square_bad)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var more_function_details_codelens_square_bad_vis;
 
 if (allTraceData === undefined) {
@@ -447,65 +425,65 @@ allTraceData["more_function_details_codelens_square_bad"] = {"code": "def square
 <p>The problem with this function is that even though it prints the value of the square, that value will not be returned to the place
 where the call was made.  Since line 6 uses the return value as the right hand side of an assignment statement, the evaluation of the
 function will be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  In this case, <code class="docutils literal notranslate"><span class="pre">result</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
-<div class="section" id="check-your-understanding">
+<section id="check-your-understanding">
 <h3><span class="section-number">1.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.2.1.1" data-multipleanswers="false"  id="test_question5_2_1"  style="visibility: hidden;">
-            <p>variable-scope8: What is wrong with the following function definition:</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.2.1.1" data-multipleanswers="false"  id="test_question5_2_1"  style="visibility: hidden;">
+    <p>variable-scope8: What is wrong with the following function definition:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;the answer is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question5_2_1_opt_a">You should never use a print statement in a function definition.</li><li data-component="feedback">Although you should not mistake print for return, you may include print statements inside your functions.</li>
-            
-            <li data-component="answer" data-correct id="test_question5_2_1_opt_b">You should not have any statements in a function after the return statement.  Once the function gets to the return statement it will immediately stop executing the function.</li><li data-component="feedback">This is a very common mistake so be sure to watch out for it when you write your code!</li>
-            
-            <li data-component="answer"  id="test_question5_2_1_opt_c">You must calculate the value of x+y+z before you return it.</li><li data-component="feedback">Python will automatically calculate the value x+y+z and then return it in the statement as it is written</li>
-            
-            <li data-component="answer"  id="test_question5_2_1_opt_d">A function cannot return a number.</li><li data-component="feedback">Functions can return any legal data, including (but not limited to) numbers, strings, turtles, etc.</li>
-            
+    <li data-component="answer"  id="test_question5_2_1_opt_a">You should never use a print statement in a function definition.</li><li data-component="feedback">Although you should not mistake print for return, you may include print statements inside your functions.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question5_2_1_opt_b">You should not have any statements in a function after the return statement.  Once the function gets to the return statement it will immediately stop executing the function.</li><li data-component="feedback">This is a very common mistake so be sure to watch out for it when you write your code!</li>
+    
+    <li data-component="answer"  id="test_question5_2_1_opt_c">You must calculate the value of x+y+z before you return it.</li><li data-component="feedback">Python will automatically calculate the value x+y+z and then return it in the statement as it is written</li>
+    
+    <li data-component="answer"  id="test_question5_2_1_opt_d">A function cannot return a number.</li><li data-component="feedback">Functions can return any legal data, including (but not limited to) numbers, strings, turtles, etc.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.2.1.2" data-multipleanswers="false"  id="test_question5_2_2"  style="visibility: hidden;">
-            <p>variable-scope9: What will the following function return?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.2.1.2" data-multipleanswers="false"  id="test_question5_2_2"  style="visibility: hidden;">
+    <p>variable-scope9: What will the following function return?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question5_2_2_opt_a">None</li><li data-component="feedback">We have accidentally used print where we mean return.  Therefore, the function will return the value None by default.  This is a VERY COMMON mistake so watch out!  This mistake is also particularly difficult to find because when you run the function the output looks the same.  It is not until you try to assign its value to a variable that you can notice a difference.</li>
-            
-            <li data-component="answer"  id="test_question5_2_2_opt_b">The value of x + y + z</li><li data-component="feedback">Careful!  This is a very common mistake.  Here we have printed the value x+y+z but we have not returned it.  To return a value we MUST use the return keyword.</li>
-            
-            <li data-component="answer"  id="test_question5_2_2_opt_c">The string 'x + y + z'</li><li data-component="feedback">x+y+z calculates a number (assuming x+y+z are numbers) which represents the sum of the values x, y and z.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question5_2_2_opt_a">None</li><li data-component="feedback">We have accidentally used print where we mean return.  Therefore, the function will return the value None by default.  This is a VERY COMMON mistake so watch out!  This mistake is also particularly difficult to find because when you run the function the output looks the same.  It is not until you try to assign its value to a variable that you can notice a difference.</li>
+    
+    <li data-component="answer"  id="test_question5_2_2_opt_b">The value of x + y + z</li><li data-component="feedback">Careful!  This is a very common mistake.  Here we have printed the value x+y+z but we have not returned it.  To return a value we MUST use the return keyword.</li>
+    
+    <li data-component="answer"  id="test_question5_2_2_opt_c">The string 'x + y + z'</li><li data-component="feedback">x+y+z calculates a number (assuming x+y+z are numbers) which represents the sum of the values x, y and z.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="variables-and-parameters-are-local">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="variables-and-parameters-are-local">
 <span id="index-3"></span><h2><span class="section-number">1.3. </span>Variables and Parameters are Local<a class="headerlink" href="#variables-and-parameters-are-local" title="Permalink to this headline">¶</a></h2>
 <p>An assignment statement in a function creates a <strong>local variable</strong> for the
 variable on the left hand side of the assignment operator. It is called local because this variable only
 exists inside the function and you cannot use it outside. For example,
 consider again the <code class="docutils literal notranslate"><span class="pre">square</span></code> function:</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.3.1">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.3.1">
         <div class="pytutorVisualizer" id="bad_local"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.3.1 (bad_local)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var bad_local_vis;
 
 if (allTraceData === undefined) {
@@ -538,7 +516,7 @@ to the caller.</p>
 <strong>bad form</strong> by nearly all programmers and should be avoided.  Look at the following,
 nonsensical variation of the square function.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=badsquare_1 data-question_label="1.3.2">
 <div id=badsquare_1_question class="ac_question col-md-12">
 
@@ -546,7 +524,7 @@ nonsensical variation of the square function.</p>
 <textarea data-lang="python" id="badsquare_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def bad_square(original_number):
     squared_value = original_number ** power
@@ -574,15 +552,15 @@ The appropriate way to write this function would be to pass power as a parameter
 change variables defined outside the function, without further (discouraged) special syntax.  Consider the following
 codelens example:</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.3.3">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.3.3">
         <div class="pytutorVisualizer" id="codelens_powerof_bad"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.3.3 (codelens_powerof_bad)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var codelens_powerof_bad_vis;
 
 if (allTraceData === undefined) {
@@ -615,15 +593,15 @@ formal parameter will cause a change to the value of the variable that was
 used as the actual parameter, especially when the two share the same name.
 But this example demonstrates that that is clearly not how Python operates.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.3.4">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.3.4">
         <div class="pytutorVisualizer" id="codelens_change_parm"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.3.4 (codelens_change_parm)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var codelens_change_parm_vis;
 
 if (allTraceData === undefined) {
@@ -633,63 +611,63 @@ if (allTraceData === undefined) {
 allTraceData["codelens_change_parm"] = {"code": "def square(original_number):\n    squared_value = original_number * original_number\n\n    # assign a new value to the parameter original_number\n    original_number = 0\n\n    return squared_value\n\noriginal_number = 2\nresult = square(original_number)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2}, "ordered_varnames": ["original_number"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 2, "squared_value": 4}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 0, "squared_value": 4}, "ordered_varnames": ["original_number", "squared_value"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "original_number": 2}, "ordered_globals": ["square", "original_number"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_number": 0, "squared_value": 4, "__return__": 4}, "ordered_varnames": ["original_number", "squared_value", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2, "result": 4}, "ordered_globals": ["square", "original_number", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "original_number": 2, "result": 4}, "ordered_globals": ["square", "original_number", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(original_number)", null]}, "stdout": "4\n"}]};
 </script>
 </div>
-<div class="section" id="id1">
+<section id="id1">
 <h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question5_3_1"  style="visibility: hidden;">
-            <p>variable-scope14: What is a variable’s scope?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question5_3_1"  style="visibility: hidden;">
+    <p>variable-scope14: What is a variable’s scope?</p>
 
-            <li data-component="answer"  id="test_question5_3_1_opt_a">Its value</li><li data-component="feedback">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
-            
-            <li data-component="answer" data-correct id="test_question5_3_1_opt_b">The area in the code where a variable can be accessed.</li><li data-component="feedback"></li>
-            
-            <li data-component="answer"  id="test_question5_3_1_opt_c">Its name</li><li data-component="feedback">The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.</li>
-            
+    <li data-component="answer"  id="test_question5_3_1_opt_a">Its value</li><li data-component="feedback">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question5_3_1_opt_b">The area in the code where a variable can be accessed.</li><li data-component="feedback"></li>
+    
+    <li data-component="answer"  id="test_question5_3_1_opt_c">Its name</li><li data-component="feedback">The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.3.1.2" data-multipleanswers="false"  id="test_question5_3_2"  style="visibility: hidden;">
-            <p>variable-scope15: What is a local variable?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.3.1.2" data-multipleanswers="false"  id="test_question5_3_2"  style="visibility: hidden;">
+    <p>variable-scope15: What is a local variable?</p>
 
-            <li data-component="answer" data-correct id="test_question5_3_2_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
-            
-            <li data-component="answer"  id="test_question5_3_2_opt_b">The same as a parameter</li><li data-component="feedback">While parameters may be considered local variables, functions may also define and use additional local variables.</li>
-            
-            <li data-component="answer"  id="test_question5_3_2_opt_c">Another name for any variable</li><li data-component="feedback">Variables that are used outside a function are not local, but rather global variables.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question5_3_2_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
+    
+    <li data-component="answer"  id="test_question5_3_2_opt_b">The same as a parameter</li><li data-component="feedback">While parameters may be considered local variables, functions may also define and use additional local variables.</li>
+    
+    <li data-component="answer"  id="test_question5_3_2_opt_c">Another name for any variable</li><li data-component="feedback">Variables that are used outside a function are not local, but rather global variables.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.3.1.3" data-multipleanswers="false"  id="test_question5_3_3"  style="visibility: hidden;">
-            <p>variable-scope16: Can you use the same name for a local variable as a global variable?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.3.1.3" data-multipleanswers="false"  id="test_question5_3_3"  style="visibility: hidden;">
+    <p>variable-scope16: Can you use the same name for a local variable as a global variable?</p>
 
-            <li data-component="answer"  id="test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
-            
-            <li data-component="answer" data-correct id="test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback">It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
-            
-            <li data-component="answer"  id="test_question5_3_3_opt_c">No, it will cause an error.</li><li data-component="feedback">Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.</li>
-            
+    <li data-component="answer"  id="test_question5_3_3_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question5_3_3_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback">It is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
+    
+    <li data-component="answer"  id="test_question5_3_3_opt_c">No, it will cause an error.</li><li data-component="feedback">Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="practice-problems">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="practice-problems">
 <h2><span class="section-number">1.4. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have to return</strong> the correct value – using <code class="docutils literal notranslate"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
-<div class="section" id="double-it">
+<section id="double-it">
 <h3><span class="section-number">1.4.1. </span>Double It<a class="headerlink" href="#double-it" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=double-it data-question_label="1.4.1.1">
 <div id=double-it_question class="ac_question col-md-12">
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled. Return the doubled value of the number that is passed in.</p>
@@ -701,7 +679,7 @@ allTraceData["codelens_change_parm"] = {"code": "def square(original_number):\n 
 <textarea data-lang="python" id="double-it_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def double_it(the_number):
     return 0
@@ -721,11 +699,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="double-it-positive">
+</section>
+<section id="double-it-positive">
 <h3><span class="section-number">1.4.2. </span>Double It Positive<a class="headerlink" href="#double-it-positive" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=double-it-positive data-question_label="1.4.2.1">
 <div id=double-it-positive_question class="ac_question col-md-12">
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is 0, return 0.</p>
@@ -737,7 +715,7 @@ myTests().main()
 <textarea data-lang="python" id="double-it-positive_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def double_it_positive(the_number):
     return 0
@@ -758,11 +736,11 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="wear-the-right-thing">
+</section>
+<section id="wear-the-right-thing">
 <h3><span class="section-number">1.4.3. </span>Wear the Right Thing<a class="headerlink" href="#wear-the-right-thing" title="Permalink to this headline">¶</a></h3>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wear-the-right-thing data-question_label="1.4.3.1">
 <div id=wear-the-right-thing_question class="ac_question col-md-12">
 <p>Write a function which returns the type of clothing you should wear, based on the parameter <code class="docutils literal notranslate"><span class="pre">temperature</span></code>. If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is below -10, you will wear a parka and toque (return “parka and toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between -10 and 0, wear a toque (return “toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 0 but less than 10, wear a sweater (return “sweater”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between 10 and 20, wear a t-shirt (return “t-shirt”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 20, wear shorts (return “shorts”).</p>
@@ -774,7 +752,7 @@ myTests().main()
 <textarea data-lang="python" id="wear-the-right-thing_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def wear_the_right_thing(temperature):
     return "some clothes"
@@ -800,9 +778,9 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

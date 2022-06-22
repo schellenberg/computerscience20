@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5. String Operators and Assignment Work Time &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -216,14 +194,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="string-operators-and-assignment-work-time">
+  <section id="string-operators-and-assignment-work-time">
 <h1><span class="section-number">5. </span>String Operators and Assignment Work Time<a class="headerlink" href="#string-operators-and-assignment-work-time" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore how the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> operators work on strings. Continue to work on the first Python assignment, focused on input/output, data types and conditionals.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_intro_to_string_operators"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_intro_to_string_operators"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -231,7 +209,7 @@
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
+    <section id="what-does-this-program-do">
 <h2><span class="section-number">5.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <p>As you saw in the WDTPD questions from yesterday, using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator with strings results in something very different than using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator with numeric data. Consider the following questions carefully, being sure you understand WHY they output what they do.</p>
 <div class="admonition note">
@@ -241,7 +219,7 @@
 <p><strong>What will the following programs output? Why?</strong></p>
 <p>What will this print if you enter in a <code class="docutils literal notranslate"><span class="pre">15</span></code>? How about typing <code class="docutils literal notranslate"><span class="pre">hey</span></code>?</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_operators_1 data-question_label="5.1.1">
 <div id=wdtpd_string_operators_1_question class="ac_question col-md-12">
 
@@ -249,7 +227,7 @@
 <textarea data-lang="python" id="wdtpd_string_operators_1_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 number = input("What value should we change? ")
 changed_value = number * 4
@@ -259,7 +237,7 @@ print(changed_value)
 </div>
 <p>Enter <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> when you run the code below. What will the program print? <em>Hint: it will not be an error!</em></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_operators_2 data-question_label="5.1.2">
 <div id=wdtpd_string_operators_2_question class="ac_question col-md-12">
 
@@ -267,7 +245,7 @@ print(changed_value)
 <textarea data-lang="python" id="wdtpd_string_operators_2_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 number_one = input("Please enter the first number: ")
 number_two = input("Please enter the second number: ")
@@ -278,7 +256,7 @@ print(combined_value)
 </div>
 <p>Type in your first name and last name when you run the code below. How can you fix this code to write your name properly?</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_operators_3 data-question_label="5.1.3">
 <div id=wdtpd_string_operators_3_question class="ac_question col-md-12">
 
@@ -286,7 +264,7 @@ print(combined_value)
 <textarea data-lang="python" id="wdtpd_string_operators_3_editor" 
       data-timelimit=25000     
     data-audio=''      
-         data-caption='Fix the output of this code.'  data-wasm=/_static 
+         data-caption='Fix the output of this code.'  data-wasm=/_static
      style="visibility: hidden;">
 first_name = input("Please enter your first name: ")
 last_name = input("Please enter your last name: ")
@@ -295,8 +273,8 @@ print("Good to see you" + full_name)
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="operations-on-strings">
+</section>
+<section id="operations-on-strings">
 <span id="index-0"></span><h2><span class="section-number">5.2. </span>Operations on Strings<a class="headerlink" href="#operations-on-strings" title="Permalink to this headline">¶</a></h2>
 <p>In general, you cannot perform mathematical operations on strings, even if the
 strings look like numbers. The following are illegal (assuming that <code class="docutils literal notranslate"><span class="pre">message</span></code>
@@ -311,7 +289,7 @@ has type string):</p>
 <code class="docutils literal notranslate"><span class="pre">+</span></code> operator represents <strong>concatenation</strong>, not addition.  Concatenation means
 joining the two operands by linking them end-to-end. This is the equivalent of using the Scratch <img alt="scratch_join_block_inline" src="../../_images/scratch_join_block.png" /> join block.  For example:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_concatenation data-question_label="5.2.1">
 <div id=string_concatenation_question class="ac_question col-md-12">
 
@@ -319,7 +297,7 @@ joining the two operands by linking them end-to-end. This is the equivalent of u
 <textarea data-lang="python" id="string_concatenation_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 fruit = "banana"
 baked_good = " nut bread"
@@ -334,7 +312,7 @@ the concatenated strings.  Take out the space and run it again.</p>
 <code class="docutils literal notranslate"><span class="pre">'Fun'*3</span></code> is <code class="docutils literal notranslate"><span class="pre">'FunFunFun'</span></code>. One of the operands has to be a string and the
 other has to be an integer.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_repetition data-question_label="5.2.2">
 <div id=string_repetition_question class="ac_question col-md-12">
 
@@ -342,7 +320,7 @@ other has to be an integer.</p>
 <textarea data-lang="python" id="string_repetition_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print("Go" * 6)
 
@@ -363,53 +341,53 @@ The repetition is done before the concatenation.  If you want to cause the conca
 done first, you will need to use parenthesis.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.2.3" data-multipleanswers="false"  id="string_operators_practice_1"  style="visibility: hidden;">
-            <p>intro-string-operators6: What is printed by the following statements?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.2.3" data-multipleanswers="false"  id="string_operators_practice_1"  style="visibility: hidden;">
+    <p>intro-string-operators6: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
 <span class="n">second_string</span> <span class="o">=</span> <span class="s2">&quot;rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">first_string</span> <span class="o">+</span> <span class="n">second_string</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_operators_practice_1_opt_a">python rocks</li><li data-component="feedback">Concatenation does not automatically add a space.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_1_opt_b">python</li><li data-component="feedback">The expression first_string + second_string is evaluated first, then the resulting string is printed.</li>
-            
-            <li data-component="answer" data-correct id="string_operators_practice_1_opt_c">pythonrocks</li><li data-component="feedback">Yes, the two strings are glued end to end.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_1_opt_d">Error, you cannot add two strings together.</li><li data-component="feedback">The + operator has different meanings depending on the operands, in this case, two strings.</li>
-            
+    <li data-component="answer"  id="string_operators_practice_1_opt_a">python rocks</li><li data-component="feedback">Concatenation does not automatically add a space.</li>
+    
+    <li data-component="answer"  id="string_operators_practice_1_opt_b">python</li><li data-component="feedback">The expression first_string + second_string is evaluated first, then the resulting string is printed.</li>
+    
+    <li data-component="answer" data-correct='yes' id="string_operators_practice_1_opt_c">pythonrocks</li><li data-component="feedback">Yes, the two strings are glued end to end.</li>
+    
+    <li data-component="answer"  id="string_operators_practice_1_opt_d">Error, you cannot add two strings together.</li><li data-component="feedback">The + operator has different meanings depending on the operands, in this case, two strings.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.2.4" data-multipleanswers="false"  id="string_operators_practice_2"  style="visibility: hidden;">
-            <p>intro-string-operators7: What is printed by the following statements?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.2.4" data-multipleanswers="false"  id="string_operators_practice_2"  style="visibility: hidden;">
+    <p>intro-string-operators7: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
 <span class="n">exclamation</span> <span class="o">=</span> <span class="s2">&quot;!&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">first_string</span> <span class="o">+</span> <span class="n">exclamation</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="string_operators_practice_2_opt_a">python!!!</li><li data-component="feedback">Yes, repetition has precedence over concatenation</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_b">python!python!python!</li><li data-component="feedback">Repetition is done first.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_c">pythonpythonpython!</li><li data-component="feedback">The repetition operator is working on the exclamation variable.</li>
-            
-            <li data-component="answer"  id="string_operators_practice_2_opt_d">Error, you cannot perform concatenation and repetition at the same time.</li><li data-component="feedback">The + and * operator are defined for strings as well as numbers.</li>
-            
+    <li data-component="answer" data-correct='yes' id="string_operators_practice_2_opt_a">python!!!</li><li data-component="feedback">Yes, repetition has precedence over concatenation</li>
+    
+    <li data-component="answer"  id="string_operators_practice_2_opt_b">python!python!python!</li><li data-component="feedback">Repetition is done first.</li>
+    
+    <li data-component="answer"  id="string_operators_practice_2_opt_c">pythonpythonpython!</li><li data-component="feedback">The repetition operator is working on the exclamation variable.</li>
+    
+    <li data-component="answer"  id="string_operators_practice_2_opt_d">Error, you cannot perform concatenation and repetition at the same time.</li><li data-component="feedback">The + and * operator are defined for strings as well as numbers.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-<div class="section" id="assignment-work-time">
+    </ul>
+    </div>
+    </section>
+<section id="assignment-work-time">
 <h2><span class="section-number">5.3. </span>Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
 <p>Please spend the rest of the class continuing to work on your current Python assignment (likely some kind of input/output assignment). If you are completely done that assignment, you may want to look ahead at the next assignment or ask your teacher what additional challenges you can attempt.</p>
-</div>
-</div>
+</section>
+</section>
 
 
   
