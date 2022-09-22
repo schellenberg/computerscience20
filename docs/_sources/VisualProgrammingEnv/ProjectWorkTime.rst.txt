@@ -3,8 +3,8 @@
    :start: 1
 
 
-Project Work Period
-===================
+Project Work Period and Practice Quiz
+======================================
 
 .. topic:: Quick Overview of Day
 
