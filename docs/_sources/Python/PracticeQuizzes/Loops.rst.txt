@@ -33,8 +33,8 @@ Question 1
 
         import turtle
 
-        theWindow = turtle.Screen()
-        theWindow.bgcolor("lightgreen")
+        the_window = turtle.Screen()
+        the_window.bgcolor("lightgreen")
         alex = turtle.Turtle()
         alex.pensize(3)
 
@@ -61,8 +61,8 @@ Question 2
 
         import turtle
 
-        theWindow = turtle.Screen()
-        theWindow.bgcolor("lightgreen")
+        the_window = turtle.Screen()
+        the_window.bgcolor("lightgreen")
         alex = turtle.Turtle()
         alex.pensize(3)
 
