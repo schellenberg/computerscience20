@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1. Nested Loops and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -233,14 +211,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="nested-loops-and-image-processing">
+  <section id="nested-loops-and-image-processing">
 <h1><span class="section-number">1. </span>Nested Loops and Image Processing<a class="headerlink" href="#nested-loops-and-image-processing" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_image_processing_nested_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_image_processing_nested_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -249,7 +227,7 @@
 </ul>
 
     </div>
-    <div class="section" id="image-processing-introduction">
+    <section id="image-processing-introduction">
 <h2><span class="section-number">1.1. </span>Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -258,7 +236,7 @@
 </div>
 <p>The following video (created by Code.org) describes how images are represented using binary digits, as well as an overview of how image filters work. It is a great introduction to the image filtering that follows.</p>
 
-    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
         <div id="15aqFQQVBWU" data-component="youtube" class="align-left youtube-video"
             data-video-height="315" data-question_label="1.1.1"
             data-video-width="560" data-video-videoid="15aqFQQVBWU"
@@ -274,8 +252,8 @@ available.  Sometimes these pixels appear as small “dots”.</p>
 that computer scientists like to start counting with 0!  This means that if there are 20 rows, they will be named 0,1,2, and so on through 19.  This will be very useful later when we iterate using range.</p>
 <p>In the figure below, the pixel of interest is found at column <strong>c</strong> and row <strong>r</strong>.</p>
 <img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
-</div>
-<div class="section" id="the-rgb-color-model">
+</section>
+<section id="the-rgb-color-model">
 <span id="index-0"></span><h2><span class="section-number">1.2. </span>The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
@@ -342,8 +320,8 @@ no basic color.  On the other hand, “White” has maximum values for all three
 <p class="admonition-title">Note</p>
 <p>Search the web for a <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">picker</span></code>. Experiment by selecting different colors, and pay attention to the different RGB values that are generated from each color you select.</p>
 </div>
-</div>
-<div class="section" id="creating-and-manipulating-pixels">
+</section>
+<section id="creating-and-manipulating-pixels">
 <span id="index-1"></span><h2><span class="section-number">1.3. </span>Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal notranslate"><span class="pre">Image</span></code> and <code class="docutils literal notranslate"><span class="pre">Pixel</span></code>.</p>
@@ -397,7 +375,7 @@ pixel to change an intensity value using its <code class="docutils literal notra
 We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
 the same as the current amount of green.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=pixelex1a data-question_label="1.3.1">
 <div id=pixelex1a_question class="ac_question col-md-12">
 
@@ -405,7 +383,7 @@ the same as the current amount of green.</p>
 <textarea data-lang="python" id="pixelex1a_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 
@@ -418,27 +396,27 @@ print(p.get_green(), p.get_blue())
 </textarea>
 </div>
 </div>
-<div class="section" id="check-your-understanding">
+<section id="check-your-understanding">
 <h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question7_8_1_1"  style="visibility: hidden;">
-            <p>image-processing-nested-loops3: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question7_8_1_1"  style="visibility: hidden;">
+    <p>image-processing-nested-loops3: If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?</p>
 
-            <li data-component="answer" data-correct id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
-            
-            <li data-component="answer"  id="test_question7_8_1_1_opt_b">Light red</li><li data-component="feedback">The closer the values are to 0, the darker the color will appear.</li>
-            
-            <li data-component="answer"  id="test_question7_8_1_1_opt_c">Dark green</li><li data-component="feedback">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
-            
-            <li data-component="answer"  id="test_question7_8_1_1_opt_d">Light green</li><li data-component="feedback">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question7_8_1_1_opt_a">Dark red</li><li data-component="feedback">Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.</li>
+    
+    <li data-component="answer"  id="test_question7_8_1_1_opt_b">Light red</li><li data-component="feedback">The closer the values are to 0, the darker the color will appear.</li>
+    
+    <li data-component="answer"  id="test_question7_8_1_1_opt_c">Dark green</li><li data-component="feedback">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
+    
+    <li data-component="answer"  id="test_question7_8_1_1_opt_d">Light green</li><li data-component="feedback">The first value in RGB is the red value.  The second is the green.  This color has no green in it.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="nested-iteration">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="nested-iteration">
 <span id="index-2"></span><h2><span class="section-number">1.4. </span>Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
@@ -454,7 +432,7 @@ To see how this works, consider the iteration below.</p>
 The <code class="docutils literal notranslate"><span class="pre">print</span></code> will be performed once for each pass.
 However, the body of the loop can contain any statements, including another iteration (another <code class="docutils literal notranslate"><span class="pre">for</span></code> statement).  For example,</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=nested1 data-question_label="1.4.1">
 <div id=nested1_question class="ac_question col-md-12">
 
@@ -462,7 +440,7 @@ However, the body of the loop can contain any statements, including another iter
 <textarea data-lang="python" id="nested1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 for i in range(5):
     for j in range(3):
@@ -477,15 +455,15 @@ the output from this nested iteration will show that for each value of <code cla
 <p>Another way to see this in more detail is to examine the behavior with codelens.  Step through the iterations to see the
 flow of control as it occurs with the nested iteration.  Again, for every value of <code class="docutils literal notranslate"><span class="pre">i</span></code>, all of the values of <code class="docutils literal notranslate"><span class="pre">j</span></code> will occur.  You can see that the inner iteration completes before going on to the next pass of the outer iteration.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="1.4.2">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.4.2">
         <div class="pytutorVisualizer" id="nested2"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.4.2 (nested2)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var nested2_vis;
 
 if (allTraceData === undefined) {
@@ -507,12 +485,12 @@ The inner <code class="docutils literal notranslate"><span class="pre">for</span
         <span class="c1"># do something with the pixel at position (col, row)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="creating-an-empty-image">
+</section>
+<section id="creating-an-empty-image">
 <h2><span class="section-number">1.5. </span>Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal notranslate"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=empty_image_demo data-question_label="1.5.1">
 <div id=empty_image_demo_question class="ac_question col-md-12">
 
@@ -520,7 +498,7 @@ The inner <code class="docutils literal notranslate"><span class="pre">for</span
 <textarea data-lang="python" id="empty_image_demo_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 
@@ -536,7 +514,7 @@ img.draw(win)
 </div>
 <p>After creating an empty image, we can change the color of a specific pixel by using the <code class="docutils literal notranslate"><span class="pre">set_pixel</span></code> function inside of a nested for loop.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=change_empty_image_to_red data-question_label="1.5.2">
 <div id=change_empty_image_to_red_question class="ac_question col-md-12">
 
@@ -544,7 +522,7 @@ img.draw(win)
 <textarea data-lang="python" id="change_empty_image_to_red_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 
@@ -563,16 +541,16 @@ img.draw(win)
 </textarea>
 </div>
 </div>
-<div class="section" id="try-this">
+<section id="try-this">
 <h3><span class="section-number">1.5.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Change the code above to draw an image of a different color.</p></li>
 <li><p>Adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. <em>Hint: recall the modulus % operator.</em></p></li>
 <li><p>Can you make it work for every other column (instead of every other row)? How about every 5th row/column?</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="image-objects">
+</section>
+</section>
+<section id="image-objects">
 <span id="index-3"></span><h2><span class="section-number">1.6. </span>Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal notranslate"><span class="pre">get_width</span></code> and <code class="docutils literal notranslate"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> and change the pixel at
@@ -623,7 +601,7 @@ file and uses the contents to create an image object that is referred to by <cod
 we can use the methods described above to access information about the image or to get a specific pixel and check
 on its basic color intensities.</p>
 <img src="../../_static/skflag.png" id="skflag.png">
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=pixelex1 data-question_label="1.6.1">
 <div id=pixelex1_question class="ac_question col-md-12">
 
@@ -631,7 +609,7 @@ on its basic color intensities.</p>
 <textarea data-lang="python" id="pixelex1_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 img = image.Image("skflag.png")
@@ -646,10 +624,10 @@ print(p.get_red(), p.get_green(), p.get_blue())
 </div>
 <p>When you run the program you can see that the image has a width of 500 pixels and a height of 250 pixels.  Also, the
 pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
-</div>
-<div class="section" id="image-processing-with-an-existing-image">
+</section>
+<section id="image-processing-with-an-existing-image">
 <h2><span class="section-number">1.7. </span>Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="increasing-a-color">
+<section id="increasing-a-color">
 <h3><span class="section-number">1.7.1. </span>Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal notranslate"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 <div class="admonition caution">
@@ -661,7 +639,7 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 </ul>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=increase_color_amount data-question_label="1.7.1.1">
 <div id=increase_color_amount_question class="ac_question col-md-12">
 
@@ -669,7 +647,7 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 <textarea data-lang="python" id="increase_color_amount_editor" 
       data-timelimit=180000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 
@@ -702,8 +680,8 @@ for row in range(height):
 Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Lines 12-14 extract the original intensity from the pixel. For red and blue, the new values stay the same as the original value. For the green intensity, we simply add 50 to whatever green amount was there previously. Note that if you pass a value higher than 255 or lower than 0 when setting the intensity of a pixel, the image module will automatically set the value to the highest/lowest value allowed (255/0). Once we have the <code class="docutils literal notranslate"><span class="pre">new_red</span></code>, <code class="docutils literal notranslate"><span class="pre">new_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">new_blue</span></code> values, we can create a new pixel (Line 15).</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
-</div>
-<div class="section" id="negative-images">
+</section>
+<section id="negative-images">
 <h3><span class="section-number">1.7.2. </span>Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
@@ -711,7 +689,7 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 <code class="docutils literal notranslate"><span class="pre">255-50</span></code> or 205.  In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have negatives with a lot.  We do the same for the blue and green as well.</p>
 <p>The program below implements this algorithm using the previous image (skflag.png).  Run it to see the resulting negative image.  Note that there is a lot of processing taking place and this may take some time to complete (it will execute faster if you run it in Thonny). Also note that instead of using <code class="docutils literal notranslate"><span class="pre">col</span></code> and <code class="docutils literal notranslate"><span class="pre">row</span></code> as the variable names in the nested loop, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> have been used. In your own programs, use whichever makes more sense to you!</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=acimg_1 data-question_label="1.7.2.1">
 <div id=acimg_1_question class="ac_question col-md-12">
 
@@ -719,7 +697,7 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 <textarea data-lang="python" id="acimg_1_editor" 
       data-timelimit=180000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import image
 
@@ -755,8 +733,8 @@ for y in range(height):
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> module allows you to do a few things that cannot be done on the website version, including the <code class="docutils literal notranslate"><span class="pre">.save(&quot;filename.jpg&quot;)</span></code> method shown in the last line of the code above.</p>
 </div>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3><span class="section-number">1.7.3. </span>Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Change the name of the file in the <code class="docutils literal notranslate"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal notranslate"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal notranslate"><span class="pre">pineapples.jpg</span></code>):</p></li>
@@ -767,13 +745,13 @@ for y in range(height):
 <li><p>Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the rows.  We still create a negative image, but you can see that the pixels update in a very different order.</p></li>
 <li><p>Download an image from the internet. Save it in the same folder as the Python script you are executing, then change your script to create the negative of the image you downloaded.</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3><span class="section-number">1.7.4. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.7.4.1" data-multipleanswers="false"  id="test_question7_8_3_1"  style="visibility: hidden;">
-            <p>image-processing-nested-loops11: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.7.4.1" data-multipleanswers="false"  id="test_question7_8_3_1"  style="visibility: hidden;">
+    <p>image-processing-nested-loops11: What will the following nested for-loop print?  (Note, if you are having trouble with this question, review CodeLens 3).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
@@ -814,21 +792,21 @@ for y in range(height):
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question7_8_3_1_opt_a">Output a</li><li data-component="feedback">i will start with a value of 0 and then j will iterate from 0 to 1.  Next, i will be 1 and j will iterate from 0 to 1.  Finally, i will be 2 and j will iterate from 0 to 1.</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_1_opt_b">Output b</li><li data-component="feedback">The inner for-loop controls the second digit (j).  The inner for-loop must complete before the outer for-loop advances.</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_1_opt_c">Output c</li><li data-component="feedback">The inner for-loop controls the second digit (j).  Notice that the inner for-loop is over the list [0, 1].</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_1_opt_d">Output d</li><li data-component="feedback">The outer for-loop runs 3 times (0, 1, 2) and the inner for-loop runs twice for each time the outer for-loop runs, so this code prints exactly 6 lines.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question7_8_3_1_opt_a">Output a</li><li data-component="feedback">i will start with a value of 0 and then j will iterate from 0 to 1.  Next, i will be 1 and j will iterate from 0 to 1.  Finally, i will be 2 and j will iterate from 0 to 1.</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_1_opt_b">Output b</li><li data-component="feedback">The inner for-loop controls the second digit (j).  The inner for-loop must complete before the outer for-loop advances.</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_1_opt_c">Output c</li><li data-component="feedback">The inner for-loop controls the second digit (j).  Notice that the inner for-loop is over the list [0, 1].</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_1_opt_d">Output d</li><li data-component="feedback">The outer for-loop runs 3 times (0, 1, 2) and the inner for-loop runs twice for each time the outer for-loop runs, so this code prints exactly 6 lines.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.7.4.2" data-multipleanswers="false"  id="test_question7_8_3_2"  style="visibility: hidden;">
-            <p>image-processing-nested-loops12: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.7.4.2" data-multipleanswers="false"  id="test_question7_8_3_2"  style="visibility: hidden;">
+    <p>image-processing-nested-loops12: What would the image produced from ActiveCode box 16 look like if you replaced the lines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_red</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_red</span><span class="p">()</span>
 <span class="n">new_green</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_green</span><span class="p">()</span>
 <span class="n">new_blue</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">get_blue</span><span class="p">()</span>
@@ -841,24 +819,24 @@ for y in range(height):
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="test_question7_8_3_2_opt_a">It would look like a red-washed version of the bell image</li><li data-component="feedback">Because we are removing the green and the blue values, but keeping the variation of the red the same, you will get the same image, but it will look like it has been bathed in red.</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_2_opt_b">It would be a solid red rectangle the same size as the original image</li><li data-component="feedback">Because the red value varies from pixel to pixel, this will not look like a solid red rectangle.  For it to look like a solid red rectangle each pixel would have to have exactly the same red value.</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_2_opt_c">It would look the same as the original image</li><li data-component="feedback">If you remove the blue and green values from the pixels, the image will look different, even though there does not appear to be any blue or green in the original image (remember that other colors are made of combinations of red, green and blue).</li>
-            
-            <li data-component="answer"  id="test_question7_8_3_2_opt_d">It would look the same as the negative image in the example code</li><li data-component="feedback">Because we have changed the value of the pixels from what they were in the original ActiveCode box code, the image will not be the same.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question7_8_3_2_opt_a">It would look like a red-washed version of the bell image</li><li data-component="feedback">Because we are removing the green and the blue values, but keeping the variation of the red the same, you will get the same image, but it will look like it has been bathed in red.</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_2_opt_b">It would be a solid red rectangle the same size as the original image</li><li data-component="feedback">Because the red value varies from pixel to pixel, this will not look like a solid red rectangle.  For it to look like a solid red rectangle each pixel would have to have exactly the same red value.</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_2_opt_c">It would look the same as the original image</li><li data-component="feedback">If you remove the blue and green values from the pixels, the image will look different, even though there does not appear to be any blue or green in the original image (remember that other colors are made of combinations of red, green and blue).</li>
+    
+    <li data-component="answer"  id="test_question7_8_3_2_opt_d">It would look the same as the negative image in the example code</li><li data-component="feedback">Because we have changed the value of the pixels from what they were in the original ActiveCode box code, the image will not be the same.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-<div class="section" id="acknowledgments">
+    </ul>
+    </div>
+    </section>
+<section id="acknowledgments">
 <h3><span class="section-number">1.7.5. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

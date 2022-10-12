@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>10. Multiple Turtles and for Loops &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -229,14 +207,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="multiple-turtles-and-for-loops">
+  <section id="multiple-turtles-and-for-loops">
 <h1><span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, and use the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function to simplify the creation of large for loops.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_intro_to_for_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_intro_to_for_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -245,7 +223,7 @@
 </ul>
 
     </div>
-    <div class="section" id="instances-a-herd-of-turtles">
+    <section id="instances-a-herd-of-turtles">
 <h2><span class="section-number">10.1. </span>Instances — A Herd of Turtles<a class="headerlink" href="#instances-a-herd-of-turtles" title="Permalink to this headline">¶</a></h2>
 <p>Just like we can have many different integers in a program, we can have many
 turtles.  Each of them is an independent object, and we call each one an <strong>instance</strong> of the Turtle type (class).  Each instance has its own
@@ -254,7 +232,7 @@ some position, while tess might be going in her own direction with a fat pink
 pen.  So here is what happens when alex completes a square and tess
 completes a triangle:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for-loops-1 data-question_label="10.1.1">
 <div id=for-loops-1_question class="ac_question col-md-12">
 
@@ -262,7 +240,7 @@ completes a triangle:</p>
 <textarea data-lang="python" id="for-loops-1_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Set up the window and its attributes
 import turtle
@@ -319,11 +297,11 @@ and then “move away from the origin” (lines 22 and 23).</p></li>
 <li><p>One of the key uses for comments is to record your mental chunking, and big
 ideas. They’re not always explicit in the code.</p></li>
 </ul>
-<div class="section" id="mixed-up-programs">
+<section id="mixed-up-programs">
 <h3><span class="section-number">10.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
 
-        <div class="runestone" style="max-width: none;"> 
-        <div data-component="parsons" id="for-loops-parsons-1" class="alert alert-warning parsons" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="for-loops-parsons-1" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TwoTurtles1.png"><img alt="../../_images/TwoTurtles1.png" class="align-left" src="../../_images/TwoTurtles1.png" style="width: 150px;" /></a>
 <p>The following program has one turtle, “jamal”, draw a capital L in blue and then another, “tina”, draw a line to the west in orange as shown to the left.</p>
@@ -331,7 +309,7 @@ ideas. They’re not always explicit in the code.</p></li>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
 
         </div>
-        <pre  data-question_label="10.1.1.1"         style="visibility: hidden;">
+        <pre  class="parsonsblocks" data-question_label="10.1.1.1"          style="visibility: hidden;">
         import turtle
 wn = turtle.Screen()
 ---
@@ -353,8 +331,8 @@ tina.forward(75)
         </div>
         </div>
     
-        <div class="runestone" style="max-width: none;"> 
-        <div data-component="parsons" id="for-loops-parsons-2" class="alert alert-warning parsons" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="for-loops-parsons-2" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TwoTurtlesL.png"><img alt="../../_images/TwoTurtlesL.png" class="align-left" src="../../_images/TwoTurtlesL.png" style="width: 150px;" /></a>
 <p>The following program has one turtle, “jamal”, draw a line to the north in blue and then another, “tina”, draw a line to the east in orange as shown to the left.</p>
@@ -362,7 +340,7 @@ tina.forward(75)
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
 
         </div>
-        <pre  data-question_label="10.1.1.2"         style="visibility: hidden;">
+        <pre  class="parsonsblocks" data-question_label="10.1.1.2"          style="visibility: hidden;">
         import turtle
 ---
 wn = turtle.Screen()
@@ -381,9 +359,9 @@ tina.forward(150)
         </pre>
         </div>
         </div>
-    </div>
-</div>
-<div class="section" id="the-for-loop">
+    </section>
+</section>
+<section id="the-for-loop">
 <span id="index-0"></span><h2><span class="section-number">10.2. </span>The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we drew a square yesterday, it was quite tedious.  We had to move then turn, move
 then turn, etc. etc. four times.  If we were drawing a hexagon, or an octogon,
@@ -394,7 +372,7 @@ we’d like to send them each an email inviting them to our party.  We
 don’t quite know how to send email yet, so for the moment we’ll just print a
 message for each friend.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for-loops-2 data-question_label="10.2.1">
 <div id=for-loops-2_question class="ac_question col-md-12">
 
@@ -402,7 +380,7 @@ message for each friend.</p>
 <textarea data-lang="python" id="for-loops-2_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
     print("Hi", name, "Please come to my party on Saturday!")
@@ -440,13 +418,13 @@ works with the for loop. Click on the <strong>Show CodeLens</strong> button in t
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="iteration-simplifies-our-turtle-program">
+</section>
+<section id="iteration-simplifies-our-turtle-program">
 <h2><span class="section-number">10.3. </span>Iteration Simplifies our Turtle Program<a class="headerlink" href="#iteration-simplifies-our-turtle-program" title="Permalink to this headline">¶</a></h2>
 <p>To draw a square we’d like to do the same thing four times — move the turtle forward some distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four sides of a
 square.  This next program does exactly the same thing but, with the help of the for statement, uses just three lines (not including the setup code).  Remember that the for statement will repeat the <cite>forward</cite> and <cite>left</cite> four times, one time for each value in the list.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_for1 data-question_label="10.3.1">
 <div id=ch03_for1_question class="ac_question col-md-12">
 
@@ -454,7 +432,7 @@ square.  This next program does exactly the same thing but, with the help of the
 <textarea data-lang="python" id="ch03_for1_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 
@@ -478,7 +456,7 @@ Finding the chunks and somehow getting our programs arranged around those
 chunks is a vital skill when learning <em>How to think like a computer scientist</em>.</p>
 <p>It is also important to realize that we could have used a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to accomplish the same drawing, and a version that does just that is below:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_for123 data-question_label="10.3.2">
 <div id=ch03_for123_question class="ac_question col-md-12">
 
@@ -486,7 +464,7 @@ chunks is a vital skill when learning <em>How to think like a computer scientist
 <textarea data-lang="python" id="ch03_for123_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 
@@ -508,7 +486,7 @@ wn.exitonclick()
 <p>Notice that although this code does the same thing as the for loop version, it requires some extra code compared to the for loop version. Generally speaking, if you know ahead of time how many times a loop should iterate, you should use a for loop (for example, iterating 4 times to draw a square). If you don’t know ahead of time how many times a loop should iterate, a while loop is a better choice (for example, iterating until Reeborg had a wall in front of it).</p>
 <p>Thinking back to the for loop version we saw above, the values [0,1,2,3] were provided to make the loop body execute 4 times. We could have used any four values. For example, consider the following program.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_forcolor data-question_label="10.3.3">
 <div id=ch03_forcolor_question class="ac_question col-md-12">
 
@@ -516,7 +494,7 @@ wn.exitonclick()
 <textarea data-lang="python" id="ch03_forcolor_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 
@@ -536,7 +514,7 @@ wn.exitonclick()
 <p>In the previous example, there were four integers in the list.  This time there are four strings.  Since there are four items in the list, the iteration will still occur four times.  <code class="docutils literal notranslate"><span class="pre">some_color</span></code> will
 take on each color in the list.  We can even take this one step further and use the value of <code class="docutils literal notranslate"><span class="pre">some_color</span></code> as part of the computation.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=colorlist data-question_label="10.3.4">
 <div id=colorlist_question class="ac_question col-md-12">
 
@@ -544,7 +522,7 @@ take on each color in the list.  We can even take this one step further and use 
 <textarea data-lang="python" id="colorlist_editor" 
       data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 import turtle
 
@@ -562,18 +540,18 @@ wn.exitonclick()
 </div>
 </div>
 <p>In this case, the value of <code class="docutils literal notranslate"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal notranslate"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal notranslate"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
-<div class="section" id="id1">
+<section id="id1">
 <h3><span class="section-number">10.3.1. </span>Mixed Up Programs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-        <div class="runestone" style="max-width: none;"> 
-        <div data-component="parsons" id="3_8" class="alert alert-warning parsons" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="parsons_for_loop_3_8" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TurtleTriangle.png"><img alt="../../_images/TurtleTriangle.png" class="align-left" src="../../_images/TurtleTriangle.png" style="width: 150px;" /></a>
 <p>The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.</p>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
 
         </div>
-        <pre  data-question_label="10.3.1.1"         style="visibility: hidden;">
+        <pre  class="parsonsblocks" data-question_label="10.3.1.1"          style="visibility: hidden;">
         import turtle
 ---
 wn = turtle.Screen()
@@ -589,15 +567,15 @@ for i in [0,1,2]:
         </div>
         </div>
     
-        <div class="runestone" style="max-width: none;"> 
-        <div data-component="parsons" id="3_9" class="alert alert-warning parsons" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="parsons_for_loop_3_9" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TurtleRect.png"><img alt="../../_images/TurtleRect.png" class="align-left" src="../../_images/TurtleRect.png" style="width: 150px;" /></a>
 <p>The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.</p>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
 
         </div>
-        <pre  data-question_label="10.3.1.2"         style="visibility: hidden;">
+        <pre  class="parsonsblocks" data-question_label="10.3.1.2"          style="visibility: hidden;">
         import turtle
 wn = turtle.Screen()
 carlos = turtle.Turtle()
@@ -616,62 +594,62 @@ for i in [1,2]:
         </div>
     <p><strong>Check your understanding</strong></p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="10.3.1.3" data-multipleanswers="false"  id="test_question3_4_1"  style="visibility: hidden;">
-            <p>intro-for-loops11: In the following code, how many lines does this code print?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10.3.1.3" data-multipleanswers="false"  id="test_question3_4_1"  style="visibility: hidden;">
+    <p>intro-for-loops11: In the following code, how many lines does this code print?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question3_4_1_opt_a">1</li><li data-component="feedback">The loop body prints one line, but the body will execute exactly one time for each element in the list [5, 4, 3, 2, 1, 0].</li>
-            
-            <li data-component="answer"  id="test_question3_4_1_opt_b">5</li><li data-component="feedback">Although the biggest number in the list is 5, there are actually 6 elements in the list.</li>
-            
-            <li data-component="answer" data-correct id="test_question3_4_1_opt_c">6</li><li data-component="feedback">The loop body will execute (and print one line) for each of the 6 elements in the list [5, 4, 3, 2, 1, 0].</li>
-            
-            <li data-component="answer"  id="test_question3_4_1_opt_d">10</li><li data-component="feedback">The loop body will not execute more times than the number of elements in the list.</li>
-            
+    <li data-component="answer"  id="test_question3_4_1_opt_a">1</li><li data-component="feedback">The loop body prints one line, but the body will execute exactly one time for each element in the list [5, 4, 3, 2, 1, 0].</li>
+    
+    <li data-component="answer"  id="test_question3_4_1_opt_b">5</li><li data-component="feedback">Although the biggest number in the list is 5, there are actually 6 elements in the list.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question3_4_1_opt_c">6</li><li data-component="feedback">The loop body will execute (and print one line) for each of the 6 elements in the list [5, 4, 3, 2, 1, 0].</li>
+    
+    <li data-component="answer"  id="test_question3_4_1_opt_d">10</li><li data-component="feedback">The loop body will not execute more times than the number of elements in the list.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="10.3.1.4" data-multipleanswers="false"  id="test_question3_4_2"  style="visibility: hidden;">
-            <p>intro-for-loops12: How does python know what statements are contained in the loop body?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10.3.1.4" data-multipleanswers="false"  id="test_question3_4_2"  style="visibility: hidden;">
+    <p>intro-for-loops12: How does python know what statements are contained in the loop body?</p>
 
-            <li data-component="answer" data-correct id="test_question3_4_2_opt_a">They are indented to the same degree from the loop header.</li><li data-component="feedback">The loop body can have any number of lines, all indented from the loop header.</li>
-            
-            <li data-component="answer"  id="test_question3_4_2_opt_b">There is always exactly one line in the loop body.</li><li data-component="feedback">The loop body may have more than one line.</li>
-            
-            <li data-component="answer"  id="test_question3_4_2_opt_c">The loop body ends with a semi-colon (;) which is not shown in the code above.</li><li data-component="feedback">Python does not need semi-colons in its syntax, but relies mainly on indentation.</li>
-            
+    <li data-component="answer" data-correct='yes' id="test_question3_4_2_opt_a">They are indented to the same degree from the loop header.</li><li data-component="feedback">The loop body can have any number of lines, all indented from the loop header.</li>
+    
+    <li data-component="answer"  id="test_question3_4_2_opt_b">There is always exactly one line in the loop body.</li><li data-component="feedback">The loop body may have more than one line.</li>
+    
+    <li data-component="answer"  id="test_question3_4_2_opt_c">The loop body ends with a semi-colon (;) which is not shown in the code above.</li><li data-component="feedback">Python does not need semi-colons in its syntax, but relies mainly on indentation.</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="10.3.1.5" data-multipleanswers="false"  id="test_question3_4_3"  style="visibility: hidden;">
-            <p>intro-for-loops13: In the following code, what is the value of number the second time Python executes the loop?</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10.3.1.5" data-multipleanswers="false"  id="test_question3_4_3"  style="visibility: hidden;">
+    <p>intro-for-loops13: In the following code, what is the value of number the second time Python executes the loop?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="test_question3_4_3_opt_a">2</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order (from left to right).  number gets a new value each time the loop repeats.</li>
-            
-            <li data-component="answer" data-correct id="test_question3_4_3_opt_b">4</li><li data-component="feedback">Yes, Python will process the items from left to right so the first time the value of number is 5 and the second time it is 4.</li>
-            
-            <li data-component="answer"  id="test_question3_4_3_opt_c">5</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order.  number gets a new value each time the loop repeats.</li>
-            
-            <li data-component="answer"  id="test_question3_4_3_opt_d">1</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order (from left to right).  number gets a new value each time the loop repeats.</li>
-            
+    <li data-component="answer"  id="test_question3_4_3_opt_a">2</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order (from left to right).  number gets a new value each time the loop repeats.</li>
+    
+    <li data-component="answer" data-correct='yes' id="test_question3_4_3_opt_b">4</li><li data-component="feedback">Yes, Python will process the items from left to right so the first time the value of number is 5 and the second time it is 4.</li>
+    
+    <li data-component="answer"  id="test_question3_4_3_opt_c">5</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order.  number gets a new value each time the loop repeats.</li>
+    
+    <li data-component="answer"  id="test_question3_4_3_opt_d">1</li><li data-component="feedback">Python gives number the value of items in the list, one at a time, in order (from left to right).  number gets a new value each time the loop repeats.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="the-range-function">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="the-range-function">
 <span id="index-1"></span><h2><span class="section-number">10.4. </span>The Range Function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">¶</a></h2>
 <p>It turns out that generating lists with a specific number of integers is a very common thing to do, especially when you
 want to write simple <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> controlled iteration.  Even though you can use any four items, or any four integers for that matter, the conventional thing to do is to use a list of integers starting with 0.
@@ -695,12 +673,12 @@ the <code class="docutils literal notranslate"><span class="pre">for</span></cod
     <span class="n">alex</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="practice-problems">
+</section>
+<section id="practice-problems">
 <h2><span class="section-number">10.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p>You might find the Python Documentation for the turtle module to be helpful: <a class="reference external" href="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</a>.</p>
-<div class="section" id="regular-polygons">
+<section id="regular-polygons">
 <h3><span class="section-number">10.5.1. </span>Regular Polygons<a class="headerlink" href="#regular-polygons" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses for loops to make a turtle draw regular polygons (regular means all sides the same lengths, all angles the same). First, ask the user how many sides they want the polygon to have, and how long each side length should be. Now draw the regular polygon that meets the user’s requirements!</p>
 <div class="admonition note">
@@ -708,7 +686,7 @@ the <code class="docutils literal notranslate"><span class="pre">for</span></cod
 <p>Remember that in a regular polygon, the sum of the interior angles of the polygon will always be 360 degrees.</p>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_1 data-question_label="10.5.1.1">
 <div id=practice_problem_turtle_for_loops_1_question class="ac_question col-md-12">
 
@@ -716,7 +694,7 @@ the <code class="docutils literal notranslate"><span class="pre">for</span></cod
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_1_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Drawing Regular Polygons
 
@@ -724,8 +702,8 @@ import turtle
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="draw-a-star">
+</section>
+<section id="draw-a-star">
 <h3><span class="section-number">10.5.2. </span>Draw a Star<a class="headerlink" href="#draw-a-star" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses the turtle module to draw a five sided star. The user should be able to set a number of options each time the code runs, so the program should ask the user for:</p>
 <ul class="simple">
@@ -737,7 +715,7 @@ import turtle
 <p>One run of the program might produce a star that looks like the following:</p>
 <img alt="../../_images/star1.png" src="../../_images/star1.png" />
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_2 data-question_label="10.5.2.1">
 <div id=practice_problem_turtle_for_loops_2_question class="ac_question col-md-12">
 
@@ -745,7 +723,7 @@ import turtle
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_2_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Drawing a Star
 
@@ -753,14 +731,14 @@ import turtle
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="drawing-a-clock">
+</section>
+<section id="drawing-a-clock">
 <h3><span class="section-number">10.5.3. </span>Drawing a Clock<a class="headerlink" href="#drawing-a-clock" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses the turtle module to draw the shape of an analogue clock. Do this using <strong>ONLY ONE TURTLE object</strong>. It should look like the following:</p>
 <img alt="../../_images/tess_clock1.png" src="../../_images/tess_clock1.png" />
 <p>You might need to explore the <a class="reference external" href="https://docs.python.org/3/library/turtle.html">Turtle documentation on the Python Docs website</a> to figure out how to leave an image of where the turtle was.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_3 data-question_label="10.5.3.1">
 <div id=practice_problem_turtle_for_loops_3_question class="ac_question col-md-12">
 
@@ -768,7 +746,7 @@ import turtle
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_3_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 # Drawing a Clock
 
@@ -776,9 +754,9 @@ import turtle
 </textarea>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

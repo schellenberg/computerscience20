@@ -3,60 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2. String Traversal (by index), and the Accumulator Pattern with Strings &#8212; Computer Science 20 Saskatchewan</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.6.1" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
-    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../../_static/runestone.js?v=5A173BAB"></script>
-    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../../_static/bootstrap-sphinx.js"></script>
-    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -92,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '5.6.1';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -230,14 +208,14 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="string-traversal-by-index-and-the-accumulator-pattern-with-strings">
+  <section id="string-traversal-by-index-and-the-accumulator-pattern-with-strings">
 <h1><span class="section-number">2. </span>String Traversal (by index), and the Accumulator Pattern with Strings<a class="headerlink" href="#string-traversal-by-index-and-the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>WDTPD string questions. Explore string traversal (for loop by index), <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators, and the accumulator pattern with strings. Work on practice problems covering these ideas.</p>
 </div>
 
-    <div data-component="reveal" id="curriculum_addressed_string_accumulator_pattern"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_string_accumulator_pattern"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
 <li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
 <li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
@@ -246,7 +224,7 @@
 </ul>
 
     </div>
-    <div class="section" id="what-does-this-program-do">
+    <section id="what-does-this-program-do">
 <h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -254,7 +232,7 @@
 </div>
 <p><strong>What will the following programs output? Why?</strong></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_1 data-question_label="2.1.1">
 <div id=wdtpd_string_manipulation_1_question class="ac_question col-md-12">
 
@@ -262,7 +240,7 @@
 <textarea data-lang="python" id="wdtpd_string_manipulation_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[1])
@@ -270,7 +248,7 @@ print(title[1])
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_2 data-question_label="2.1.2">
 <div id=wdtpd_string_manipulation_2_question class="ac_question col-md-12">
 
@@ -278,7 +256,7 @@ print(title[1])
 <textarea data-lang="python" id="wdtpd_string_manipulation_2_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[-3])
@@ -286,7 +264,7 @@ print(title[-3])
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_3 data-question_label="2.1.3">
 <div id=wdtpd_string_manipulation_3_question class="ac_question col-md-12">
 
@@ -294,7 +272,7 @@ print(title[-3])
 <textarea data-lang="python" id="wdtpd_string_manipulation_3_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 title = "Pirates of the Caribbean"
 print(title[2:6])
@@ -302,7 +280,7 @@ print(title[2:6])
 </div>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_4 data-question_label="2.1.4">
 <div id=wdtpd_string_manipulation_4_question class="ac_question col-md-12">
 
@@ -310,7 +288,7 @@ print(title[2:6])
 <textarea data-lang="python" id="wdtpd_string_manipulation_4_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='What will this program print?'  data-wasm=/_static 
+         data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 fruit = "pineapple"
 for poorly_named_variable in fruit:
@@ -318,23 +296,23 @@ for poorly_named_variable in fruit:
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="traversal-and-the-for-loop-by-index">
+</section>
+<section id="traversal-and-the-for-loop-by-index">
 <h2><span class="section-number">2.2. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index<a class="headerlink" href="#traversal-and-the-for-loop-by-index" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function to systematically generate the indices of the characters.  The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop can then be used to iterate over these positions.
 These positions can be used together with the indexing operator to access the individual
 characters in the string.</p>
 <p>Consider the following codelens example.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.2.1">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="2.2.1">
         <div class="pytutorVisualizer" id="string_for_loop_by_index_1"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.2.1 (string_for_loop_by_index_1)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var string_for_loop_by_index_1_vis;
 
 if (allTraceData === undefined) {
@@ -349,7 +327,7 @@ of the characters.</p>
 <p>In order to make the iteration more general, we can use the <code class="docutils literal notranslate"><span class="pre">len</span></code> function to provide the bound for <code class="docutils literal notranslate"><span class="pre">range</span></code>.  This is a very common pattern for traversing any sequence by position.  Make sure you understand why the range function behaves
 correctly when using <code class="docutils literal notranslate"><span class="pre">len</span></code> of the string as its parameter value.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_for_loop_by_index_2 data-question_label="2.2.2">
 <div id=string_for_loop_by_index_2_question class="ac_question col-md-12">
 
@@ -357,7 +335,7 @@ correctly when using <code class="docutils literal notranslate"><span class="pre
 <textarea data-lang="python" id="string_for_loop_by_index_2_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 fruit = "apple"
 for current_index in range(len(fruit)):
@@ -372,15 +350,15 @@ traversal by changing the sequence of index values.  Recall that we can create r
 <p>Remember that when using the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function with three arguments, the arguments are interpreted as <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>, and <code class="docutils literal notranslate"><span class="pre">amount_to_step_by</span></code>. The range function begins at the <code class="docutils literal notranslate"><span class="pre">starting_number</span></code>, and goes up to, but not including, the <code class="docutils literal notranslate"><span class="pre">ending_number</span></code>.</p>
 </div>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.2.3">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="2.2.3">
         <div class="pytutorVisualizer" id="string_for_loop_by_index_3"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.2.3 (string_for_loop_by_index_3)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var string_for_loop_by_index_3_vis;
 
 if (allTraceData === undefined) {
@@ -391,12 +369,12 @@ allTraceData["string_for_loop_by_index_3"] = {"code": "fruit = \"apple\"\nfor cu
 </script>
 </div>
 <p>Trace the values of <code class="docutils literal notranslate"><span class="pre">current_index</span></code> and satisfy yourself that they are correct.  In particular, note the start and end of the range.</p>
-<div class="section" id="check-your-understanding">
+<section id="check-your-understanding">
 <h3><span class="section-number">2.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.2.1.1" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1"  style="visibility: hidden;">
-            <p>string-acc8: How many times is the letter o printed by the following statements?</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.2.1.1" data-multipleanswers="false"  id="string_for_loop_by_index_test_question_1"  style="visibility: hidden;">
+    <p>string-acc8: How many times is the letter o printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">current_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)):</span>
     <span class="k">if</span> <span class="n">current_index</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -404,24 +382,24 @@ allTraceData["string_for_loop_by_index_3"] = {"code": "fruit = \"apple\"\nfor cu
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_a">0</li><li data-component="feedback">The for loop visits each index but the selection only prints some of them.</li>
-            
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_b">1</li><li data-component="feedback">o is at positions 4 and 8</li>
-            
-            <li data-component="answer" data-correct id="string_for_loop_by_index_test_question_1_opt_c">2</li><li data-component="feedback">Yes, it will print all the characters in even index positions and the o character appears both times in an even location.</li>
-            
-            <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_d">Error, the for statement cannot have an if inside.</li><li data-component="feedback">The for statement can have any statements inside, including if as well as for.</li>
-            
+    <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_a">0</li><li data-component="feedback">The for loop visits each index but the selection only prints some of them.</li>
+    
+    <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_b">1</li><li data-component="feedback">o is at positions 4 and 8</li>
+    
+    <li data-component="answer" data-correct='yes' id="string_for_loop_by_index_test_question_1_opt_c">2</li><li data-component="feedback">Yes, it will print all the characters in even index positions and the o character appears both times in an even location.</li>
+    
+    <li data-component="answer"  id="string_for_loop_by_index_test_question_1_opt_d">Error, the for statement cannot have an if inside.</li><li data-component="feedback">The for statement can have any statements inside, including if as well as for.</li>
+    
 
-            </ul>
-            </div>
-            </div>
-</div>
-<div class="section" id="the-in-and-not-in-operators">
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="the-in-and-not-in-operators">
 <span id="index-0"></span><h2><span class="section-number">2.3. </span>The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators<a class="headerlink" href="#the-in-and-not-in-operators" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator tests if one string is a substring of another:</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_in_not_in_1 data-question_label="2.3.1">
 <div id=string_in_not_in_1_question class="ac_question col-md-12">
 
@@ -429,7 +407,7 @@ allTraceData["string_for_loop_by_index_3"] = {"code": "fruit = \"apple\"\nfor cu
 <textarea data-lang="python" id="string_in_not_in_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print('p' in 'apple')
 print('i' in 'apple')
@@ -442,7 +420,7 @@ print('pa' in 'apple')
 substring of any other string. <em>(Also note that computer scientists
 like to think about these edge cases quite carefully!)</em></p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_in_not_in_2 data-question_label="2.3.2">
 <div id=string_in_not_in_2_question class="ac_question col-md-12">
 
@@ -450,7 +428,7 @@ like to think about these edge cases quite carefully!)</em></p>
 <textarea data-lang="python" id="string_in_not_in_2_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print('a' in 'a')
 print('apple' in 'apple')
@@ -461,7 +439,7 @@ print('' in 'apple')
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operator returns the logical opposite result of <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_in_not_in_3 data-question_label="2.3.3">
 <div id=string_in_not_in_3_question class="ac_question col-md-12">
 
@@ -469,20 +447,20 @@ print('' in 'apple')
 <textarea data-lang="python" id="string_in_not_in_3_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 print('x' not in 'apple')
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="the-accumulator-pattern-with-strings">
+</section>
+<section id="the-accumulator-pattern-with-strings">
 <span id="index-1"></span><h2><span class="section-number">2.4. </span>The Accumulator Pattern with Strings<a class="headerlink" href="#the-accumulator-pattern-with-strings" title="Permalink to this headline">¶</a></h2>
 <p>Combining the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator with string concatenation using <code class="docutils literal notranslate"><span class="pre">+</span></code> and the accumulator pattern, we can
 write a function that removes all the vowels from a string.  The idea is to start with a string and iterate over each character, checking to see if the character is a vowel.  As we process the characters, we will build up a new string consisting of only the nonvowel characters.  To do this, we use the accumulator pattern.</p>
 <p>Remember that the accumulator pattern allows us to keep a “running total”.  With strings, we are not accumulating a numeric total.  Instead we are accumulating characters onto a string.</p>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_accumulator_pattern_1 data-question_label="2.4.1">
 <div id=string_accumulator_pattern_1_question class="ac_question col-md-12">
 
@@ -490,7 +468,7 @@ write a function that removes all the vowels from a string.  The idea is to star
 <textarea data-lang="python" id="string_accumulator_pattern_1_editor" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def remove_vowels(original_string):
     vowels = "aeiouAEIOU"
@@ -522,15 +500,15 @@ the value of <code class="docutils literal notranslate"><span class="pre">each_c
 new characters to the end.</p>
 <p>Step through the function using codelens to see the accumulator variable grow.</p>
 
-<div class="runestone" style="max-width: none;">
-    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="2.4.2">
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="2.4.2">
         <div class="pytutorVisualizer" id="string_accumulator_pattern_2"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
         <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 2.4.2 (string_accumulator_pattern_2)</span> </p>
     </div>
 
-<script type="text/javascript">
+<script>
 var string_accumulator_pattern_2_vis;
 
 if (allTraceData === undefined) {
@@ -540,12 +518,12 @@ if (allTraceData === undefined) {
 allTraceData["string_accumulator_pattern_2"] = {"code": "def remove_vowels(original_string):\n    vowels = \"aeiouAEIOU\"\n    string_without_vowels = \"\"\n    for each_char in original_string:\n        if each_char not in vowels:\n            string_without_vowels = string_without_vowels + each_char\n    return string_without_vowels\n\nprint(remove_vowels(\"compsci\"))", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci"}, "ordered_varnames": ["original_string"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU"}, "ordered_varnames": ["original_string", "vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": ""}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "o"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "c", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "m"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cm", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "p"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmp", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "s"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmps", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "c"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 7, "event": "return", "func_name": "remove_vowels", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [{"func_name": "remove_vowels", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"original_string": "compsci", "vowels": "aeiouAEIOU", "string_without_vowels": "cmpsc", "each_char": "i", "__return__": "cmpsc"}, "ordered_varnames": ["original_string", "vowels", "string_without_vowels", "each_char", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "remove_vowels_f1"}], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"remove_vowels": ["REF", 1]}, "ordered_globals": ["remove_vowels"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "remove_vowels(original_string)", null]}, "stdout": "cmpsc\n"}]};
 </script>
 </div>
-<div class="section" id="id1">
+<section id="id1">
 <h3><span class="section-number">2.4.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.4.1.1" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1"  style="visibility: hidden;">
-            <p>string-acc14: What is printed by the following statements:</p>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.4.1.1" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_1"  style="visibility: hidden;">
+    <p>string-acc14: What is printed by the following statements:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
@@ -554,17 +532,17 @@ allTraceData["string_accumulator_pattern_2"] = {"code": "def remove_vowels(origi
 </pre></div>
 </div>
 
-            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
-            
-            <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
-            
+    <li data-component="answer" data-correct='yes' id="string_accumulator_pattern_test_question_1_opt_a">ball</li><li data-component="feedback">Yes, the repeated concatenation will cause another_string to become the same as some_string.</li>
+    
+    <li data-component="answer"  id="string_accumulator_pattern_test_question_1_opt_b">llab</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
+    
 
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="2.4.1.2" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2"  style="visibility: hidden;">
-            <p>string-acc15: What is printed by the following statements:</p>
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2.4.1.2" data-multipleanswers="false"  id="string_accumulator_pattern_test_question_2"  style="visibility: hidden;">
+    <p>string-acc15: What is printed by the following statements:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_string</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
 <span class="n">another_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">some_string</span><span class="p">:</span>
@@ -573,15 +551,15 @@ allTraceData["string_accumulator_pattern_2"] = {"code": "def remove_vowels(origi
 </pre></div>
 </div>
 
-            <li data-component="answer"  id="string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
-            
-            <li data-component="answer" data-correct id="string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback">Yes, the order is reversed due to the order of the concatenation.</li>
-            
+    <li data-component="answer"  id="string_accumulator_pattern_test_question_2_opt_a">ball</li><li data-component="feedback">Look again at the *order* of the concatenation!</li>
+    
+    <li data-component="answer" data-correct='yes' id="string_accumulator_pattern_test_question_2_opt_b">llab</li><li data-component="feedback">Yes, the order is reversed due to the order of the concatenation.</li>
+    
 
-            </ul>
-            </div>
-            
-    <div data-component="reveal" id="reveal_string_manipulation_reversed_order_of_concatenation"   data-showtitle="Need Help?" data-hidetitle="Hide Help"  style="visibility: hidden;">
+    </ul>
+    </div>
+    
+    <div data-component="reveal" class="runestone " id="reveal_string_manipulation_reversed_order_of_concatenation"   data-showtitle="Need Help?" data-hidetitle="Hide Help"  style="visibility: hidden;">
     <p>Consider the following table, which shows the values of the variables as the code iterates:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -623,13 +601,13 @@ allTraceData["string_accumulator_pattern_2"] = {"code": "def remove_vowels(origi
 
     </div>
     
-        <div class="runestone" style="max-width: none;"> 
-        <div data-component="parsons" id="string_accumulator_patten_parsons_1" class="alert alert-warning parsons" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="string_accumulator_patten_parsons_1" class="parsons" >
         <div class="parsons_question parsons-text" >
     <p>Construct a block of code that correctly implements the accumulator pattern with strings. After the code has finished executing, <code class="docutils literal notranslate"><span class="pre">new_word</span></code> is printed, and will have the same value as <code class="docutils literal notranslate"><span class="pre">original_word</span></code>.</p>
 
         </div>
-        <pre  data-question_label="2.4.1.3"         style="visibility: hidden;">
+        <pre  class="parsonsblocks" data-question_label="2.4.1.3"          style="visibility: hidden;">
         original_word = "clockwork"
 new_word = ""
 for letter in original_word:
@@ -638,20 +616,20 @@ print(new_word)
         </pre>
         </div>
         </div>
-    </div>
-</div>
-<div class="section" id="practice-problems">
+    </section>
+</section>
+<section id="practice-problems">
 <h2><span class="section-number">2.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p><strong>Hint: For each of the following, you will want to use the accumulator pattern with strings. In other words, you first need to create an empty string, then concatenate letters onto it as needed.</strong></p>
-<div class="section" id="even-letters-of-a-word">
+<section id="even-letters-of-a-word">
 <h3><span class="section-number">2.5.1. </span>Even Letters of a Word<a class="headerlink" href="#even-letters-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_more_info_1 data-question_label="2.5.1.1">
 <div id=practice_problem_string_more_info_1_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the even letters of the <code class="docutils literal notranslate"><span class="pre">word</span></code> (the first letter is even, since we start counting our index values at 0). For example, given the <code class="docutils literal notranslate"><span class="pre">word</span></code> “Saskatoon”, the function should return “Ssaon”.</p>
@@ -664,7 +642,7 @@ print(new_word)
 <textarea data-lang="python" id="practice_problem_string_more_info_1_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def even_letters(word):
     return ""
@@ -688,7 +666,7 @@ myTests().main()
 </div>
 </div>
 
-    <div data-component="reveal" id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint"  style="visibility: hidden;">
+    <div data-component="reveal" class="runestone " id="reveal_string_manipulation_even_letters_hint"   data-showtitle="Need a Hint?" data-hidetitle="Hide Hint"  style="visibility: hidden;">
     <p>Since you are trying to get only the even letters, you need to know which index value you are currently on. That means we need to traverse the string using a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">counter</span> <span class="pre">in</span> <span class="pre">range()</span></code> style loop. The accumulator pattern will look something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_letters</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
     <span class="n">new_word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -700,15 +678,15 @@ myTests().main()
 </div>
 
     </div>
-    </div>
-<div class="section" id="reverse-me">
+    </section>
+<section id="reverse-me">
 <h3><span class="section-number">2.5.2. </span>Reverse Me<a class="headerlink" href="#reverse-me" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_more_info_2 data-question_label="2.5.2.1">
 <div id=practice_problem_string_more_info_2_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns the <code class="docutils literal notranslate"><span class="pre">word</span></code> spelled backwards. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return “nootaksaS”.</p>
@@ -721,7 +699,7 @@ myTests().main()
 <textarea data-lang="python" id="practice_problem_string_more_info_2_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def reverse_me(word):
     return ""
@@ -744,15 +722,15 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="letter-destroyer">
+</section>
+<section id="letter-destroyer">
 <h3><span class="section-number">2.5.3. </span>Letter Destroyer<a class="headerlink" href="#letter-destroyer" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_more_info_3 data-question_label="2.5.3.1">
 <div id=practice_problem_string_more_info_3_question class="ac_question col-md-12">
 <p>Create a function with two parameters, <code class="docutils literal notranslate"><span class="pre">word</span></code> and <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code>. The function should return the <code class="docutils literal notranslate"><span class="pre">word</span></code>, but without any of the occurrences of the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> in the string. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, and the <code class="docutils literal notranslate"><span class="pre">letter_to_destroy</span></code> was ‘o’, the function should return “Saskatn”.</p>
@@ -765,7 +743,7 @@ myTests().main()
 <textarea data-lang="python" id="practice_problem_string_more_info_3_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def letter_destroyer(word, letter_to_destroy):
     return ""
@@ -788,15 +766,15 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-<div class="section" id="qwerty-finder">
+</section>
+<section id="qwerty-finder">
 <h3><span class="section-number">2.5.4. </span>QWERTY Finder<a class="headerlink" href="#qwerty-finder" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
-<div class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_more_info_4 data-question_label="2.5.4.1">
 <div id=practice_problem_string_more_info_4_question class="ac_question col-md-12">
 <p>Create a function that takes in a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> and returns the location of the first occurrence of one of the following letters: “qwerty”. If none of these letters exist in the word, have the function return -1. For example, if the <code class="docutils literal notranslate"><span class="pre">word</span></code> was “Saskatoon”, the function should return 5 (the index value for the <code class="docutils literal notranslate"><span class="pre">t</span></code> in “Saskatoon”).</p>
@@ -809,7 +787,7 @@ myTests().main()
 <textarea data-lang="python" id="practice_problem_string_more_info_4_editor" 
       data-timelimit=25000   data-enabledownload="true"  
     data-audio=''      
-           data-wasm=/_static 
+           data-wasm=/_static
      style="visibility: hidden;">
 def qwerty_finder(word):
     return ""
@@ -832,9 +810,9 @@ myTests().main()
 </textarea>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   

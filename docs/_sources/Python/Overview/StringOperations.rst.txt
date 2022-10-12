@@ -87,8 +87,8 @@ joining the two operands by linking them end-to-end. This is the equivalent of u
     :nocanvas:
 
     fruit = "banana"
-    bakedGood = " nut bread"
-    print(fruit + bakedGood)
+    baked_good = " nut bread"
+    print(fruit + baked_good)
 
 The output of this program is ``banana nut bread``. The space before the word
 ``nut`` is part of the string and is necessary to produce the space between

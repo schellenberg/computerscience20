@@ -201,7 +201,7 @@ Question 11
                 new_string = new_string + apply_rule(character)
             return new_string
 
-            print(process_string("XZY"))
+        print(process_string("XZY"))
 
     - :XYFZFXY: Great!
       :.*: Try again!

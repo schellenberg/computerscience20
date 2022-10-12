@@ -303,7 +303,7 @@ In this case, the value of ``some_color`` is used to change the color attribute 
 Mixed Up Programs
 ~~~~~~~~~~~~~~~~~~
 
-.. parsonsprob:: 3_8
+.. parsonsprob:: parsons_for_loop_3_8
 
     .. image:: images/parsons/TurtleTriangle.png
         :width: 150
@@ -326,7 +326,7 @@ Mixed Up Programs
         marie.left(120)
 
 
-.. parsonsprob:: 3_9
+.. parsonsprob:: parsons_for_loop_3_9
 
     .. image:: images/parsons/TurtleRect.png
         :width: 150

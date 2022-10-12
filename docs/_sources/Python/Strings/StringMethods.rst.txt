@@ -173,6 +173,8 @@ find        item                Returns the leftmost index where the substring i
 rfind       item                Returns the rightmost index where the substring item is found, or -1 if not found
 index       item                Like find except causes a runtime error if item is not found
 rindex      item                Like rfind except causes a runtime error if item is not found
+
+split       sep                 Turns a string into a list. If a sep is given, it breaks the string up any place a sep is found. If no sep is given, it breaks the string up any place whitespace is found.
 ==========  ==============      ==================================================================
 
 You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original.  You can also consult the `Python documentation for strings <https://docs.python.org/3/library/stdtypes.html#string-methods>`_.
@@ -194,7 +196,6 @@ You should experiment with these methods so that you understand what they do.  N
 
 .. activecode:: string_methods_example3
 
-
     food = "banana bread"
     print(food.capitalize())
 
@@ -211,6 +212,13 @@ You should experiment with these methods so that you understand what they do.  N
     print(food.rfind("b"))
 
     print(food.index("e"))
+
+
+.. activecode:: string_methods_example4
+
+    sentence = "Hello there Computer Science 20"
+    words = sentence.split()
+    print(words)
 
 
 Check Your Understanding
