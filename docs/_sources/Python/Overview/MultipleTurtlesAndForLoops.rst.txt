@@ -449,7 +449,7 @@ Regular Polygons
 
 Create a program that uses for loops to make a turtle draw regular polygons (regular means all sides the same lengths, all angles the same). First, ask the user how many sides they want the polygon to have, and how long each side length should be. Now draw the regular polygon that meets the user's requirements!
 
-.. note:: Remember that in a regular polygon, the sum of the interior angles of the polygon will always be 360 degrees.
+.. note:: Remember that in a regular polygon, the sum of the exterior angles of the polygon will always be 360 degrees.
    
 .. activecode:: practice_problem_turtle_for_loops_1
     :nocodelens:
