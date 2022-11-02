@@ -80,7 +80,10 @@ Question 4
 
         a = 6
         b = 10
-        print( a == 6 and 10 )
+        if a == 6 and 10:
+            print("True")
+        else:
+            print("False")
 
 
 Question 5
