@@ -56,7 +56,7 @@ is the details of how the squaring is done.  This is a great example of "black b
 
     to_square = 10
     result = square(to_square)
-    print("The result of", to_square, "squared is", result)
+    print(f"The result of {to_square} squared is {result}")
 
 
 In the program above, notice that the variable ``running_total`` starts out with a value of 0.  Next, the iteration is performed ``original_number`` times.  Inside the for loop, the update occurs. ``running_total`` is reassigned a new value which is the old value plus the value of ``original_number``.
@@ -86,7 +86,7 @@ Here is the same program in codelens.  Step through the function and watch the "
 
     to_square = 10
     result = square(to_square)
-    print("The result of", to_square, "squared is", result)
+    print(f"The result of {to_square} squared is {result}")
 
 
 .. index:: accumulator pattern

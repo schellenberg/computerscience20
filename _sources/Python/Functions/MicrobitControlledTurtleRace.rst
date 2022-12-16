@@ -33,7 +33,7 @@ What will the following programs output? Why?
     def a(x, y):
         x = x + 1
         y = y + 1
-        print(x, y)
+        print(f"{x} {y}")
 
     x = 10
     y = 20
@@ -77,15 +77,15 @@ What will the following programs output? Why?
     :caption: What will this program print?
 
     def a(my_data):
-        print("function a, my_data =  ", my_data)
+        print(f"function a, my_data = {my_data}")
         my_data = 20
-        print("function a, my_data =  ", my_data)
+        print(f"function a, my_data = {my_data}")
 
     my_data = 10
 
-    print("global scope, my_data =", my_data)
+    print(f"global scope, my_data = {my_data}")
     a(my_data)
-    print("global scope, my_data =", my_data)
+    print(f"global scope, my_data = {my_data}")
 
 
 .. activecode:: wdtpd_functions_15

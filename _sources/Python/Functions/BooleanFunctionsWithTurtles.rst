@@ -176,10 +176,8 @@ we already know how to do well and get them working.  For now, we will just retu
     import random
     import turtle
 
-
     def is_in_screen(the_window, the_turtle):
         return True
-
 
     canvas = turtle.Screen()
 
