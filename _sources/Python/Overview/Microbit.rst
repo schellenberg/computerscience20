@@ -45,10 +45,12 @@ Sometimes, we'd like to wait a bit before running the next command in a Python p
     import time
 
     for counter in range(10):
-        print("Counting up. Now at", counter)
+        print(f"Counting up. Now at {counter}")
         time.sleep(1)
 
     print("All done!")
+
+
 
 
 .. index:: micro:bit
@@ -183,7 +185,7 @@ The examples above used the Micro:bit as an output device, as we sent instructio
     while True:
         x = microbit.accelerometer.get_x()
         if x > 200 or x < -200:
-            print("Tilted: " + str(x))
+            print(f"Tilted: {x}")
         else:
             print("Not Tilted")
         time.sleep(0.5)

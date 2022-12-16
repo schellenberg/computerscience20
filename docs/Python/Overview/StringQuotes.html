@@ -147,7 +147,8 @@
 <li><a class="reference internal" href="#">7. Which Quotes to Use When Creating Strings</a><ul>
 <li><a class="reference internal" href="#a-bit-more-detail-about-strings">7.1. A Bit More Detail About Strings</a></li>
 <li><a class="reference internal" href="#what-does-this-program-do">7.2. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#assignment-work-time">7.3. Assignment Work Time</a></li>
+<li><a class="reference internal" href="#f-strings">7.3. f-strings</a></li>
+<li><a class="reference internal" href="#assignment-work-time">7.4. Assignment Work Time</a></li>
 </ul>
 </li>
 </ul>
@@ -354,23 +355,55 @@ print(interesting_quotes)
 </textarea>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</section>
+<section id="f-strings">
+<h2><span class="section-number">7.3. </span>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this headline">¶</a></h2>
 <p>Another alternative to concatenating strings together is to use f-strings (formatted string literals). An f-string allows you to easily create a string that has the <em>value</em> of variables inserted into it. To create an f-string, you simply put the letter <code class="docutils literal notranslate"><span class="pre">f</span></code> before the quotes that begin the string. This tells Python that it should look for variable names inside the string, and if it finds any, it will replace them with the value of that variable. For Python to find the variable, you must enclose the variable inside curly brackets, like <code class="docutils literal notranslate"><span class="pre">{some_variable}</span></code>. Consider this example of using an f-string:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Eli&quot;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">14</span>
 
-<span class="n">greeting</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. I heard you just turned </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=f_strings_demo_1 data-question_label="7.3.1">
+<div id=f_strings_demo_1_question class="ac_question col-md-12">
 
-<span class="c1"># this code will print the following:</span>
-<span class="c1"># Hello, Eli. I heard you just turned 14!</span>
-</pre></div>
+</div>
+<textarea data-lang="python" id="f_strings_demo_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+name = "Eli"
+age = 14
+
+greeting = f"Hello, {name}. I heard you just turned {age}!"
+print(greeting)
+</textarea>
+</div>
+</div>
+<p>You can also use triple quoted strings in combination with f-strings to create multi-line strings, as shown below:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=f_strings_demo_2 data-question_label="7.3.2">
+<div id=f_strings_demo_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="f_strings_demo_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+name = "Eli"
+age = 14
+favorite_show = "Community"
+
+message = f"""Hello, {name}.
+I heard you just turned {age}!
+Still enjoying {favorite_show}?"""
+print(message)
+</textarea>
 </div>
 </div>
 </section>
 <section id="assignment-work-time">
-<h2><span class="section-number">7.3. </span>Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Assignment Work Time<a class="headerlink" href="#assignment-work-time" title="Permalink to this headline">¶</a></h2>
 <p>Please spend the rest of the class continuing to work on your current Python assignment (likely something emphasizing user input and output).</p>
 </section>
 </section>

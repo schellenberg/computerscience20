@@ -108,18 +108,34 @@ Can you fix the error in the following programs?
     print(interesting_quotes)
 
 
-.. note:: 
+f-strings 
+----------
 
-    Another alternative to concatenating strings together is to use f-strings (formatted string literals). An f-string allows you to easily create a string that has the *value* of variables inserted into it. To create an f-string, you simply put the letter ``f`` before the quotes that begin the string. This tells Python that it should look for variable names inside the string, and if it finds any, it will replace them with the value of that variable. For Python to find the variable, you must enclose the variable inside curly brackets, like ``{some_variable}``. Consider this example of using an f-string::
+Another alternative to concatenating strings together is to use f-strings (formatted string literals). An f-string allows you to easily create a string that has the *value* of variables inserted into it. To create an f-string, you simply put the letter ``f`` before the quotes that begin the string. This tells Python that it should look for variable names inside the string, and if it finds any, it will replace them with the value of that variable. For Python to find the variable, you must enclose the variable inside curly brackets, like ``{some_variable}``. Consider this example of using an f-string:
 
-        name = "Eli"
-        age = 14
+.. activecode:: f_strings_demo_1
+    :nocanvas:
 
-        greeting = f"Hello, {name}. I heard you just turned {age}!"
-        print(greeting)
+    name = "Eli"
+    age = 14
 
-        # this code will print the following:
-        # Hello, Eli. I heard you just turned 14!
+    greeting = f"Hello, {name}. I heard you just turned {age}!"
+    print(greeting)
+
+
+You can also use triple quoted strings in combination with f-strings to create multi-line strings, as shown below:
+
+.. activecode:: f_strings_demo_2
+    :nocanvas:
+
+    name = "Eli"
+    age = 14
+    favorite_show = "Community"
+
+    message = f"""Hello, {name}.
+    I heard you just turned {age}!
+    Still enjoying {favorite_show}?"""
+    print(message)
 
 
 Assignment Work Time

@@ -169,7 +169,9 @@ message for each friend.
     :nocanvas:
 
     for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-        print("Hi", name, "Please come to my party on Saturday!")
+        print(f"Hi {name}! Please come to my party on Saturday!")
+
+
 
 Take a look at the output produced when you press the ``run`` button.  There is one line printed for each friend.  Here's how it works:
 
@@ -369,8 +371,7 @@ Mixed Up Programs
     .. code-block:: python
 
         for number in [5, 4, 3, 2, 1, 0]:
-            print("I have", number, "cookies.  I'm going to eat one.")
-
+            print(f"I have {number} cookies. I'm going to eat one.")
 
 .. mchoice:: test_question3_4_2
     :answer_a: They are indented to the same degree from the loop header.
@@ -400,7 +401,7 @@ Mixed Up Programs
     .. code-block:: python
 
         for number in [5, 4, 3, 2, 1, 0]:
-            print("I have", number, "cookies.  I'm going to eat one.")
+            print(f"I have {number} cookies. I'm going to eat one.")
 
 
 .. index:: range
