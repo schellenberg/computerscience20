@@ -290,18 +290,18 @@ are complete, the string contains a set of instructions.  Our plan is to let the
 <p>To begin, we will look at an example set of rules:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 28%" />
 <col style="width: 72%" />
+<col style="width: 28%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>A</p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Axiom</p></td>
+<td><p>A</p></td>
 </tr>
-<tr class="row-even"><td><p>A -&gt; B</p></td>
-<td><p>Rule 1 Change A to B</p></td>
+<tr class="row-even"><td><p>Rule 1 Change A to B</p></td>
+<td><p>A -&gt; B</p></td>
 </tr>
-<tr class="row-odd"><td><p>B -&gt; AB</p></td>
-<td><p>Rule 2 Change B to AB</p></td>
+<tr class="row-odd"><td><p>Rule 2 Change B to AB</p></td>
+<td><p>B -&gt; AB</p></td>
 </tr>
 </tbody>
 </table>
@@ -391,15 +391,15 @@ program. All you need to do is re-write the <code class="docutils literal notran
 <p>Suppose you had the following rules:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 26%" />
 <col style="width: 74%" />
+<col style="width: 26%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>A</p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Axiom</p></td>
+<td><p>A</p></td>
 </tr>
-<tr class="row-even"><td><p>A -&gt; BAB</p></td>
-<td><p>Rule 1 Change A to BAB</p></td>
+<tr class="row-even"><td><p>Rule 1 Change A to BAB</p></td>
+<td><p>A -&gt; BAB</p></td>
 </tr>
 </tbody>
 </table>
@@ -417,11 +417,11 @@ L-system has just one rule:</p>
 <col style="width: 62%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>F</p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Axiom</p></td>
+<td><p>F</p></td>
 </tr>
-<tr class="row-even"><td><p>F -&gt; F-F++F-F</p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Rule 1</p></td>
+<td><p>F -&gt; F-F++F-F</p></td>
 </tr>
 </tbody>
 </table>
@@ -577,21 +577,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 <p>Adapt the template code given above to create drawings of other famous L-Systems.</p>
 <section id="hilbert-curve">
 <h3><span class="section-number">4.4.1. </span>Hilbert Curve<a class="headerlink" href="#hilbert-curve" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create the Hilbert curve. Use an angle of 90 degrees.</p>
+<p>Use the following axiom and rules to create the Hilbert curve.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>90 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -613,21 +616,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 </section>
 <section id="dragon-curve">
 <h3><span class="section-number">4.4.2. </span>Dragon Curve<a class="headerlink" href="#dragon-curve" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create the dragon curve. Use an angle of 90 degrees.</p>
+<p>Use the following axiom and rules to create the dragon curve.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 46%" />
-<col style="width: 54%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>90 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -649,21 +655,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 </section>
 <section id="arrowhead-curve">
 <h3><span class="section-number">4.4.3. </span>Arrowhead Curve<a class="headerlink" href="#arrowhead-curve" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create the arrowhead curve. Use an angle of 60 degrees.</p>
+<p>Use the following axiom and rules to create the arrowhead curve.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 46%" />
-<col style="width: 54%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>60 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -685,21 +694,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 </section>
 <section id="peano-gosper-curve">
 <h3><span class="section-number">4.4.4. </span>Peano-Gosper Curve<a class="headerlink" href="#peano-gosper-curve" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create the Peano-Gosper curve. Use an angle of 60 degrees.</p>
+<p>Use the following axiom and rules to create the Peano-Gosper curve.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 60%" />
 <col style="width: 40%" />
+<col style="width: 60%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>60 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -721,21 +733,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 </section>
 <section id="sierpinski-triangle">
 <h3><span class="section-number">4.4.5. </span>Sierpinski Triangle<a class="headerlink" href="#sierpinski-triangle" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create the Sierpinski Triangle. Use an angle of 60 degrees.</p>
+<p>Use the following axiom and rules to create the Sierpinski Triangle.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
+<col style="width: 40%" />
+<col style="width: 60%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FXF--FF--FF</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>60 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FXF--FF--FF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -757,18 +772,21 @@ draw_l_system(jill, instruction_string, 60, 5)
 </section>
 <section id="snowflake">
 <h3><span class="section-number">4.4.6. </span>Snowflake<a class="headerlink" href="#snowflake" title="Permalink to this headline">¶</a></h3>
-<p>Use the following axiom and rules to create a snowflake shape. Use an angle of 72 degrees.</p>
+<p>Use the following axiom and rules to create a snowflake shape.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
+<col style="width: 40%" />
+<col style="width: 60%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">F-F-F-F-F</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>72 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F-F-F-F-F</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -791,21 +809,24 @@ draw_l_system(jill, instruction_string, 60, 5)
 <section id="unnamed-shape">
 <h3><span class="section-number">4.4.7. </span>Unnamed Shape<a class="headerlink" href="#unnamed-shape" title="Permalink to this headline">¶</a></h3>
 <p><em>If you know the name of this shape, please tell me!</em></p>
-<p>Use the following axiom and rules to create an interesting shape. Use an angle of 45 degrees.</p>
+<p>Use the following axiom and rules to create an interesting shape.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
+<col style="width: 40%" />
+<col style="width: 60%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">L--F--L--F</span></code></p></td>
-<td><p>Axiom</p></td>
+<tr class="row-odd"><td><p>Angle</p></td>
+<td><p>45 degrees</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></p></td>
-<td><p>Rule 1</p></td>
+<tr class="row-even"><td><p>Axiom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L--F--L--F</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></p></td>
-<td><p>Rule 2</p></td>
+<tr class="row-odd"><td><p>Rule 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Rule 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></p></td>
 </tr>
 </tbody>
 </table>

@@ -91,17 +91,17 @@ What will the following programs output? Why?
 .. activecode:: wdtpd_functions_15
     :caption: What will this program print?
 
-    def some_function( a_number, another_number ):
+    def some_function(a_number, another_number):
         a_number = a_number * 2
         another_number -= 5
         something_else = a_number + another_number
         something_else = weird_function(something_else)
-        print( something_else )
+        print(something_else)
 
-    def weird_function( boo_urns ):
+    def weird_function(boo_urns):
         return boo_urns / 2
 
-    some_function( 2, 3)
+    some_function(2, 3)
 
 .. note:: 
 

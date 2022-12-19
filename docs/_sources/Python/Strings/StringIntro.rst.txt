@@ -60,6 +60,22 @@ strings look like numbers. The one exception to this rule is that the ``+`` oper
     print(fruit + baked_good)
 
 
+F-Strings Reminder
+-----------------------
+
+Although concatenation works well for simple use cases, it is often preferable to use an f-string to 
+format strings, which allows you to insert the value of any variable by enclosing the variable in curly
+brackets. To indicate it is a formatted string, add a ``f`` before the string quotes begin.
+For example, the concatenation example above could also be written as:
+
+.. activecode:: f_strings_reminder_demo
+    :nocanvas:
+
+    fruit = "banana"
+    baked_good = "nut bread"
+    print(f"{fruit} {baked_good}")
+
+
 .. index:: index operator
 
 Index Operator: Working with the Characters of a String
@@ -354,7 +370,7 @@ We have previously seen that the ``for`` statement can iterate over the items of
     :nocanvas:
 
     for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-        invitation = "Hi " + a_name + ".  Please come to my party on Saturday!"
+        invitation = f"Hi {a_name}.  Please come to my party on Saturday!"
         print(invitation)
       
 Recall that the loop variable takes on each value in the sequence of names.  The body is performed once for each name.  The same was true for the sequence of integers created by the ``range`` function.
@@ -431,7 +447,7 @@ Try the following practice problems. You can either work directly in the textboo
 Con Cat
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in ``Garfield``, your program could print something like ``Good to see you, Garfield!``. **Be sure to use concatenation in your solution!**
+Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in ``Garfield``, your program could print something like ``Good to see you, Garfield!``. **You can use concatenation or f-strings in your solution!**
    
 .. activecode:: practice_problem_string_into_1
     :nocodelens:

@@ -94,7 +94,7 @@ The code below assigns a variable ``paragraph`` in the program a triple-quoted s
                     number_of_e = number_of_e + 1
 
         percent_with_e = (number_of_e / total_chars) * 100
-        print("Your text contains", total_chars, "alphabetic characters of which", number_of_e, "(", percent_with_e, "%)", "are 'e'.")
+        print(f"Your text contains {total_chars} alphabetic characters of which {number_of_e} ({percent_with_e}%) are 'e'.")
 
 
     paragraph = '''

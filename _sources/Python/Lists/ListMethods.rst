@@ -371,7 +371,7 @@ The following is a simple insult generator, using words found in the works of th
     second_word = random.choice(second_word_list)
     third_word = random.choice(third_word_list)
 
-    the_insult = "Thou " + first_word + " " + second_word + " " + third_word + "!"
+    the_insult = f"Thou {first_word} {second_word} {third_word}!"
 
     print(the_insult)
 
@@ -520,7 +520,7 @@ a. Append "apple" and 76 to the list.
 Compliment Generator
 ~~~~~~~~~~~~~~~~~~~~~
 
-Those Shakespearean insults sting a bit. Let's cheer everyone up by creating a random compliment generator. Your compliments should be in the style of "You are a ``great`` ``friend``!". Store any number of words similar to ``great`` into a list called ``first_word_list``, and any number of words similar to ``friend``into a list called ``second_word_list``. Then pick one word from each of the lists at random, and print out a random compliment!
+Those Shakespearean insults sting a bit. Let's cheer everyone up by creating a random compliment generator. Your compliments should be in the style of "You are a ``great`` ``friend``!". Store any number of words similar to ``great`` into a list called ``first_word_list``, and any number of words similar to ``friend`` into a list called ``second_word_list``. Then pick one word from each of the lists at random, and print out a random compliment!
 
 
 .. activecode:: list_methods_practice_3

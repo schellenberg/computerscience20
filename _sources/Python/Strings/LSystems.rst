@@ -84,11 +84,11 @@ are complete, the string contains a set of instructions.  Our plan is to let the
 
 To begin, we will look at an example set of rules:
 
-========  =====================
-A         Axiom
-A -> B    Rule 1 Change A to B
-B -> AB   Rule 2 Change B to AB
-========  =====================
+=====================   ========
+Axiom                   A
+Rule 1 Change A to B    A -> B
+Rule 2 Change B to AB   B -> AB
+=====================   ========
 
 Each rule set contains an axiom which represents the starting point in the transformations that will follow.  The rules are of the form::
 
@@ -171,10 +171,10 @@ program. All you need to do is re-write the ``apply_rules`` function.
 
     Suppose you had the following rules:
 
-    ========  =======================
-    A         Axiom
-    A -> BAB  Rule 1 Change A to BAB
-    ========  =======================
+    =======================     ========
+    Axiom                       A
+    Rule 1 Change A to BAB      A -> BAB
+    =======================     ========
 
     What kind of a string would these rules create?  Modify the program above to
     implement the rule.
@@ -187,8 +187,8 @@ Now let's look at a real L-system that implements a famous drawing.  This
 L-system has just one rule:
 
 =============  =====================
-F              Axiom
-F -> F-F++F-F  Rule 1
+Axiom          F              
+Rule 1         F -> F-F++F-F  
 =============  =====================
 
 This L-system uses symbols that will have special meaning when we use them later with the turtle to draw a picture.
@@ -330,12 +330,13 @@ Adapt the template code given above to create drawings of other famous L-Systems
 Hilbert Curve
 ~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create the Hilbert curve. Use an angle of 90 degrees.
+Use the following axiom and rules to create the Hilbert curve.
 
 =====================   =====================
-``L``                   Axiom
-``L -> +RF-LFL-FR+``    Rule 1
-``R -> -LF+RFR+FL-``    Rule 2
+Angle                   90 degrees
+Axiom                   ``L``
+Rule 1                  ``L -> +RF-LFL-FR+``
+Rule 2                  ``R -> -LF+RFR+FL-``
 =====================   =====================
 
 
@@ -349,13 +350,14 @@ Use the following axiom and rules to create the Hilbert curve. Use an angle of 9
 Dragon Curve
 ~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create the dragon curve. Use an angle of 90 degrees.
+Use the following axiom and rules to create the dragon curve.
 
-==================  =====================
-``FX``              Axiom
-``X -> X+YF+``      Rule 1
-``Y -> -FX-Y``      Rule 2
-==================  =====================
+=====================   =====================
+Angle                   90 degrees
+Axiom                   ``FX``
+Rule 1                  ``X -> X+YF+``
+Rule 2                  ``Y -> -FX-Y``
+=====================   =====================
 
 
 .. activecode:: strings_l_systems_practice_2
@@ -368,13 +370,14 @@ Use the following axiom and rules to create the dragon curve. Use an angle of 90
 Arrowhead Curve
 ~~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create the arrowhead curve. Use an angle of 60 degrees.
+Use the following axiom and rules to create the arrowhead curve.
 
-==================  =====================
-``FX``              Axiom
-``X -> YF+XF+Y``    Rule 1
-``Y -> XF-YF-X``    Rule 2
-==================  =====================
+=====================   =====================
+Angle                   60 degrees
+Axiom                   ``FX``
+Rule 1                  ``X -> YF+XF+Y``
+Rule 2                  ``Y -> XF-YF-X``
+=====================   =====================
 
 
 .. activecode:: strings_l_systems_practice_3
@@ -387,13 +390,14 @@ Use the following axiom and rules to create the arrowhead curve. Use an angle of
 Peano-Gosper Curve
 ~~~~~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create the Peano-Gosper curve. Use an angle of 60 degrees.
+Use the following axiom and rules to create the Peano-Gosper curve.
 
-===============================     =====================
-``FX``                              Axiom
-``X -> X+YF++YF-FX--FXFX-YF+``      Rule 1
-``Y -> -FX+YFYF++YF+FX--FX-Y``      Rule 2
-===============================     =====================
+=====================   ===============================
+Angle                   60 degrees
+Axiom                   ``FX``
+Rule 1                  ``X -> X+YF++YF-FX--FXFX-YF+``
+Rule 2                  ``Y -> -FX+YFYF++YF+FX--FX-Y``
+=====================   ===============================
 
 
 .. activecode:: strings_l_systems_practice_4
@@ -406,13 +410,14 @@ Use the following axiom and rules to create the Peano-Gosper curve. Use an angle
 Sierpinski Triangle
 ~~~~~~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create the Sierpinski Triangle. Use an angle of 60 degrees.
+Use the following axiom and rules to create the Sierpinski Triangle.
 
-===========================     =====================
-``FXF--FF--FF``                 Axiom
-``F -> FF``                     Rule 1
-``X -> --FXF++FXF++FXF--``      Rule 2
-===========================     =====================
+=====================   ===============================
+Angle                   60 degrees
+Axiom                   ``FXF--FF--FF``
+Rule 1                  ``F -> FF``
+Rule 2                  ``X -> --FXF++FXF++FXF--``
+=====================   ===============================
 
 
 .. activecode:: strings_l_systems_practice_5
@@ -426,12 +431,13 @@ Use the following axiom and rules to create the Sierpinski Triangle. Use an angl
 Snowflake
 ~~~~~~~~~~~~~~~~~~~~
 
-Use the following axiom and rules to create a snowflake shape. Use an angle of 72 degrees.
+Use the following axiom and rules to create a snowflake shape.
 
-===========================     =====================
-``F-F-F-F-F``                   Axiom
-``F -> F-F++F+F-F-F``           Rule 1
-===========================     =====================
+=====================   ===============================
+Angle                   72 degrees
+Axiom                   ``F-F-F-F-F``
+Rule 1                  ``F -> F-F++F+F-F-F``
+=====================   ===============================
 
 
 .. activecode:: strings_l_systems_practice_6
@@ -446,13 +452,14 @@ Unnamed Shape
 
 *If you know the name of this shape, please tell me!*
 
-Use the following axiom and rules to create an interesting shape. Use an angle of 45 degrees.
+Use the following axiom and rules to create an interesting shape.
 
-===========================     =====================
-``L--F--L--F``                  Axiom
-``L -> +R-F-R+``                Rule 1
-``R -> -L+F+L-``                Rule 2
-===========================     =====================
+=====================   ===============================
+Angle                   45 degrees
+Axiom                   ``L--F--L--F``
+Rule 1                  ``L -> +R-F-R+``
+Rule 2                  ``R -> -L+F+L-``
+=====================   ===============================
 
 
 .. activecode:: strings_l_systems_practice_7

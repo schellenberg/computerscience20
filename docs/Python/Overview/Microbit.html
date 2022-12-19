@@ -262,7 +262,7 @@ print("second thing")
 import time
 
 for counter in range(10):
-    print("Counting up. Now at", counter)
+    print(f"Counting up. Now at {counter}")
     time.sleep(1)
 
 print("All done!")
@@ -379,7 +379,7 @@ print("All done!")
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tilted: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tilted: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not Tilted&quot;</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>

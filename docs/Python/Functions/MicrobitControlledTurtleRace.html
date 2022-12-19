@@ -234,7 +234,7 @@
 def a(x, y):
     x = x + 1
     y = y + 1
-    print(x, y)
+    print(f"{x} {y}")
 
 x = 10
 y = 20
@@ -305,15 +305,15 @@ print(z)
          data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
 def a(my_data):
-    print("function a, my_data =  ", my_data)
+    print(f"function a, my_data = {my_data}")
     my_data = 20
-    print("function a, my_data =  ", my_data)
+    print(f"function a, my_data = {my_data}")
 
 my_data = 10
 
-print("global scope, my_data =", my_data)
+print(f"global scope, my_data = {my_data}")
 a(my_data)
-print("global scope, my_data =", my_data)
+print(f"global scope, my_data = {my_data}")
 </textarea>
 </div>
 </div>
@@ -328,17 +328,17 @@ print("global scope, my_data =", my_data)
     data-audio=''      
          data-caption='What will this program print?'  data-wasm=/_static
      style="visibility: hidden;">
-def some_function( a_number, another_number ):
+def some_function(a_number, another_number):
     a_number = a_number * 2
     another_number -= 5
     something_else = a_number + another_number
     something_else = weird_function(something_else)
-    print( something_else )
+    print(something_else)
 
-def weird_function( boo_urns ):
+def weird_function(boo_urns):
     return boo_urns / 2
 
-some_function( 2, 3)
+some_function(2, 3)
 </textarea>
 </div>
 </div>

@@ -104,12 +104,12 @@ In this game, you and a friend will compete to see who has faster reactions. Aft
         # deal with a button being pressed
         if microbit.button_a.is_pressed():
             a_score = button_clicked(a_score, showing_image)
-            print("Player A:", a_score, "    Player B:", b_score)
+            print(f"Player A: {a_score}    Player B: {b_score}")
             someone_pressed_button = True
             
         if microbit.button_b.is_pressed():
             b_score = button_clicked(b_score, showing_image)
-            print("Player A:", a_score, "    Player B:", b_score)
+            print(f"Player A: {a_score}    Player B: {b_score}")
             someone_pressed_button = True
         
         # if somebody wins, end the game

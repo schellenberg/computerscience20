@@ -31,7 +31,7 @@ In the previous section, we used a lot of nested loops, which is a loop inside a
 
         for i in range(4):
             for j in range(3):
-                print(i, j)
+                print(f"{i} {j}")
 
     - :12: Great!
       :4: Careful! Although the outer loop does repeat four times, the inner loop repeats three times for each outer iteration.
@@ -56,7 +56,7 @@ In the previous section, we used a lot of nested loops, which is a loop inside a
 
         for x in range(4):
             for y in range(3):
-                print(x, y)
+                print(f"{x} {y}")
 
 
 .. mchoice:: nested_loops_review_3

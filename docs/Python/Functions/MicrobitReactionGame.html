@@ -291,12 +291,12 @@
     <span class="c1"># deal with a button being pressed</span>
     <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
         <span class="n">a_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">a_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player A: </span><span class="si">{</span><span class="n">a_score</span><span class="si">}</span><span class="s2">    Player B: </span><span class="si">{</span><span class="n">b_score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">if</span> <span class="n">microbit</span><span class="o">.</span><span class="n">button_b</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
         <span class="n">b_score</span> <span class="o">=</span> <span class="n">button_clicked</span><span class="p">(</span><span class="n">b_score</span><span class="p">,</span> <span class="n">showing_image</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Player A:&quot;</span><span class="p">,</span> <span class="n">a_score</span><span class="p">,</span> <span class="s2">&quot;    Player B:&quot;</span><span class="p">,</span> <span class="n">b_score</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player A: </span><span class="si">{</span><span class="n">a_score</span><span class="si">}</span><span class="s2">    Player B: </span><span class="si">{</span><span class="n">b_score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">someone_pressed_button</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="c1"># if somebody wins, end the game</span>

@@ -80,7 +80,7 @@ What will the following programs output? Why?
     :caption: What will this program print?
 
     def greeting(first_name, last_name):
-        message = "Hello there, " + first_name + " " + last_name + "!"
+        message = f"Hello there, {first_name} {last_name}!"
         return message
         
     first = "Sherlock"

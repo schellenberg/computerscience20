@@ -147,28 +147,29 @@
 <li><a class="reference internal" href="#">1. String Index, Length, Slicing and Traversal</a><ul>
 <li><a class="reference internal" href="#a-collection-data-type">1.1. A Collection Data Type</a></li>
 <li><a class="reference internal" href="#concatenation-reminder">1.2. Concatenation Reminder</a></li>
-<li><a class="reference internal" href="#index-operator-working-with-the-characters-of-a-string">1.3. Index Operator: Working with the Characters of a String</a><ul>
-<li><a class="reference internal" href="#check-your-understanding">1.3.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#f-strings-reminder">1.3. F-Strings Reminder</a></li>
+<li><a class="reference internal" href="#index-operator-working-with-the-characters-of-a-string">1.4. Index Operator: Working with the Characters of a String</a><ul>
+<li><a class="reference internal" href="#check-your-understanding">1.4.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#length">1.4. Length</a><ul>
-<li><a class="reference internal" href="#id1">1.4.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#length">1.5. Length</a><ul>
+<li><a class="reference internal" href="#id1">1.5.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-slice-operator">1.5. The Slice Operator</a><ul>
-<li><a class="reference internal" href="#id2">1.5.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#the-slice-operator">1.6. The Slice Operator</a><ul>
+<li><a class="reference internal" href="#id2">1.6.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#traversal-and-the-for-loop-by-item">1.6. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item</a><ul>
-<li><a class="reference internal" href="#id3">1.6.1. Check Your Understanding</a></li>
+<li><a class="reference internal" href="#traversal-and-the-for-loop-by-item">1.7. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item</a><ul>
+<li><a class="reference internal" href="#id3">1.7.1. Check Your Understanding</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#practice-problems">1.7. Practice Problems</a><ul>
-<li><a class="reference internal" href="#con-cat">1.7.1. Con Cat</a></li>
-<li><a class="reference internal" href="#duckling-names">1.7.2. Duckling Names</a></li>
-<li><a class="reference internal" href="#first-letter-of-a-word">1.7.3. First Letter of a Word</a></li>
-<li><a class="reference internal" href="#password-length">1.7.4. Password Length</a></li>
-<li><a class="reference internal" href="#removing-the-start-and-end">1.7.5. Removing the Start and End</a></li>
+<li><a class="reference internal" href="#practice-problems">1.8. Practice Problems</a><ul>
+<li><a class="reference internal" href="#con-cat">1.8.1. Con Cat</a></li>
+<li><a class="reference internal" href="#duckling-names">1.8.2. Duckling Names</a></li>
+<li><a class="reference internal" href="#first-letter-of-a-word">1.8.3. First Letter of a Word</a></li>
+<li><a class="reference internal" href="#password-length">1.8.4. Password Length</a></li>
+<li><a class="reference internal" href="#removing-the-start-and-end">1.8.5. Removing the Start and End</a></li>
 </ul>
 </li>
 </ul>
@@ -274,8 +275,32 @@ print(fruit + baked_good)
 </div>
 </div>
 </section>
+<section id="f-strings-reminder">
+<h2><span class="section-number">1.3. </span>F-Strings Reminder<a class="headerlink" href="#f-strings-reminder" title="Permalink to this headline">¶</a></h2>
+<p>Although concatenation works well for simple use cases, it is often preferable to use an f-string to
+format strings, which allows you to insert the value of any variable by enclosing the variable in curly
+brackets. To indicate it is a formatted string, add a <code class="docutils literal notranslate"><span class="pre">f</span></code> before the string quotes begin.
+For example, the concatenation example above could also be written as:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=f_strings_reminder_demo data-question_label="1.3.1">
+<div id=f_strings_reminder_demo_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="f_strings_reminder_demo_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+fruit = "banana"
+baked_good = "nut bread"
+print(f"{fruit} {baked_good}")
+</textarea>
+</div>
+</div>
+</section>
 <section id="index-operator-working-with-the-characters-of-a-string">
-<span id="index-0"></span><h2><span class="section-number">1.3. </span>Index Operator: Working with the Characters of a String<a class="headerlink" href="#index-operator-working-with-the-characters-of-a-string" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">1.4. </span>Index Operator: Working with the Characters of a String<a class="headerlink" href="#index-operator-working-with-the-characters-of-a-string" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>indexing operator</strong> (Python uses square brackets to enclose the index)
 selects a single character from a string.  The characters are accessed by their position or
 index value.  For example, in the string shown below, the 14 characters are indexed left to right from postion 0 to position 13.</p>
@@ -285,7 +310,7 @@ index and so on.
 Note that the character at index 9 (or -5) is the blank/space character.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_index_1 data-question_label="1.3.1">
+<div data-component="activecode" id=string_index_1 data-question_label="1.4.1">
 <div id=string_index_1_question class="ac_question col-md-12">
 
 </div>
@@ -317,11 +342,11 @@ expression so long as it evaluates to a valid index value.</p>
 <p>Note that indexing returns a <em>string</em> — Python has no special type for a single character.
 It is just a string of length 1.</p>
 <section id="check-your-understanding">
-<h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="string_index_test_question_1"  style="visibility: hidden;">
-    <p>string-exploration3: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.4.1.1" data-multipleanswers="false"  id="string_index_test_question_1"  style="visibility: hidden;">
+    <p>string-exploration4: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
@@ -340,8 +365,8 @@ It is just a string of length 1.</p>
     </div>
     
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.3.1.2" data-multipleanswers="false"  id="string_index_test_question_2"  style="visibility: hidden;">
-    <p>string-exploration4: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.4.1.2" data-multipleanswers="false"  id="string_index_test_question_2"  style="visibility: hidden;">
+    <p>string-exploration5: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -361,11 +386,11 @@ It is just a string of length 1.</p>
     </section>
 </section>
 <section id="length">
-<span id="index-1"></span><h2><span class="section-number">1.4. </span>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">1.5. </span>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">len</span></code> function, when applied to a string, returns the number of characters in a string.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_length_1 data-question_label="1.4.1">
+<div data-component="activecode" id=string_length_1 data-question_label="1.5.1">
 <div id=string_length_1_question class="ac_question col-md-12">
 
 </div>
@@ -383,7 +408,7 @@ print(len(fruit))
 this:</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_length_2 data-question_label="1.4.2">
+<div data-component="activecode" id=string_length_2 data-question_label="1.5.2">
 <div id=string_length_2_question class="ac_question col-md-12">
 
 </div>
@@ -407,7 +432,7 @@ numbered 0 to 5. To get the last character, we have to subtract 1 from
 the length.  Give it a try in the example above.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_length_3 data-question_label="1.4.3">
+<div data-component="activecode" id=string_length_3 data-question_label="1.5.3">
 <div id=string_length_3_question class="ac_question col-md-12">
 
 </div>
@@ -428,11 +453,11 @@ end of the string. The expression <code class="docutils literal notranslate"><sp
 <code class="docutils literal notranslate"><span class="pre">fruit[-2]</span></code> yields the second to last, and so on.  Try it!
 Most other languages do <em>not</em> allow the negative indices, but they are a handy feature of Python!</p>
 <section id="id1">
-<h3><span class="section-number">1.4.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.4.1.1" data-multipleanswers="false"  id="string_length_test_question_1"  style="visibility: hidden;">
-    <p>string-exploration8: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.5.1.1" data-multipleanswers="false"  id="string_length_test_question_1"  style="visibility: hidden;">
+    <p>string-exploration9: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
 </pre></div>
@@ -447,8 +472,8 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
     </div>
     
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.4.1.2" data-multipleanswers="false"  id="string_length_test_question_2"  style="visibility: hidden;">
-    <p>string-exploration9: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.5.1.2" data-multipleanswers="false"  id="string_length_test_question_2"  style="visibility: hidden;">
+    <p>string-exploration10: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
@@ -467,8 +492,8 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
     </div>
     
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.4.1.3" data-multipleanswers="false"  id="string_length_test_question_3"  style="visibility: hidden;">
-    <p>string-exploration10: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.5.1.3" data-multipleanswers="false"  id="string_length_test_question_3"  style="visibility: hidden;">
+    <p>string-exploration11: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
@@ -488,12 +513,12 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
     </section>
 </section>
 <section id="the-slice-operator">
-<span id="index-2"></span><h2><span class="section-number">1.5. </span>The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2><span class="section-number">1.6. </span>The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this headline">¶</a></h2>
 <p>A substring of a string is called a <strong>slice</strong>. Selecting a slice is similar to
 selecting a character:</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_slice_1 data-question_label="1.5.1">
+<div data-component="activecode" id=string_slice_1 data-question_label="1.6.1">
 <div id=string_slice_1_question class="ac_question col-md-12">
 
 </div>
@@ -521,7 +546,7 @@ end of the string.</p>
 <p>There is no Index Out Of Range exception for a slice. A slice is forgiving and shifts any offending index to something legal.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_slice_2 data-question_label="1.5.2">
+<div data-component="activecode" id=string_slice_2 data-question_label="1.6.2">
 <div id=string_slice_2_question class="ac_question col-md-12">
 
 </div>
@@ -543,11 +568,11 @@ print(fruit[3:99])
 <p>What do you think <code class="docutils literal notranslate"><span class="pre">fruit[:]</span></code> means?</p>
 </div>
 <section id="id2">
-<h3><span class="section-number">1.5.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.5.1.1" data-multipleanswers="false"  id="string_slice_test_question_1"  style="visibility: hidden;">
-    <p>string-exploration13: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.6.1.1" data-multipleanswers="false"  id="string_slice_test_question_1"  style="visibility: hidden;">
+    <p>string-exploration14: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
 </pre></div>
@@ -566,8 +591,8 @@ print(fruit[3:99])
     </div>
     
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.5.1.2" data-multipleanswers="false"  id="string_slice_test_question_2"  style="visibility: hidden;">
-    <p>string-exploration14: What is printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.6.1.2" data-multipleanswers="false"  id="string_slice_test_question_2"  style="visibility: hidden;">
+    <p>string-exploration15: What is printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -587,7 +612,7 @@ print(fruit[3:99])
     </section>
 </section>
 <section id="traversal-and-the-for-loop-by-item">
-<h2><span class="section-number">1.6. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this headline">¶</a></h2>
 <p>A lot of computations involve processing a collection one item at a time.  For strings this means
 that we would like to process one character at a time.
 Often we start at the beginning, select each character in turn, do something
@@ -596,7 +621,7 @@ to it, and continue until the end. This pattern of processing is called a
 <p>We have previously seen that the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement can iterate over the items of a sequence (a list of names in the case below).</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_for_loop_by_item_1 data-question_label="1.6.1">
+<div data-component="activecode" id=string_for_loop_by_item_1 data-question_label="1.7.1">
 <div id=string_for_loop_by_item_1_question class="ac_question col-md-12">
 
 </div>
@@ -606,7 +631,7 @@ to it, and continue until the end. This pattern of processing is called a
            data-wasm=/_static
      style="visibility: hidden;">
 for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-    invitation = "Hi " + a_name + ".  Please come to my party on Saturday!"
+    invitation = f"Hi {a_name}.  Please come to my party on Saturday!"
     print(invitation)
 </textarea>
 </div>
@@ -614,7 +639,7 @@ for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
 <p>Recall that the loop variable takes on each value in the sequence of names.  The body is performed once for each name.  The same was true for the sequence of integers created by the <code class="docutils literal notranslate"><span class="pre">range</span></code> function.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_for_loop_by_item_2 data-question_label="1.6.2">
+<div data-component="activecode" id=string_for_loop_by_item_2 data-question_label="1.7.2">
 <div id=string_for_loop_by_item_2_question class="ac_question col-md-12">
 
 </div>
@@ -631,7 +656,7 @@ for a_value in range(10):
 <p>Since a string is simply a sequence of characters, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over each character automatically.</p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=string_for_loop_by_item_3 data-question_label="1.6.3">
+<div data-component="activecode" id=string_for_loop_by_item_3 data-question_label="1.7.3">
 <div id=string_for_loop_by_item_3_question class="ac_question col-md-12">
 
 </div>
@@ -649,11 +674,11 @@ for a_char in "Go Spot Go":
 We will refer to this type of sequence iteration as <strong>iteration by item</strong>.
 Note that it is only possible to process the characters one at a time from left to right.</p>
 <section id="id3">
-<h3><span class="section-number">1.6.1. </span>Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.1. </span>Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.6.1.1" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_1"  style="visibility: hidden;">
-    <p>string-exploration18: How many times is the word HELLO printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.7.1.1" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_1"  style="visibility: hidden;">
+    <p>string-exploration19: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
@@ -673,8 +698,8 @@ Note that it is only possible to process the characters one at a time from left 
     </div>
     
     <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1.6.1.2" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_2"  style="visibility: hidden;">
-    <p>string-exploration19: How many times is the word HELLO printed by the following statements?</p>
+    <ul data-component="multiplechoice" data-question_label="1.7.1.2" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_2"  style="visibility: hidden;">
+    <p>string-exploration20: How many times is the word HELLO printed by the following statements?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
 <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HELLO&quot;</span><span class="p">)</span>
@@ -695,14 +720,14 @@ Note that it is only possible to process the characters one at a time from left 
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">1.7. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.8. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <section id="con-cat">
-<h3><span class="section-number">1.7.1. </span>Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
-<p>Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in <code class="docutils literal notranslate"><span class="pre">Garfield</span></code>, your program could print something like <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">you,</span> <span class="pre">Garfield!</span></code>. <strong>Be sure to use concatenation in your solution!</strong></p>
+<h3><span class="section-number">1.8.1. </span>Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
+<p>Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in <code class="docutils literal notranslate"><span class="pre">Garfield</span></code>, your program could print something like <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">you,</span> <span class="pre">Garfield!</span></code>. <strong>You can use concatenation or f-strings in your solution!</strong></p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=practice_problem_string_into_1 data-question_label="1.7.1.1">
+<div data-component="activecode" id=practice_problem_string_into_1 data-question_label="1.8.1.1">
 <div id=practice_problem_string_into_1_question class="ac_question col-md-12">
 
 </div>
@@ -717,11 +742,11 @@ Note that it is only possible to process the characters one at a time from left 
 </div>
 </section>
 <section id="duckling-names">
-<h3><span class="section-number">1.7.2. </span>Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.2. </span>Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
 <p>In Robert McCloskey’s book <em>Make Way for Ducklings</em>, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This code below attempts to output these names in order. Unfortunately, the output is not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the <code class="docutils literal notranslate"><span class="pre">prefixes</span></code> or <code class="docutils literal notranslate"><span class="pre">suffix</span></code> variables! <em>You should do this by adding a conditional statement within the for loop.</em></p>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=practice_problem_string_into_2 data-question_label="1.7.2.1">
+<div data-component="activecode" id=practice_problem_string_into_2 data-question_label="1.8.2.1">
 <div id=practice_problem_string_into_2_question class="ac_question col-md-12">
 
 </div>
@@ -741,14 +766,14 @@ for letter in prefixes:
 </div>
 </section>
 <section id="first-letter-of-a-word">
-<h3><span class="section-number">1.7.3. </span>First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.3. </span>First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=practice_problem_string_into_3 data-question_label="1.7.3.1">
+<div data-component="activecode" id=practice_problem_string_into_3 data-question_label="1.8.3.1">
 <div id=practice_problem_string_into_3_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <code class="docutils literal notranslate"><span class="pre">word</span></code> begins with the letter “t” or “c”.</p>
 <p><strong>Examples:</strong></p>
@@ -784,14 +809,14 @@ myTests().main()
 </div>
 </section>
 <section id="password-length">
-<h3><span class="section-number">1.7.4. </span>Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.4. </span>Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=practice_problem_string_into_4 data-question_label="1.7.4.1">
+<div data-component="activecode" id=practice_problem_string_into_4 data-question_label="1.8.4.1">
 <div id=practice_problem_string_into_4_question class="ac_question col-md-12">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">password</span></code> that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <code class="docutils literal notranslate"><span class="pre">password</span></code> is between 8 and 32 characters (inclusive), and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. <em>Please note there is much more to a strong password than just the length of the string!</em></p>
 <p><strong>Examples:</strong></p>
@@ -827,7 +852,7 @@ myTests().main()
 </div>
 </section>
 <section id="removing-the-start-and-end">
-<h3><span class="section-number">1.7.5. </span>Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.5. </span>Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that takes in three inputs from the user:</p>
 <ul class="simple">
 <li><p>a word/sentence</p></li>
@@ -844,7 +869,7 @@ myTests().main()
 </ul>
 
 <div class="runestone explainer ac_section ">
-<div data-component="activecode" id=practice_problem_string_into_5 data-question_label="1.7.5.1">
+<div data-component="activecode" id=practice_problem_string_into_5 data-question_label="1.8.5.1">
 <div id=practice_problem_string_into_5_question class="ac_question col-md-12">
 
 </div>

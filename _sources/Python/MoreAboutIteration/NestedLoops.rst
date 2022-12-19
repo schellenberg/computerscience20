@@ -172,7 +172,7 @@ However, the body of the loop can contain any statements, including another iter
 
     for i in range(5):
         for j in range(3):
-            print(i, j)
+            print(f"i: {i}  j:{j}")
 
 The ``for i`` iteration is the `outer iteration` and the ``for j`` iteration is the `inner iteration`.  Each pass through
 the outer iteration will result in the complete processing of the inner iteration from beginning to end.  This means that
@@ -187,7 +187,7 @@ flow of control as it occurs with the nested iteration.  Again, for every value 
 
     for i in range(5):
         for j in range(3):
-            print(i, j)
+            print(f"i: {i}  j:{j}")
 
 Our goal with image processing is to visit each pixel.  We will use an iteration to process each `row`.  Within that iteration, we will use a nested iteration to process each `column`.  The result is a nested iteration, similar to the one
 seen above, where the outer ``for`` loop processes the rows, from 0 up to but not including the height of the image.
@@ -455,7 +455,7 @@ Check Your Understanding
 
       for i in range(3):
           for j in range(2):
-              print(i, j)
+              print(f"{i} {j}")
 
    ::
 
