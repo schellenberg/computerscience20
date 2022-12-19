@@ -14,7 +14,7 @@ Useful Python Packages
 Installing the Packages
 ------------------------
 
-In Thonny, open Tools -> Manage Packages, then type the name of the package (like ``pygame``) and click Search. Now click install.
+In Thonny, open Tools → Manage Packages, then type the name of the package (like ``pygame``) and click Search. Now click install.
 
 If you're using VS Code (or some other editor that doesn't include a simple way to manage your Python packages), you can accomplish the same thing by typing ``pip install pygame`` into a terminal. Personally, I use ``pipenv install pygame``, which creates virtual environments for you  (so you can have lots of different projects that all have their own dependencies).
 

@@ -90,7 +90,7 @@ Another method of importing the library allows us give the module a nickname tha
 
 .. image:: images/reeborg_import_as.png
 
-When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``cs20-easygui``. In Thonny, open *Tools -> Manage packages...*. 
+When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``cs20-easygui``. In Thonny, open *Tools → Manage packages...*. 
 
 .. image:: images/thonny_manage_packages_menu_item.png
 
@@ -100,7 +100,7 @@ Now type in ``cs20-easygui`` into the Search box (be sure to spell it *exactly*)
 
 .. note:: The ``cs20-easygui`` package attempts to install ``easygui_qt``, along with it's prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be ``sip``, then ``PyQt5``, then ``easygui_qt``.
 
-.. warning:: Some users are reporting errors while installing ``cs20-easygui`` on Windows machines (as of May 2021). While I investigate why this is happening, you can use the following workaround. In Thonny, click on Tools -> Open System Shell..., then type in ``pip install --only-binary :all: cs20-easygui``. Although you might see a warning about your pip version being out of date, it *should* install easygui_qt correctly.
+.. warning:: Some users are reporting errors while installing ``cs20-easygui`` on Windows machines (as of May 2021). While I investigate why this is happening, you can use the following workaround. In Thonny, click on Tools → Open System Shell..., then type in ``pip install --only-binary :all: cs20-easygui``. Although you might see a warning about your pip version being out of date, it *should* install easygui_qt correctly.
 
 Get String From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~

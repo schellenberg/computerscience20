@@ -16,8 +16,8 @@ How to Fork the Textbook
 	- open GitHub Desktop
 	- select the computerscience20 repository (if required, if you have more than just one repo set up)
 	- fetch origin (top right button) -- this makes sure your local copy is the most up to date version before you start changing things
-	- use Repository -> Open in Visual Studio Code to access the source code of the textbook
-	- in VS Code, select Terminal -> New Terminal, then type ``pipenv install``. This should install all the dependencies for you.
+	- use Repository → Open in Visual Studio Code to access the source code of the textbook
+	- in VS Code, select Terminal → New Terminal, then type ``pipenv install``. This should install all the dependencies for you.
 
 Daily workflow
 ---------------
@@ -25,12 +25,12 @@ Daily workflow
 - open GitHub Desktop
 	- select the computerscience20 repository (if required, if you have more than just one repo set up)
 	- fetch origin (top right button) -- this makes sure your local copy is the most up to date version before you start changing things
-	- use Repository -> Open in Visual Studio Code to access the source code of the textbook
+	- use Repository → Open in Visual Studio Code to access the source code of the textbook
 
 - in VS Code, expand the _sources folder (all the source code for the textbook can be found in here)
 	- change whatever you want in any of the _source code folder, then save your work
 
-- to build the book while working in VS Code, select Terminal -> New Terminal, then type ``pipenv shell``. You should now have two commands to use:
+- to build the book while working in VS Code, select Terminal → New Terminal, then type ``pipenv shell``. You should now have two commands to use:
 	- runestone build -- this is the command that takes your _source code folder, and converts each source code file into an .html file. The resulting website is saved into the ``/docs`` folder. This is the folder that contains the actual static website that your students will be using.
 	- runestone serve -- this command opens up a local development webserver so that you can test out your most recent website build before pushing it live to the web. You can access the website at http://localhost:8000/
 

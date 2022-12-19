@@ -25,7 +25,7 @@ Image Processing Introduction
 
 .. note:: 
 
-    Before starting this section, you will want to install the ``cs20-image`` package. To do this, open Thonny and select Tools -> Manage packages..., then type in ``cs20-image`` and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below. 
+    Before starting this section, you will want to install the ``cs20-image`` package. To do this, open Thonny and select Tools → Manage packages..., then type in ``cs20-image`` and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below. 
 
     **Be careful! You need to save the Python file and the image file in the same directory on your computer for this to work!**
 

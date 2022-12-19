@@ -209,8 +209,8 @@ introduce a very interesting new feature that requires the use of lists.
 
 Suppose our L-System has the following rules::
 
-    X --> F[-X]+X
-    F --> FF
+    X → F[-X]+X
+    F → FF
 
 This L-system looks very similar to the old L-system, except that we've added the characters ``[`` and ``]``.  The meaning of these
 characters adds a very interesting new dimension to our L-Systems.  The ``[``
@@ -321,8 +321,8 @@ Putting It All Together
 
 To determine the ``instruction_string`` we used in the last example, we used an axiom of ``X`` and applied the following rules 6 times::
 
-    X --> F[-X]+X
-    F --> FF
+    X → F[-X]+X
+    F → FF
 
 If you run the code below, you will not see much happen. To fix the code below, you need to:
 
@@ -427,8 +427,8 @@ Here are the rules for an L-system that creates something that resembles a commo
 ::
 
     Axiom: H
-    Rule 1: H --> HFX[+H][-H]
-    Rule 2: X --> X[-FFF][+FFF]FX
+    Rule 1: H → HFX[+H][-H]
+    Rule 2: X → X[-FFF][+FFF]FX
 
 .. highlight:: python
 
@@ -460,7 +460,7 @@ Here are the rules for an L-system that creates something that resembles a branc
 ::
 
     Axiom: F
-    Rule 1: F --> F[-F]F[+F]F
+    Rule 1: F → F[-F]F[+F]F
 
 .. highlight:: python
 
@@ -492,8 +492,8 @@ Here are the rules for an L-system that creates something that resembles a symme
 ::
 
     Axiom: X
-    Rule 1: X --> F[+X][-X]FX
-    Rule 2: F --> FF
+    Rule 1: X → F[+X][-X]FX
+    Rule 2: F → FF
 
 .. highlight:: python
 
@@ -525,7 +525,7 @@ Here are the rules for an L-system that creates something that resembles seaweed
 ::
 
     Axiom: F
-    Rule 1: F --> FF-[-F+F+F]+[+F-F-F]
+    Rule 1: F → FF-[-F+F+F]+[+F-F-F]
 
 .. highlight:: python
 

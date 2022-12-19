@@ -298,15 +298,15 @@ are complete, the string contains a set of instructions.  Our plan is to let the
 <td><p>A</p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 1 Change A to B</p></td>
-<td><p>A -&gt; B</p></td>
+<td><p>A → B</p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 2 Change B to AB</p></td>
-<td><p>B -&gt; AB</p></td>
+<td><p>B → AB</p></td>
 </tr>
 </tbody>
 </table>
 <p>Each rule set contains an axiom which represents the starting point in the transformations that will follow.  The rules are of the form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">left</span> <span class="n">hand</span> <span class="n">side</span> <span class="o">-&gt;</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>left hand side → right hand side
 </pre></div>
 </div>
 <p>where the left hand side is a single symbol and the right hand side is a sequence of symbols.  You can think of both sides as being simple strings.
@@ -399,7 +399,7 @@ program. All you need to do is re-write the <code class="docutils literal notran
 <td><p>A</p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 1 Change A to BAB</p></td>
-<td><p>A -&gt; BAB</p></td>
+<td><p>A → BAB</p></td>
 </tr>
 </tbody>
 </table>
@@ -421,7 +421,7 @@ L-system has just one rule:</p>
 <td><p>F</p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 1</p></td>
-<td><p>F -&gt; F-F++F-F</p></td>
+<td><p>F → F-F++F-F</p></td>
 </tr>
 </tbody>
 </table>
@@ -591,10 +591,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+RF-LFL-FR+</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">→</span> <span class="pre">+RF-LFL-FR+</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-LF+RFR+FL-</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">→</span> <span class="pre">-LF+RFR+FL-</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -630,10 +630,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF+</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">→</span> <span class="pre">X+YF+</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX-Y</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">→</span> <span class="pre">-FX-Y</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -669,10 +669,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">YF+XF+Y</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">→</span> <span class="pre">YF+XF+Y</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">XF-YF-X</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">→</span> <span class="pre">XF-YF-X</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -708,10 +708,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">FX</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">→</span> <span class="pre">X+YF++YF-FX--FXFX-YF+</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">-&gt;</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">→</span> <span class="pre">-FX+YFYF++YF+FX--FX-Y</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -747,10 +747,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">FXF--FF--FF</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">FF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">→</span> <span class="pre">FF</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">--FXF++FXF++FXF--</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">→</span> <span class="pre">--FXF++FXF++FXF--</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -786,7 +786,7 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">F-F-F-F-F</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">-&gt;</span> <span class="pre">F-F++F+F-F-F</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">→</span> <span class="pre">F-F++F+F-F-F</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -823,10 +823,10 @@ draw_l_system(jill, instruction_string, 60, 5)
 <td><p><code class="docutils literal notranslate"><span class="pre">L--F--L--F</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rule 1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">-&gt;</span> <span class="pre">+R-F-R+</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">→</span> <span class="pre">+R-F-R+</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Rule 2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">-&gt;</span> <span class="pre">-L+F+L-</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">→</span> <span class="pre">-L+F+L-</span></code></p></td>
 </tr>
 </tbody>
 </table>

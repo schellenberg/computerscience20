@@ -14,7 +14,7 @@ EasyGUI_Qt is inspired by EasyGUI and contains a number of different basic graph
 Installation
 -------------
 
-In Thonny, open Tools -> Manage Packages and type in ``cs20-easygui`` into the search bar, then click Install. This installation will take some time, as part of the installation is the backend graphical rendering engine (PyQt5).
+In Thonny, open Tools → Manage Packages and type in ``cs20-easygui`` into the search bar, then click Install. This installation will take some time, as part of the installation is the backend graphical rendering engine (PyQt5).
 
 
 Showing Messages

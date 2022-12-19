@@ -52,7 +52,7 @@ It may be helpful to view the code above using codelens:
         print(i)
         i = i + 1  
 
-You can do something similar to the codelens feature above using Thonny. First, click on *View -> Variables* to see the values of variables while your code runs.
+You can do something similar to the codelens feature above using Thonny. First, click on *View → Variables* to see the values of variables while your code runs.
 
 .. image:: images/thonny_show_variables.png
 

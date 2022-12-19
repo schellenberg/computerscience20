@@ -86,13 +86,13 @@ To begin, we will look at an example set of rules:
 
 =====================   ========
 Axiom                   A
-Rule 1 Change A to B    A -> B
-Rule 2 Change B to AB   B -> AB
+Rule 1 Change A to B    A → B
+Rule 2 Change B to AB   B → AB
 =====================   ========
 
 Each rule set contains an axiom which represents the starting point in the transformations that will follow.  The rules are of the form::
 
-        left hand side -> right hand side
+        left hand side → right hand side
 
 where the left hand side is a single symbol and the right hand side is a sequence of symbols.  You can think of both sides as being simple strings.
 The way the rules are used is to replace occurrences of the left hand side with the corresponding right hand side.
@@ -173,7 +173,7 @@ program. All you need to do is re-write the ``apply_rules`` function.
 
     =======================     ========
     Axiom                       A
-    Rule 1 Change A to BAB      A -> BAB
+    Rule 1 Change A to BAB      A → BAB
     =======================     ========
 
     What kind of a string would these rules create?  Modify the program above to
@@ -188,7 +188,7 @@ L-system has just one rule:
 
 =============  =====================
 Axiom          F              
-Rule 1         F -> F-F++F-F  
+Rule 1         F → F-F++F-F  
 =============  =====================
 
 This L-system uses symbols that will have special meaning when we use them later with the turtle to draw a picture.
@@ -335,8 +335,8 @@ Use the following axiom and rules to create the Hilbert curve.
 =====================   =====================
 Angle                   90 degrees
 Axiom                   ``L``
-Rule 1                  ``L -> +RF-LFL-FR+``
-Rule 2                  ``R -> -LF+RFR+FL-``
+Rule 1                  ``L → +RF-LFL-FR+``
+Rule 2                  ``R → -LF+RFR+FL-``
 =====================   =====================
 
 
@@ -355,8 +355,8 @@ Use the following axiom and rules to create the dragon curve.
 =====================   =====================
 Angle                   90 degrees
 Axiom                   ``FX``
-Rule 1                  ``X -> X+YF+``
-Rule 2                  ``Y -> -FX-Y``
+Rule 1                  ``X → X+YF+``
+Rule 2                  ``Y → -FX-Y``
 =====================   =====================
 
 
@@ -375,8 +375,8 @@ Use the following axiom and rules to create the arrowhead curve.
 =====================   =====================
 Angle                   60 degrees
 Axiom                   ``FX``
-Rule 1                  ``X -> YF+XF+Y``
-Rule 2                  ``Y -> XF-YF-X``
+Rule 1                  ``X → YF+XF+Y``
+Rule 2                  ``Y → XF-YF-X``
 =====================   =====================
 
 
@@ -395,8 +395,8 @@ Use the following axiom and rules to create the Peano-Gosper curve.
 =====================   ===============================
 Angle                   60 degrees
 Axiom                   ``FX``
-Rule 1                  ``X -> X+YF++YF-FX--FXFX-YF+``
-Rule 2                  ``Y -> -FX+YFYF++YF+FX--FX-Y``
+Rule 1                  ``X → X+YF++YF-FX--FXFX-YF+``
+Rule 2                  ``Y → -FX+YFYF++YF+FX--FX-Y``
 =====================   ===============================
 
 
@@ -415,8 +415,8 @@ Use the following axiom and rules to create the Sierpinski Triangle.
 =====================   ===============================
 Angle                   60 degrees
 Axiom                   ``FXF--FF--FF``
-Rule 1                  ``F -> FF``
-Rule 2                  ``X -> --FXF++FXF++FXF--``
+Rule 1                  ``F → FF``
+Rule 2                  ``X → --FXF++FXF++FXF--``
 =====================   ===============================
 
 
@@ -436,7 +436,7 @@ Use the following axiom and rules to create a snowflake shape.
 =====================   ===============================
 Angle                   72 degrees
 Axiom                   ``F-F-F-F-F``
-Rule 1                  ``F -> F-F++F+F-F-F``
+Rule 1                  ``F → F-F++F+F-F-F``
 =====================   ===============================
 
 
@@ -457,8 +457,8 @@ Use the following axiom and rules to create an interesting shape.
 =====================   ===============================
 Angle                   45 degrees
 Axiom                   ``L--F--L--F``
-Rule 1                  ``L -> +R-F-R+``
-Rule 2                  ``R -> -L+F+L-``
+Rule 1                  ``L → +R-F-R+``
+Rule 2                  ``R → -L+F+L-``
 =====================   ===============================
 
 

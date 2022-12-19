@@ -14,7 +14,7 @@ pyGame Introduction
 Installing pyGame
 ------------------
 
-In Thonny, open Tools -> Manage Packages, then type ``pygame`` and click Search. Now click install.
+In Thonny, open Tools → Manage Packages, then type ``pygame`` and click Search. Now click install.
 
 
 References

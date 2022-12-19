@@ -449,8 +449,8 @@ print(history)
 <p>Let’s return to the L-systems we introduced previously and
 introduce a very interesting new feature that requires the use of lists.</p>
 <p>Suppose our L-System has the following rules:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
-<span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X → F[-X]+X
+F → FF
 </pre></div>
 </div>
 <p>This L-system looks very similar to the old L-system, except that we’ve added the characters <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>.  The meaning of these
@@ -573,8 +573,8 @@ draw_l_system(jill, instruction_string, 30, 2)
 <section id="putting-it-all-together">
 <h2><span class="section-number">3.4. </span>Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
 <p>To determine the <code class="docutils literal notranslate"><span class="pre">instruction_string</span></code> we used in the last example, we used an axiom of <code class="docutils literal notranslate"><span class="pre">X</span></code> and applied the following rules 6 times:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span><span class="o">+</span><span class="n">X</span>
-<span class="n">F</span> <span class="o">--&gt;</span> <span class="n">FF</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X → F[-X]+X
+F → FF
 </pre></div>
 </div>
 <p>If you run the code below, you will not see much happen. To fix the code below, you need to:</p>
@@ -681,8 +681,8 @@ draw_l_system(jill, instruction_string, 30, 2)
 <h3><span class="section-number">3.5.1. </span>Garden Herb<a class="headerlink" href="#garden-herb" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a common garden herb. Use an angle of 27.5 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: H
-Rule 1: H --&gt; HFX[+H][-H]
-Rule 2: X --&gt; X[-FFF][+FFF]FX
+Rule 1: H → HFX[+H][-H]
+Rule 2: X → X[-FFF][+FFF]FX
 </pre></div>
 </div>
 
@@ -713,7 +713,7 @@ import turtle
 <h3><span class="section-number">3.5.2. </span>Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a branch. Use an angle of 25 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
-Rule 1: F --&gt; F[-F]F[+F]F
+Rule 1: F → F[-F]F[+F]F
 </pre></div>
 </div>
 
@@ -744,8 +744,8 @@ import turtle
 <h3><span class="section-number">3.5.3. </span>Symmetrical Branch<a class="headerlink" href="#symmetrical-branch" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles a symmetrical branch. Use an angle of 25.7 degrees, and a distance of 5.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: X
-Rule 1: X --&gt; F[+X][-X]FX
-Rule 2: F --&gt; FF
+Rule 1: X → F[+X][-X]FX
+Rule 2: F → FF
 </pre></div>
 </div>
 
@@ -776,7 +776,7 @@ import turtle
 <h3><span class="section-number">3.5.4. </span>Seaweed<a class="headerlink" href="#seaweed" title="Permalink to this headline">¶</a></h3>
 <p>Here are the rules for an L-system that creates something that resembles seaweed. Use an angle of 22.5 degrees, and a distance of 10.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Axiom: F
-Rule 1: F --&gt; FF-[-F+F+F]+[+F-F-F]
+Rule 1: F → FF-[-F+F+F]+[+F-F-F]
 </pre></div>
 </div>
 

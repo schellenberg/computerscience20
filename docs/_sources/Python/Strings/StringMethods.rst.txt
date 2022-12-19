@@ -118,7 +118,7 @@ The code below assigns a variable ``paragraph`` in the program a triple-quoted s
 
 .. note::
 
-    A possible extension to this demonstration is using the ``requests`` module (in Thonny, select Tools -> Manage Packages, then search for and install requests). Using ``requests`` allows you to extract data from websites, such as `Project Gutenberg <https://www.gutenberg.org/>`_, as follows::
+    A possible extension to this demonstration is using the ``requests`` module (in Thonny, select Tools → Manage Packages, then search for and install requests). Using ``requests`` allows you to extract data from websites, such as `Project Gutenberg <https://www.gutenberg.org/>`_, as follows::
 
         import requests
 

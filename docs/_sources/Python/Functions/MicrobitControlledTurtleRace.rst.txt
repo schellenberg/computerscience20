@@ -105,7 +105,7 @@ What will the following programs output? Why?
 
 .. note:: 
 
-    To execute the following Python code, you will need to have the ``cs20-microbitio`` package installed (if you do not, just open Tools -> Manage Packages... and type it into the search bar). If you have not already done so, you need to flash your Micro:bit with the bitio hex file. First connect your Micro:bit to your computer via USB, then download the :download:`bitio.hex <../Microbit/bitio.hex>` file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder). If you need more detailed setup instructions, you can look back at the :ref:`microbit_setup` section.
+    To execute the following Python code, you will need to have the ``cs20-microbitio`` package installed (if you do not, just open Tools → Manage Packages... and type it into the search bar). If you have not already done so, you need to flash your Micro:bit with the bitio hex file. First connect your Micro:bit to your computer via USB, then download the :download:`bitio.hex <../Microbit/bitio.hex>` file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder). If you need more detailed setup instructions, you can look back at the :ref:`microbit_setup` section.
 
 
 Micro:bit Button Pressing 

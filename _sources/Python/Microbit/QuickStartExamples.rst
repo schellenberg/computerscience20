@@ -284,7 +284,7 @@ You should now see an I/O image on the LED grid of the Micro:bit, which tells yo
 Installing the Micro:bit Module in Thonny
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to communicate with the microbit in Python, you need to install the ``cs20-microbitio`` package in Thonny. To do that, go to Tools -> Manage packages..., type in ``cs20-microbitio`` into the search bar, and install. You only need to do this once, after which you should be able to use ``import microbit`` whenever you want to interact with the Micro:bit in Python.
+In order to communicate with the microbit in Python, you need to install the ``cs20-microbitio`` package in Thonny. To do that, go to Tools → Manage packages..., type in ``cs20-microbitio`` into the search bar, and install. You only need to do this once, after which you should be able to use ``import microbit`` whenever you want to interact with the Micro:bit in Python.
 
 
 Using the Micro:bit

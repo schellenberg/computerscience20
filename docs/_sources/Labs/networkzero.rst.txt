@@ -14,7 +14,7 @@ NetworkZero Introduction
 Installing NetworkZero
 -----------------------
 
-In Thonny, open Tools -> Manage Packages, then type ``networkzero`` and click Search. Now click install.
+In Thonny, open Tools → Manage Packages, then type ``networkzero`` and click Search. Now click install.
 
 
 References
