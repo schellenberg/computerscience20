@@ -69,8 +69,16 @@ What will the following programs output? Why?
     a_list[2] = True
     print(a_list)
 
-
 .. activecode:: wdtpd_lists_6
+    :caption: What will this program print?
+    :nocodelens:
+
+    the_word = "hello"
+    the_word[0] = "j"
+    print(the_word)
+
+
+.. activecode:: wdtpd_lists_7
     :caption: What will this program print?
     :nocodelens:
 
@@ -78,7 +86,7 @@ What will the following programs output? Why?
     print(a_list[3][2])
 
 
-.. activecode:: wdtpd_lists_7
+.. activecode:: wdtpd_lists_8
     :caption: What will this program print?
     :nocodelens:
 
