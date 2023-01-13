@@ -102,7 +102,7 @@ If you have trouble with any of the following, you might want to look back at th
     What would the following code print?::
 
         number = 12
-        print( number / 4)
+        print(number / 4)
 
     - :3: Great!
       :.*: Try again!
@@ -112,7 +112,7 @@ If you have trouble with any of the following, you might want to look back at th
     What would the following code print?::
 
         number = 12
-        print( number % 5)
+        print(number % 5)
 
     - :2: Great!
       :.*: Try again!
@@ -123,7 +123,7 @@ If you have trouble with any of the following, you might want to look back at th
     What would the following code print?::
 
         number = 42
-        print( number // 5)
+        print(number // 5)
 
     - :8: Great!
       :8.4: Remember that // returns only an integer!
@@ -134,11 +134,33 @@ If you have trouble with any of the following, you might want to look back at th
     What would the following code print?::
 
         number = 2
-        print( number ** 4)
+        print(number ** 4)
 
     - :16: Great!
       :8: Remember that ** means "to the power of".
       :.*: Try again!
+
+.. fillintheblank:: review_python_math_operators_5
+
+    What would the following code print?::
+
+        number = 2
+        number += 4
+        print(number)
+
+    - :6: Great!
+      :.*: Try again! Remember that number += 4 is the same as number = number + 4
+
+.. fillintheblank:: review_python_math_operators_6
+
+    What would the following code print?::
+
+        number = 9
+        number -= 2
+        print(number)
+
+    - :7: Great!
+      :.*: Try again! Remember that number -= 2 is the same as number = number - 2
 
 
 ``if``
