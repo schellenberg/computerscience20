@@ -1,5 +1,5 @@
 # Computer Science 20 - Saskatchewan
-An open textbook intended to cover the requirements of the Saskatchewan Computer Science 20 curriculum (curriculum to go live Feb, 2018).
+An open textbook intended to cover the requirements of the Saskatchewan Computer Science 20 curriculum (curriculum went live Feb, 2018).
 
 ## Contributing to the Book
 If you spot any errors in the book, or would like to contribute changes that you have made to the book, you have a few options:
