@@ -420,6 +420,27 @@ Write a program that mirrors an image from left to right around a vertical line 
 
     .. image:: images/mirror-horizontal-solution.png
 
+.. reveal:: mirror_horizontal_hint1
+    :showtitle: Hint 1
+
+    Remember that the origin is at the top left of an image, as shown in the following image:
+
+    .. image:: images/mirror-horizontal-hint1.png
+
+.. reveal:: mirror_horizontal_hint2
+    :showtitle: Hint 2
+
+    The x variable increases as you move to the right across the image. When you are half way across the image, you have moved width/2 pixels.
+
+    .. image:: images/mirror-horizontal-hint2.png
+
+.. reveal:: mirror_horizontal_hint3
+    :showtitle: Hint 3
+
+    Consider a pixel on the right side of the width/2 line of symmetry. You need to determine how far away from the line of symmetry the pixel is, then get the pixel that is the same distance away from the line of symmetry (but on the left side).
+
+    .. image:: images/mirror-horizontal-hint3.png
+
 
 Mirror Vertical
 ~~~~~~~~~~~~~~~~~~~~~~
