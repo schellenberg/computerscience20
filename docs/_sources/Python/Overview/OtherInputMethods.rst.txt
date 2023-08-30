@@ -3,12 +3,12 @@
    :start: 1
 
 
-Other Input Methods (easygui_qt)
-=================================
+Other Input Methods (PySimpleGUI)
+==================================
 
 .. topic:: Quick Overview of Day
 
-    Getting user input with a pop-up window using the easygui_qt module. Work on a Python assignment, focused on input/output of strings, and conditionals.
+    Getting user input with a pop-up window using the PySimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.
 
 
 .. reveal:: curriculum_addressed_input_methods
@@ -71,10 +71,10 @@ Try the following, entering in ``17``. How about ``14``? Can you fix it? *Hint: 
         print("Wow! Already " + age + " years old!")
 
 
-.. index:: easygui_qt
+.. index:: PySimpleGUI
 
-Getting User Input With easygui_qt
------------------------------------
+Getting User Input With PySimpleGUI
+------------------------------------
 
 One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the **library** tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:
 
@@ -90,136 +90,63 @@ Another method of importing the library allows us give the module a nickname tha
 
 .. image:: images/reeborg_import_as.png
 
-When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``cs20-easygui``. In Thonny, open *Tools → Manage packages...*. 
+When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``PySimpleGUI``. In Thonny, open *Tools → Manage packages...*. 
 
 .. image:: images/thonny_manage_packages_menu_item.png
 
-Now type in ``cs20-easygui`` into the Search box (be sure to spell it *exactly*). Now click the Install button.
+Now type in ``PySimpleGUI`` into the Search box (be sure to spell it correctly). Click the package PySimpleGUI from the list of modules.
 
-.. image:: images/thonny_add_easygui_module.png
+.. image:: images/thonny_search_for_pysimplegui_module.png
 
-.. note:: The ``cs20-easygui`` package attempts to install ``easygui_qt``, along with it's prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be ``sip``, then ``PyQt5``, then ``easygui_qt``.
+Now click the Install button.
 
-.. warning:: Some users are reporting errors while installing ``cs20-easygui`` on Windows machines (as of May 2021). While I investigate why this is happening, you can use the following workaround. In Thonny, click on Tools → Open System Shell..., then type in ``pip install --only-binary :all: cs20-easygui``. Although you might see a warning about your pip version being out of date, it *should* install easygui_qt correctly.
+.. image:: images/thonny_add_pysimplegui_module.png
+
+Once the installation has completed, close the Manage Packages window.
+
 
 Get String From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will now be able to use the easygui_qt module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console. 
+You will now be able to use the PySimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console. 
 
 .. sourcecode:: python
     
     # import the module to allow GUI interaction
-    import easygui_qt as easy
+    import PySimpleGUI as sg
 
-    # think of this as "look inside easygui_qt, and run the get_string function
-    first_name = easy.get_string("Please enter your first name")
-    last_name = easy.get_string("Please enter your last name")
+    # think of this as "look inside PySimpleGUI, and run the popup_get_text function
+    first_name = sg.popup_get_text("Please enter your first name")
+    last_name = sg.popup_get_text("Please enter your last name")
 
     greeting = "Hello there, " + first_name + " " + last_name + "!"
     print(greeting)
 
 
-Display Graphical Message
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Display Graphical Messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to output the message to a graphical window (instead of the console), you can call the ``show_message()`` function, as shown below.
 
 .. sourcecode:: python
     
     # import the module to allow GUI interaction
-    import easygui_qt as easy
+    import PySimpleGUI as sg
 
-    # think of this as "look inside easygui_qt, and run the get_string function
-    first_name = easy.get_string("Please enter your first name")
-    last_name = easy.get_string("Please enter your last name")
+    # think of this as "look inside PySimpleGUI, and run the popup_get_text function
+    first_name = sg.popup_get_text("Please enter your first name")
+    last_name = sg.popup_get_text("Please enter your last name")
 
     greeting = "Hello there, " + first_name + " " + last_name + "!"
 
     # can also display output graphically
-    easy.show_message(greeting)
-
-
-Lists
-~~~~~~~
-
-In the next example, we need to provide a **list** of options for the user to pick from. As we saw in the quick Python overview, a list can be created using square brackets ``[]``, with each elemnt inside the square brackets separated with a comma. Consider the example below, in which we create a list of ski hills, then print out some elements from it. *Note that lists begin counting at 0, so the first element in the list is accessed using list_name[0].*
-
-.. activecode:: lists_overview_ski_hills
-    :nocodelens:
-
-    ski_hills = ["Table Mountain", "Mission Ridge", "Wapiti", "Duck Mountain", "Asessippi"]
-    print(ski_hills[0])     # Table Mountain
-    print(ski_hills[2])     # Wapiti
-    print(ski_hills[8])     # IndexError: list index out of range
-
-
-
-Get Choice From User
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To give the user a list of options to choose from, we can create a **list** of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:
-
-
-.. sourcecode:: python
-
-    # import the module to allow GUI interaction
-    import easygui_qt as easy
-
-    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed"]
-
-    # the values passed to get_choice() are Prompt, Window Title, and Choices
-    favourite = easy.get_choice("What is your fav?", "Pick Subject", subjects)
-
-    easy.show_message("Good call. " + favourite + " is good.")
-
-
-You could take this a step further, doing something different depending on which subject the user selected. 
-
-.. sourcecode:: python
-
-    # import the module to allow GUI interaction
-    import easygui_qt as easy
-
-    subjects = ["English", "Math", "Computer Science", "History", "Phys Ed"]
-    favourite = easy.get_choice("What is your fav?", "Pick Subject", subjects)
-
-    if favourite == "English":
-        easy.show_message("To be or not to be: that is the question.")
-    elif favourite == "Math":
-        easy.show_message("I'll take that as a good sine")
-    elif favourite == "Computer Science":
-        easy.show_message("Are you just saying that?")
-    else:
-        easy.show_message("Good call. " + favourite + " is good.")
+    sg.popup(greeting)
 
 
 Other Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are many more methods you can use with easygui_qt. You may want to look in the appendices for the :ref:`easygui_reference` for a more comprehensive list of what is available. For quick reference, here are a few of them (each of the following assumes you have already called ``import easygui_qt as easy``):
-
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|                                          Function                                         |                    What it Returns                     |
-+===========================================================================================+========================================================+
-| ``easy.get_string("Some question:")``                                                     | returns a string (or None if cancelled)                |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_integer("Some question:")``                                                    | returns an int (or None if cancelled)                  |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_float("Some question:")``                                                      | returns a float (or None if cancelled)                 |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.get_yes_or_no("Some question:")``                                                  | returns a ``True`` or ``False`` (or None if cancelled) |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.show_message("Some message.")``                                                    | doesn't return anything                                |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| ``easy.show_text("A large chunk of text.")``                                              | doesn't return anything                                |
-+-------------------------------------------------------------------------------------------+--------------------------------------------------------+
-
-Two other functions that you might find useful (that require you to use lists) are:
-
--  ``easy.get_choice("Message to user", "Window Title", ["Some", "list", "of", "choices"])``, which returns a single choice from the list (or None if cancelled)
-- ``easy.get_list_of_choices("Window title", ["Some", "list", "of", "choices"])``, which returns a list of selected items (or an empty list if cancelled)
-
+There are many more methods you can use with PySimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the :ref:`pysimplegui_reference` for a more comprehensive list of what is available. 
 
 
 Mad Libs Practice Problem

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Other Input Methods (easygui_qt) &#8212; Computer Science 20 Saskatchewan</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script src="../../_static/runestonebase.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../_static/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/waypoints.min.js"></script>
+    <script src="../../_static/rangy-core.js"></script>
+    <script src="../../_static/rangy-textrange.js"></script>
+    <script src="../../_static/rangy-cssclassapplier.js"></script>
+    <script src="../../_static/user-highlights.js"></script>
+    <script src="../../_static/jquery.idle-timer.js"></script>
+    <script src="../../_static/processing-1.4.1.min.js"></script>
+    <script src="../../_static/jquery.hotkey.js"></script>
+    <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '6.2.2';
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand" href="../../index.html">Computer Science 20 - Saskatchewan</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">ActiveCode Work Area</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Other Input Methods (easygui_qt)</a><ul>
+<li><a class="reference internal" href="#what-does-this-program-do">What Does This Program Do?</a></li>
+<li><a class="reference internal" href="#getting-user-input-with-easygui-qt">Getting User Input With easygui_qt</a><ul>
+<li><a class="reference internal" href="#get-string-from-user">Get String From User</a></li>
+<li><a class="reference internal" href="#display-graphical-message">Display Graphical Message</a></li>
+<li><a class="reference internal" href="#lists">Lists</a></li>
+<li><a class="reference internal" href="#get-choice-from-user">Get Choice From User</a></li>
+<li><a class="reference internal" href="#other-methods">Other Methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mad-libs-practice-problem">Mad Libs Practice Problem</a><ul>
+<li><a class="reference internal" href="#extra-for-experts">Extra for Experts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <section id="other-input-methods-easygui-qt">
+<h1>Other Input Methods (easygui_qt)<a class="headerlink" href="#other-input-methods-easygui-qt" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title">Quick Overview of Day</p>
+<p>Getting user input with a pop-up window using the easygui_qt module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
+</div>
+
+    <div data-component="reveal" class="runestone " id="curriculum_addressed_input_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
+    <ul class="simple">
+<li><p><strong>CS20-CP1</strong> Apply various problem-solving strategies to solve programming problems throughout Computer Science 20.</p></li>
+<li><p><strong>CS20-FP1</strong> Utilize different data types, including integer, floating point, Boolean and string, to solve programming problems.</p></li>
+<li><p><strong>CS20-FP2</strong> Investigate how control structures affect program flow.</p></li>
+<li><p><strong>CS20-FP4</strong>  Investigate one-dimensional arrays and their applications.</p></li>
+</ul>
+
+    </div>
+    <section id="what-does-this-program-do">
+<h2>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
+</div>
+<p>What will the following programs output? Why?</p>
+<p>Remember that a single equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal notranslate"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
+<p>Try the following code with <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">82</span></code>, and <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">142</span></code>.</p>
+<p>Try the following, entering in <code class="docutils literal notranslate"><span class="pre">17</span></code>. How about <code class="docutils literal notranslate"><span class="pre">14</span></code>? Can you fix it? <em>Hint: think data types!</em></p>
+</section>
+<section id="getting-user-input-with-easygui-qt">
+<span id="index-0"></span><h2>Getting User Input With easygui_qt<a class="headerlink" href="#getting-user-input-with-easygui-qt" title="Permalink to this headline">¶</a></h2>
+<p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
+<img alt="Python/EasyGUI/images/reeborg_library.png" src="Python/EasyGUI/images/reeborg_library.png" />
+<p>In Reeborg, we would often import that code using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
+<img alt="Python/EasyGUI/images/reeborg_code_calling_library.png" src="Python/EasyGUI/images/reeborg_code_calling_library.png" />
+<p>You can think of this code as saying “Look into the <code class="docutils literal notranslate"><span class="pre">library</span></code>, and find something called <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>”. For many Python modules, this is equivalent to saying, “Look into the library.py file, and find a function called turn_right()”.</p>
+<p>Another method of importing the library allows us give the module a nickname that is faster to type. Consider the following:</p>
+<img alt="Python/EasyGUI/images/reeborg_import_as.png" src="Python/EasyGUI/images/reeborg_import_as.png" />
+<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal notranslate"><span class="pre">cs20-easygui</span></code>. In Thonny, open <em>Tools → Manage packages…</em>.</p>
+<img alt="Python/EasyGUI/images/thonny_manage_packages_menu_item.png" src="Python/EasyGUI/images/thonny_manage_packages_menu_item.png" />
+<p>Now type in <code class="docutils literal notranslate"><span class="pre">cs20-easygui</span></code> into the Search box (be sure to spell it <em>exactly</em>). Now click the Install button.</p>
+<img alt="Python/EasyGUI/images/thonny_add_easygui_module.png" src="Python/EasyGUI/images/thonny_add_easygui_module.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cs20-easygui</span></code> package attempts to install <code class="docutils literal notranslate"><span class="pre">easygui_qt</span></code>, along with it’s prerequisites. If you prefer (or if you run into installation problems), you can also just install each module on their own. The order you install them should be <code class="docutils literal notranslate"><span class="pre">sip</span></code>, then <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>, then <code class="docutils literal notranslate"><span class="pre">easygui_qt</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some users are reporting errors while installing <code class="docutils literal notranslate"><span class="pre">cs20-easygui</span></code> on Windows machines (as of May 2021). While I investigate why this is happening, you can use the following workaround. In Thonny, click on Tools → Open System Shell…, then type in <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--only-binary</span> <span class="pre">:all:</span> <span class="pre">cs20-easygui</span></code>. Although you might see a warning about your pip version being out of date, it <em>should</em> install easygui_qt correctly.</p>
+</div>
+<section id="get-string-from-user">
+<h3>Get String From User<a class="headerlink" href="#get-string-from-user" title="Permalink to this headline">¶</a></h3>
+<p>You will now be able to use the easygui_qt module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
+
+<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="display-graphical-message">
+<h3>Display Graphical Message<a class="headerlink" href="#display-graphical-message" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to output the message to a graphical window (instead of the console), you can call the <code class="docutils literal notranslate"><span class="pre">show_message()</span></code> function, as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
+
+<span class="c1"># think of this as &quot;look inside easygui_qt, and run the get_string function</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello there, &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+
+<span class="c1"># can also display output graphically</span>
+<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>In the next example, we need to provide a <strong>list</strong> of options for the user to pick from. As we saw in the quick Python overview, a list can be created using square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, with each elemnt inside the square brackets separated with a comma. Consider the example below, in which we create a list of ski hills, then print out some elements from it. <em>Note that lists begin counting at 0, so the first element in the list is accessed using list_name[0].</em></p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lists_overview_ski_hills data-question_label="1">
+<div id=lists_overview_ski_hills_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="lists_overview_ski_hills_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+ski_hills = ["Table Mountain", "Mission Ridge", "Wapiti", "Duck Mountain", "Asessippi"]
+print(ski_hills[0])     # Table Mountain
+print(ski_hills[2])     # Wapiti
+print(ski_hills[8])     # IndexError: list index out of range
+</textarea>
+</div>
+</div>
+</section>
+<section id="get-choice-from-user">
+<h3>Get Choice From User<a class="headerlink" href="#get-choice-from-user" title="Permalink to this headline">¶</a></h3>
+<p>To give the user a list of options to choose from, we can create a <strong>list</strong> of all the choices they can choose from. Imagine that you were creating a program that would allow the user to select which school subject was their favourite. You might include a list of options, as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
+
+<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">]</span>
+
+<span class="c1"># the values passed to get_choice() are Prompt, Window Title, and Choices</span>
+<span class="n">favourite</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="s2">&quot;What is your fav?&quot;</span><span class="p">,</span> <span class="s2">&quot;Pick Subject&quot;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">)</span>
+
+<span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Good call. &quot;</span> <span class="o">+</span> <span class="n">favourite</span> <span class="o">+</span> <span class="s2">&quot; is good.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You could take this a step further, doing something different depending on which subject the user selected.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
+<span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
+
+<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">,</span> <span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;Phys Ed&quot;</span><span class="p">]</span>
+<span class="n">favourite</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_choice</span><span class="p">(</span><span class="s2">&quot;What is your fav?&quot;</span><span class="p">,</span> <span class="s2">&quot;Pick Subject&quot;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;English&quot;</span><span class="p">:</span>
+    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;To be or not to be: that is the question.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;Math&quot;</span><span class="p">:</span>
+    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;I&#39;ll take that as a good sine&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">favourite</span> <span class="o">==</span> <span class="s2">&quot;Computer Science&quot;</span><span class="p">:</span>
+    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Are you just saying that?&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Good call. &quot;</span> <span class="o">+</span> <span class="n">favourite</span> <span class="o">+</span> <span class="s2">&quot; is good.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="other-methods">
+<h3>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
+<p>There are many more methods you can use with easygui_qt. You may want to look in the appendices for the <a class="reference internal" href="Reference.html#easygui-reference"><span class="std std-ref">EasyGUI_Qt Reference</span></a> for a more comprehensive list of what is available. For quick reference, here are a few of them (each of the following assumes you have already called <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">easygui_qt</span> <span class="pre">as</span> <span class="pre">easy</span></code>):</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>What it Returns</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">easy.get_string(&quot;Some</span> <span class="pre">question:&quot;)</span></code></p></td>
+<td><p>returns a string (or None if cancelled)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">easy.get_integer(&quot;Some</span> <span class="pre">question:&quot;)</span></code></p></td>
+<td><p>returns an int (or None if cancelled)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">easy.get_float(&quot;Some</span> <span class="pre">question:&quot;)</span></code></p></td>
+<td><p>returns a float (or None if cancelled)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">easy.get_yes_or_no(&quot;Some</span> <span class="pre">question:&quot;)</span></code></p></td>
+<td><p>returns a <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (or None if cancelled)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">easy.show_message(&quot;Some</span> <span class="pre">message.&quot;)</span></code></p></td>
+<td><p>doesn’t return anything</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">easy.show_text(&quot;A</span> <span class="pre">large</span> <span class="pre">chunk</span> <span class="pre">of</span> <span class="pre">text.&quot;)</span></code></p></td>
+<td><p>doesn’t return anything</p></td>
+</tr>
+</tbody>
+</table>
+<p>Two other functions that you might find useful (that require you to use lists) are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">easy.get_choice(&quot;Message</span> <span class="pre">to</span> <span class="pre">user&quot;,</span> <span class="pre">&quot;Window</span> <span class="pre">Title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a single choice from the list (or None if cancelled)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">easy.get_list_of_choices(&quot;Window</span> <span class="pre">title&quot;,</span> <span class="pre">[&quot;Some&quot;,</span> <span class="pre">&quot;list&quot;,</span> <span class="pre">&quot;of&quot;,</span> <span class="pre">&quot;choices&quot;])</span></code>, which returns a list of selected items (or an empty list if cancelled)</p></li>
+</ul>
+</section>
+</section>
+<section id="mad-libs-practice-problem">
+<h2>Mad Libs Practice Problem<a class="headerlink" href="#mad-libs-practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! <em>If you work in Thonny, you will be able to use easygui_qt in your program.</em></p>
+<p>To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.</p>
+<p>If you are not familiar with madlibs, you may want to investigate what they are by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might start with the classic Humpty Dumpty rhyme:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Humpty Dumpty sat on a wall,
+Humpty Dumpty had a great fall.
+All the king&#39;s horses and all the king&#39;s men
+Couldn&#39;t put Humpty together again.
+</pre></div>
+</div>
+<p>In your program, you could take user input:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Person&#39;s First Name: Bree
+Person&#39;s Last Name: Janzen
+Verb (past tense action): ran
+Job Title (such as principal, electrician, etc.): plumber
+Animal (plural): dogs
+</pre></div>
+</div>
+<p>After processing the user input, your program could print out:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Bree Janzen ran on a wall,
+Bree Janzen had a great fall.
+All the plumber&#39;s dogs and all the plumber&#39;s men
+Couldn&#39;t put Bree together again.
+</pre></div>
+</div>
+<p>Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Though it can be difficult with user input, try to make sure your story makes sense.</p>
+<p>Remember to use a comment header at the top of your program!</p>
+<section id="extra-for-experts">
+<h3>Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:</p></li>
+<li><p>easier: create a list of possible words, and have Python choose one of these words <a class="reference external" href="http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python">at random</a>.</p></li>
+<li><p>harder: create text files for each of the parts of speech that you will require (ie. nouns.txt, adjectives.txt, etc) and have the computer randomly choose one of the words from the appropriate text file to complete the madlib. Hint: To simplify things, I’d recommend that you generate the text file with one word per line.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    Created by Dan Schellenberg. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
