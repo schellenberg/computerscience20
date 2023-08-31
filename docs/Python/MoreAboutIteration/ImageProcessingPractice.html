@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2. Image Processing Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -209,11 +212,11 @@
 <div class="container" id="main-content">
   
   <section id="image-processing-practice">
-<h1><span class="section-number">2. </span>Image Processing Practice<a class="headerlink" href="#image-processing-practice" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">2. </span>Image Processing Practice<a class="headerlink" href="#image-processing-practice" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use nested loops to practice simple image processing.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_image_processing_practice"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -225,7 +228,7 @@
 
     </div>
     <section id="nested-loop-review">
-<h2><span class="section-number">2.1. </span>Nested Loop Review<a class="headerlink" href="#nested-loop-review" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Nested Loop Review<a class="headerlink" href="#nested-loop-review" title="Permalink to this heading">¶</a></h2>
 <p>In the previous section, we used a lot of nested loops, which is a loop inside another loop. Use what you learned from that section to answer the following:</p>
 
         <div class="runestone ">
@@ -301,18 +304,18 @@
     </div>
     </section>
 <section id="warmup-problems">
-<h2><span class="section-number">2.2. </span>Warmup Problems<a class="headerlink" href="#warmup-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Warmup Problems<a class="headerlink" href="#warmup-problems" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your teacher may choose to work through the following problems to help build your confidence before you attempt the practice problems.</p>
 </div>
 <section id="gray-scale">
-<h3><span class="section-number">2.2.1. </span>Gray Scale<a class="headerlink" href="#gray-scale" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>Gray Scale<a class="headerlink" href="#gray-scale" title="Permalink to this heading">¶</a></h3>
 <p>See if you can create a <strong>gray scale</strong> version of the image. When looking at each pixel, you should average the red, green and blue intensities and then using that average value for setting the new red, new green, and new blue intensities. <em>Note that any RGB value that contains the same value for it’s R, G and B amounts will be a gray value. For example, (50, 50, 50) is a dark gray, and (200, 200, 200) is a lighter gray.</em></p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=gray_scale data-question_label="2.2.1.1">
-<div id=gray_scale_question class="ac_question col-md-12">
+<div id=gray_scale_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="gray_scale_editor" 
@@ -382,14 +385,14 @@ for y in range(height):
     </div>
     </section>
 <section id="black-and-white-threshold">
-<h3><span class="section-number">2.2.2. </span>Black and White Threshold<a class="headerlink" href="#black-and-white-threshold" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.2. </span>Black and White Threshold<a class="headerlink" href="#black-and-white-threshold" title="Permalink to this heading">¶</a></h3>
 <p>You can create interesting <strong>black and white</strong> images by setting a threshold (if the sum of the intensities is larger than some value) and choosing to either insert a white pixel or a black pixel at the current location. For example, if you use the <code class="docutils literal notranslate"><span class="pre">skflag.png</span></code> image, it looks like this originally:</p>
 <img src="../../_static/skflag.png"><p>If you look at every pixel to find the sum of the red, green, and blue values, then insert a black pixel whenever the sum is greater than 200 (or a white pixel if it is not), you will create the following image:</p>
 <img alt="../../_images/threshold-flag.png" src="../../_images/threshold-flag.png" />
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=black_white_threshold data-question_label="2.2.2.1">
-<div id=black_white_threshold_question class="ac_question col-md-12">
+<div id=black_white_threshold_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="black_white_threshold_editor" 
@@ -440,7 +443,7 @@ for y in range(height):
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">2.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <p>As we have seen, nested loops allow us to look through all of the pixels for an image. You will need to use a nested for loop for each of the following practice problems. <em>Although you could copy/paste much of the same template code for these problems, try to write out a full solution from scratch for at least 3 of the problems!</em></p>
 <p>For the following problems, use one of these images:</p>
 <img src="../../_static/skflag.png" id="skflag.png">
@@ -448,12 +451,12 @@ for y in range(height):
 <h4 style="text-align: center;">moon.jpg</h4><img src="../../_static/sneakers.jpg" id="sneakers.jpg">
 <h4 style="text-align: center;">sneakers.jpg</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
 <h4 style="text-align: center;">rooster.jpg</h4><section id="red-remover">
-<h3><span class="section-number">2.3.1. </span>Red Remover<a class="headerlink" href="#red-remover" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1. </span>Red Remover<a class="headerlink" href="#red-remover" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that opens an image and uses a nested loop to look at all of the pixels. For each pixel, you should remove all of the red intensity from the pixel. The green and blue intensities should remain unchanged.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_red_remover data-question_label="2.3.1.1">
-<div id=practice_problem_red_remover_question class="ac_question col-md-12">
+<div id=practice_problem_red_remover_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_red_remover_editor" 
@@ -484,13 +487,13 @@ img.draw(win)
     </div>
     </section>
 <section id="color-swapping">
-<h3><span class="section-number">2.3.2. </span>Color Swapping<a class="headerlink" href="#color-swapping" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2. </span>Color Swapping<a class="headerlink" href="#color-swapping" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that sets the red value to the original green value, the green value to the original blue value, and the blue value to the original red value.</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_color_swapper data-question_label="2.3.2.1">
-<div id=practice_problem_color_swapper_question class="ac_question col-md-12">
+<div id=practice_problem_color_swapper_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_color_swapper_editor" 
@@ -512,13 +515,13 @@ img.draw(win)
     </div>
     </section>
 <section id="keep-the-green">
-<h3><span class="section-number">2.3.3. </span>Keep the Green<a class="headerlink" href="#keep-the-green" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3. </span>Keep the Green<a class="headerlink" href="#keep-the-green" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that keeps only the green values of all pixels in the image.</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_keep_the_green data-question_label="2.3.3.1">
-<div id=practice_problem_keep_the_green_question class="ac_question col-md-12">
+<div id=practice_problem_keep_the_green_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_keep_the_green_editor" 
@@ -540,13 +543,13 @@ img.draw(win)
     </div>
     </section>
 <section id="half-red">
-<h3><span class="section-number">2.3.4. </span>Half Red<a class="headerlink" href="#half-red" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.4. </span>Half Red<a class="headerlink" href="#half-red" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that sets each pixel’s red intensity to be half of the original value. The green and blue intensities should remain the same as in the original image.</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_half_red data-question_label="2.3.4.1">
-<div id=practice_problem_half_red_question class="ac_question col-md-12">
+<div id=practice_problem_half_red_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_half_red_editor" 
@@ -568,13 +571,13 @@ img.draw(win)
     </div>
     </section>
 <section id="combining-bits-of-colors">
-<h3><span class="section-number">2.3.5. </span>Combining Bits of Colors<a class="headerlink" href="#combining-bits-of-colors" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.5. </span>Combining Bits of Colors<a class="headerlink" href="#combining-bits-of-colors" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that sets each pixel’s blue intensity to be an eighth of the original green value plus an eighth of the original red value. The red and green intensities should remain the same as in the original image.</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_combining_colors data-question_label="2.3.5.1">
-<div id=practice_problem_combining_colors_question class="ac_question col-md-12">
+<div id=practice_problem_combining_colors_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_combining_colors_editor" 
@@ -596,13 +599,13 @@ img.draw(win)
     </div>
     </section>
 <section id="half-each-color">
-<h3><span class="section-number">2.3.6. </span>Half Each Color<a class="headerlink" href="#half-each-color" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.6. </span>Half Each Color<a class="headerlink" href="#half-each-color" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that sets each pixel’s RGB intensities to be half of their original value.</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_half_each_color data-question_label="2.3.6.1">
-<div id=practice_problem_half_each_color_question class="ac_question col-md-12">
+<div id=practice_problem_half_each_color_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_half_each_color_editor" 
@@ -624,13 +627,13 @@ img.draw(win)
     </div>
     </section>
 <section id="sepia">
-<h3><span class="section-number">2.3.7. </span>Sepia<a class="headerlink" href="#sepia" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.7. </span>Sepia<a class="headerlink" href="#sepia" title="Permalink to this heading">¶</a></h3>
 <p>Write a program that converts an image using a sepia filter (<a class="reference external" href="https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created">Sepia Tone</a>).</p>
 <blockquote>
 <div>
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_sepia_tone data-question_label="2.3.7.1">
-<div id=practice_problem_sepia_tone_question class="ac_question col-md-12">
+<div id=practice_problem_sepia_tone_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_sepia_tone_editor" 
@@ -652,7 +655,7 @@ img.draw(win)
     </div>
     </section>
 <section id="acknowledgments">
-<h3><span class="section-number">2.3.8. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.8. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. The Saskatchewan flag image is also licensed as CC-0, and was obtained from Wikimedia.</p>
 </section>
 </section>

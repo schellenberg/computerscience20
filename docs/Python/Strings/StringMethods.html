@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>3. String Methods &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -201,11 +204,11 @@
 <div class="container" id="main-content">
   
   <section id="string-methods">
-<h1><span class="section-number">3. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">3. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>WDTPD string questions. Practice problems with string manipulation. Introduction to additional string methods. Time to catch up on any string practice problems not completed on previous days.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_string_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -217,7 +220,7 @@
 
     </div>
     <section id="what-does-this-program-do">
-<h2><span class="section-number">3.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
@@ -226,7 +229,7 @@
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_practice_1 data-question_label="3.1.1">
-<div id=wdtpd_string_manipulation_practice_1_question class="ac_question col-md-12">
+<div id=wdtpd_string_manipulation_practice_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_string_manipulation_practice_1_editor" 
@@ -246,7 +249,7 @@ for item in fruit:
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_practice_2 data-question_label="3.1.2">
-<div id=wdtpd_string_manipulation_practice_2_question class="ac_question col-md-12">
+<div id=wdtpd_string_manipulation_practice_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_string_manipulation_practice_2_editor" 
@@ -263,7 +266,7 @@ for counter in len(fruit):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_practice_3 data-question_label="3.1.3">
-<div id=wdtpd_string_manipulation_practice_3_question class="ac_question col-md-12">
+<div id=wdtpd_string_manipulation_practice_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_string_manipulation_practice_3_editor" 
@@ -281,7 +284,7 @@ for current_index in range(len(sentence)):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_string_manipulation_practice_4 data-question_label="3.1.4">
-<div id=wdtpd_string_manipulation_practice_4_question class="ac_question col-md-12">
+<div id=wdtpd_string_manipulation_practice_4_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_string_manipulation_practice_4_editor" 
@@ -304,7 +307,7 @@ print(foo("banana"))
 </div>
 </section>
 <section id="letter-counting">
-<h2><span class="section-number">3.2. </span>Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Letter Counting<a class="headerlink" href="#letter-counting" title="Permalink to this heading">¶</a></h2>
 <p>By looking at each letter of a peice of text, you can create a <a class="reference external" href="https://en.wikipedia.org/wiki/Frequency_analysis">frequency analysis</a>, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).</p>
 <p>The code below assigns a variable <code class="docutils literal notranslate"><span class="pre">paragraph</span></code> in the program a triple-quoted string that contains a paragraph of text. The function <code class="docutils literal notranslate"><span class="pre">count</span></code> determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter ‘e’.  Finally, the function prints an analysis of the text like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">text</span> <span class="n">contains</span> <span class="mi">243</span> <span class="n">alphabetic</span> <span class="n">characters</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="mi">109</span> <span class="p">(</span><span class="mf">44.8</span><span class="o">%</span><span class="p">)</span> <span class="n">are</span> <span class="s1">&#39;e&#39;</span><span class="o">.</span>
@@ -313,7 +316,7 @@ print(foo("banana"))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=letter_counting_demo data-question_label="3.2.1">
-<div id=letter_counting_demo_question class="ac_question col-md-12">
+<div id=letter_counting_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="letter_counting_demo_editor" 
@@ -373,13 +376,13 @@ count(paragraph)
 </div>
 </section>
 <section id="id1">
-<h2><span class="section-number">3.3. </span>String Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>String Methods<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>We previously saw that each turtle instance has its own attributes and a number of methods that can be applied to the instance.  For example, we wrote <code class="docutils literal notranslate"><span class="pre">tess.right(90)</span></code> when we wanted the turtle object <code class="docutils literal notranslate"><span class="pre">tess</span></code> to perform the <code class="docutils literal notranslate"><span class="pre">right</span></code> method to turn to the right 90 degrees.  The “dot notation” is the way we connect the name of an object to the name of a method it can perform.</p>
 <p>Strings are also objects.  Each string instance has its own attributes and methods.  The most important attribute of the string is the collection of characters.  There are a wide variety of methods.  Try the following program.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_methods_example1 data-question_label="3.3.1">
-<div id=string_methods_example1_question class="ac_question col-md-12">
+<div id=string_methods_example1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_methods_example1_editor" 
@@ -399,11 +402,6 @@ print(other_string)
 to create a new string in which all the characters are in uppercase.  <code class="docutils literal notranslate"><span class="pre">lower</span></code> works in a similar fashion changing all characters in the string to lowercase.  (The original string <code class="docutils literal notranslate"><span class="pre">some_string</span></code> remains unchanged.  A new string <code class="docutils literal notranslate"><span class="pre">other_string</span></code> is created.)</p>
 <p id="index-0">In addition to <code class="docutils literal notranslate"><span class="pre">upper</span></code> and <code class="docutils literal notranslate"><span class="pre">lower</span></code>, the following table provides a summary of some other useful string methods.  There are a few activecode examples that follow so that you can try them out.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 7%" />
-<col style="width: 88%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Parameters</p></th>
@@ -481,7 +479,7 @@ to create a new string in which all the characters are in uppercase.  <code clas
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_methods_example2 data-question_label="3.3.2">
-<div id=string_methods_example2_question class="ac_question col-md-12">
+<div id=string_methods_example2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_methods_example2_editor" 
@@ -506,7 +504,7 @@ print(news)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_methods_example3 data-question_label="3.3.3">
-<div id=string_methods_example3_question class="ac_question col-md-12">
+<div id=string_methods_example3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_methods_example3_editor" 
@@ -536,7 +534,7 @@ print(food.index("e"))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_methods_example4 data-question_label="3.3.4">
-<div id=string_methods_example4_question class="ac_question col-md-12">
+<div id=string_methods_example4_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_methods_example4_editor" 
@@ -551,7 +549,7 @@ print(words)
 </div>
 </div>
 <section id="check-your-understanding">
-<h3><span class="section-number">3.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="3.3.1.1" data-multipleanswers="false"  id="string_methods_check_understanding1"  style="visibility: hidden;">
@@ -594,7 +592,7 @@ print(words)
 </section>
 </section>
 <section id="substitution-cipher">
-<h2><span class="section-number">3.4. </span>Substitution Cipher<a class="headerlink" href="#substitution-cipher" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Substitution Cipher<a class="headerlink" href="#substitution-cipher" title="Permalink to this heading">¶</a></h2>
 <p>In a substitution cipher one letter is substituted for another to garble a message. For example, you might use the following table to convert the original (plaintext) message into the encrypted (ciphertext) message:</p>
 <img alt="../../_images/substitution-cipher.png" src="../../_images/substitution-cipher.png" />
 <p>Using this cipher, the plaintext message <em>hello world</em> would turn into the ciphertext message <em>nxqqg tgcqb</em>.</p>
@@ -603,7 +601,7 @@ print(words)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cipher_encryption_message data-question_label="3.4.1">
-<div id=cipher_encryption_message_question class="ac_question col-md-12">
+<div id=cipher_encryption_message_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="cipher_encryption_message_editor" 
@@ -628,7 +626,7 @@ print(encrypted)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cipher_decryption_message data-question_label="3.4.2">
-<div id=cipher_decryption_message_question class="ac_question col-md-12">
+<div id=cipher_decryption_message_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="cipher_decryption_message_editor" 
@@ -693,11 +691,11 @@ print(decrypted)
     </div>
     </section>
 <section id="practice-problems">
-<h2><span class="section-number">3.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <p>Keep working on the practice problems from the previous two days. If you complete these ahead of your classmates, ask your teacher what you should work on.</p>
 </section>
 <section id="extra-challenge">
-<h2><span class="section-number">3.6. </span>Extra Challenge<a class="headerlink" href="#extra-challenge" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Extra Challenge<a class="headerlink" href="#extra-challenge" title="Permalink to this heading">¶</a></h2>
 <p>Hidden in the source code for this page is an encrypted message, created using the same substitution cipher shown above. To find and decrypt it, you need to look through the source code of this page, and analyze the text between the words <code class="docutils literal notranslate"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal notranslate"><span class="pre">MSGENDS</span></code>. To automate this completely in Python, you can use the requests module, as described earlier on this page. You then need to use string methods to determine the location of where the hidden message begins and ends, so that you know what text to decrypt. To make this a bit more challenging, I’ve added random gibberish throughout the message. To get rid of the gibberish, you need to know that between <code class="docutils literal notranslate"><span class="pre">MSGBEGINS:</span></code> and <code class="docutils literal notranslate"><span class="pre">MSGENDS</span></code>, only every 5th letter is part of the actual hidden message.</p>
 
         <div class="runestone ">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>The HyperText Markup Language &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -213,11 +216,11 @@
 <div class="container" id="main-content">
   
   <section id="the-hypertext-markup-language">
-<h1>The HyperText Markup Language<a class="headerlink" href="#the-hypertext-markup-language" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1>The HyperText Markup Language<a class="headerlink" href="#the-hypertext-markup-language" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Experiment with HTML (HyperText Markup Language).</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_html"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -226,7 +229,7 @@
 
     </div>
     <section id="introduction-to-html">
-<span id="index-0"></span><h2>Introduction to HTML<a class="headerlink" href="#introduction-to-html" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Introduction to HTML<a class="headerlink" href="#introduction-to-html" title="Permalink to this heading">¶</a></h2>
 <p>As we noted in the previous chapter, HTML is the language of the web for expressing content. But before we dive into the specifics of HTML, lets look at what we mean by a markup language in general.  A markup language is a language that <strong>annotates</strong> text so that the computer can manipulate it for some purpose.  Most markup languages are readable by humans and are designed to be written with a plain text editor as rather than a fancy word processor like Microsoft Word.</p>
 <p>As we learn HTML its important to keep in mind that the job of HTML is to structure the document and provide content.  Making the webpage look good is the job of a different technology called Cascading Style Sheets (CSS).</p>
 <p>HTML uses a set of tags to annotate (mark up) the document.  The tags all look like this: <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">tagname</span> <span class="pre">&gt;</span></code> and they are balanced so that at the end of the content for that tag there is <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">tagname</span> <span class="pre">&gt;</span></code>. Notice that the closing tag contains a slash at the beginning to differentiate itself from an opening tag.</p>
@@ -238,14 +241,14 @@
 </div>
 </section>
 <section id="my-first-heading">
-<h2>My First Heading<a class="headerlink" href="#my-first-heading" title="Permalink to this headline">¶</a></h2>
+<h2>My First Heading<a class="headerlink" href="#my-first-heading" title="Permalink to this heading">¶</a></h2>
 <p>A simple paragraph of text.</p>
 <p>Another paragraph of text.</p>
 <p>The HTML for this document is as follows:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_1 data-question_label="1">
-<div id=html_1_question class="ac_question col-md-12">
+<div id=html_1_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_1_editor" 
@@ -271,14 +274,14 @@
 <img alt="../_images/tree.svg" src="../_images/tree.svg" /><p>This tree is upside down with how we usually think of a tree, but in computer science we put the “root” of the tree at the top.  So the root of this tree is the html tag.  The html tag has two <strong>children</strong>, the head and the body.  The head has one child, which is the head tag.  The html tag is the <strong>parent</strong> of the head tag.  The body has three children, the h1 tag and two p tags.  You may also find it helpful to think of this as an outline, although you would have to rotate the picture 90 degrees counter clockwise to get the orientation into outline form.  We will see how this tree structure of an html page is useful later on if/when we start to use CSS and Javascript.</p>
 </section>
 <section id="basic-html-tags">
-<h2>Basic HTML Tags<a class="headerlink" href="#basic-html-tags" title="Permalink to this headline">¶</a></h2>
+<h2>Basic HTML Tags<a class="headerlink" href="#basic-html-tags" title="Permalink to this heading">¶</a></h2>
 <section id="headings">
-<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
 <p>Like any document HTML documents may have several layers of headings.  In fact you can have heading levels from 1 to 6 in an HTML document.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_headings data-question_label="2">
-<div id=html_headings_question class="ac_question col-md-12">
+<div id=html_headings_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_headings_editor" 
@@ -303,12 +306,12 @@
     <p>Another aspect of the heading tag is that it is what we call a <strong>block</strong> tag.  Notice that each heading appears on its own line.  Thats pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some <strong>inline</strong> tags that do not each appear on their own line.</p>
 </section>
 <section id="paragraphs">
-<h3>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h3>
+<h3>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this heading">¶</a></h3>
 <p>Paragraphs are another funamental element of documents.  Paragraphs are also another example of a block element in that each paragraph gets its own space and is separated from other html elements by blank lines in the document.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_paragraph data-question_label="3">
-<div id=html_paragraph_question class="ac_question col-md-12">
+<div id=html_paragraph_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_paragraph_editor" 
@@ -325,13 +328,13 @@
 <p>What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?</p>
 </section>
 <section id="images">
-<h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<h3>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h3>
 <p>Images are another common element of a document or a web page.  To include an image in a document you must use an <code class="docutils literal notranslate"><span class="pre">img</span></code> tag.  Image tags are an example of an <strong>inline</strong> element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.</p>
 <p>The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_img1 data-question_label="4">
-<div id=html_img1_question class="ac_question col-md-12">
+<div id=html_img1_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_img1_editor" 
@@ -353,7 +356,7 @@
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_img2 data-question_label="5">
-<div id=html_img2_question class="ac_question col-md-12">
+<div id=html_img2_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_img2_editor" 
@@ -379,12 +382,12 @@ that there is a https:// at the start of the path.&lt;/p&gt;
 <p>There are several other attributes of the image tag as well.  You can read about them <a class="reference external" href="http://www.w3schools.com/tags/tag_img.asp">here</a>.</p>
 </section>
 <section id="links">
-<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
 <p>The last basic tag to cover in this section is the link tag <code class="docutils literal notranslate"><span class="pre">a</span></code>.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an <code class="docutils literal notranslate"><span class="pre">img</span></code> tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute on the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.   The text that you will click on goes between the opening <code class="docutils literal notranslate"><span class="pre">a</span></code> tag and the closing <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_link data-question_label="6">
-<div id=html_link_question class="ac_question col-md-12">
+<div id=html_link_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_link_editor" 
@@ -410,12 +413,12 @@ a link that will jump to the target anywhere else on the page using <code class=
 </section>
 </section>
 <section id="simple-text-formatting">
-<h2>Simple Text Formatting<a class="headerlink" href="#simple-text-formatting" title="Permalink to this headline">¶</a></h2>
+<h2>Simple Text Formatting<a class="headerlink" href="#simple-text-formatting" title="Permalink to this heading">¶</a></h2>
 <p>Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=html_fmt data-question_label="7">
-<div id=html_fmt_question class="ac_question col-md-12">
+<div id=html_fmt_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="html_fmt_editor" 
@@ -471,13 +474,13 @@ a link that will jump to the target anywhere else on the page using <code class=
 </div>
 </section>
 <section id="advanced-html-tags">
-<h2>Advanced HTML Tags<a class="headerlink" href="#advanced-html-tags" title="Permalink to this headline">¶</a></h2>
+<h2>Advanced HTML Tags<a class="headerlink" href="#advanced-html-tags" title="Permalink to this heading">¶</a></h2>
 <section id="unordered-lists">
-<h3>Unordered Lists<a class="headerlink" href="#unordered-lists" title="Permalink to this headline">¶</a></h3>
+<h3>Unordered Lists<a class="headerlink" href="#unordered-lists" title="Permalink to this heading">¶</a></h3>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=advhtml_ul data-question_label="10">
-<div id=advhtml_ul_question class="ac_question col-md-12">
+<div id=advhtml_ul_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="advhtml_ul_editor" 
@@ -494,11 +497,11 @@ a link that will jump to the target anywhere else on the page using <code class=
 </div>
 </section>
 <section id="ordered-lists">
-<h3>Ordered Lists<a class="headerlink" href="#ordered-lists" title="Permalink to this headline">¶</a></h3>
+<h3>Ordered Lists<a class="headerlink" href="#ordered-lists" title="Permalink to this heading">¶</a></h3>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=advhtml_ol data-question_label="11">
-<div id=advhtml_ol_question class="ac_question col-md-12">
+<div id=advhtml_ol_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="advhtml_ol_editor" 
@@ -525,12 +528,12 @@ a link that will jump to the target anywhere else on the page using <code class=
 <p>Try it yourself.</p>
 </section>
 <section id="nesting-lists">
-<h3>Nesting Lists<a class="headerlink" href="#nesting-lists" title="Permalink to this headline">¶</a></h3>
+<h3>Nesting Lists<a class="headerlink" href="#nesting-lists" title="Permalink to this heading">¶</a></h3>
 <p>Lists can be inside of other lists. This is true for most HTML tags.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=advhtml_nested data-question_label="12">
-<div id=advhtml_nested_question class="ac_question col-md-12">
+<div id=advhtml_nested_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="advhtml_nested_editor" 
@@ -554,7 +557,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 </div>
 </section>
 <section id="tables">
-<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
 <p>Tables are used when we need to show information in a traditional grid format. Here is a complete example that illustrates the use of the following table specific tags</p>
 <ul class="simple">
 <li><p>table  – This is the main tag for a table</p></li>
@@ -565,7 +568,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=advhtml_table data-question_label="13">
-<div id=advhtml_table_question class="ac_question col-md-12">
+<div id=advhtml_table_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="advhtml_table_editor" 
@@ -621,12 +624,12 @@ a link that will jump to the target anywhere else on the page using <code class=
 <p>Experiment with a table.  What kinds of tags can you include inside each <code class="docutils literal notranslate"><span class="pre">td</span></code>?  Can you make a table inside another table?</p>
 </section>
 <section id="audio">
-<h3>Audio<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h3>
+<h3>Audio<a class="headerlink" href="#audio" title="Permalink to this heading">¶</a></h3>
 <p>Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=audio_demo data-question_label="14">
-<div id=audio_demo_question class="ac_question col-md-12">
+<div id=audio_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="audio_demo_editor" 
@@ -645,12 +648,12 @@ a link that will jump to the target anywhere else on the page using <code class=
 <p>The <code class="docutils literal notranslate"><span class="pre">controls</span></code> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <code class="docutils literal notranslate"><span class="pre">source</span></code> tags inside the <code class="docutils literal notranslate"><span class="pre">audio</span></code> tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
 </section>
 <section id="video">
-<h3>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h3>
+<h3>Video<a class="headerlink" href="#video" title="Permalink to this heading">¶</a></h3>
 <p>Embedding video in your webpage allows you to link to various files containing movies.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=video_demo data-question_label="15">
-<div id=video_demo_question class="ac_question col-md-12">
+<div id=video_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="video_demo_editor" 
@@ -669,12 +672,12 @@ a link that will jump to the target anywhere else on the page using <code class=
 <p>The <code class="docutils literal notranslate"><span class="pre">controls</span></code> attribute provides start/stop/fast-forward/rewind buttons for the listener.  The <code class="docutils literal notranslate"><span class="pre">source</span></code> tags inside the <code class="docutils literal notranslate"><span class="pre">video</span></code> tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.</p>
 </section>
 <section id="iframes">
-<h3>IFrames<a class="headerlink" href="#iframes" title="Permalink to this headline">¶</a></h3>
+<h3>IFrames<a class="headerlink" href="#iframes" title="Permalink to this heading">¶</a></h3>
 <p>IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page. If you wanted to embed a YouTube video onto a webpage, you would copy/paste the iframe element from YouTube into your HTML.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=iframe_example data-question_label="16">
-<div id=iframe_example_question class="ac_question col-md-12">
+<div id=iframe_example_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="iframe_example_editor" 
@@ -693,14 +696,14 @@ a link that will jump to the target anywhere else on the page using <code class=
 </section>
 </section>
 <section id="practice-problems">
-<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Make a little webpage to tell me a little about yourself.  Use at least three levels of headings and some paragraphs.</p></li>
 </ol>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_1 data-question_label="17">
-<div id=ex_html_1_question class="ac_question col-md-12">
+<div id=ex_html_1_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_1_editor" 
@@ -720,7 +723,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_2 data-question_label="18">
-<div id=ex_html_2_question class="ac_question col-md-12">
+<div id=ex_html_2_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_2_editor" 
@@ -740,7 +743,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_3 data-question_label="19">
-<div id=ex_html_3_question class="ac_question col-md-12">
+<div id=ex_html_3_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_3_editor" 
@@ -760,7 +763,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_4 data-question_label="20">
-<div id=ex_html_4_question class="ac_question col-md-12">
+<div id=ex_html_4_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_4_editor" 
@@ -780,7 +783,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_5 data-question_label="21">
-<div id=ex_html_5_question class="ac_question col-md-12">
+<div id=ex_html_5_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_5_editor" 
@@ -800,7 +803,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_6 data-question_label="22">
-<div id=ex_html_6_question class="ac_question col-md-12">
+<div id=ex_html_6_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_6_editor" 
@@ -820,7 +823,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_7 data-question_label="23">
-<div id=ex_html_7_question class="ac_question col-md-12">
+<div id=ex_html_7_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_7_editor" 
@@ -840,7 +843,7 @@ a link that will jump to the target anywhere else on the page using <code class=
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ex_html_8 data-question_label="24">
-<div id=ex_html_8_question class="ac_question col-md-12">
+<div id=ex_html_8_question class="ac_question">
 
 </div>
 <textarea data-lang="htmlmixed" id="ex_html_8_editor" 

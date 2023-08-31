@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>11. Making Your Own Blocks (Functions) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -195,11 +198,11 @@
 <div class="container" id="main-content">
   
   <section id="making-your-own-blocks-functions">
-<h1><span class="section-number">11. </span>Making Your Own Blocks (Functions)<a class="headerlink" href="#making-your-own-blocks-functions" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">11. </span>Making Your Own Blocks (Functions)<a class="headerlink" href="#making-your-own-blocks-functions" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Define your own blocks in Scratch. Create a block that says a random greeting (no argument required), then create a block that draws a polygon with a certain number of sides (argument required).</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_scratch_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -220,15 +223,10 @@
             data-video-end="-1" ></div>
     </div>
     <section id="say-greeting-block">
-<span id="index-0"></span><h2><span class="section-number">11.1. </span>Say Greeting Block<a class="headerlink" href="#say-greeting-block" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">11.1. </span>Say Greeting Block<a class="headerlink" href="#say-greeting-block" title="Permalink to this heading">¶</a></h2>
 <p>At this point in our exploration of Scratch, we have learned how to use a large number of different blocks. What do we do, however, when we would like to have some functionality that isn’t built into Scratch? As it turns out, we can create our own blocks, and use them just like the built in blocks! This is an incredibly powerful idea in Computer Science, and in most languages is called creating your own functions (we will explore how to do this in another language soon!).</p>
 <p>Perhaps we would like to have a block that would say a greeting, choosing one at random from a number of different languages. For this example, we will have our block choose from one of the following greetings:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 27%" />
-<col style="width: 51%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Number</p></th>
 <th class="head"><p>Language</p></th>
@@ -280,7 +278,7 @@
 <img alt="../_images/scratch_calling_new_block.png" src="../_images/scratch_calling_new_block.png" />
 </section>
 <section id="draw-polygon-block">
-<h2><span class="section-number">11.2. </span>Draw Polygon Block<a class="headerlink" href="#draw-polygon-block" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Draw Polygon Block<a class="headerlink" href="#draw-polygon-block" title="Permalink to this heading">¶</a></h2>
 <p>If you inspect the built-in blocks available to us in Scratch, you will notice that there are two different types of blocks.</p>
 <img alt="../_images/scratch_arguments_on_blocks.png" src="../_images/scratch_arguments_on_blocks.png" />
 <p>For some blocks, such as the “if on edge, bounce” block, we do not provide any additional information to the block. With the “move 10 steps” block, however, we can control the behaviour of the block by changing the value of the <strong>argument</strong> to the block (originally set at 10). The greeting block we made above did not take in any arguments. Let’s try creating a block that does take in arguments.</p>
@@ -296,7 +294,7 @@
 <img alt="../_images/scrach_using_polygon_block.png" src="../_images/scrach_using_polygon_block.png" />
 </section>
 <section id="practice-problem">
-<h2><span class="section-number">11.3. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this heading">¶</a></h2>
 <p>Work on your current Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

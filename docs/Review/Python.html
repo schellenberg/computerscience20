@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2. Python Review &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -206,9 +209,9 @@
 <div class="container" id="main-content">
   
   <section id="python-review">
-<h1><span class="section-number">2. </span>Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Python Review<a class="headerlink" href="#python-review" title="Permalink to this heading">¶</a></h1>
 <section id="variables-and-data-types">
-<h2><span class="section-number">2.1. </span>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this heading">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.1.1" data-multipleanswers="false"  id="review_data_types_1_1"  style="visibility: hidden;">
@@ -275,7 +278,7 @@
     </div>
     </section>
 <section id="converting-between-data-types">
-<h2><span class="section-number">2.2. </span>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this heading">¶</a></h2>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="review_type_casting_1" class="parsons" >
@@ -295,7 +298,7 @@ print(str(doubled) + " is twice the value of the number you entered.")
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=review_input_intro_3 data-question_label="2.2.2">
-<div id=review_input_intro_3_question class="ac_question col-md-12">
+<div id=review_input_intro_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="review_input_intro_3_editor" 
@@ -314,7 +317,7 @@ elif age == 15:
 </div>
 </section>
 <section id="math-operators">
-<h2><span class="section-number">2.3. </span>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this heading">¶</a></h2>
 <p>If you have trouble with any of the following, you might want to look back at the <a class="reference internal" href="../Python/Overview/QuickOverview.html#math-operator-list"><span class="std std-ref">Math Operators</span></a> list.</p>
 
         <div class="runestone ">
@@ -410,7 +413,7 @@ elif age == 15:
         </div>
             </section>
 <section id="if">
-<h2><span class="section-number">2.4. </span><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A single equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal notranslate"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
@@ -495,7 +498,7 @@ It&#39;s pretty big.
     </div>
     </section>
 <section id="if-elif-else">
-<h2><span class="section-number">2.5. </span><code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span><code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this heading">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.5.1" data-multipleanswers="false"  id="review_conditionals_mc_1"  style="visibility: hidden;">
@@ -611,7 +614,7 @@ It&#39;s pretty big.
     </div>
     </section>
 <section id="while-loop">
-<h2><span class="section-number">2.6. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this heading">¶</a></h2>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="review_while_loop_1" class="parsons" >
@@ -632,7 +635,7 @@ print("Blastoff!")
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=review_while_intro_6 data-question_label="2.6.2">
-<div id=review_while_intro_6_question class="ac_question col-md-12">
+<div id=review_while_intro_6_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="review_while_intro_6_editor" 
@@ -646,7 +649,7 @@ print("Blastoff!")
 </div>
 </section>
 <section id="for-loop">
-<h2><span class="section-number">2.7. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this heading">¶</a></h2>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="review_for_loop_1" class="parsons" >
@@ -697,7 +700,7 @@ for name in people:
     </div>
     </section>
 <section id="and-or-not">
-<h2><span class="section-number">2.8. </span><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#and-or-not" title="Permalink to this heading">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.8.1" data-multipleanswers="false"  id="review_booleans_practice_quiz_1"  style="visibility: hidden;">
@@ -836,7 +839,7 @@ for name in people:
     </div>
     </section>
 <section id="functions">
-<h2><span class="section-number">2.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="review_functions_1" class="parsons" >
@@ -867,7 +870,7 @@ for name in people:
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=review-double-it-positive data-question_label="2.9.2">
-<div id=review-double-it-positive_question class="ac_question col-md-12">
+<div id=review-double-it-positive_question class="ac_question">
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is 0, return 0.</p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
@@ -942,7 +945,7 @@ myTests().main()
     </div>
     </section>
 <section id="drawing-images-practice">
-<h2><span class="section-number">2.10. </span>Drawing Images Practice<a class="headerlink" href="#drawing-images-practice" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.10. </span>Drawing Images Practice<a class="headerlink" href="#drawing-images-practice" title="Permalink to this heading">¶</a></h2>
 <img alt="../_images/confusion-52.png" src="../_images/confusion-52.png" />
 
         <div class="runestone parsons-container ">
@@ -978,7 +981,7 @@ draw_cross(ramisa, 50)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=drawing_images_review_1 data-question_label="2.10.2">
-<div id=drawing_images_review_1_question class="ac_question col-md-12">
+<div id=drawing_images_review_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="drawing_images_review_1_editor" 
@@ -995,7 +998,7 @@ draw_cross(ramisa, 50)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=drawing_images_review_2 data-question_label="2.10.3">
-<div id=drawing_images_review_2_question class="ac_question col-md-12">
+<div id=drawing_images_review_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="drawing_images_review_2_editor" 
@@ -1009,7 +1012,7 @@ draw_cross(ramisa, 50)
 </div>
 </section>
 <section id="image-manipulation-with-nested-loops">
-<h2><span class="section-number">2.11. </span>Image Manipulation with Nested Loops<a class="headerlink" href="#image-manipulation-with-nested-loops" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11. </span>Image Manipulation with Nested Loops<a class="headerlink" href="#image-manipulation-with-nested-loops" title="Permalink to this heading">¶</a></h2>
 <img src="../../_static/skflag.png" id="skflag.png">
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="review_image_manipulation_1" class="parsons" >
@@ -1048,7 +1051,7 @@ img.draw(canvas)
         </div>
     </section>
 <section id="strings">
-<h2><span class="section-number">2.12. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.12. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this heading">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.12.1" data-multipleanswers="false"  id="review_string_index_test_question_1"  style="visibility: hidden;">
@@ -1286,7 +1289,7 @@ print(changed_word)
         </div>
     </section>
 <section id="lists">
-<h2><span class="section-number">2.13. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.13. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.13.1" data-multipleanswers="false"  id="review_test_question9_2_1"  style="visibility: hidden;">
@@ -1475,7 +1478,7 @@ print(changed_word)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=review_list_overview_practice_problem_3 data-question_label="2.13.11">
-<div id=review_list_overview_practice_problem_3_question class="ac_question col-md-12">
+<div id=review_list_overview_practice_problem_3_question class="ac_question">
 <p>Write a function to count how many odd numbers are in a list.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">count_odds([1,3,5,7,9])</span> <span class="pre">→</span> <span class="pre">5</span></code></p>
@@ -1508,7 +1511,7 @@ myTests().main()
 </div>
 </section>
 <section id="number-guessing-game">
-<h2><span class="section-number">2.14. </span>Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.14. </span>Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this heading">¶</a></h2>
 <p>Implement a number guessing game in Python that does the following:</p>
 <ul>
 <li><p>generate a random number from 1 to 100 and stores it in a variable</p></li>
@@ -1525,7 +1528,7 @@ myTests().main()
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=review_number_guessing_game data-question_label="2.14.1">
-<div id=review_number_guessing_game_question class="ac_question col-md-12">
+<div id=review_number_guessing_game_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="review_number_guessing_game_editor" 

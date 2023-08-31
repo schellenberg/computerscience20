@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Micro:bit Reference &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -50,6 +53,7 @@
     <script src="../../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EasyGUI_Qt Reference" href="../EasyGUI/Reference.html" />
     <link rel="prev" title="Turtle Confusion Challenges" href="../TurtleConfusion/Challenges.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -69,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -183,8 +187,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - EasyGUI_Qt Reference' data-toggle="tooltip" >
+    <a href="../EasyGUI/Reference.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -211,39 +219,39 @@
 <div class="container" id="main-content">
   
   <section id="micro-bit-reference">
-<span id="microbit-reference"></span><h1>Micro:bit Reference<a class="headerlink" href="#micro-bit-reference" title="Permalink to this headline">¶</a></h1>
+<span id="microbit-reference"></span><h1>Micro:bit Reference<a class="headerlink" href="#micro-bit-reference" title="Permalink to this heading">¶</a></h1>
 <p>There are no official docs yet, but here is a short quick-reference to get you started. These following demo code is from the <a class="reference external" href="https://github.com/whaleygeek/bitio">bito module readme file</a>.</p>
 <p>If you haven’t used the Micro:bit before, you will want to check out the <a class="reference internal" href="#microbit-setup"><span class="std std-ref">Micro:bit Setup</span></a> instructions at the bottom of this page.</p>
 <section id="connecting-to-the-micro-bit">
-<h2>Connecting to the micro:bit<a class="headerlink" href="#connecting-to-the-micro-bit" title="Permalink to this headline">¶</a></h2>
+<h2>Connecting to the micro:bit<a class="headerlink" href="#connecting-to-the-micro-bit" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: Make sure bitio.hex is installed</span>
 <span class="kn">import</span> <span class="nn">microbit</span>
 </pre></div>
 </div>
 </section>
 <section id="scrolling-text-on-the-screen">
-<h2>Scrolling text on the screen<a class="headerlink" href="#scrolling-text-on-the-screen" title="Permalink to this headline">¶</a></h2>
+<h2>Scrolling text on the screen<a class="headerlink" href="#scrolling-text-on-the-screen" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="displaying-a-single-character">
-<h2>Displaying a single character<a class="headerlink" href="#displaying-a-single-character" title="Permalink to this headline">¶</a></h2>
+<h2>Displaying a single character<a class="headerlink" href="#displaying-a-single-character" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="displaying-numbers">
-<h2>Displaying numbers<a class="headerlink" href="#displaying-numbers" title="Permalink to this headline">¶</a></h2>
+<h2>Displaying numbers<a class="headerlink" href="#displaying-numbers" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="mi">2345</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="displaying-numbers-using-a-2-digit-font">
-<h2>Displaying numbers using a 2-digit font<a class="headerlink" href="#displaying-numbers-using-a-2-digit-font" title="Permalink to this headline">¶</a></h2>
+<h2>Displaying numbers using a 2-digit font<a class="headerlink" href="#displaying-numbers-using-a-2-digit-font" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">99</span><span class="p">):</span>
@@ -253,7 +261,7 @@
 </div>
 </section>
 <section id="getting-a-list-of-pre-defined-images">
-<h2>Getting a list of pre-defined images<a class="headerlink" href="#getting-a-list-of-pre-defined-images" title="Permalink to this headline">¶</a></h2>
+<h2>Getting a list of pre-defined images<a class="headerlink" href="#getting-a-list-of-pre-defined-images" title="Permalink to this heading">¶</a></h2>
 <p>The full list of pre-defined images is at the bottom of this page as well.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">STD_IMAGE_NAMES</span><span class="p">)</span>
@@ -261,14 +269,14 @@
 </div>
 </section>
 <section id="displaying-a-pre-defined-image">
-<h2>Displaying a pre-defined image<a class="headerlink" href="#displaying-a-pre-defined-image" title="Permalink to this headline">¶</a></h2>
+<h2>Displaying a pre-defined image<a class="headerlink" href="#displaying-a-pre-defined-image" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="spinning-a-clock">
-<h2>Spinning a clock<a class="headerlink" href="#spinning-a-clock" title="Permalink to this headline">¶</a></h2>
+<h2>Spinning a clock<a class="headerlink" href="#spinning-a-clock" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ALL_CLOCKS</span><span class="p">:</span>
@@ -278,7 +286,7 @@
 </div>
 </section>
 <section id="defining-a-custom-image">
-<h2>Defining a custom image<a class="headerlink" href="#defining-a-custom-image" title="Permalink to this headline">¶</a></h2>
+<h2>Defining a custom image<a class="headerlink" href="#defining-a-custom-image" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">BANANA</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;00090:00090:00990:09900:99000&quot;</span><span class="p">)</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">BANANA</span><span class="p">)</span>
@@ -286,14 +294,14 @@
 </div>
 </section>
 <section id="clearing-the-display">
-<h2>Clearing the display<a class="headerlink" href="#clearing-the-display" title="Permalink to this headline">¶</a></h2>
+<h2>Clearing the display<a class="headerlink" href="#clearing-the-display" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="n">microbit</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="sensing-when-a-button-is-pressed">
-<h2>Sensing when a button is pressed<a class="headerlink" href="#sensing-when-a-button-is-pressed" title="Permalink to this headline">¶</a></h2>
+<h2>Sensing when a button is pressed<a class="headerlink" href="#sensing-when-a-button-is-pressed" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -305,7 +313,7 @@
 </div>
 </section>
 <section id="sensing-when-a-pin-is-touched">
-<h2>Sensing when a pin is touched<a class="headerlink" href="#sensing-when-a-pin-is-touched" title="Permalink to this headline">¶</a></h2>
+<h2>Sensing when a pin is touched<a class="headerlink" href="#sensing-when-a-pin-is-touched" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -317,7 +325,7 @@
 </div>
 </section>
 <section id="reading-accelerometer-values">
-<h2>Reading accelerometer values<a class="headerlink" href="#reading-accelerometer-values" title="Permalink to this headline">¶</a></h2>
+<h2>Reading accelerometer values<a class="headerlink" href="#reading-accelerometer-values" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -327,7 +335,7 @@
 </div>
 </section>
 <section id="sensing-tilt-in-the-x-plane">
-<h2>Sensing tilt in the X plane<a class="headerlink" href="#sensing-tilt-in-the-x-plane" title="Permalink to this headline">¶</a></h2>
+<h2>Sensing tilt in the X plane<a class="headerlink" href="#sensing-tilt-in-the-x-plane" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -342,7 +350,7 @@
 </div>
 </section>
 <section id="reading-the-temperature">
-<h2>Reading the temperature<a class="headerlink" href="#reading-the-temperature" title="Permalink to this headline">¶</a></h2>
+<h2>Reading the temperature<a class="headerlink" href="#reading-the-temperature" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -352,7 +360,7 @@
 </div>
 </section>
 <section id="list-of-pre-defined-images">
-<span id="microbit-predefined-images"></span><h2>List of Pre-Defined Images<a class="headerlink" href="#list-of-pre-defined-images" title="Permalink to this headline">¶</a></h2>
+<span id="microbit-predefined-images"></span><h2>List of Pre-Defined Images<a class="headerlink" href="#list-of-pre-defined-images" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Image.HEART</span></code></p></li>
@@ -408,14 +416,14 @@
 </div></blockquote>
 </section>
 <section id="micro-bit-setup">
-<span id="microbit-setup"></span><h2>Micro:bit Setup<a class="headerlink" href="#micro-bit-setup" title="Permalink to this headline">¶</a></h2>
+<span id="microbit-setup"></span><h2>Micro:bit Setup<a class="headerlink" href="#micro-bit-setup" title="Permalink to this heading">¶</a></h2>
 <section id="installing-a-driver-if-using-legacy-windows-os">
-<h3>Installing a Driver If Using Legacy Windows OS<a class="headerlink" href="#installing-a-driver-if-using-legacy-windows-os" title="Permalink to this headline">¶</a></h3>
+<h3>Installing a Driver If Using Legacy Windows OS<a class="headerlink" href="#installing-a-driver-if-using-legacy-windows-os" title="Permalink to this heading">¶</a></h3>
 <p><strong>The following only applies to users of Windows that are on a version earlier than Windows 10. If you are using Windows 10, Mac, or Linux, you can skip this step.</strong></p>
 <p>If you are on a Windows machine (<em>&lt; Windows 10</em>), you will need to download the <a class="reference external" href="https://os.mbed.com/handbook/Windows-serial-configuration">mbed driver</a> if you want to use your Micro:bit as an input/output device. Note that you will need to have a Micro:bit plugged into your machine when installing the driver, and that it requires admin rights. If you want to simply run code on your Micro:bit, and not communicate with your computer, no driver is required for any platform (but this does really limit the types of interesting things that can be done, and none of the examples in the textbook will work).</p>
 </section>
 <section id="micro-bit-modes">
-<h3>Micro:bit Modes<a class="headerlink" href="#micro-bit-modes" title="Permalink to this headline">¶</a></h3>
+<h3>Micro:bit Modes<a class="headerlink" href="#micro-bit-modes" title="Permalink to this heading">¶</a></h3>
 <p>Your Micro:bit can be used in two modes:</p>
 <ul class="simple">
 <li><p>running “flashed” code, independent of a computer (can run on batteries, or through power supplied via the computers USB port)</p></li>
@@ -428,7 +436,7 @@
 </div>
 </section>
 <section id="flashing-the-micro-bit">
-<h3>Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this headline">¶</a></h3>
+<h3>Flashing the Micro:bit<a class="headerlink" href="#flashing-the-micro-bit" title="Permalink to this heading">¶</a></h3>
 <p>While your Micro:bit is connected to your computer via USB, it is possible to send instructions to the Micro:bit using serial commands. In order to do this, we first need to flash the Micro:bit with a micropython .hex file. This lets you use a BBC Micro:bit in Python to sense the physical world around you, and to output to LEDs (and much more, if you hook up additional sensors). <strong>You should only have to do this once</strong>, unless you flash the Micro:bit with a different .hex file in order to use it without being tethered to a computer.</p>
 <p>To flash your Micro:bit, first connect your Micro:bit to your computer via USB. Now download the <a class="reference download internal" download="" href="../../_downloads/cc2b18a627a09dd9b94fb6f3e8e014a9/bitio.hex"><code class="xref download docutils literal notranslate"><span class="pre">bitio.hex</span></code></a> file to your computer. Drag the .hex file onto your Micro:bit in the Windows Explorer (or Mac Finder), as shown below.</p>
 <img alt="../../_images/flash-microbit.gif" src="../../_images/flash-microbit.gif" />
@@ -440,12 +448,12 @@
 </div>
 </section>
 <section id="installing-the-micro-bit-module-in-thonny">
-<h3>Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this headline">¶</a></h3>
+<h3>Installing the Micro:bit Module in Thonny<a class="headerlink" href="#installing-the-micro-bit-module-in-thonny" title="Permalink to this heading">¶</a></h3>
 <p>In order to communicate with the microbit in Python, you need to install the <code class="docutils literal notranslate"><span class="pre">cs20-microbitio</span></code> package in Thonny. To do that, go to Tools → Manage packages…, type in <code class="docutils literal notranslate"><span class="pre">cs20-microbitio</span></code> into the search bar, and install. You only need to do this once, after which you should be able to use <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">microbit</span></code> whenever you want to interact with the Micro:bit in Python.</p>
 </section>
 </section>
 <section id="using-the-micro-bit">
-<h2>Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this headline">¶</a></h2>
+<h2>Using the Micro:bit<a class="headerlink" href="#using-the-micro-bit" title="Permalink to this heading">¶</a></h2>
 <p>Once you have done that, try running the code below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
@@ -485,6 +493,12 @@
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../TurtleConfusion/Challenges.html" ></a>
   
+  <li id="relations-next" class="navLink" title='Next Section - EasyGUI_Qt Reference' data-toggle="tooltip" >
+    <a href="../EasyGUI/Reference.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../EasyGUI/Reference.html" >Next Section - EasyGUI_Qt Reference</a>
 
 <script type="text/javascript">
 

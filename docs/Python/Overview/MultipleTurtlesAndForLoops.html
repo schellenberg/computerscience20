@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>10. Multiple Turtles and for Loops &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -208,11 +211,11 @@
 <div class="container" id="main-content">
   
   <section id="multiple-turtles-and-for-loops">
-<h1><span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">10. </span>Multiple Turtles and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#multiple-turtles-and-for-loops" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore how to instantiate more than one turtle object in the same program. Introduce the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, and use the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function to simplify the creation of large for loops.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_intro_to_for_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -224,7 +227,7 @@
 
     </div>
     <section id="instances-a-herd-of-turtles">
-<h2><span class="section-number">10.1. </span>Instances — A Herd of Turtles<a class="headerlink" href="#instances-a-herd-of-turtles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Instances — A Herd of Turtles<a class="headerlink" href="#instances-a-herd-of-turtles" title="Permalink to this heading">¶</a></h2>
 <p>Just like we can have many different integers in a program, we can have many
 turtles.  Each of them is an independent object, and we call each one an <strong>instance</strong> of the Turtle type (class).  Each instance has its own
 attributes and methods — so alex might draw with a thin black pen and be at
@@ -234,7 +237,7 @@ completes a triangle:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for-loops-1 data-question_label="10.1.1">
-<div id=for-loops-1_question class="ac_question col-md-12">
+<div id=for-loops-1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="for-loops-1_editor" 
@@ -298,7 +301,7 @@ and then “move away from the origin” (lines 22 and 23).</p></li>
 ideas. They’re not always explicit in the code.</p></li>
 </ul>
 <section id="mixed-up-programs">
-<h3><span class="section-number">10.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this heading">¶</a></h3>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="for-loops-parsons-1" class="parsons" >
@@ -362,7 +365,7 @@ tina.forward(150)
     </section>
 </section>
 <section id="the-for-loop">
-<span id="index-0"></span><h2><span class="section-number">10.2. </span>The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">10.2. </span>The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this heading">¶</a></h2>
 <p>When we drew a square yesterday, it was quite tedious.  We had to move then turn, move
 then turn, etc. etc. four times.  If we were drawing a hexagon, or an octogon,
 or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.</p>
@@ -374,7 +377,7 @@ message for each friend.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for-loops-2 data-question_label="10.2.1">
-<div id=for-loops-2_question class="ac_question col-md-12">
+<div id=for-loops-2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="for-loops-2_editor" 
@@ -420,13 +423,13 @@ works with the for loop. Click on the <strong>Show CodeLens</strong> button in t
 </div>
 </section>
 <section id="iteration-simplifies-our-turtle-program">
-<h2><span class="section-number">10.3. </span>Iteration Simplifies our Turtle Program<a class="headerlink" href="#iteration-simplifies-our-turtle-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.3. </span>Iteration Simplifies our Turtle Program<a class="headerlink" href="#iteration-simplifies-our-turtle-program" title="Permalink to this heading">¶</a></h2>
 <p>To draw a square we’d like to do the same thing four times — move the turtle forward some distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four sides of a
 square.  This next program does exactly the same thing but, with the help of the for statement, uses just three lines (not including the setup code).  Remember that the for statement will repeat the <cite>forward</cite> and <cite>left</cite> four times, one time for each value in the list.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_for1 data-question_label="10.3.1">
-<div id=ch03_for1_question class="ac_question col-md-12">
+<div id=ch03_for1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="ch03_for1_editor" 
@@ -458,7 +461,7 @@ chunks is a vital skill when learning <em>How to think like a computer scientist
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_for123 data-question_label="10.3.2">
-<div id=ch03_for123_question class="ac_question col-md-12">
+<div id=ch03_for123_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="ch03_for123_editor" 
@@ -488,7 +491,7 @@ wn.exitonclick()
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=ch03_forcolor data-question_label="10.3.3">
-<div id=ch03_forcolor_question class="ac_question col-md-12">
+<div id=ch03_forcolor_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="ch03_forcolor_editor" 
@@ -516,7 +519,7 @@ take on each color in the list.  We can even take this one step further and use 
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=colorlist data-question_label="10.3.4">
-<div id=colorlist_question class="ac_question col-md-12">
+<div id=colorlist_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="colorlist_editor" 
@@ -541,7 +544,7 @@ wn.exitonclick()
 </div>
 <p>In this case, the value of <code class="docutils literal notranslate"><span class="pre">some_color</span></code> is used to change the color attribute of <code class="docutils literal notranslate"><span class="pre">alex</span></code>.  Each iteration causes <code class="docutils literal notranslate"><span class="pre">some_color</span></code> to change to the next value in the list.</p>
 <section id="id1">
-<h3><span class="section-number">10.3.1. </span>Mixed Up Programs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.1. </span>Mixed Up Programs<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="parsons_for_loop_3_8" class="parsons" >
@@ -650,7 +653,7 @@ for i in [1,2]:
     </section>
 </section>
 <section id="the-range-function">
-<span id="index-1"></span><h2><span class="section-number">10.4. </span>The Range Function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">10.4. </span>The Range Function<a class="headerlink" href="#the-range-function" title="Permalink to this heading">¶</a></h2>
 <p>It turns out that generating lists with a specific number of integers is a very common thing to do, especially when you
 want to write simple <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> controlled iteration.  Even though you can use any four items, or any four integers for that matter, the conventional thing to do is to use a list of integers starting with 0.
 In fact, these lists are so popular that Python gives us special built-in
@@ -675,11 +678,11 @@ the <code class="docutils literal notranslate"><span class="pre">for</span></cod
 </div>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">10.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p>You might find the Python Documentation for the turtle module to be helpful: <a class="reference external" href="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</a>.</p>
 <section id="regular-polygons">
-<h3><span class="section-number">10.5.1. </span>Regular Polygons<a class="headerlink" href="#regular-polygons" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.5.1. </span>Regular Polygons<a class="headerlink" href="#regular-polygons" title="Permalink to this heading">¶</a></h3>
 <p>Create a program that uses for loops to make a turtle draw regular polygons (regular means all sides the same lengths, all angles the same). First, ask the user how many sides they want the polygon to have, and how long each side length should be. Now draw the regular polygon that meets the user’s requirements!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -688,7 +691,7 @@ the <code class="docutils literal notranslate"><span class="pre">for</span></cod
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_1 data-question_label="10.5.1.1">
-<div id=practice_problem_turtle_for_loops_1_question class="ac_question col-md-12">
+<div id=practice_problem_turtle_for_loops_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_1_editor" 
@@ -704,7 +707,7 @@ import turtle
 </div>
 </section>
 <section id="draw-a-star">
-<h3><span class="section-number">10.5.2. </span>Draw a Star<a class="headerlink" href="#draw-a-star" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.5.2. </span>Draw a Star<a class="headerlink" href="#draw-a-star" title="Permalink to this heading">¶</a></h3>
 <p>Create a program that uses the turtle module to draw a five sided star. The user should be able to set a number of options each time the code runs, so the program should ask the user for:</p>
 <ul class="simple">
 <li><p>the width of the turtles pen</p></li>
@@ -717,7 +720,7 @@ import turtle
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_2 data-question_label="10.5.2.1">
-<div id=practice_problem_turtle_for_loops_2_question class="ac_question col-md-12">
+<div id=practice_problem_turtle_for_loops_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_2_editor" 
@@ -733,14 +736,14 @@ import turtle
 </div>
 </section>
 <section id="drawing-a-clock">
-<h3><span class="section-number">10.5.3. </span>Drawing a Clock<a class="headerlink" href="#drawing-a-clock" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.5.3. </span>Drawing a Clock<a class="headerlink" href="#drawing-a-clock" title="Permalink to this heading">¶</a></h3>
 <p>Create a program that uses the turtle module to draw the shape of an analogue clock. Do this using <strong>ONLY ONE TURTLE object</strong>. It should look like the following:</p>
 <img alt="../../_images/tess_clock1.png" src="../../_images/tess_clock1.png" />
 <p>You might need to explore the <a class="reference external" href="https://docs.python.org/3/library/turtle.html">Turtle documentation on the Python Docs website</a> to figure out how to leave an image of where the turtle was.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_for_loops_3 data-question_label="10.5.3.1">
-<div id=practice_problem_turtle_for_loops_3_question class="ac_question col-md-12">
+<div id=practice_problem_turtle_for_loops_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_turtle_for_loops_3_editor" 

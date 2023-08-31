@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1. String Index, Length, Slicing and Traversal &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -219,11 +222,11 @@
 <div class="container" id="main-content">
   
   <section id="string-index-length-slicing-and-traversal">
-<h1><span class="section-number">1. </span>String Index, Length, Slicing and Traversal<a class="headerlink" href="#string-index-length-slicing-and-traversal" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">1. </span>String Index, Length, Slicing and Traversal<a class="headerlink" href="#string-index-length-slicing-and-traversal" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore string operators, index values, length of strings, string slicing, and traversing a string using a for loop (by item).</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_string_exploration"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -237,7 +240,7 @@
     <p>Throughout the portion of the course, we have used strings to represent words or phrases that we
 wanted to print out.  Our definition was simple:  a string is simply some characters inside quotes.  We will now explore strings in much more detail.</p>
 <section id="a-collection-data-type">
-<h2><span class="section-number">1.1. </span>A Collection Data Type<a class="headerlink" href="#a-collection-data-type" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>A Collection Data Type<a class="headerlink" href="#a-collection-data-type" title="Permalink to this heading">¶</a></h2>
 <p>So far we have seen built-in types like: <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>,
 <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> and we’ve seen lists.
 <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, and
@@ -254,13 +257,13 @@ that make up the string are assumed to be in a particular order from left to rig
 <p>A string that contains no characters, often referred to as the <strong>empty string</strong>, is still considered to be a string.  It is simply a sequence of zero characters and is represented by ‘’ or “” (two single or two double quotes with nothing in between).</p>
 </section>
 <section id="concatenation-reminder">
-<h2><span class="section-number">1.2. </span>Concatenation Reminder<a class="headerlink" href="#concatenation-reminder" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Concatenation Reminder<a class="headerlink" href="#concatenation-reminder" title="Permalink to this heading">¶</a></h2>
 <p>As we have seen before, you cannot perform mathematical operations on strings, even if the
 strings look like numbers. The one exception to this rule is that the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator does work with strings, but for strings, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator represents <strong>concatenation</strong>, not addition.  As we have learned previously, concatenation means joining the two operands by linking them end-to-end. For example:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=concatenation_reminder_demo data-question_label="1.2.1">
-<div id=concatenation_reminder_demo_question class="ac_question col-md-12">
+<div id=concatenation_reminder_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="concatenation_reminder_demo_editor" 
@@ -276,7 +279,7 @@ print(fruit + baked_good)
 </div>
 </section>
 <section id="f-strings-reminder">
-<h2><span class="section-number">1.3. </span>F-Strings Reminder<a class="headerlink" href="#f-strings-reminder" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>F-Strings Reminder<a class="headerlink" href="#f-strings-reminder" title="Permalink to this heading">¶</a></h2>
 <p>Although concatenation works well for simple use cases, it is often preferable to use an f-string to
 format strings, which allows you to insert the value of any variable by enclosing the variable in curly
 brackets. To indicate it is a formatted string, add a <code class="docutils literal notranslate"><span class="pre">f</span></code> before the string quotes begin.
@@ -284,7 +287,7 @@ For example, the concatenation example above could also be written as:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=f_strings_reminder_demo data-question_label="1.3.1">
-<div id=f_strings_reminder_demo_question class="ac_question col-md-12">
+<div id=f_strings_reminder_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="f_strings_reminder_demo_editor" 
@@ -300,7 +303,7 @@ print(f"{fruit} {baked_good}")
 </div>
 </section>
 <section id="index-operator-working-with-the-characters-of-a-string">
-<span id="index-0"></span><h2><span class="section-number">1.4. </span>Index Operator: Working with the Characters of a String<a class="headerlink" href="#index-operator-working-with-the-characters-of-a-string" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">1.4. </span>Index Operator: Working with the Characters of a String<a class="headerlink" href="#index-operator-working-with-the-characters-of-a-string" title="Permalink to this heading">¶</a></h2>
 <p>The <strong>indexing operator</strong> (Python uses square brackets to enclose the index)
 selects a single character from a string.  The characters are accessed by their position or
 index value.  For example, in the string shown below, the 14 characters are indexed left to right from postion 0 to position 13.</p>
@@ -311,7 +314,7 @@ Note that the character at index 9 (or -5) is the blank/space character.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_index_1 data-question_label="1.4.1">
-<div id=string_index_1_question class="ac_question col-md-12">
+<div id=string_index_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_index_1_editor" 
@@ -342,7 +345,7 @@ expression so long as it evaluates to a valid index value.</p>
 <p>Note that indexing returns a <em>string</em> — Python has no special type for a single character.
 It is just a string of length 1.</p>
 <section id="check-your-understanding">
-<h3><span class="section-number">1.4.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.4.1.1" data-multipleanswers="false"  id="string_index_test_question_1"  style="visibility: hidden;">
@@ -386,12 +389,12 @@ It is just a string of length 1.</p>
     </section>
 </section>
 <section id="length">
-<span id="index-1"></span><h2><span class="section-number">1.5. </span>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">1.5. </span>Length<a class="headerlink" href="#length" title="Permalink to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">len</span></code> function, when applied to a string, returns the number of characters in a string.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_length_1 data-question_label="1.5.1">
-<div id=string_length_1_question class="ac_question col-md-12">
+<div id=string_length_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_length_1_editor" 
@@ -409,7 +412,7 @@ this:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_length_2 data-question_label="1.5.2">
-<div id=string_length_2_question class="ac_question col-md-12">
+<div id=string_length_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_length_2_editor" 
@@ -433,7 +436,7 @@ the length.  Give it a try in the example above.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_length_3 data-question_label="1.5.3">
-<div id=string_length_3_question class="ac_question col-md-12">
+<div id=string_length_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_length_3_editor" 
@@ -453,7 +456,7 @@ end of the string. The expression <code class="docutils literal notranslate"><sp
 <code class="docutils literal notranslate"><span class="pre">fruit[-2]</span></code> yields the second to last, and so on.  Try it!
 Most other languages do <em>not</em> allow the negative indices, but they are a handy feature of Python!</p>
 <section id="id1">
-<h3><span class="section-number">1.5.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.5.1.1" data-multipleanswers="false"  id="string_length_test_question_1"  style="visibility: hidden;">
@@ -513,13 +516,13 @@ Most other languages do <em>not</em> allow the negative indices, but they are a 
     </section>
 </section>
 <section id="the-slice-operator">
-<span id="index-2"></span><h2><span class="section-number">1.6. </span>The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2><span class="section-number">1.6. </span>The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this heading">¶</a></h2>
 <p>A substring of a string is called a <strong>slice</strong>. Selecting a slice is similar to
 selecting a character:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_slice_1 data-question_label="1.6.1">
-<div id=string_slice_1_question class="ac_question col-md-12">
+<div id=string_slice_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_slice_1_editor" 
@@ -547,7 +550,7 @@ end of the string.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_slice_2 data-question_label="1.6.2">
-<div id=string_slice_2_question class="ac_question col-md-12">
+<div id=string_slice_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_slice_2_editor" 
@@ -568,7 +571,7 @@ print(fruit[3:99])
 <p>What do you think <code class="docutils literal notranslate"><span class="pre">fruit[:]</span></code> means?</p>
 </div>
 <section id="id2">
-<h3><span class="section-number">1.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.6.1.1" data-multipleanswers="false"  id="string_slice_test_question_1"  style="visibility: hidden;">
@@ -612,7 +615,7 @@ print(fruit[3:99])
     </section>
 </section>
 <section id="traversal-and-the-for-loop-by-item">
-<h2><span class="section-number">1.7. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Item<a class="headerlink" href="#traversal-and-the-for-loop-by-item" title="Permalink to this heading">¶</a></h2>
 <p>A lot of computations involve processing a collection one item at a time.  For strings this means
 that we would like to process one character at a time.
 Often we start at the beginning, select each character in turn, do something
@@ -622,7 +625,7 @@ to it, and continue until the end. This pattern of processing is called a
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_for_loop_by_item_1 data-question_label="1.7.1">
-<div id=string_for_loop_by_item_1_question class="ac_question col-md-12">
+<div id=string_for_loop_by_item_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_for_loop_by_item_1_editor" 
@@ -640,7 +643,7 @@ for a_name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_for_loop_by_item_2 data-question_label="1.7.2">
-<div id=string_for_loop_by_item_2_question class="ac_question col-md-12">
+<div id=string_for_loop_by_item_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_for_loop_by_item_2_editor" 
@@ -657,7 +660,7 @@ for a_value in range(10):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_for_loop_by_item_3 data-question_label="1.7.3">
-<div id=string_for_loop_by_item_3_question class="ac_question col-md-12">
+<div id=string_for_loop_by_item_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="string_for_loop_by_item_3_editor" 
@@ -674,7 +677,7 @@ for a_char in "Go Spot Go":
 We will refer to this type of sequence iteration as <strong>iteration by item</strong>.
 Note that it is only possible to process the characters one at a time from left to right.</p>
 <section id="id3">
-<h3><span class="section-number">1.7.1. </span>Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.1. </span>Check Your Understanding<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.7.1.1" data-multipleanswers="false"  id="string_for_loop_by_item_test_question_1"  style="visibility: hidden;">
@@ -720,15 +723,15 @@ Note that it is only possible to process the characters one at a time from left 
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">1.8. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.8. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or use Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <section id="con-cat">
-<h3><span class="section-number">1.8.1. </span>Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.1. </span>Con Cat<a class="headerlink" href="#con-cat" title="Permalink to this heading">¶</a></h3>
 <p>Create a program that takes in the name of a cat, then prints out a hello message. For example, if the user types in <code class="docutils literal notranslate"><span class="pre">Garfield</span></code>, your program could print something like <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">you,</span> <span class="pre">Garfield!</span></code>. <strong>You can use concatenation or f-strings in your solution!</strong></p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_into_1 data-question_label="1.8.1.1">
-<div id=practice_problem_string_into_1_question class="ac_question col-md-12">
+<div id=practice_problem_string_into_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_string_into_1_editor" 
@@ -742,12 +745,12 @@ Note that it is only possible to process the characters one at a time from left 
 </div>
 </section>
 <section id="duckling-names">
-<h3><span class="section-number">1.8.2. </span>Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.2. </span>Duckling Names<a class="headerlink" href="#duckling-names" title="Permalink to this heading">¶</a></h3>
 <p>In Robert McCloskey’s book <em>Make Way for Ducklings</em>, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.  This code below attempts to output these names in order. Unfortunately, the output is not quite right because Ouack and Quack are misspelled. See if you can fix it without changing the value of either the <code class="docutils literal notranslate"><span class="pre">prefixes</span></code> or <code class="docutils literal notranslate"><span class="pre">suffix</span></code> variables! <em>You should do this by adding a conditional statement within the for loop.</em></p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_into_2 data-question_label="1.8.2.1">
-<div id=practice_problem_string_into_2_question class="ac_question col-md-12">
+<div id=practice_problem_string_into_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_string_into_2_editor" 
@@ -766,7 +769,7 @@ for letter in prefixes:
 </div>
 </section>
 <section id="first-letter-of-a-word">
-<h3><span class="section-number">1.8.3. </span>First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.3. </span>First Letter of a Word<a class="headerlink" href="#first-letter-of-a-word" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -774,7 +777,7 @@ for letter in prefixes:
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_into_3 data-question_label="1.8.3.1">
-<div id=practice_problem_string_into_3_question class="ac_question col-md-12">
+<div id=practice_problem_string_into_3_question class="ac_question">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">word</span></code> that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <code class="docutils literal notranslate"><span class="pre">word</span></code> begins with the letter “t” or “c”.</p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">starts_with_tc(&quot;thing&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
@@ -809,7 +812,7 @@ myTests().main()
 </div>
 </section>
 <section id="password-length">
-<h3><span class="section-number">1.8.4. </span>Password Length<a class="headerlink" href="#password-length" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.4. </span>Password Length<a class="headerlink" href="#password-length" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for this question is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
@@ -817,7 +820,7 @@ myTests().main()
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_into_4 data-question_label="1.8.4.1">
-<div id=practice_problem_string_into_4_question class="ac_question col-md-12">
+<div id=practice_problem_string_into_4_question class="ac_question">
 <p>Create a function with a single parameter <code class="docutils literal notranslate"><span class="pre">password</span></code> that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <code class="docutils literal notranslate"><span class="pre">password</span></code> is between 8 and 32 characters (inclusive), and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. <em>Please note there is much more to a strong password than just the length of the string!</em></p>
 <p><strong>Examples:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">password_length(&quot;123456789&quot;)</span> <span class="pre">→</span> <span class="pre">True</span></code></p>
@@ -852,7 +855,7 @@ myTests().main()
 </div>
 </section>
 <section id="removing-the-start-and-end">
-<h3><span class="section-number">1.8.5. </span>Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.5. </span>Removing the Start and End<a class="headerlink" href="#removing-the-start-and-end" title="Permalink to this heading">¶</a></h3>
 <p>Create a program that takes in three inputs from the user:</p>
 <ul class="simple">
 <li><p>a word/sentence</p></li>
@@ -870,7 +873,7 @@ myTests().main()
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_string_into_5 data-question_label="1.8.5.1">
-<div id=practice_problem_string_into_5_question class="ac_question col-md-12">
+<div id=practice_problem_string_into_5_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="practice_problem_string_into_5_editor" 

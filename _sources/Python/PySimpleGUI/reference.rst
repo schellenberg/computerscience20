@@ -31,7 +31,7 @@ If you call ``popup`` with a single argument, that argument should be a string c
 
 **Additional Options**
 
-When you call a function such as ``sg.popup()`` in Thonny (or another IDE), you will see a list of possible arguments that you can pass to the function, as seen below:
+When you call a function such as ``sg.popup`` in Thonny (or another IDE), you will see a list of possible arguments that you can pass to the function, as seen below:
 
 .. image:: images/thonny-showing-parameters.png
 
@@ -48,7 +48,7 @@ To use these additional arguments, you need to name them when calling the functi
 Showing Images
 -----------------
 
-If you would like to show an image in a popup dialogue box, you use a named argument of ``image="path-to-image.png"``. For example, if you have the image of the Saskatchewan flag saved as the file ``skflag.png`` saved in the same folder as your Python script, you could display the flag by calling the following:
+If you would like to show an image in a popup dialogue box, you use a named argument of ``image = "path-to-image.png"``. For example, if you have the image of the Saskatchewan flag saved as the file ``skflag.png`` saved in the same folder as your Python script, you could display the flag by calling the following:
 
 .. sourcecode:: python
     
@@ -94,7 +94,7 @@ If you call ``popup_get_text`` with a named argument of ``default_text = "someth
 Getting Selection from a List
 --------------------------------------
 
-There is not a built-in popup function to create a window that prompts the user to select an option from a list. To get around this limitation, you can simply copy-paste the following ``popup_get_choice(options)`` helper function to the top of your script, and use it to allow users to choose from a list of options. This function will return a string containing the user's choice. If the user presses *Cancel*, or closes the window, this function will return ``None``. If you would like to alter this function to suit your needs, you will want to look up the ``Listbox`` element in the PySimpleGUI reference.
+There is not a built-in popup function to create a window that prompts the user to select an option from a list. To get around this limitation, you can simply copy-paste the following ``popup_get_choice`` helper function to the top of your script, and use it to allow users to choose from a list of options. This function will return a string containing the user's choice. If the user presses *Cancel*, or closes the window, this function will return ``None``. If you would like to alter this function to suit your needs, you will want to look up the ``Listbox`` element in the PySimpleGUI reference.
 
 .. sourcecode:: python
     
@@ -104,7 +104,7 @@ There is not a built-in popup function to create a window that prompts the user 
         '''Use this function to allow users to select an option from a list.
         Pass in the options to choose from as a list.'''
         layout = [[sg.Listbox(options, size=(30, None), key="-LISTBOX-")],
-                [sg.Button('Ok'), sg.Button('Cancel')]]
+                  [sg.Button('Ok'), sg.Button('Cancel')]]
         event, values = sg.Window(title, layout).read(close=True)
 
         if event == "Ok":

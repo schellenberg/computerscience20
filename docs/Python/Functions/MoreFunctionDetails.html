@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1. Fruitful Functions and Variable Scope &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -207,11 +210,11 @@
 <div class="container" id="main-content">
   
   <section id="fruitful-functions-and-variable-scope">
-<h1><span class="section-number">1. </span>Fruitful Functions and Variable Scope<a class="headerlink" href="#fruitful-functions-and-variable-scope" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">1. </span>Fruitful Functions and Variable Scope<a class="headerlink" href="#fruitful-functions-and-variable-scope" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Practice creating a function that draws a shape with the turtle module. Introduce fruitful functions (functions that return values). Discuss local and global scope. Work on practice problems, in which students create functions that return values.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_variable_scope"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -223,13 +226,13 @@
 
     </div>
     <section id="warmup-problem">
-<h2><span class="section-number">1.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this heading">¶</a></h2>
 <img alt="../../_images/confusion-16.png" src="../../_images/confusion-16.png" />
 <p>Draw the image above using the Python turtle module. <strong>You must define a function as part of your solution!</strong></p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_confusion_practice_16 data-question_label="1.1.1">
-<div id=turtle_confusion_practice_16_question class="ac_question col-md-12">
+<div id=turtle_confusion_practice_16_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="turtle_confusion_practice_16_editor" 
@@ -243,12 +246,12 @@ import turtle
 </div>
 </section>
 <section id="functions-that-return-values">
-<h2><span class="section-number">1.2. </span>Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Functions that Return Values<a class="headerlink" href="#functions-that-return-values" title="Permalink to this heading">¶</a></h2>
 <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number (defined as the distance of a number from zero on a number line), you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_1 data-question_label="1.2.1">
-<div id=more_function_details_1_question class="ac_question col-md-12">
+<div id=more_function_details_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="more_function_details_1_editor" 
@@ -271,7 +274,7 @@ print(abs(-5))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_2 data-question_label="1.2.2">
-<div id=more_function_details_2_question class="ac_question col-md-12">
+<div id=more_function_details_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="more_function_details_2_editor" 
@@ -294,7 +297,7 @@ print(math.pow(7, 2))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_3 data-question_label="1.2.3">
-<div id=more_function_details_3_question class="ac_question col-md-12">
+<div id=more_function_details_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="more_function_details_3_editor" 
@@ -327,7 +330,7 @@ black-box diagram with the Python code following.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_function_details_4 data-question_label="1.2.4">
-<div id=more_function_details_4_question class="ac_question col-md-12">
+<div id=more_function_details_4_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="more_function_details_4_editor" 
@@ -368,6 +371,8 @@ follow, and the further statements are <em>not</em> executed.</p>
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.2.5">
+        <div id=more_function_details_codelens_square_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="more_function_details_codelens_square"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -406,6 +411,8 @@ function returns.</p>
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.2.6">
+        <div id=more_function_details_codelens_square_bad_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="more_function_details_codelens_square_bad"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -426,14 +433,14 @@ allTraceData["more_function_details_codelens_square_bad"] = {"code": "def square
 where the call was made.  Since line 6 uses the return value as the right hand side of an assignment statement, the evaluation of the
 function will be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  In this case, <code class="docutils literal notranslate"><span class="pre">result</span></code> will refer to that value after the assignment statement and therefore the result printed in line 7 is incorrect.  Typically, functions will return values that can be printed or processed in some other way by the caller.</p>
 <section id="check-your-understanding">
-<h3><span class="section-number">1.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.2.1.1" data-multipleanswers="false"  id="test_question5_2_1"  style="visibility: hidden;">
     <p>variable-scope8: What is wrong with the following function definition:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_em</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the answer is </span><span class="si">{</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the answer is </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -469,7 +476,7 @@ function will be <code class="docutils literal notranslate"><span class="pre">No
     </section>
 </section>
 <section id="variables-and-parameters-are-local">
-<span id="index-3"></span><h2><span class="section-number">1.3. </span>Variables and Parameters are Local<a class="headerlink" href="#variables-and-parameters-are-local" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2><span class="section-number">1.3. </span>Variables and Parameters are Local<a class="headerlink" href="#variables-and-parameters-are-local" title="Permalink to this heading">¶</a></h2>
 <p>An assignment statement in a function creates a <strong>local variable</strong> for the
 variable on the left hand side of the assignment operator. It is called local because this variable only
 exists inside the function and you cannot use it outside. For example,
@@ -477,6 +484,8 @@ consider again the <code class="docutils literal notranslate"><span class="pre">
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.3.1">
+        <div id=bad_local_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="bad_local"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -518,7 +527,7 @@ nonsensical variation of the square function.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=badsquare_1 data-question_label="1.3.2">
-<div id=badsquare_1_question class="ac_question col-md-12">
+<div id=badsquare_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="badsquare_1_editor" 
@@ -554,6 +563,8 @@ codelens example:</p>
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.3.3">
+        <div id=codelens_powerof_bad_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="codelens_powerof_bad"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -595,6 +606,8 @@ But this example demonstrates that that is clearly not how Python operates.</p>
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.3.4">
+        <div id=codelens_change_parm_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="codelens_change_parm"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -612,7 +625,7 @@ allTraceData["codelens_change_parm"] = {"code": "def square(original_number):\n 
 </script>
 </div>
 <section id="id1">
-<h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question5_3_1"  style="visibility: hidden;">
@@ -658,18 +671,18 @@ allTraceData["codelens_change_parm"] = {"code": "def square(original_number):\n 
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">1.4. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
 <p>Try the following practice problems to be sure you understand how to create fruitful functions. Your functions <strong>have to return</strong> the correct value – using <code class="docutils literal notranslate"><span class="pre">print()</span></code> will not work. When you run your code for these questions, your code will automatically be checked with a number of test cases to see if your function works in all situations. You will be able to see any situations in which your function does not provide the correct answer.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only thing you need to do for the following is to complete the function definition! <strong>You do not need to call the function</strong>, as that will be done automatically for you.</p>
 </div>
 <section id="double-it">
-<h3><span class="section-number">1.4.1. </span>Double It<a class="headerlink" href="#double-it" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>Double It<a class="headerlink" href="#double-it" title="Permalink to this heading">¶</a></h3>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=double-it data-question_label="1.4.1.1">
-<div id=double-it_question class="ac_question col-md-12">
+<div id=double-it_question class="ac_question">
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled. Return the doubled value of the number that is passed in.</p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
@@ -701,11 +714,11 @@ myTests().main()
 </div>
 </section>
 <section id="double-it-positive">
-<h3><span class="section-number">1.4.2. </span>Double It Positive<a class="headerlink" href="#double-it-positive" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>Double It Positive<a class="headerlink" href="#double-it-positive" title="Permalink to this heading">¶</a></h3>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=double-it-positive data-question_label="1.4.2.1">
-<div id=double-it-positive_question class="ac_question col-md-12">
+<div id=double-it-positive_question class="ac_question">
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">the_number</span></code> needs to be doubled, but only if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. Return the doubled value of the number that is passed in if <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is positive. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is negative, return -1. If <code class="docutils literal notranslate"><span class="pre">the_number</span></code> is 0, return 0.</p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it_positive(5)</span> <span class="pre">→</span> <span class="pre">10</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">double_it_positive(0)</span> <span class="pre">→</span> <span class="pre">0</span></code></p>
@@ -738,11 +751,11 @@ myTests().main()
 </div>
 </section>
 <section id="wear-the-right-thing">
-<h3><span class="section-number">1.4.3. </span>Wear the Right Thing<a class="headerlink" href="#wear-the-right-thing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.3. </span>Wear the Right Thing<a class="headerlink" href="#wear-the-right-thing" title="Permalink to this heading">¶</a></h3>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wear-the-right-thing data-question_label="1.4.3.1">
-<div id=wear-the-right-thing_question class="ac_question col-md-12">
+<div id=wear-the-right-thing_question class="ac_question">
 <p>Write a function which returns the type of clothing you should wear, based on the parameter <code class="docutils literal notranslate"><span class="pre">temperature</span></code>. If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is below -10, you will wear a parka and toque (return “parka and toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between -10 and 0, wear a toque (return “toque”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 0 but less than 10, wear a sweater (return “sweater”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is between 10 and 20, wear a t-shirt (return “t-shirt”). If the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is greater than 20, wear shorts (return “shorts”).</p>
 <p><code class="docutils literal notranslate"><span class="pre">wear_the_right_thing(25)</span> <span class="pre">→</span> <span class="pre">&quot;shorts&quot;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">wear_the_right_thing(-25)</span> <span class="pre">→</span> <span class="pre">&quot;parka</span> <span class="pre">and</span> <span class="pre">toque&quot;</span></code></p>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>4. Animating a Micro:bit LED Image with a for Loop &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -196,11 +199,11 @@
 <div class="container" id="main-content">
   
   <section id="animating-a-micro-bit-led-image-with-a-for-loop">
-<h1><span class="section-number">4. </span>Animating a Micro:bit LED Image with a <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#animating-a-micro-bit-led-image-with-a-for-loop" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">4. </span>Animating a Micro:bit LED Image with a <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#animating-a-micro-bit-led-image-with-a-for-loop" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Animate images using a list and a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Work time for fruitful and non-fruitful function assignment (likely a Micro:bit assignment).</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_microbit_for"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -213,12 +216,12 @@
 
     </div>
     <section id="animate-built-in-images-on-micro-bit-leds">
-<h2><span class="section-number">4.1. </span>Animate Built-In Images On Micro:bit LEDs<a class="headerlink" href="#animate-built-in-images-on-micro-bit-leds" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Animate Built-In Images On Micro:bit LEDs<a class="headerlink" href="#animate-built-in-images-on-micro-bit-leds" title="Permalink to this heading">¶</a></h2>
 <p>Let’s pick a few of the <a class="reference internal" href="../Microbit/QuickStartExamples.html#microbit-predefined-images"><span class="std std-ref">List of Pre-Defined Images</span></a>), and have them show in succession, one after another. There are a number of ways we could do this, but we will use a list. We’ve used a list before, in code that looked like this:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=colorlist-list-refresher data-question_label="4.1.1">
-<div id=colorlist-list-refresher_question class="ac_question col-md-12">
+<div id=colorlist-list-refresher_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="colorlist-list-refresher_editor" 
@@ -243,7 +246,7 @@ for some_color in ["yellow", "red", "purple", "blue"]:
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=colorlist-list-refresher-variable-added data-question_label="4.1.2">
-<div id=colorlist-list-refresher-variable-added_question class="ac_question col-md-12">
+<div id=colorlist-list-refresher-variable-added_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="colorlist-list-refresher-variable-added_editor" 
@@ -305,7 +308,7 @@ for some_color in color_list:
 </div>
 </section>
 <section id="animating-custom-made-images">
-<h2><span class="section-number">4.2. </span>Animating Custom Made Images<a class="headerlink" href="#animating-custom-made-images" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Animating Custom Made Images<a class="headerlink" href="#animating-custom-made-images" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes we might want to animate a series of Micro:bit images that we create, as opposed to the built in images we animated above. The logic for this is the same as what we did above, though we need to define each image first. Consider the following, in which an image is defined for each side of a 6 sided die, then displayed one after another.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -366,12 +369,12 @@ for some_color in color_list:
 </div>
 </section>
 <section id="moving-an-led-on-the-bottom-row">
-<h2><span class="section-number">4.3. </span>Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Moving an LED On the Bottom Row<a class="headerlink" href="#moving-an-led-on-the-bottom-row" title="Permalink to this heading">¶</a></h2>
 <p>If you want to create a game that moves an LED around the 5x5 LED grid of the Micro:bit, you will need to learn how to manipulate strings. For now, however, we can make a simple visualization of how to “move” and LED left and right on the bottom row of the grid using the a and b buttons. Before we can do this, however, you need to understand how to access particular elements inside of a list. Consider the following:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list-accessing-values data-question_label="4.3.1">
-<div id=list-accessing-values_question class="ac_question col-md-12">
+<div id=list-accessing-values_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="list-accessing-values_editor" 
@@ -390,7 +393,7 @@ print(color_list[0])
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list-accessing-values-practice data-question_label="4.3.2">
-<div id=list-accessing-values-practice_question class="ac_question col-md-12">
+<div id=list-accessing-values-practice_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="list-accessing-values-practice_editor" 
@@ -408,7 +411,7 @@ print()
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="k">def</span> <span class="nf">make_image</span><span class="p">(</span><span class="n">led_location</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Takes in a location for which pixel should be turned on on the bottom row.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Takes in a location for which pixel should be turned on on the bottom row.</span>
 <span class="sd">        Returns a micro:bit Image object to display.</span>
 <span class="sd">        Note that the location of the pixels should be one of:</span>
 <span class="sd">            01234&quot;&quot;&quot;</span>
@@ -445,7 +448,7 @@ print()
 </div>
 </section>
 <section id="work-time-on-assignment">
-<h2><span class="section-number">4.4. </span>Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Work Time on Assignment<a class="headerlink" href="#work-time-on-assignment" title="Permalink to this heading">¶</a></h2>
 <p>Continue working on your current assignment (focused on creating fruitful and non-fruitful functions).</p>
 </section>
 </section>

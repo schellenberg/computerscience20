@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1. Nested Loops and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -212,11 +215,11 @@
 <div class="container" id="main-content">
   
   <section id="nested-loops-and-image-processing">
-<h1><span class="section-number">1. </span>Nested Loops and Image Processing<a class="headerlink" href="#nested-loops-and-image-processing" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">1. </span>Nested Loops and Image Processing<a class="headerlink" href="#nested-loops-and-image-processing" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use nested loops to demonstrate how to do simple image processing, by iterating through each pixel in an image and making some changes.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_image_processing_nested_loops"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -228,7 +231,7 @@
 
     </div>
     <section id="image-processing-introduction">
-<h2><span class="section-number">1.1. </span>Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Image Processing Introduction<a class="headerlink" href="#image-processing-introduction" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before starting this section, you will want to install the <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> package. To do this, open Thonny and select Tools → Manage packages…, then type in <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> and press Search. Once the package is selected, click install. You should now be able to use any image that you download with the example code shown below.</p>
@@ -254,7 +257,7 @@ that computer scientists like to start counting with 0!  This means that if ther
 <img alt="../../_images/image_pixels.png" src="../../_images/image_pixels.png" />
 </section>
 <section id="the-rgb-color-model">
-<span id="index-0"></span><h2><span class="section-number">1.2. </span>The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">1.2. </span>The RGB Color Model<a class="headerlink" href="#the-rgb-color-model" title="Permalink to this heading">¶</a></h2>
 <p>Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
 of three basic colors: red, green, and blue.  This technique for creating color is known as the <strong>RGB Color Model</strong>.
 The amount of each color, sometimes called the <strong>intensity</strong> of the color, allows us to have very fine control over the
@@ -265,12 +268,6 @@ are three basic colors, that means that you can create 256<sup>3</sup> distinct 
 <p>Here are the red, green and blue intensities for some common colors.  Note that “Black” is represented by a pixel having
 no basic color.  On the other hand, “White” has maximum values for all three basic color components.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Red</p></th>
@@ -322,18 +319,13 @@ no basic color.  On the other hand, “White” has maximum values for all three
 </div>
 </section>
 <section id="creating-and-manipulating-pixels">
-<span id="index-1"></span><h2><span class="section-number">1.3. </span>Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">1.3. </span>Creating and Manipulating Pixels<a class="headerlink" href="#creating-and-manipulating-pixels" title="Permalink to this heading">¶</a></h2>
 <p>In order to manipulate an image, we need to be able to access individual pixels.  This capability is provided by
 a module called <strong>image</strong>, provided in ActiveCode (or with the <code class="docutils literal notranslate"><span class="pre">cs20-image</span></code> package). The image module defines two classes: <code class="docutils literal notranslate"><span class="pre">Image</span></code> and <code class="docutils literal notranslate"><span class="pre">Pixel</span></code>.</p>
 <p>Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity.  A pixel provides three methods (functions)
 that allow us to ask for the intensity values.  They are called <code class="docutils literal notranslate"><span class="pre">get_red</span></code>, <code class="docutils literal notranslate"><span class="pre">get_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">get_blue</span></code>.  In addition, we can ask a
 pixel to change an intensity value using its <code class="docutils literal notranslate"><span class="pre">set_red</span></code>, <code class="docutils literal notranslate"><span class="pre">set_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">set_blue</span></code> methods.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 30%" />
-<col style="width: 52%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method Name</p></th>
 <th class="head"><p>Example</p></th>
@@ -377,7 +369,7 @@ the same as the current amount of green.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=pixelex1a data-question_label="1.3.1">
-<div id=pixelex1a_question class="ac_question col-md-12">
+<div id=pixelex1a_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="pixelex1a_editor" 
@@ -397,7 +389,7 @@ print(p.get_green(), p.get_blue())
 </div>
 </div>
 <section id="check-your-understanding">
-<h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.3.1.1" data-multipleanswers="false"  id="test_question7_8_1_1"  style="visibility: hidden;">
@@ -417,7 +409,7 @@ print(p.get_green(), p.get_blue())
     </section>
 </section>
 <section id="nested-iteration">
-<span id="index-2"></span><h2><span class="section-number">1.4. </span>Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2><span class="section-number">1.4. </span>Nested Iteration<a class="headerlink" href="#nested-iteration" title="Permalink to this heading">¶</a></h2>
 <p><strong>Image processing</strong> refers to the ability to manipulate the individual pixels in a digital image.  In order to process
 all of the pixels, we need to be able to systematically visit all of the rows and columns in the image.  The best way
 to do this is to use <strong>nested iteration</strong>.</p>
@@ -434,7 +426,7 @@ However, the body of the loop can contain any statements, including another iter
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=nested1 data-question_label="1.4.1">
-<div id=nested1_question class="ac_question col-md-12">
+<div id=nested1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="nested1_editor" 
@@ -457,6 +449,8 @@ flow of control as it occurs with the nested iteration.  Again, for every value 
 
 <div class="runestone codelens ">
     <div class="cd_section" data-component="codelens" data-question_label="1.4.2">
+        <div id=nested2_question class="ac_question">
+        </div>
         <div class="pytutorVisualizer" id="nested2"
            data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
         </div>
@@ -487,12 +481,12 @@ The inner <code class="docutils literal notranslate"><span class="pre">for</span
 </div>
 </section>
 <section id="creating-an-empty-image">
-<h2><span class="section-number">1.5. </span>Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Creating an Empty Image<a class="headerlink" href="#creating-an-empty-image" title="Permalink to this heading">¶</a></h2>
 <p>It is possible to create an Image object that is “empty”.  An <code class="docutils literal notranslate"><span class="pre">EmptyImage</span></code> has a width and a height.  However, the pixel collection consists of only white pixels when it is created. We can create and draw an empty image like this:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=empty_image_demo data-question_label="1.5.1">
-<div id=empty_image_demo_question class="ac_question col-md-12">
+<div id=empty_image_demo_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="empty_image_demo_editor" 
@@ -516,7 +510,7 @@ img.draw(win)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=change_empty_image_to_red data-question_label="1.5.2">
-<div id=change_empty_image_to_red_question class="ac_question col-md-12">
+<div id=change_empty_image_to_red_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="change_empty_image_to_red_editor" 
@@ -542,7 +536,7 @@ img.draw(win)
 </div>
 </div>
 <section id="try-this">
-<h3><span class="section-number">1.5.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Change the code above to draw an image of a different color.</p></li>
 <li><p>Adapt the code above to draw a “pinstripe” image. In other words, change the code so that only every other row is colored red. <em>Hint: recall the modulus % operator.</em></p></li>
@@ -551,18 +545,13 @@ img.draw(win)
 </section>
 </section>
 <section id="image-objects">
-<span id="index-3"></span><h2><span class="section-number">1.6. </span>Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2><span class="section-number">1.6. </span>Image Objects<a class="headerlink" href="#image-objects" title="Permalink to this heading">¶</a></h2>
 <p>To create a non-empty Image object, we pass in the name of a file that stores a digital image.  The resulting image object has an attribute corresponding to the width, the height, and the collection of pixels in the image.</p>
 <p>We can ask an image object to return its size using the <code class="docutils literal notranslate"><span class="pre">get_width</span></code> and <code class="docutils literal notranslate"><span class="pre">get_height</span></code> methods.  We can also get a pixel from a particular location in the image using <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> and change the pixel at
 a particular location using <code class="docutils literal notranslate"><span class="pre">set_pixel</span></code>.</p>
 <p>The Image class is shown below.  Note that the first two entries show how to create image objects.  The parameters are
 different depending on whether you are using an image file or creating an empty image.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 25%" />
-<col style="width: 57%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method Name</p></th>
 <th class="head"><p>Example</p></th>
@@ -603,7 +592,7 @@ on its basic color intensities.</p>
 <img src="../../_static/skflag.png" id="skflag.png">
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=pixelex1 data-question_label="1.6.1">
-<div id=pixelex1_question class="ac_question col-md-12">
+<div id=pixelex1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="pixelex1_editor" 
@@ -626,9 +615,9 @@ print(p.get_red(), p.get_green(), p.get_blue())
 pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other pixel locations by changing the <code class="docutils literal notranslate"><span class="pre">get_pixel</span></code> arguments and rerunning the program.</p>
 </section>
 <section id="image-processing-with-an-existing-image">
-<h2><span class="section-number">1.7. </span>Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Image Processing with an Existing Image<a class="headerlink" href="#image-processing-with-an-existing-image" title="Permalink to this heading">¶</a></h2>
 <section id="increasing-a-color">
-<h3><span class="section-number">1.7.1. </span>Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.1. </span>Increasing a Color<a class="headerlink" href="#increasing-a-color" title="Permalink to this heading">¶</a></h3>
 <img src="../../_static/sneakers.jpg" id="sneakers.jpg"><p>Let’s say that we wanted to increase the amount of green in the image shown above (<code class="docutils literal notranslate"><span class="pre">sneakers.jpg</span></code>). To do so, we would need to look at every individual pixel, determine how much green that pixel contained, and then increase it by some amount. Here is a simple program that does just that:</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -641,7 +630,7 @@ pixel at column 45, row 55, has RGB values of 253, 212, and 1.  Try a few other 
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=increase_color_amount data-question_label="1.7.1.1">
-<div id=increase_color_amount_question class="ac_question col-md-12">
+<div id=increase_color_amount_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="increase_color_amount_editor" 
@@ -682,7 +671,7 @@ Line 10 gets an individual pixel at the current location of the nested loop.</p>
 <p>Finally, we need to replace the old pixel with the new, adjusted pixel in our image. It is important to put the new pixel into the same location as the original pixel that it came from in the digital photo.</p>
 </section>
 <section id="negative-images">
-<h3><span class="section-number">1.7.2. </span>Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.2. </span>Negative Images<a class="headerlink" href="#negative-images" title="Permalink to this heading">¶</a></h3>
 <p>One of the easiest image processing algorithms will create what is known as a <strong>negative</strong> image.  A negative image simply means that each pixel will be the <em>opposite</em> of what it was originally.  But what does opposite mean?</p>
 <p>In the RGB color model, we can consider the opposite of the red component as the difference between the original red
 and 255.  For example, if the original red component was 50, then the opposite, or negative red value would be
@@ -691,7 +680,7 @@ and 255.  For example, if the original red component was 50, then the opposite, 
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=acimg_1 data-question_label="1.7.2.1">
-<div id=acimg_1_question class="ac_question col-md-12">
+<div id=acimg_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="acimg_1_editor" 
@@ -735,7 +724,7 @@ for y in range(height):
 </div>
 </section>
 <section id="id1">
-<h3><span class="section-number">1.7.3. </span>Try This<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.3. </span>Try This<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Change the name of the file in the <code class="docutils literal notranslate"><span class="pre">image.Image()</span></code> call to see how other images look as negatives. Here are two other images that you can use (<code class="docutils literal notranslate"><span class="pre">fransaskoisflag.jpg</span></code> and <code class="docutils literal notranslate"><span class="pre">pineapples.jpg</span></code>):</p></li>
 </ul>
@@ -747,7 +736,7 @@ for y in range(height):
 </ul>
 </section>
 <section id="id2">
-<h3><span class="section-number">1.7.4. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.4. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="1.7.4.1" data-multipleanswers="false"  id="test_question7_8_3_1"  style="visibility: hidden;">
@@ -832,7 +821,7 @@ for y in range(height):
     </div>
     </section>
 <section id="acknowledgments">
-<h3><span class="section-number">1.7.5. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.5. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading">¶</a></h3>
 <p>Images are from <a class="reference external" href="https://www.pexels.com/">Pexels</a>, and are licensed as CC-0. Saskatchewan flag images are also licensed as CC-0, obtained from Wikimedia.</p>
 </section>
 </section>

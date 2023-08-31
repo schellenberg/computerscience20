@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2. Fruitful Functions and the Micro:bit &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -198,11 +201,11 @@
 <div class="container" id="main-content">
   
   <section id="fruitful-functions-and-the-micro-bit">
-<h1><span class="section-number">2. </span>Fruitful Functions and the Micro:bit<a class="headerlink" href="#fruitful-functions-and-the-micro-bit" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">2. </span>Fruitful Functions and the Micro:bit<a class="headerlink" href="#fruitful-functions-and-the-micro-bit" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>WDTPD on variable scope. Functions practice quiz. Micro:bit fruitful functions.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_microbit_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -215,7 +218,7 @@
 
     </div>
     <section id="what-does-this-program-do">
-<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this heading">¶</a></h2>
 <p>Remember that variables created inside of a function have <strong>local scope</strong> (can only be used inside that function), whereas variables created outside of a function have <strong>global scope</strong> (can be accessed from anywhere).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -225,7 +228,7 @@
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_microbit_1 data-question_label="2.1.1">
-<div id=wdtpd_functions_microbit_1_question class="ac_question col-md-12">
+<div id=wdtpd_functions_microbit_1_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_functions_microbit_1_editor" 
@@ -253,7 +256,7 @@ a(5)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_microbit_2 data-question_label="2.1.2">
-<div id=wdtpd_functions_microbit_2_question class="ac_question col-md-12">
+<div id=wdtpd_functions_microbit_2_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_functions_microbit_2_editor" 
@@ -274,7 +277,7 @@ print(x)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_microbit_3 data-question_label="2.1.3">
-<div id=wdtpd_functions_microbit_3_question class="ac_question col-md-12">
+<div id=wdtpd_functions_microbit_3_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_functions_microbit_3_editor" 
@@ -296,7 +299,7 @@ print(x)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_functions_microbit_4 data-question_label="2.1.4">
-<div id=wdtpd_functions_microbit_4_question class="ac_question col-md-12">
+<div id=wdtpd_functions_microbit_4_question class="ac_question">
 
 </div>
 <textarea data-lang="python" id="wdtpd_functions_microbit_4_editor" 
@@ -317,16 +320,16 @@ print(x)
 </div>
 </section>
 <section id="functions-practice-quiz">
-<h2><span class="section-number">2.2. </span>Functions Practice Quiz<a class="headerlink" href="#functions-practice-quiz" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Functions Practice Quiz<a class="headerlink" href="#functions-practice-quiz" title="Permalink to this heading">¶</a></h2>
 <p>To confirm that you understand the ideas behind using functions, you should try the <a class="reference internal" href="../PracticeQuizzes/Functions.html#functions-practice-quiz"><span class="std std-ref">Functions Practice Quiz</span></a> using only your brain (in other words, try to figure out what will happen <em>without</em> running the code).</p>
 </section>
 <section id="an-accelerometer-fruitful-function">
-<h2><span class="section-number">2.3. </span>An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>An Accelerometer Fruitful Function<a class="headerlink" href="#an-accelerometer-fruitful-function" title="Permalink to this heading">¶</a></h2>
 <p>Let’s adapt the code above to use a fruitful function. We will make a function called <code class="docutils literal notranslate"><span class="pre">horizontal_tilt()</span></code> that returns either “left”, “right”, or “flat”.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">microbit</span>
 
 <span class="k">def</span> <span class="nf">horizontal_tilt</span><span class="p">(</span><span class="n">sensitivity_amount</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns left, right or flat, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns left, right or flat, depending on which way the micro:bit is tilted. Small sensitivity_amount is more sensitive, large sensitivity_amount is less sensitive.&quot;&quot;&quot;</span>
     <span class="n">x_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">x_tilt</span> <span class="o">&gt;</span> <span class="n">sensitivity_amount</span><span class="p">:</span>
@@ -359,7 +362,7 @@ print(x)
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop, we start by calling the <code class="docutils literal notranslate"><span class="pre">horizontal_tilt</span></code> function, so we will call the function many times per second.</p>
 </section>
 <section id="adapt-the-code">
-<h2><span class="section-number">2.4. </span>Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Adapt the Code<a class="headerlink" href="#adapt-the-code" title="Permalink to this heading">¶</a></h2>
 <p>Try the following (either by yourself or with a partner):</p>
 <ul class="simple">
 <li><p>create a fruitful function <code class="docutils literal notranslate"><span class="pre">vertical_tilt(sensitivity_amount)</span></code> that uses <code class="docutils literal notranslate"><span class="pre">get_y</span></code> and returns either “forward”, “backward”, or None</p></li>
@@ -367,7 +370,7 @@ print(x)
 </ul>
 </section>
 <section id="a-more-involved-micro-bit-function-example">
-<h2><span class="section-number">2.5. </span>A More Involved Micro:bit Function Example<a class="headerlink" href="#a-more-involved-micro-bit-function-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>A More Involved Micro:bit Function Example<a class="headerlink" href="#a-more-involved-micro-bit-function-example" title="Permalink to this heading">¶</a></h2>
 <p>One of the great things about using functions is that you can use a function without having to know all of the details about how it works. In the following example, <strong>you do not need to worry about how the functions work</strong> (though you can definitely try to figure them out, if you want to). The important things you need to understand are all inside the <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> loop. We are using two things that you may not have seen before:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">some_list.append(&quot;thing&quot;)</span></code> adds “thing” to the end of a list. We use this to keep track of the actions the user has made in a list called <code class="docutils literal notranslate"><span class="pre">actions</span></code>.</p></li>
@@ -379,7 +382,7 @@ print(x)
 <span class="n">current_action</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">get_konami_action</span><span class="p">(</span><span class="n">sensitivity_amount</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a single action that has occured on the Micro:bit, either a button a or b, then a tilt</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a single action that has occured on the Micro:bit, either a button a or b, then a tilt</span>
 <span class="sd">    value of right, left, up or down. The sensitivity_amount affects all the tilt options.&quot;&quot;&quot;</span>
     <span class="n">x_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
     <span class="n">y_tilt</span> <span class="o">=</span> <span class="n">microbit</span><span class="o">.</span><span class="n">accelerometer</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span>
@@ -408,7 +411,7 @@ print(x)
             <span class="k">return</span> <span class="s2">&quot;up&quot;</span>
 
 <span class="k">def</span> <span class="nf">konami_code</span><span class="p">(</span><span class="n">action_list</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Look for the pattern up, up, down, down, left, left, right, right, b, a at the end of a list.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Look for the pattern up, up, down, down, left, left, right, right, b, a at the end of a list.</span>
 <span class="sd">    Return True if the pattern is found, False if it is not.&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">action_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
@@ -444,7 +447,7 @@ print(x)
 </div>
 </section>
 <section id="micro-bit-game-assignment">
-<h2><span class="section-number">2.6. </span>Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Micro:bit Game Assignment<a class="headerlink" href="#micro-bit-game-assignment" title="Permalink to this heading">¶</a></h2>
 <p>Use the examples we’ve done as a starting point, and come up with your own game that uses the Micro:bit and functions! You are welcome to combine the turtle module as well. At a minimum, your game must:</p>
 <ul class="simple">
 <li><p>use at least one fruitful function (that you have created). You are welcome to use the fruitful functions shown in our demos, but you need to create at least one of your own!</p></li>

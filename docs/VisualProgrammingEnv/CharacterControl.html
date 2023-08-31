@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2. Controlling a Character with WASD (Repetition and Conditionals) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -197,11 +200,11 @@
 <div class="container" id="main-content">
   
   <section id="controlling-a-character-with-wasd-repetition-and-conditionals">
-<h1><span class="section-number">2. </span>Controlling a Character with WASD (Repetition and Conditionals)<a class="headerlink" href="#controlling-a-character-with-wasd-repetition-and-conditionals" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1><span class="section-number">2. </span>Controlling a Character with WASD (Repetition and Conditionals)<a class="headerlink" href="#controlling-a-character-with-wasd-repetition-and-conditionals" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Introduce the <strong>repeat</strong> block by having a sprite shrink before disappearing. Demonstrate simple event-driven programming by moving a sprite with WASD using the <strong>when key pressed</strong> block. Use the <strong>forever</strong> block, combined with the <strong>if-then</strong> block to improve the motion of the sprite.</p>
-</div>
+</aside>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_scratch_wasd"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -220,7 +223,7 @@
             data-video-end="-1" ></div>
     </div>
     <section id="changing-the-size-of-a-character">
-<h2><span class="section-number">2.1. </span>Changing the Size of a Character<a class="headerlink" href="#changing-the-size-of-a-character" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Changing the Size of a Character<a class="headerlink" href="#changing-the-size-of-a-character" title="Permalink to this heading">¶</a></h2>
 <p>To begin today, we are going to adapt the example created yesterday. To open projects you have made previously, log into <a class="reference external" href="https://scratch.mit.edu">Scratch</a> and look for the “My Stuff” folder icon on the top right hand side of the page.</p>
 <img alt="../_images/scratch_my_stuff.png" src="../_images/scratch_my_stuff.png" />
 <p>If we want to have a sprite appear larger or smaller than the default size, we can use the <strong>change size by 10</strong> block, which you can find in the <strong>Looks</strong> tab.</p>
@@ -228,7 +231,7 @@
 <p>Drag the block shown above onto the scripts area, and double click it. You should see the current sprite get a bit larger. Experiment by changing the number 10 to different values. <em>Be sure to try both positive and negative values!</em></p>
 </section>
 <section id="repetition">
-<span id="index-0"></span><h2><span class="section-number">2.2. </span>Repetition<a class="headerlink" href="#repetition" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">2.2. </span>Repetition<a class="headerlink" href="#repetition" title="Permalink to this heading">¶</a></h2>
 <p>We would like to adapt our previous project to have the characters shrink before they disappear. In order to accomplish this, we need to use the <strong>change size by #</strong> block multiple times. One way to do this would be to put a large number of blocks one after another, like this:</p>
 <img alt="../_images/scratch_change_size_many_times.png" src="../_images/scratch_change_size_many_times.png" />
 <p>Although this begins to do what we want, to have this shrink our character completely, we would need to have 50 of these blocks. There must be a better way.</p>
@@ -238,7 +241,7 @@
 <img alt="../_images/scratch_shrinking_characters.png" src="../_images/scratch_shrinking_characters.png" />
 </section>
 <section id="movement-using-wasd-version-1">
-<h2><span class="section-number">2.3. </span>Movement Using WASD - Version 1<a class="headerlink" href="#movement-using-wasd-version-1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Movement Using WASD - Version 1<a class="headerlink" href="#movement-using-wasd-version-1" title="Permalink to this heading">¶</a></h2>
 <p>If we want to control the motion of a sprite on the screen, one way we can do it is using the classic WASD controls on a keyboard, where</p>
 <ul class="simple">
 <li><p><strong>w</strong> moves the character <strong>up</strong></p></li>
@@ -257,7 +260,7 @@
 <p>If we cannot override this feature of your operating system, how can we improve the WASD movement that we created above? The answer is to use some new blocks that allow us to repeatedly ask the computer whether a particular key is pressed, as described below.</p>
 </section>
 <section id="movement-using-wasd-version-2">
-<span id="index-1"></span><h2><span class="section-number">2.4. </span>Movement Using WASD - Version 2<a class="headerlink" href="#movement-using-wasd-version-2" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">2.4. </span>Movement Using WASD - Version 2<a class="headerlink" href="#movement-using-wasd-version-2" title="Permalink to this heading">¶</a></h2>
 <p>When we made a character shrink in the code above, we used a <strong>repeat 50</strong> block to have the computer do a particular instruction (change size) multiple times. Another block that allows us to repeat something multiple times is the forever block:</p>
 <img alt="../_images/scratch_forever_block.png" src="../_images/scratch_forever_block.png" />
 <p>As you have guessed, anything inside the forever block will continue to be repeated over and over, until the program ends (or you tell the computer to stop the loop). In this case, the thing that we want to have repeated over and over is asking the computer whether a specific key is currently being pressed.</p>
@@ -270,7 +273,7 @@
 <img alt="../_images/scratch_better_wasd.png" src="../_images/scratch_better_wasd.png" />
 </section>
 <section id="practice-problem">
-<h2><span class="section-number">2.5. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this heading">¶</a></h2>
 <p>Work on your first Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
