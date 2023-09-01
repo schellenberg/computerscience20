@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>EasyGUI_Qt Reference &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -72,7 +69,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -203,18 +200,18 @@
 <div class="container" id="main-content">
   
   <section id="easygui-qt-reference">
-<span id="easygui-reference"></span><h1>EasyGUI_Qt Reference<a class="headerlink" href="#easygui-qt-reference" title="Permalink to this heading">¶</a></h1>
+<span id="easygui-reference"></span><h1>EasyGUI_Qt Reference<a class="headerlink" href="#easygui-qt-reference" title="Permalink to this headline">¶</a></h1>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>EasyGUI_Qt has not been updated in quite some time, and has been causing some teachers issues with installation/use. I am shifting the textbook examples to use <a class="reference external" href="https://www.pysimplegui.org/en/latest/">PySimpleGUI</a> instead, which is an active project (as of now, Sept 2023). I’ve left this EasyGUI_Qt reference here for now, in case any teachers want to continue to use EasyGUI_Qt. I will eventually remove this page, once I’ve tested/used PySimpleGUI for a few semesters of CS20.</p>
 </div>
 <p>EasyGUI_Qt is inspired by EasyGUI and contains a number of different basic graphical user interface components. The version you are using is forked from <a class="reference external" href="https://github.com/aroberge/easygui_qt">https://github.com/aroberge/easygui_qt</a>, and adds just a few changes to make things easier for students to use (improved install process by adding PyQt5 as a dependency, added get_file_name function). The following reference covers a subset of the functions that are most accessible to a student at the CS20 level, so you may want to read the <a class="reference external" href="http://easygui-qt.readthedocs.io/en/latest/api.html">official docs of the original project</a> if you would like to explore more usage options. If you explore the official docs, you may find it useful to know that you can call functions with only some of the arguments (this is called optional arguments). If you do this, however, you need to specify <em>which</em> argument you are passing, like <code class="docutils literal notranslate"><span class="pre">easy.get_string(message=&quot;Some</span> <span class="pre">prompt/question:&quot;,</span> <span class="pre">default_response=&quot;Some</span> <span class="pre">string&quot;)</span></code>.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>In Thonny, open Tools → Manage Packages and type in <code class="docutils literal notranslate"><span class="pre">cs20-easygui</span></code> into the search bar, then click Install. This installation will take some time, as part of the installation is the backend graphical rendering engine (PyQt5).</p>
 </section>
 <section id="showing-messages">
-<h2>Showing Messages<a class="headerlink" href="#showing-messages" title="Permalink to this heading">¶</a></h2>
+<h2>Showing Messages<a class="headerlink" href="#showing-messages" title="Permalink to this headline">¶</a></h2>
 <p>If you call <code class="docutils literal notranslate"><span class="pre">show_message</span></code> with a single argument, that argument should be a string containing the message you would like to show.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 <span class="n">easy</span><span class="o">.</span><span class="n">show_message</span><span class="p">(</span><span class="s2">&quot;Enter your message here, or pass in a variable containing a string.&quot;</span><span class="p">)</span>
@@ -230,7 +227,7 @@
 <img alt="../../_images/showing-messages2.png" src="../../_images/showing-messages2.png" />
 </section>
 <section id="getting-strings">
-<h2>Getting Strings<a class="headerlink" href="#getting-strings" title="Permalink to this heading">¶</a></h2>
+<h2>Getting Strings<a class="headerlink" href="#getting-strings" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to enter a string, use the <code class="docutils literal notranslate"><span class="pre">get_string</span></code> function. This function will return whatever the user types in (as a string). If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
@@ -252,7 +249,7 @@
 <img alt="../../_images/getting-strings3.png" src="../../_images/getting-strings3.png" />
 </section>
 <section id="getting-integers">
-<h2>Getting Integers<a class="headerlink" href="#getting-integers" title="Permalink to this heading">¶</a></h2>
+<h2>Getting Integers<a class="headerlink" href="#getting-integers" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to enter an integer, use the <code class="docutils literal notranslate"><span class="pre">get_integer</span></code> function. This function will return an integer, and forces the user to only enter numbers. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_integer</span><span class="p">(</span><span class="s2">&quot;How old are you?&quot;</span><span class="p">)</span>
@@ -280,7 +277,7 @@
 <img alt="../../_images/getting-integers4.png" src="../../_images/getting-integers4.png" />
 </section>
 <section id="getting-floats">
-<h2>Getting Floats<a class="headerlink" href="#getting-floats" title="Permalink to this heading">¶</a></h2>
+<h2>Getting Floats<a class="headerlink" href="#getting-floats" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to enter an float, use the <code class="docutils literal notranslate"><span class="pre">get_float</span></code> function. This function will return a float, and forces the user to only enter numeric values. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">easy</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;How tall are you (in meters)?&quot;</span><span class="p">)</span>
@@ -314,7 +311,7 @@
 <img alt="../../_images/getting-floats5.png" src="../../_images/getting-floats5.png" />
 </section>
 <section id="getting-selection-from-drop-down-list">
-<h2>Getting Selection from Drop-Down List<a class="headerlink" href="#getting-selection-from-drop-down-list" title="Permalink to this heading">¶</a></h2>
+<h2>Getting Selection from Drop-Down List<a class="headerlink" href="#getting-selection-from-drop-down-list" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to select an option from a drop-down list, use the <code class="docutils literal notranslate"><span class="pre">get_choice</span></code> function. This function will return a string containing the user’s choice. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <p>This function requires three arguments, the prompt message (as a string), the window title (as a string), and the choices the user can choose from (as a list).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
@@ -328,7 +325,7 @@
 <img alt="../../_images/getting-choice.png" src="../../_images/getting-choice.png" />
 </section>
 <section id="getting-multiple-selections-from-list">
-<h2>Getting Multiple Selections from List<a class="headerlink" href="#getting-multiple-selections-from-list" title="Permalink to this heading">¶</a></h2>
+<h2>Getting Multiple Selections from List<a class="headerlink" href="#getting-multiple-selections-from-list" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to select an option (or more than one option) from a list, use the <code class="docutils literal notranslate"><span class="pre">get_list_of_choices</span></code> function. This function will return a list containing the user’s choices. If the user presses <em>Cancel</em>, closes the window, or does not select any options, this function will return an empty list.</p>
 <p>This function requires two arguments, the window title (as a string), and the choices the user can choose from (as a list).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
@@ -341,7 +338,7 @@
 <img alt="../../_images/getting-multiple-selections.png" src="../../_images/getting-multiple-selections.png" />
 </section>
 <section id="getting-a-password">
-<h2>Getting A Password<a class="headerlink" href="#getting-a-password" title="Permalink to this heading">¶</a></h2>
+<h2>Getting A Password<a class="headerlink" href="#getting-a-password" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to enter a password, use the <code class="docutils literal notranslate"><span class="pre">get_password</span></code> function. This function will return a string containing the user’s input. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 
@@ -359,7 +356,7 @@
 <img alt="../../_images/getting-password2.png" src="../../_images/getting-password2.png" />
 </section>
 <section id="getting-a-yes-no-answer">
-<h2>Getting A Yes/No Answer<a class="headerlink" href="#getting-a-yes-no-answer" title="Permalink to this heading">¶</a></h2>
+<h2>Getting A Yes/No Answer<a class="headerlink" href="#getting-a-yes-no-answer" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to answer either Yes or No, use the <code class="docutils literal notranslate"><span class="pre">get_yes_or_no</span></code> function. This function will return a boolean (<code class="docutils literal notranslate"><span class="pre">True</span></code> if they clicked Yes, <code class="docutils literal notranslate"><span class="pre">False</span></code> if they clicked No). If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 
@@ -377,7 +374,7 @@
 <img alt="../../_images/getting-yes-no2.png" src="../../_images/getting-yes-no2.png" />
 </section>
 <section id="getting-an-rgb-color-value">
-<h2>Getting An RGB Color Value<a class="headerlink" href="#getting-an-rgb-color-value" title="Permalink to this heading">¶</a></h2>
+<h2>Getting An RGB Color Value<a class="headerlink" href="#getting-an-rgb-color-value" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to select a color, use the <code class="docutils literal notranslate"><span class="pre">get_color_rgb</span></code> function. This function will return a list with the RGB values of the selected color. If the user presses <em>Cancel</em>, or closes the window, this function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 
@@ -391,7 +388,7 @@
 <img alt="../../_images/getting-color.png" src="../../_images/getting-color.png" />
 </section>
 <section id="get-file-name-path">
-<h2>Get File Name Path<a class="headerlink" href="#get-file-name-path" title="Permalink to this heading">¶</a></h2>
+<h2>Get File Name Path<a class="headerlink" href="#get-file-name-path" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that prompts the user to select a file from their computer, use the <code class="docutils literal notranslate"><span class="pre">get_file_name</span></code> function. This function will return a string containing the full path to the file they selected. If the user presses <em>Cancel</em>, or closes the window, this function will return an empty string <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
 
@@ -409,7 +406,7 @@
 <img alt="../../_images/getting-file-name2.png" src="../../_images/getting-file-name2.png" />
 </section>
 <section id="display-html-formatted-text">
-<h2>Display HTML Formatted Text<a class="headerlink" href="#display-html-formatted-text" title="Permalink to this heading">¶</a></h2>
+<h2>Display HTML Formatted Text<a class="headerlink" href="#display-html-formatted-text" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that shows rendered HTML, use the <code class="docutils literal notranslate"><span class="pre">show_html</span></code> function.</p>
 <p>This function requires two arguments, the window title (as a string), and the HTML to render (also a string).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>
@@ -431,7 +428,7 @@
 <img alt="../../_images/showing-html.png" src="../../_images/showing-html.png" />
 </section>
 <section id="id1">
-<h2>Display HTML Formatted Text<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>Display HTML Formatted Text<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>To create a pop up window that shows the contents of a file as rendered HTML, use the <code class="docutils literal notranslate"><span class="pre">show_file</span></code> function.</p>
 <p>This function requires three arguments, the path of the file (as a string), the window title (as a string), rendering engine to use (also a string).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">easygui_qt</span> <span class="k">as</span> <span class="nn">easy</span>

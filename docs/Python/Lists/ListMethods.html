@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2. List Methods &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -215,11 +212,11 @@
 <div class="container" id="main-content">
   
   <section id="list-methods">
-<h1><span class="section-number">2. </span>List Methods<a class="headerlink" href="#list-methods" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">2. </span>List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Explore methods that allow you to manipulate lists.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_list_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -232,7 +229,7 @@
 
     </div>
     <section id="what-does-this-program-do">
-<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">2.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
@@ -241,7 +238,7 @@
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_1 data-question_label="2.1.1">
-<div id=wdtpd_lists_1_question class="ac_question">
+<div id=wdtpd_lists_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_1_editor" 
@@ -257,7 +254,7 @@ print(len(a_list))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_2 data-question_label="2.1.2">
-<div id=wdtpd_lists_2_question class="ac_question">
+<div id=wdtpd_lists_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_2_editor" 
@@ -273,7 +270,7 @@ print(len(a_list))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_3 data-question_label="2.1.3">
-<div id=wdtpd_lists_3_question class="ac_question">
+<div id=wdtpd_lists_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_3_editor" 
@@ -289,7 +286,7 @@ print(a_list[5])
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_4 data-question_label="2.1.4">
-<div id=wdtpd_lists_4_question class="ac_question">
+<div id=wdtpd_lists_4_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_4_editor" 
@@ -305,7 +302,7 @@ print(a_list[2][0])
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_5 data-question_label="2.1.5">
-<div id=wdtpd_lists_5_question class="ac_question">
+<div id=wdtpd_lists_5_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_5_editor" 
@@ -322,7 +319,7 @@ print(a_list)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_6 data-question_label="2.1.6">
-<div id=wdtpd_lists_6_question class="ac_question">
+<div id=wdtpd_lists_6_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_6_editor" 
@@ -339,7 +336,7 @@ print(the_word)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_7 data-question_label="2.1.7">
-<div id=wdtpd_lists_7_question class="ac_question">
+<div id=wdtpd_lists_7_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_7_editor" 
@@ -355,7 +352,7 @@ print(a_list[3][2])
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=wdtpd_lists_8 data-question_label="2.1.8">
-<div id=wdtpd_lists_8_question class="ac_question">
+<div id=wdtpd_lists_8_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="wdtpd_lists_8_editor" 
@@ -370,7 +367,7 @@ print(a_list[3][2][2])
 </div>
 </section>
 <section id="id1">
-<h2><span class="section-number">2.2. </span>List Methods<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">2.2. </span>List Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>The dot operator can also be used to access built-in methods of list objects.
 <code class="docutils literal notranslate"><span class="pre">append</span></code> is a list method which adds the argument passed to it to the end of
 the list. Continuing with this example, we show several other list methods.  Many of them are
@@ -378,7 +375,7 @@ easy to understand.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_1 data-question_label="2.2.1">
-<div id=list_methods_1_question class="ac_question">
+<div id=list_methods_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_1_editor" 
@@ -424,6 +421,12 @@ item at that position.  Either way the list is changed.</p>
 is unchanged by the method.</p>
 <p>Be sure to experiment with these methods to gain a better understanding of what they do.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 57%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Parameters</p></th>
@@ -486,7 +489,7 @@ and <code class="docutils literal notranslate"><span class="pre">reverse</span><
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_2 data-question_label="2.2.2">
-<div id=list_methods_2_question class="ac_question">
+<div id=list_methods_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_2_editor" 
@@ -507,7 +510,7 @@ print(my_list)
 </div>
 </div>
 <section id="check-your-understanding">
-<h3><span class="section-number">2.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.2.1.1" data-multipleanswers="false"  id="list_methods_check_1"  style="visibility: hidden;">
@@ -572,12 +575,12 @@ print(my_list)
     </section>
 </section>
 <section id="inventory-example">
-<h2><span class="section-number">2.3. </span>Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Inventory Example<a class="headerlink" href="#inventory-example" title="Permalink to this headline">¶</a></h2>
 <p>If you were making a computer game, and you needed to keep track of what items the player was currently holding, using a list would be a good choice. At the beginning of the game, you might create an empty list, if the player begins the game without any items.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=inventory_example_1 data-question_label="2.3.1">
-<div id=inventory_example_1_question class="ac_question">
+<div id=inventory_example_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="inventory_example_1_editor" 
@@ -594,7 +597,7 @@ print(inventory)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=inventory_example_2 data-question_label="2.3.2">
-<div id=inventory_example_2_question class="ac_question">
+<div id=inventory_example_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="inventory_example_2_editor" 
@@ -612,7 +615,7 @@ print(inventory)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=inventory_example_3 data-question_label="2.3.3">
-<div id=inventory_example_3_question class="ac_question">
+<div id=inventory_example_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="inventory_example_3_editor" 
@@ -640,7 +643,7 @@ print(inventory)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=inventory_example_4 data-question_label="2.3.4">
-<div id=inventory_example_4_question class="ac_question">
+<div id=inventory_example_4_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="inventory_example_4_editor" 
@@ -674,12 +677,12 @@ print(inventory)
 </div>
 </section>
 <section id="shopping-list">
-<h2><span class="section-number">2.4. </span>Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Shopping List<a class="headerlink" href="#shopping-list" title="Permalink to this headline">¶</a></h2>
 <p>Say you want to make a list of things to buy when you go to the store. You could do something like this:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=shopping_list_1 data-question_label="2.4.1">
-<div id=shopping_list_1_question class="ac_question">
+<div id=shopping_list_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="shopping_list_1_editor" 
@@ -698,7 +701,7 @@ print(shopping_list)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=shopping_list_2 data-question_label="2.4.2">
-<div id=shopping_list_2_question class="ac_question">
+<div id=shopping_list_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="shopping_list_2_editor" 
@@ -729,12 +732,12 @@ for thing_to_get in shopping_list:
 </div>
 </section>
 <section id="shakespearean-insult-generator">
-<span id="index-1"></span><h2><span class="section-number">2.5. </span>Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this heading">¶</a></h2>
+<span id="index-1"></span><h2><span class="section-number">2.5. </span>Shakespearean Insult Generator<a class="headerlink" href="#shakespearean-insult-generator" title="Permalink to this headline">¶</a></h2>
 <p>By importing other modules, you can add additional methods that can be used on lists. One example of this is from the <code class="docutils literal notranslate"><span class="pre">random</span></code> module, which provides a <code class="docutils literal notranslate"><span class="pre">choice</span></code> method that takes in a string, and returns one element of the list at random. Consider the following, which will pick a random name each time the code is executed:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=shakespeare_insult_example_1 data-question_label="2.5.1">
-<div id=shakespeare_insult_example_1_question class="ac_question">
+<div id=shakespeare_insult_example_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="shakespeare_insult_example_1_editor" 
@@ -754,7 +757,7 @@ print(random.choice(name_list))
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=shakespeare_insult_example_2 data-question_label="2.5.2">
-<div id=shakespeare_insult_example_2_question class="ac_question">
+<div id=shakespeare_insult_example_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="shakespeare_insult_example_2_editor" 
@@ -785,7 +788,7 @@ print(the_insult)
 </div>
 </section>
 <section id="strings-and-lists">
-<span id="index-2"></span><h2><span class="section-number">2.6. </span>Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this heading">¶</a></h2>
+<span id="index-2"></span><h2><span class="section-number">2.6. </span>Strings and Lists<a class="headerlink" href="#strings-and-lists" title="Permalink to this headline">¶</a></h2>
 <p>Two of the most useful methods on strings involve lists of
 strings. The <code class="docutils literal notranslate"><span class="pre">split</span></code> method
 breaks a string into a list of words.  By
@@ -793,7 +796,7 @@ default, any number of whitespace characters is considered a word boundary.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_lists_split1 data-question_label="2.6.1">
-<div id=string_lists_split1_question class="ac_question">
+<div id=string_lists_split1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="string_lists_split1_editor" 
@@ -813,7 +816,7 @@ characters to use as word boundaries. The following example uses the string
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_lists_split2 data-question_label="2.6.2">
-<div id=string_lists_split2_question class="ac_question">
+<div id=string_lists_split2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="string_lists_split2_editor" 
@@ -834,7 +837,7 @@ and join the list with the glue between each of the elements.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=string_lists_join data-question_label="2.6.3">
-<div id=string_lists_join_question class="ac_question">
+<div id=string_lists_join_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="string_lists_join_editor" 
@@ -856,7 +859,7 @@ print("".join(word_list))
 <p>The list that you glue together (<code class="docutils literal notranslate"><span class="pre">word_list</span></code> in this example) is not modified.  Also,
 you can use empty glue or multi-character strings as glue.</p>
 <section id="id2">
-<h3><span class="section-number">2.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.6.1. </span>Check Your Understanding<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="2.6.1.1" data-multipleanswers="false"  id="list_methods_check_4"  style="visibility: hidden;">
@@ -884,14 +887,14 @@ you can use empty glue or multi-character strings as glue.</p>
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">2.7. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <section id="appending-to-a-list">
-<h3><span class="section-number">2.7.1. </span>Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.7.1. </span>Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this headline">¶</a></h3>
 <p>Create an empty list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>. Now append the following items (one item at a time): 76, 92.3, “hello”, True, 4, 76.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_practice_1 data-question_label="2.7.1.1">
-<div id=list_methods_practice_1_question class="ac_question">
+<div id=list_methods_practice_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_practice_1_editor" 
@@ -919,7 +922,7 @@ you can use empty glue or multi-character strings as glue.</p>
     </div>
     </section>
 <section id="list-methods-practice">
-<h3><span class="section-number">2.7.2. </span>List Methods Practice<a class="headerlink" href="#list-methods-practice" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.7.2. </span>List Methods Practice<a class="headerlink" href="#list-methods-practice" title="Permalink to this headline">¶</a></h3>
 <p>Given <code class="docutils literal notranslate"><span class="pre">my_list</span></code> below, write Python statements to do the following:</p>
 <ol class="loweralpha simple">
 <li><p>Append “apple” and 76 to the list.</p></li>
@@ -933,7 +936,7 @@ you can use empty glue or multi-character strings as glue.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_practice_2 data-question_label="2.7.2.1">
-<div id=list_methods_practice_2_question class="ac_question">
+<div id=list_methods_practice_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_practice_2_editor" 
@@ -968,12 +971,12 @@ my_list = [76, 92.3, 'hello', True, 4, 76]
     </div>
     </section>
 <section id="compliment-generator">
-<h3><span class="section-number">2.7.3. </span>Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.7.3. </span>Compliment Generator<a class="headerlink" href="#compliment-generator" title="Permalink to this headline">¶</a></h3>
 <p>Those Shakespearean insults sting a bit. Let’s cheer everyone up by creating a random compliment generator. Your compliments should be in the style of “You are a <code class="docutils literal notranslate"><span class="pre">great</span></code> <code class="docutils literal notranslate"><span class="pre">friend</span></code>!”. Store any number of words similar to <code class="docutils literal notranslate"><span class="pre">great</span></code> into a list called <code class="docutils literal notranslate"><span class="pre">first_word_list</span></code>, and any number of words similar to <code class="docutils literal notranslate"><span class="pre">friend</span></code> into a list called <code class="docutils literal notranslate"><span class="pre">second_word_list</span></code>. Then pick one word from each of the lists at random, and print out a random compliment!</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_practice_3 data-question_label="2.7.3.1">
-<div id=list_methods_practice_3_question class="ac_question">
+<div id=list_methods_practice_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_practice_3_editor" 
@@ -987,12 +990,12 @@ my_list = [76, 92.3, 'hello', True, 4, 76]
 </div>
 </section>
 <section id="averaging-random-integer-list">
-<h3><span class="section-number">2.7.4. </span>Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.7.4. </span>Averaging Random Integer List<a class="headerlink" href="#averaging-random-integer-list" title="Permalink to this headline">¶</a></h3>
 <p>Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). Write a function called average that will take the list as a parameter and return the average.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_practice_4 data-question_label="2.7.4.1">
-<div id=list_methods_practice_4_question class="ac_question">
+<div id=list_methods_practice_4_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_practice_4_editor" 
@@ -1006,7 +1009,7 @@ my_list = [76, 92.3, 'hello', True, 4, 76]
 </div>
 </section>
 <section id="writing-your-own-methods">
-<h3><span class="section-number">2.7.5. </span>Writing Your Own Methods<a class="headerlink" href="#writing-your-own-methods" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">2.7.5. </span>Writing Your Own Methods<a class="headerlink" href="#writing-your-own-methods" title="Permalink to this headline">¶</a></h3>
 <p>Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Write Python functions that work like the following:</p>
 <ol class="loweralpha simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">count</span></code></p></li>
@@ -1018,7 +1021,7 @@ my_list = [76, 92.3, 'hello', True, 4, 76]
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=list_methods_practice_5 data-question_label="2.7.5.1">
-<div id=list_methods_practice_5_question class="ac_question">
+<div id=list_methods_practice_5_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="list_methods_practice_5_editor" 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>5. Tracing Code and Cannonball Motion (Repeat Until) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -201,11 +198,11 @@
 <div class="container" id="main-content">
   
   <section id="tracing-code-and-cannonball-motion-repeat-until">
-<h1><span class="section-number">5. </span>Tracing Code and Cannonball Motion (Repeat Until)<a class="headerlink" href="#tracing-code-and-cannonball-motion-repeat-until" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">5. </span>Tracing Code and Cannonball Motion (Repeat Until)<a class="headerlink" href="#tracing-code-and-cannonball-motion-repeat-until" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Introduce the <strong>repeat until</strong> block by tracing code with simple variables and conditionals. Use the repeat until block to simulate the motion of a cannon ball (motion repeats until the cannon ball hits the ground).</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_scratch_repeat_until"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -225,14 +222,14 @@
             data-video-end="-1" ></div>
     </div>
     <section id="repeat-until">
-<h2><span class="section-number">5.1. </span>Repeat Until<a class="headerlink" href="#repeat-until" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Repeat Until<a class="headerlink" href="#repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes, we don’t necessarily know ahead of time how many times we should repeat a block in our code. Perhaps we are shooting a virtual cannon, and we want the cannonball to continue moving until the ball hits the ground. Depending on the values of the forces we are applying to the cannonball (gravity, wind, friction, etc), the number of times that we should repeat the code containing the cannonball motion will change. In these situations, we want to use the <strong>repeat until</strong> block.</p>
 <img alt="../_images/scratch_empty_repeat_until.png" src="../_images/scratch_empty_repeat_until.png" />
 <p>Any code that is put inside of the repeat until block will continue to happen until the condition is true. For example, we could make a character move forward 10 steps in whatever direction it is facing until it is touching the edge of the screen.</p>
 <img alt="../_images/scratch_repeat_until_touching_edge.png" src="../_images/scratch_repeat_until_touching_edge.png" />
 </section>
 <section id="tracing-repeat-until-with-variables">
-<h2><span class="section-number">5.2. </span>Tracing Repeat Until With Variables<a class="headerlink" href="#tracing-repeat-until-with-variables" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Tracing Repeat Until With Variables<a class="headerlink" href="#tracing-repeat-until-with-variables" title="Permalink to this headline">¶</a></h2>
 <p>One way to make sure you understand how a repeat until block works is to try to <em>trace</em> code that contains a repeat until block. Tracing code means to try to read the code <em>in the same order that the computer will read the code</em>, which might mean repeating some portions of the code.</p>
 <p>To practice this skill, consider the code shown below. If you decide to recreate the code below in Scratch, note that you will need to first click on the Data tab, then Make a Variable named <em>x</em>.</p>
 <img alt="../_images/scratch_tracing_repeat_until.png" src="../_images/scratch_tracing_repeat_until.png" />
@@ -242,6 +239,10 @@
 </div>
 <p>When we trace through the code shown above, it can be really helpful to use a t-chart to organize our thinking.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -270,6 +271,10 @@
 </table>
 <p><strong>Iterations</strong> means the number of times that a repeat block has occurred. Now we need to step through the code, one line at time to make sure we understand what will happen at each step. After 0 iterations (in other words, before the repeat block has executed), the value of <em>x</em> is set to 10, so we fill that in on our t-chart.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -298,6 +303,10 @@
 </table>
 <p>Now we need to think through the first iteration of the loop. Before entering the loop, we need to confirm that the loop will in fact occur. Since our value of <em>x</em> is currently 10, we <strong>do</strong> enter the loop, since we must repeat until <em>x</em> is greater than 20. Inside the loop, we encounter an if statement that we need to resolve. Since 10 is less than 18, we execute the code inside the if statement (and <em>not</em> the code inside the else portion). Changing <em>x</em> by 3 simply adds 3 to the previous value of <em>x</em>, so we are now at a value of 13. The last block inside the repeat until loop is simply a say block, which will not affect the value of <em>x</em>, so we can fill in the next line of our chart.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -326,6 +335,10 @@
 </table>
 <p>The arrow on the bottom portion of the repeat until block indicates that the flow of code will return to the beginning of the repeat until block. We now need to confirm once again that the loop will occur again. Since 13 is not greater than 20, we do need to repeat again. 13 is less than 18, so we execute the code block inside the if statement again, which changes x by 3 to make <em>x</em> 16. Note that we will never execute both the code in the if portion and the else portion – we can only ever execute one portion or the other, never both.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -354,6 +367,10 @@
 </table>
 <p>The same process happens again. Since 16 is less than 20, the loop continues. Because 16 is less than 18, we change <em>x</em> by 3 to get a new value of 19.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -382,6 +399,10 @@
 </table>
 <p>Since 19 is less than 20, we enter the loop again. However, when we examine the if statement, since 19 is <em>not</em> less than 18, we execute the code inside the else block. We therefore need to set <em>x</em> to <em>x</em> + 2. This is just another way to say that we will change <em>x</em> by 2, so our new value for <em>x</em> is 21. You can read the block as “set <em>x</em> to be the previous value of <em>x</em> plus 2”.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>iterations</p></th>
 <th class="head"><p>Value of x</p></th>
@@ -411,7 +432,7 @@
 <p>Once again, before entering the loop, we need to check to see if the repeat until condition has been met. Since 21 is greater than 20, the repeat until condition has been met, so we do <strong>not</strong> enter the loop again. If we had another block hooked on to the bottom of the repeat until block, it would now execute. Since we do not, the program has come to an end.</p>
 </section>
 <section id="class-activity-repeat-until">
-<h2><span class="section-number">5.3. </span>Class Activity: Repeat Until<a class="headerlink" href="#class-activity-repeat-until" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Class Activity: Repeat Until<a class="headerlink" href="#class-activity-repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Your teacher will give you a printed copy of the <a class="reference download internal" download="" href="../_downloads/07157e263cfebe01c841363d9a441784/scratch_repeat_until_practice.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Practice</span> <span class="pre">with</span> <span class="pre">Repeat</span> <span class="pre">Until</span> <span class="pre">Practice</span> <span class="pre">handout</span></code></a>.</p>
 <p>Now that you have seen how to trace the the code contained in a repeat until block, take a few minutes to try to fill in the practice sheet linked to above. After you have completed each question, you may double check your work by recreating the question in Scratch.</p>
 <div class="admonition note">
@@ -421,7 +442,7 @@
 </div>
 </section>
 <section id="cannonball-motion-using-repeat-until">
-<h2><span class="section-number">5.4. </span>Cannonball Motion Using Repeat Until<a class="headerlink" href="#cannonball-motion-using-repeat-until" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Cannonball Motion Using Repeat Until<a class="headerlink" href="#cannonball-motion-using-repeat-until" title="Permalink to this headline">¶</a></h2>
 <p>Let’s use the repeat until block to create a simulation of a cannonball being shot. First, we need to make a cannonball. To do this, click on the paintbrush beside New sprite (under the stage):</p>
 <img alt="../_images/scratch_paint_new_sprite.gif" src="../_images/scratch_paint_new_sprite.gif" />
 <p>The process of creating the cannonball sprite is shown in the short animation below. There are a few things you should be aware of:</p>
@@ -449,7 +470,7 @@
 </div>
 </section>
 <section id="check-your-understanding">
-<h2><span class="section-number">5.5. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
         <div class="runestone ">
         <div data-component="fillintheblank" data-question_label="5.5.1" id="scratch_repeat_until_check_1"  style="visibility: hidden;">
@@ -500,7 +521,7 @@
         </div>
             </section>
 <section id="practice-problem">
-<h2><span class="section-number">5.6. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Work on your second Scratch assignment, for any remaining time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>3. Functions Introduction &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -206,11 +203,11 @@
 <div class="container" id="main-content">
   
   <section id="functions-introduction">
-<h1><span class="section-number">3. </span>Functions Introduction<a class="headerlink" href="#functions-introduction" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">3. </span>Functions Introduction<a class="headerlink" href="#functions-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops to draw shapes elegantly. Introduce non-fruitful functions in Python. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_functions_intro"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -222,13 +219,13 @@
 
     </div>
     <section id="warmup-problem">
-<h2><span class="section-number">3.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Warmup Problem<a class="headerlink" href="#warmup-problem" title="Permalink to this headline">¶</a></h2>
 <img alt="../../_images/confusion-5.png" src="../../_images/confusion-5.png" />
 <p>Draw the shape above. After you have finished drawing your version, share your code with another student. Work together to see if you can come up with a more efficient way to draw this shape!</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_confusion_4_intro data-question_label="3.1.1">
-<div id=turtle_confusion_4_intro_question class="ac_question">
+<div id=turtle_confusion_4_intro_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="turtle_confusion_4_intro_editor" 
@@ -242,7 +239,7 @@ import turtle
 </div>
 </section>
 <section id="functions">
-<span id="index-0"></span><h2><span class="section-number">3.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">3.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>In Python, a <strong>function</strong> is a named sequence of statements that belong together.  Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem.</p>
 <p>The syntax for a <strong>function definition</strong> is the same as it was when we wrote functions in Reeborg:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span> <span class="n">parameters</span> <span class="p">):</span>
@@ -270,7 +267,7 @@ squares.  It would make sense if we did not have to duplicate all the steps each
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=functions_intro_1 data-question_label="3.2.1">
-<div id=functions_intro_1_question class="ac_question">
+<div id=functions_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="functions_intro_1_editor" 
@@ -331,7 +328,7 @@ back down before drawing the next square.  Make sure you can identify both calls
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=functions_intro_2 data-question_label="3.2.2">
-<div id=functions_intro_2_question class="ac_question">
+<div id=functions_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="functions_intro_2_editor" 
@@ -373,7 +370,7 @@ been defined, we can call it as many times as we like with whatever actual param
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=functions_intro_3 data-question_label="3.2.3">
-<div id=functions_intro_3_question class="ac_question">
+<div id=functions_intro_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="functions_intro_3_editor" 
@@ -421,7 +418,7 @@ parenthesis is a legal expression <em>referring</em> to the function; for exampl
 not <em>call</em> the associated functions.</p>
 </div>
 <section id="check-your-understanding">
-<h3><span class="section-number">3.2.1. </span>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">3.2.1. </span>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h3>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="3.2.1.1" data-multipleanswers="false"  id="functions_intro_understanding_1"  style="visibility: hidden;">
@@ -443,7 +440,7 @@ not <em>call</em> the associated functions.</p>
     <ul data-component="multiplechoice" data-question_label="3.2.1.2" data-multipleanswers="false"  id="functions_intro_understanding_2"  style="visibility: hidden;">
     <p>functions-intro6: What are the parameters of the following function?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">side_length</span><span class="p">)</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -466,7 +463,7 @@ not <em>call</em> the associated functions.</p>
     <ul data-component="multiplechoice" data-question_label="3.2.1.3" data-multipleanswers="false"  id="functions_intro_understanding_3"  style="visibility: hidden;">
     <p>functions-intro7: Considering the function below, which of the following statements correctly calls, or invokes, this function (i.e., causes it to run)?  Assume we already have defined a turtle named alex.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">my_turtle</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Make turtle my_turtle draw a square of with side side_length.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">side_length</span><span class="p">)</span>
         <span class="n">my_turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -501,15 +498,15 @@ not <em>call</em> the associated functions.</p>
     </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">3.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <section id="cross">
-<h3><span class="section-number">3.3.1. </span>Cross<a class="headerlink" href="#cross" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>Cross<a class="headerlink" href="#cross" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-5.png" src="../../_images/confusion-5.png" />
 <p>Convert the code you wrote at the start of today’s class into a function. You should be able to call something like <code class="docutils literal notranslate"><span class="pre">draw_cross(some_turtle,</span> <span class="pre">side_length)</span></code>.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cross_practice_problem_function data-question_label="3.3.1.1">
-<div id=cross_practice_problem_function_question class="ac_question">
+<div id=cross_practice_problem_function_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="cross_practice_problem_function_editor" 
@@ -523,13 +520,13 @@ import turtle
 </div>
 </section>
 <section id="hollow-c">
-<h3><span class="section-number">3.3.2. </span>Hollow C<a class="headerlink" href="#hollow-c" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">3.3.2. </span>Hollow C<a class="headerlink" href="#hollow-c" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-4.png" src="../../_images/confusion-4.png" />
 <p>Look back to the code you made when you drew a <em>hollow c</em> last class. Adapt your code by creating a function called <code class="docutils literal notranslate"><span class="pre">draw_c(a_turtle,</span> <span class="pre">longest_side_length,</span> <span class="pre">width_of_c)</span></code>. You should be able to draw a hollow c by calling the function with something like <code class="docutils literal notranslate"><span class="pre">draw_c(tess,</span> <span class="pre">150,</span> <span class="pre">25)</span></code>.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=hollow_c_practice_problem_function data-question_label="3.3.2.1">
-<div id=hollow_c_practice_problem_function_question class="ac_question">
+<div id=hollow_c_practice_problem_function_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="hollow_c_practice_problem_function_editor" 
@@ -544,7 +541,7 @@ import turtle
 </section>
 </section>
 <section id="turtle-graphics-assignment">
-<h2><span class="section-number">3.4. </span>Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Use the rest of this class time to keep working on your current Python assignment (possibly a turtle graphics drawing, with a focus on looping and conditionals).</p>
 </section>
 </section>

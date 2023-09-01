@@ -248,3 +248,32 @@ If you call ``popup_scrolled`` with a named argument of ``title = "something"``,
     sg.popup_scrolled(poem, title = "Robert Frost Poem")
 
 .. image:: images/scrolled-output2.png
+
+
+Creating More Complicated Layouts
+----------------------------------
+
+Creating full GUI interfaces goes beyond the scope of this reference, but if you are interested in going beyond the simple ``popup`` functions, you should know that PySimpleGUI creates layouts as a list of lists. Each list is one horizontal row of the window that will be created. 
+
+In the example below, there are a few ideas that won't be explicitly taught in CS20. Specifically, returning multiple values from the ``window.read()`` function is not shown in the textbook. The ``values`` variable uses the `dictionary data type <https://docs.python.org/3/tutorial/datastructures.html#dictionaries>`_, which is not shown throughout the textbook.
+
+
+.. sourcecode:: python
+    
+    import PySimpleGUI as sg
+
+    layout = [[sg.Text("Saskatchewan Flag")],
+              [sg.Image("skflag.png")],
+              [sg.Text("Which colour in the flag is your favorite?")],
+              [sg.InputText(key = "colour")],
+              [sg.OK(), sg.Cancel()]]
+
+    window = sg.Window("Flag", layout)
+
+    event, values = window.read()
+    window.close()
+
+    your_color = values["colour"]
+    sg.popup(f"{your_color} is a good choice!")
+
+.. image:: images/custom-gui.png

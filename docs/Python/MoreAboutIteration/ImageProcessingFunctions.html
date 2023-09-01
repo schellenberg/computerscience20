@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4. Functions and Image Processing &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -205,11 +202,11 @@
 <div class="container" id="main-content">
   
   <section id="functions-and-image-processing">
-<h1><span class="section-number">4. </span>Functions and Image Processing<a class="headerlink" href="#functions-and-image-processing" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">4. </span>Functions and Image Processing<a class="headerlink" href="#functions-and-image-processing" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use nested loops to practice simple image processing.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_image_processing_functions"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -221,12 +218,12 @@
 
     </div>
     <section id="image-conversion-with-functions">
-<h2><span class="section-number">4.1. </span>Image Conversion with Functions<a class="headerlink" href="#image-conversion-with-functions" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Image Conversion with Functions<a class="headerlink" href="#image-conversion-with-functions" title="Permalink to this headline">¶</a></h2>
 <p>In a previous lesson, we used code similar to the following, which increases the amount of green in an image:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=increase_color_amount_now_with_functions data-question_label="4.1.1">
-<div id=increase_color_amount_now_with_functions_question class="ac_question">
+<div id=increase_color_amount_now_with_functions_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="increase_color_amount_now_with_functions_editor" 
@@ -261,7 +258,7 @@ for row in range(img.get_height()):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=increase_green_function_another data-question_label="4.1.2">
-<div id=increase_green_function_another_question class="ac_question">
+<div id=increase_green_function_another_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="increase_green_function_another_editor" 
@@ -306,7 +303,7 @@ converted_img.draw(win)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=increase_green_function_2_another data-question_label="4.1.3">
-<div id=increase_green_function_2_another_question class="ac_question">
+<div id=increase_green_function_2_another_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="increase_green_function_2_another_editor" 
@@ -349,7 +346,7 @@ converted_img.draw(win)
 </div>
 </section>
 <section id="controlling-image-manipulation-with-micro-bit">
-<h2><span class="section-number">4.2. </span>Controlling Image Manipulation with Micro:bit<a class="headerlink" href="#controlling-image-manipulation-with-micro-bit" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Controlling Image Manipulation with Micro:bit<a class="headerlink" href="#controlling-image-manipulation-with-micro-bit" title="Permalink to this headline">¶</a></h2>
 <p>Now that we can organize our image manipulation code using functions, it makes it simple to call these image manipulation functions when a specific event occurs. For example, we might want to call the <code class="docutils literal notranslate"><span class="pre">increase_green</span></code> function when the A button on the Micro:bit is pressed. To make things more interesting, we will first get the accelerometer value on the x axis (to determine how much the Micro:bit is tilted to the left or right), and use the resulting value as the <code class="docutils literal notranslate"><span class="pre">amount_of_green_to_add</span></code> argument we pass to the <code class="docutils literal notranslate"><span class="pre">increase_green</span></code> function. Since the accelerometer value will be negative when the Micro:bit is tilted to the left, if we press the A button while tilting to the left, we will remove green from the image. If the Micro:bit is tilted to the right, the accelerometer value will be positive, so we will add green to the image.</p>
 <p>Rather than have the second button sit idle, we will execute a different image manipulation function when the B button is pressed. For this example, I chose to take the negative of the image when the B button is pressed.</p>
 <p>Finally, it would be nice to have a way to end the program when we are done playing with images. To accomplish this, I created a <code class="docutils literal notranslate"><span class="pre">still_playing</span></code> variable and set it to <code class="docutils literal notranslate"><span class="pre">True</span></code>. When you flip the Micro:bit over (so the LEDs are facing the ground), the z axis becomes positive, and we change the <code class="docutils literal notranslate"><span class="pre">still_playing</span></code> variable to be <code class="docutils literal notranslate"><span class="pre">False</span></code>. This causes the loop to exit, ending our program.</p>
@@ -417,7 +414,7 @@ converted_img.draw(win)
 </pre></div>
 </div>
 <section id="try-this">
-<h3><span class="section-number">4.2.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.2.1. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>implement a different image manipulation algorithm, and replace the negative function with your new function (in other words, your function should execute when the B button is pressed)</p></li>
 <li><p>save more than one image file into the folder containing your Python code, and switch which image is being manipulated based on when the Micro:bit is tilted very far up, or very far down (on the y-axis).</p></li>
@@ -425,19 +422,19 @@ converted_img.draw(win)
 </section>
 </section>
 <section id="practice-problems">
-<h2><span class="section-number">4.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>For the following problems, use one of these images:</p>
 <img src="../../_static/skflag.png" id="skflag.png">
 <h4 style="text-align: center;">skflag.png</h4><img src="../../_static/moon.jpg" id="moon.jpg">
 <h4 style="text-align: center;">moon.jpg</h4><img src="../../_static/sneakers.jpg" id="sneakers.jpg">
 <h4 style="text-align: center;">sneakers.jpg</h4><img src="../../_static/rooster.jpg" id="rooster.jpg">
 <h4 style="text-align: center;">rooster.jpg</h4><section id="red-remover-function">
-<h3><span class="section-number">4.3.1. </span>Red Remover Function<a class="headerlink" href="#red-remover-function" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.3.1. </span>Red Remover Function<a class="headerlink" href="#red-remover-function" title="Permalink to this headline">¶</a></h3>
 <p>Create a function called <code class="docutils literal notranslate"><span class="pre">red_remover(original_image)</span></code> that performs an image manipulation and returns the changed image. The function remove all of the red channel, but leave the green and blue amounts unchanged.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_red_remover_function data-question_label="4.3.1.1">
-<div id=practice_problem_red_remover_function_question class="ac_question">
+<div id=practice_problem_red_remover_function_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problem_red_remover_function_editor" 
@@ -462,12 +459,12 @@ converted_img.draw(win)
 </div>
 </section>
 <section id="your-choice">
-<h3><span class="section-number">4.3.2. </span>Your Choice<a class="headerlink" href="#your-choice" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.3.2. </span>Your Choice<a class="headerlink" href="#your-choice" title="Permalink to this headline">¶</a></h3>
 <p>Look back at the last few sections, and pick 2 image manipulation practice problems. Convert these into functions, then control them with the Micro:bit. Call one of these functions when the A button is pressed, and the other function when the B button is pressed.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_your_choice data-question_label="4.3.2.1">
-<div id=practice_problem_your_choice_question class="ac_question">
+<div id=practice_problem_your_choice_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problem_your_choice_editor" 

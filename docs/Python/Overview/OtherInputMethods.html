@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>6. Other Input Methods (PySimpleGUI) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -206,11 +203,11 @@
 <div class="container" id="main-content">
   
   <section id="other-input-methods-pysimplegui">
-<h1><span class="section-number">6. </span>Other Input Methods (PySimpleGUI)<a class="headerlink" href="#other-input-methods-pysimplegui" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">6. </span>Other Input Methods (PySimpleGUI)<a class="headerlink" href="#other-input-methods-pysimplegui" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Getting user input with a pop-up window using the PySimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_input_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -222,7 +219,7 @@
 
     </div>
     <section id="what-does-this-program-do">
-<h2><span class="section-number">6.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">6.1. </span>What Does This Program Do?<a class="headerlink" href="#what-does-this-program-do" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your teacher may choose to use the following examples as a class activity, by displaying the  examples, and having you take a guess as to what you think each will do before running the code.</p>
@@ -233,7 +230,7 @@
 <p>Try the following, entering in <code class="docutils literal notranslate"><span class="pre">17</span></code>. How about <code class="docutils literal notranslate"><span class="pre">14</span></code>? Can you fix it? <em>Hint: think data types!</em></p>
 </section>
 <section id="getting-user-input-with-pysimplegui">
-<span id="index-0"></span><h2><span class="section-number">6.2. </span>Getting User Input With PySimpleGUI<a class="headerlink" href="#getting-user-input-with-pysimplegui" title="Permalink to this heading">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">6.2. </span>Getting User Input With PySimpleGUI<a class="headerlink" href="#getting-user-input-with-pysimplegui" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
 <img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
 <p>In Reeborg, we would often import that code using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
@@ -249,7 +246,7 @@
 <img alt="../../_images/thonny_add_pysimplegui_module.png" src="../../_images/thonny_add_pysimplegui_module.png" />
 <p>Once the installation has completed, close the Manage Packages window.</p>
 <section id="get-string-from-user">
-<h3><span class="section-number">6.2.1. </span>Get String From User<a class="headerlink" href="#get-string-from-user" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Get String From User<a class="headerlink" href="#get-string-from-user" title="Permalink to this headline">¶</a></h3>
 <p>You will now be able to use the PySimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
 <span class="kn">import</span> <span class="nn">PySimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
@@ -264,7 +261,7 @@
 </div>
 </section>
 <section id="display-graphical-messages">
-<h3><span class="section-number">6.2.2. </span>Display Graphical Messages<a class="headerlink" href="#display-graphical-messages" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>Display Graphical Messages<a class="headerlink" href="#display-graphical-messages" title="Permalink to this headline">¶</a></h3>
 <p>If you would like to output the message to a graphical window (instead of the console), you can call the <code class="docutils literal notranslate"><span class="pre">show_message()</span></code> function, as shown below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
 <span class="kn">import</span> <span class="nn">PySimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
@@ -281,12 +278,12 @@
 </div>
 </section>
 <section id="other-methods">
-<h3><span class="section-number">6.2.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.2.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
 <p>There are many more methods you can use with PySimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the <a class="reference internal" href="../PySimpleGUI/reference.html#pysimplegui-reference"><span class="std std-ref">PySimpleGUI Reference</span></a> for a more comprehensive list of what is available.</p>
 </section>
 </section>
 <section id="mad-libs-practice-problem">
-<h2><span class="section-number">6.3. </span>Mad Libs Practice Problem<a class="headerlink" href="#mad-libs-practice-problem" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Mad Libs Practice Problem<a class="headerlink" href="#mad-libs-practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! <em>If you work in Thonny, you will be able to use easygui_qt in your program.</em></p>
 <p>To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.</p>
 <p>If you are not familiar with madlibs, you may want to investigate what they are by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might start with the classic Humpty Dumpty rhyme:</p>
@@ -314,7 +311,7 @@ Couldn&#39;t put Bree together again.
 <p>Both of your madlibs should take in at least 5 words from the user, but no more than 10. Feel free to use any old school rhyme, or something of your own creation. Though it can be difficult with user input, try to make sure your story makes sense.</p>
 <p>Remember to use a comment header at the top of your program!</p>
 <section id="extra-for-experts">
-<h3><span class="section-number">6.3.1. </span>Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>instead of having the user enter in all of the parts of speech, have the computer choose some of the words at random. You can do this in one of two ways:</p></li>
 <li><p>easier: create a list of possible words, and have Python choose one of these words <a class="reference external" href="http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python">at random</a>.</p></li>

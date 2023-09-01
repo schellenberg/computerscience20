@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4. Turtle Drawing Practice &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -203,11 +200,11 @@
 <div class="container" id="main-content">
   
   <section id="turtle-drawing-practice">
-<h1><span class="section-number">4. </span>Turtle Drawing Practice<a class="headerlink" href="#turtle-drawing-practice" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">4. </span>Turtle Drawing Practice<a class="headerlink" href="#turtle-drawing-practice" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops and functions to draw shapes elegantly. Continue working on a Python turtle graphics assignment, focused on repetition and conditionals.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_turtle_drawing_practice"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -219,15 +216,15 @@
 
     </div>
     <section id="practice-problems">
-<h2><span class="section-number">4.1. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <section id="inner-squares">
-<h3><span class="section-number">4.1.1. </span>Inner Squares<a class="headerlink" href="#inner-squares" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.1.1. </span>Inner Squares<a class="headerlink" href="#inner-squares" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-6.png" src="../../_images/confusion-6.png" />
 <p>Define a function similar to <code class="docutils literal notranslate"><span class="pre">draw_square(my_turtle,</span> <span class="pre">side_length)</span></code> and call it twice to draw the shape above. You may find it helpful define a new version of of this function, instead of reusing the one from yesterday. Perhaps you might not start in the same location as we did the last time we drew a square?</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problems_1 data-question_label="4.1.1.1">
-<div id=practice_problems_1_question class="ac_question">
+<div id=practice_problems_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problems_1_editor" 
@@ -246,13 +243,13 @@ import turtle
     </div>
     </section>
 <section id="square-logo">
-<h3><span class="section-number">4.1.2. </span>Square Logo<a class="headerlink" href="#square-logo" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.1.2. </span>Square Logo<a class="headerlink" href="#square-logo" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-7.png" src="../../_images/confusion-7.png" />
 <p>Draw the shape above. Depending on how you defined the function in the problem above, you may be able to easily use reuse your function.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problems_2 data-question_label="4.1.2.1">
-<div id=practice_problems_2_question class="ac_question">
+<div id=practice_problems_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problems_2_editor" 
@@ -266,13 +263,13 @@ import turtle
 </div>
 </section>
 <section id="overlapped-squares">
-<h3><span class="section-number">4.1.3. </span>Overlapped Squares<a class="headerlink" href="#overlapped-squares" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.1.3. </span>Overlapped Squares<a class="headerlink" href="#overlapped-squares" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-8.png" src="../../_images/confusion-8.png" />
 <p>Draw the shape above. Depending on how you defined your earlier function(s) in the problems aboves, you may be able to easily use reuse your function(s).</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problems_3 data-question_label="4.1.3.1">
-<div id=practice_problems_3_question class="ac_question">
+<div id=practice_problems_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problems_3_editor" 
@@ -286,13 +283,13 @@ import turtle
 </div>
 </section>
 <section id="bonus-if-you-are-done-before-others">
-<h3><span class="section-number">4.1.4. </span>Bonus - If You Are Done Before Others<a class="headerlink" href="#bonus-if-you-are-done-before-others" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">4.1.4. </span>Bonus - If You Are Done Before Others<a class="headerlink" href="#bonus-if-you-are-done-before-others" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/confusion-20.png" src="../../_images/confusion-20.png" />
 <p>Draw the shape above. Think carefully about how you might be able to draw this elegantly (efficiently and readably)! Creating an adapted version of one of your previous functions isn’t a bad idea…</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problems_4 data-question_label="4.1.4.1">
-<div id=practice_problems_4_question class="ac_question">
+<div id=practice_problems_4_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problems_4_editor" 
@@ -307,7 +304,7 @@ import turtle
 </section>
 </section>
 <section id="turtle-graphics-assignment">
-<h2><span class="section-number">4.2. </span>Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Turtle Graphics Assignment<a class="headerlink" href="#turtle-graphics-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Use the rest of this class time to keep working on your current Python assignment (possibly a turtle graphics drawing, with a focus on looping and conditionals).</p>
 </section>
 </section>

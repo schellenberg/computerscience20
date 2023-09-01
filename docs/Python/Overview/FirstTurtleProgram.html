@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>9. Our First Turtle Program &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'cs20sk';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -207,11 +204,11 @@
 <div class="container" id="main-content">
   
   <section id="our-first-turtle-program">
-<h1><span class="section-number">9. </span>Our First Turtle Program<a class="headerlink" href="#our-first-turtle-program" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1><span class="section-number">9. </span>Our First Turtle Program<a class="headerlink" href="#our-first-turtle-program" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Learn how to do basic drawing in Python using the turtle module.</p>
-</aside>
+</div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_first_turtle_day"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
     <ul class="simple">
@@ -237,7 +234,7 @@ turtle and a half drawn rectangle.  Press the run button to try it and see.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_intro_1 data-question_label="9.1">
-<div id=turtle_intro_1_question class="ac_question">
+<div id=turtle_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="turtle_intro_1_editor" 
@@ -259,7 +256,7 @@ alex.forward(75)            # complete the second side of a rectangle
 <p>Modify the program above by adding the commands necessary to have <em>alex</em> complete the rectangle.</p>
 </div>
 <section id="understanding-a-turtle-program">
-<h2><span class="section-number">9.1. </span>Understanding a Turtle Program<a class="headerlink" href="#understanding-a-turtle-program" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Understanding a Turtle Program<a class="headerlink" href="#understanding-a-turtle-program" title="Permalink to this headline">¶</a></h2>
 <p>Here are a couple of things you’ll need to understand about the turtle program we wrote above.</p>
 <p>The first line tells Python to load a <strong>module</strong> named <code class="docutils literal notranslate"><span class="pre">turtle</span></code>.  That module
 brings us two new types that we can use: the <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> type, and the
@@ -295,7 +292,7 @@ the methods invoked belong to and refer to the object <code class="docutils lite
     </ul>
     </div>
     <section id="mixed-up-programs">
-<h3><span class="section-number">9.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">9.1.1. </span>Mixed Up Programs<a class="headerlink" href="#mixed-up-programs" title="Permalink to this headline">¶</a></h3>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="turtle_intro_parsons_1" class="parsons" >
@@ -364,7 +361,7 @@ jamal.forward(75)
     </section>
 </section>
 <section id="turtle-methods">
-<h2><span class="section-number">9.2. </span>Turtle Methods<a class="headerlink" href="#turtle-methods" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Turtle Methods<a class="headerlink" href="#turtle-methods" title="Permalink to this headline">¶</a></h2>
 <p>An object can have various methods (things it can do), and it can also
 have <strong>attributes</strong> (sometimes called <em>properties</em>).  For example, each
 turtle has a <em>color</em> attribute.  The method invocation  <code class="docutils literal notranslate"><span class="pre">alex.color(&quot;red&quot;)</span></code>
@@ -378,7 +375,7 @@ lines that are different from the previous example.  Note also that we have deci
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=turtle_intro_2 data-question_label="9.2.1">
-<div id=turtle_intro_2_question class="ac_question">
+<div id=turtle_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="turtle_intro_2_editor" 
@@ -411,7 +408,7 @@ exit (stop execution of) the Python program.</p>
 screen until we click on it.</p>
 </section>
 <section id="check-your-understanding">
-<h2><span class="section-number">9.3. </span>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Check your understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="9.3.1" data-multipleanswers="false"  id="turtle_intro_check_2"  style="visibility: hidden;">
@@ -484,7 +481,7 @@ screen until we click on it.</p>
     </div>
     </section>
 <section id="more-mixed-up-programs">
-<h2><span class="section-number">9.4. </span>More Mixed Up Programs!<a class="headerlink" href="#more-mixed-up-programs" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">9.4. </span>More Mixed Up Programs!<a class="headerlink" href="#more-mixed-up-programs" title="Permalink to this headline">¶</a></h2>
 
         <div class="runestone parsons-container ">
         <div data-component="parsons" id="turtle_intro_parsons_4" class="parsons" >
@@ -542,7 +539,7 @@ jamal.forward(100)
         </div>
     </section>
 <section id="practice-problems">
-<h2><span class="section-number">9.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">¶</a></h2>
 <p>Try the following practice problems. You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish!</p>
 <p>You might find the Python Documentation for the turtle module to be helpful: <a class="reference external" href="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</a></p>
 <div class="admonition caution">
@@ -550,7 +547,7 @@ jamal.forward(100)
 <p>Be sure that you DO NOT save any file as <code class="docutils literal notranslate"><span class="pre">turtle.py</span></code>. If you do, when you call <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">turtle</span></code>, Python looks for a file called turtle.py, which means that it will import the turtle.py file you just saved. You will get an error when attempting to create a Screen() or Turtle() object, as these will not actually be defined.</p>
 </div>
 <section id="color-selection">
-<h3><span class="section-number">9.5.1. </span>Color Selection<a class="headerlink" href="#color-selection" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">9.5.1. </span>Color Selection<a class="headerlink" href="#color-selection" title="Permalink to this headline">¶</a></h3>
 <p>Modify the program given below so that before it creates the window, it prompts the user to enter the desired background color. It should store the user’s response in a variable, and modify the color of the window according to the user’s wishes. Do similar changes to allow the user to set the turtle bree’s color as well.</p>
 <p>(Hint: you can find a list of permitted color names at <a class="reference external" href="https://www.w3schools.com/colors/colors_names.asp">https://www.w3schools.com/colors/colors_names.asp</a> .  It includes some quite unusual ones, like “PeachPuff” and “HotPink”.)</p>
 <div class="admonition note">
@@ -565,7 +562,7 @@ jamal.forward(100)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_intro_1 data-question_label="9.5.1.1">
-<div id=practice_problem_turtle_intro_1_question class="ac_question">
+<div id=practice_problem_turtle_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problem_turtle_intro_1_editor" 
@@ -644,7 +641,7 @@ bree.forward(100)
     </div>
     </section>
 <section id="drawing-any-size-of-square">
-<h3><span class="section-number">9.5.2. </span>Drawing any Size of Square<a class="headerlink" href="#drawing-any-size-of-square" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">9.5.2. </span>Drawing any Size of Square<a class="headerlink" href="#drawing-any-size-of-square" title="Permalink to this headline">¶</a></h3>
 <p>Create a program that uses the turtle module to draw a square. The user should be able to set a number of options each time the code runs, so the program should ask the user for:</p>
 <ul class="simple">
 <li><p>the width of the turtles pen</p></li>
@@ -656,7 +653,7 @@ bree.forward(100)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=practice_problem_turtle_intro_2 data-question_label="9.5.2.1">
-<div id=practice_problem_turtle_intro_2_question class="ac_question">
+<div id=practice_problem_turtle_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="practice_problem_turtle_intro_2_editor" 
