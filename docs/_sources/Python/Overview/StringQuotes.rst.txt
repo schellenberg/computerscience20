@@ -77,7 +77,7 @@ What will the following programs output? Why?
 
 Can you fix the error in the following programs?
 
-.. activecode:: wdtpd_other_input_methods_1
+.. activecode:: wdtpd_string_quote_methods_1
     :caption: Find and fix the error in this program!
     :nocodelens:
 
@@ -86,7 +86,7 @@ Can you fix the error in the following programs?
     print(song_quote)
 
 
-.. activecode:: wdtpd_other_input_methods_2
+.. activecode:: wdtpd_string_quote_methods_2
     :caption: Find and fix the errors in this program!
     :nocodelens:
 
@@ -95,7 +95,7 @@ Can you fix the error in the following programs?
 
     print(part_one + part_two)
 
-.. activecode:: wdtpd_other_input_methods_3
+.. activecode:: wdtpd_string_quote_methods_3
     :caption: Find and fix the errors in this program!
     :nocodelens:
 
