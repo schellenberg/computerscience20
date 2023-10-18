@@ -227,7 +227,67 @@
 <p>What will the following programs output? Why?</p>
 <p>Remember that a single equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal notranslate"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 <p>Try the following code with <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">82</span></code>, and <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">142</span></code>.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=wdtpd_other_input_methods_1 data-question_label="6.1.1">
+<div id=wdtpd_other_input_methods_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="wdtpd_other_input_methods_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static
+     style="visibility: hidden;">
+x = 42
+if x < 10:
+    x = x + 10
+elif x < 40:
+    x = x + 5
+elif x < 70:
+    x = x - 10
+elif x < 100:
+    x = x - 5
+else:
+    print("big number!")
+
+print(x)
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=wdtpd_other_input_methods_2 data-question_label="6.1.2">
+<div id=wdtpd_other_input_methods_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="wdtpd_other_input_methods_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static
+     style="visibility: hidden;">
+age = input("How old are you?")
+print("Wow! Already " + age + " years old!")
+</textarea>
+</div>
+</div>
 <p>Try the following, entering in <code class="docutils literal notranslate"><span class="pre">17</span></code>. How about <code class="docutils literal notranslate"><span class="pre">14</span></code>? Can you fix it? <em>Hint: think data types!</em></p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=wdtpd_other_input_methods_3 data-question_label="6.1.3">
+<div id=wdtpd_other_input_methods_3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="wdtpd_other_input_methods_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+         data-caption='What will this program print?'  data-wasm=/_static
+     style="visibility: hidden;">
+age = input("How old are you?")
+if age > 15:
+    print("Wow! Already " + age + " years old!")
+</textarea>
+</div>
+</div>
 </section>
 <section id="getting-user-input-with-pysimplegui">
 <span id="index-0"></span><h2><span class="section-number">6.2. </span>Getting User Input With PySimpleGUI<a class="headerlink" href="#getting-user-input-with-pysimplegui" title="Permalink to this headline">¶</a></h2>
