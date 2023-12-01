@@ -219,6 +219,7 @@ Career Exploration
    :maxdepth: 1
 
    CareerExploration/Research.rst
+   CareerExploration/Videos.rst
 
 
 Appendices
