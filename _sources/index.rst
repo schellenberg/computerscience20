@@ -228,7 +228,7 @@ Appendices
 .. toctree::
    :maxdepth: 1
 
-   Python/PySimpleGUI/reference.rst
+   Python/FreeSimpleGUI/reference.rst
    Python/TurtleConfusion/Challenges.rst
    Python/Microbit/QuickStartExamples.rst
    Python/EasyGUI/Reference.rst

@@ -3,12 +3,12 @@
    :start: 1
 
 
-Other Input Methods (PySimpleGUI)
-==================================
+Other Input Methods (FreeSimpleGUI)
+====================================
 
 .. topic:: Quick Overview of Day
 
-    Getting user input with a pop-up window using the PySimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.
+    Getting user input with a pop-up window using the FreeSimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.
 
 
 .. reveal:: curriculum_addressed_input_methods
@@ -71,10 +71,10 @@ Try the following, entering in ``17``. How about ``14``? Can you fix it? *Hint: 
         print("Wow! Already " + age + " years old!")
 
 
-.. index:: PySimpleGUI
+.. index:: FreeSimpleGUI
 
-Getting User Input With PySimpleGUI
-------------------------------------
+Getting User Input With FreeSimpleGUI
+--------------------------------------
 
 One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the **library** tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:
 
@@ -90,17 +90,17 @@ Another method of importing the library allows us give the module a nickname tha
 
 .. image:: images/reeborg_import_as.png
 
-When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``PySimpleGUI``. In Thonny, open *Tools → Manage packages...*. 
+When using Python outside Reeborg, if you'd like to get user input through a graphical pop-up box instead of just through the console, we can just install a module ``FreeSimpleGUI``. In Thonny, open *Tools → Manage packages...*. 
 
 .. image:: images/thonny_manage_packages_menu_item.png
 
-Now type in ``PySimpleGUI`` into the Search box (be sure to spell it correctly). Click the package PySimpleGUI from the list of modules.
+Now type in ``FreeSimpleGUI`` into the Search box (be sure to spell it correctly). Click the package FreeSimpleGUI from the list of modules.
 
-.. image:: images/thonny_search_for_pysimplegui_module.png
+.. image:: images/thonny_search_for_freesimplegui_module.png
 
 Now click the Install button.
 
-.. image:: images/thonny_add_pysimplegui_module.png
+.. image:: images/thonny_add_freesimplegui_module.png
 
 Once the installation has completed, close the Manage Packages window.
 
@@ -108,14 +108,14 @@ Once the installation has completed, close the Manage Packages window.
 Get String From User
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will now be able to use the PySimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console. 
+You will now be able to use the FreeSimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console. 
 
 .. sourcecode:: python
     
     # import the module to allow GUI interaction
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
-    # think of this as "look inside PySimpleGUI, and run the popup_get_text function
+    # think of this as "look inside FreeSimpleGUI, and run the popup_get_text function
     first_name = sg.popup_get_text("Please enter your first name")
     last_name = sg.popup_get_text("Please enter your last name")
 
@@ -131,9 +131,9 @@ If you would like to output the message to a graphical window (instead of the co
 .. sourcecode:: python
     
     # import the module to allow GUI interaction
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
-    # think of this as "look inside PySimpleGUI, and run the popup_get_text function
+    # think of this as "look inside FreeSimpleGUI, and run the popup_get_text function
     first_name = sg.popup_get_text("Please enter your first name")
     last_name = sg.popup_get_text("Please enter your last name")
 
@@ -146,7 +146,7 @@ If you would like to output the message to a graphical window (instead of the co
 Other Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are many more methods you can use with PySimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the :ref:`pysimplegui_reference` for a more comprehensive list of what is available. 
+There are many more methods you can use with FreeSimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the :ref:`freesimplegui_reference` for a more comprehensive list of what is available. 
 
 
 Mad Libs Practice Problem
@@ -154,7 +154,7 @@ Mad Libs Practice Problem
 
 .. highlight:: none
 
-You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use PySimpleGUI in your program.*
+You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! *If you work in Thonny, you will be able to use FreeSimpleGUI in your program.*
 
 To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.
 

@@ -1,20 +1,20 @@
 .. qnum::
-   :prefix: pysimplegui-reference
+   :prefix: freesimplegui-reference
    :start: 1
 
 
-.. _pysimplegui_reference:
+.. _freesimplegui_reference:
 
-PySimpleGUI Reference
+FreeSimpleGUI Reference
 ======================
 
-PySimpleGUI is a full fledged way to create GUIs (Graphical User Interfaces) for your Python programs. The following reference covers a very small subset of the functions that PySimpleGUI offers, so you may want to read the `official docs of the  project <https://www.pysimplegui.org/en/latest/>`_ if you would like to explore more usage options. I have chosen to use just a few of the features of PySimpleGUI, particularly those that are more accessible to a student at the CS20 level. Most of what I explain below are called `popups <https://www.pysimplegui.org/en/latest/#high-level-api-calls-popups>`_ in PySimpleGUI parlance, which are one time use windows to collect or display information. If you do explore/teach more of the PySimpleGUI module with students, the ideas that you'll want to talk about will include returning multiple values from functions, two dimensional lists, try/except structures, and possibly dictionaries.
+FreeSimpleGUI is a full fledged way to create GUIs (Graphical User Interfaces) for your Python programs. The following reference covers a very small subset of the functions that FreeSimpleGUI offers, so you may want to read the `official docs of the  project <http://www.freesimplegui.org/>`_ if you would like to explore more usage options. I have chosen to use just a few of the features of FreeSimpleGUI, particularly those that are more accessible to a student at the CS20 level. Most of what I explain below are called popups in FreeSimpleGUI parlance, which are one time use windows to collect or display information. If you do explore/teach more of the FreeSimpleGUI module with students, the ideas that you'll want to talk about will include returning multiple values from functions, two dimensional lists, try/except structures, and possibly dictionaries.
 
 
 Installation
 -------------
 
-In Thonny, open Tools → Manage Packages and type in ``PySimpleGUI`` into the search bar. Click on the underlined ``PySimpleGUI`` module in the list of results, then click Install. 
+In Thonny, open Tools → Manage Packages and type in ``FreeSimpleGUI`` into the search bar. Click on the underlined ``FreeSimpleGUI`` module in the list of results, then click Install. 
 
 
 Showing Messages
@@ -24,7 +24,7 @@ If you call ``popup`` with a single argument, that argument should be a string c
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     sg.popup("Enter your message as a string here, or pass in a variable containing a string.")
 
 .. image:: images/showing-messages1.png
@@ -39,7 +39,7 @@ To use these additional arguments, you need to name them when calling the functi
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     sg.popup("Put your important message here.", title = "Some Title")
 
 .. image:: images/showing-messages2.png
@@ -52,7 +52,7 @@ If you would like to show an image in a popup dialogue box, you use a named argu
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     sg.popup(image = "skflag.png")
 
 .. image:: images/showing-messages3.png
@@ -65,7 +65,7 @@ To create a pop up window that prompts the user to enter a string, use the ``pop
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     answer = sg.popup_get_text("What is your name?")
 
 .. image:: images/getting-strings1.png
@@ -76,7 +76,7 @@ If you call ``popup_get_text`` with a named argument of ``title = "something"``,
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     answer = sg.popup_get_text("What is your name?", title = "Name")
 
 .. image:: images/getting-strings2.png
@@ -85,7 +85,7 @@ If you call ``popup_get_text`` with a named argument of ``default_text = "someth
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     answer = sg.popup_get_text("What is your name?", title = "Name", default_text = "John Doe")
 
 .. image:: images/getting-strings3.png
@@ -94,11 +94,11 @@ If you call ``popup_get_text`` with a named argument of ``default_text = "someth
 Getting Selection from a List
 --------------------------------------
 
-There is not a built-in popup function to create a window that prompts the user to select an option from a list. To get around this limitation, you can simply copy-paste the following ``popup_get_choice`` helper function to the top of your script, and use it to allow users to choose from a list of options. This function will return a string containing the user's choice. If the user presses *Cancel*, or closes the window, this function will return ``None``. If you would like to alter this function to suit your needs, you will want to look up the ``Listbox`` element in the PySimpleGUI reference.
+There is not a built-in popup function to create a window that prompts the user to select an option from a list. To get around this limitation, you can simply copy-paste the following ``popup_get_choice`` helper function to the top of your script, and use it to allow users to choose from a list of options. This function will return a string containing the user's choice. If the user presses *Cancel*, or closes the window, this function will return ``None``. If you would like to alter this function to suit your needs, you will want to look up the ``Listbox`` element in the FreeSimpleGUI reference.
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
     def popup_get_choice(options, title = "Make a Choice"):
         '''Use this function to allow users to select an option from a list.
@@ -129,7 +129,7 @@ To create a pop up window that prompts the user to answer either Yes or No, use 
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     reply = sg.popup_yes_no("Do you want to fight the monster?")
 
 .. image:: images/getting-yes-no1.png
@@ -141,7 +141,7 @@ If you call ``popup_yes_no`` with a named argument of ``title = "something"``, t
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     reply = sg.popup_yes_no("Do you want to fight the monster?", title = "Fight?")
 
 .. image:: images/getting-yes-no2.png
@@ -154,7 +154,7 @@ To create a pop up window that prompts the user to select a file from their comp
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     selected_image = sg.popup_get_file("Select image file:")
 
 .. image:: images/getting-file-name1.png
@@ -166,7 +166,7 @@ If you call ``popup_get_file`` with a named argument of ``title = "something"``,
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
     selected_image = sg.popup_get_file("Select image file:", title = "Image")
 
 .. image:: images/getting-file-name2.png
@@ -181,7 +181,7 @@ The easiest way to create a multiline string is to use triple quoted strings, as
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
     poem = '''Two roads diverged in a yellow wood,
     And sorry I could not travel both
@@ -219,7 +219,7 @@ If you call ``popup_scrolled`` with a named argument of ``title = "something"``,
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
     poem = '''Two roads diverged in a yellow wood,
     And sorry I could not travel both
@@ -253,14 +253,14 @@ If you call ``popup_scrolled`` with a named argument of ``title = "something"``,
 Creating More Complicated Layouts
 ----------------------------------
 
-Creating full GUI interfaces goes beyond the scope of this reference, but if you are interested in going beyond the simple ``popup`` functions, you should know that PySimpleGUI creates layouts as a list of lists. Each list is one horizontal row of the window that will be created. 
+Creating full GUI interfaces goes beyond the scope of this reference, but if you are interested in going beyond the simple ``popup`` functions, you should know that FreeSimpleGUI creates layouts as a list of lists. Each list is one horizontal row of the window that will be created. 
 
 In the example below, there are a few ideas that won't be explicitly taught in CS20. Specifically, returning multiple values from the ``window.read()`` function is not shown in the textbook. The ``values`` variable uses the `dictionary data type <https://docs.python.org/3/tutorial/datastructures.html#dictionaries>`_, which is not shown throughout the textbook.
 
 
 .. sourcecode:: python
     
-    import PySimpleGUI as sg
+    import FreeSimpleGUI as sg
 
     layout = [[sg.Text("Saskatchewan Flag")],
               [sg.Image("skflag.png")],
