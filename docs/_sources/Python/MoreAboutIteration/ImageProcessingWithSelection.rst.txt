@@ -437,7 +437,7 @@ Write a program that mirrors an image from left to right around a vertical line 
 .. reveal:: mirror_horizontal_hint3
     :showtitle: Hint 3
 
-    Consider a pixel on the right side of the width/2 line of symmetry. You need to determine how far away from the line of symmetry the pixel is, then get the pixel that is the same distance away from the line of symmetry (but on the left side).
+    Consider a pixel on the right side of the width/2 line of symmetry. You need to determine how far away from the line of symmetry the pixel is, then get the pixel that is the same distance away from the line of symmetry (but on the left side). Remember, you need to *get* the pixel on the left side, but *set* the pixel on the right side.
 
     .. image:: images/mirror-horizontal-hint3.png
 

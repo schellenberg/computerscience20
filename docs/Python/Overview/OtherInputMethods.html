@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Other Input Methods (PySimpleGUI) &#8212; Computer Science 20 Saskatchewan</title>
+    <title>6. Other Input Methods (FreeSimpleGUI) &#8212; Computer Science 20 Saskatchewan</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
@@ -144,9 +144,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">6. Other Input Methods (PySimpleGUI)</a><ul>
+<li><a class="reference internal" href="#">6. Other Input Methods (FreeSimpleGUI)</a><ul>
 <li><a class="reference internal" href="#what-does-this-program-do">6.1. What Does This Program Do?</a></li>
-<li><a class="reference internal" href="#getting-user-input-with-pysimplegui">6.2. Getting User Input With PySimpleGUI</a><ul>
+<li><a class="reference internal" href="#getting-user-input-with-freesimplegui">6.2. Getting User Input With FreeSimpleGUI</a><ul>
 <li><a class="reference internal" href="#get-string-from-user">6.2.1. Get String From User</a></li>
 <li><a class="reference internal" href="#display-graphical-messages">6.2.2. Display Graphical Messages</a></li>
 <li><a class="reference internal" href="#other-methods">6.2.3. Other Methods</a></li>
@@ -202,11 +202,11 @@
 
 <div class="container" id="main-content">
   
-  <section id="other-input-methods-pysimplegui">
-<h1><span class="section-number">6. </span>Other Input Methods (PySimpleGUI)<a class="headerlink" href="#other-input-methods-pysimplegui" title="Permalink to this headline">¶</a></h1>
+  <section id="other-input-methods-freesimplegui">
+<h1><span class="section-number">6. </span>Other Input Methods (FreeSimpleGUI)<a class="headerlink" href="#other-input-methods-freesimplegui" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
-<p>Getting user input with a pop-up window using the PySimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
+<p>Getting user input with a pop-up window using the FreeSimpleGUI module. Work on a Python assignment, focused on input/output of strings, and conditionals.</p>
 </div>
 
     <div data-component="reveal" class="runestone " id="curriculum_addressed_input_methods"   data-showtitle="Curriculum Outcomes Addressed In This Section" data-hidetitle="Hide"  style="visibility: hidden;">
@@ -289,8 +289,8 @@ if age > 15:
 </div>
 </div>
 </section>
-<section id="getting-user-input-with-pysimplegui">
-<span id="index-0"></span><h2><span class="section-number">6.2. </span>Getting User Input With PySimpleGUI<a class="headerlink" href="#getting-user-input-with-pysimplegui" title="Permalink to this headline">¶</a></h2>
+<section id="getting-user-input-with-freesimplegui">
+<span id="index-0"></span><h2><span class="section-number">6.2. </span>Getting User Input With FreeSimpleGUI<a class="headerlink" href="#getting-user-input-with-freesimplegui" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Thonny is how easy it is to add additional modules to the standard Python installation. You can think of a module as being similar to the <strong>library</strong> tab that we used in Reeborg. It gives us the ability to use extra functionality that another programmer has created. When we were programming Reeborg, we would often put functions into the library tab, like this:</p>
 <img alt="../../_images/reeborg_library.png" src="../../_images/reeborg_library.png" />
 <p>In Reeborg, we would often import that code using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, so that we could simply call the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function in the same way that we could call <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code>. However, it was also possible to import the library as follows:</p>
@@ -298,20 +298,20 @@ if age > 15:
 <p>You can think of this code as saying “Look into the <code class="docutils literal notranslate"><span class="pre">library</span></code>, and find something called <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>”. For many Python modules, this is equivalent to saying, “Look into the library.py file, and find a function called turn_right()”.</p>
 <p>Another method of importing the library allows us give the module a nickname that is faster to type. Consider the following:</p>
 <img alt="../../_images/reeborg_import_as.png" src="../../_images/reeborg_import_as.png" />
-<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal notranslate"><span class="pre">PySimpleGUI</span></code>. In Thonny, open <em>Tools → Manage packages…</em>.</p>
+<p>When using Python outside Reeborg, if you’d like to get user input through a graphical pop-up box instead of just through the console, we can just install a module <code class="docutils literal notranslate"><span class="pre">FreeSimpleGUI</span></code>. In Thonny, open <em>Tools → Manage packages…</em>.</p>
 <img alt="../../_images/thonny_manage_packages_menu_item.png" src="../../_images/thonny_manage_packages_menu_item.png" />
-<p>Now type in <code class="docutils literal notranslate"><span class="pre">PySimpleGUI</span></code> into the Search box (be sure to spell it correctly). Click the package PySimpleGUI from the list of modules.</p>
-<img alt="../../_images/thonny_search_for_pysimplegui_module.png" src="../../_images/thonny_search_for_pysimplegui_module.png" />
+<p>Now type in <code class="docutils literal notranslate"><span class="pre">FreeSimpleGUI</span></code> into the Search box (be sure to spell it correctly). Click the package FreeSimpleGUI from the list of modules.</p>
+<img alt="../../_images/thonny_search_for_freesimplegui_module.png" src="../../_images/thonny_search_for_freesimplegui_module.png" />
 <p>Now click the Install button.</p>
-<img alt="../../_images/thonny_add_pysimplegui_module.png" src="../../_images/thonny_add_pysimplegui_module.png" />
+<img alt="../../_images/thonny_add_freesimplegui_module.png" src="../../_images/thonny_add_freesimplegui_module.png" />
 <p>Once the installation has completed, close the Manage Packages window.</p>
 <section id="get-string-from-user">
 <h3><span class="section-number">6.2.1. </span>Get String From User<a class="headerlink" href="#get-string-from-user" title="Permalink to this headline">¶</a></h3>
-<p>You will now be able to use the PySimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
+<p>You will now be able to use the FreeSimpleGUI module in the same way you can use any other module. Here is a simple program that will use pop-up boxes to get the first and last names of the user, then print out the result to the console.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">PySimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
+<span class="kn">import</span> <span class="nn">FreeSimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
 
-<span class="c1"># think of this as &quot;look inside PySimpleGUI, and run the popup_get_text function</span>
+<span class="c1"># think of this as &quot;look inside FreeSimpleGUI, and run the popup_get_text function</span>
 <span class="n">first_name</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">popup_get_text</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">popup_get_text</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
 
@@ -324,9 +324,9 @@ if age > 15:
 <h3><span class="section-number">6.2.2. </span>Display Graphical Messages<a class="headerlink" href="#display-graphical-messages" title="Permalink to this headline">¶</a></h3>
 <p>If you would like to output the message to a graphical window (instead of the console), you can call the <code class="docutils literal notranslate"><span class="pre">show_message()</span></code> function, as shown below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the module to allow GUI interaction</span>
-<span class="kn">import</span> <span class="nn">PySimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
+<span class="kn">import</span> <span class="nn">FreeSimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>
 
-<span class="c1"># think of this as &quot;look inside PySimpleGUI, and run the popup_get_text function</span>
+<span class="c1"># think of this as &quot;look inside FreeSimpleGUI, and run the popup_get_text function</span>
 <span class="n">first_name</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">popup_get_text</span><span class="p">(</span><span class="s2">&quot;Please enter your first name&quot;</span><span class="p">)</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">popup_get_text</span><span class="p">(</span><span class="s2">&quot;Please enter your last name&quot;</span><span class="p">)</span>
 
@@ -339,12 +339,12 @@ if age > 15:
 </section>
 <section id="other-methods">
 <h3><span class="section-number">6.2.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
-<p>There are many more methods you can use with PySimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the <a class="reference internal" href="../PySimpleGUI/reference.html#pysimplegui-reference"><span class="std std-ref">PySimpleGUI Reference</span></a> for a more comprehensive list of what is available.</p>
+<p>There are many more methods you can use with FreeSimpleGUI, including designing full GUI applications. You may want to look in the appendices of this textbook for the <a class="reference internal" href="../FreeSimpleGUI/reference.html#freesimplegui-reference"><span class="std std-ref">FreeSimpleGUI Reference</span></a> for a more comprehensive list of what is available.</p>
 </section>
 </section>
 <section id="mad-libs-practice-problem">
 <h2><span class="section-number">6.3. </span>Mad Libs Practice Problem<a class="headerlink" href="#mad-libs-practice-problem" title="Permalink to this headline">¶</a></h2>
-<p>You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! <em>If you work in Thonny, you will be able to use PySimpleGUI in your program.</em></p>
+<p>You can either work directly in the textbook, or using Thonny. Either way, be sure to save your solution into your Computer Science 20 folder when you finish for the day! <em>If you work in Thonny, you will be able to use FreeSimpleGUI in your program.</em></p>
 <p>To practice input/output in Python, you will make two Mad Libs. At the start of the program, you should ask the user which MadLib they want. Once the user has selected a MadLib, your program should take in input from the user, then use that input when outputting a story or poem.</p>
 <p>If you are not familiar with madlibs, you may want to investigate what they are by searching the web for a “madlibs website”. In essence, you want to take a familiar story and make it funny by randomly placing your users words into the story. For example, you might start with the classic Humpty Dumpty rhyme:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Humpty Dumpty sat on a wall,

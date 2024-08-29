@@ -22,7 +22,7 @@ Our First Turtle Program
 .. index:: turtle
 
 There are many *modules* in Python that provide very powerful features that we
-can use in our own programs.  Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations. We have already used one module, called ``PySimpleGUI``, which allowed us to use pop-up windows when asking for user input. Today, we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures. *The turtle module is very similar to the Pen functionality that we explored using Scratch!* Note that the ``turtle`` module is part of the standard Python installation, so you do not need to install it before using it.
+can use in our own programs.  Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations. We have already used one module, called ``FreeSimpleGUI``, which allowed us to use pop-up windows when asking for user input. Today, we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures. *The turtle module is very similar to the Pen functionality that we explored using Scratch!* Note that the ``turtle`` module is part of the standard Python installation, so you do not need to install it before using it.
 
 Turtle graphics, as it is known, is based on a very simple
 metaphor. Imagine that you have a turtle that understands English.  You can
@@ -345,7 +345,7 @@ Modify the program given below so that before it creates the window, it prompts 
 (Hint: you can find a list of permitted color names at `https://www.w3schools.com/colors/colors_names.asp <https://www.w3schools.com/colors/colors_names.asp>`_ .  It includes some quite unusual ones, like "PeachPuff" and "HotPink".)
 
 .. note:: 
-    If you are running your code in Thonny, the order of your instructions matters a lot, since a window will open up in front of the main Thonny window (whereas in the browser, the window is just a canvas on the webpage). You might want to ask the user questions *before* creating a Screen() to draw on. You can use ``PySimpleGUI`` to ask the questions with pop-up windows, or there is a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module that will cause a pop-up window to appear. You need to use the name of your turtle.Screen() instance when calling the ``textinput`` function. For example::
+    If you are running your code in Thonny, the order of your instructions matters a lot, since a window will open up in front of the main Thonny window (whereas in the browser, the window is just a canvas on the webpage). You might want to ask the user questions *before* creating a Screen() to draw on. You can use ``FreeSimpleGUI`` to ask the questions with pop-up windows, or there is a ``screen.textinput("Window name", "Question to ask")`` function built into the turtle module that will cause a pop-up window to appear. You need to use the name of your turtle.Screen() instance when calling the ``textinput`` function. For example::
       
       canvas = turtle.Screen()
       question = canvas.textinput("Window name", "Question to ask")
