@@ -5,7 +5,7 @@ An open textbook intended to cover the requirements of the Saskatchewan Computer
 If you spot any errors in the book, or would like to contribute changes that you have made to the book, you have a few options:
 - create an issue through GitHub Issues (click the issues tab above, then create a new issue).
 - if you are familiar with the GitHub workflow, you can fork the project, then create a pull request of your changes back to this repository.
-- get in touch with me (schellenberg@gmail.com), and let me know what changes need to be made.
+- get in touch with me (schellenbergd@spsd.sk.ca), and let me know what changes need to be made.
 
 ## Building the book yourself
 If you want to create your own version of the book, you are welcome to do so! The book is released under the Creative Commons Attribution Share-Alike 4.0 International License, so you are welcome to change it as you see fit and create your own version of it. To do this, simply fork/clone this repository, then follow the [build-instructions.md](notes-to-self/build-instructions.md) file (in the notes-to-self folder) to get going. In short, it will involve a few simple commands (you'll need Python installed on your system):
