@@ -21,7 +21,7 @@ Variables, Data Types, and User Input
 What Does This Program Do?
 ---------------------------
 
-Remember the we learned four primitive data types in our overview of Python. They are:
+Remember the four primitive data types we learned in our overview of Python. They are:
 
 - ``int``
 - ``float``
