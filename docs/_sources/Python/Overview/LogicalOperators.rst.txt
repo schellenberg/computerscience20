@@ -118,6 +118,89 @@ Here is an animation for the above expression:
    {{True and False}}{{False}}
 
 
+Generic Truth Tables
+--------------------
+
+One useful way to think about logical expressions is to use truth tables.  A truth table is a table that shows all possible values of a logical expression.  Consider the following truth table for the ``and`` operator:
+
+=======  =======  =======
+p        q        p and q
+=======  =======  =======
+True     True     True
+True     False    False
+False    True     False
+False    False    False
+=======  =======  =======
+
+
+The truth table for the ``or`` operator is as follows:
+
+=======  =======  =======
+p        q        p or q
+=======  =======  =======
+True     True     True
+True     False    True
+False    True     True
+False    False    False
+=======  =======  =======
+
+
+The truth table for the ``not`` operator is as follows:
+
+=======  =======
+p        not p
+=======  =======
+True     False
+False    True
+=======  =======
+
+For the ``not`` operator, there is only one input, so the table is simpler.  The ``not`` operator simply negates/flips the input.
+
+
+
+Specific Truth Table Example
+----------------------------
+
+This might be easier to understand if we pick a specific example.  Let's say that ``p`` is ``it is raining`` and ``q`` is ``it is cold``.  The truth table would then look like this:
+
+========  =======  =================
+raining   cold     raining and cold
+========  =======  =================
+True      True     True
+True      False    False
+False     True     False
+False     False    False
+========  =======  =================
+
+The truth table for the ``or`` operator is as follows:
+
+=======  =======  =================
+raining  cold     raining or cold
+=======  =======  =================
+True     True     True
+True     False    True
+False    True     True
+False    False    False
+=======  =======  =================
+
+
+If we combine all of these ideas into a single example, we can see how the truth tables work.  Consider the following expression:
+
+``not raining and cold or raining``
+
+The truth table for this expression would be as follows:
+
+========  ======  ============   =====================   ================================
+raining   cold    not raining    not raining and cold    not raining and cold or raining
+========  ======  ============   =====================   ================================
+True      True    False          False                   True
+True      False   False          False                   True
+False     True    True           True                    True
+False     False   True           False                   False
+========  ======  ============   =====================   ================================
+
+Using a truth table is a useful tool for debugging complex logical expressions.  If you are ever unsure about how a complex logical expression will evaluate, you can always write out a truth table to help you understand it.
+
 
 Practice Problems
 ------------------
