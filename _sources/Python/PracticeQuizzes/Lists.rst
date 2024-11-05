@@ -23,7 +23,7 @@ Question 1
     - :test: Great!
       :"test": Not quite. Quotes don't appear when you print a string.
       :'test': Not quite. Quotes don't appear when you print a string.
-      :.*: Try again!
+      :.*: Try again! Remember, the index 2 corresponds to the third element in the list, since the first element has an index value of 0.
 
 
 Question 2
@@ -51,7 +51,7 @@ Question 3
         print(stuff[2][0])
 
     - :cat: Great!
-      :.*: Try again!
+      :.*: Try again! Remember, stuff[2] is a list itself, and you are accessing its first element.
 
 
 Question 4
@@ -65,7 +65,7 @@ Question 4
         print(stuff[2][0][2])
 
     - :t: Great!
-      :.*: Try again!
+      :.*: Try again! Remember, stuff[2][0] is a string, and you are accessing its third character.
 
 
 Question 5
@@ -79,7 +79,7 @@ Question 5
         print(len(stuff))
 
     - :7: Great!
-      :.*: Try again!
+      :.*: Try again! Count the number of elements in the list.
 
 
 Question 6
@@ -117,7 +117,7 @@ Question 7
         print(f)
 
     - :1.3: Great!
-      :.*: Try again!
+      :.*: Try again! Remember, pop() removes the last element of the list and returns it.
 
 
 Question 8
@@ -138,5 +138,5 @@ Question 8
 
 
     - :12: Great!
-      :.*: Try again!
+      :.*: Try again! Trace the loop carefully and see how 'thing' is updated in each iteration.
 

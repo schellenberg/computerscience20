@@ -24,9 +24,9 @@ Question 1
     :answer_c: A triangle.
     :answer_d: A square.
     :correct: b
-    :feedback_a: Try again!
+    :feedback_a: Try again! The turtle will move when iterating through the for loop.
     :feedback_b: Great!
-    :feedback_c: Try again!
+    :feedback_c: Try again! Think about how many times the loop will iterate.
     :feedback_d: Try again! Notice that that alex.left(90) command is not inside the for loop.
 
     What shape will the turtle alex draw when the code below is executed?::
@@ -52,9 +52,9 @@ Question 2
     :answer_c: A triangle.
     :answer_d: A square.
     :correct: d
-    :feedback_a: Try again!
+    :feedback_a: Try again! Think about how many times the loop will iterate.
     :feedback_b: Try again! This time, the alex.left(90) is included in the for loop.
-    :feedback_c: Try again!
+    :feedback_c: Try again! Think about how many times the loop will iterate.
     :feedback_d: Great!
 
     What shape will the turtle alex draw when the code below is executed?::

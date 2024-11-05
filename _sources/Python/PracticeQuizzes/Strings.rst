@@ -22,7 +22,7 @@ Question 1
 
     - :n: Great!
       :o: Not quite. Don't forget that we start counting at 0 for index values!
-      :.*: Try again!
+      :.*: Try again! Remember that the index 5 corresponds to the 6th character in the string.
 
 
 Question 2
@@ -37,7 +37,7 @@ Question 2
 
     - :tc: Great!
       :tk: Not quite. Don't forget that the last character of a string is index value -1.
-      :.*: Try again!
+      :.*: Try again! Remember to add the character at index 2 and the third last character.
 
 
 Question 3
@@ -68,7 +68,7 @@ Question 4
     - :urra: Great!
       :urray: Not quite. Remember we count up to (but not including) the last index value.
       :Murra: Not quite. Remember we start counting index values at 0.
-      :.*: Try again!
+      :.*: Try again! The slice [8:12] includes characters from index 8 up to but not including index 12.
 
 
 Question 5
@@ -84,7 +84,7 @@ Question 5
     - :lter M: Great!
       :lter Mu: Not quite. Remember we count up to (but not including) the last index value.
       :alter M: Not quite. Remember we start counting index values at 0.
-      :.*: Try again!
+      :.*: Try again! The slice [2:8] includes characters from index 2 up to but not including index 8.
 
 
 Question 6
@@ -99,7 +99,7 @@ Question 6
 
     - :Walter Mu: Great!
       :Walter Mur: Not quite. Remember we count up to (but not including) the last index value.
-      :.*: Try again!
+      :.*: Try again! The slice [:9] includes characters from the start up to but not including index 9.
 
 
 Question 7
@@ -114,7 +114,7 @@ Question 7
 
     - :8: Great!
       :7: Not quite. Although index values start counting from 0, len() just counts the number of characters in a string, starting at character 1.
-      :.*: Try again!
+      :.*: Try again! The len() function returns the total number of characters in the string.
 
 
 Question 8
@@ -131,7 +131,7 @@ Question 8
         print(thing)
 
     - :sask: Great!
-      :.*: Try again!
+      :.*: Try again! The loop concatenates each character in "place" to "thing".
 
 
 Question 9
@@ -148,8 +148,7 @@ Question 9
         print(thing)
 
     - :ksas: Great!
-      :.*: Try again!
-
+      :.*: Try again! The loop adds each character in "place" to the beginning of "thing".
 
 
 Question 10
@@ -173,7 +172,7 @@ Question 10
 
 
     - :FXY: Great!
-      :.*: Try again!
+      :.*: Try again! Check the conditions in the apply_rule function for the character "Y".
 
 
 
@@ -204,5 +203,5 @@ Question 11
         print(process_string("XZY"))
 
     - :XYFZFXY: Great!
-      :.*: Try again!
+      :.*: Try again! Check how each character in "XZY" is transformed by the apply_rule function.
 

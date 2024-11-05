@@ -217,7 +217,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*n\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*o\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Don\u2019t forget that we start counting at 0 for index values!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*n\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*o\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Don\u2019t forget that we start counting at 0 for index values!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Remember that the index 5 corresponds to the 6th character in the string.</p>\n"}]]
         </script>
 
         </div>
@@ -235,7 +235,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*tc\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*tk\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Don\u2019t forget that the last character of a string is index value -1.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*tc\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*tk\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Don\u2019t forget that the last character of a string is index value -1.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Remember to add the character at index 2 and the third last character.</p>\n"}]]
         </script>
 
         </div>
@@ -272,7 +272,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*urra\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*urray\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*Murra\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*urra\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*urray\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*Murra\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The slice [8:12] includes characters from index 8 up to but not including index 12.</p>\n"}]]
         </script>
 
         </div>
@@ -290,7 +290,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*lter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*lter\\s+Mu\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*alter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*lter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*lter\\s+Mu\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*alter\\s+M\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we start counting index values at 0.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The slice [2:8] includes characters from index 2 up to but not including index 8.</p>\n"}]]
         </script>
 
         </div>
@@ -308,7 +308,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*Walter\\s+Mu\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*Walter\\s+Mur\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*Walter\\s+Mu\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*Walter\\s+Mur\\s*$", "regexFlags": "", "feedback": "<p>Not quite. Remember we count up to (but not including) the last index value.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The slice [:9] includes characters from the start up to but not including index 9.</p>\n"}]]
         </script>
 
         </div>
@@ -326,7 +326,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"number": [8, 8], "feedback": "<p>Great!</p>\n"}, {"number": [7, 7], "feedback": "<p>Not quite. Although index values start counting from 0, len() just counts the number of characters in a string, starting at character 1.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"number": [8, 8], "feedback": "<p>Great!</p>\n"}, {"number": [7, 7], "feedback": "<p>Not quite. Although index values start counting from 0, len() just counts the number of characters in a string, starting at character 1.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The len() function returns the total number of characters in the string.</p>\n"}]]
         </script>
 
         </div>
@@ -347,7 +347,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*sask\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*sask\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The loop concatenates each character in \u201cplace\u201d to \u201cthing\u201d.</p>\n"}]]
         </script>
 
         </div>
@@ -368,7 +368,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*ksas\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*ksas\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! The loop adds each character in \u201cplace\u201d to the beginning of \u201cthing\u201d.</p>\n"}]]
         </script>
 
         </div>
@@ -395,7 +395,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*FXY\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*FXY\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Check the conditions in the apply_rule function for the character \u201cY\u201d.</p>\n"}]]
         </script>
 
         </div>
@@ -428,7 +428,7 @@
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*XYFZFXY\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+            [[{"regex": "^\\s*XYFZFXY\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Check how each character in \u201cXZY\u201d is transformed by the apply_rule function.</p>\n"}]]
         </script>
 
         </div>
