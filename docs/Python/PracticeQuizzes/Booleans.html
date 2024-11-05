@@ -153,6 +153,8 @@
 <li><a class="reference internal" href="#question-6">Question 6</a></li>
 <li><a class="reference internal" href="#question-7">Question 7</a></li>
 <li><a class="reference internal" href="#question-8">Question 8</a></li>
+<li><a class="reference internal" href="#question-9">Question 9</a></li>
+<li><a class="reference internal" href="#question-10">Question 10</a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +225,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_1_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_1_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_1_opt_b">False</li><li data-component="feedback">The expression a == 6 evaluates to True because a is indeed 6.</li>
     
 
     </ul>
@@ -243,7 +245,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_2_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_2_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_2_opt_b">False</li><li data-component="feedback">The expression b == 6 evaluates to False, so not (b == 6) evaluates to True.</li>
     
 
     </ul>
@@ -263,7 +265,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_3_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_3_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_3_opt_b">False</li><li data-component="feedback">The expression a == 10 evaluates to False, but b == 10 evaluates to True, so the overall expression evaluates to True.</li>
     
 
     </ul>
@@ -286,7 +288,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_4_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_4_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_4_opt_b">False</li><li data-component="feedback">The expression a == 6 and 10 evaluates to True because the if statement does not have a full condition on both sides of the and operator. In other words, the a == 6 evaluates to True and the 10 evaluates to True. This is a common error when writing a boolean question. What is likely intended is a == 6 and a === 10.</li>
     
 
     </ul>
@@ -306,7 +308,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_5_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_5_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_5_opt_b">False</li><li data-component="feedback">The expression a == 10 evaluates to False, so not a == 10 evaluates to True, and b == 10 is True, so the overall expression is True.</li>
     
 
     </ul>
@@ -324,7 +326,7 @@
 </pre></div>
 </div>
 
-    <li data-component="answer"  id="booleans_practice_quiz_6_opt_a">True</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_6_opt_a">True</li><li data-component="feedback">The expression a == 10 evaluates to False, and not b == 10 evaluates to False, so the overall expression is False.</li>
     
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_6_opt_b">False</li><li data-component="feedback">Great!</li>
     
@@ -346,7 +348,7 @@
 
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_7_opt_a">True</li><li data-component="feedback">Great!</li>
     
-    <li data-component="answer"  id="booleans_practice_quiz_7_opt_b">False</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_7_opt_b">False</li><li data-component="feedback">The expression a == 6 evaluates to True and not a == 10 evaluates to True, so the overall expression is True.</li>
     
 
     </ul>
@@ -364,9 +366,49 @@
 </pre></div>
 </div>
 
-    <li data-component="answer"  id="booleans_practice_quiz_8_opt_a">True</li><li data-component="feedback">Try again!</li>
+    <li data-component="answer"  id="booleans_practice_quiz_8_opt_a">True</li><li data-component="feedback">The expression not a == 10 evaluates to True and not b == 10 evaluates to False, so the overall expression inside the parentheses is True, and the outer not makes it False.</li>
     
     <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_8_opt_b">False</li><li data-component="feedback">Great!</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="question-9">
+<h2>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9" data-multipleanswers="false"  id="booleans_practice_quiz_9"  style="visibility: hidden;">
+    <p>boolean-quiz9: What would the following print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="booleans_practice_quiz_9_opt_a">True</li><li data-component="feedback">The expression a != 6 evaluates to False, so the overall expression is False.</li>
+    
+    <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_9_opt_b">False</li><li data-component="feedback">Great!</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="question-10">
+<h2>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10" data-multipleanswers="false"  id="booleans_practice_quiz_10"  style="visibility: hidden;">
+    <p>boolean-quiz10: What would the following print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="booleans_practice_quiz_10_opt_a">True</li><li data-component="feedback">Great!</li>
+    
+    <li data-component="answer"  id="booleans_practice_quiz_10_opt_b">False</li><li data-component="feedback">The expression a != 10 evaluates to True and b != 10 evaluates to False, so the overall expression inside the parentheses is False, and the outer not makes it True. The second part of the expression not b == 5 evaluates to True, so the overall expression is True.</li>
     
 
     </ul>
