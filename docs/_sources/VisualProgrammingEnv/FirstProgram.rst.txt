@@ -165,6 +165,36 @@ Check Your Understanding
 
 
 
+.. mchoice:: scratch_broadcast_check_4
+   :answer_a: The current sprite would say "Hello" for 2 seconds, then glide to the position (-63, 18) during the next second.
+   :answer_b: The current sprite would glide to the position (-63, 18) for the first second, then say "Hello" for next 2 seconds.
+   :answer_c: The current sprite would say "Hello" for two seconds. During the first second (while it is saying hello), it will also glide to the position (-63, 18).
+   :correct: c
+   :feedback_a: No, since the broadcast happens before the sprite begins to say "Hello", both the say and the glide blocks will happen at the same time. 
+   :feedback_b: No, since the broadcast happens before the sprite begins to say "Hello", both the say and the glide blocks will happen at the same time.
+   :feedback_c: Yes! Since the broadcast happens before the sprite begins to say "Hello", both the say and the glide blocks will happen at the same time.
+
+   What would happen when you click the green flag, given the code below?
+
+   .. image:: images/scratch_broadcast_check_4.png
+
+
+
+.. mchoice:: scratch_broadcast_check_5
+   :answer_a: The current sprite would say "Hello" for 2 seconds, then glide to the position (-63, 18) during the next second.
+   :answer_b: The current sprite would glide to the position (-63, 18) for the first second, then say "Hello" for next 2 seconds.
+   :answer_c: The current sprite would say "Hello" for two seconds. During the first second (while it is saying hello), it will also glide to the position (-63, 18).
+   :correct: a
+   :feedback_a: Yes! Since the broadcast block includes an "and wait", the "when I recieve" block needs to complete entirely before the flow of the program moves back to where the message was sent from. In this case, this means that the glide needs to finish entirely before the say block can execute. 
+   :feedback_b: No, since the broadcast block includes an "and wait", the "when I recieve" block needs to complete entirely before the flow of the program moves back to where the message was sent from. In this case, this means that the glide needs to finish entirely before the say block can execute.
+   :feedback_c: No, since the broadcast block includes an "and wait", the "when I recieve" block needs to complete entirely before the flow of the program moves back to where the message was sent from. In this case, this means that the glide needs to finish entirely before the say block can execute.
+
+   What would happen when you click the green flag, given the code below?
+
+   .. image:: images/scratch_broadcast_check_5.png
+
+
+
 Practice Problem
 -----------------
 
