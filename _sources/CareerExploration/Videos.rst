@@ -6,7 +6,7 @@ Computer Science Career Path Videos
 ====================================
 
 
-The following videos were created by Code.org, and can be used to start conversations about Computer Science career paths.
+The following videos are a combination of videos created by Code.org and the SIEC (Saskatoon Industry Education Council), and can be used to start conversations about Computer Science career paths.
 
 .. reveal:: curriculum_addressed_how_the_internet_works
     :showtitle: Curriculum Outcomes Addressed In This Section
@@ -57,4 +57,42 @@ Software Engineer at MBARI
     :http: https
 
 
+Siemens EDA in Saskatoon Interviews
+--------------------------------------
+
+.. youtube:: 7Yh4CJj8Cy4
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+7shifts in Saskatoon Interviews
+--------------------------------------
+
+.. youtube:: fJMQ79Vd8HE
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+zu in Saskatoon Interviews
+--------------------------------------
+
+.. youtube:: fJMQ79Vd8HE
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+
+ICT Careers in Saskatchewan Interviews
+----------------------------------------
+
+.. youtube:: 9p68a8n1I-Q
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
 
