@@ -52,6 +52,26 @@ What will the following programs output? Why?
     a = 10
     foo()
 
+.. activecode:: wdtpd_functions_5b
+    :caption: What will this program print?
+
+    def foo():
+        a = 6
+        print(a)
+
+    a = 10
+    foo()
+
+.. activecode:: wdtpd_functions_5c
+    :caption: What will this program print?
+
+    def foo():
+        a = 6
+        print(a)
+
+    a = 10
+    foo()
+    print(a)
 
 .. activecode:: wdtpd_functions_6
     :caption: What will this program print?
@@ -63,6 +83,28 @@ What will the following programs output? Why?
     a = 10
     foo()
 
+.. activecode:: wdtpd_functions_6b
+    :caption: What will this program print?
+
+    def foo():
+        a = 6
+        a = a + 1
+        print(a)
+
+    a = 10
+    foo()
+
+.. activecode:: wdtpd_functions_6c
+    :caption: What will this program print?
+
+    def foo():
+        a = 6
+        a = a + 1
+        print(a)
+
+    a = 10
+    foo()
+    print(a)
 
 .. activecode:: wdtpd_functions_7
     :caption: What will this program print?
