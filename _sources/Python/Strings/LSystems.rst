@@ -447,10 +447,8 @@ Rule 1                  F → ``F-F++F+F-F-F``
     # adapt the template code given above to draw this image
 
 
-Unnamed Shape
+Gosper Island
 ~~~~~~~~~~~~~~
-
-*If you know the name of this shape, please tell me!*
 
 Use the following axiom and rules to create an interesting shape.
 
