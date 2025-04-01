@@ -98,7 +98,7 @@ Mixed Up Programs
 
     The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left. 
     
-    The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.   Finally, it should set the window to close when the user clicks in it.
+    The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line.
 
     Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order.
     -----
@@ -311,7 +311,7 @@ Mixed Up Programs
         :width: 150
         :align: left
     
-    The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.
+    The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.
    
     Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
     -----
@@ -334,7 +334,7 @@ Mixed Up Programs
         :width: 150
         :align: left
     
-    The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.
+    The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.
 
     Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.
     -----
