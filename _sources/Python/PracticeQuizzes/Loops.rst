@@ -117,3 +117,26 @@ Question 5
     - :4: Great!
       :3: Not quite. Remember the while loop will only check the conditional at the start of the loop!
       :.*: Try again!
+
+
+Question 6
+-----------
+
+Write a program that counts from 1 to 15. Try this using both a ``for`` and ``while`` loop.
+
+.. activecode:: loops_practice_quiz_6
+    :nocanvas:
+
+    # write your program here
+
+
+Question 7
+-----------
+
+Write a program that asks the user to guess a secret word. Keep prompting the user until they guess the word "prairie". Once they guess correctly, print out "bunnyhug!".
+
+.. activecode:: loops_practice_quiz_7
+    :nocanvas:
+
+    # write your program here
+
