@@ -78,6 +78,16 @@
   </head><body>
 
 
+<script>
+// Prevent F5 from reloading the page
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F5' || (event.ctrlKey && event.key === 'r')) {
+        event.preventDefault();
+        console.log('Page reload is disabled to prevent loss of work.');
+    }
+});
+</script>
+
 <!-- Begin navbar -->
 <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
@@ -150,6 +160,8 @@
 <li><a class="reference internal" href="#question-3">Question 3</a></li>
 <li><a class="reference internal" href="#question-4">Question 4</a></li>
 <li><a class="reference internal" href="#question-5">Question 5</a></li>
+<li><a class="reference internal" href="#question-6">Question 6</a></li>
+<li><a class="reference internal" href="#question-7">Question 7</a></li>
 </ul>
 </li>
 </ul>
@@ -325,6 +337,44 @@
         </div>
         </div>
             </section>
+<section id="question-6">
+<h2>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that counts from 1 to 15. Try this using both a <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=loops_practice_quiz_6 data-question_label="6">
+<div id=loops_practice_quiz_6_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="loops_practice_quiz_6_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write your program here
+</textarea>
+</div>
+</div>
+</section>
+<section id="question-7">
+<h2>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that asks the user to guess a secret word. Keep prompting the user until they guess the word “prairie”. Once they guess correctly, print out “bunnyhug!”.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=loops_practice_quiz_7 data-question_label="7">
+<div id=loops_practice_quiz_7_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="loops_practice_quiz_7_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write your program here
+</textarea>
+</div>
+</div>
+</section>
 </section>
 
 

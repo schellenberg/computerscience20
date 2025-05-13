@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="8. The while Statement" href="WhileLoopsIntro.html" />
-    <link rel="prev" title="6. Other Input Methods (PySimpleGUI)" href="OtherInputMethods.html" />
+    <link rel="prev" title="6. Other Input Methods (FreeSimpleGUI)" href="OtherInputMethods.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -77,6 +77,16 @@
 
   </head><body>
 
+
+<script>
+// Prevent F5 from reloading the page
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F5' || (event.ctrlKey && event.key === 'r')) {
+        event.preventDefault();
+        console.log('Page reload is disabled to prevent loss of work.');
+    }
+});
+</script>
 
 <!-- Begin navbar -->
 <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -158,7 +168,7 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6. </span>Other Input Methods (PySimpleGUI)" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6. </span>Other Input Methods (FreeSimpleGUI)" data-toggle="tooltip">
     <a href="OtherInputMethods.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -411,7 +421,7 @@ print(message)
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">6. </span>Other Input Methods (PySimpleGUI)' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">6. </span>Other Input Methods (FreeSimpleGUI)' data-toggle="tooltip">
     <a href="OtherInputMethods.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>

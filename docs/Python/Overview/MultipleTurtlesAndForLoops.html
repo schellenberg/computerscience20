@@ -78,6 +78,16 @@
   </head><body>
 
 
+<script>
+// Prevent F5 from reloading the page
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F5' || (event.ctrlKey && event.key === 'r')) {
+        event.preventDefault();
+        console.log('Page reload is disabled to prevent loss of work.');
+    }
+});
+</script>
+
 <!-- Begin navbar -->
 <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
@@ -305,7 +315,7 @@ ideas. They’re not always explicit in the code.</p></li>
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TwoTurtles1.png"><img alt="../../_images/TwoTurtles1.png" class="align-left" src="../../_images/TwoTurtles1.png" style="width: 150px;" /></a>
 <p>The following program has one turtle, “jamal”, draw a capital L in blue and then another, “tina”, draw a line to the west in orange as shown to the left.</p>
-<p>The program should do all set-up, have “jamal” draw the L, and then have “tina” draw the line.   Finally, it should set the window to close when the user clicks in it.</p>
+<p>The program should do all set-up, have “jamal” draw the L, and then have “tina” draw the line.</p>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
 
         </div>
@@ -547,7 +557,7 @@ wn.exitonclick()
         <div data-component="parsons" id="parsons_for_loop_3_8" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TurtleTriangle.png"><img alt="../../_images/TurtleTriangle.png" class="align-left" src="../../_images/TurtleTriangle.png" style="width: 150px;" /></a>
-<p>The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.  After the loop, set the window to close when the user clicks in it.</p>
+<p>The following program uses a turtle to draw a triangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 175 pixels, and then turn left 120 degrees.</p>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
 
         </div>
@@ -571,7 +581,7 @@ for i in [0,1,2]:
         <div data-component="parsons" id="parsons_for_loop_3_9" class="parsons" >
         <div class="parsons_question parsons-text" >
     <a class="reference internal image-reference" href="../../_images/TurtleRect.png"><img alt="../../_images/TurtleRect.png" class="align-left" src="../../_images/TurtleRect.png" style="width: 150px;" /></a>
-<p>The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.  After the loop, set the window to close when the user clicks in it.</p>
+<p>The following program uses a turtle to draw a rectangle as shown to the left, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees.</p>
 <p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
 
         </div>
