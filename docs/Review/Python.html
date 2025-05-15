@@ -297,7 +297,7 @@ document.addEventListener('keydown', function(event) {
         number =  input("Please enter a number:")
 number = float(number)
 doubled = number * 2
-print(str(doubled) + " is twice the value of the number you entered.")
+print(f"{doubled} is twice the value of {number}.")
         </pre>
         </div>
         </div>
@@ -431,7 +431,7 @@ elif age == 15:
     <p>python-review13: What does the following code print?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The negative number &quot;</span><span class="p">,</span>  <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; is not valid here.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The negative number </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is not valid here.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is always printed&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -681,7 +681,7 @@ print("Made it!")
         <pre  class="parsonsblocks" data-question_label="2.7.2"          style="visibility: hidden;">
         people = ["Alice", "Bob", "Eve"]
 for name in people:
-    print("Hello there, " + name)
+    print(f"Hello there, {name}!")
         </pre>
         </div>
         </div>
@@ -690,7 +690,7 @@ for name in people:
     <ul data-component="multiplechoice" data-question_label="2.7.3" data-multipleanswers="false"  id="review_test_question3_4_1"  style="visibility: hidden;">
     <p>python-review22: In the following code, how many lines does this code print?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I have&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">&quot;cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I have </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> cookies.  I&#39;m going to eat one.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -714,7 +714,10 @@ for name in people:
     <p>python-review23: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -731,7 +734,10 @@ for name in people:
     <p>python-review24: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -748,7 +754,10 @@ for name in people:
     <p>python-review25: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -765,7 +774,10 @@ for name in people:
     <p>python-review26: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -782,7 +794,10 @@ for name in people:
     <p>python-review27: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -799,7 +814,10 @@ for name in people:
     <p>python-review28: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -816,7 +834,10 @@ for name in people:
     <p>python-review29: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -833,7 +854,10 @@ for name in people:
     <p>python-review30: What would the following print?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span> <span class="ow">not</span> <span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 

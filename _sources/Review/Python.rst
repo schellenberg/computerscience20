@@ -73,7 +73,7 @@ Converting Between Data Types
     number =  input("Please enter a number:")
     number = float(number)
     doubled = number * 2
-    print(str(doubled) + " is twice the value of the number you entered.")
+    print(f"{doubled} is twice the value of {number}.")
 
 
 
@@ -186,7 +186,7 @@ If you have trouble with any of the following, you might want to look back at th
      
         x = -10
         if x < 0:
-            print("The negative number ",  x, " is not valid here.")
+            print(f"The negative number {x} is not valid here.")
         print("This is always printed")
 
 
@@ -418,7 +418,7 @@ Write a program that asks the user to enter a password. Keep asking for the pass
     -----
     people = ["Alice", "Bob", "Eve"]
     for name in people:
-        print("Hello there, " + name)
+        print(f"Hello there, {name}!")
 
 .. mchoice:: review_test_question3_4_1
     :answer_a: 1
@@ -436,7 +436,7 @@ Write a program that asks the user to enter a password. Keep asking for the pass
     .. code-block:: python
 
         for number in [5, 4, 3, 2, 1, 0]:
-            print("I have", number, "cookies.  I'm going to eat one.")
+            print(f"I have {number} cookies.  I'm going to eat one.")
 
 
 ``and``, ``or``, ``not``
@@ -453,7 +453,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print(a == 6)
+        if a == 6:
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_2
     :answer_a: True
@@ -466,7 +469,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( not (b == 6) )
+        if not (b == 6):
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_3
     :answer_a: True
@@ -479,7 +485,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( a == 10 or b == 10 )
+        if a == 10 or b == 10:
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_4
     :answer_a: True
@@ -492,7 +501,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( a == 6 and 10 )
+        if a == 6 and 10:
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_5
     :answer_a: True
@@ -505,7 +517,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( not a == 10 and b == 10 )
+        if not a == 10 and b == 10:
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_6
     :answer_a: True
@@ -518,7 +533,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( a == 10 or not b == 10 )
+        if a == 10 or not b == 10:
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_7
     :answer_a: True
@@ -531,7 +549,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( a == 6 and (not a == 10) )
+        if a == 6 and (not a == 10):
+            print(True)
+        else:
+            print(False)
 
 .. mchoice:: review_booleans_practice_quiz_8
     :answer_a: True
@@ -544,7 +565,10 @@ Write a program that asks the user to enter a password. Keep asking for the pass
 
         a = 6
         b = 10
-        print( not ( not a == 10 or not b == 10) )
+        if not ( not a == 10 or not b == 10):
+            print(True)
+        else:
+            print(False)
 
 
 Functions
