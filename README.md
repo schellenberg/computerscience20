@@ -20,7 +20,7 @@ If you want to create your own version of the book, you are welcome to do so! Th
 
 5. On the GitHub web interface, click the "Clone or download" green button, then "Open in Desktop". Clone the repo locally. Click on "Open in Visual Studio Code".
 
-6.  In VS Code, open a terminal (alternatively, open a terminal and ``cd`` to the computerscience20 folder) and tell Poetry to use Python 3.10 by typing ``poetry env use py -3.10``. Now type ``poetry install``. This should install everything you need.
+6.  In VS Code, open a terminal (alternatively, open a terminal and ``cd`` to the computerscience20 folder) and tell Poetry to use Python 3.10 by typing ``poetry env use py -3.10``. Now type ``poetry install --no-root``. This should install everything you need.
 
 7.  Type ``poetry run runestone build`` -- this will build the html and put it in ``./docs/`` directory (if you have cloned this project on GitHub, that should automatically update your GitHub Pages output with your changes).
 

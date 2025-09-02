@@ -17,7 +17,7 @@ How to Fork the Textbook
 	- select the computerscience20 repository (if required, if you have more than just one repo set up)
 	- fetch origin (top right button) -- this makes sure your local copy is the most up to date version before you start changing things
 	- use Repository → Open in Visual Studio Code to access the source code of the textbook
-	- in VS Code, select Terminal → New Terminal, then type ``poetry install``. This should install all the dependencies for you.
+	- in VS Code, select Terminal → New Terminal, then type ``poetry install --no-root``. This should install all the dependencies for you.
 
 Daily workflow
 ---------------
