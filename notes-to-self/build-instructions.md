@@ -10,6 +10,7 @@
 - clone the computerscience20 repository, and `cd` to it in your shell (something like `cd C:\Users\dan\Documents\GitHub\computerscience20`)
 - `poetry install` --  Should install everything you need [note that as the Runestone project has continued to grow, this usage case of building a self-contained book and hosting it on Github Pages may not continue to work well. For that reason, I specified runestone version 6.2 in the Pipfile]
 - `poetry run runestone build` -- will build the html and put it in ./docs/ folder, which is set up to serve the webpage on GitHub Pages
+- if the above command fails, might need to install setuptools/wheel in the virtual environment. To do that, run ``poetry run pip install --upgrade pip setuptools wheel`` while inside the computerscience20 folder
 
 ### Important Note!!!
 If serving the resulting build on GitHub pages, you MUST create a file called `.nojekyll` and save it in the folder you are serving the pages from. This will convince GitHub to include files/folders prepended with an underscore (such as _static).

@@ -30,7 +30,7 @@ Daily workflow
 - in VS Code, expand the _sources folder (all the source code for the textbook can be found in here)
 	- change whatever you want in any of the _source code folder, then save your work
 
-- to build the book while working in VS Code, select Terminal → New Terminal, then type ``poetry run runestone build``. This is the command that takes your _source code folder, and converts each source code file into an .html file. The resulting website is saved into the ``/docs`` folder. This is the folder that contains the actual static website that your students will be using.
+- to build the book while working in VS Code, select Terminal → New Terminal, then type ``poetry run runestone build``. This is the command that takes your _source code folder, and converts each source code file into an .html file. The resulting website is saved into the ``/docs`` folder. This is the folder that contains the actual static website that your students will be using. If the build command fails the first time you try it, you might need to install setuptools/wheel in the virtual environment. To do that, run ``poetry run pip install --upgrade pip setuptools wheel`` while inside the computerscience20 folder.
 
 - to test your work locally, type ``poetry run runestone serve`` into the terminal -- this command opens up a local development webserver so that you can test out your most recent website build before pushing it live to the web. You can access the website at http://localhost:8000/
 
