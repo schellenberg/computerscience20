@@ -216,39 +216,17 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>In addition to having Reeborg making right turns, you <em>might</em> have had
-it turn around a few times; by turning around, I mean changing
-direction so that Reeborg is heading back to where it was coming from.
+<p>In addition to having Reeborg making right turns, you might also want to make a function that changes direction so that Reeborg is heading back to where it was coming from.
 We can define a function <code class="docutils literal notranslate"><span class="pre">turn_around()</span></code> as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_around</span><span class="p">():</span>
     <span class="n">turn_left</span><span class="p">()</span>
     <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>When programmer make use of a given function in different programs,
-rather than redefining it in each program they write, they put them in
-special programs called <strong>libraries</strong> and they have a way to ensure that
-their other programs can use the functions that are found in the
-library.</p>
-<p>You are going to use the function <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> <strong>a lot!</strong> Instead of
-rewriting it each time, what you are going to do is
-to write it <strong>once</strong> (more) but, this time, instead of writing it in the
-editor with the <strong>Python Code</strong> tab, you will click on the <strong>library</strong> tab and
-write it there. Oh, and you should also define <code class="docutils literal notranslate"><span class="pre">turn_around()</span></code> there as
-well.</p>
+<p>When we want to use the same function over and over in many different programs, we can save ourselves some work. Instead of redefining the function in every program, we can save it to the Library, and then just import it whenever we need it. Click on the library tab (as shown below), and and copy/paste your <code class="docutils literal notranslate"><span class="pre">turn_around()</span></code> and <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> functions there.</p>
 <img alt="../_images/library.png" src="../_images/library.png" />
-<p>Then, when you want to use the functions defined in your library, you will
-simply type <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span></code> (followed by the function names, separated
-by commas) on its own line in the Python Code editor. For example, if you have defined <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> in the library, you could type <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, and you would now be able to use the <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> function anywhere in your code. See the example below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import functions from the library tab</span>
-<span class="kn">from</span> <span class="nn">library</span> <span class="kn">import</span> <span class="n">turn_right</span><span class="p">,</span> <span class="n">turn_around</span>
-
-<span class="c1"># when you want to use the functions</span>
-<span class="n">turn_right</span><span class="p">()</span>
-<span class="n">turn_around</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>If you end up saving a large number of functions into the library, you may also import <strong>all</strong> of the functions in the library by calling <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">library</span></code>. When you do this, however, be aware that you then need to specify where the function is coming from when you call it. For example, if we had defined <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> in the library, we would call the function using <code class="docutils literal notranslate"><span class="pre">library.turn_right()</span></code>. See the example below:</p>
+<p>Now whenever you want to use the functions defined in your library, you will
+simply type <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">library</span></code>. Then in order to use the function, you would call <code class="docutils literal notranslate"><span class="pre">library.turn_right()</span></code>. See the example below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import functions from the library tab</span>
 <span class="kn">import</span> <span class="nn">library</span>
 
@@ -268,7 +246,7 @@ by commas) on its own line in the Python Code editor. For example, if you have d
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Although you may see it in some tutorials, you should avoid using wildcard import statements like <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code>. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.</p>
+<p>Although you may see it in some tutorials, you should avoid using wildcard import statements like <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code>. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution. You can also import individual functions using something like <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">turn_right</span></code>, but as you begin to import multiple libraries later, this can make your code confusing.</p>
 </div>
 </section>
 <section id="your-turn">

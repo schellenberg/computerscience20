@@ -216,29 +216,21 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>Often, we will find that we want to repeat a series of instructions a
-fixed number of times. For example, in Step 8, you had to tell Reeborg to do the same thing over and over again. There is a way in Python to do this … but it
-has too many new concepts to explain right now. I will just show you
-the code, and immediately introduce <code class="docutils literal notranslate"><span class="pre">repeat</span></code>, a simpler replacement
-for it, unique to Reeborg’s World.  The standard way
-is known as a <strong>for loop</strong> (which we will use later in the course) and is written as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1"># some</span>
-    <span class="c1"># instructions</span>
-    <span class="c1"># here</span>
+<p>Often, we will find that we want to repeat a series of instructions a fixed number of times. For example, in Step 8, you had to tell Reeborg to do the same thing over and over again. Instead of writing the same code over and over, you can use the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> block. For example, instead of this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>In Reeborg’s World, we can write a <code class="docutils literal notranslate"><span class="pre">repeat</span></code> <em>loop</em> as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="n">n</span><span class="p">:</span>    <span class="c1"># where n is a natural number, like 3 or 7</span>
-    <span class="c1"># some</span>
-    <span class="c1"># instructions</span>
-    <span class="c1"># here</span>
+<p>You could instead just write this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="n">move</span><span class="p">()</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Using <code class="docutils literal notranslate"><span class="pre">repeat</span></code> will not work in Python programs meant to be
-run outside of Reeborg’s World.</p>
 </div>
 <p>A <strong>loop</strong> is a block of instructions that is repeated. Each time the loop is repeated is called an iteration, so the code below would have 4 iterations.</p>
 <p>The following code will make Reeborg trace a square:</p>
@@ -257,15 +249,7 @@ having to repeat instructions:</p>
 <p>You might want to adjust the code that you have saved in the library tab to use the repeat block.</p>
 <div class="admonition-for-educators admonition">
 <p class="admonition-title">For educators</p>
-<p>The rationale for having <code class="docutils literal notranslate"><span class="pre">repeat</span></code> as an addition to Python’s
-standard notation is to avoid having to introduce 4 concepts
-at the same time (loops, variables as in <code class="docutils literal notranslate"><span class="pre">_</span></code> in <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">_</span> <span class="pre">in</span> <span class="pre">range(n)</span></code>,
-builtin functions like <code class="docutils literal notranslate"><span class="pre">range</span></code> as well as the concept of
-function arguments).</p>
-<p>By design the <code class="docutils literal notranslate"><span class="pre">n</span></code> in <code class="docutils literal notranslate"><span class="pre">repeat</span> <span class="pre">n</span></code> <strong>must</strong> be an integer literal;
-it cannot be a variable.  When students learn about variables, they
-should learn the proper Python syntax to do loops and forget about
-the non-standard <code class="docutils literal notranslate"><span class="pre">repeat</span></code>.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">repeat</span></code> will not work in Python programs meant to be run outside of Reeborg’s World. The rationale for having <code class="docutils literal notranslate"><span class="pre">repeat</span></code> as an addition to Python’s <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is to avoid having to introduce 4 concepts at the same time (loops, variables as in <code class="docutils literal notranslate"><span class="pre">_</span></code> in <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">_</span> <span class="pre">in</span> <span class="pre">range(n)</span></code>, builtin functions like <code class="docutils literal notranslate"><span class="pre">range</span></code> as well as the concept of function arguments).</p>
 </div>
 </section>
 <section id="your-turn">

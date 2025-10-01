@@ -40,8 +40,7 @@ bugs. Some of the problems with Reeborg are:
 #. Reeborg has a compass, enabling it to determine which direction it
    is facing. Unfortunately, yet again, the program that enables Reeborg
    to get the information from the compass has a bug: it only tells
-   Reeborg if it is facing North ... or not. Once again, you will 
-   learn how to implement a workaround solution soon.
+   Reeborg if it is facing North ... or not.
 #. Reeborg can see if a wall is in front of it, and can also turn its
    head to the right to see if there is a wall there. However, a
    software "glitch" (which is another weasel term that software

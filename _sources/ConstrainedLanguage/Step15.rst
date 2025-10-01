@@ -20,7 +20,7 @@ It's raining hard.  Water is going to come in through the open windows unless Re
 
 .. image:: images/open_window.png
 
-Have Reeborg move around the room and close the windows by using the ``build_wall()`` function. The size of the room and the location of the windows are always changing.
+Have Reeborg move around the room and close the windows by using the ``build_wall()`` function. The size of the room and the location of the windows are always changing. Note that the green colored square (one step in front of where Reeborg starts) is a goal in this world, so it behaves the save as a flag. You can ask if you are on it using ``at_goal()``.
 
 .. note:: Since the windows are in different places in each world, be sure that your solution does not *hard code* a number of steps to get to a window. Instead, Reeborg must check for an open window as it walks around the inside of the house.
 

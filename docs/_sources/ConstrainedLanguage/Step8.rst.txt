@@ -14,32 +14,15 @@ Step 8: Asking Questions
 Tutorial
 --------
 
-Sometimes, we don't know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it. To ask the computer a question, we use an ``if`` statement. The so-called ``if`` **statement** follows a pattern somewhat similar to that of ``function``\ s :
+Sometimes, we don't know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it. To ask the computer a question, we use an ``if`` statement. 
 
 .. code-block:: python
-
-    def some_name():
-        # block of code
 
     if some_condition:
         # block of code
 
 
-.. note::
-
-    The general term used to describe a function that gives a result
-    equivalent to ``True`` or ``False`` in an ``if`` statement is **condition**::
-
-       if condition:
-           ...
-
-
-Having to specify ``True`` or ``False`` does not help Reeborg decide on
-its own. However, there are special functions that Reeborg recognizes
-that allow Reeborg to make decisions. The first of these is
-``object_here()`` which tells Reeborg if there is at least one object at
-the grid position where it is located. For example, if we want to ask
-Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be::
+There are special functions that Reeborg recognizes that allow Reeborg to make decisions. The first of these is ``object_here()`` which tells Reeborg if there is at least one object at the grid position where it is located. For example, if we want to ask Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be::
 
     if object_here():
         take()
@@ -58,6 +41,11 @@ object_here()       Returns True if there is an object (star, dandelion, etc) on
 carries_object()    Returns True if Reeborg is currently carrying at least one object (star, dandelion, etc). Returns False if Reeborg is carrying nothing.
 is_facing_north()   Returns True if Reeborg is currently facing north, False otherwise.
 =================   ============
+
+Any time you want to ask Reeborg about the world around it, you can use an ``if`` statement with one of these questions. For example, if you only wanted to move forward if you won't crash into something, you could use the following::
+
+    if front_is_clear():
+        move()
 
 
 Your Turn
@@ -79,70 +67,15 @@ Create a program to have Reeborg walk across the front yard, picking up a dandel
 If You're Having Trouble (a more detailed explanation)
 ------------------------------------------------------
 
-.. code-block:: python
-
-    if True:
-        move()
-
-    if False:
-        turn_left()
-
-In the code above, ``if``, ``True``, and ``False`` are all Python keywords. It is a good idea to try out the code above in Reeborg's World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.
-
-When we introduced functions, we explained how we could think of a
-function **call** as being somewhat equivalent to inserting the code block for
-the function definition at that point in the program. Thus::
+Say you wanted Reeborg move twice, but there might be a wall in front of it after the first move. If there is a wall, you want Reeborg to turn around before the second move. You could do this with the following code::
 
     move()
-    turn_right()  # function call
-    move()
-
-is equivalent to::
-
-    move()
-    # begin of code block inside turn_right()
-    turn_left()
-    turn_left()
-    turn_left()
-    # end of code block
-    move()
-
-``if`` statements can be thought in similar terms, except that we have a
-*conditional* insertion (or rather **deletion**!). Thus::
-
-    move()
-    if True:
+    if wall_in_front():
         turn_left()
         turn_left()
     move()
 
-is equivalent to::
-
-    move()
-    turn_left()
-    turn_left()
-    move()
-
-whereas::
-
-    move()
-    if False:
-        turn_left()
-        turn_left()
-    move()
-
-is equivalent to::
-
-    move()
-    move()
-
-Note that thinking of it this way does not mean that such a deletion
-would be done permanently: if, somehow, our program *looped back* and
-repeated this part of the code again, the ``if`` statement would be
-reevaluated each time to decide whether or not to execute the lines of
-code inside the code block.
-
-We can represent the above using a flowchart:
+You can think of the above using a flowchart, if it helps:
 
 .. figure:: images/flowcharts/if.jpg
    :align: center

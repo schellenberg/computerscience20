@@ -219,7 +219,7 @@ document.addEventListener('keydown', function(event) {
 <img alt="../_images/step15.png" src="../_images/step15.png" />
 <p>It’s raining hard.  Water is going to come in through the open windows unless Reeborg closes them. Open windows look like this:</p>
 <img alt="../_images/open_window.png" src="../_images/open_window.png" />
-<p>Have Reeborg move around the room and close the windows by using the <code class="docutils literal notranslate"><span class="pre">build_wall()</span></code> function. The size of the room and the location of the windows are always changing.</p>
+<p>Have Reeborg move around the room and close the windows by using the <code class="docutils literal notranslate"><span class="pre">build_wall()</span></code> function. The size of the room and the location of the windows are always changing. Note that the green colored square (one step in front of where Reeborg starts) is a goal in this world, so it behaves the save as a flag. You can ask if you are on it using <code class="docutils literal notranslate"><span class="pre">at_goal()</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the windows are in different places in each world, be sure that your solution does not <em>hard code</em> a number of steps to get to a window. Instead, Reeborg must check for an open window as it walks around the inside of the house.</p>

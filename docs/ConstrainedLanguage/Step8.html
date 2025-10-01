@@ -218,29 +218,12 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes, we don’t know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it. To ask the computer a question, we use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. The so-called <code class="docutils literal notranslate"><span class="pre">if</span></code> <strong>statement</strong> follows a pattern somewhat similar to that of <code class="docutils literal notranslate"><span class="pre">function</span></code>s :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_name</span><span class="p">():</span>
-    <span class="c1"># block of code</span>
-
-<span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
+<p>Sometimes, we don’t know ahead of time exactly what the world that Reeborg is going to be faced with will look like. Thankfully, Reeborg can sense the world around it, and we can ask Reeborg questions about it. To ask the computer a question, we use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
     <span class="c1"># block of code</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The general term used to describe a function that gives a result
-equivalent to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is <strong>condition</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="o">...</span>
-</pre></div>
-</div>
-</div>
-<p>Having to specify <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> does not help Reeborg decide on
-its own. However, there are special functions that Reeborg recognizes
-that allow Reeborg to make decisions. The first of these is
-<code class="docutils literal notranslate"><span class="pre">object_here()</span></code> which tells Reeborg if there is at least one object at
-the grid position where it is located. For example, if we want to ask
-Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be:</p>
+<p>There are special functions that Reeborg recognizes that allow Reeborg to make decisions. The first of these is <code class="docutils literal notranslate"><span class="pre">object_here()</span></code> which tells Reeborg if there is at least one object at the grid position where it is located. For example, if we want to ask Reeborg to collect objects (dandelions, carrots, etc), one part of the code could be:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">object_here</span><span class="p">():</span>
     <span class="n">take</span><span class="p">()</span>
 </pre></div>
@@ -283,6 +266,11 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 </tr>
 </tbody>
 </table>
+<p>Any time you want to ask Reeborg about the world around it, you can use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement with one of these questions. For example, if you only wanted to move forward if you won’t crash into something, you could use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+    <span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 <section id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
@@ -293,67 +281,15 @@ Reeborg to collect objects (dandelions, carrots, etc), one part of the code coul
 </section>
 <section id="if-you-re-having-trouble-a-more-detailed-explanation">
 <h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">move</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>In the code above, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code>, and <code class="docutils literal notranslate"><span class="pre">False</span></code> are all Python keywords. It is a good idea to try out the code above in Reeborg’s World (you can use any world you like, perhaps Alone?). You might also want to interchange the True and False, then run the program again to see what happens.</p>
-<p>When we introduced functions, we explained how we could think of a
-function <strong>call</strong> as being somewhat equivalent to inserting the code block for
-the function definition at that point in the program. Thus:</p>
+<p>Say you wanted Reeborg move twice, but there might be a wall in front of it after the first move. If there is a wall, you want Reeborg to turn around before the second move. You could do this with the following code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="n">turn_right</span><span class="p">()</span>  <span class="c1"># function call</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="c1"># begin of code block inside turn_right()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="c1"># end of code block</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">if</span></code> statements can be thought in similar terms, except that we have a
-<em>conditional</em> insertion (or rather <strong>deletion</strong>!). Thus:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">wall_in_front</span><span class="p">():</span>
     <span class="n">turn_left</span><span class="p">()</span>
     <span class="n">turn_left</span><span class="p">()</span>
 <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>whereas:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Note that thinking of it this way does not mean that such a deletion
-would be done permanently: if, somehow, our program <em>looped back</em> and
-repeated this part of the code again, the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement would be
-reevaluated each time to decide whether or not to execute the lines of
-code inside the code block.</p>
-<p>We can represent the above using a flowchart:</p>
+<p>You can think of the above using a flowchart, if it helps:</p>
 <figure class="align-center">
 <img alt="../_images/if.jpg" src="../_images/if.jpg" />
 </figure>

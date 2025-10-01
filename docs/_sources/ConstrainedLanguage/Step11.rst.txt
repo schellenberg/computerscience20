@@ -14,8 +14,7 @@ Step 11: If/Else
 Tutorial
 ---------
 
-While learning how to program is fun, you should not spend all your
-time in front of the computer. When you are at home, ``if`` it rains, keep reading, otherwise, go outside and play!
+While learning how to program is fun, you should not spend all your time in front of the computer. When you are at home, ``if`` it rains, keep reading, otherwise, go outside and play!
 
 Let's rewrite the sentence that starts with ``if`` above::
 
@@ -33,9 +32,7 @@ If this were Python, we might have written it like this instead:
     else:
         go_outside_and_play()
 
-Yes, Python includes the possibility of more than one choice with
-the keyword ``else``. Let's use it with another example. Reeborg can see
-if there's a wall right in front him, using the function ``front_is_clear()``. This can be used with ``if/else`` to write a program that will guide Reeborg around a rectangular world. Something like the following should do the trick:
+Python includes the possibility of more than one choice with the keyword ``else``. Let's use it with another example. Reeborg can see if there's a wall right in front him, using the function ``front_is_clear()``. This can be used with ``if/else`` to write a program that will guide Reeborg around a rectangular world. Something like the following should do the trick:
 
 .. code-block:: python
 

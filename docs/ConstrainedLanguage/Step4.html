@@ -229,15 +229,12 @@ which are much simpler than human languages, are often used by
 programmers to share their work with other programmers.</p>
 <p>Comments are notes made by a programmer which are ignored by the
 computer; they are meant to be read and understood only by humans. They allow programmers to write programs that are easier to understand for other people.</p>
-<p>When using Python, one can write comments in one of two ways:</p>
+<p>When using Python, you can write comments in one of two ways:</p>
 <ul class="simple">
 <li><p>By putting a <code class="docutils literal notranslate"><span class="pre">#</span></code> before a comment on any given line.</p></li>
 <li><p>By enclosing any amount of text (even if it takes up more than one line) between triple-quotes like <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">...</span> <span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">...</span> <span class="pre">'''</span></code>.</p></li>
 </ul>
-<p>I will first write a simple program without any comments followed by a
-second version with comments added and a third version … slightly less
-readable; however, I will make the same error in all three programs. Can
-you spot it more easily in the first program or the second?</p>
+<p>Here’s a simple program that makes Reeborg move in a square, but there’s a mistake in the code. Can you spot it?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">turn_left</span><span class="p">()</span>
@@ -255,41 +252,38 @@ you spot it more easily in the first program or the second?</p>
 <span class="n">put</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Contrast the above program with the same one, from Reeborg’s point of
+<p>Now here’s the exact same program, at least from Reeborg’s point of
 view, but with comments added for humans; you will be able to recognize
 comments as they appear in a different colour and font style.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;  This is an example of</span>
-<span class="sd">a simple program where Reeborg draws a square,</span>
-<span class="sd">leaving an object behind at each corner. &#39;&#39;&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is an example of</span>
+<span class="c1"># a simple program where Reeborg draws a square,</span>
+<span class="c1"># leaving an object behind at each corner.</span>
 
-<span class="n">move</span><span class="p">()</span>  <span class="c1"># Python commands are on separate lines</span>
-<span class="n">move</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span> <span class="c1"># Reeborg only knows to turn left</span>
-<span class="n">put</span><span class="p">()</span>  <span class="c1"># we assume that Reeborg carries enough objects</span>
-
-<span class="c1"># we repeat the above three more times to complete the square</span>
+<span class="c1"># draw the first side</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">turn_left</span><span class="p">()</span>
 <span class="n">put</span><span class="p">()</span>
 
+<span class="c1"># draw the second side</span>
+<span class="n">move</span><span class="p">()</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">turn_left</span><span class="p">()</span>
 <span class="n">put</span><span class="p">()</span>
 
+<span class="c1"># draw the third side</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">turn_left</span><span class="p">()</span>
+<span class="n">put</span><span class="p">()</span>
+
+<span class="c1"># draw the fourth side</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">move</span><span class="p">()</span>
 <span class="n">turn_left</span><span class="p">()</span>
 <span class="n">put</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The above are not particularly good comments, but at least one of them
-should have helped you find what was wrong with the program. You might
-think this is cheating; however, how can you guess the intent behind
-some lines of code in a program on their own? The addition of comments
-explaining what a given program should do can be very helpful in finding
-mistakes.</p>
-<p>Note that in addition to comments, I have used blank lines (often called whitespace) to separate some “logical” blocks of code, to help see the pattern better. Together, the use of comments and insertion of blank lines can make a program much easier to read.</p>
+<p>Hopefully this second version makes it much easier to spot the error in the code. Note that in addition to comments, the code has been broken in to “logical chunks” of code, and each “chunk” has a comment above it explaining what the chunk of code will do. This is an excellent way to organize your code.</p>
 </section>
 <section id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>

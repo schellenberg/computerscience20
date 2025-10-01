@@ -226,18 +226,6 @@ tedious to have to write three <code class="docutils literal notranslate"><span 
 you want to have Reeborg turn right. Wouldn’t it be nicer if you could
 simply write <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>?</p>
 <p>Just as we can call built-in functions like <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code> and <code class="docutils literal notranslate"><span class="pre">move()</span></code>, we can create our own functions as well. We can define a new Python function as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_well_chosen_name</span><span class="p">():</span>
-    <span class="c1"># some lines of code</span>
-    <span class="c1"># indented at the same level</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">def</span></code> is the first Python <strong>keyword</strong> we have encountered. Keywords are words that
-have a special meaning in a given programming language.
-Notice how a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> precedes what
-is known as a <em>block of code</em>, and the indented portion that follows is the  <em>body</em> of the
-function. It is <strong>required</strong> in Python to <em>indent</em> such blocks of code
-with the same number of spaces at the beginning of each line which, as a side-effect, makes it easy to identify the function body for a human reader.</p>
-<p>Let’s write our first Python function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
     <span class="n">turn_left</span><span class="p">()</span>
     <span class="n">turn_left</span><span class="p">()</span>
@@ -248,21 +236,16 @@ with the same number of spaces at the beginning of each line which, as a side-ef
 <code class="docutils literal notranslate"><span class="pre">turn_left()</span></code> functions in a row to simulate a right turn!</p>
 <section id="how-to-think-about-def">
 <h3>How to think about <code class="docutils literal notranslate"><span class="pre">def</span></code><a class="headerlink" href="#how-to-think-about-def" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Please note that this simplified explanation does not take into account what is known
-as <em>variable scope</em> which is something that we will cover later.</p>
-</div>
 <p>You have just seen how to define a function in Python. Chances are,
 you understood right away how to think about them but, just in case,
 here’s a more detailed explanation which will help you to not only
-understand how functions work, but also other Python construct that
+understand how functions work, but also other Python constructs that
 involve blocks of code.</p>
 <p>Suppose we have the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>  <span class="c1"># begin of code block follows</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>
-     <span class="n">turn_left</span><span class="p">()</span>   <span class="c1"># end of code block</span>
+     <span class="n">turn_left</span><span class="p">()</span>
 
  <span class="n">move</span><span class="p">()</span>
 <span class="hll"> <span class="n">turn_right</span><span class="p">()</span>
@@ -270,26 +253,21 @@ involve blocks of code.</p>
 </pre></div>
 </div>
 <p>This is equivalent to the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="c1"># define a function</span>
- <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>
      <span class="n">turn_left</span><span class="p">()</span>
 
  <span class="n">move</span><span class="p">()</span>
- <span class="c1"># begin of code block inside turn_right()</span>
 <span class="hll"> <span class="n">turn_left</span><span class="p">()</span>
 </span><span class="hll"> <span class="n">turn_left</span><span class="p">()</span>
 </span><span class="hll"> <span class="n">turn_left</span><span class="p">()</span>
-</span> <span class="c1"># end of code block</span>
- <span class="n">move</span><span class="p">()</span>
+</span> <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>In other words, <code class="docutils literal notranslate"><span class="pre">def</span></code> defines a name that we can use as a synonym
+<p>In other words, <code class="docutils literal notranslate"><span class="pre">def</span></code> defines a name like <code class="docutils literal notranslate"><span class="pre">turn_right</span></code> that we can use as a shortcut
 for all the code that appears inside the code block, and whenever we see
-the synonym being <strong>called</strong> [that is, the name appears followed by
-<code class="docutils literal notranslate"><span class="pre">()</span></code>], we can think of it as being equivalent to inserting the code
-block <em>as is</em> at that location.</p>
+the shortcut being called like <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code>, we can think of it as being equivalent to inserting the code block at that location.</p>
 </section>
 </section>
 <section id="your-turn">

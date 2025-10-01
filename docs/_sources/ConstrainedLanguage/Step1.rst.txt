@@ -20,7 +20,7 @@ Reeborg's world is a simple grid, and we can refer to any part of the grid using
 Saving Your Work
 ----------------
 
-Although the code you are creating for this first few worlds is quite simple, as you progress to the more difficult steps, you will want to save your code. 
+Although the code you are creating for this first few worlds is quite simple, as you progress to the more difficult steps, you will want to save your code. Your code is automatically saved in the local storage of your browser, but will only be available to you on one computer (and only within that one browser). If you want to be able to access your code from other computers, you can save your code as a file.
 
 To save your code to your computer, you can click on the Save button. To open code that you have saved to your computer, use the Open button.
 

@@ -28,16 +28,13 @@ programmers to share their work with other programmers.
 Comments are notes made by a programmer which are ignored by the
 computer; they are meant to be read and understood only by humans. They allow programmers to write programs that are easier to understand for other people.
 
-When using Python, one can write comments in one of two ways:
+When using Python, you can write comments in one of two ways:
 
 -  By putting a ``#`` before a comment on any given line.
 -  By enclosing any amount of text (even if it takes up more than one line) between triple-quotes like ``""" ... """`` or ``''' ... '''``.
 
 
-I will first write a simple program without any comments followed by a
-second version with comments added and a third version ... slightly less
-readable; however, I will make the same error in all three programs. Can
-you spot it more easily in the first program or the second?
+Here's a simple program that makes Reeborg move in a square, but there's a mistake in the code. Can you spot it?
 
 .. code-block:: python
 
@@ -57,44 +54,40 @@ you spot it more easily in the first program or the second?
     turn_left()
     put()
 
-Contrast the above program with the same one, from Reeborg's point of
+Now here's the exact same program, at least from Reeborg's point of
 view, but with comments added for humans; you will be able to recognize
 comments as they appear in a different colour and font style.
 
 .. code-block:: python
 
-    '''  This is an example of
-    a simple program where Reeborg draws a square,
-    leaving an object behind at each corner. '''
+    # This is an example of
+    # a simple program where Reeborg draws a square,
+    # leaving an object behind at each corner.
 
-    move()  # Python commands are on separate lines
+    # draw the first side
     move()
-    turn_left() # Reeborg only knows to turn left
-    put()  # we assume that Reeborg carries enough objects
+    move()
+    turn_left()
+    put()  
 
-    # we repeat the above three more times to complete the square
+    # draw the second side
     move()
     move()
     turn_left()
     put()
 
+    # draw the third side
     move()
     turn_left()
     put()
 
+    # draw the fourth side
     move()
     move()
     turn_left()
     put()
 
-The above are not particularly good comments, but at least one of them
-should have helped you find what was wrong with the program. You might
-think this is cheating; however, how can you guess the intent behind
-some lines of code in a program on their own? The addition of comments
-explaining what a given program should do can be very helpful in finding
-mistakes.
-
-Note that in addition to comments, I have used blank lines (often called whitespace) to separate some "logical" blocks of code, to help see the pattern better. Together, the use of comments and insertion of blank lines can make a program much easier to read.
+Hopefully this second version makes it much easier to spot the error in the code. Note that in addition to comments, the code has been broken in to "logical chunks" of code, and each "chunk" has a comment above it explaining what the chunk of code will do. This is an excellent way to organize your code.
 
 
 Your Turn

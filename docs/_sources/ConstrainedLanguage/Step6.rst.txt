@@ -14,44 +14,19 @@ Step 6: Saving Functions in the Library
 Tutorial
 ---------
 
-In addition to having Reeborg making right turns, you *might* have had
-it turn around a few times; by turning around, I mean changing
-direction so that Reeborg is heading back to where it was coming from.
+In addition to having Reeborg making right turns, you might also want to make a function that changes direction so that Reeborg is heading back to where it was coming from.
 We can define a function ``turn_around()`` as follows::
 
     def turn_around():
         turn_left()
         turn_left()
 
-When programmer make use of a given function in different programs,
-rather than redefining it in each program they write, they put them in
-special programs called **libraries** and they have a way to ensure that
-their other programs can use the functions that are found in the
-library.
-
-You are going to use the function ``turn_right()`` **a lot!** Instead of
-rewriting it each time, what you are going to do is
-to write it **once** (more) but, this time, instead of writing it in the
-editor with the **Python Code** tab, you will click on the **library** tab and
-write it there. Oh, and you should also define ``turn_around()`` there as
-well.
+When we want to use the same function over and over in many different programs, we can save ourselves some work. Instead of redefining the function in every program, we can save it to the Library, and then just import it whenever we need it. Click on the library tab (as shown below), and and copy/paste your ``turn_around()`` and ``turn_right()`` functions there.
 
 .. image:: images/library.png
 
-
-Then, when you want to use the functions defined in your library, you will
-simply type ``from library import`` (followed by the function names, separated
-by commas) on its own line in the Python Code editor. For example, if you have defined ``turn_right()`` in the library, you could type ``from library import turn_right``, and you would now be able to use the ``turn_right()`` function anywhere in your code. See the example below::
-
-    # import functions from the library tab
-    from library import turn_right, turn_around
-
-    # when you want to use the functions
-    turn_right()
-    turn_around()
-
-
-If you end up saving a large number of functions into the library, you may also import **all** of the functions in the library by calling ``import library``. When you do this, however, be aware that you then need to specify where the function is coming from when you call it. For example, if we had defined ``turn_right()`` in the library, we would call the function using ``library.turn_right()``. See the example below::
+Now whenever you want to use the functions defined in your library, you will
+simply type ``import library``. Then in order to use the function, you would call ``library.turn_right()``. See the example below::
 
     # import functions from the library tab
     import library
@@ -71,7 +46,7 @@ If you want to, you can save yourself a few keystrokes by renaming the library t
     lib.turn_around()
 
 
-.. caution:: Although you may see it in some tutorials, you should avoid using wildcard import statements like ``from library import *``. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution.
+.. caution:: Although you may see it in some tutorials, you should avoid using wildcard import statements like ``from library import *``. Although this imports all the functions in the library, it can cause problems with your code, since what you import may clash with existing code. This is sometimes called namespace pollution. You can also import individual functions using something like ``from library import turn_right``, but as you begin to import multiple libraries later, this can make your code confusing.
 
 
 Your Turn

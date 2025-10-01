@@ -20,23 +20,7 @@ tedious to have to write three ``turn_left()`` instructions each time
 you want to have Reeborg turn right. Wouldn't it be nicer if you could
 simply write ``turn_right()``?
 
-Just as we can call built-in functions like ``turn_left()`` and ``move()``, we can create our own functions as well. We can define a new Python function as follows:
-
-.. code-block:: python
-
-    def some_well_chosen_name():
-        # some lines of code
-        # indented at the same level
-
-
-``def`` is the first Python **keyword** we have encountered. Keywords are words that
-have a special meaning in a given programming language.
-Notice how a colon ``:`` precedes what
-is known as a *block of code*, and the indented portion that follows is the  *body* of the
-function. It is **required** in Python to *indent* such blocks of code
-with the same number of spaces at the beginning of each line which, as a side-effect, makes it easy to identify the function body for a human reader.
-
-Let's write our first Python function::
+Just as we can call built-in functions like ``turn_left()`` and ``move()``, we can create our own functions as well. We can define a new Python function as follows::
 
     def turn_right():
         turn_left()
@@ -50,15 +34,10 @@ That's it! You will now be able to avoid having to write three
 How to think about ``def``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
-
-   Please note that this simplified explanation does not take into account what is known
-   as *variable scope* which is something that we will cover later.
-
 You have just seen how to define a function in Python. Chances are,
 you understood right away how to think about them but, just in case,
 here's a more detailed explanation which will help you to not only
-understand how functions work, but also other Python construct that
+understand how functions work, but also other Python constructs that
 involve blocks of code.
 
 Suppose we have the following:
@@ -66,10 +45,10 @@ Suppose we have the following:
 .. code-block:: python
    :emphasize-lines: 7
 
-    def turn_right():  # begin of code block follows
+    def turn_right():
         turn_left()
         turn_left()
-        turn_left()   # end of code block
+        turn_left()
 
     move()
     turn_right()
@@ -78,27 +57,22 @@ Suppose we have the following:
 This is equivalent to the following:
 
 .. code-block:: python
-   :emphasize-lines: 9, 10, 11
+   :emphasize-lines: 7, 8, 9
 
-    # define a function
     def turn_right():
         turn_left()
         turn_left()
         turn_left()
 
     move()
-    # begin of code block inside turn_right()
     turn_left()
     turn_left()
     turn_left()
-    # end of code block
     move()
 
-In other words, ``def`` defines a name that we can use as a synonym
+In other words, ``def`` defines a name like ``turn_right`` that we can use as a shortcut
 for all the code that appears inside the code block, and whenever we see
-the synonym being **called** [that is, the name appears followed by
-``()``], we can think of it as being equivalent to inserting the code
-block *as is* at that location.
+the shortcut being called like ``turn_right()``, we can think of it as being equivalent to inserting the code block at that location.
 
 
 Your Turn
