@@ -157,7 +157,6 @@ document.addEventListener('keydown', function(event) {
 <li><a class="reference internal" href="#">Step 12: While</a><ul>
 <li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
-<li><a class="reference internal" href="#if-you-re-having-trouble-a-more-detailed-explanation">If You’re Having Trouble (a more detailed explanation)</a></li>
 </ul>
 </li>
 </ul>
@@ -217,11 +216,7 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>When we want to repeat some instructions until a certain condition is
-satisfied, Python gives us a simpler way to write this using a new
-keyword: <code class="docutils literal notranslate"><span class="pre">while</span></code>. For example, suppose we want to have Reeborg keep
-moving until it reaches a wall. Previously, we might have done something
-like the following:</p>
+<p>When we want to repeat some instructions until a certain condition is satisfied, Python gives us a simpler way to write this using a new keyword: <code class="docutils literal notranslate"><span class="pre">while</span></code>. For example, suppose we want to have Reeborg keep moving until it reaches a wall. Previously, we might have done something like the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">move_until_wall</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
         <span class="n">move</span><span class="p">()</span>
@@ -230,14 +225,12 @@ like the following:</p>
     <span class="n">move_until_wall</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>and hoped that 42 would have been a number of repetitions sufficient to
-reach a wall. Using <code class="docutils literal notranslate"><span class="pre">while</span></code>, we can write the following:</p>
+<p>and hoped that 42 would have been a number of repetitions sufficient to reach a wall. Using <code class="docutils literal notranslate"><span class="pre">while</span></code>, we can write the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
     <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>That’s it! No more guessing and asking something to be performed a large
-number of time just to ensure that it will be enough.</p>
+<p>That’s it! No more guessing and asking something to be performed a large number of time just to ensure that it will be enough.</p>
 <p>Here’s a flowchart for this simple program:</p>
 <figure class="align-center">
 <img alt="../_images/while.jpg" src="../_images/while.jpg" />
@@ -248,51 +241,7 @@ number of time just to ensure that it will be enough.</p>
 <p>Open Step 12 on the <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2012" target="_blank">Reeborg environment</a>.</p>
 <img alt="../_images/step12.png" src="../_images/step12.png" />
 <p>One of Reeborg’s household jobs is to take out the compost. There is, however, a different amount of compost in the container in the house every time Reeborg needs to bring it outside.</p>
-<p>Create a program to have Reeborg take out the compost, then return to the house. Reeborg needs to pick up as many rotten apples as are in the compost pail, bring them to the compost container outside, then return to the goal (7, 8). You will need to use <code class="docutils literal notranslate"><span class="pre">while</span></code> loops in your solution.</p>
-</section>
-<section id="if-you-re-having-trouble-a-more-detailed-explanation">
-<h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
-<p>Suppose we have the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">():</span>
-    <span class="n">do_1</span><span class="p">()</span>
-    <span class="n">do_2</span><span class="p">()</span>
-    <span class="n">do_3</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>You can think of this as being equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">():</span>
-    <span class="n">do_1</span><span class="p">()</span>
-    <span class="n">do_2</span><span class="p">()</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">condition</span><span class="p">():</span>
-    <span class="n">do_1</span><span class="p">()</span>
-    <span class="n">do_2</span><span class="p">()</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">condition</span><span class="p">():</span>
-    <span class="n">do_1</span><span class="p">()</span>
-    <span class="n">do_2</span><span class="p">()</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">condition</span><span class="p">():</span>
-    <span class="n">do_1</span><span class="p">()</span>
-    <span class="n">do_2</span><span class="p">()</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="o">....</span>
-</pre></div>
-</div>
-<p>which is to say that the block of code is repeated as long as the
-condition remains <code class="docutils literal notranslate"><span class="pre">True</span></code>. So, what happens if the condition is always
-<code class="docutils literal notranslate"><span class="pre">True</span></code>? The block of code is repeated for ever and the program never
-ends.</p>
-<p>This is bad.</p>
-<p>Instead of using this description of repeated blocks of code,
-programmers describe this as a <strong>loop</strong>: that is, you start with the
-first instruction (<code class="docutils literal notranslate"><span class="pre">do_1()</span></code>) inside the code block, continue with all
-the others until you reach the last instruction (<code class="docutils literal notranslate"><span class="pre">do_3()</span></code>), then
-<strong>*loop* back</strong>, or go back, to the test just before the beginning of
-the block and see if the condition is satisfied; if not, you repeat the cycle once again. If the condition never becomes <code class="docutils literal notranslate"><span class="pre">False</span></code>, you keep
-repeating and end up with an <strong>infinite loop</strong>.</p>
-<p>Conclusion: you want to make sure that the condition will become
-<code class="docutils literal notranslate"><span class="pre">False</span></code> at some point.</p>
+<p>Create a program to have Reeborg take out the compost, then return to the house. Reeborg needs to pick up as many rotten apples as are in the compost pail, bring them to the compost container outside, then return to the goal (7, 8). You will need to use <code class="docutils literal notranslate"><span class="pre">while</span></code> loops in your solution (for the parts that you don’t know until the world loads).</p>
 </section>
 </section>
 

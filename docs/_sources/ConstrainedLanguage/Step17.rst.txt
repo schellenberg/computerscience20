@@ -12,7 +12,7 @@ Step 17: Solving a Maze
 Tutorial
 ---------
 
-As you begin to think through the following problem, I once again **highly recommend** that you begin by writing **pseudocode** with paper and pencil.
+As you begin to think through the following problem, I once again highly recommend that you begin by writing pseudocode with paper and pencil.
 
 Your challenge is to see if you can refine the pseudocode solution you come up with well enough that when you actually write the Reeborg solution, it works on the first try. To accomplish this, you should spend much more time with paper and pencil than with your keyboard on this step! If you don't have any scrap paper with you, ask your teacher for some.
 

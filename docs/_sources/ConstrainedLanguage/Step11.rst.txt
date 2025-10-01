@@ -16,7 +16,9 @@ Tutorial
 
 While learning how to program is fun, you should not spend all your time in front of the computer. When you are at home, ``if`` it rains, keep reading, otherwise, go outside and play!
 
-Let's rewrite the sentence that starts with ``if`` above::
+Let's rewrite the sentence that starts with ``if`` above:
+
+.. code-block:: html
 
     if it rains,
         keep reading,
@@ -32,15 +34,17 @@ If this were Python, we might have written it like this instead:
     else:
         go_outside_and_play()
 
-Python includes the possibility of more than one choice with the keyword ``else``. Let's use it with another example. Reeborg can see if there's a wall right in front him, using the function ``front_is_clear()``. This can be used with ``if/else`` to write a program that will guide Reeborg around a rectangular world. Something like the following should do the trick:
+Python includes the possibility of more than one choice with the keyword ``else``. This creates a branch in your code, where either one thing or the other will occur, but not both. 
+
+Let's use it with another example. Reeborg can see if there's a wall right in front itself, using the function ``front_is_clear()``. This can be used with ``if/else`` to write a program that will guide Reeborg around a rectangular world:
 
 .. code-block:: python
 
     def move_or_turn():
         if front_is_clear():
-            # something
+            move()
         else:
-            # something else
+            turn_left()
 
     repeat 40:
         move_or_turn()
@@ -64,54 +68,3 @@ Create a program to have Reeborg walk around the outside of the yard, picking up
 
    <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2011" target="_blank">Reeborg environment</a>
 
-
-If You're Having Trouble (a more detailed explanation)
-------------------------------------------------------
-
-We have seen how ``def``\ s and ``if`` statements could be thought
-of as being (sometimes) equivalent to inserting a code block; the
-exception was when the condition of the ``if`` statement was ``False``,
-in which case we ignored the code block which is equivalent to deleting
-it. ``if/else`` statements can be thought as inserting one or the other
-code block. Thus
-
-.. code-block:: python
-
-    move()
-    if True:
-        turn_right()
-    else:
-        turn_left()
-    move()
-
-is equivalent to
-
-.. code-block:: python
-
-    move()
-    turn_right()
-    move()
-
-whereas
-
-.. code-block:: python
-
-    move()
-    if False:
-        turn_right()
-    else:
-        turn_left()
-    move()
-
-is equivalent to
-
-.. code-block:: python
-
-    move()
-    turn_left()
-    move()
-
-We can represent this as a flowchart:
-
-.. figure:: images/flowcharts/else.jpg
-   :align: center

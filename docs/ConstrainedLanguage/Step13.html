@@ -157,7 +157,6 @@ document.addEventListener('keydown', function(event) {
 <li><a class="reference internal" href="#">Step 13: If/Elif/Else</a><ul>
 <li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
-<li><a class="reference internal" href="#if-you-re-having-trouble-a-more-detailed-explanation">If You’re Having Trouble (a more detailed explanation)</a></li>
 </ul>
 </li>
 </ul>
@@ -218,9 +217,7 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>Reeborg lives in Canada where it not only can rain or be sunny, but snow
-can also be falling. Let’s suppose that only one of those can happen at a time. Then,
-Reeborg could be faced with the following choices:</p>
+<p>Sometimes you want to create branches in your code where only one out of many possible options can occur. For example, Reeborg lives in Canada where it not only can rain or be sunny, but snow can also be falling. Let’s suppose that only one of those can happen at a time. Then, Reeborg could be faced with the following choices:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">it_rains</span><span class="p">():</span>
     <span class="n">play_indoors</span><span class="p">()</span>
 <span class="k">elif</span> <span class="n">it_snows</span><span class="p">():</span>
@@ -229,49 +226,12 @@ Reeborg could be faced with the following choices:</p>
     <span class="n">go_swimming</span><span class="p">()</span> <span class="c1"># assuming it is warm!</span>
 </pre></div>
 </div>
-<p>Notice the use of <code class="docutils literal notranslate"><span class="pre">elif</span></code> (which means “else if”) for choice 2. If we took into account other
-possible weather phenomena, like hail, thunder, fog, drizzle, etc., we
-could add other choices using additional <code class="docutils literal notranslate"><span class="pre">elif:</span> <span class="pre">...</span></code> code blocks.</p>
+<p>Notice the use of <code class="docutils literal notranslate"><span class="pre">elif</span></code> (which means “else if”) for choice 2. If we took into account other possible weather phenomena, like hail, thunder, fog, drizzle, etc., we could add other choices using additional <code class="docutils literal notranslate"><span class="pre">elif:</span> <span class="pre">...</span></code> code blocks.</p>
 <p>Here is a graphical representation of the choices that Reeborg faces:</p>
 <figure class="align-center">
 <img alt="../_images/elif.jpg" src="../_images/elif.jpg" />
 </figure>
-<p>In Step 10, you wrote a program to make Reeborg jump hurdles. Your program was likely
-something like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
-    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">turn_left</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">jump_hurdle</span><span class="p">():</span>
-    <span class="c1">#code to make Reeborg jump the hurdle</span>
-
-<span class="n">repeat</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">move</span><span class="p">()</span>
-    <span class="n">jump_hurdle</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Although this code works fine for the hurdle world you were given, <strong>it would fail if the hurdles were not spaced evenly apart</strong>.</p>
-<p>Here’s a program skeleton that should work for the world we mentioned above,
-provided you fill in the missing pieces. <em>Note: You may find the `done` function (which tells Reeborg to stop doing anything) helpful here.</em></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jump_over_hurdle</span><span class="p">():</span>
-    <span class="c1"># suitable definition</span>
-
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
-        <span class="c1"># something</span>
-    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="c1"># something</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># something</span>
-
-<span class="c1">#we can replace this repeat with while after the next step...</span>
-<span class="n">repeat</span> <span class="mi">42</span><span class="p">:</span>
-    <span class="n">run_jump_or_finish</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Note the structure of the <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> statements; as is mentioned above,
-you should see that it gives three independent choices: <strong>only one of them
-will be executed</strong>.</p>
+<p>In an <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> statement, you should see that it gives three independent choices and <strong>only one of them will be executed</strong>.</p>
 </section>
 <section id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
@@ -293,41 +253,6 @@ will be executed</strong>.</p>
 </div>
 <img alt="../_images/step13.png" src="../_images/step13.png" />
 <p>Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a <code class="docutils literal notranslate"><span class="pre">repeat</span></code> loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You <strong>must</strong> use an <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> structure in your program.</p>
-</section>
-<section id="if-you-re-having-trouble-a-more-detailed-explanation">
-<h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
-<p>A series of <code class="docutils literal notranslate"><span class="pre">if/elif/</span> <span class="pre">...</span> <span class="pre">/else</span></code> statements is equivalent to
-inserting the <strong>first</strong> code block that evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Thus:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">do_1</span><span class="p">()</span>
-<span class="k">elif</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">do_2</span><span class="p">()</span>
-<span class="k">elif</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">do_4</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_2</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>whereas:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">do_1</span><span class="p">()</span>
-<span class="k">elif</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">do_2</span><span class="p">()</span>
-<span class="k">elif</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">do_3</span><span class="p">()</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">do_4</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_4</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>etc.</p>
 </section>
 </section>
 

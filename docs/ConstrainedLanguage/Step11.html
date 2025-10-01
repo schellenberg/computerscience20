@@ -157,7 +157,6 @@ document.addEventListener('keydown', function(event) {
 <li><a class="reference internal" href="#">Step 11: If/Else</a><ul>
 <li><a class="reference internal" href="#tutorial">Tutorial</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
-<li><a class="reference internal" href="#if-you-re-having-trouble-a-more-detailed-explanation">If You’re Having Trouble (a more detailed explanation)</a></li>
 </ul>
 </li>
 </ul>
@@ -220,10 +219,10 @@ document.addEventListener('keydown', function(event) {
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
 <p>While learning how to program is fun, you should not spend all your time in front of the computer. When you are at home, <code class="docutils literal notranslate"><span class="pre">if</span></code> it rains, keep reading, otherwise, go outside and play!</p>
 <p>Let’s rewrite the sentence that starts with <code class="docutils literal notranslate"><span class="pre">if</span></code> above:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">it</span> <span class="n">rains</span><span class="p">,</span>
-    <span class="n">keep</span> <span class="n">reading</span><span class="p">,</span>
-<span class="n">otherwise</span><span class="p">,</span>
-    <span class="n">go</span> <span class="n">outside</span> <span class="ow">and</span> <span class="n">play</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>if it rains,
+    keep reading,
+otherwise,
+    go outside and play
 </pre></div>
 </div>
 <p>If this were Python, we might have written it like this instead:</p>
@@ -233,12 +232,13 @@ document.addEventListener('keydown', function(event) {
     <span class="n">go_outside_and_play</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Python includes the possibility of more than one choice with the keyword <code class="docutils literal notranslate"><span class="pre">else</span></code>. Let’s use it with another example. Reeborg can see if there’s a wall right in front him, using the function <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code>. This can be used with <code class="docutils literal notranslate"><span class="pre">if/else</span></code> to write a program that will guide Reeborg around a rectangular world. Something like the following should do the trick:</p>
+<p>Python includes the possibility of more than one choice with the keyword <code class="docutils literal notranslate"><span class="pre">else</span></code>. This creates a branch in your code, where either one thing or the other will occur, but not both.</p>
+<p>Let’s use it with another example. Reeborg can see if there’s a wall right in front itself, using the function <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code>. This can be used with <code class="docutils literal notranslate"><span class="pre">if/else</span></code> to write a program that will guide Reeborg around a rectangular world:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">move_or_turn</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
-        <span class="c1"># something</span>
+        <span class="n">move</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># something else</span>
+        <span class="n">turn_left</span><span class="p">()</span>
 
 <span class="n">repeat</span> <span class="mi">40</span><span class="p">:</span>
     <span class="n">move_or_turn</span><span class="p">()</span>
@@ -255,48 +255,6 @@ document.addEventListener('keydown', function(event) {
 <p class="admonition-title">Note</p>
 <p>For this step, the world will be different each time you press the <em>Play</em> button. Each time you run your code, new dimensions for the world will be used. You may assume the starting location will always be in the lower left hand corner of the world.</p>
 </div>
-</section>
-<section id="if-you-re-having-trouble-a-more-detailed-explanation">
-<h2>If You’re Having Trouble (a more detailed explanation)<a class="headerlink" href="#if-you-re-having-trouble-a-more-detailed-explanation" title="Permalink to this headline">¶</a></h2>
-<p>We have seen how <code class="docutils literal notranslate"><span class="pre">def</span></code>s and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements could be thought
-of as being (sometimes) equivalent to inserting a code block; the
-exception was when the condition of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement was <code class="docutils literal notranslate"><span class="pre">False</span></code>,
-in which case we ignored the code block which is equivalent to deleting
-it. <code class="docutils literal notranslate"><span class="pre">if/else</span></code> statements can be thought as inserting one or the other
-code block. Thus</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">turn_right</span><span class="p">()</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="n">turn_right</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>whereas</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="n">turn_right</span><span class="p">()</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">turn_left</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>is equivalent to</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
-<span class="n">turn_left</span><span class="p">()</span>
-<span class="n">move</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>We can represent this as a flowchart:</p>
-<figure class="align-center">
-<img alt="../_images/else.jpg" src="../_images/else.jpg" />
-</figure>
 </section>
 </section>
 

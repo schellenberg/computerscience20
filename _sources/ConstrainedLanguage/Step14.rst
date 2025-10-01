@@ -13,77 +13,25 @@ Step 14: The ``not`` Keyword
 Tutorial
 --------
 
-In Python, we can indicate that something is not true by writing ``not True``
-which is the same as  ``False``. Likewise, ``not False`` is equivalent to ``True``.
-
-When you solved Step 10, you created a program to have Reeborg jump hurdles.
-
-.. image:: images/hurdles2.png
-
-As part of your solution for the above world, you may have created a function similar to the following:
+Sometimes we want to ask if something is ``not`` True. For example, you might want to turn right, but only if there isn't a wall to your right. You could do this with the following code:
 
 .. code-block:: python
 
-   def run_jump_or_finish():
-        if at_goal():
-            # something
-        elif front_is_clear():
-            # something
-        else:
-            # something
+    def turn_right():
+        repeat 3:
+            turn_left()
 
-This program fragment can be rewritten, by choosing different combinations of the negation keyword ``not`` **and** different combinations of ``if/elif/else``.
+    if not wall_on_right():
+        turn_right()
 
-Consider the three code samples below, paying close attention to where the ``not`` keyword occur **and** to what is actually included in each code block.
+Note the use of the word ``not`` before the question ``wall_on_right()``. This makes your question into the opposite of what it would be without the ``not``. 
+
+You can use the ``not`` keyword with ``while`` loops as well. For example, say you wanted to make Reeborg face north no matter what orientation Reeborg is in. To do that, you could write the following:
 
 .. code-block:: python
 
-   # first choice:
-
-   def run_jump_or_finish():
-        if at_goal():
-            # something
-        elif not front_is_clear():
-            # something
-        else:
-            # something
-
-   # second choice ... trickier
-
-   def run_jump_or_finish():
-        if not at_goal():
-            if front_is_clear():
-                # something
-            else:
-                # something
-        else:
-            # something
-
-   # third choice:
-
-   def run_jump_or_finish():
-        if not at_goal():
-            if not front_is_clear():
-                # something
-            else:
-                # something
-        else:
-            # something
-
-
-You have just seen how it is possible to change the order
-in which the conditions appear in an ``if/elif/else`` code block while
-still accomplishing the same goal.  Two different programmers will often
-use different strategies to get the same final result.  There are other
-ways in which different programmers will write different but equivalent
-programs: by using different functions.
-
-The function ``front_is_clear()`` will tell Reeborg whether or not a
-wall is blocking its way.  It will do the same for **water**, **brick walls**,
-**fences**, etc., which we have not seen yet but likely will in future worlds.
-There is a function that is more specific to wall called
-``wall_in_front()``; I leave it up to you to guess what it does.
-
+    while not is_facing_north():
+        turn_left()
 
 
 Your Turn
@@ -95,7 +43,7 @@ Open Step 14 on the |reeborg_environment|.
 
 Reeborg loves going for walks, especially when it is around a lake. The lakes in Reeborg's neighborhood are all different sizes of rectangles, so Reeborg does not know how many steps it will take to get back to the start of walk. Thankfully, Reeborg happens to be carrying a banana, which you can tell Reeborg to ``put()`` down at the start of it's walk. Reeborg knows it's done walking when it reaches the banana again.
 
-Use a ``while`` statement (looking for the banana object) and an ``if/else`` to have Reeborg complete his walking adventure.
+Use a ``while`` statement (looking for the banana object) and an ``if/else`` to have Reeborg complete his walking adventure. You must use the ``not`` keyword in your solution!
 
 .. note:: Reeborg cannot use a ``repeat`` statement, since it has no idea of the dimensions of the lake it is walking around.
 

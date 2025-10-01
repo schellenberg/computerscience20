@@ -16,7 +16,7 @@ Tutorial
 As you consider how you will write a solution for the following situation, be sure to consider:
 
 - writing pseudocode with paper/pencil before you begin to code
-- use the library to store functions you might use again (such as ``from library import go_to_start``)
+- use the library to store functions you might use again (such as ``import library as lib``, and then ``lib.go_to_start()``)
 - use comments and whitespace (blank lines) to keep your code as readable as possible for other humans
 
 Your Turn

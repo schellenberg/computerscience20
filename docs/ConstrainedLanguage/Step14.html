@@ -216,73 +216,28 @@ document.addEventListener('keydown', function(event) {
     </div>
     <section id="tutorial">
 <span id="index-0"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
-<p>In Python, we can indicate that something is not true by writing <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">True</span></code>
-which is the same as  <code class="docutils literal notranslate"><span class="pre">False</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">False</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>When you solved Step 10, you created a program to have Reeborg jump hurdles.</p>
-<img alt="../_images/hurdles2.png" src="../_images/hurdles2.png" />
-<p>As part of your solution for the above world, you may have created a function similar to the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
-     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
+<p>Sometimes we want to ask if something is <code class="docutils literal notranslate"><span class="pre">not</span></code> True. For example, you might want to turn right, but only if there isn’t a wall to your right. You could do this with the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+    <span class="n">repeat</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">wall_on_right</span><span class="p">():</span>
+    <span class="n">turn_right</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This program fragment can be rewritten, by choosing different combinations of the negation keyword <code class="docutils literal notranslate"><span class="pre">not</span></code> <strong>and</strong> different combinations of <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code>.</p>
-<p>Consider the three code samples below, paying close attention to where the <code class="docutils literal notranslate"><span class="pre">not</span></code> keyword occur <strong>and</strong> to what is actually included in each code block.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># first choice:</span>
-
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
-     <span class="k">if</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">elif</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
-         <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
-
-<span class="c1"># second choice ... trickier</span>
-
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
-     <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
-             <span class="c1"># something</span>
-         <span class="k">else</span><span class="p">:</span>
-             <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
-
-<span class="c1"># third choice:</span>
-
-<span class="k">def</span> <span class="nf">run_jump_or_finish</span><span class="p">():</span>
-     <span class="k">if</span> <span class="ow">not</span> <span class="n">at_goal</span><span class="p">():</span>
-         <span class="k">if</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
-             <span class="c1"># something</span>
-         <span class="k">else</span><span class="p">:</span>
-             <span class="c1"># something</span>
-     <span class="k">else</span><span class="p">:</span>
-         <span class="c1"># something</span>
+<p>Note the use of the word <code class="docutils literal notranslate"><span class="pre">not</span></code> before the question <code class="docutils literal notranslate"><span class="pre">wall_on_right()</span></code>. This makes your question into the opposite of what it would be without the <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">not</span></code> keyword with <code class="docutils literal notranslate"><span class="pre">while</span></code> loops as well. For example, say you wanted to make Reeborg face north no matter what orientation Reeborg is in. To do that, you could write the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">is_facing_north</span><span class="p">():</span>
+    <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>You have just seen how it is possible to change the order
-in which the conditions appear in an <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> code block while
-still accomplishing the same goal.  Two different programmers will often
-use different strategies to get the same final result.  There are other
-ways in which different programmers will write different but equivalent
-programs: by using different functions.</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> will tell Reeborg whether or not a
-wall is blocking its way.  It will do the same for <strong>water</strong>, <strong>brick walls</strong>,
-<strong>fences</strong>, etc., which we have not seen yet but likely will in future worlds.
-There is a function that is more specific to wall called
-<code class="docutils literal notranslate"><span class="pre">wall_in_front()</span></code>; I leave it up to you to guess what it does.</p>
 </section>
 <section id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Open Step 14 on the <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2014" target="_blank">Reeborg environment</a>.</p>
 <img alt="../_images/step14.gif" src="../_images/step14.gif" />
 <p>Reeborg loves going for walks, especially when it is around a lake. The lakes in Reeborg’s neighborhood are all different sizes of rectangles, so Reeborg does not know how many steps it will take to get back to the start of walk. Thankfully, Reeborg happens to be carrying a banana, which you can tell Reeborg to <code class="docutils literal notranslate"><span class="pre">put()</span></code> down at the start of it’s walk. Reeborg knows it’s done walking when it reaches the banana again.</p>
-<p>Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement (looking for the banana object) and an <code class="docutils literal notranslate"><span class="pre">if/else</span></code> to have Reeborg complete his walking adventure.</p>
+<p>Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement (looking for the banana object) and an <code class="docutils literal notranslate"><span class="pre">if/else</span></code> to have Reeborg complete his walking adventure. You must use the <code class="docutils literal notranslate"><span class="pre">not</span></code> keyword in your solution!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Reeborg cannot use a <code class="docutils literal notranslate"><span class="pre">repeat</span></code> statement, since it has no idea of the dimensions of the lake it is walking around.</p>

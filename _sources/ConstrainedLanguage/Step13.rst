@@ -14,9 +14,7 @@ Step 13: If/Elif/Else
 Tutorial
 ---------
 
-Reeborg lives in Canada where it not only can rain or be sunny, but snow
-can also be falling. Let's suppose that only one of those can happen at a time. Then,
-Reeborg could be faced with the following choices::
+Sometimes you want to create branches in your code where only one out of many possible options can occur. For example, Reeborg lives in Canada where it not only can rain or be sunny, but snow can also be falling. Let's suppose that only one of those can happen at a time. Then, Reeborg could be faced with the following choices::
 
     if it_rains():
         play_indoors()
@@ -25,57 +23,14 @@ Reeborg could be faced with the following choices::
     else:
         go_swimming() # assuming it is warm!
 
-Notice the use of ``elif`` (which means "else if") for choice 2. If we took into account other
-possible weather phenomena, like hail, thunder, fog, drizzle, etc., we
-could add other choices using additional ``elif: ...`` code blocks.
+Notice the use of ``elif`` (which means "else if") for choice 2. If we took into account other possible weather phenomena, like hail, thunder, fog, drizzle, etc., we could add other choices using additional ``elif: ...`` code blocks.
 
 Here is a graphical representation of the choices that Reeborg faces:
 
 .. figure:: images/flowcharts/elif.jpg
    :align: center
 
-
-In Step 10, you wrote a program to make Reeborg jump hurdles. Your program was likely
-something like this:
-
-.. code-block:: python
-
-    def turn_right():
-        repeat 3:
-            turn_left()
-
-    def jump_hurdle():
-        #code to make Reeborg jump the hurdle
-
-    repeat 5:
-        move()
-        jump_hurdle()
-
-Although this code works fine for the hurdle world you were given, **it would fail if the hurdles were not spaced evenly apart**.
-
-Here's a program skeleton that should work for the world we mentioned above,
-provided you fill in the missing pieces. *Note: You may find the `done` function (which tells Reeborg to stop doing anything) helpful here.*
-
-.. code-block:: python
-
-    def jump_over_hurdle():
-        # suitable definition
-
-    def run_jump_or_finish():
-        if at_goal():
-            # something
-        elif front_is_clear():
-            # something
-        else:
-            # something
-
-    #we can replace this repeat with while after the next step...
-    repeat 42:
-        run_jump_or_finish()
-
-Note the structure of the ``if/elif/else`` statements; as is mentioned above,
-you should see that it gives three independent choices: **only one of them
-will be executed**.
+In an ``if/elif/else`` statement, you should see that it gives three independent choices and **only one of them will be executed**.
 
 
 Your Turn
@@ -106,41 +61,4 @@ Reeborg is jumping hurdles again. This time, however, the hurdles may not all be
 .. |reeborg_environment| raw:: html
 
    <a href="https://reeborg.cs20.ca/?lang=en&mode=python&menu=worlds/menus/sk_menu.json&name=Step%2013" target="_blank">Reeborg environment</a>
-
-
-If You're Having Trouble (a more detailed explanation)
-------------------------------------------------------
-
-A series of ``if/elif/ ... /else`` statements is equivalent to
-inserting the **first** code block that evaluates to ``True``. Thus::
-
-    if False:
-        do_1()
-    elif True:
-        do_2()
-    elif True:
-        do_3()
-    else:
-        do_4()
-
-is equivalent to::
-
-    do_2()
-
-whereas::
-
-    if False:
-        do_1()
-    elif False:
-        do_2()
-    elif False:
-        do_3()
-    else:
-        do_4()
-
-is equivalent to::
-
-    do_4()
-
-etc.
 
