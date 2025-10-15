@@ -80,7 +80,7 @@ One of the great things about Thonny is how easy it is to add additional modules
 
 .. image:: images/reeborg_library.png
 
-In Reeborg, we would often import that code using ``from library import turn_right``, so that we could simply call the ``turn_right()`` function in the same way that we could call ``turn_left()``. However, it was also possible to import the library as follows:
+In Reeborg, we could then import that code using ``import library``, so that we could call the function using ``library.turn_right()``. 
 
 .. image:: images/reeborg_code_calling_library.png
 
