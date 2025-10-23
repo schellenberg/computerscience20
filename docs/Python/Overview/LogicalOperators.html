@@ -525,7 +525,7 @@ print(n % 2 == 0 or n % 3 == 0)
 </tbody>
 </table>
 <p>If we combine all of these ideas into a single example, we can see how the truth tables work.  Consider the following expression:</p>
-<p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">raining</span> <span class="pre">and</span> <span class="pre">cold</span> <span class="pre">or</span> <span class="pre">raining</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">raining</span> <span class="pre">or</span> <span class="pre">cold</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">raining</span></code></p>
 <p>The truth table for this expression would be as follows:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -539,8 +539,8 @@ print(n % 2 == 0 or n % 3 == 0)
 <tr class="row-odd"><th class="head"><p>raining</p></th>
 <th class="head"><p>cold</p></th>
 <th class="head"><p>not raining</p></th>
-<th class="head"><p>not raining and cold</p></th>
-<th class="head"><p>not raining and cold or raining</p></th>
+<th class="head"><p>cold and not raining</p></th>
+<th class="head"><p>raining or cold and not raining</p></th>
 </tr>
 </thead>
 <tbody>

@@ -186,12 +186,12 @@ False    False    False
 
 If we combine all of these ideas into a single example, we can see how the truth tables work.  Consider the following expression:
 
-``not raining and cold or raining``
+``raining or cold and not raining``
 
 The truth table for this expression would be as follows:
 
 ========  ======  ============   =====================   ================================
-raining   cold    not raining    not raining and cold    not raining and cold or raining
+raining   cold    not raining    cold and not raining    raining or cold and not raining
 ========  ======  ============   =====================   ================================
 True      True    False          False                   True
 True      False   False          False                   True
