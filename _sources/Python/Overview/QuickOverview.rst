@@ -422,7 +422,7 @@ Remember the number guessing game we created in Scratch? The basic premise was a
 
 - generates a random number from 1 to 100 and stores it in a variable
 - repeats the following until the user guesses the number
-- gets the user to guess the number (using the **ask** block)
+- gets the user to guess the number
 - tells the user if the number is too high or too low
 - congratulates the user when they guess the correct number with a message such as "Way to go! You guessed the right number in 9 tries!"
 
