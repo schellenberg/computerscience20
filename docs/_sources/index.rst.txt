@@ -231,7 +231,7 @@ Appendices
    Python/FreeSimpleGUI/reference.rst
    Python/TurtleConfusion/Challenges.rst
    Python/Microbit/QuickStartExamples.rst
-   Python/EasyGUI/Reference.rst
+   .. Python/EasyGUI/Reference.rst
 
 
 .. Labs
