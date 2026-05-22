@@ -77,6 +77,7 @@ What will the following programs output? Why?
     the_word[0] = "j"
     print(the_word)
 
+If you don't understand why the code above works the way it does, ask your teacher (or the internet) about string immutability.
 
 .. activecode:: wdtpd_lists_7
     :caption: What will this program print?

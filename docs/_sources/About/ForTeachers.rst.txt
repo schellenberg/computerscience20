@@ -22,7 +22,7 @@ Scratch
 For the Scratch unit, most days tended to be set up as:
 
 - teacher led demonstration of the concepts, with the students following along by building the demonstration on their computer during the demonstration
-- any time remaining at the end of the demonstration for the day is spent working on the current Scratch assignment (I used three Scratch assignemnts -- one per week)
+- any time remaining at the end of the demonstration for the day is spent working on the current Scratch assignment (I used three Scratch assignments -- one per week)
 
 During the semester I was creating this textbook, the number of days spent on Scratch were as follows:
 

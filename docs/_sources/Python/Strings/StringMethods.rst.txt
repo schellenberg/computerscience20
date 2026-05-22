@@ -72,7 +72,7 @@ The following program has two errors. Can you find and fix them?
 Letter Counting
 ----------------
 
-By looking at each letter of a peice of text, you can create a `frequency analysis <https://en.wikipedia.org/wiki/Frequency_analysis>`_, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).
+By looking at each letter of a piece of text, you can create a `frequency analysis <https://en.wikipedia.org/wiki/Frequency_analysis>`_, which tells you how often you should expect certain letters to appear in a passage of text. This gives you hints if you are trying to solve a cryptoquip in your local newspaper, or attempting to crack a message that is encrypted using a classical cipher (such as the Caesar cipher).
 
 The code below assigns a variable ``paragraph`` in the program a triple-quoted string that contains a paragraph of text. The function ``count`` determines the number of alphabetic characters (a through z, or A through Z) in the text and then keeps track of how many are the letter 'e'.  Finally, the function prints an analysis of the text like this::
 
