@@ -101,7 +101,7 @@ Now modify the example above to add the next three levels of headings.  What do 
 
 
 
-Another aspect of the heading tag is that it is what we call a **block** tag.  Notice that each heading appears on its own line.  Thats pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some **inline** tags that do not each appear on their own line.
+Another aspect of the heading tag is that it is what we call a **block** tag.  Notice that each heading appears on its own line.  That's pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some **inline** tags that do not each appear on their own line.
 
 
 Paragraphs
@@ -115,7 +115,7 @@ Paragraphs are another funamental element of documents.  Paragraphs are also ano
 
    <p>This is a short sentence.</p>
    <p>This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? </p>
-   <p>Level this is a short sentence</p>
+   <p>This is another short sentence</p>
 
 
 What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?
