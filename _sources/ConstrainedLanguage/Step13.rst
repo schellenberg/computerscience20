@@ -56,7 +56,7 @@ Open Step 13 on the |reeborg_environment|, and copy/paste the following code to 
 
 .. image:: images/step13.png
 
-Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at the goal (12, 1). You **must** use an ``if/elif/else`` structure in your program. 
+Reeborg is jumping hurdles again. This time, however, the hurdles may not all be the same distance apart. You should use a ``repeat`` loop to have Reeborg jump the hurdles, and end at the goal (13, 1). You **must** use an ``if/elif/else`` structure in your program. 
 
 .. |reeborg_environment| raw:: html
 
