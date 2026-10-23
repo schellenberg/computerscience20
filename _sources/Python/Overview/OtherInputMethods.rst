@@ -126,7 +126,7 @@ You will now be able to use the FreeSimpleGUI module in the same way you can use
 Display Graphical Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you would like to output the message to a graphical window (instead of the console), you can call the ``show_message()`` function, as shown below.
+If you would like to output the message to a graphical window (instead of the console), you can call the ``sg.popup()`` function, as shown below.
 
 .. sourcecode:: python
     
