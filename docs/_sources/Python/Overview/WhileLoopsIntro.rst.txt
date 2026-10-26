@@ -45,12 +45,13 @@ A short example of a ``while`` statement follows.
 
 It may be helpful to view the code above using codelens:
 
-.. codelens:: while_intro_1_codelens
+.. codelens:: while_intro_1_cl
+    :showoutput:
 
     i = 0
     while (i < 5):
         print(i)
-        i = i + 1  
+        i = i + 1
 
 You can do something similar to the codelens feature above using Thonny. First, click on *View → Variables* to see the values of variables while your code runs.
 
